@@ -21,7 +21,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var goalsQuoteLable: UILabel!
     @IBOutlet weak var goalsQuoteSourceLabel: UILabel!
 
-    let goalArray = ["Workout everyday", "Drink glass of water everyone morning", "mediate daily"]
+    var goalArray = ["Workout everyday", "Drink glass of water everyone morning", "mediate daily"]
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,31 @@ class ProfileViewController: UIViewController {
 
     }
 
-    // MARK: Tableview Datasource Methods
+    // MARK: IB Actions
+
+    @IBAction func addGoalButtonPressed(_ sender: UIButton) {
+
+        var textField = UITextField() // has the scope of the entire IBAction
+
+        let alert = UIAlertController(title: "Add Goal", message: "", preferredStyle: .alert)
+
+        let action = UIAlertAction(title: "Add Goal", style: .default) { (action) in
+            // What will happen once the user clicks the add item button on our UIAlert
+
+            // TODO: Add more validation code if the user add an textField.text == nil
+            self.goalArray.append(textField.text!)
+            self.goalsTableView.reloadData()
+
+        }
+        alert.addTextField { (alertTextField) in
+            // This closure only gets triggers once the addTextField has been added to the alert.
+            alertTextField.placeholder = "Crate a new goal"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+
 
 }
 
