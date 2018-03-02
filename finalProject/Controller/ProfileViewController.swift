@@ -28,7 +28,11 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Goals.plist")
+
+
+        print(dataFilePath)
 
         goalsTableView.delegate = self
         goalsTableView.dataSource = self
