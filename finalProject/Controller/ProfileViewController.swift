@@ -21,7 +21,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var goalsQuoteLable: UILabel!
     @IBOutlet weak var goalsQuoteSourceLabel: UILabel!
 
-    var goalArray = ["Workout everyday", "Drink glass of water everyone morning", "mediate daily"]
+    // create an array of Goal objects
+    var goalArray = [Goal]()
 
 
 
@@ -31,6 +32,20 @@ class ProfileViewController: UIViewController {
 
         goalsTableView.delegate = self
         goalsTableView.dataSource = self
+
+        // link to model
+        var newGoal1 = Goal()
+        newGoal1.title = "Find Mike"
+        goalArray.append(newGoal1)
+
+        var newGoal2 = Goal()
+        newGoal2.title = "Find Amy"
+        goalArray.append(newGoal2)
+
+        var newGoal3 = Goal()
+        newGoal3.title = "Find Don"
+        goalArray.append(newGoal3)
+
 
     }
 
@@ -46,7 +61,12 @@ class ProfileViewController: UIViewController {
             // What will happen once the user clicks the add item button on our UIAlert
 
             // TODO: Add more validation code if the user add an textField.text == nil
-            self.goalArray.append(textField.text!)
+            // create a new Goal
+            var newGoal = Goal()
+            newGoal.title = textField.text!
+
+            self.goalArray.append(newGoal)
+
             self.goalsTableView.reloadData()
 
         }
@@ -73,7 +93,16 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "goalCell", for: indexPath)
-        cell.textLabel?.text = goalArray[indexPath.row]
+
+        // reduce the number of times of having to type out goalArray[indexPath.row]
+        let goal = goalArray[indexPath.row]
+
+        // When working with model objects (e.g. Goal), goalArray[indexPath.row] only returns a Goal object. So, we need to tap into the title property by adding .title
+        cell.textLabel?.text = goal.title
+
+        // use ternary operator to replace if statement: value = condition ? valueIfTrue : valueIfFalse
+        cell.accessoryType = goal.done ? .checkmark : .none
+
         return cell
     }
 
@@ -81,15 +110,17 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO
+        
         print(goalArray[indexPath.row])
-        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        } else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        }
+
+        // set the done property of the selected goal in the goalArray to the opposite of what it is now. So true to false and false to true.
+
+        goalArray[indexPath.row].done = !goalArray[indexPath.row].done
 
         tableView.deselectRow(at: indexPath, animated: true)
 
+        // reload table view how do we get the delegate method 'cellForRowAt indexPath' to trigger again after we've changed the goalArray[indexPath.row].done property. Calling reloadData() calls the datasource methods again to reload the data.
+        goalsTableView.reloadData()
 
     }
 
