@@ -10,11 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: - Outlets
     @IBOutlet weak var homeSearchBar: UISearchBar!
-
-    @IBOutlet weak var homeCollectionView: UICollectionView!
-
+  
     @IBOutlet weak var homeTableView: UITableView!
+
+    // MARK: - Properties
+
+    
 
     var titleArray = ["Gym", "Mediate", "Journal", "Dinner", "Home", "Bedtime", "Date", "Bar"]
 
@@ -25,43 +28,46 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-
-
+        homeTableView.dataSource = self
+        homeTableView.delegate = self
     }
 
 
 }
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titleArray.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
-
-        cell.titleLabel.text = titleArray[indexPath.row]
-
-        return cell
-    }
-
-}
-
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return adviceArray.count
+        return (adviceArray.count + 1)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCategoryTableViewCell", for: indexPath) as! HomeCategoryTableViewCell
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath)
-        cell.textLabel?.text = adviceArray[indexPath.row]
-        return cell
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTipTableViewCell", for: indexPath) as! HomeTipTableViewCell
+
+            cell.textLabel?.text = (adviceArray)[indexPath.row - 1]
+            return cell
+        }
     }
-
-
-
-
 }
+
+extension HomeViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch indexPath.row {
+//        case 0:
+//
+//            return 100
+//
+//        case 1:
+//
+//            return 90
+//        default:
+//            return UITableViewAutomaticDimension
+//        }
+//    }
+}
+
