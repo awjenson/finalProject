@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Goal {
-    var title: String = ""
-    var done: Bool = false
+class Goal: Object {
+    // When creating properties using Realm, you need to add "@objc dynamic"
+    @objc dynamic var title: String = ""
+    @objc dynamic var done: Bool = false
+    @objc dynamic var dateCreated: Date?
 }

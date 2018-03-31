@@ -17,12 +17,16 @@ class HomeCategoryTableViewCell: UITableViewCell {
 
 //    var categories = ["Category"]
 //
-    var titleArray = ["Gym", "Mediate", "Journal", "Dinner", "Home", "Bedtime", "Date", "Bar"]
-//
-//
-//    var categories1 = ["Category"]
-//
-//    var titleArray1 = ["Gym", "Mediate", "Journal", "Dinner", "Home", "Bedtime", "Date", "Bar"]
+    var morningTitleArray = ["Morning", "Gym", "Meditate", "Journal", "Breakfast", "Commute"]
+
+    var lunchTitleArray = ["Lunch", "Exercise", "Career", "Leadership", "Snack", "Exercise"]
+
+    var nightTitleArray = ["Night", "Gym", "Date", "Bar", "Dinner", "Bedtime", "Journal"]
+
+    var selectedNumber = 0
+
+
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,17 +47,42 @@ class HomeCategoryTableViewCell: UITableViewCell {
         homeCollectionView.dataSource = self
         homeCollectionView.delegate = self
 
+        
+
     }
 }
 
+
 extension HomeCategoryTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titleArray.count
+        if selectedNumber == 0 {
+            return morningTitleArray.count
+        } else if selectedNumber == 1 {
+            return lunchTitleArray.count
+        } else {
+            return nightTitleArray.count
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
-        cell.categoryLabel.text = titleArray[indexPath.row]
+
+        let bcolor : UIColor = UIColor.black
+
+        cell.layer.borderColor = bcolor.cgColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 3
+
+        cell.backgroundColor=UIColor.white
+
+        if selectedNumber == 0 {
+            cell.categoryLabel.text = morningTitleArray[indexPath.row]
+        } else if selectedNumber == 1 {
+            cell.categoryLabel.text = lunchTitleArray[indexPath.row]
+        } else if selectedNumber == 2 {
+            cell.categoryLabel.text = nightTitleArray[indexPath.row]
+        }
+
         return cell
     }
 }

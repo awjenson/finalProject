@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print("didFinishLaunchingWithOptions")
+
+        // Realms are like different persistent containers.
+        // Location of our Realm file.
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+
+        // Initalize new Realm object. Use the context to commit the current state to our persistent container (our Realm database)
+        do {
+            // both Realm() and .write could throw an error so that is why we put them inside do-try-catch statements. Since we're not using it we can make it an underscore.
+            _ = try Realm()
+
+        } catch {
+            print("Error initializing new realm, \(error)")
+        }
 
         return true
     }
