@@ -45,6 +45,8 @@
 		DAC8DFF4206C86D2005D627B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF3206C86D2005D627B /* Colors.swift */; };
 		DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF5206ED93B005D627B /* TopicData.swift */; };
 		DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF7206EFB13005D627B /* NowData.swift */; };
+		DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */; };
+		DAC8DFFC206F5A67005D627B /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFFB206F5A67005D627B /* UserInfoViewController.swift */; };
 		DADE6470204E326400BEBF95 /* DetailedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646D204E326400BEBF95 /* DetailedTip.swift */; };
 		DADE6471204E326400BEBF95 /* TipOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646E204E326400BEBF95 /* TipOld.swift */; };
 		DADE6472204E326400BEBF95 /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646F204E326400BEBF95 /* Vision.swift */; };
@@ -97,6 +99,8 @@
 		DAC8DFF3206C86D2005D627B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DAC8DFF5206ED93B005D627B /* TopicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicData.swift; sourceTree = "<group>"; };
 		DAC8DFF7206EFB13005D627B /* NowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowData.swift; sourceTree = "<group>"; };
+		DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundButton.swift; sourceTree = "<group>"; };
+		DAC8DFFB206F5A67005D627B /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		DADE646D204E326400BEBF95 /* DetailedTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTip.swift; sourceTree = "<group>"; };
 		DADE646E204E326400BEBF95 /* TipOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipOld.swift; sourceTree = "<group>"; };
 		DADE646F204E326400BEBF95 /* Vision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 				DA78987E2050DBBC005046D8 /* Profile */,
 				DA78986D204F5F69005046D8 /* ViewModelItemType.swift */,
 				DAA1021C2053444000A25EFC /* RoundButton.swift */,
+				DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */,
 				DAA1021E2053448200A25EFC /* RoundImage.swift */,
 				DAA1022C2053808200A25EFC /* ExpandingCell.swift */,
 			);
@@ -208,6 +213,7 @@
 			children = (
 				DA78987F2051CEF1005046D8 /* OLD */,
 				DA78988C2052EFA1005046D8 /* Home2ViewController.swift */,
+				DAC8DFFB206F5A67005D627B /* UserInfoViewController.swift */,
 				DA7898822051E39E005046D8 /* Profile3ViewController.swift */,
 				DAA1022420537A2400A25EFC /* JournalViewController.swift */,
 			);
@@ -400,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA1022D2053808200A25EFC /* ExpandingCell.swift in Sources */,
+				DAC8DFFC206F5A67005D627B /* UserInfoViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
 				DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */,
 				DA606B512064969100DD14C0 /* Topic.swift in Sources */,
@@ -417,6 +424,7 @@
 				DAA1022520537A2400A25EFC /* JournalViewController.swift in Sources */,
 				DA78986C204F46A9005046D8 /* SwipeViewController.swift in Sources */,
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
+				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
 				DA359C662043324F000190AD /* ProfileViewController.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,
 				DA7898892051E8EC005046D8 /* Profile3DataResults.swift in Sources */,

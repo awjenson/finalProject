@@ -11,10 +11,12 @@ import SafariServices // to display webview
 
 class Home2ViewController: UIViewController {
 
+
+
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var profileButton: UIButton!
 
     @IBOutlet weak var homeTableView: UITableView!
-
     @IBOutlet weak var topicView: UIView!
 
     // Array of UIB
@@ -41,76 +43,76 @@ class Home2ViewController: UIViewController {
     var tipArray3 = [Tip]()
     var tipArray4 = [Tip]()
 
-    var button0 = Topic(title: "", icon: "", tip: [])
-    var button1 = Topic(title: "", icon: "", tip: [])
-    var button2 = Topic(title: "", icon: "", tip: [])
-    var button3 = Topic(title: "", icon: "", tip: [])
-    var button4Now = Topic(title: "", icon: "", tip: [])
-
-    // MARK: - AM
-
-    // Button1
-    let tipAM1 = Tip(title: "Gym 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM2 = Tip(title: "Gym 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM3 = Tip(title: "Gym 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM4 = Tip(title: "Gym 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Button2
-    let tipAM11 = Tip(title: "Breakfast 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM12 = Tip(title: "Breakfast 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM13 = Tip(title: "Breakfast 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM14 = Tip(title: "Breakfast 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Button3
-    let tipAM21 = Tip(title: "Work 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM22 = Tip(title: "Work 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM23 = Tip(title: "Work 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM24 = Tip(title: "work 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Button4
-    let tipAM31 = Tip(title: "Meditate 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM32 = Tip(title: "Meditate 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM33 = Tip(title: "Meditate 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM34 = Tip(title: "Meditate 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Now/Present Hour
-    let tipAM41 = Tip(title: "Present Day and Hour: 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM42 = Tip(title: "Present Day and Hour: 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM43 = Tip(title: "Present Day and Hour: 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipAM44 = Tip(title: "Present Day and Hour: 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-
-    // MARK: - PM
-
-    // Button1
-    let tipPM1 = Tip(title: "Gym 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM2 = Tip(title: "Gym 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM3 = Tip(title: "Gym 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM4 = Tip(title: "Gym 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Button2
-    let tipPM11 = Tip(title: "Dinner 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM12 = Tip(title: "Dinner 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM13 = Tip(title: "Dinner 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM14 = Tip(title: "Dinner 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Button3
-    let tipPM21 = Tip(title: "Bar 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM22 = Tip(title: "Bar 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM23 = Tip(title: "Bar 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM24 = Tip(title: "Bar 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Button4
-    let tipPM31 = Tip(title: "Meditate 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM32 = Tip(title: "Meditate 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM33 = Tip(title: "Meditate 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM34 = Tip(title: "Meditate 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-    // Now/Present Hour
-    let tipPM41 = Tip(title: "Present Night and Hour: 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM42 = Tip(title: "Present Night and Hour: 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM43 = Tip(title: "Present Night and Hour: 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-    let tipPM44 = Tip(title: "Present Night and Hour: 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    var button0 = Topic(title: "", icon: "", tip: [])
+//    var button1 = Topic(title: "", icon: "", tip: [])
+//    var button2 = Topic(title: "", icon: "", tip: [])
+//    var button3 = Topic(title: "", icon: "", tip: [])
+//    var button4Now = Topic(title: "", icon: "", tip: [])
+//
+//    // MARK: - AM
+//
+//    // Button1
+//    let tipAM1 = Tip(title: "Gym 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM2 = Tip(title: "Gym 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM3 = Tip(title: "Gym 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM4 = Tip(title: "Gym 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Button2
+//    let tipAM11 = Tip(title: "Breakfast 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM12 = Tip(title: "Breakfast 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM13 = Tip(title: "Breakfast 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM14 = Tip(title: "Breakfast 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Button3
+//    let tipAM21 = Tip(title: "Work 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM22 = Tip(title: "Work 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM23 = Tip(title: "Work 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM24 = Tip(title: "work 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Button4
+//    let tipAM31 = Tip(title: "Meditate 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM32 = Tip(title: "Meditate 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM33 = Tip(title: "Meditate 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM34 = Tip(title: "Meditate 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Now/Present Hour
+//    let tipAM41 = Tip(title: "Present Day and Hour: 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM42 = Tip(title: "Present Day and Hour: 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM43 = Tip(title: "Present Day and Hour: 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipAM44 = Tip(title: "Present Day and Hour: 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//
+//    // MARK: - PM
+//
+//    // Button1
+//    let tipPM1 = Tip(title: "Gym 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM2 = Tip(title: "Gym 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM3 = Tip(title: "Gym 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM4 = Tip(title: "Gym 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Button2
+//    let tipPM11 = Tip(title: "Dinner 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM12 = Tip(title: "Dinner 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM13 = Tip(title: "Dinner 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM14 = Tip(title: "Dinner 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Button3
+//    let tipPM21 = Tip(title: "Bar 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM22 = Tip(title: "Bar 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM23 = Tip(title: "Bar 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM24 = Tip(title: "Bar 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Button4
+//    let tipPM31 = Tip(title: "Meditate 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM32 = Tip(title: "Meditate 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM33 = Tip(title: "Meditate 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM34 = Tip(title: "Meditate 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//
+//    // Now/Present Hour
+//    let tipPM41 = Tip(title: "Present Night and Hour: 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM42 = Tip(title: "Present Night and Hour: 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM43 = Tip(title: "Present Night and Hour: 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//    let tipPM44 = Tip(title: "Present Night and Hour: 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 
 
@@ -130,79 +132,79 @@ class Home2ViewController: UIViewController {
         // Append individual tips to correct tipArray
 
 
-        // Create topics
-
-        if hour < 12 {
-            print("AM")
-
-            // append tips
-
-            // Always will be tipArray0, tipArray1, tipArray2, tipArray3, and tipArray4
-            tipArray0.append(tipAM1)
-            tipArray0.append(tipAM2)
-            tipArray0.append(tipAM3)
-            tipArray0.append(tipAM4)
-
-            tipArray1.append(tipAM11)
-            tipArray1.append(tipAM12)
-            tipArray1.append(tipAM13)
-            tipArray1.append(tipAM14)
-
-            tipArray2.append(tipAM21)
-            tipArray2.append(tipAM22)
-            tipArray2.append(tipAM23)
-            tipArray2.append(tipAM24)
-
-            tipArray3.append(tipAM31)
-            tipArray3.append(tipAM32)
-            tipArray3.append(tipAM33)
-            tipArray3.append(tipAM34)
-
-            tipArray4.append(tipAM41)
-            tipArray4.append(tipAM42)
-            tipArray4.append(tipAM43)
-            tipArray4.append(tipAM44)
-
-            // create topics
-
-            let topic0 = Topic(title: "Gym", icon: "Gym", tip: tipArray0)
-            let topic1 = Topic(title: "Breakfast", icon: "Bre", tip: tipArray1)
-            let topic2 = Topic(title: "Work", icon: "Wor", tip: tipArray2)
-            let topic3 = Topic(title: "Meditate", icon: "Med", tip: tipArray3)
-            let topic4 = Topic(title: "Now", icon: "Now", tip: tipArray4)
-
-            // Below stays constant, just insert desired topic objects.
-            // Append selected topics to main array of Topics
-            // Always will append 5 topic objects.
-
-            appendFiveTopics(topic0, topic1, topic2, topic3, topic4)
-
-        } else if day > 12 {
-            print("PM")
-
-            tipArray0 = [tipPM1, tipPM2, tipPM3, tipPM4]
-            tipArray1 = [tipPM11, tipPM12, tipPM13, tipAM14]
-            tipArray2 = [tipPM21, tipPM22, tipPM23, tipPM24]
-            tipArray3 = [tipPM31, tipPM32, tipPM33, tipPM34]
-            tipArray4 = [tipPM41, tipPM42, tipPM43, tipPM44]
-
-            let topic0 = Topic(title: "Gym", icon: "Gym", tip: tipArray0)
-            let topic1 = Topic(title: "Dinner", icon: "Din", tip: tipArray1)
-            let topic2 = Topic(title: "Bar", icon: "Bar", tip: tipArray2)
-            let topic3 = Topic(title: "Meditate", icon: "Med", tip: tipArray3)
-            let topic4 = Topic(title: "Now", icon: "Now", tip: tipArray4)
-
-            // Select desired topics (0 through n)
-            button0 = topic0
-            button1 = topic1
-            button2 = topic2
-            button3 = topic3
-            button4Now = topic4
-
-            // don't need to button variables
-            appendFiveTopics(button0, button1, button2, button3, button4Now)
-
-        }
+//        // Create topics
+//
+//        if hour < 12 {
+//            print("AM")
+//
+//            // append tips
+//
+//            // Always will be tipArray0, tipArray1, tipArray2, tipArray3, and tipArray4
+//            tipArray0.append(tipAM1)
+//            tipArray0.append(tipAM2)
+//            tipArray0.append(tipAM3)
+//            tipArray0.append(tipAM4)
+//
+//            tipArray1.append(tipAM11)
+//            tipArray1.append(tipAM12)
+//            tipArray1.append(tipAM13)
+//            tipArray1.append(tipAM14)
+//
+//            tipArray2.append(tipAM21)
+//            tipArray2.append(tipAM22)
+//            tipArray2.append(tipAM23)
+//            tipArray2.append(tipAM24)
+//
+//            tipArray3.append(tipAM31)
+//            tipArray3.append(tipAM32)
+//            tipArray3.append(tipAM33)
+//            tipArray3.append(tipAM34)
+//
+//            tipArray4.append(tipAM41)
+//            tipArray4.append(tipAM42)
+//            tipArray4.append(tipAM43)
+//            tipArray4.append(tipAM44)
+//
+//            // create topics
+//
+//            let topic0 = Topic(title: "Gym", icon: "Gym", tip: tipArray0)
+//            let topic1 = Topic(title: "Breakfast", icon: "Bre", tip: tipArray1)
+//            let topic2 = Topic(title: "Work", icon: "Wor", tip: tipArray2)
+//            let topic3 = Topic(title: "Meditate", icon: "Med", tip: tipArray3)
+//            let topic4 = Topic(title: "Now", icon: "Now", tip: tipArray4)
+//
+//            // Below stays constant, just insert desired topic objects.
+//            // Append selected topics to main array of Topics
+//            // Always will append 5 topic objects.
+//
+//            appendFiveTopics(topic0, topic1, topic2, topic3, topic4)
+//
+//        } else if day > 12 {
+//            print("PM")
+//
+//            tipArray0 = [tipPM1, tipPM2, tipPM3, tipPM4]
+//            tipArray1 = [tipPM11, tipPM12, tipPM13, tipAM14]
+//            tipArray2 = [tipPM21, tipPM22, tipPM23, tipPM24]
+//            tipArray3 = [tipPM31, tipPM32, tipPM33, tipPM34]
+//            tipArray4 = [tipPM41, tipPM42, tipPM43, tipPM44]
+//
+//            let topic0 = Topic(title: "Gym", icon: "Gym", tip: tipArray0)
+//            let topic1 = Topic(title: "Dinner", icon: "Din", tip: tipArray1)
+//            let topic2 = Topic(title: "Bar", icon: "Bar", tip: tipArray2)
+//            let topic3 = Topic(title: "Meditate", icon: "Med", tip: tipArray3)
+//            let topic4 = Topic(title: "Now", icon: "Now", tip: tipArray4)
+//
+//            // Select desired topics (0 through n)
+//            button0 = topic0
+//            button1 = topic1
+//            button2 = topic2
+//            button3 = topic3
+//            button4Now = topic4
+//
+//            // don't need to button variables
+//            appendFiveTopics(button0, button1, button2, button3, button4Now)
+//
+//        }
 
 
         // set estimated row height (needed for auto row height size)
@@ -367,12 +369,15 @@ class Home2ViewController: UIViewController {
         let hour = calendar.component(.hour, from: date)
 
         switch dayOfWeek {
-        case 1,7:
+        case 1,7: // S,S
             print("today is a weekend")
             weekend(hour)
-        case 2,3,4,5,6:
-            print("today is a weekday")
-            weekday(hour)
+        case 2,3,4: // M,T,W
+            print("today is a Mon/Tues/Wed")
+            weekdayMTW(hour)
+        case 5,6:
+            print("today is Thur/Fri")
+            weekdayTF(hour)
         default:
             print("error with dayAndHour")
             print(dayOfWeek)
@@ -385,67 +390,111 @@ class Home2ViewController: UIViewController {
                 case 0...4:
                     print("Weekend, Very Early Morning")
                     // call function to display 5 time-based topics
-                    // I create a early morning 'now' topic
-                    // Select 4 other topics for early morning
-                    // Group them together and dispaly when it is time
-
-                    tipArray0 = [tipPM1, tipPM2, tipPM3, tipPM4]
-                    tipArray1 = [tipPM11, tipPM12, tipPM13, tipAM14]
-                    tipArray2 = [tipPM21, tipPM22, tipPM23, tipPM24]
-                    tipArray3 = [tipPM31, tipPM32, tipPM33, tipPM34]
-                    tipArray4 = [tipPM41, tipPM42, tipPM43, tipPM44]
-
-                    let topic0 = Topic(title: "Gym", icon: "Gym", tip: tipArray0)
-                    let topic1 = Topic(title: "Dinner", icon: "Din", tip: tipArray1)
-                    let topic2 = Topic(title: "Bar", icon: "Bar", tip: tipArray2)
-                    let topic3 = Topic(title: "Meditate", icon: "Med", tip: tipArray3)
-                    let topic4 = Topic(title: "Now", icon: "Now", tip: tipArray4)
-
-                    appendFiveTopics(topic0, topic1, topic2, topic3, topic4)
+                    appendFiveTopics(lateNightSnackTopic0, meditationTopic0, barTopic0, homeAMTopic0, weekendNow0to4Topic0)
 
                 case 5...8:
                     print("Weekend, Early Morning")
                     // call function to display 5 time-based topics
+                    appendFiveTopics(meditationTopic0, gymTopic0, breakfastTopic0, homeAMTopic0, weekendNow5to8Topic0)
 
-                case 9...12:
+                case 9..<11:
                     print("Weekend, Late Morning")
                     // call function to display 5 time-based topics
-                case 13...16:
+                    appendFiveTopics(gymTopic0, yogaTopic0, runningTopic0, cafeTopic0, weekendNow9to11Topic0)
+
+                case 11..<14:
+                    print("Weekend, Midday")
+                    appendFiveTopics(lunchTopic0, cafeTopic0, shoppingClothesTopic0, groceryStoreTopic0, weekendNow11to14Topic0)
+
+                case 14...16:
                     print("Weekend, Afternoon")
                     // call function to display 5 time-based topics
+                    appendFiveTopics(mindfulnessTopic0, runningTopic0, shoppingClothesTopic0, groceryStoreTopic0, weekendNow14to16Topic0)
                 case 17...20:
                     print("Weekend, Evening")
                     // call function to display 5 time-based topics
+                    appendFiveTopics(dinnerTopic0, homePMTopic0, groceryStoreTopic0, mindfulnessTopic0, weekendNow17to20Topic0)
                 case 21..<24:
                     print("Weekend, Late evening")
                     // call function to display 5 time-based topics
+                    appendFiveTopics(homePMTopic0, meditationTopic0, bedtimeTopic0, lateNightSnackTopic0, weekendNow21to24Topic0)
                 default:
                     print("Weekend,INVALID HOUR!")
                 }
     }
 
-    func weekday(_ hour: Int) {
+    func weekdayMTW(_ hour: Int) {
         switch hour {
         case 0...4:
-            print("Weekday, Very Early Morning")
+            print("weekdayMTW, Very Early Morning")
             // call function to display 5 time-based topics
+            appendFiveTopics(bedtimeTopic0, lateNightSnackTopic0, meditationTopic0, barTopic0, weekdayNow0to4Topic0)
         case 5...8:
-            print("Weekday, Early Morning")
+            print("weekdayMTW, Early Morning")
             // call function to display 5 time-based topics
-        case 9...12:
-            print("Weekday, Late Morning")
+            appendFiveTopics(meditationTopic0, gymTopic0, breakfastTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
+
+        case 9..<11:
+            print("weekdayMTW, Late Morning")
             // call function to display 5 time-based topics
-        case 13...16:
-            print("Weekday, Afternoon")
+            appendFiveTopics(workAMTopic0, lunchTopic0, leadershipAMTopic0, cafeTopic0, weekdayNow9to11Topic0)
+
+        case 11..<14:
+            print("weekdayMTW, Midday")
+            appendFiveTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, weekdayNow11to14Topic0)
+
+        case 14...16:
+            print("weekdayMTW, Afternoon")
             // call function to display 5 time-based topics
+            appendFiveTopics(workPMTopic0, leadershipPMTopic0, afternoonSnackTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
+
         case 17...20:
             print("Weekday, Evening")
             // call function to display 5 time-based topics
+            appendFiveTopics(commutePMTopic0, gymTopic0, groceryStoreTopic0, dinnerTopic0, weekdayNow17to20Topic0)
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 5 time-based topics
+            appendFiveTopics(barTopic0, lateNightSnackTopic0, homePMTopic0, bedtimeTopic0, weekdayNow21to24Topic0)
         default:
             print("Weekday,INVALID HOUR!")
+        }
+    }
+
+    func weekdayTF(_ hour: Int) {
+        switch hour {
+        case 0...4:
+            print("weekdayTF, Very Early Morning")
+            // call function to display 5 time-based topics
+            appendFiveTopics(bedtimeTopic0, lateNightSnackTopic0, meditationTopic0, barTopic0, weekdayNow0to4Topic0)
+        case 5...8:
+            print("weekdayTF, Early Morning")
+            // call function to display 5 time-based topics
+            appendFiveTopics(meditationTopic0, gymTopic0, breakfastTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
+        case 9..<11:
+            print("weekdayTF, Late Morning")
+            // call function to display 5 time-based topics
+            appendFiveTopics(workAMTopic0, lunchTopic0, leadershipAMTopic0, cafeTopic0, weekdayNow9to11Topic0)
+
+        case 11..<14:
+            print("weekdayTF, Midday")
+            appendFiveTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, weekdayNow11to14Topic0)
+
+        case 14...16:
+            print("weekdayTF, Afternoon")
+            // call function to display 5 time-based topics
+            appendFiveTopics(workPMTopic0, leadershipPMTopic0, afternoonSnackTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
+
+        case 17...20:
+            print("weekdayTF, Evening")
+            // call function to display 5 time-based topics
+            appendFiveTopics(gymTopic0, dinnerTopic0, barTopic0, dateTopic0, weekdayNow17to20Topic0)
+        case 21..<24:
+            print("weekdayTF, Late evening")
+            // call function to display 5 time-based topics
+            appendFiveTopics(barTopic0, dateTopic0, homePMTopic0, bedtimeTopic0, weekdayNow21to24Topic0)
+        default:
+            print("weekdayTF,INVALID HOUR!")
         }
     }
 
@@ -571,6 +620,10 @@ class Home2ViewController: UIViewController {
 
     // MARK: - IBActions
 
+    @IBAction func profileButtonTapped(_ sender: RoundButton) {
+    }
+
+
     @IBAction func topicButtonTapped(_ sender: RoundButton) {
         if let topicNumber = topicButtons.index(of: sender) {
             flipButton(at: topicNumber, withText: topics[topicNumber].icon, on: sender)
@@ -579,6 +632,8 @@ class Home2ViewController: UIViewController {
             print("ERROR: button tapped not in topicButtons")
         }
     }
+
+
 
     func refreshTopicButtons() {
         topicButtons[0].setTitle("\(topics[0].icon)", for: .normal)
@@ -614,13 +669,24 @@ class Home2ViewController: UIViewController {
 
     func topicSelected(_ index: Int) {
         tips = []
-        print("Index: \(index), Number of tips: \(tips.count)")
-        tips.append(topics[index].tip[0])
-        tips.append(topics[index].tip[1])
-        tips.append(topics[index].tip[2])
-        tips.append(topics[index].tip[3])
-        print("Number of tips: \(tips.count)")
 
+        // Take selected index in topics array and subtract 0 because we start with zero
+        var counter = (topics[index].tip.count - 1)
+
+        for item in 0...counter {
+            print("counter: \(counter)")
+            print("index: \(index)")
+            print("item: \(item)")
+            tips.append(topics[index].tip[item])
+        }
+
+//        print("Index: \(index), Number of tips: \(tips.count)")
+//        print("Number of topics: \(topics[index].title)")
+//        tips.append(topics[index].tip[0])
+//        tips.append(topics[index].tip[1])
+//        tips.append(topics[index].tip[2])
+//        tips.append(topics[index].tip[3])
+//        print("Index: \(index), Number of tips: \(tips.count)")
     }
 
 }
