@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UserInfoViewController: UIViewController {
 
@@ -20,5 +21,22 @@ class UserInfoViewController: UIViewController {
     @IBAction func dismissButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
+
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+
+        // Log out and send the user back to the Welcome View Controller
+        do  {
+            try Auth.auth().signOut()
+        } catch {
+            print("Error with Sign Out.")
+            // TODO: Update UILabel for user to know there was an error
+            self.dismiss(animated: true, completion: nil)
+        }
+
+        
+    }
+
+    
 
 }

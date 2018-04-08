@@ -18,15 +18,13 @@ class Home2TableViewCell: UITableViewCell {
     // For protocol, create a delegate variable here (the Boss) so we can set HomeViewController as our delegate (the intern)
     var delegate: Home2TableViewCellDelegate?
 
-
     @IBOutlet weak var titleLabel: UILabel!
-
     @IBOutlet weak var bodyLabel: UILabel!
-
     @IBOutlet weak var sourceLabel: UILabel!
 
-    @IBOutlet weak var sponsorButton: RoundButton!
-    
+//    @IBOutlet weak var sponsorLabel: UILabel!
+//    @IBOutlet weak var sponsorButton: RoundButton!
+
 
     var tipItem: Tip!
 
@@ -37,20 +35,14 @@ class Home2TableViewCell: UITableViewCell {
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
         sourceLabel.text = tip.sourceName
-        sponsorButton.setBackgroundImage(UIImage(named: tip.sponsorLogo), for: .normal)
-        sponsorButton.setTitle("", for: .normal)
-        if sponsorButton.titleLabel?.text == "" {
-            sourceLabel.text = ""
-        }
-
+//        sponsorLabel.text = ""
+//        sponsorButton.setBackgroundImage(UIImage(named: tip.sponsorLogo), for: .normal)
+//        sponsorButton.setTitle("", for: .normal)
+//        if sponsorButton.titleLabel?.text == "" {
+//            sourceLabel.text = ""
+//        }
 
         // set text view delegate
-        
-
-
-
-
-
     }
 
 
@@ -70,7 +62,7 @@ class Home2TableViewCell: UITableViewCell {
     @IBAction func sponsorButtonTapped(_ sender: Any) {
 
         print("Sponsor Button Tapped, tell intern, HomeViewController, to execute goToSourceURL() and tell it the url to open up")
-        delegate?.goToSourceURL(url: tipItem.sponsorURL)
+        delegate?.goToSourceURL(url: tipItem.sponsorURL!)
     }
 }
 

@@ -437,7 +437,7 @@ class Home2ViewController: UIViewController {
         case 9..<11:
             print("weekdayMTW, Late Morning")
             // call function to display 5 time-based topics
-            appendFiveTopics(workAMTopic0, lunchTopic0, leadershipAMTopic0, cafeTopic0, weekdayNow9to11Topic0)
+            appendFiveTopics(gymTopic0, cafeTopic0, workAMTopic0, leadershipAMTopic0, weekdayNow9to11Topic0)
 
         case 11..<14:
             print("weekdayMTW, Midday")
@@ -488,7 +488,7 @@ class Home2ViewController: UIViewController {
         case 17...20:
             print("weekdayTF, Evening")
             // call function to display 5 time-based topics
-            appendFiveTopics(gymTopic0, dinnerTopic0, barTopic0, dateTopic0, weekdayNow17to20Topic0)
+            appendFiveTopics(workLateTopic0, gymTopic0, dinnerTopic0, barTopic0, weekdayNow17to20Topic0)
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 5 time-based topics
@@ -727,7 +727,26 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell clicked")
         homeTableView.deselectRow(at: indexPath, animated: true)
+        let tip = tips[indexPath.row]
+
+        let app = UIApplication.shared
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Home2TableViewCell
+        if let url = tip.sourceURL {
+
+            // print: true or false
+            print("verifyURL: \(verifyUrl(urlString: url))")
+
+            if verifyUrl(urlString: url) == true {
+                app.open(URL(string:url)!)
+            } else {
+                performUIUpdatesOnMain {
+                    self.createAlert(title: "Invalid URL", message: "Could not open URL")
+                }
+            }
+        }
+
     }
+
 }
 
 //extension Home2ViewController: UITextViewDelegate {

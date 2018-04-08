@@ -25,6 +25,9 @@ class RoundButton: UIButton {
     func initButton() {
 //        layer.borderWidth = 2.0
         layer.cornerRadius = frame.size.height/2
+
+//        layer.borderColor = UIColor.darkGray.cgColor
+//        layer.borderWidth = 1.0
         clipsToBounds = true
 //        addTarget(self, action: #selector(RoundButton.buttionPressed), for: .touchUpInside)
     }

@@ -1,0 +1,205 @@
+//
+//  Profile3ViewController.swift
+//  finalProject
+//
+//  Created by Andrew Jenson on 3/8/18.
+//  Copyright © 2018 Andrew Jenson. All rights reserved.
+//
+
+import UIKit
+import Firebase
+
+// Firebase push happens when use taps out of textView. But, when does the retrive happen.. in the viewDidLoad.
+
+class Profile3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var profile3TableView: UITableView!
+
+
+    let keyboardHeight = KeyboardService.keyboardHeight()
+    let keyboardSize = KeyboardService.keyboardSize()
+
+    var statementArray = [ProfileStatement]()
+    var vision0 = ProfileStatement(sender: "Andrew", statement: "My vision is to...")
+
+    var lifetime1 = ProfileStatement(sender: "Andrew", statement: "My lifetime goals will be to accomplish thsee things so that I am proud of my life.")
+    var oneYearGoals2 = ProfileStatement(sender: "Andrew", statement: "My one year goals are to do x, y, and z.")
+    var dailyRoutine3 = ProfileStatement(sender: "Andrew", statement: "My daily routine will be to do this and that each day...")
+    var listOfFears4 = ProfileStatement(sender: "Andrew", statement: "My biggest fears that are holding me back in life are...")
+
+
+    
+    var results = [ProfileDataResults]()
+    var selectedResults = [ProfileDataModel]() // this will be used to stores the selected vision and goals
+
+
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        statementArray.append(vision0)
+        statementArray.append(lifetime1)
+        statementArray.append(oneYearGoals2)
+        statementArray.append(dailyRoutine3)
+        statementArray.append(listOfFears4)
+
+        profile3TableView.dataSource = self
+        profile3TableView.delegate = self
+
+        // Do any additional setup after loading the view.
+
+        let vision = ProfileDataModel(category: "Vision", adviceText: "Create the highest grandest vision possible for your life, because you become what you believe.", adviceAuthor: "Oprah Winfrey", adviceURL: "https://www.youtube.com/watch?v=acBp_5OmTkQ&t", userInput: statementArray[0])
+
+        let lifetimeGoals = ProfileDataModel(category: "Lifetime Goals", adviceText: "Project your life to age 80 and then make decisions today to minimize regrets you will have. While you might feel remorse for things you did wrong, more often regrets stem from the path not taken. If you fail, at least you will be proud when you're 80 that you tried.", adviceAuthor: "Jeff Bezos", adviceURL: "https://www.youtube.com/watch?v=ikuLEZoE1vE", userInput: statementArray[1])
+
+        let oneYearGoals = ProfileDataModel(category: "One Year Goals", adviceText: "People without goals get used by other people who have them. People who don’t have goals work for people who do.", adviceAuthor: "Sean Croxton", adviceURL: "https://www.youtube.com/watch?v=DNITe9snHqA&t", userInput: statementArray[2])
+
+        let dailyRoutine = ProfileDataModel(category: "Daily Routine", adviceText: "It's not what we do once in a while that shapes our lives, but what we do consistently.", adviceAuthor: "Tony Robbins", adviceURL: "https://www.youtube.com/watch?v=3sK3wJAxGfs", userInput: statementArray[3])
+
+        let listOfFears = ProfileDataModel(category: "List of Fears", adviceText: "We must build dikes of courage to hold back the flood of fear.", adviceAuthor: "Martin Luther King, Jr.", adviceURL: "https://www.youtube.com/watch?v=eWUs2QS1mJY", userInput: statementArray[4])
+
+        selectedResults.append(vision)
+        selectedResults.append(lifetimeGoals)
+        selectedResults.append(oneYearGoals)
+        selectedResults.append(dailyRoutine)
+        selectedResults.append(listOfFears)
+
+        configureTableView()
+
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+//        // could add this for the quote view too
+//        profile3TableView.addGestureRecognizer(tapGesture)
+//
+//        retrieveStatements()
+
+    }
+
+    func configureTableView() {
+        profile3TableView.estimatedRowHeight = 70
+        profile3TableView.rowHeight = UITableViewAutomaticDimension
+    }
+
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return selectedResults.count
+    }
+
+
+
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
+
+        // set its text view’s delegate to self *** UNSURE WHY THIS DOESN'T WORK???
+//        cell.userTextView.delegate = self
+
+        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
+        cell.userTextView.layer.borderWidth = 2
+
+        /*
+         CELL - comes after each 'cell.'
+         categoryLabel: UILabel!
+         adviceTextLabel: UILabel!
+         adviceAuthorLabel: UILabel!
+         userTextView: UITextView!
+         quoteAuthorLabel: UILabel!
+         quoteLabel: UILabel!
+         quoteButton: UIButton!
+
+         Profile3DataModel - comes after each [indexPath.row]
+         category
+         adviceText
+         adviceAuthor
+         userInput
+         quoteText
+         quoteAuthor
+         quoteURL
+         */
+
+        cell.categoryLabel.text = selectedResults[indexPath.row].category
+        cell.adviceTextLabel.text = selectedResults[indexPath.row].adviceText
+        cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
+
+        cell.userTextView.text = selectedResults[indexPath.row].userInput.statement
+
+        return cell
+    }
+
+    // Used for working with UITextView
+
+
+
+}
+
+extension Profile3ViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        /*
+         According to article there is a UI bug, added code to fix it
+         http://candycode.io/self-sizing-uitextview-in-a-uitableview-using-auto-layout-like-reminders-app/
+         */
+        let currentOffset = profile3TableView.contentOffset
+        UIView.setAnimationsEnabled(false)
+        profile3TableView.beginUpdates()
+        profile3TableView.endUpdates()
+        UIView.setAnimationsEnabled(true)
+        profile3TableView.setContentOffset(currentOffset, animated: false)
+
+        // update Firebase Database
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+
+//        // Create a new reference inside our main database
+//        let messagesDB = Database.database().reference().child("Statements")
+//        // data we want to save in our database
+//        let messageDictionary = ["Sender": Auth.auth().currentUser?.email, "StatementBody": messageTextField.text]
+//
+//        // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
+//        messagesDB.childByAutoId().setValue(messageDictionary) {
+//            (error, reference) in
+//
+//            if error != nil {
+//                print(error)
+//            } else {
+//                print("Message saved successfully")
+//                self.messageTextField.isEnabled = true
+//                self.sendButton.isEnabled = true
+//                self.messageTextField.text = ""
+//
+//            }
+//        }
+    }
+
+}
+
+extension Profile3ViewController: UITextFieldDelegate {
+
+
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.2) {
+            // animations that we want to happen
+            // keyboard is 258 points high
+
+            print("keyboardHeight: \(self.keyboardHeight)")
+
+            self.view.layoutIfNeeded() // update view
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5) {
+            // animations that we want to happen
+            // keyboard is 258 points high
+            
+            self.view.layoutIfNeeded() // update view
+        }
+
+    }
+
+
+
+
+
+}
