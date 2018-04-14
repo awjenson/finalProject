@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print("didFinishLaunchingWithOptions")
+
+        if window?.rootViewController as? UITabBarController != nil {
+            let tabBarController = window!.rootViewController as! UITabBarController
+            tabBarController.selectedIndex = 1 // Opens the 4th Tab
+        } else{
+            print("couldn't reach rootViewController named UITabBarController")
+        }
 
         // Firebase.
         // Initialize and configure Firebase
@@ -37,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("Error initializing new realm, \(error)")
         }
+
+        // IQKeyboardManagerSwift
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().reloadLayoutIfNeeded()
 
         return true
     }

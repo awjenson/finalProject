@@ -35,7 +35,7 @@ class JournalTableViewCell: UITableViewCell {
 
 //        journalTextView.delegate = self
         messageBackground.layer.cornerRadius = 10
-//        messageBackground.layer.borderWidth = 1.0
+        messageBackground.layer.borderWidth = 1.0
 //        messageBackground.layer.borderColor = UIColor.black.cgColor
     }
 }

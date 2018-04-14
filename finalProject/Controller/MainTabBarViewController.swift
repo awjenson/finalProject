@@ -1,35 +1,20 @@
 //
-//  ProfileMediaViewController.swift
+//  MainTabBarViewController.swift
 //  finalProject
 //
-//  Created by Andrew Jenson on 3/7/18.
+//  Created by Andrew Jenson on 4/8/18.
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
 
 import UIKit
-import WebKit
 
-class ProfileMediaViewController: UIViewController {
-
-
-    @IBOutlet weak var mediaWebView: WKWebView!
-    
+class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        embedVideoYoutube(youtubeVideoId: "Jp5YYrb6MxM")
-
-    }
-
-    func embedVideoYoutube(youtubeVideoId: String) {
-        //set the data here, customize cell
-        let mediaURL = NSURL(string: "https://www.youtube.com/watch?v=e1KJQs0frbM")
-
-        let requestObj = URLRequest(url: mediaURL! as URL)
-
-        mediaWebView.load(requestObj)
+        self.selectedIndex = 1
     }
 
     override func didReceiveMemoryWarning() {

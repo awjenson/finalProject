@@ -21,6 +21,11 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        userTextView.delegate = self
+
+        adviceURLButton.layer.cornerRadius = 10
+        adviceURLButton.layer.borderWidth = 1.0
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,6 +33,9 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
         // Configure the view for the selected state
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.userTextView.resignFirstResponder()
+    }
 
     @IBAction func adviceURLButtonTapped(_ sender: Any) {
         // Display webview
@@ -37,6 +45,9 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
 
     }
+
+    
+    
 
     
 

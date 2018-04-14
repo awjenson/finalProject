@@ -9,167 +9,93 @@
 import UIKit
 import Firebase
 import ChameleonFramework // for colors
+import GrowingTextView
 
-class KeyboardService: NSObject {
-    static var serviceSingleton = KeyboardService()
-    var measuredSize: CGRect = CGRect.zero
-
-    @objc class func keyboardHeight() -> CGFloat {
-        let keyboardSize = KeyboardService.keyboardSize()
-        return keyboardSize.size.height
-    }
-
-    @objc class func keyboardSize() -> CGRect {
-        return serviceSingleton.measuredSize
-    }
-
-    private func observeKeyboardNotifications() {
-        let center = NotificationCenter.default
-        center.addObserver(self, selector: #selector(self.keyboardChange), name: .UIKeyboardDidShow, object: nil)
-    }
-
-    private func observeKeyboard() {
-        let field = UITextField()
-        UIApplication.shared.windows.first?.addSubview(field)
-        field.becomeFirstResponder()
-        field.resignFirstResponder()
-        field.removeFromSuperview()
-
-    }
-
-    @objc private func keyboardChange(_ notification: Notification) {
-        guard measuredSize == CGRect.zero, let info = notification.userInfo,
-            let value = info[UIKeyboardFrameEndUserInfoKey] as? NSValue
-            else { return }
-
-        measuredSize = value.cgRectValue
-    }
-
-    override init() {
-        super.init()
-        observeKeyboardNotifications()
-        observeKeyboard()
-    }
-
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-}
-
-////////////////////////////////////////////////////////////
+// leading = leading + 8
+// top = top + 10
+// trailing = trailing + 8
+// Send Button.leading = Message Text Field.trailing + 8
 
 class JournalViewController: UIViewController {
 
-    @IBOutlet weak var journalTitleLabel: UILabel!
+    @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
+    @IBOutlet weak var quoteButton: UIButton!
+
     // Send/Type message bar
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var messageTextField: UITextField!
+//    @IBOutlet weak var messageTextField: UITextField!
+
+    @IBOutlet weak var messageTextView: GrowingTextView! // Changed to GrowingTextView!
     @IBOutlet weak var sendButton: UIButton!
+
+
+
 
     @IBOutlet weak var journalTableView: UITableView!
 
+    var ref: DatabaseReference!
+    fileprivate var _refHandle: DatabaseHandle!
+    fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
+
     var messageArray = [JournalMessage]()
 
-    let keyboardHeight = KeyboardService.keyboardHeight()
-    let keyboardSize = KeyboardService.keyboardSize()
+//    let keyboardHeight = KeyboardService.keyboardHeight()
+//    let keyboardSize = KeyboardService.keyboardSize()
 
     var expandingCellHeight: CGFloat = 200
     let expandingIndexRow = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        signedInStatus(isSignedIn: true)
+    }
 
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(keyboardWillShow),
-//            name: NSNotification.Name.UIKeyboardWillShow,
-//            object: nil
-//        )
-
-        journalTableView.dataSource = self
-        journalTableView.delegate = self
-        messageTextField.delegate = self
-
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
-        // could add this for the quote view too
-        journalTableView.addGestureRecognizer(tapGesture)
-
-//         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    deinit {
+        // The database observer doesn't stop listen for changes in the database when the VC goes off screen. So if the observer isn't removed then the observer will continue to sync data to local memory casusing excessive memory use. So when an observer is no longer needed we should remove it. In this case, remove the observer when the VC is deinitalized.
+        ref.child(Constants.DbChild.Messages).removeObserver(withHandle: _refHandle)
+    }
 
 
+    func signedInStatus(isSignedIn: Bool) {
+        if (isSignedIn) {
+
+            journalTableView.dataSource = self
+            journalTableView.delegate = self
+
+            messageTextView.delegate = self
+            messageTextView.trimWhiteSpaceWhenEndEditing = false
+            messageTextView.placeholder = "Say something..."
+            messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
+            messageTextView.backgroundColor = UIColor.white
+            messageTextView.layer.cornerRadius = 4.0
+
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+            // could add this for the quote view too
+            journalTableView.addGestureRecognizer(tapGesture)
+
+            configureTableView()
+
+            configureDatabase()
+
+            retrieveMessages()
+
+            journalTableView.separatorStyle = .none
 
 
-        configureTableView()
-
-//        registerKeyboardNotifications()
-
-        retrieveMessages()
-
-        journalTableView.separatorStyle = .none
-
-
+        }
 
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-//                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
-//                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    func configureDatabase() {
+        ref = Database.database().reference()
     }
 
-//    override open func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-//        NotificationCenter.default.removeObserver(self)
-//    }
-
-//    @objc override func keyboardWillShow(_ notification: Notification) {
-//        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-//            let keyboardRectangle = keyboardFrame.cgRectValue
-//            keyboardHeight = keyboardRectangle.height
-//            print("keyboardHeight \(keyboardHeight)")
-//
-//        }
-//    }
-//
-//    //MARK: - getKayboardHeight
-//    @objc func keyboardWillShow(notification: Notification) {
-//        let userInfo:NSDictionary = notification.userInfo! as NSDictionary
-//        let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
-//        let keyboardRectangle = keyboardFrame.cgRectValue
-//        keyboardHeight = keyboardRectangle.height
-//        print("keyboardHeight \(keyboardHeight)")
-//
-//        // do whatever you want with this keyboard height
-//    }
 
 
 
-    
-//    @objc func keyboardWillHide(notification: Notification) {
-//        // keyboard is dismissed/hidden from the screen
-//    }
-
-
-
-
-
-//    func firstMessageOfTheDay(indexOfMessage: NSIndexPath) -> Bool {
-//        let messageDate = messages[indexOfMessage.item].date
-//        guard let previouseMessageDate = messages[indexOfMessage.item - 1].date else {
-//            return true // because there is no previous message so we need to show the date
-//        }
-//        let day = Calendar.current.component(.day, from: messageDate)
-//        let previouseDay = Calendar.current.component(.day, from: previouseMessageDate)
-//        if day == previouseDay {
-//            return false
-//        } else {
-//            return true
-//        }
-//    }
 
     func configureTableView() {
         journalTableView.rowHeight = UITableViewAutomaticDimension
@@ -177,46 +103,83 @@ class JournalViewController: UIViewController {
     }
 
     @objc func tableViewTapped() {
-        messageTextField.endEditing(true)
+        messageTextView.endEditing(true)
 
     }
 
-    @IBAction func sendButtonPressed(_ sender: Any) {
+    // MARK: - IBActions
 
-        messageTextField.endEditing(true)
+    @IBAction func QuoteButtonTapped(_ sender: UIButton) {
+
+        // Launch URL Window
+        print("QuoteButtonTapped")
+    }
+
+
+
+
+
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+
+//        messageTextField.endEditing(true)
+        messageTextView.endEditing(true)
 
         // Send the message to Firebase and save it in our database
-        messageTextField.isEnabled = false
+//        messageTextField.isEnabled = false
+        messageTextView.isEditable = false
         sendButton.isEnabled = false
 
+        let now = Date()
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date
+        formatter.dateFormat = "dd MMMM yyyy"
+        let currentDate = formatter.string(from: now)
+
+
+
         // Create a new reference inside our main database
-        let messagesDB = Database.database().reference().child("Messages")
+
         // data we want to save in our database
-        let messageDictionary = ["Sender": Auth.auth().currentUser?.email, "MessageBody": messageTextField.text]
-
-        // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-        messagesDB.childByAutoId().setValue(messageDictionary) {
-            (error, reference) in
-
-            if error != nil {
-                print(error)
-            } else {
-                print("Message saved successfully")
-                self.messageTextField.isEnabled = true
-                self.sendButton.isEnabled = true
-                self.messageTextField.text = ""
-
-            }
+        if !messageTextView.text!.isEmpty {
+            let messageDictionary = ["Sender": Auth.auth().currentUser?.email,
+                                     "MessageBody": messageTextView.text! as String,
+                                     "TimeStamp": currentDate]
+            sendMessage(messageDictionary)
         }
 
     }
 
+    func sendMessage(_ messageDictionary: [String:String?]) {
+        let messagesDB = ref.child(Constants.DbChild.Messages)
+        // like specifying "/Messages/[some_auto_id]"
+        // Then, .setValue, sets a value to the key (key value pair)
+        messagesDB.childByAutoId().setValue(messageDictionary) {
+            (error, reference) in
+            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
+            if error != nil {
+                print(error!)
+            } else {
+                print("Message saved successfully")
+                //                self.messageTextField.isEnabled = true
+                self.messageTextView.isEditable = true
+                self.sendButton.isEnabled = true
+                //                self.messageTextField.text = ""
+                self.messageTextView.text = ""
+
+            }
+        }
+    }
+
+
+
     // Create the retrieveMessages method
     func retrieveMessages() {
-        let messageDB = Database.database().reference().child("Messages")
+        // listen for new messages in the firebase database with 'observe'
+        // Configure database to sync messages
+        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
+        // ask Firebase to 'observe' for any new child's events ('childAdded')
 
-        // ask Firebase to observe for any new child's events
-        messageDB.observe(.childAdded) { (snapshot) in
+        _refHandle = ref.child("Messages").observe(.childAdded) { (snapshot) in
             // grab data from snapshot and format it into a custom JournalMessage object
             // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
             let snapshotValue = snapshot.value as! Dictionary<String,String>
@@ -224,70 +187,54 @@ class JournalViewController: UIViewController {
             // use snapshotValue to pull-out values of keys
             let text = snapshotValue["MessageBody"]!
             let sender = snapshotValue["Sender"]!
+            let timeStamp = snapshotValue["TimeStamp"]
 
             // now save these values into a new JournalMessage object
             let newMessage = JournalMessage()
             newMessage.message = text
             newMessage.sender = sender
+            newMessage.timestamp = timeStamp ?? ""
 
             self.messageArray.append(newMessage)
 
             // re-configure table view and reload data in table view
             self.configureTableView()
             self.journalTableView.reloadData()
+            self.scrollToBottom()
+
+//            let bottomOffset = CGPoint(x: 0, y: self.journalTableView.contentSize.height - self.journalTableView.bounds.size.height)
+//            self.journalTableView.setContentOffset(bottomOffset, animated: true)
 
 
         }
 
     }
+
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0)
+            self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+
+
 
 
     
 
 }
 
-extension JournalViewController: UITextFieldDelegate {
+extension JournalViewController: GrowingTextViewDelegate {
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
         UIView.animate(withDuration: 0.2) {
-            // animations that we want to happen
-            // keyboard is 258 points high
-            self.heightConstraint.constant = (self.keyboardHeight)
-            print("keyboardHeight: \(self.keyboardHeight)")
-            print("heightContraint: \(self.heightConstraint.constant)")
-            self.view.layoutIfNeeded() // update view
+            self.view.layoutIfNeeded()
         }
     }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-            // animations that we want to happen
-            // keyboard is 258 points high
-            self.heightConstraint.constant = (50)
-            self.view.layoutIfNeeded() // update view
-        }
-
-    }
-
-//    //Get Keyboard Height and Animation When Keyboard Shows Up
-//    @objc func keyboardWillShow(notification: Notification) {
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-//            let keyboardHeight = keyboardSize.height
-//            //iPhone X has Safe Area Insets
-//            if #available(iOS 11.0, *) {
-//                heightConstraint.constant = keyboardHeight - view.safeAreaInsets.bottom + 50
-//            } else {
-//                // Fallback on earlier versions
-//                heightConstraint.constant = keyboardHeight + 50
-//            }
-//            view.layoutIfNeeded()
-//        }
-//
-//    }
-
 
 
 }
+
 
 // MARK: - TableView Data Source and Delegate Protocol Methods
 
@@ -298,19 +245,11 @@ extension JournalViewController: UITableViewDataSource {
     }
 
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JournalTableViewCell
 
-
+        cell.dateLabel.text = messageArray[indexPath.row].timestamp
         cell.messageLabel.text = messageArray[indexPath.row].message
-
-//        cell.senderUsername.text = messageArray[indexPath.row].sender
-
-//        if let expandingCell = cell as? JournalTableViewCell {
-//            print("Entered in here")
-//            expandingCell.delegate = self
-//        }
 
         return cell
     }

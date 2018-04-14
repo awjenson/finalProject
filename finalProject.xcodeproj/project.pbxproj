@@ -16,13 +16,13 @@
 		DA359C6E2043324F000190AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C6C2043324F000190AD /* LaunchScreen.storyboard */; };
 		DA359C7B204375BF000190AD /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C7A204375BF000190AD /* HomeCollectionViewCell.swift */; };
 		DA359C7D20489C72000190AD /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C7C20489C72000190AD /* Goal.swift */; };
+		DA361D2320818BDF007ACE59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D2220818BDF007ACE59 /* Constants.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA5AED9F207683120094AA57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5AED9E207683120094AA57 /* GoogleService-Info.plist */; };
 		DA5AEDA320769C5E0094AA57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */; };
 		DA5AEDA520769C800094AA57 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA420769C800094AA57 /* RegisterViewController.swift */; };
 		DA5AEDA720769D0E0094AA57 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */; };
 		DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */; };
-		DA5AEDB02078558F0094AA57 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDAF2078558F0094AA57 /* SwipeTableViewController.swift */; };
 		DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */; };
 		DA606B512064969100DD14C0 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA606B502064969100DD14C0 /* Topic.swift */; };
 		DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA714C16204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift */; };
@@ -51,6 +51,7 @@
 		DADE6470204E326400BEBF95 /* DetailedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646D204E326400BEBF95 /* DetailedTip.swift */; };
 		DADE6471204E326400BEBF95 /* TipOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646E204E326400BEBF95 /* TipOld.swift */; };
 		DADE6472204E326400BEBF95 /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646F204E326400BEBF95 /* Vision.swift */; };
+		DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */; };
 		DAFAB2CA20731E0800AF6923 /* JournalQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFAB2C920731E0800AF6923 /* JournalQuotes.swift */; };
 		DAFE6FCD20599F93008EF92F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE6FCC20599F93008EF92F /* User.swift */; };
 		DAFE6FCF205ED8D5008EF92F /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE6FCE205ED8D5008EF92F /* Day.swift */; };
@@ -72,13 +73,13 @@
 		DA359C6F2043324F000190AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA359C7A204375BF000190AD /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA359C7C20489C72000190AD /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		DA361D2220818BDF007ACE59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA5AED9E207683120094AA57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA5AEDA420769C800094AA57 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalMessage.swift; sourceTree = "<group>"; };
-		DA5AEDAF2078558F0094AA57 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatement.swift; sourceTree = "<group>"; };
 		DA606B502064969100DD14C0 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		DA714C16204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		DADE646D204E326400BEBF95 /* DetailedTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTip.swift; sourceTree = "<group>"; };
 		DADE646E204E326400BEBF95 /* TipOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipOld.swift; sourceTree = "<group>"; };
 		DADE646F204E326400BEBF95 /* Vision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
+		DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		DAFAB2C920731E0800AF6923 /* JournalQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalQuotes.swift; sourceTree = "<group>"; };
 		DAFE6FCC20599F93008EF92F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DAFE6FCE205ED8D5008EF92F /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		DA359C772043721F000190AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA361D2220818BDF007ACE59 /* Constants.swift */,
 				DA5AEDB120791D240094AA57 /* OLD Models */,
 				DAC8DFF5206ED93B005D627B /* TopicData.swift */,
 				DAC8DFF7206EFB13005D627B /* NowData.swift */,
@@ -226,6 +229,8 @@
 				DA78988C2052EFA1005046D8 /* Home2ViewController.swift */,
 				DAC8DFFB206F5A67005D627B /* UserInfoViewController.swift */,
 				DA7898822051E39E005046D8 /* ProfileViewController.swift */,
+				DA78987520507C86005046D8 /* ProfileTableViewCell.swift */,
+				DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,9 +256,8 @@
 		DA5AEDAC2076FFDD0094AA57 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
-				DAA1022420537A2400A25EFC /* JournalViewController.swift */,
 				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
-				DA5AEDAF2078558F0094AA57 /* SwipeTableViewController.swift */,
+				DAA1022420537A2400A25EFC /* JournalViewController.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -297,7 +301,6 @@
 		DA78987E2050DBBC005046D8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				DA78987520507C86005046D8 /* ProfileTableViewCell.swift */,
 				DA5AEDB2207938DB0094AA57 /* Old Profile Cells */,
 			);
 			path = Profile;
@@ -423,10 +426,11 @@
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -435,10 +439,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -491,12 +496,13 @@
 				DAA1022520537A2400A25EFC /* JournalViewController.swift in Sources */,
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
-				DA5AEDB02078558F0094AA57 /* SwipeTableViewController.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,
 				DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */,
 				DA7898872051E5E0005046D8 /* ProfileDataModel.swift in Sources */,
 				DA5AEDA320769C5E0094AA57 /* LoginViewController.swift in Sources */,
+				DA361D2320818BDF007ACE59 /* Constants.swift in Sources */,
 				DA714C1B204E083700BCBB3D /* HomeTipTableViewCell.swift in Sources */,
+				DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */,
 				DADE6471204E326400BEBF95 /* TipOld.swift in Sources */,
 				DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */,
 				DA5AEDA520769C800094AA57 /* RegisterViewController.swift in Sources */,

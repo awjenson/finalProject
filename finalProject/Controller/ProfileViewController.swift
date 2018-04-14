@@ -16,8 +16,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var profile3TableView: UITableView!
 
 
-    let keyboardHeight = KeyboardService.keyboardHeight()
-    let keyboardSize = KeyboardService.keyboardSize()
+//    let keyboardHeight = KeyboardService.keyboardHeight()
+//    let keyboardSize = KeyboardService.keyboardSize()
 
     var statementArray = [ProfileStatement]()
     var vision0 = ProfileStatement(sender: "Andrew", statement: "My vision is to...")
@@ -25,14 +25,14 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     var lifetime1 = ProfileStatement(sender: "Andrew", statement: "My lifetime goals will be to accomplish thsee things so that I am proud of my life.")
     var oneYearGoals2 = ProfileStatement(sender: "Andrew", statement: "My one year goals are to do x, y, and z.")
     var dailyRoutine3 = ProfileStatement(sender: "Andrew", statement: "My daily routine will be to do this and that each day...")
-    var listOfFears4 = ProfileStatement(sender: "Andrew", statement: "My biggest fears that are holding me back in life are...")
+
 
 
     
     var results = [ProfileDataResults]()
     var selectedResults = [ProfileDataModel]() // this will be used to stores the selected vision and goals
 
-
+    
 
 
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         statementArray.append(lifetime1)
         statementArray.append(oneYearGoals2)
         statementArray.append(dailyRoutine3)
-        statementArray.append(listOfFears4)
+
 
         profile3TableView.dataSource = self
         profile3TableView.delegate = self
@@ -57,15 +57,17 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         let dailyRoutine = ProfileDataModel(category: "Daily Routine", adviceText: "It's not what we do once in a while that shapes our lives, but what we do consistently.", adviceAuthor: "Tony Robbins", adviceURL: "https://www.youtube.com/watch?v=3sK3wJAxGfs", userInput: statementArray[3])
 
-        let listOfFears = ProfileDataModel(category: "List of Fears", adviceText: "We must build dikes of courage to hold back the flood of fear.", adviceAuthor: "Martin Luther King, Jr.", adviceURL: "https://www.youtube.com/watch?v=eWUs2QS1mJY", userInput: statementArray[4])
-
         selectedResults.append(vision)
         selectedResults.append(lifetimeGoals)
         selectedResults.append(oneYearGoals)
         selectedResults.append(dailyRoutine)
-        selectedResults.append(listOfFears)
+
 
         configureTableView()
+
+        // source: https://www.youtube.com/watch?v=oienPcLcbkA
+//        NotificationCenter.default.addObserver(self, selector: (Profile3ViewController.updateTextView(notification:)), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: (Profile3ViewController.updateTextView(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
 
 //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
 //        // could add this for the quote view too
@@ -76,7 +78,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func configureTableView() {
-        profile3TableView.estimatedRowHeight = 70
+        profile3TableView.estimatedRowHeight = 50
         profile3TableView.rowHeight = UITableViewAutomaticDimension
     }
 
@@ -122,6 +124,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
 
         cell.userTextView.text = selectedResults[indexPath.row].userInput.statement
+        // Set the delegate to be the VC when you create the cell
+        cell.userTextView.delegate = self
 
         return cell
     }
@@ -133,6 +137,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 }
 
 extension Profile3ViewController: UITextViewDelegate {
+
     func textViewDidChange(_ textView: UITextView) {
         /*
          According to article there is a UI bug, added code to fix it
@@ -150,56 +155,50 @@ extension Profile3ViewController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
 
-//        // Create a new reference inside our main database
-//        let messagesDB = Database.database().reference().child("Statements")
-//        // data we want to save in our database
-//        let messageDictionary = ["Sender": Auth.auth().currentUser?.email, "StatementBody": messageTextField.text]
-//
-//        // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-//        messagesDB.childByAutoId().setValue(messageDictionary) {
-//            (error, reference) in
-//
-//            if error != nil {
-//                print(error)
-//            } else {
-//                print("Message saved successfully")
-//                self.messageTextField.isEnabled = true
-//                self.sendButton.isEnabled = true
-//                self.messageTextField.text = ""
-//
-//            }
-//        }
+
     }
 
 }
 
 extension Profile3ViewController: UITextFieldDelegate {
 
+//    func updateTextView(notification: Notification) {
+//        let userInfo = notification.userInfo!
+//
+//        let keyboardEndFrameScreenCoordinates = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+//        let keyboardEndFrame = self.view.convert(keyboardEndFrameScreenCoordinates, to: view.window)
+//        // now adjust the context of the textView
+////        if notification.name == Notification.Name.UIKeyboardWillHide {
+////            userTextView.contentInset = UIEdgeInset.zero
+////
+////        } else {
+////            userTextView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardEndFrame.height, right: 0)
+////            userTextView.scrollIndicatorInsets = userTextView.contentInset
+////        }
+////
+////        userTextView.scrollRangeToVisible(userTextView.selectedRange)
+//    }
 
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.2) {
-            // animations that we want to happen
-            // keyboard is 258 points high
-
-            print("keyboardHeight: \(self.keyboardHeight)")
-
-            self.view.layoutIfNeeded() // update view
-        }
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-            // animations that we want to happen
-            // keyboard is 258 points high
-            
-            self.view.layoutIfNeeded() // update view
-        }
-
-    }
-
-
-
-
-
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        UIView.animate(withDuration: 0.2) {
+//            // animations that we want to happen
+//            // keyboard is 258 points high
+//
+//            print("keyboardHeight: \(self.keyboardHeight)")
+//
+//            self.view.layoutIfNeeded() // update view
+//        }
+//    }
+//
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        UIView.animate(withDuration: 0.5) {
+//            // animations that we want to happen
+//            // keyboard is 258 points high
+//
+//            self.view.layoutIfNeeded() // update view
+//        }
+//
+//    }
 }
+
+
