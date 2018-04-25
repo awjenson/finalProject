@@ -40,6 +40,7 @@ class JournalViewController: UIViewController {
     fileprivate var _refHandle: DatabaseHandle!
     fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
 
+    // an empty JournalMessage array to contain the user's messages
     var messageArray = [JournalMessage]()
 
 //    let keyboardHeight = KeyboardService.keyboardHeight()
@@ -51,11 +52,17 @@ class JournalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signedInStatus(isSignedIn: true)
+
+        quoteView.layer.cornerRadius = 10
+        quoteView.layer.shadowColor = UIColor.gray.cgColor
+        quoteView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        quoteView.layer.shadowOpacity = 0.7
+        quoteView.layer.shadowRadius = 5
     }
 
     deinit {
         // The database observer doesn't stop listen for changes in the database when the VC goes off screen. So if the observer isn't removed then the observer will continue to sync data to local memory casusing excessive memory use. So when an observer is no longer needed we should remove it. In this case, remove the observer when the VC is deinitalized.
-        ref.child(Constants.DbChild.Messages).removeObserver(withHandle: _refHandle)
+//        ref.child(Constants.DbChild.Messages).removeObserver(withHandle: _refHandle)
     }
 
 
@@ -136,14 +143,13 @@ class JournalViewController: UIViewController {
         let currentDate = formatter.string(from: now)
 
 
-
         // Create a new reference inside our main database
 
         // data we want to save in our database
         if !messageTextView.text!.isEmpty {
-            let messageDictionary = ["Sender": Auth.auth().currentUser?.email,
-                                     "MessageBody": messageTextView.text! as String,
-                                     "TimeStamp": currentDate]
+            let messageDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
+                                     Constants.Message.Text: messageTextView.text! as String,
+                                     Constants.Message.TimeStamp: currentDate]
             sendMessage(messageDictionary)
         }
 
@@ -179,20 +185,20 @@ class JournalViewController: UIViewController {
         // .reference() gets a DatabaseReference for the root of the app's Firebase Database
         // ask Firebase to 'observe' for any new child's events ('childAdded')
 
-        _refHandle = ref.child("Messages").observe(.childAdded) { (snapshot) in
+        _refHandle = ref.child(Constants.DbChild.Messages).observe(.childAdded) { (snapshot) in
             // grab data from snapshot and format it into a custom JournalMessage object
             // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
             let snapshotValue = snapshot.value as! Dictionary<String,String>
 
             // use snapshotValue to pull-out values of keys
-            let text = snapshotValue["MessageBody"]!
-            let sender = snapshotValue["Sender"]!
-            let timeStamp = snapshotValue["TimeStamp"]
+            let sender = snapshotValue[Constants.Message.Sender]!
+            let text = snapshotValue[Constants.Message.Text]!
+            let timeStamp = snapshotValue[Constants.Message.TimeStamp]
 
             // now save these values into a new JournalMessage object
             let newMessage = JournalMessage()
-            newMessage.message = text
             newMessage.sender = sender
+            newMessage.message = text
             newMessage.timestamp = timeStamp ?? ""
 
             self.messageArray.append(newMessage)
@@ -201,13 +207,7 @@ class JournalViewController: UIViewController {
             self.configureTableView()
             self.journalTableView.reloadData()
             self.scrollToBottom()
-
-//            let bottomOffset = CGPoint(x: 0, y: self.journalTableView.contentSize.height - self.journalTableView.bounds.size.height)
-//            self.journalTableView.setContentOffset(bottomOffset, animated: true)
-
-
         }
-
     }
 
     func scrollToBottom(){
@@ -231,10 +231,7 @@ extension JournalViewController: GrowingTextViewDelegate {
             self.view.layoutIfNeeded()
         }
     }
-
-
 }
-
 
 // MARK: - TableView Data Source and Delegate Protocol Methods
 
@@ -243,7 +240,6 @@ extension JournalViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
     }
-
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JournalTableViewCell
@@ -256,55 +252,11 @@ extension JournalViewController: UITableViewDataSource {
 }
 
 extension JournalViewController: UITableViewDelegate {
+    // Add table view delagate methods
 
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == expandingIndexRow {
-//            return expandingCellHeight
-//        } else {
-//            return 100
-//        }
-//    }
 }
 
-//extension JournalViewController: ExpandingCellDelegate {
-//
-//    func updated(height: CGFloat) {
-//        expandingCellHeight = height
-//
-//        // Disabling animations gives us our desired behaviour
-//        UIView.setAnimationsEnabled(false)
-//        /* These will causes table cell heights to be recaluclated,
-//         without reloading the entire cell */
-//        journalTableView.beginUpdates()
-//        journalTableView.endUpdates()
-//        // Re-enable animations
-//        UIView.setAnimationsEnabled(true)
-//
-//        let indexPath = IndexPath(row: expandingIndexRow, section: 0)
-//
-//        journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-//    }
-//}
 
 
-fileprivate extension JournalViewController {
 
-//    fileprivate func registerKeyboardNotifications() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillChangeFrame, object: nil)
-//    }
-//
-//    @objc func keyboardWillShow(notification: NSNotification) {
-//
-//        guard let userInfo = notification.userInfo,
-//            let keyBoardValueBegin = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-//            let keyBoardValueEnd = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, keyBoardValueBegin != keyBoardValueEnd else {
-//                return
-//        }
-//
-//        let keyboardHeight = keyBoardValueEnd.height
-//
-//        journalTableView.contentInset.bottom = keyboardHeight
-//    }
-}
 

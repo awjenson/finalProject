@@ -11,8 +11,6 @@ import SafariServices // to display webview
 
 class Home2ViewController: UIViewController {
 
-
-
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var profileButton: UIButton!
 
@@ -50,6 +48,8 @@ class Home2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
 
         signedInStatus(isSignedIn: true)
 
@@ -469,6 +469,9 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        /* In the future, you could create multiple subviews and then use a switch statement to display data for each subview
+        https://www.makeschool.com/online-courses/utorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/improving-the-ui */
 
         // Whatever tip is at each row
         let tip = tips[indexPath.row]

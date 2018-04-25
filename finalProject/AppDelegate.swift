@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 import Firebase
 import IQKeyboardManagerSwift
+//import FirebaseAuthUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,18 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         print("didFinishLaunchingWithOptions")
 
-        if window?.rootViewController as? UITabBarController != nil {
-            let tabBarController = window!.rootViewController as! UITabBarController
-            tabBarController.selectedIndex = 1 // Opens the 4th Tab
-        } else{
-            print("couldn't reach rootViewController named UITabBarController")
-        }
 
-        // Firebase.
+
+//        if window?.rootViewController as? UITabBarController != nil {
+//            let tabBarController = window!.rootViewController as! UITabBarController
+//            tabBarController.selectedIndex = 1 // Opens the 4th Tab
+//        } else{
+//            print("AppDelegate: couldn't reach rootViewController named UITabBarController")
+//        }
+
+        // MARK: - Firebase
         // Initialize and configure Firebase
         FirebaseApp.configure()
 
-        // Realm.
+
+        // MARK: - Realm
         // Realms are like different persistent containers.
         // Location of our Realm file.
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -46,12 +50,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error initializing new realm, \(error)")
         }
 
-        // IQKeyboardManagerSwift
-        IQKeyboardManager.sharedManager().enable = true
-        IQKeyboardManager.sharedManager().reloadLayoutIfNeeded()
+        // MARK: - IQKeyboardManagerSwift
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.reloadLayoutIfNeeded()
+//        IQKeyboardManager.sharedManager().enable = true
+//        IQKeyboardManager.sharedManager().reloadLayoutIfNeeded()
+
+        // MARK: - UIStoryboard and UserDefaults
+        // Determine which Storyboard to display at launch by checking if the user is already logged in.  See AppDelegate extension (related to UserDefaults and keeping users logged in on launch)
+        configureInitialRootViewController(for: window)
 
         return true
     }
+
+    // FirebaseAuthUI
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication ?? "") ?? false
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -80,6 +95,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("applicationWillTerminate")
     }
 
+}
 
+// Keeping Users Logged In on Launch
+// Check UserDefaults for the currentUser key when the app first launches. If the the data exists, we'll know that the user has been previously authenticated and set the rootViewController accordingly.
+// We need to add some logic that checks UserDefaults for the currentUser key when the app first launches. If the the data exists, we'll know that the user has been previously authenticated and set the rootViewController accordingly.
+extension AppDelegate {
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+
+        if Auth.auth().currentUser != nil,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+
+            // Existing User
+            User.setCurrent(user)
+
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            // New User OR Existing User that needs to log back in.
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+    }
 }
 

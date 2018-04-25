@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+import FirebaseDatabase
+
+
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet var emailTextfield: UITextField!
-    @IBOutlet var passwordTextfield: UITextField!
+//    @IBOutlet var emailTextfield: UITextField!
+//    @IBOutlet var passwordTextfield: UITextField!
+//
+//    @IBOutlet weak var loginButton: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +32,11 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func logInPressed(_ sender: AnyObject) {
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
 
-
-        //TODO: Log in the user
-
-
+        
     }
-
-
 }
+
+
+

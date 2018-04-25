@@ -10,8 +10,10 @@ import UIKit
 
 class JournalMessage {
 
-    var sender: String = ""
-    var message: String = ""
-    var timestamp: String = ""
+    // MARK: - Properties
+
+    var sender = ""
+    var message = ""
+    var timestamp = ""
 
 }

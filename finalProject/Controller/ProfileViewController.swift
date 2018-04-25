@@ -9,7 +9,11 @@
 import UIKit
 import Firebase
 
+// Our timeline will retrieve post data from our database and display it to our user.
+
 // Firebase push happens when use taps out of textView. But, when does the retrive happen.. in the viewDidLoad.
+
+// Checkout Code With Chris's Question Bank Tutorial. Each question could be like each textView (Vision, Goals, etc.)
 
 class Profile3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -18,6 +22,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 //    let keyboardHeight = KeyboardService.keyboardHeight()
 //    let keyboardSize = KeyboardService.keyboardSize()
+
+    var posts = [Post]()
 
     var statementArray = [ProfileStatement]()
     var vision0 = ProfileStatement(sender: "Andrew", statement: "My vision is to...")
@@ -37,6 +43,11 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+//        UserService.posts(for: User.current) { (posts) in
+//            self.posts = posts
+//            self.tableView.reloadData()
+//        }
 
         statementArray.append(vision0)
         statementArray.append(lifetime1)
@@ -84,10 +95,9 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // return post.count
         return selectedResults.count
     }
-
-
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,9 +140,44 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 
-    // Used for working with UITextView
+    /* Update database when changes made to TextView in a cell. Seems to be similar as updating a like button UILabel each time the like button is clicked. Method for did tap away from textView.
+     https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/liking-posts */
 
-
+//    // Used for working with UITextView
+//    func didTapLikeButton(_ profileTextView: UITextView, on cell: ProfileTableViewCell) {
+//        // 1
+//        guard let indexPath = profileTableView.indexPath(for: cell)
+//            else { return }
+//
+//        // 2
+//        profileTextView.isUserInteractionEnabled = false
+//        // 3 Reference the correct Category corresponding with the ProfileTableViewCell that the user tapped.
+//        let post = posts[indexPath.section]
+//
+//        // 4
+//        LikeService.setIsLiked(!post.isLiked, for: post) { (success) in
+//            // 5
+//            defer {
+//                likeButton.isUserInteractionEnabled = true
+//            }
+//
+//            // 6
+//            guard success else { return }
+//
+//            // 7
+//            post.likeCount += !post.isLiked ? 1 : -1
+//            post.isLiked = !post.isLiked
+//
+//            // 8
+//            guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
+//                else { return }
+//
+//            // 9
+//            DispatchQueue.main.async {
+//                self.configureCell(cell, with: post)
+//            }
+//        }
+//    }
 
 }
 

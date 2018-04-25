@@ -10,6 +10,18 @@ import Foundation
 
 struct Constants {
 
+    struct Segue {
+        static let subscribeSegue = "subscribeSegue"
+    }
+
+    // MARK: UserDefaults
+    
+    struct UserDefaults {
+        static let currentUser = "currentUser"
+        static let uid = "uid"
+        static let username = "username"
+    }
+
     // MARK: NotificationKeys
 
     struct NotificationKeys {
@@ -22,7 +34,7 @@ struct Constants {
 
     struct Message {
         static let Sender = "Sender"
-        static let MessageBody = "MessageBody"
+        static let Text = "Text"
         static let TimeStamp = "TimeStamp"
     }
 

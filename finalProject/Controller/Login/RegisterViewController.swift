@@ -13,8 +13,12 @@ import SVProgressHUD
 class RegisterViewController: UIViewController {
 
     //Pre-linked IBOutlets
-    @IBOutlet var emailTextfield: UITextField!
-    @IBOutlet var passwordTextfield: UITextField!
+
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
 
 
 
@@ -29,26 +33,85 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func registerPressed(_ sender: AnyObject) {
+    func disableUI() {
         SVProgressHUD.show()
+        nameTextField.isEnabled = false
+        emailTextField.isEnabled = false
+        passwordTextField.isEnabled = false
+        registerButton.isEnabled = false
+        backButton.isEnabled = false
+    }
 
-        //TODO: Set up a new user on our Firbase database
-        Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
-            // inside a 'callback' method (closure) which only gets called once the process of creating a users gets completd in the Firebase Authentication class.
+    func enableUI() {
+        nameTextField.isEnabled = true
+        nameTextField.text = ""
+        emailTextField.isEnabled = true
+        emailTextField.text = ""
+        passwordTextField.isEnabled = true
+        passwordTextField.text = ""
+        registerButton.isEnabled = true
+        backButton.isEnabled = true
+        SVProgressHUD.dismiss()
+    }
 
-            if error != nil {
-                print(error!)
-            } else {
-                // success
-                print("Registration succesful with Firebase")
-                SVProgressHUD.dismiss()
-                self.performSegue(withIdentifier: "goToApp", sender: self)
-            }
+
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
+
+        disableUI()
+
+        guard let name = nameTextField.text, name != "" else {
+            print("email is empty")
+            createAlert(title: "Error", message: "Please enter your first name")
+            return
         }
 
+        guard let email = emailTextField.text, email != "" else {
+            print("email is empty")
+            createAlert(title: "Error", message: "Please enter your email address")
+            return
+        }
 
+        guard let password = passwordTextField.text, password != "" else {
+            print("password is empty")
+            createAlert(title: "Error", message: "Please enter your password that is at least 6 characters long.")
+            return
+        }
 
+        //Create NEW user on our Firbase database
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            // inside a 'callback' method (closure) which only gets called once the process of creating a users gets completd in the Firebase Authentication class.
+
+            guard error == nil else {
+                print(error!)
+                self.createAlert(title: "Error", message: error!.localizedDescription)
+                return
+            }
+            guard let user = user else {return}
+
+            print("Succes: Registration succesful with Firebase")
+            print(user.email ?? "Firebase: MISSING EMAIL")
+            print(user.uid)
+
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = name
+            changeRequest.commitChanges(completion: { (error) in
+                guard error == nil else {
+                    self.createAlert(title: "Error", message: error!.localizedDescription)
+                    return
+                }
+
+                // Success
+                print(user.displayName)
+                SVProgressHUD.dismiss()
+                self.performSegue(withIdentifier: "goToApp", sender: self)
+            })
+        }
     }
+
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+
 
 
 }
