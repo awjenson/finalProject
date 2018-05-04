@@ -161,21 +161,16 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         let indexPath4 = NSIndexPath(row: 4, section: 0)
         let cell4 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath4 as IndexPath) as! ProfileTableViewCell
 
-
         print("Cell 1: \(cell1.userTextView.text)")
         print("Cell 2: \(cell2.userTextView.text)")
         print("Cell 3: \(cell3.userTextView.text)")
         print("Cell 4: \(cell4.userTextView.text)")
-        //
 
         let now = Date()
         let formatter = DateFormatter()
         // initially set the format based on your datepicker date
         formatter.dateFormat = "MMMM d, yyyy"
         let currentDate = formatter.string(from: now)
-
-
-        // Create a new reference inside our main database
 
         // data we want to save in our database
         let userDictionary = [
@@ -187,7 +182,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             Constants.ProfileUserData.TimeStamp: currentDate]
 
         sendProfileUserData(userDictionary)
-
     }
 
     func sendProfileUserData(_ userDictionary: [String:String?]) {
@@ -245,7 +239,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.adviceTextLabel.text = selectedResults[indexPath.row].adviceText
         cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
 
-        cell.userTextView.text = selectedResults[indexPath.row].userInput.statement
+        cell.userTextView.text = selectedResults[indexPath.row].userInput.
         // Set the delegate to be the VC when you create the cell
         cell.userTextView.delegate = self
 
@@ -325,43 +319,7 @@ extension Profile3ViewController: UITextViewDelegate {
 
 extension Profile3ViewController: UITextFieldDelegate {
 
-//    func updateTextView(notification: Notification) {
-//        let userInfo = notification.userInfo!
-//
-//        let keyboardEndFrameScreenCoordinates = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-//        let keyboardEndFrame = self.view.convert(keyboardEndFrameScreenCoordinates, to: view.window)
-//        // now adjust the context of the textView
-////        if notification.name == Notification.Name.UIKeyboardWillHide {
-////            userTextView.contentInset = UIEdgeInset.zero
-////
-////        } else {
-////            userTextView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardEndFrame.height, right: 0)
-////            userTextView.scrollIndicatorInsets = userTextView.contentInset
-////        }
-////
-////        userTextView.scrollRangeToVisible(userTextView.selectedRange)
-//    }
-//
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        UIView.animate(withDuration: 0.2) {
-//            // animations that we want to happen
-//            // keyboard is 258 points high
-//
-//            print("keyboardHeight: \(self.keyboardHeight)")
-//
-//            self.view.layoutIfNeeded() // update view
-//        }
-//    }
-//
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        UIView.animate(withDuration: 0.5) {
-//            // animations that we want to happen
-//            // keyboard is 258 points high
-//
-//            self.view.layoutIfNeeded() // update view
-//        }
-//
-//    }
+
 }
 
 
