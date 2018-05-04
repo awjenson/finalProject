@@ -76,20 +76,17 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         print(statementArray[0])
 
 
-
         profile3TableView.dataSource = self
         profile3TableView.delegate = self
 
         // Check order of statementArray[n] to make sure pulling correct text
-        let dailyRoutine = ProfileDataModel(category: "Daily Routine", adviceText: "It's not what we do once in a while that shapes our lives, but what we do consistently.", adviceAuthor: "Tony Robbins", adviceURL: "https://www.youtube.com/watch?v=3sK3wJAxGfs", userInput: statementArray[0])
+        let dailyRoutine = ProfileDataModel(category: "Daily Routine", adviceText: "It's not what we do once in a while that shapes our lives, but what we do consistently.", adviceAuthor: "Tony Robbins", adviceURL: "https://www.youtube.com/watch?v=3sK3wJAxGfs", userInput: profileArray[0])
 
-        let oneYearGoals = ProfileDataModel(category: "One Year Goals", adviceText: "People without goals get used by other people who have them. People who don’t have goals work for people who do.", adviceAuthor: "Sean Croxton", adviceURL: "https://www.youtube.com/watch?v=DNITe9snHqA&t", userInput: statementArray[1])
+        let oneYearGoals = ProfileDataModel(category: "One Year Goals", adviceText: "People without goals get used by other people who have them. People who don’t have goals work for people who do.", adviceAuthor: "Sean Croxton", adviceURL: "https://www.youtube.com/watch?v=DNITe9snHqA&t", userInput: profileArray[1])
 
-        let lifetimeGoals = ProfileDataModel(category: "Lifetime Goals", adviceText: "Project your life to age 80 and then make decisions today to minimize regrets you will have. While you might feel remorse for things you did wrong, more often regrets stem from the path not taken. If you fail, at least you will be proud when you're 80 that you tried.", adviceAuthor: "Jeff Bezos", adviceURL: "https://www.youtube.com/watch?v=ikuLEZoE1vE", userInput: statementArray[2])
+        let lifetimeGoals = ProfileDataModel(category: "Lifetime Goals", adviceText: "Project your life to age 80 and then make decisions today to minimize regrets you will have. While you might feel remorse for things you did wrong, more often regrets stem from the path not taken. If you fail, at least you will be proud when you're 80 that you tried.", adviceAuthor: "Jeff Bezos", adviceURL: "https://www.youtube.com/watch?v=ikuLEZoE1vE", userInput: profileArray[2])
 
-        let vision = ProfileDataModel(category: "Vision", adviceText: "Create the highest grandest vision possible for your life, because you become what you believe.", adviceAuthor: "Oprah Winfrey", adviceURL: "https://www.youtube.com/watch?v=acBp_5OmTkQ&t", userInput: statementArray[3])
-
-
+        let vision = ProfileDataModel(category: "Vision", adviceText: "Create the highest grandest vision possible for your life, because you become what you believe.", adviceAuthor: "Oprah Winfrey", adviceURL: "https://www.youtube.com/watch?v=acBp_5OmTkQ&t", userInput: profileArray[3])
 
         selectedResults.append(dailyRoutine)
         selectedResults.append(oneYearGoals)
@@ -152,7 +149,24 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
 
-        let cell = profile3TableView.dequeueReusableCell(withIdentifier: "cell") as! ProfileTableViewCell
+        let indexPath1 = NSIndexPath(row: 1, section: 0)
+        let cell1 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath1 as IndexPath) as! ProfileTableViewCell
+
+        let indexPath2 = NSIndexPath(row: 2, section: 0)
+        let cell2 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath2 as IndexPath) as! ProfileTableViewCell
+
+        let indexPath3 = NSIndexPath(row: 3, section: 0)
+        let cell3 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath3 as IndexPath) as! ProfileTableViewCell
+
+        let indexPath4 = NSIndexPath(row: 4, section: 0)
+        let cell4 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath4 as IndexPath) as! ProfileTableViewCell
+
+
+        print("Cell 1: \(cell1.userTextView.text)")
+        print("Cell 2: \(cell2.userTextView.text)")
+        print("Cell 3: \(cell3.userTextView.text)")
+        print("Cell 4: \(cell4.userTextView.text)")
+        //
 
         let now = Date()
         let formatter = DateFormatter()
@@ -166,10 +180,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         // data we want to save in our database
         let userDictionary = [
             Constants.ProfileUserData.Sender: Auth.auth().currentUser?.email,
-            Constants.ProfileUserData.DailyRoutine: /*textView.text from cell 1*/ as String,
-            Constants.ProfileUserData.OneYearGoal: /*textView.text from cell 2*/ as String,
-            Constants.ProfileUserData.LifetimeGoal: /*textView.text from cell 3*/ as String,
-            Constants.ProfileUserData.Vision: /*textView.text from cell 4*/ as String,
+            Constants.ProfileUserData.DailyRoutine: cell1.userTextView.text as String,
+            Constants.ProfileUserData.OneYearGoal: cell2.userTextView.text as String,
+            Constants.ProfileUserData.LifetimeGoal: cell3.userTextView.text as String,
+            Constants.ProfileUserData.Vision: cell4.userTextView.text as String,
             Constants.ProfileUserData.TimeStamp: currentDate]
 
         sendProfileUserData(userDictionary)
