@@ -36,6 +36,14 @@
 		DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */; };
 		DA5EE4AB20901E6E00B54438 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4AA20901E6E00B54438 /* Post.swift */; };
 		DA5EE4AD20901FA100B54438 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4AC20901FA100B54438 /* PostService.swift */; };
+		DA5EE4AF2090E7F300B54438 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4AE2090E7F300B54438 /* PostViewController.swift */; };
+		DA5EE4B12090EA7C00B54438 /* PostUserTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4B02090EA7C00B54438 /* PostUserTextCell.swift */; };
+		DA5EE4B62090EF7300B54438 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4B52090EF7300B54438 /* PostHeaderCell.swift */; };
+		DA5EE4B82090EFA400B54438 /* PostFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4B72090EFA400B54438 /* PostFooterCell.swift */; };
+		DA5EE4BA2091062F00B54438 /* UserTextService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4B92091062F00B54438 /* UserTextService.swift */; };
+		DA5EE4BC2091280000B54438 /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4BB2091280000B54438 /* DatabaseReference+Location.swift */; };
+		DA5EE4BE209149A600B54438 /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4BD209149A600B54438 /* UITableView+Utility.swift */; };
+		DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */; };
 		DA606B512064969100DD14C0 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA606B502064969100DD14C0 /* Topic.swift */; };
 		DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA714C16204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift */; };
 		DA714C19204E02C600BCBB3D /* HomeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA714C18204E02C600BCBB3D /* HomeCollectionViewLayout.swift */; };
@@ -55,6 +63,7 @@
 		DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */; };
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
 		DAA1022D2053808200A25EFC /* ExpandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022C2053808200A25EFC /* ExpandingCell.swift */; };
+		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
 		DAC8DFF4206C86D2005D627B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF3206C86D2005D627B /* Colors.swift */; };
 		DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF5206ED93B005D627B /* TopicData.swift */; };
 		DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF7206EFB13005D627B /* NowData.swift */; };
@@ -104,6 +113,14 @@
 		DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatement.swift; sourceTree = "<group>"; };
 		DA5EE4AA20901E6E00B54438 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DA5EE4AC20901FA100B54438 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		DA5EE4AE2090E7F300B54438 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		DA5EE4B02090EA7C00B54438 /* PostUserTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUserTextCell.swift; sourceTree = "<group>"; };
+		DA5EE4B52090EF7300B54438 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		DA5EE4B72090EFA400B54438 /* PostFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFooterCell.swift; sourceTree = "<group>"; };
+		DA5EE4B92091062F00B54438 /* UserTextService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextService.swift; sourceTree = "<group>"; };
+		DA5EE4BB2091280000B54438 /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DatabaseReference+Location.swift"; sourceTree = "<group>"; };
+		DA5EE4BD209149A600B54438 /* UITableView+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utility.swift"; sourceTree = "<group>"; };
+		DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAdvice.swift; sourceTree = "<group>"; };
 		DA606B502064969100DD14C0 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		DA714C16204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		DA714C18204E02C600BCBB3D /* HomeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -123,6 +140,7 @@
 		DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
 		DAA1022C2053808200A25EFC /* ExpandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingCell.swift; sourceTree = "<group>"; };
+		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
 		DAC8DFF3206C86D2005D627B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DAC8DFF5206ED93B005D627B /* TopicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicData.swift; sourceTree = "<group>"; };
 		DAC8DFF7206EFB13005D627B /* NowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowData.swift; sourceTree = "<group>"; };
@@ -222,6 +240,7 @@
 				DA7898862051E5E0005046D8 /* ProfileDataModel.swift */,
 				DA7898882051E8EC005046D8 /* ProfileDataResults.swift */,
 				DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */,
+				DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,8 +248,7 @@
 		DA359C7820437225000190AD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA015BF32073E36300A0342F /* UIViewExtension.swift */,
-				DAC8DFF3206C86D2005D627B /* Colors.swift */,
+				DA5EE4B22090ECD500B54438 /* Post */,
 				DAA1022620537D5200A25EFC /* Journal */,
 				DA78987D2050DBB6005046D8 /* Home */,
 				DA78987E2050DBBC005046D8 /* Profile */,
@@ -239,6 +257,8 @@
 				DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */,
 				DAA1021E2053448200A25EFC /* RoundImage.swift */,
 				DAA1022C2053808200A25EFC /* ExpandingCell.swift */,
+				DA015BF32073E36300A0342F /* UIViewExtension.swift */,
+				DAC8DFF3206C86D2005D627B /* Colors.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +266,7 @@
 		DA359C792043722A000190AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA5EE4AE2090E7F300B54438 /* PostViewController.swift */,
 				DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */,
 				DA78988C2052EFA1005046D8 /* Home2ViewController.swift */,
 				DA7898822051E39E005046D8 /* ProfileViewController.swift */,
@@ -261,6 +282,8 @@
 			children = (
 				DA361D322084566E007ACE59 /* UserService.swift */,
 				DA5EE4AC20901FA100B54438 /* PostService.swift */,
+				DA5EE4B92091062F00B54438 /* UserTextService.swift */,
+				DA5EE4BB2091280000B54438 /* DatabaseReference+Location.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,8 +324,9 @@
 		DA5AEDAC2076FFDD0094AA57 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
-				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
 				DAA1022420537A2400A25EFC /* JournalViewController.swift */,
+				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
+				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -327,6 +351,16 @@
 			children = (
 			);
 			path = "Old Profile Cells";
+			sourceTree = "<group>";
+		};
+		DA5EE4B22090ECD500B54438 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				DA5EE4B52090EF7300B54438 /* PostHeaderCell.swift */,
+				DA5EE4B02090EA7C00B54438 /* PostUserTextCell.swift */,
+				DA5EE4B72090EFA400B54438 /* PostFooterCell.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		DA78987D2050DBB6005046D8 /* Home */ = {
@@ -374,6 +408,7 @@
 				DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */,
 				DA361D3420858297007ACE59 /* Storyboard+Utility.swift */,
 				DA361D3820896E5D007ACE59 /* Date+convertToString.swift */,
+				DA5EE4BD209149A600B54438 /* UITableView+Utility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -546,6 +581,7 @@
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
 				DA606B512064969100DD14C0 /* Topic.swift in Sources */,
 				DA361D3120844F41007ACE59 /* NewLoginViewController.swift in Sources */,
+				DA5EE4B62090EF7300B54438 /* PostHeaderCell.swift in Sources */,
 				DA78988F2053102E005046D8 /* Home2TableViewCell.swift in Sources */,
 				DA359C7D20489C72000190AD /* Goal.swift in Sources */,
 				DA361D40208BC8B6007ACE59 /* SubscriptionViewController.swift in Sources */,
@@ -557,13 +593,17 @@
 				DA78987620507C86005046D8 /* ProfileTableViewCell.swift in Sources */,
 				DAFE6FCF205ED8D5008EF92F /* Day.swift in Sources */,
 				DAA1022520537A2400A25EFC /* JournalViewController.swift in Sources */,
+				DA5EE4BA2091062F00B54438 /* UserTextService.swift in Sources */,
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,
 				DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */,
 				DA361D3720882A7A007ACE59 /* HomeFooterCell.swift in Sources */,
 				DA5EE4AB20901E6E00B54438 /* Post.swift in Sources */,
+				DA5EE4B12090EA7C00B54438 /* PostUserTextCell.swift in Sources */,
 				DA7898872051E5E0005046D8 /* ProfileDataModel.swift in Sources */,
+				DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */,
+				DA5EE4BE209149A600B54438 /* UITableView+Utility.swift in Sources */,
 				DA5AEDA320769C5E0094AA57 /* LoginViewController.swift in Sources */,
 				DA361D2F2084273E007ACE59 /* User.swift in Sources */,
 				DA361D2320818BDF007ACE59 /* Constants.swift in Sources */,
@@ -587,9 +627,13 @@
 				DAC8DFF4206C86D2005D627B /* Colors.swift in Sources */,
 				DAA1022120534E0300A25EFC /* HomeMenu.swift in Sources */,
 				DA361D3B208AB32D007ACE59 /* NewRegisterViewController.swift in Sources */,
+				DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */,
+				DA5EE4BC2091280000B54438 /* DatabaseReference+Location.swift in Sources */,
 				DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
 				DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */,
+				DA5EE4B82090EFA400B54438 /* PostFooterCell.swift in Sources */,
+				DA5EE4AF2090E7F300B54438 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

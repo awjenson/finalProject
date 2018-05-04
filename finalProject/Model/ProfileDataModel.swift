@@ -16,9 +16,9 @@ class ProfileDataModel {
     var adviceText: String
     var adviceAuthor: String
     var adviceURL: String?
-    var userInput: ProfileStatement // This should be ProfileStatement (e.g. user's vision statement)
+    var userInput: ProfileUserData // Changed This. This should be ProfileStatement (e.g. user's vision statement)
 
-    init(category: String, adviceText: String, adviceAuthor: String, adviceURL: String, userInput: ProfileStatement) {
+    init(category: String, adviceText: String, adviceAuthor: String, adviceURL: String, userInput: ProfileUserData) {
         self.category = category
         self.adviceText = adviceText
         self.adviceAuthor = adviceAuthor

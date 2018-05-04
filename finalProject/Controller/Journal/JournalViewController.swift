@@ -18,6 +18,8 @@ import GrowingTextView
 
 class JournalViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
     @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -27,18 +29,29 @@ class JournalViewController: UIViewController {
     // Send/Type message bar
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
 //    @IBOutlet weak var messageTextField: UITextField!
-
     @IBOutlet weak var messageTextView: GrowingTextView! // Changed to GrowingTextView!
     @IBOutlet weak var sendButton: UIButton!
-
-
-
-
     @IBOutlet weak var journalTableView: UITableView!
+
+    
+    @IBOutlet var moodButtons: [UIButton]!
+    
+
+    // MARK: - Properties
+
+    var advice = JournalAdvice(quote: "", source: "", url: "")
+
+    var messageSentToday = false
 
     var ref: DatabaseReference!
     fileprivate var _refHandle: DatabaseHandle!
     fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
+
+
+    // Time and Date
+    let formatter = DateFormatter()
+    let date = Date()
+    let calendar = Calendar.current
 
     // an empty JournalMessage array to contain the user's messages
     var messageArray = [JournalMessage]()
@@ -49,6 +62,7 @@ class JournalViewController: UIViewController {
     var expandingCellHeight: CGFloat = 200
     let expandingIndexRow = 0
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         signedInStatus(isSignedIn: true)
@@ -58,7 +72,183 @@ class JournalViewController: UIViewController {
         quoteView.layer.shadowOffset = CGSize(width: 5, height: 5)
         quoteView.layer.shadowOpacity = 0.7
         quoteView.layer.shadowRadius = 5
+
+        dayOfWeekAndHour()
+
+        quoteLabel.text = advice.quote
+        authorLabel.text = advice.source
+
+        messageTextView.layer.borderColor = UIColor.gray.cgColor
+        messageTextView.layer.borderWidth = 1.0
+
     }
+
+    let am0 = JournalAdvice(quote: "David McCullough, the Pulitzer Prize winning author and historian has said if you want to become the voice of your generation, write a journal entry every day and then gift it to your local university library at the end of your life. Voice of your generation or not, I believe that a journal is one of the most precious gifts you can give to those you leave behind.", source: "Greg McKeown, author of Essentialism: The Disciplined Pursuit of Less", url: "https://gregmckeown.com/blog/one-thing-productive-people-reaching-phones/")
+
+    let pm0 = JournalAdvice(quote: "Journaling helps you clarify your thoughts and feelings. Do you ever seem all jumbled up inside, unsure of what you want or feel? Taking a few minutes to jot down your thoughts and emotions (no editing!) will quickly get you in touch with your internal world.", source: "Psych Central", url: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+
+    let pm1 = JournalAdvice(quote: "Journaling helps you know yourself better. By writing routinely you will get to know what makes you feel happy and confident. You will also become clear about situations and people who are toxic for you — important information for your emotional well-being.", source: "Psych Central", url: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+
+    let am1 = JournalAdvice(quote: "Journaling helps to reduce stress. Writing about anger, sadness and other painful emotions helps to release the intensity of these feelings. By doing so you will feel calmer and better able to stay in the present.", source: "Psych Central", url: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+
+    let am2 = JournalAdvice(quote: "Journaling helps you solve problems more effectively. Typically we problem solve from a left-brained, analytical perspective. But sometimes the answer can only be found by engaging right-brained creativity and intuition. Writing unlocks these other capabilities, and affords the opportunity for unexpected solutions to seemingly unsolvable problems.", source: "Psych Central", url: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+
+    let pm2 = JournalAdvice(quote: "Keeping a journal allows you to track patterns, trends and improvement and growth over time. When current circumstances appear insurmountable, you will be able to look back on previous dilemmas that you have since resolved.", source: "Psych Central", url: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+
+    let am3 = JournalAdvice(quote: "Your journaling will be most effective if you do it daily for about 20 minutes. Begin anywhere, and forget spelling and punctuation. Privacy is key if you are to write without censor. Write quickly, as this frees your brain from \"shoulds\" and other blocks to successful journaling. If it helps, pick a theme for the day, week or month (for example, peace of mind, confusion, change or anger). The most important rule of all is that there are no rules. You’ll discover that your journal is an all-accepting, nonjudgmental friend. And it may provide the cheapest therapy you will ever get.", source: "Psych Central", url: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+
+    let pm3 = JournalAdvice(quote: "If you want to create a new journaling habit: write less than you feel like writing. Typically, when people start to keep a journal they write pages the first day. Then by the second day the prospect of writing so much is daunting, and they procrastinate or abandon the exercise. So instead, even if you feel like writing more, force yourself to write no more than one sentence a day. Apply the disciplined pursuit of “less but better” to your journal.", source: "Greg McKeown, author of Essentialism: The Disciplined Pursuit of Less", url: "https://gregmckeown.com/blog/one-thing-productive-people-reaching-phones/")
+
+    let am4 = JournalAdvice(quote: "Even if you start a journal session in a bad mood, a five-minute a day gratitude journal can increase your long-term well-being by more than 10 percent. Those who pay attention to what is good in their life instead of what is bad are more likely to feel positively about their life. Gratitude makes us feel more gratitude.", source: "Positive Psychology Program", url: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+
+    let pm4 = JournalAdvice(quote: "Journaling gratitude has a strong positive impact on psychological well-being, self-esteem, depression. It also keeps suicidal thoughts and attempts at bay. A study found that gratitude is a protective factor when it comes to suicidal ideation in stressed and depressed individuals. Enhancing our own practice of gratitude can help protect us when we are weakest.", source: "Positive Psychology Program", url: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+
+    let am5 = JournalAdvice(quote: "Regular gratitude journaling has been shown to result in 5% to 15% increases in optimism, meaning that the more we think about what we are grateful for, the more we find to be grateful for.", source: "Positive Psychology Program", url: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+
+    let pm5 = JournalAdvice(quote: "Gratitude journaling can be an effective supplement to treatment for depression. A study found that participants who practiced gratitude journaling experienced a 35% reduction in depressive symptoms for as long as the journaling continued. Think of at least one thing that you are greatful for today.", source: "Positive Psychology Program", url: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+
+    let am6 = JournalAdvice(quote: "Journaling can help you achieve your goals. Writing goals signals to your brain “this is important. Consider building a house without a blueprint. That makes more sense. Your reticular activating system (RAS) then flags relevant opportunities and tools to achieve that goal. More detailed goals provide a psychological blueprint, and increases the likelihood of achieving them.", source: "Huffington Post", url: "https://www.huffingtonpost.com/thai-nguyen/benefits-of-journaling-_b_6648884.html")
+
+    let pm6 = JournalAdvice(quote: "Gratitude journaling can help improve your sleep. A two week gratitude study increased sleep quality and reduced blood pressure in participants, leading to enhanced well-being. If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for.", source: "Positive Psychology Program", url: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+
+
+
+
+    func dayOfWeekAndHour() {
+        print("Refresh NOW table view")
+        let dayOfWeek = calendar.component(.weekday, from: date)
+        let hour = calendar.component(.hour, from: date)
+
+        switch dayOfWeek {
+        case 1: // Sun
+            print("today is a weekend")
+            sunday(hour)
+        case 2:
+            monday(hour)
+        case 3:
+            tuesday(hour)
+        case 4:
+            wednesday(hour)
+        case 5:
+            thursday(hour)
+        case 6:
+            friday(hour)
+        case 7:
+            saturday(hour)
+        default:
+            print("error with dayAndHour")
+            print(dayOfWeek)
+            print("^")
+        }
+    }
+
+    func sunday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            advice = am0
+        case 14...24:
+            print("Weekend, Afternoon")
+            // call function to display 9 time-based topics
+            advice = pm0
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func monday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            advice = am1
+        case 14...24:
+            print("Weekend, Afternoon")
+            // call function to display 9 time-based topics
+            advice = pm1
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func tuesday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            advice = am2
+        case 14...24:
+            print("Weekend, Afternoon")
+            // call function to display 9 time-based topics
+            advice = pm2
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func wednesday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            advice = am3
+        case 14...24:
+            print("Weekend, Afternoon")
+            // call function to display 9 time-based topics
+            advice = pm3
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func thursday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            advice = am4
+        case 14...24:
+            print("Weekend, Afternoon")
+            // call function to display 9 time-based topics
+            advice = pm4
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func friday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            advice = am5
+        case 14...24:
+            print("Weekend, Afternoon")
+            // call function to display 9 time-based topics
+            advice = pm5
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func saturday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            advice = am6
+        case 14...24:
+            print("Weekend, Afternoon")
+            // call function to display 9 time-based topics
+            advice = pm6
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+
+
 
     deinit {
         // The database observer doesn't stop listen for changes in the database when the VC goes off screen. So if the observer isn't removed then the observer will continue to sync data to local memory casusing excessive memory use. So when an observer is no longer needed we should remove it. In this case, remove the observer when the VC is deinitalized.
@@ -80,7 +270,7 @@ class JournalViewController: UIViewController {
             messageTextView.layer.cornerRadius = 4.0
 
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
-            // could add this for the quote view too
+            // TODO: could add this for the quote view too
             journalTableView.addGestureRecognizer(tapGesture)
 
             configureTableView()
@@ -100,10 +290,6 @@ class JournalViewController: UIViewController {
         ref = Database.database().reference()
     }
 
-
-
-
-
     func configureTableView() {
         journalTableView.rowHeight = UITableViewAutomaticDimension
         journalTableView.estimatedRowHeight = 100.0
@@ -117,7 +303,6 @@ class JournalViewController: UIViewController {
     // MARK: - IBActions
 
     @IBAction func QuoteButtonTapped(_ sender: UIButton) {
-
         // Launch URL Window
         print("QuoteButtonTapped")
     }
@@ -139,7 +324,7 @@ class JournalViewController: UIViewController {
         let now = Date()
         let formatter = DateFormatter()
         // initially set the format based on your datepicker date
-        formatter.dateFormat = "dd MMMM yyyy"
+        formatter.dateFormat = "MMMM d, yyyy"
         let currentDate = formatter.string(from: now)
 
 
@@ -151,8 +336,9 @@ class JournalViewController: UIViewController {
                                      Constants.Message.Text: messageTextView.text! as String,
                                      Constants.Message.TimeStamp: currentDate]
             sendMessage(messageDictionary)
+        } else {
+            sendButton.isEnabled = true
         }
-
     }
 
     func sendMessage(_ messageDictionary: [String:String?]) {
@@ -218,6 +404,79 @@ class JournalViewController: UIViewController {
     }
 
 
+    @IBAction func moodButtonTapped(_ sender: UIButton) {
+        if let moodNumber: Int = moodButtons.index(of: sender) {
+            print(moodNumber)
+
+            var selectedMood = ""
+
+            switch moodNumber {
+            case 0:
+                print("Sad")
+                selectedMood = "Sad"
+            case 1:
+                print("Depressed")
+                selectedMood = "Depressed"
+            case 2:
+                print("Bored")
+                selectedMood = "Bored"
+            case 3:
+                print("Good")
+                selectedMood = "Good"
+
+            case 4:
+                print("Mad")
+                selectedMood = "Mad"
+            case 5:
+                print("Stressed")
+                selectedMood = "Stressed"
+            case 6:
+                print("Numb")
+                selectedMood = "Numb"
+            case 7:
+                print("Great!")
+                selectedMood = "Great!"
+            default:
+                print("No button exists")
+            }
+
+            let now = Date()
+            let formatter = DateFormatter()
+            // initially set the format based on your datepicker date
+            formatter.dateFormat = "MMMM d, yyyy"
+            let currentDate = formatter.string(from: now)
+
+
+            // Create a new reference inside our main database
+
+            // data we want to save in our database
+
+            let moodDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
+                                  Constants.Message.Text: "Mood: \(selectedMood). Why?",
+                                  Constants.Message.TimeStamp: currentDate]
+            sendMood(moodDictionary)
+
+        } else {
+            print("ERROR: button tapped not in topicButtons")
+        }
+    }
+
+    func sendMood(_ moodDictionary: [String:String?]) {
+        let messagesDB = ref.child(Constants.DbChild.Messages)
+        // like specifying "/Messages/[some_auto_id]"
+        // Then, .setValue, sets a value to the key (key value pair)
+        messagesDB.childByAutoId().setValue(moodDictionary) {
+            (error, reference) in
+            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
+            if error != nil {
+                print(error!)
+            } else {
+                print("Mood saved successfully")
+            }
+        }
+    }
+
+    
 
 
     
@@ -240,6 +499,10 @@ extension JournalViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
     }
+
+    /* Configuring the Timestamp with DateFormatter:
+    https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/improving-the-ui
+    */
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JournalTableViewCell

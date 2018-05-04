@@ -17,7 +17,7 @@ class HomeFooterCell: UITableViewCell {
     }
 
     @IBAction func sponsorLogoButtonTapped(_ sender: UIButton) {
-        print("sponsor logo button tapped")
+        print("Go to Sponsor's Website")
     }
 
 }

@@ -9,6 +9,16 @@
 import UIKit
 import Firebase
 
+/*
+
+ Could create UI that allows users to follow filtered information based on interests and preferences.
+
+    Example, you could follow male health tips or quotes from a specfic book or quotes from a successful athlete, muscian, actor, business leader
+
+ https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/setting-followers
+
+ */
+
 class UserInfoViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!

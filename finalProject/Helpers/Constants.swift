@@ -30,11 +30,22 @@ struct Constants {
 
     struct DbChild {
         static let Messages = "Messages"
+        static let ProfileUserData = "ProfileUserData"
+
     }
 
     struct Message {
         static let Sender = "Sender"
         static let Text = "Text"
+        static let TimeStamp = "TimeStamp"
+    }
+
+    struct ProfileUserData {
+        static let Sender = "Sender"
+        static let DailyRoutine = "DailyRoutine"
+        static let OneYearGoal = "OneYearGoal"
+        static let LifetimeGoal = "LifetimeGoal"
+        static let Vision = "Vision"
         static let TimeStamp = "TimeStamp"
     }
 

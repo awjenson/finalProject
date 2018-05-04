@@ -117,7 +117,11 @@ struct UserService {
     // We can use this to display the posts we've made so far. Let's go back to our ProfileViewController and display our posts
 
     static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child("posts").child(user.uid)
+        // OLD CODE (ref)
+//        let ref = Database.database().reference().child("posts").child(user.uid)
+
+        // NEW CODE (ref)
+        let ref = DatabaseReference.toLocation(.posts(uid: user.uid))
 
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {

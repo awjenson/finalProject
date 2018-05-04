@@ -6,6 +6,12 @@
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
 
+/*
+ In the future, "followers" and "following" could be based on the time of day. So your timeline would follow certain followers based on the time of day. And who you are following will be based on your user preferences (age, gender, diet).
+ https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/building-the-timeline
+ */
+
+
 import UIKit
 import SafariServices // to display webview
 
@@ -28,7 +34,9 @@ class Home2ViewController: UIViewController {
     let formatter = DateFormatter()
     let date = Date()
     let calendar = Calendar.current
-    
+
+    // pull to refresh tableView
+    let refreshControl = UIRefreshControl()
 
     // Tips and Topics
 
@@ -49,9 +57,18 @@ class Home2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        // call configureTableView() and reloadTimeline() in viewDidLoad
+        configureTableView()
+        reloadTimeline()
 
         signedInStatus(isSignedIn: true)
+
+//        // Evenutally, I'll want to do something like this to call new timeline posts based on time of day:
+//        UserService.timeline { (posts) in
+//            self.posts = posts
+//            self.tableView.reloadData()
+//        }
+
 
         let year = calendar.component(.year, from: date)
         let weekOfYear = calendar.component(.weekOfYear, from: date)
@@ -72,7 +89,46 @@ class Home2ViewController: UIViewController {
         print("Hour: \(hour)")
         print("XXXXXX")
 
+
+
     } // End of ViewDidLoad
+
+    @objc func reloadTimeline() {
+
+
+
+        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
+        if self.refreshControl.isRefreshing {
+            // Reload time based array
+            dayOfWeekAndHour()
+            self.refreshControl.endRefreshing()
+        }
+
+        self.homeTableView.reloadData()
+
+        /* Advanced way to refresh posts in timeline
+        https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/building-the-timeline
+        */
+//        UserService.timeline { (posts) in
+//            self.posts = posts
+//
+//            if self.refreshControl.isRefreshing {
+//                self.refreshControl.endRefreshing()
+//            }
+//
+//            self.homeTableView.reloadData()
+//        }
+    }
+
+    func configureTableView() {
+        // ...
+
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        homeTableView.addSubview(refreshControl)
+
+    }
 
     func signedInStatus(isSignedIn: Bool) {
         if (isSignedIn) {
@@ -123,6 +179,7 @@ class Home2ViewController: UIViewController {
     }
 
     func dayOfWeekAndHour() {
+        print("Refresh NOW table view")
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 

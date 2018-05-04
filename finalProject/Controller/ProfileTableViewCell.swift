@@ -9,10 +9,15 @@
 import UIKit
 import WebKit
 
+/*
+ May want to break up this design with header, body, and footer cells (3). See this tutorial:
+ https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/improving-the-ui
+ */
+
 class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
 
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var userTextView: UITextView!
+    @IBOutlet weak var userTextView: UITextView! // TEXTVIEW
     @IBOutlet weak var adviceTextLabel: UILabel!
     @IBOutlet weak var adviceAuthorLabel: UILabel!
     @IBOutlet weak var adviceURLButton: UIButton!

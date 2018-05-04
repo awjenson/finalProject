@@ -15,5 +15,4 @@ class JournalMessage {
     var sender = ""
     var message = ""
     var timestamp = ""
-
 }
