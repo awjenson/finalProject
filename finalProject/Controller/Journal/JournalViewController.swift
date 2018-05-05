@@ -19,6 +19,7 @@ import GrowingTextView
 class JournalViewController: UIViewController {
 
     // MARK: - IBOutlets
+    @IBOutlet weak var titleLabel: UILabel!
 
     @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteLabel: UILabel!
@@ -107,7 +108,7 @@ class JournalViewController: UIViewController {
 
     let pm5 = JournalAdvice(quote: "Gratitude journaling can be an effective supplement to treatment for depression. A study found that participants who practiced gratitude journaling experienced a 35% reduction in depressive symptoms for as long as the journaling continued. Think of at least one thing that you are greatful for today.", source: "Positive Psychology Program", url: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
 
-    let am6 = JournalAdvice(quote: "Journaling can help you achieve your goals. Writing goals signals to your brain “this is important. Consider building a house without a blueprint. That makes more sense. Your reticular activating system (RAS) then flags relevant opportunities and tools to achieve that goal. More detailed goals provide a psychological blueprint, and increases the likelihood of achieving them.", source: "Huffington Post", url: "https://www.huffingtonpost.com/thai-nguyen/benefits-of-journaling-_b_6648884.html")
+    let am6 = JournalAdvice(quote: "Journaling can help you achieve your goals. Writing goals signals to your brain “this is important. More detailed goals provide a psychological blueprint, and increases the likelihood of achieving them.", source: "Huffington Post", url: "https://www.huffingtonpost.com/thai-nguyen/benefits-of-journaling-_b_6648884.html")
 
     let pm6 = JournalAdvice(quote: "Gratitude journaling can help improve your sleep. A two week gratitude study increased sleep quality and reduced blood pressure in participants, leading to enhanced well-being. If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for.", source: "Positive Psychology Program", url: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
 
@@ -452,7 +453,7 @@ class JournalViewController: UIViewController {
             // data we want to save in our database
 
             let moodDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
-                                  Constants.Message.Text: "Mood: \(selectedMood). Why?",
+                                  Constants.Message.Text: "Mood: \(selectedMood).  Why?",
                                   Constants.Message.TimeStamp: currentDate]
             sendMood(moodDictionary)
 
@@ -507,6 +508,7 @@ extension JournalViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JournalTableViewCell
 
+        // To change UI of cell, see JournalTableViewCell.
         cell.dateLabel.text = messageArray[indexPath.row].timestamp
         cell.messageLabel.text = messageArray[indexPath.row].message
 
