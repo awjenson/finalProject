@@ -8,14 +8,10 @@
 
 import Foundation
 
-class ProfileUserData {
+class ProfileUserData: NSObject {
 
     // MARK: - Properties
 
     var sender = ""
-    var dailyRoutine = ""
-    var oneYearGoal = ""
-    var lifetimeGoal = ""
-    var vision = ""
-    var timestamp = ""
+    var statement = ""
 }

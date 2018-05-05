@@ -92,7 +92,7 @@ extension PostViewController: UITableViewDataSource {
 
             // make call to correct call to user's goals, vision
 //            let imageURL = URL(string: post.imageURL)
-            cell.userTextView.text = "User text, text, text. This should be different for each textView: (post.likeCount)."
+            cell.userTextView.text = "User text, text."
             return cell
 
         case 2:

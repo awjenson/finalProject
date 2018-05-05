@@ -25,30 +25,47 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 //    let keyboardHeight = KeyboardService.keyboardHeight()
 //    let keyboardSize = KeyboardService.keyboardSize()
 
+
+
     var posts = [Post]()
 
-    var statementArray = [ProfileStatement]()
-    var dailyRoutine3 = ProfileStatement(sender: "Andrew", statement: "My daily routine will be to do this and that each day...")
-    var oneYearGoals2 = ProfileStatement(sender: "Andrew", statement: "My one year goals are to do x, y, and z.")
-    var lifetime1 = ProfileStatement(sender: "Andrew", statement: "My lifetime goals will be to accomplish these x, y, and z.")
-    var vision0 = ProfileStatement(sender: "Andrew", statement: "My vision is to...")
+//    var statementArray = [ProfileStatement]()
+//    var dailyRoutine3 = ProfileStatement(sender: "Andrew", statement: "My one year goals are to do x, y, and z.")
+//    var oneYearGoals2 = ProfileStatement(sender: "Andrew", statement: "My one year goals are to do x, y, and z.")
+//    var lifetime1 = ProfileStatement(sender: "Andrew", statement: "My lifetime goals will be to accomplish these x, y, and z.")
+//    var vision0 = ProfileStatement(sender: "Andrew", statement: "My vision is to...")
 
 
+    // Same property
+    var userList = [ProfileStatement]()
     var profileArray = [ProfileUserData]()
     var ref: DatabaseReference!
     fileprivate var _refHandle: DatabaseHandle!
 
-
-
     
     var results = [ProfileDataResults]()
-    var selectedResults = [ProfileDataModel]() // this will be used to stores the selected vision and goals
+    var selectedResults = [ProfileDataModel]() // this will be used to stores the user's vision and goals
 
-    
+
+
+    let row0 = ProfileStatement()
+    let row1 = ProfileStatement()
+    let row2 = ProfileStatement()
+    let row3 = ProfileStatement()
+    let row4 = ProfileStatement()
+    let row5 = ProfileStatement()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        row0.statement = "test0"
+        row1.statement = "test1"
+        row2.statement = "test2"
+        row3.statement = "test3"
+
+
+        userList = [row0, row1, row2, row3]
 
 
 
@@ -66,27 +83,33 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 //            self.tableView.reloadData()
 //        }
 
-        statementArray.append(dailyRoutine3)
-        statementArray.append(oneYearGoals2)
-        statementArray.append(lifetime1)
-        statementArray.append(vision0)
-
-        print(statementArray)
-        print("???")
-        print(statementArray[0])
+//        statementArray.append(dailyRoutine3)
+//        statementArray.append(oneYearGoals2)
+//        statementArray.append(lifetime1)
+//        statementArray.append(vision0)
+//
+//        print(statementArray)
+//        print("???")
+//        print(statementArray[0])
+//        print(statementArray[1])
+//        print(statementArray[2])
+//        print(statementArray[3])
 
 
         profile3TableView.dataSource = self
         profile3TableView.delegate = self
 
+
+
+        // Add profileArray indexes
         // Check order of statementArray[n] to make sure pulling correct text
-        let dailyRoutine = ProfileDataModel(category: "Daily Routine", adviceText: "It's not what we do once in a while that shapes our lives, but what we do consistently.", adviceAuthor: "Tony Robbins", adviceURL: "https://www.youtube.com/watch?v=3sK3wJAxGfs", userInput: profileArray[0])
+        let dailyRoutine = ProfileDataModel(category: "Daily Routine", adviceText: "It's not what we do once in a while that shapes our lives, but what we do consistently.", adviceAuthor: "Tony Robbins", adviceURL: "https://www.youtube.com/watch?v=3sK3wJAxGfs")
 
-        let oneYearGoals = ProfileDataModel(category: "One Year Goals", adviceText: "People without goals get used by other people who have them. People who don’t have goals work for people who do.", adviceAuthor: "Sean Croxton", adviceURL: "https://www.youtube.com/watch?v=DNITe9snHqA&t", userInput: profileArray[1])
+        let oneYearGoals = ProfileDataModel(category: "One Year Goals", adviceText: "People without goals get used by other people who have them. People who don’t have goals work for people who do.", adviceAuthor: "Sean Croxton", adviceURL: "https://www.youtube.com/watch?v=DNITe9snHqA&t")
 
-        let lifetimeGoals = ProfileDataModel(category: "Lifetime Goals", adviceText: "Project your life to age 80 and then make decisions today to minimize regrets you will have. While you might feel remorse for things you did wrong, more often regrets stem from the path not taken. If you fail, at least you will be proud when you're 80 that you tried.", adviceAuthor: "Jeff Bezos", adviceURL: "https://www.youtube.com/watch?v=ikuLEZoE1vE", userInput: profileArray[2])
+        let lifetimeGoals = ProfileDataModel(category: "Lifetime Goals", adviceText: "Project your life to age 80 and then make decisions today to minimize regrets you will have. While you might feel remorse for things you did wrong, more often regrets stem from the path not taken. If you fail, at least you will be proud when you're 80 that you tried.", adviceAuthor: "Jeff Bezos", adviceURL: "https://www.youtube.com/watch?v=ikuLEZoE1vE")
 
-        let vision = ProfileDataModel(category: "Vision", adviceText: "Create the highest grandest vision possible for your life, because you become what you believe.", adviceAuthor: "Oprah Winfrey", adviceURL: "https://www.youtube.com/watch?v=acBp_5OmTkQ&t", userInput: profileArray[3])
+        let vision = ProfileDataModel(category: "Vision", adviceText: "Create the highest grandest vision possible for your life, because you become what you believe.", adviceAuthor: "Oprah Winfrey", adviceURL: "https://www.youtube.com/watch?v=acBp_5OmTkQ&t")
 
         selectedResults.append(dailyRoutine)
         selectedResults.append(oneYearGoals)
@@ -95,7 +118,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         configureTableView()
         configureDatabase() // is the needed?
-        retrieveProfileUserData()
+        fetchUserList()
 
     }
 
@@ -103,43 +126,67 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         ref = Database.database().reference()
     }
 
-    func retrieveProfileUserData() {
-        // listen for new messages in the firebase database with 'observe'
-        // Configure database to sync messages
-        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
-        // ask Firebase to 'observe' for any new child's events ('childAdded')
+    func fetchUserList() {
 
         _refHandle = ref.child(Constants.DbChild.ProfileUserData).observe(.childAdded) { (snapshot) in
-            // grab data from snapshot and format it into a custom JournalMessage object
-            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
-            let snapshotValue = snapshot.value as! Dictionary<String,String>
+            if let dictionary = snapshot.value as? [String: AnyObject] {
 
-            // use snapshotValue to pull-out values of keys
-            let sender = snapshotValue[Constants.ProfileUserData.Sender]!
-            let dailyRoutine = snapshotValue[Constants.ProfileUserData.DailyRoutine]!
-            let oneYearGoal = snapshotValue[Constants.ProfileUserData.OneYearGoal]!
-            let lifetimeGoal = snapshotValue[Constants.ProfileUserData.LifetimeGoal]!
-            let vision = snapshotValue[Constants.ProfileUserData.Vision]!
-            let timeStamp = snapshotValue[Constants.ProfileUserData.TimeStamp]
+                print("Print Dictionary")
+                print(dictionary)
+                let user = ProfileStatement()
+                // Set it to the values we're getting from our dictionary
+                user.setValuesForKeys(dictionary)
+                self.userList.append(user) // add to the list
 
-            // now save these values into a new JournalMessage object
-            let editedProfileUserData = ProfileUserData()
-            editedProfileUserData.sender = sender
-            editedProfileUserData.dailyRoutine = dailyRoutine
-            editedProfileUserData.oneYearGoal = oneYearGoal
-            editedProfileUserData.lifetimeGoal = lifetimeGoal
-            editedProfileUserData.vision = vision
-            editedProfileUserData.timestamp = timeStamp ?? ""
+                // display UI in main queue
+                performUIUpdatesOnMain({
 
-            self.profileArray.append(editedProfileUserData)
-            print("Profile Array: \(self.profileArray.count)")
+                    self.configureTableView()
+                    self.profile3TableView.reloadData()
+                })
+            }
 
-            // re-configure table view and reload data in table view
-            self.configureTableView()
-            self.profile3TableView.reloadData()
-
+            print("Nil")
         }
     }
+
+//    func retrieveProfileUserData() {
+//        // listen for new messages in the firebase database with 'observe'
+//        // Configure database to sync messages
+//        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
+//        // ask Firebase to 'observe' for any new child's events ('childAdded')
+//
+//        _refHandle = ref.child(Constants.DbChild.ProfileUserData).observe(.childAdded) { (snapshot) in
+//            // grab data from snapshot and format it into a custom JournalMessage object
+//            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
+//            let snapshotValue = snapshot.value as! Dictionary<String,String>
+//
+//            // use snapshotValue to pull-out values of keys
+//            let sender = snapshotValue[Constants.ProfileUserData.Sender]!
+//            let dailyRoutine = snapshotValue[Constants.ProfileUserData.DailyRoutine]!
+//            let oneYearGoal = snapshotValue[Constants.ProfileUserData.OneYearGoal]!
+//            let lifetimeGoal = snapshotValue[Constants.ProfileUserData.LifetimeGoal]!
+//            let vision = snapshotValue[Constants.ProfileUserData.Vision]!
+//            let timeStamp = snapshotValue[Constants.ProfileUserData.TimeStamp]
+//
+//            // now save these values into a new JournalMessage object
+//            let editedProfileUserData = ProfileUserData()
+//            editedProfileUserData.sender = sender
+//            editedProfileUserData.dailyRoutine = dailyRoutine
+//            editedProfileUserData.oneYearGoal = oneYearGoal
+//            editedProfileUserData.lifetimeGoal = lifetimeGoal
+//            editedProfileUserData.vision = vision
+//            editedProfileUserData.timestamp = timeStamp ?? ""
+//
+//            self.profileArray.append(editedProfileUserData)
+//            print("Profile Array: \(self.profileArray.count)")
+//
+//            // re-configure table view and reload data in table view
+//            self.configureTableView()
+//            self.profile3TableView.reloadData()
+//
+//        }
+//    }
 
     func configureTableView() {
         profile3TableView.estimatedRowHeight = 50
@@ -161,6 +208,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         let indexPath4 = NSIndexPath(row: 4, section: 0)
         let cell4 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath4 as IndexPath) as! ProfileTableViewCell
 
+
         print("Cell 1: \(cell1.userTextView.text)")
         print("Cell 2: \(cell2.userTextView.text)")
         print("Cell 3: \(cell3.userTextView.text)")
@@ -175,10 +223,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         // data we want to save in our database
         let userDictionary = [
             Constants.ProfileUserData.Sender: Auth.auth().currentUser?.email,
-            Constants.ProfileUserData.DailyRoutine: cell1.userTextView.text as String,
-            Constants.ProfileUserData.OneYearGoal: cell2.userTextView.text as String,
-            Constants.ProfileUserData.LifetimeGoal: cell3.userTextView.text as String,
-            Constants.ProfileUserData.Vision: cell4.userTextView.text as String,
+            Constants.ProfileUserData.DailyRoutine: "cell1.userTextView.text as String",
+            Constants.ProfileUserData.OneYearGoal: "cell2.userTextView.text as String",
+            Constants.ProfileUserData.LifetimeGoal: "cell3.userTextView.text as String",
+            Constants.ProfileUserData.Vision: "cell4.userTextView.text as String",
             Constants.ProfileUserData.TimeStamp: currentDate]
 
         sendProfileUserData(userDictionary)
@@ -200,10 +248,112 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return post.count
-        return selectedResults.count
+
+    // This is the size of our header sections that we will use later on.
+    let SectionHeaderHeight: CGFloat = 25
+
+    enum TableSection: Int {
+        case dailyRoutine = 0, oneYearGoal, lifetimeGoal, vision, total
     }
+
+     var data = [TableSection: [[String: String]]]()
+
+    // Data is an array of Dictionary of type [String: String]
+    let UserData = [
+        ["type": "dailyRoutine", "statement": "textDaily"],
+        ["type": "oneYearGoal", "statement": "textOne"],
+        ["type": "lifetimeGoal", "statement": "textLife"],
+        ["type": "vision", "statement": "textVision"]
+    ]
+
+
+
+
+
+
+    func sortData() {
+        data[.dailyRoutine] = UserData.filter({ $0["type"] == "dailyRoutine" })
+        data[.oneYearGoal] = UserData.filter({ $0["type"] == "oneYearGoal" })
+        data[.lifetimeGoal] = UserData.filter({ $0["type"] == "lifetimeGoal" })
+        data[.vision] = UserData.filter({ $0["type"] == "vision" })
+    }
+
+
+
+    // As long as `total` is the last case in our TableSection enum,
+    // this method will always be dynamically correct no mater how many table sections we add or remove.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return TableSection.total.rawValue
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Using Swift's optional lookup we first check if there is a valid section of table.
+        // Then we check that for the section there is data that goes with.
+        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection] {
+            return userData.count
+        }
+
+        print("In here?")
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        // If we wanted to always show a section header regardless of whether or not there were rows in it,
+        // then uncomment this line below:
+        //return SectionHeaderHeight
+        // First check if there is a valid section of table.
+        // Then we check that for the section there is more than 1 row.
+        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection], userData.count > 0 {
+            return SectionHeaderHeight
+        }
+
+        print("Are we here?")
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
+        view.backgroundColor = UIColor(red: 253.0/255.0, green: 240.0/255.0, blue: 196.0/255.0, alpha: 1)
+        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: SectionHeaderHeight))
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.textColor = UIColor.black
+        if let tableSection = TableSection(rawValue: section) {
+            switch tableSection {
+            case .dailyRoutine:
+                label.text = "Action"
+            case .oneYearGoal:
+                label.text = "Comedy"
+            case .lifetimeGoal:
+                label.text = "Drama"
+            case .vision:
+                label.text = "Indie"
+            default:
+                label.text = ""
+            }
+        }
+        view.addSubview(label)
+        return view
+    }
+
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        // Similar to above, first check if there is a valid section of table.
+        // Then we check that for the section there is a row.
+        if let tableSection = TableSection(rawValue: indexPath.section), let statement = data[tableSection]?[indexPath.row] {
+            if let titleLabel = cell.viewWithTag(10) as? UILabel {
+                titleLabel.text = statement["statement"]
+            }
+            if let subtitleLabel = cell.viewWithTag(20) as? UILabel {
+                subtitleLabel.text = statement["statement"]
+            }
+        }
+        return cell
+    }
+
+
+
 
     /*
      CELL - comes after each 'cell.'
@@ -225,31 +375,32 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
      quoteURL
      */
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
-
-        // set its text view’s delegate to self *** UNSURE WHY THIS DOESN'T WORK???
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
+//
+//        // set its text view’s delegate to self *** UNSURE WHY THIS DOESN'T WORK???
+////        cell.userTextView.delegate = self
+//
+//        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
+//        cell.userTextView.layer.borderWidth = 2
 //        cell.userTextView.delegate = self
-
-        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
-        cell.userTextView.layer.borderWidth = 2
-        cell.userTextView.delegate = self
-
-        cell.categoryLabel.text = selectedResults[indexPath.row].category
-        cell.adviceTextLabel.text = selectedResults[indexPath.row].adviceText
-        cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
-
-        cell.userTextView.text = selectedResults[indexPath.row].userInput.
-        // Set the delegate to be the VC when you create the cell
-        cell.userTextView.delegate = self
-
-        return cell
-    }
+//
+//        cell.categoryLabel.text = selectedResults[indexPath.row].category
+//        cell.adviceTextLabel.text = selectedResults[indexPath.row].adviceText
+//        cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
+//
+//
+//
+//
+////        cell.userTextView.text = userList[indexPath.row].statement
+//        // Set the delegate to be the VC when you create the cell
+//        cell.userTextView.delegate = self
+//
+//        return cell
+//    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //getting the index path of selected row
-
-
     }
 
     /* Update database when changes made to TextView in a cell. Seems to be similar as updating a like button UILabel each time the like button is clicked. Method for did tap away from textView.

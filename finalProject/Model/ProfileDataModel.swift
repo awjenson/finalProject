@@ -16,13 +16,13 @@ class ProfileDataModel {
     var adviceText: String
     var adviceAuthor: String
     var adviceURL: String?
-    var userInput: ProfileUserData
+//    var userInput: ProfileStatement
 
-    init(category: String, adviceText: String, adviceAuthor: String, adviceURL: String, userInput: ProfileUserData) {
+    init(category: String, adviceText: String, adviceAuthor: String, adviceURL: String) {
         self.category = category
         self.adviceText = adviceText
         self.adviceAuthor = adviceAuthor
         self.adviceURL = adviceURL
-        self.userInput = userInput
+//        self.userInput = userInput
     }
 }

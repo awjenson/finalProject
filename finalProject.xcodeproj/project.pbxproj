@@ -28,6 +28,8 @@
 		DA361D3D208B8E77007ACE59 /* ThisLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3C208B8E77007ACE59 /* ThisLoginViewController.swift */; };
 		DA361D40208BC8B6007ACE59 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
+		DA59A246209D48AB008018D1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A245209D48AB008018D1 /* List.swift */; };
+		DA59A248209D48EA008018D1 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A247209D48EA008018D1 /* ListType.swift */; };
 		DA5AED9F207683120094AA57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5AED9E207683120094AA57 /* GoogleService-Info.plist */; };
 		DA5AEDA320769C5E0094AA57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */; };
 		DA5AEDA520769C800094AA57 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA420769C800094AA57 /* RegisterViewController.swift */; };
@@ -104,6 +106,8 @@
 		DA361D3C208B8E77007ACE59 /* ThisLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisLoginViewController.swift; sourceTree = "<group>"; };
 		DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		DA59A245209D48AB008018D1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		DA59A247209D48EA008018D1 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
 		DA5AED9E207683120094AA57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA5AEDA420769C800094AA57 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 				DA7898882051E8EC005046D8 /* ProfileDataResults.swift */,
 				DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */,
 				DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */,
+				DA59A245209D48AB008018D1 /* List.swift */,
+				DA59A247209D48EA008018D1 /* ListType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -607,11 +613,13 @@
 				DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */,
 				DADE6471204E326400BEBF95 /* TipOld.swift in Sources */,
 				DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */,
+				DA59A248209D48EA008018D1 /* ListType.swift in Sources */,
 				DA361D332084566E007ACE59 /* UserService.swift in Sources */,
 				DA5AEDA520769C800094AA57 /* RegisterViewController.swift in Sources */,
 				DA361D3D208B8E77007ACE59 /* ThisLoginViewController.swift in Sources */,
 				DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */,
 				DA13C6422058468700762215 /* CategoryObjects.swift in Sources */,
+				DA59A246209D48AB008018D1 /* List.swift in Sources */,
 				DA7898812051D72A005046D8 /* HomeHeaderCollectionReusableView.swift in Sources */,
 				DA5AEDA720769D0E0094AA57 /* WelcomeViewController.swift in Sources */,
 				DADE6470204E326400BEBF95 /* DetailedTip.swift in Sources */,

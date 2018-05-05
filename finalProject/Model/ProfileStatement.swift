@@ -8,12 +8,7 @@
 
 import Foundation
 
-struct ProfileStatement {
+class ProfileStatement: NSObject {
     var sender: String = ""
     var statement: String = ""
-
-    init(sender: String, statement: String) {
-        self.sender = sender
-        self.statement = statement
-    }
 }
