@@ -30,6 +30,7 @@
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA59A246209D48AB008018D1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A245209D48AB008018D1 /* List.swift */; };
 		DA59A248209D48EA008018D1 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A247209D48EA008018D1 /* ListType.swift */; };
+		DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A249209E4845008018D1 /* NewUserList.swift */; };
 		DA5AED9F207683120094AA57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5AED9E207683120094AA57 /* GoogleService-Info.plist */; };
 		DA5AEDA320769C5E0094AA57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */; };
 		DA5AEDA520769C800094AA57 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA420769C800094AA57 /* RegisterViewController.swift */; };
@@ -108,6 +109,7 @@
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA59A245209D48AB008018D1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		DA59A247209D48EA008018D1 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
+		DA59A249209E4845008018D1 /* NewUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserList.swift; sourceTree = "<group>"; };
 		DA5AED9E207683120094AA57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA5AEDA420769C800094AA57 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */,
 				DA78988C2052EFA1005046D8 /* Home2ViewController.swift */,
 				DA7898822051E39E005046D8 /* ProfileViewController.swift */,
+				DA59A249209E4845008018D1 /* NewUserList.swift */,
 				DA78987520507C86005046D8 /* ProfileTableViewCell.swift */,
 				DA5AEDA120769C190094AA57 /* Login */,
 				DA5AEDAC2076FFDD0094AA57 /* Journal */,
@@ -596,6 +599,7 @@
 				DAFE6FCF205ED8D5008EF92F /* Day.swift in Sources */,
 				DAA1022520537A2400A25EFC /* JournalViewController.swift in Sources */,
 				DA5EE4BA2091062F00B54438 /* UserTextService.swift in Sources */,
+				DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */,
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,

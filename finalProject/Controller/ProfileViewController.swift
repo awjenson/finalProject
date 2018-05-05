@@ -25,6 +25,34 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 //    let keyboardHeight = KeyboardService.keyboardHeight()
 //    let keyboardSize = KeyboardService.keyboardSize()
 
+    var noteArray = [[String:String]]() //an array of dicts, tableView datasource
+    var initialLoad = true
+
+    // code to load the data initially and then watch for added messages
+
+//    messagesRef.observeEventType(.ChildAdded, withBlock: { snapshot in
+//
+//    let dict = [String: String]()
+//    dict["date"] = snapshot.value("date")
+//    dict["msg"] = snapshot.value("message")
+//    dict["sender"] = snapshot.value("sender")
+//
+//    self.messagesArray.append(dict)
+//
+//    if ( self.initialLoad == false ) { //upon first load, don't reload the tableView until all children are loaded
+//    self.itemsTableView.reloadData()
+//    }
+//    })
+//
+//    //this .Value event will fire AFTER the child added events to reload the tableView
+//    //  the first time and to set subsequent childAdded events to load after each child
+//    //   is added in the future
+//    messagesRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+//
+//    print("inital data loaded so reload tableView!  \(snapshot.childrenCount)")
+//    self.messagesTableView.reloadData()
+//    self.initialLoad = false
+//    })
 
 
     var posts = [Post]()
@@ -42,30 +70,25 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     var ref: DatabaseReference!
     fileprivate var _refHandle: DatabaseHandle!
 
-    
+
+
     var results = [ProfileDataResults]()
     var selectedResults = [ProfileDataModel]() // this will be used to stores the user's vision and goals
 
 
 
-    let row0 = ProfileStatement()
-    let row1 = ProfileStatement()
-    let row2 = ProfileStatement()
-    let row3 = ProfileStatement()
-    let row4 = ProfileStatement()
-    let row5 = ProfileStatement()
 
+
+    // NEW USER LIST
+    var myNewUserList = NewUserList()
+    var newUserListArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        row0.statement = "test0"
-        row1.statement = "test1"
-        row2.statement = "test2"
-        row3.statement = "test3"
+        // NEW USER LIST
+        newUserListArray = [myNewUserList.dailyRoutine, myNewUserList.oneYearGoal, myNewUserList.lifetimeGoal, myNewUserList.vision]
 
-
-        userList = [row0, row1, row2, row3]
 
 
 
@@ -118,7 +141,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         configureTableView()
         configureDatabase() // is the needed?
-        fetchUserList()
+        retrieveProfileUserData()
 
     }
 
@@ -126,67 +149,72 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         ref = Database.database().reference()
     }
 
-    func fetchUserList() {
-
-        _refHandle = ref.child(Constants.DbChild.ProfileUserData).observe(.childAdded) { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-
-                print("Print Dictionary")
-                print(dictionary)
-                let user = ProfileStatement()
-                // Set it to the values we're getting from our dictionary
-                user.setValuesForKeys(dictionary)
-                self.userList.append(user) // add to the list
-
-                // display UI in main queue
-                performUIUpdatesOnMain({
-
-                    self.configureTableView()
-                    self.profile3TableView.reloadData()
-                })
-            }
-
-            print("Nil")
-        }
-    }
-
-//    func retrieveProfileUserData() {
-//        // listen for new messages in the firebase database with 'observe'
-//        // Configure database to sync messages
-//        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
-//        // ask Firebase to 'observe' for any new child's events ('childAdded')
+//    func fetchUserList() {
 //
 //        _refHandle = ref.child(Constants.DbChild.ProfileUserData).observe(.childAdded) { (snapshot) in
-//            // grab data from snapshot and format it into a custom JournalMessage object
-//            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
-//            let snapshotValue = snapshot.value as! Dictionary<String,String>
+//            if let dictionary = snapshot.value as? [String: AnyObject] {
 //
-//            // use snapshotValue to pull-out values of keys
-//            let sender = snapshotValue[Constants.ProfileUserData.Sender]!
-//            let dailyRoutine = snapshotValue[Constants.ProfileUserData.DailyRoutine]!
-//            let oneYearGoal = snapshotValue[Constants.ProfileUserData.OneYearGoal]!
-//            let lifetimeGoal = snapshotValue[Constants.ProfileUserData.LifetimeGoal]!
-//            let vision = snapshotValue[Constants.ProfileUserData.Vision]!
-//            let timeStamp = snapshotValue[Constants.ProfileUserData.TimeStamp]
+//                print("Print Dictionary")
+//                print(dictionary)
+//                let user = ProfileStatement()
+//                // Set it to the values we're getting from our dictionary
+//                user.setValuesForKeys(dictionary)
+//                self.userList.append(user) // add to the list
 //
-//            // now save these values into a new JournalMessage object
-//            let editedProfileUserData = ProfileUserData()
-//            editedProfileUserData.sender = sender
-//            editedProfileUserData.dailyRoutine = dailyRoutine
-//            editedProfileUserData.oneYearGoal = oneYearGoal
-//            editedProfileUserData.lifetimeGoal = lifetimeGoal
-//            editedProfileUserData.vision = vision
-//            editedProfileUserData.timestamp = timeStamp ?? ""
+//                // display UI in main queue
+//                performUIUpdatesOnMain({
 //
-//            self.profileArray.append(editedProfileUserData)
-//            print("Profile Array: \(self.profileArray.count)")
+//                    self.configureTableView()
+//                    self.profile3TableView.reloadData()
+//                })
+//            }
 //
-//            // re-configure table view and reload data in table view
-//            self.configureTableView()
-//            self.profile3TableView.reloadData()
-//
+//            print("Nil")
 //        }
 //    }
+
+    func retrieveProfileUserData() {
+        // listen for new messages in the firebase database with 'observe'
+        // Configure database to sync messages
+        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
+        // ask Firebase to 'observe' for any new child's events ('childAdded')
+
+        _refHandle = ref.child(Constants.DbChild.ProfileUserData).observe(.childAdded) { (snapshot) in
+            // grab data from snapshot and format it into a custom JournalMessage object
+            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
+            let snapshotValue = snapshot.value as! Dictionary<String,String>
+
+            // use snapshotValue to pull-out values of keys
+            let sender = snapshotValue[Constants.ProfileUserData.Sender]!
+            let dailyRoutine = snapshotValue[Constants.ProfileUserData.DailyRoutine]!
+            let oneYearGoal = snapshotValue[Constants.ProfileUserData.OneYearGoal]!
+            let lifetimeGoal = snapshotValue[Constants.ProfileUserData.LifetimeGoal]!
+            let vision = snapshotValue[Constants.ProfileUserData.Vision]!
+            let timeStamp = snapshotValue[Constants.ProfileUserData.TimeStamp]
+
+            // now save these values into a new JournalMessage object
+            let editedProfileUserData = NewUserList()
+            editedProfileUserData.sender = sender
+            editedProfileUserData.dailyRoutine = dailyRoutine
+            editedProfileUserData.oneYearGoal = oneYearGoal
+            editedProfileUserData.lifetimeGoal = lifetimeGoal
+            editedProfileUserData.vision = vision
+            editedProfileUserData.timestamp = timeStamp ?? ""
+
+            self.newUserListArray = [editedProfileUserData.dailyRoutine,
+                                     editedProfileUserData.oneYearGoal,
+                                     editedProfileUserData.lifetimeGoal,
+                                     editedProfileUserData.vision]
+
+            print("Profile Array is SUCCESS: \(self.newUserListArray.count)")
+
+            // re-configure table view and reload data in table view
+            self.configureTableView()
+            self.profile3TableView.reloadData()
+
+        }
+        print("Profile Array if ERROR: \(self.newUserListArray.count)")
+    }
 
     func configureTableView() {
         profile3TableView.estimatedRowHeight = 50
@@ -195,6 +223,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
+        print("Print array count: \(newUserListArray.count)")
+        print(newUserListArray)
 
         let indexPath1 = NSIndexPath(row: 1, section: 0)
         let cell1 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath1 as IndexPath) as! ProfileTableViewCell
@@ -208,11 +238,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         let indexPath4 = NSIndexPath(row: 4, section: 0)
         let cell4 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath4 as IndexPath) as! ProfileTableViewCell
 
-
-        print("Cell 1: \(cell1.userTextView.text)")
-        print("Cell 2: \(cell2.userTextView.text)")
-        print("Cell 3: \(cell3.userTextView.text)")
-        print("Cell 4: \(cell4.userTextView.text)")
+        print("Cell 1: \(cell1.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+        print("Cell 2: \(cell2.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+        print("Cell 3: \(cell3.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+        print("Cell 4: \(cell4.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
 
         let now = Date()
         let formatter = DateFormatter()
@@ -223,10 +252,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         // data we want to save in our database
         let userDictionary = [
             Constants.ProfileUserData.Sender: Auth.auth().currentUser?.email,
-            Constants.ProfileUserData.DailyRoutine: "cell1.userTextView.text as String",
-            Constants.ProfileUserData.OneYearGoal: "cell2.userTextView.text as String",
-            Constants.ProfileUserData.LifetimeGoal: "cell3.userTextView.text as String",
-            Constants.ProfileUserData.Vision: "cell4.userTextView.text as String",
+            Constants.ProfileUserData.DailyRoutine: newUserListArray[0],
+            Constants.ProfileUserData.OneYearGoal: newUserListArray[1],
+            Constants.ProfileUserData.LifetimeGoal: newUserListArray[3],
+            Constants.ProfileUserData.Vision: newUserListArray[3],
             Constants.ProfileUserData.TimeStamp: currentDate]
 
         sendProfileUserData(userDictionary)
@@ -282,75 +311,80 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     // As long as `total` is the last case in our TableSection enum,
     // this method will always be dynamically correct no mater how many table sections we add or remove.
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return TableSection.total.rawValue
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return TableSection.total.rawValue
+//    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Using Swift's optional lookup we first check if there is a valid section of table.
         // Then we check that for the section there is data that goes with.
-        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection] {
-            return userData.count
-        }
+//        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection] {
+//            return userData.count
+//        }
+//
+//        print("In here?")
+//        return 0
+        print("HOW MANY ROWS?")
+        print(newUserListArray)
+        print(newUserListArray.count)
 
-        print("In here?")
-        return 0
+        return TableSection.total.rawValue
     }
 
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        // If we wanted to always show a section header regardless of whether or not there were rows in it,
-        // then uncomment this line below:
-        //return SectionHeaderHeight
-        // First check if there is a valid section of table.
-        // Then we check that for the section there is more than 1 row.
-        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection], userData.count > 0 {
-            return SectionHeaderHeight
-        }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        // If we wanted to always show a section header regardless of whether or not there were rows in it,
+//        // then uncomment this line below:
+//        //return SectionHeaderHeight
+//        // First check if there is a valid section of table.
+//        // Then we check that for the section there is more than 1 row.
+//        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection], userData.count > 0 {
+//            return SectionHeaderHeight
+//        }
+//
+//        print("Are we here?")
+//        return 0
+//    }
 
-        print("Are we here?")
-        return 0
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
+//        view.backgroundColor = UIColor(red: 253.0/255.0, green: 240.0/255.0, blue: 196.0/255.0, alpha: 1)
+//        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: SectionHeaderHeight))
+//        label.font = UIFont.boldSystemFont(ofSize: 15)
+//        label.textColor = UIColor.black
+//        if let tableSection = TableSection(rawValue: section) {
+//            switch tableSection {
+//            case .dailyRoutine:
+//                label.text = "Action"
+//            case .oneYearGoal:
+//                label.text = "Comedy"
+//            case .lifetimeGoal:
+//                label.text = "Drama"
+//            case .vision:
+//                label.text = "Indie"
+//            default:
+//                label.text = ""
+//            }
+//        }
+//        view.addSubview(label)
+//        return view
+//    }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
-        view.backgroundColor = UIColor(red: 253.0/255.0, green: 240.0/255.0, blue: 196.0/255.0, alpha: 1)
-        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: SectionHeaderHeight))
-        label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.textColor = UIColor.black
-        if let tableSection = TableSection(rawValue: section) {
-            switch tableSection {
-            case .dailyRoutine:
-                label.text = "Action"
-            case .oneYearGoal:
-                label.text = "Comedy"
-            case .lifetimeGoal:
-                label.text = "Drama"
-            case .vision:
-                label.text = "Indie"
-            default:
-                label.text = ""
-            }
-        }
-        view.addSubview(label)
-        return view
-    }
-
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        // Similar to above, first check if there is a valid section of table.
-        // Then we check that for the section there is a row.
-        if let tableSection = TableSection(rawValue: indexPath.section), let statement = data[tableSection]?[indexPath.row] {
-            if let titleLabel = cell.viewWithTag(10) as? UILabel {
-                titleLabel.text = statement["statement"]
-            }
-            if let subtitleLabel = cell.viewWithTag(20) as? UILabel {
-                subtitleLabel.text = statement["statement"]
-            }
-        }
-        return cell
-    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        // Similar to above, first check if there is a valid section of table.
+//        // Then we check that for the section there is a row.
+//        if let tableSection = TableSection(rawValue: indexPath.section), let statement = data[tableSection]?[indexPath.row] {
+//            if let titleLabel = cell.viewWithTag(10) as? UILabel {
+//                titleLabel.text = statement["statement"]
+//            }
+//            if let subtitleLabel = cell.viewWithTag(20) as? UILabel {
+//                subtitleLabel.text = statement["statement"]
+//            }
+//        }
+//        return cell
+//    }
 
 
 
@@ -375,33 +409,32 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
      quoteURL
      */
 
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
-//
-//        // set its text view’s delegate to self *** UNSURE WHY THIS DOESN'T WORK???
-////        cell.userTextView.delegate = self
-//
-//        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
-//        cell.userTextView.layer.borderWidth = 2
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
+
+        // set its text view’s delegate to self *** UNSURE WHY THIS DOESN'T WORK???
 //        cell.userTextView.delegate = self
-//
-//        cell.categoryLabel.text = selectedResults[indexPath.row].category
-//        cell.adviceTextLabel.text = selectedResults[indexPath.row].adviceText
-//        cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
-//
-//
-//
-//
-////        cell.userTextView.text = userList[indexPath.row].statement
-//        // Set the delegate to be the VC when you create the cell
-//        cell.userTextView.delegate = self
-//
-//        return cell
-//    }
+
+        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
+        cell.userTextView.layer.borderWidth = 2
+        cell.userTextView.delegate = self
+
+        cell.categoryLabel.text = selectedResults[indexPath.row].category
+        cell.adviceTextLabel.text = selectedResults[indexPath.row].adviceText
+        cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
+
+        cell.userTextView.text = newUserListArray[indexPath.row]
+        // Set the delegate to be the VC when you create the cell
+        cell.userTextView.delegate = self
+
+        return cell
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //getting the index path of selected row
     }
+
+
 
     /* Update database when changes made to TextView in a cell. Seems to be similar as updating a like button UILabel each time the like button is clicked. Method for did tap away from textView.
      https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/liking-posts */
@@ -463,7 +496,22 @@ extension Profile3ViewController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
 
-        print("Editing ended")
+        print("How many rows")
+
+        var v : UIView = textView
+        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
+        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
+        let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell)!
+        // and now we have the index path! update the model
+        print("Selected ip: \(selectedIndexPath)")
+        print("Selected Row: \(selectedIndexPath.row)")
+        print(selectedCell.userTextView.text)
+
+        // Update Array
+        newUserListArray[selectedIndexPath.row] = selectedCell.userTextView.text
+
+        print("Print Updated Array: \(newUserListArray)")
+
     }
 
 }
