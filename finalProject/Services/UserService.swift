@@ -90,6 +90,8 @@ struct UserService {
     
     static func writeUser(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
 
+        print("Entered writeUser()")
+
         // create a dictionary to store the username the user has provided inside our database
         let userAttrs = ["username": username]
 

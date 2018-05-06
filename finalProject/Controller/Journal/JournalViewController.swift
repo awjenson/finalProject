@@ -343,7 +343,11 @@ class JournalViewController: UIViewController {
     }
 
     func sendMessage(_ messageDictionary: [String:String?]) {
-        let messagesDB = ref.child(Constants.DbChild.Messages)
+
+        let currentUID = User.current.uid
+        print("CurrentUID: \(currentUID)")
+
+        let messagesDB = ref.child(Constants.DbChild.Messages).child(currentUID)
         // like specifying "/Messages/[some_auto_id]"
         // Then, .setValue, sets a value to the key (key value pair)
         messagesDB.childByAutoId().setValue(messageDictionary) {
@@ -353,6 +357,7 @@ class JournalViewController: UIViewController {
                 print(error!)
             } else {
                 print("Message saved successfully")
+                print("CurrentUID: \(currentUID)")
                 //                self.messageTextField.isEnabled = true
                 self.messageTextView.isEditable = true
                 self.sendButton.isEnabled = true
@@ -372,7 +377,11 @@ class JournalViewController: UIViewController {
         // .reference() gets a DatabaseReference for the root of the app's Firebase Database
         // ask Firebase to 'observe' for any new child's events ('childAdded')
 
-        _refHandle = ref.child(Constants.DbChild.Messages).observe(.childAdded) { (snapshot) in
+        let currentUID = User.current.uid
+        print("CurrentUID: \(currentUID)")
+
+        // add .child(currentUID) so only current user can see their data
+        _refHandle = ref.child(Constants.DbChild.Messages).child(currentUID).observe(.childAdded) { (snapshot) in
             // grab data from snapshot and format it into a custom JournalMessage object
             // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
             let snapshotValue = snapshot.value as! Dictionary<String,String>
@@ -403,7 +412,6 @@ class JournalViewController: UIViewController {
             self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
-
 
     @IBAction func moodButtonTapped(_ sender: UIButton) {
         if let moodNumber: Int = moodButtons.index(of: sender) {
@@ -453,7 +461,7 @@ class JournalViewController: UIViewController {
             // data we want to save in our database
 
             let moodDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
-                                  Constants.Message.Text: "Mood: \(selectedMood).  Why?",
+                                  Constants.Message.Text: "Mood: \(selectedMood)  ...Why?",
                                   Constants.Message.TimeStamp: currentDate]
             sendMood(moodDictionary)
 
@@ -463,7 +471,11 @@ class JournalViewController: UIViewController {
     }
 
     func sendMood(_ moodDictionary: [String:String?]) {
-        let messagesDB = ref.child(Constants.DbChild.Messages)
+
+        let currentUID = User.current.uid
+        print("CurrentUID: \(currentUID)")
+
+        let messagesDB = ref.child(Constants.DbChild.Messages).child(currentUID)
         // like specifying "/Messages/[some_auto_id]"
         // Then, .setValue, sets a value to the key (key value pair)
         messagesDB.childByAutoId().setValue(moodDictionary) {

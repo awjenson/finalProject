@@ -179,7 +179,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         // .reference() gets a DatabaseReference for the root of the app's Firebase Database
         // ask Firebase to 'observe' for any new child's events ('childAdded')
 
-        _refHandle = ref.child(Constants.DbChild.ProfileUserData).observe(.childAdded) { (snapshot) in
+        // 2 Write the data by setting the value for the location specified
+        let currentUID = User.current.uid
+        print(currentUID)
+
+        // add .child(currentUID) so only current user can see their data
+
+        _refHandle = ref.child(Constants.DbChild.ProfileUserData).child(currentUID).observe(.childAdded) { (snapshot) in
             // grab data from snapshot and format it into a custom JournalMessage object
             // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
             let snapshotValue = snapshot.value as! Dictionary<String,String>
@@ -226,22 +232,22 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         print("Print array count: \(newUserListArray.count)")
         print(newUserListArray)
 
-        let indexPath1 = NSIndexPath(row: 1, section: 0)
-        let cell1 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath1 as IndexPath) as! ProfileTableViewCell
-
-        let indexPath2 = NSIndexPath(row: 2, section: 0)
-        let cell2 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath2 as IndexPath) as! ProfileTableViewCell
-
-        let indexPath3 = NSIndexPath(row: 3, section: 0)
-        let cell3 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath3 as IndexPath) as! ProfileTableViewCell
-
-        let indexPath4 = NSIndexPath(row: 4, section: 0)
-        let cell4 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath4 as IndexPath) as! ProfileTableViewCell
-
-        print("Cell 1: \(cell1.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
-        print("Cell 2: \(cell2.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
-        print("Cell 3: \(cell3.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
-        print("Cell 4: \(cell4.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+//        let indexPath1 = NSIndexPath(row: 1, section: 0)
+//        let cell1 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath1 as IndexPath) as! ProfileTableViewCell
+//
+//        let indexPath2 = NSIndexPath(row: 2, section: 0)
+//        let cell2 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath2 as IndexPath) as! ProfileTableViewCell
+//
+//        let indexPath3 = NSIndexPath(row: 3, section: 0)
+//        let cell3 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath3 as IndexPath) as! ProfileTableViewCell
+//
+//        let indexPath4 = NSIndexPath(row: 4, section: 0)
+//        let cell4 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath4 as IndexPath) as! ProfileTableViewCell
+//
+//        print("Cell 1: \(cell1.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+//        print("Cell 2: \(cell2.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+//        print("Cell 3: \(cell3.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+//        print("Cell 4: \(cell4.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
 
         let now = Date()
         let formatter = DateFormatter()
@@ -262,7 +268,11 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func sendProfileUserData(_ userDictionary: [String:String?]) {
-        let messagesDB = ref.child(Constants.DbChild.ProfileUserData)
+
+        let currentUID = User.current.uid
+        print(currentUID)
+
+        let messagesDB = ref.child(Constants.DbChild.ProfileUserData).child(currentUID)
         // like specifying "/Messages/[some_auto_id]"
         // Then, .setValue, sets a value to the key (key value pair)
         messagesDB.childByAutoId().setValue(userDictionary) {
@@ -496,14 +506,12 @@ extension Profile3ViewController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
 
-        print("How many rows")
-
         var v : UIView = textView
         repeat { v = v.superview! } while !(v is ProfileTableViewCell)
         let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
         let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell)!
         // and now we have the index path! update the model
-        print("Selected ip: \(selectedIndexPath)")
+
         print("Selected Row: \(selectedIndexPath.row)")
         print(selectedCell.userTextView.text)
 

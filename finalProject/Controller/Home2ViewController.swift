@@ -93,6 +93,14 @@ class Home2ViewController: UIViewController {
 
     } // End of ViewDidLoad
 
+    // Call this inside UIButton to scroll to top
+    func scrollToTop(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.tips.count-1, section: 0)
+            self.homeTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
+
     @objc func reloadTimeline() {
 
 
