@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 
+// * Helen doesn't like the word "Vision"
+// * Helen likes "Fears" instead of "Vision"
+
 // Our timeline will retrieve post data from our database and display it to our user.
 
 // Firebase push happens when use taps out of textView. But, when does the retrive happen.. in the viewDidLoad.
@@ -16,6 +19,10 @@ import Firebase
 // Checkout Code With Chris's Question Bank Tutorial. Each question could be like each textView (Vision, Goals, etc.)
 
 class Profile3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var bioTextLabel: UILabel!
+    @IBOutlet weak var quoteTextLabel: UILabel!
 
     @IBOutlet weak var profile3TableView: UITableView!
 
@@ -83,23 +90,35 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     var myNewUserList = NewUserList()
     var newUserListArray: [String] = []
 
+
+    let bruceLee = ProfileSelectedPerson(name: "Bruce Lee", bio: "Actor, martial artist, philosopher, and founder of the martial art Jeet Kune Do", advice: "\"Do not pray for an easy life, pray for the strength to endure a difficult one.\"", adviceURL: "www.a.com")
+
+    let markDivine = ProfileSelectedPerson(name: "Mark Devine", bio: "Former Navy SEAL, and founder of SEALFIT and Unbeatable Mind podcast", advice: "\"To live an uncommon life, one needs learn uncommon disciplines.\"", adviceURL: "https://unbeatablemind.com/podcast/")
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        fullNameLabel.text = markDivine.name
+        bioTextLabel.text = markDivine.bio
+        quoteTextLabel.text = markDivine.advice
 
         // NEW USER LIST
         newUserListArray = [myNewUserList.dailyRoutine, myNewUserList.oneYearGoal, myNewUserList.lifetimeGoal, myNewUserList.vision]
 
 
 
-
-        profileHeaderView.layer.cornerRadius = 10
-        profileHeaderView.layer.shadowColor = UIColor.gray.cgColor
-        profileHeaderView.layer.shadowOffset = CGSize(width: 5, height: 5)
-        profileHeaderView.layer.shadowOpacity = 0.7
-        profileHeaderView.layer.shadowRadius = 5
-
-        profileButton.layer.cornerRadius = 10
-        profileButton.layer.borderWidth = 1.0
+        // Header
+//        profileHeaderView.layer.cornerRadius = 10
+//        profileHeaderView.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
+//        profileHeaderView.layer.shadowColor = UIColor.gray.cgColor
+//        profileHeaderView.layer.shadowOffset = CGSize(width: 0, height: 8)
+//        profileHeaderView.layer.shadowOpacity = 0.7
+//        profileHeaderView.layer.shadowRadius = 4
+//        profileHeaderView.layer.masksToBounds = false
+//
+//        // Profile Button
+//        profileButton.layer.cornerRadius = 10
+//        profileButton.layer.borderWidth = 1.0
 
 //        UserService.posts(for: User.current) { (posts) in
 //            self.posts = posts
@@ -123,21 +142,33 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         profile3TableView.delegate = self
 
 
-
         // Add profileArray indexes
         // Check order of statementArray[n] to make sure pulling correct text
-        let dailyRoutine = ProfileDataModel(category: "Daily Routine", adviceText: "It's not what we do once in a while that shapes our lives, but what we do consistently.", adviceAuthor: "Tony Robbins", adviceURL: "https://www.youtube.com/watch?v=3sK3wJAxGfs")
 
-        let oneYearGoals = ProfileDataModel(category: "One Year Goals", adviceText: "People without goals get used by other people who have them. People who don’t have goals work for people who do.", adviceAuthor: "Sean Croxton", adviceURL: "https://www.youtube.com/watch?v=DNITe9snHqA&t")
+        // Bruce Lee
 
-        let lifetimeGoals = ProfileDataModel(category: "Lifetime Goals", adviceText: "Project your life to age 80 and then make decisions today to minimize regrets you will have. While you might feel remorse for things you did wrong, more often regrets stem from the path not taken. If you fail, at least you will be proud when you're 80 that you tried.", adviceAuthor: "Jeff Bezos", adviceURL: "https://www.youtube.com/watch?v=ikuLEZoE1vE")
+        let bruceLeePassion = ProfileDataModel(category: "PASSION", title: "Bruce Lee: real living is living for others...", body: "Bruce Lee became a cultural icon because he actively lived his philosophy of self-actualization. His energy captivated audiences and motivated people to lead their best lives.", url: "https://www.fastcompany.com/3065979/my-dad-was-bruce-lee-heres-how-he-still-inspires-me-and-others-to-innovate", headerUserTextLabel: "Your passion:")
 
-        let vision = ProfileDataModel(category: "Vision", adviceText: "Create the highest grandest vision possible for your life, because you become what you believe.", adviceAuthor: "Oprah Winfrey", adviceURL: "https://www.youtube.com/watch?v=acBp_5OmTkQ&t")
+        let bruceLeePurpose = ProfileDataModel(category: "PURPOSE", title: "Your main purpose is to become your true self...", body: "\"Always be yourself; express yourself; have faith in yourself. Do not go out and look for a successful personality and duplicate it. Start from the very root of your being, which is \"how can I be me?\"", url: "https://www.brucelee.com/philosophies/", headerUserTextLabel: "Your purpose:")
 
-        selectedResults.append(dailyRoutine)
-        selectedResults.append(oneYearGoals)
-        selectedResults.append(lifetimeGoals)
-        selectedResults.append(vision)
+        let bruceLeeTop5Goals = ProfileDataModel(category: "GOALS", title: "He believed in setting big goals...", body: "\"A goal is not always meant to be reached, it often serves simply as something to aim at.\"", url: "https://www.brucelee.com/podcast", headerUserTextLabel: "Your top 5 goals:")
+
+        let bruceLeeVision = ProfileDataModel(category: "VISION", title: "At age 29, he wrote...", body: "\"My Definite Chief Aim: I, Bruce Lee, will be the first highest-paid oriental superstar in the United States. In return I will give the most exciting performances and render the best quality in the capacity of an actor. Starting 1970 I will achieve for fame and from then onward till the end of 1980 I will have in my possession $10,000,000. I will live the way I please and achieve inner harmony and happiness.\"", url: "https://qz.com/932799/bruce-lee-achieved-all-his-life-goals-by-32-by-committing-to-one-personality-trait/", headerUserTextLabel: "Your vision statement:")
+
+        // Mark Divine
+
+        let markDivinePassion = ProfileDataModel(category: "PASSION", title: "Drive provides a lifelong source of energy if focused on a passionate and worthy end.", body: "We can grow even stronger by driving passionately toward our targets and facing hard challenges, never quitting when the going gets unfathomable. \n\nWhat makes you feel as if your hair is on fire? This informs your purpose when intersected with your skills and talents.", url: "https://sealfit.com/", headerUserTextLabel: "Your passion:")
+
+        let markDivisinPurpose = ProfileDataModel(category: "PURPOSE", title: "\"As a young man I felt lost...\"", body: "\"I had an MBA, a good job at a top-tier accounting firm, but was unhappy in spite of it. I stumbled into a matrial arts dojo, thinking it might help. Grinding my character down on the training floor was followed by polishing it in the meditation hall. \n\nSlowly and methodically I turned my body, mind, emotions, and intutition to a new vibration - one that allowed me to hear my inner voice. That voice told me I wasn't living my purpose, that my misery would endur until I could align with my purpose. \n\nWhat is it that you are really supposed to do with your life? What one thing would you focus on if you had nothing holding you back?\"", url: "https://sealfit.com/", headerUserTextLabel: "Your purpose:")
+
+        let markDivineTop5Goals = ProfileDataModel(category: "GOALS", title: "Set SMART Goals: Specific, Measurable, Achievable, Realistic (but Challenging, and Time-bound", body: "When facing a monster challenge like Navy SEAL's Hell Week, reduce it to micro-goals. You can bite-chuncks of of an elephant long before swallowing the whole thing at once.", url: "https://sealfit.com/", headerUserTextLabel: "Your top 5 goals:")
+
+        let markDivineVision = ProfileDataModel(category: "VISION", title: "A deeper awareness of what drives your behavior allow us to create a new vision and path that becomes our authentic destiny.", body: "Mark left behind the corporate world to pursue his vision to become an elite Navy SEAL officer. At 26 he graduated as honor-man (#1 ranked trainee) of his SEAL BUD/s class number 170. \n\n\"Hold a powerful vision of who you want to be at some time-certain future.  If you back the mental vision with massive action, do the work to root out negative blocks, and propel your vision with desire, belief and expectation, then surely you will become that person.\"", url: "https://sealfit.com/", headerUserTextLabel: "Your vision statement:")
+
+        selectedResults.append(markDivinePassion)
+        selectedResults.append(markDivisinPurpose)
+        selectedResults.append(markDivineTop5Goals)
+        selectedResults.append(markDivineVision)
 
         configureTableView()
         configureDatabase() // is the needed?
@@ -226,6 +257,57 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         profile3TableView.estimatedRowHeight = 50
         profile3TableView.rowHeight = UITableViewAutomaticDimension
     }
+
+    // viewDidLayoutSubviews()
+    // Called to notify the view controller that its view has just laid out its
+    // subviews.
+    // When the bounds change for a view controller's view, the view adjusts
+    // the positions of its subviews and then the system calls this method.
+    // However, this method being called does not indicate that the individual
+    // layouts of the view's subviews have been adjusted. Each subview is
+    // responsible for adjusting its own layout.
+    // Your view controller can override this method to make changes after the
+    // view lays out its subviews.
+    // The default implementation of this method does nothing.
+    /*
+     https://useyourloaf.com/blog/variable-height-table-view-header/
+     */
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        guard let headerView = profile3TableView.tableHeaderView else {
+            return
+        }
+
+        // The table view header is created with the frame size set in
+        // the Storyboard. Calculate the new size and reset the header
+        // view to trigger the layout.
+        // Calculate the minimum height of the header view that allows
+        // the text label to fit its preferred width.
+        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+
+        if headerView.frame.size.height != size.height {
+            headerView.frame.size.height = size.height
+
+            // Need to set the header view property of the table view
+            // to trigger the new layout. Be careful to only do this
+            // once when the height changes or we get stuck in a layout loop.
+            profile3TableView.tableHeaderView = headerView
+
+            // Now that the table view header is sized correctly have
+            // the table view redo its layout so that the cells are
+            // correcly positioned for the new header size.
+            // This only seems to be necessary on iOS 9.
+            profile3TableView.layoutIfNeeded()
+        }
+    }
+
+
+    @IBAction func learnMoreButtonTapped(_ sender: UIButton) {
+
+        print("Learn more button tapped")
+    }
+
 
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -430,12 +512,19 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.userTextView.delegate = self
 
         cell.categoryLabel.text = selectedResults[indexPath.row].category
-        cell.adviceTextLabel.text = selectedResults[indexPath.row].adviceText
-        cell.adviceAuthorLabel.text = selectedResults[indexPath.row].adviceAuthor
+        cell.titleLabel.text = selectedResults[indexPath.row].title
+        cell.bodyLabel.text = selectedResults[indexPath.row].body
+        cell.headerUserTextViewLabel.text = selectedResults[indexPath.row].headerUserTextLabel
 
         cell.userTextView.text = newUserListArray[indexPath.row]
         // Set the delegate to be the VC when you create the cell
         cell.userTextView.delegate = self
+        cell.userTextView.layer.borderWidth = 0.5
+
+        // Line separator (extend to left)
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
 
         return cell
     }

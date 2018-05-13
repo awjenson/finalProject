@@ -49,7 +49,7 @@ struct UserService {
     static func readUser(forUID uid: String, completion: @escaping (User?) -> Void) {
 
         // construct a relative path to the reference of the user's information in our database.
-        let ref = Database.database().reference().child("users").child(uid)
+        let ref = Database.database().reference().child("Users").child(uid)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
 
             // 2 handle snapshot containing data. If there is no data at the location read from, the value of the snapshot returned is nil.
@@ -96,7 +96,7 @@ struct UserService {
         let userAttrs = ["username": username]
 
         // specify a path for the location of where we want to store our data
-        let ref = Database.database().reference().child("users").child(firUser.uid)
+        let ref = Database.database().reference().child("Users").child(firUser.uid)
         // write the data we want to store at the location
         ref.setValue(userAttrs) { (error, ref) in
             if let error = error {

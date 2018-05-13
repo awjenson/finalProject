@@ -427,7 +427,6 @@ var leadershipPMTipArray0 = [leadershipPMTip1, leadershipPMTip2, leadershipPMTip
 
 let leadershipPMTopic0 = Topic(title: leadershipPMTitle, icon: leadershipPMIcon, tip: leadershipPMTipArray0)
 
-
 // MARK: - Leadership, PM
 
 let courageTitle = "Courage"

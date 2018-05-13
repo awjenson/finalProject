@@ -17,10 +17,11 @@ import WebKit
 class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
 
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var headerUserTextViewLabel: UILabel!
     @IBOutlet weak var userTextView: UITextView! // TEXTVIEW
-    @IBOutlet weak var adviceTextLabel: UILabel!
-    @IBOutlet weak var adviceAuthorLabel: UILabel!
-    @IBOutlet weak var adviceURLButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+
 
 
     override func awakeFromNib() {
@@ -28,9 +29,14 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
         // Initialization code
         userTextView.delegate = self
 
-        adviceURLButton.layer.cornerRadius = 10
-        adviceURLButton.layer.borderWidth = 1.0
+        // BUTTON UI
+//        adviceURLButton.layer.cornerRadius = 10
+//        adviceURLButton.layer.borderWidth = 1.0
+
+        userTextView.layer.cornerRadius = 5
         
+
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,10 +48,7 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
         self.userTextView.resignFirstResponder()
     }
 
-    @IBAction func adviceURLButtonTapped(_ sender: Any) {
-        // Display webview
 
-    }
 
     func textViewDidEndEditing(_ textView: UITextView) {
 

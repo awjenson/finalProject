@@ -13,16 +13,18 @@ class ProfileDataModel {
 // ProfileStatement is Dictionary that retrives value data based on key name (vision).
 
     var category: String
-    var adviceText: String
-    var adviceAuthor: String
-    var adviceURL: String?
+    var title: String
+    var body: String
+    var url: String?
+    var headerUserTextLabel: String
 //    var userInput: ProfileStatement
 
-    init(category: String, adviceText: String, adviceAuthor: String, adviceURL: String) {
+    init(category: String, title: String, body: String, url: String, headerUserTextLabel: String) {
         self.category = category
-        self.adviceText = adviceText
-        self.adviceAuthor = adviceAuthor
-        self.adviceURL = adviceURL
+        self.title = title
+        self.body = body
+        self.url = url
+        self.headerUserTextLabel = headerUserTextLabel
 //        self.userInput = userInput
     }
 }

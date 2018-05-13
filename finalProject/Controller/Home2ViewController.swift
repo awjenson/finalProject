@@ -17,16 +17,31 @@ import SafariServices // to display webview
 
 class Home2ViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var profileButton: UIButton!
 
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var topicView: UIView!
 
-    // Array of UIB
-    @IBOutlet var topicButtons: [UIButton]!
+    // topicButtion OutletCollection only used for flipping UI when buttons tapped
+    @IBOutlet var topicButtons: [RoundButton]!
 
-    @IBOutlet var topicLabels: [UILabel]!
+    // individual outlets used to maintain order with buttons and labels in UI
+    @IBOutlet weak var topic0Button: RoundButton!
+    @IBOutlet weak var topic1Button: RoundButton!
+    @IBOutlet weak var topic2Button: RoundButton!
+    @IBOutlet weak var topic3Button: RoundButton!
+    @IBOutlet weak var topic4Button: RoundButton!
+    @IBOutlet weak var topic5Button: RoundButton!
+
+    @IBOutlet weak var topic0Label: UILabel!
+    @IBOutlet weak var topic1Label: UILabel!
+    @IBOutlet weak var topic2Label: UILabel!
+    @IBOutlet weak var topic3Label: UILabel!
+    @IBOutlet weak var topic4Label: UILabel!
+    @IBOutlet weak var topic5Label: UILabel!
 
 
     // MARK: - Properties
@@ -89,8 +104,6 @@ class Home2ViewController: UIViewController {
         print("Hour: \(hour)")
         print("XXXXXX")
 
-
-
     } // End of ViewDidLoad
 
     // Call this inside UIButton to scroll to top
@@ -150,41 +163,7 @@ class Home2ViewController: UIViewController {
         }
     }
 
-    func appendNineTopics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic,_ topic4: Topic,_ topic5: Topic, _ topic6Now: Topic) {
 
-        // Append selected topics to main array of Topics
-        // = [button0, button1, button2, button3, presentDayAndHour]
-        topics = [topic0, topic1, topic2, topic3, topic4, topic5, topic6Now]
-
-        // Set-up buttons and labels with current topics
-        topicButtons[0].setTitle("\(topics[0].icon)", for: .normal)
-        topicLabels[0].text = topics[0].title
-
-        topicButtons[1].setTitle("\(topics[1].icon)", for: .normal)
-        topicLabels[1].text = topics[1].title
-
-        topicButtons[2].setTitle("\(topics[2].icon)", for: .normal)
-        topicLabels[2].text = topics[2].title
-
-        topicButtons[3].setTitle("\(topics[3].icon)", for: .normal)
-        topicLabels[3].text = topics[3].title
-
-        //// Added topic4, topic5, topic6, topic7 (8 buttons total)
-        topicButtons[4].setTitle("\(topics[4].icon)", for: .normal)
-        topicLabels[4].text = topics[4].title
-
-        topicButtons[5].setTitle("\(topics[5].icon)", for: .normal)
-        topicLabels[5].text = topics[5].title
-
-
-        // set 4 'Now' tips to be displayed in initial table view
-        tips = [topics[6].tip[0],
-                topics[6].tip[1],
-                topics[6].tip[2],
-                topics[6].tip[3]
-        ]
-
-    }
 
     func dayOfWeekAndHour() {
         print("Refresh NOW table view")
@@ -213,34 +192,34 @@ class Home2ViewController: UIViewController {
                 case 0...4:
                     print("Weekend, Very Early Morning")
                     // call function to display 9 time-based topics
-                    appendNineTopics(lateNightSnackTopic0, meditationTopic0, barTopic0, homeAMTopic0, bedtimeTopic0, journalTopic0, weekendNow0to4Topic0)
+                    appendSevenTopics(lateNightSnackTopic0, meditationTopic0, barTopic0, homeAMTopic0, bedtimeTopic0, journalTopic0, weekendNow0to4Topic0)
 
                 case 5...8:
                     print("Weekend, Early Morning")
                     // call function to display 9 time-based topics
-                    appendNineTopics(meditationTopic0, gymTopic0, runningTopic0, yogaTopic0, breakfastTopic0, homeAMTopic0, weekendNow5to8Topic0)
+                    appendSevenTopics(meditationTopic0, gymTopic0, runningTopic0, yogaTopic0, breakfastTopic0, homeAMTopic0, weekendNow5to8Topic0)
 
                 case 9..<11:
                     print("Weekend, Late Morning")
                     // call function to display 9 time-based topics
-                    appendNineTopics(gymTopic0, yogaTopic0, runningTopic0, cafeTopic0, breakfastTopic0, brunchTopic0, weekendNow9to11Topic0)
+                    appendSevenTopics(gymTopic0, yogaTopic0, runningTopic0, cafeTopic0, breakfastTopic0, brunchTopic0, weekendNow9to11Topic0)
 
                 case 11..<14:
                     print("Weekend, Midday")
-                    appendNineTopics(lunchTopic0, cafeTopic0, shoppingClothesTopic0, groceryStoreTopic0, gymTopic0, yogaTopic0, weekendNow11to14Topic0)
+                    appendSevenTopics(lunchTopic0, cafeTopic0, shoppingClothesTopic0, groceryStoreTopic0, gymTopic0, yogaTopic0, weekendNow11to14Topic0)
 
                 case 14...16:
                     print("Weekend, Afternoon")
                     // call function to display 9 time-based topics
-                    appendNineTopics(cafeTopic0, runningTopic0, yogaTopic0, gymTopic0, mindfulnessTopic0, groceryStoreTopic0, weekendNow14to16Topic0)
+                    appendSevenTopics(cafeTopic0, runningTopic0, yogaTopic0, gymTopic0, mindfulnessTopic0, groceryStoreTopic0, weekendNow14to16Topic0)
                 case 17...20:
                     print("Weekend, Evening")
                     // call function to display 9 time-based topics
-                    appendNineTopics(dinnerTopic0, homePMTopic0, bathroomTopic0, kitchenTopic0, groceryStoreTopic0, shoppingClothesTopic0, weekendNow17to20Topic0)
+                    appendSevenTopics(dinnerTopic0, homePMTopic0, bathroomTopic0, kitchenTopic0, groceryStoreTopic0, shoppingClothesTopic0, weekendNow17to20Topic0)
                 case 21..<24:
                     print("Weekend, Late evening")
                     // call function to display 9 time-based topics
-                    appendNineTopics(barTopic0, dateTopic0, homePMTopic0, meditationTopic0, bedtimeTopic0, lateNightSnackTopic0, weekendNow21to24Topic0)
+                    appendSevenTopics(barTopic0, dateTopic0, homePMTopic0, meditationTopic0, bedtimeTopic0, lateNightSnackTopic0, weekendNow21to24Topic0)
                 default:
                     print("Weekend,INVALID HOUR!")
                 }
@@ -251,34 +230,34 @@ class Home2ViewController: UIViewController {
         case 0...4:
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(bedtimeTopic0, lateNightSnackTopic0, homePMTopic0, journalTopic0, meditationTopic0, mindfulnessTopic0, weekdayNow0to4Topic0)
+            appendSevenTopics(bedtimeTopic0, lateNightSnackTopic0, homePMTopic0, journalTopic0, meditationTopic0, mindfulnessTopic0, weekdayNow0to4Topic0)
         case 5...8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, cafeTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
+            appendSevenTopics(meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, cafeTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
 
         case 9..<11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(commuteAMTopic0, workAMTopic0, leadershipAMTopic0, courageTopic0, cafeTopic0, mindfulnessTopic0, weekdayNow9to11Topic0)
+            appendSevenTopics(commuteAMTopic0, workAMTopic0, leadershipAMTopic0, courageTopic0, cafeTopic0, mindfulnessTopic0, weekdayNow9to11Topic0)
 
         case 11..<14:
             print("weekdayMTW, Midday")
-            appendNineTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
 
         case 14...16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, commutePMTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, commutePMTopic0, weekdayNow11to14Topic0)
 
         case 17...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic0, groceryStoreTopic0, dinnerTopic0, dateTopic0, weekdayNow17to20Topic0)
+            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic0, groceryStoreTopic0, dinnerTopic0, dateTopic0, weekdayNow17to20Topic0)
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(barTopic0, dateTopic0, lateNightSnackTopic0, homePMTopic0, bedtimeTopic0, meditationTopic0, weekdayNow21to24Topic0)
+            appendSevenTopics(barTopic0, dateTopic0, lateNightSnackTopic0, homePMTopic0, bedtimeTopic0, meditationTopic0, weekdayNow21to24Topic0)
         default:
             print("Weekday,INVALID HOUR!")
         }
@@ -289,36 +268,72 @@ class Home2ViewController: UIViewController {
         case 0...4:
             print("weekdayTF, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(bedtimeTopic0, lateNightSnackTopic0, homePMTopic0, meditationTopic0, barTopic0, dateTopic0, weekdayNow0to4Topic0)
+            appendSevenTopics(bedtimeTopic0, lateNightSnackTopic0, homePMTopic0, meditationTopic0, barTopic0, dateTopic0, weekdayNow0to4Topic0)
         case 5...8:
             print("weekdayTF, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(homeAMTopic0, meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
+            appendSevenTopics(homeAMTopic0, meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
         case 9..<11:
             print("weekdayTF, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(commuteAMTopic0, workAMTopic0, lunchTopic0, leadershipAMTopic0, courageTopic0, mindfulnessTopic0,  weekdayNow9to11Topic0)
+            appendSevenTopics(commuteAMTopic0, workAMTopic0, lunchTopic0, leadershipAMTopic0, courageTopic0, mindfulnessTopic0,  weekdayNow9to11Topic0)
 
         case 11..<14:
             print("weekdayTF, Midday")
-            appendNineTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
 
         case 14...16:
             print("weekdayTF, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, commutePMTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, commutePMTopic0, weekdayNow11to14Topic0)
 
         case 17...20:
             print("weekdayTF, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic0, dinnerTopic0, barTopic0, dateTopic0, weekdayNow17to20Topic0)
+            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic0, dinnerTopic0, barTopic0, dateTopic0, weekdayNow17to20Topic0)
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerTopic0, barTopic0, dateTopic0, homePMTopic0, bedtimeTopic0, lateNightSnackTopic0, weekdayNow21to24Topic0)
+            appendSevenTopics(dinnerTopic0, barTopic0, dateTopic0, homePMTopic0, bedtimeTopic0, lateNightSnackTopic0, weekdayNow21to24Topic0)
         default:
             print("weekdayTF,INVALID HOUR!")
         }
+    }
+
+
+    func appendSevenTopics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic,_ topic4: Topic,_ topic5: Topic, _ topic6Now: Topic) {
+
+        topics = [topic0, topic1, topic2, topic3, topic4, topic5, topic6Now]
+
+        // Set-up the six buttons and six labels for display with topics array
+        topic0Button.setTitle("\(topics[0].icon)", for: .normal)
+        topic0Label.text = topics[0].title
+
+        topic1Button.setTitle("\(topics[1].icon)", for: .normal)
+        topic1Label.text = topics[1].title
+
+        topic2Button.setTitle("\(topics[2].icon)", for: .normal)
+        topic2Label.text = topics[2].title
+
+        topic3Button.setTitle("\(topics[3].icon)", for: .normal)
+        topic3Label.text = topics[3].title
+
+        //// Added topic4, topic5, topic6, topic7
+        topic4Button.setTitle("\(topics[4].icon)", for: .normal)
+        topic4Label.text = topics[4].title
+
+        topic5Button.setTitle("\(topics[5].icon)", for: .normal)
+        topic5Label.text = topics[5].title
+
+
+
+        // set 4 'Now' tips to be displayed in initial table view
+        tips = [topics[6].tip[0],
+                topics[6].tip[1],
+                topics[6].tip[2],
+                topics[6].tip[3]
+        ]
+
     }
 
     // Table View Methods
@@ -443,10 +458,6 @@ class Home2ViewController: UIViewController {
 
     // MARK: - IBActions
 
-    @IBAction func profileButtonTapped(_ sender: RoundButton) {
-    }
-
-
     @IBAction func topicButtonTapped(_ sender: RoundButton) {
         if let topicNumber = topicButtons.index(of: sender) {
             flipButton(at: topicNumber, withText: topics[topicNumber].icon, on: sender)
@@ -459,21 +470,12 @@ class Home2ViewController: UIViewController {
 
 
     func refreshTopicButtons() {
-        topicButtons[0].setTitle("\(topics[0].icon)", for: .normal)
-        topicButtons[1].setTitle("\(topics[1].icon)", for: .normal)
-        topicButtons[2].setTitle("\(topics[2].icon)", for: .normal)
-        topicButtons[3].setTitle("\(topics[3].icon)", for: .normal)
-        topicButtons[4].setTitle("\(topics[4].icon)", for: .normal)
-        topicButtons[5].setTitle("\(topics[5].icon)", for: .normal)
-
-
-//        topicButtons[0].backgroundColor = UIColor.blue
-//        topicButtons[1].backgroundColor = UIColor.blue
-//        topicButtons[2].backgroundColor = UIColor.blue
-//        topicButtons[3].backgroundColor = UIColor.blue
-//        topicButtons[4].backgroundColor = UIColor.blue
-//        topicButtons[5].backgroundColor = UIColor.blue
-
+        topic0Button.setTitle("\(topics[0].icon)", for: .normal)
+        topic1Button.setTitle("\(topics[1].icon)", for: .normal)
+        topic2Button.setTitle("\(topics[2].icon)", for: .normal)
+        topic3Button.setTitle("\(topics[3].icon)", for: .normal)
+        topic4Button.setTitle("\(topics[4].icon)", for: .normal)
+        topic5Button.setTitle("\(topics[5].icon)", for: .normal)
     }
 
 
@@ -499,7 +501,7 @@ class Home2ViewController: UIViewController {
     func topicSelected(_ index: Int) {
         tips = []
 
-        // Take selected index in topics array and subtract 0 because we start with zero
+        // Take selected index in topics array and subtract 1 because we start with zero
         var counter = (topics[index].tip.count - 1)
 
         for item in 0...counter {
@@ -554,6 +556,11 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
         // Tell the UITableViewCell who its delegate is, set it in the table view method. Self is the View Controller because we are in the View Controller file. This is equivalent of giving the boss an intern. The View Controller is the intern of the delegate.
 //        cell.delegate = self
 //        cell.bodyTextView.delegate = self
+
+        // Line seperator (extend to left)
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
 
         return cell
     }

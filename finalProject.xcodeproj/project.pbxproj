@@ -10,6 +10,7 @@
 		DA015BF42073E36300A0342F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF32073E36300A0342F /* UIViewExtension.swift */; };
 		DA015BF72073E3FC00A0342F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */; };
 		DA13C6422058468700762215 /* CategoryObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13C6412058468700762215 /* CategoryObjects.swift */; };
+		DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */; };
 		DA359C642043324F000190AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C632043324F000190AD /* AppDelegate.swift */; };
 		DA359C692043324F000190AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C672043324F000190AD /* Main.storyboard */; };
 		DA359C6B2043324F000190AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA359C6A2043324F000190AD /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		DA015BF32073E36300A0342F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		DA13C6412058468700762215 /* CategoryObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryObjects.swift; sourceTree = "<group>"; };
+		DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectedPerson.swift; sourceTree = "<group>"; };
 		DA359C602043324F000190AD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA359C632043324F000190AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA359C682043324F000190AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -234,14 +236,15 @@
 		DA359C772043721F000190AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DA361D2E2084273E007ACE59 /* User.swift */,
-				DA5EE4AA20901E6E00B54438 /* Post.swift */,
-				DA5AEDB120791D240094AA57 /* OLD Models */,
 				DAC8DFF5206ED93B005D627B /* TopicData.swift */,
 				DAC8DFF7206EFB13005D627B /* NowData.swift */,
 				DA606B502064969100DD14C0 /* Topic.swift */,
 				DA3F77C42055BE4800F7361A /* Tip.swift */,
+				DA361D2E2084273E007ACE59 /* User.swift */,
+				DA5EE4AA20901E6E00B54438 /* Post.swift */,
 				DA7898862051E5E0005046D8 /* ProfileDataModel.swift */,
+				DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */,
+				DA5AEDB120791D240094AA57 /* OLD Models */,
 				DA7898882051E8EC005046D8 /* ProfileDataResults.swift */,
 				DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */,
 				DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */,
@@ -642,6 +645,7 @@
 				DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */,
 				DA5EE4B82090EFA400B54438 /* PostFooterCell.swift in Sources */,
 				DA5EE4AF2090E7F300B54438 /* PostViewController.swift in Sources */,
+				DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
