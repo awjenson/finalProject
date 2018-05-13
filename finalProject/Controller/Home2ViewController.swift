@@ -510,17 +510,9 @@ class Home2ViewController: UIViewController {
             print("item: \(item)")
             tips.append(topics[index].tip[item])
         }
-
-//        print("Index: \(index), Number of tips: \(tips.count)")
-//        print("Number of topics: \(topics[index].title)")
-//        tips.append(topics[index].tip[0])
-//        tips.append(topics[index].tip[1])
-//        tips.append(topics[index].tip[2])
-//        tips.append(topics[index].tip[3])
-//        print("Index: \(index), Number of tips: \(tips.count)")
     }
 
-}
+} // End of Home2ViewController
 
 extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
 

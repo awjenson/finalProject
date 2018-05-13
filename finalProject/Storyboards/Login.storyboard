@@ -18,33 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-0X-b0r">
-                                <rect key="frame" x="35" y="65" width="305" height="292"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-0X-b0r">
+                                <rect key="frame" x="0.0" y="80" width="0.0" height="388"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-Dl-ZAh">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-Dl-ZAh">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="1oF-qi-li7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Tagline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgH-VH-C6l">
-                                        <rect key="frame" x="0.0" y="124" width="305" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgH-VH-C6l">
+                                        <rect key="frame" x="0.0" y="114" width="0.0" height="160"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="aoE-D3-JO4"/>
+                                            <constraint firstAttribute="height" constant="160" id="aoE-D3-JO4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <string key="text">Summaries of the best facts and advice. Presented to you based on the time of day. Making it easier for you to make smarter decisions throughout your day.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-Jt-22R">
-                                        <rect key="frame" x="0.0" y="248" width="305" height="44"/>
+                                        <rect key="frame" x="0.0" y="344" width="0.0" height="44"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fm5-2i-DvB"/>
                                         </constraints>
-                                        <state key="normal" title="Sign In / Sign Up"/>
+                                        <state key="normal" title="Sign In / Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="signInSignUpButtonTapped:" destination="Bje-A6-3zB" eventType="touchUpInside" id="V4R-m2-yi3"/>
                                         </connections>
@@ -60,11 +64,11 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OTh-0X-b0r" firstAttribute="leading" secondItem="dTo-Ez-xme" secondAttribute="leading" constant="35" id="EcM-LW-vcV"/>
-                            <constraint firstItem="OTh-0X-b0r" firstAttribute="top" secondItem="dTo-Ez-xme" secondAttribute="top" constant="45" id="SA5-ep-G8u"/>
-                            <constraint firstAttribute="trailing" secondItem="OTh-0X-b0r" secondAttribute="trailing" constant="35" id="dpj-di-pfc"/>
+                            <constraint firstItem="OTh-0X-b0r" firstAttribute="leading" secondItem="dTo-Ez-xme" secondAttribute="leading" constant="20" id="EcM-LW-vcV"/>
+                            <constraint firstItem="OTh-0X-b0r" firstAttribute="top" secondItem="dTo-Ez-xme" secondAttribute="top" constant="60" id="SA5-ep-G8u"/>
+                            <constraint firstAttribute="trailing" secondItem="OTh-0X-b0r" secondAttribute="trailing" constant="20" id="dpj-di-pfc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dTo-Ez-xme"/>
                     </view>

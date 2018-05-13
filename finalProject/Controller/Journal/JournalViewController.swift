@@ -452,6 +452,9 @@ class JournalViewController: UIViewController {
     // Good or OK
 
     @IBAction func moodButtonTapped(_ sender: UIButton) {
+
+        var response = ""
+
         if let moodNumber: Int = moodButtons.index(of: sender) {
             print(moodNumber)
 
@@ -461,28 +464,35 @@ class JournalViewController: UIViewController {
             case 0:
                 print("Sad")
                 selectedMood = "Sad"
+                response = ""
             case 1:
                 print("Depressed")
                 selectedMood = "Depressed"
+                response = ""
             case 2:
-                print("Lonely")
-                selectedMood = "Lonely"
+                print("Bored")
+                selectedMood = "Bored"
+                response = ""
             case 3:
                 print("Good")
                 selectedMood = "Good"
-
+                response = ""
             case 4:
                 print("Mad")
                 selectedMood = "Mad"
+                response = ""
             case 5:
                 print("Stressed")
                 selectedMood = "Stressed"
+                response = "\"A couple of years from now, everything you’re stressing about won’t even matter. Keep moving forward.\""
             case 6:
                 print("Numb")
                 selectedMood = "Numb"
+                response = ""
             case 7:
                 print("Happy!")
                 selectedMood = "Happy!"
+                response = ""
             default:
                 print("No button exists")
             }

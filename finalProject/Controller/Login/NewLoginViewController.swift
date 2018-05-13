@@ -73,10 +73,8 @@ extension NewLoginViewController: FUIAuthDelegate {
     // After you present the authentication view and the user signs in, the result is returned to the FirebaseUI Auth delegate in the didSignInWithUser:error: method
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
 
-        if let error = error {
-            createAlert(title: "Error", message: error.localizedDescription)
-//            assertionFailure("Error signing in: \(error.localizedDescription)")
-
+        if error != nil {
+            createAlert(title: "Unable to login", message: "Please try again")
             return
         }
 
@@ -104,21 +102,21 @@ extension NewLoginViewController: FUIAuthDelegate {
                 // make use of the User.setCurrent method when an existing user logs in.
                 User.setCurrent(user, writeToUserDefaults: true)
 
-                print("***")
-                print(user)
-
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             } else {
 
+                self.createAlert(title: "Login successful!", message: "Welcome!")
+//
+//                // completion returns nil for user. handle new user
+//                self.performSegue(withIdentifier: Constants.Segue.subscribeSegue, sender: self)
 
-                // completion returns nil for user. handle new user
-                self.performSegue(withIdentifier: Constants.Segue.subscribeSegue, sender: self)
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
             }
         }
     }
-
-
 }
 

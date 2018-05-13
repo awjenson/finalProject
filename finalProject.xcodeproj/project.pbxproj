@@ -320,10 +320,10 @@
 		DA5AEDA120769C190094AA57 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DA361D3020844F41007ACE59 /* NewLoginViewController.swift */,
 				DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */,
 				DA5AEDA420769C800094AA57 /* RegisterViewController.swift */,
 				DA78987F2051CEF1005046D8 /* OLD */,
-				DA361D3020844F41007ACE59 /* NewLoginViewController.swift */,
 				DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */,
 				DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */,
 				DA361D3A208AB32D007ACE59 /* NewRegisterViewController.swift */,
