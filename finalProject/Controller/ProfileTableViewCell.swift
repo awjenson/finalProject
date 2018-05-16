@@ -34,9 +34,21 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
 //        adviceURLButton.layer.borderWidth = 1.0
 
         userTextView.layer.cornerRadius = 5
-        
 
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
 
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+
+        // set order of toolbar
+        toolbar.setItems([flexibleSpace, doneButton], animated: false)
+        userTextView.inputAccessoryView = toolbar
+
+    }
+
+    @objc func doneClicked() {
+        viewWithTag(0)?.endEditing(true)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

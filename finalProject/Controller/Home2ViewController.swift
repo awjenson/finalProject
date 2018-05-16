@@ -11,6 +11,12 @@
  https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/building-the-timeline
  */
 
+// TODO:
+/*
+ Add Modal Popups Within A View Controller for playing videos/displaying articles
+https://www.youtube.com/watch?v=k-GvIqh5Xcs
+ */
+
 
 import UIKit
 import SafariServices // to display webview

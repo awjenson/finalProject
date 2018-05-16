@@ -75,6 +75,7 @@
 		DADE6470204E326400BEBF95 /* DetailedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646D204E326400BEBF95 /* DetailedTip.swift */; };
 		DADE6471204E326400BEBF95 /* TipOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646E204E326400BEBF95 /* TipOld.swift */; };
 		DADE6472204E326400BEBF95 /* Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE646F204E326400BEBF95 /* Vision.swift */; };
+		DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1EC6520AA801E00EA9B3E /* EditButton.swift */; };
 		DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */; };
 		DAFAB2CA20731E0800AF6923 /* JournalQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFAB2C920731E0800AF6923 /* JournalQuotes.swift */; };
 		DAFE6FCF205ED8D5008EF92F /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE6FCE205ED8D5008EF92F /* Day.swift */; };
@@ -155,6 +156,7 @@
 		DADE646D204E326400BEBF95 /* DetailedTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTip.swift; sourceTree = "<group>"; };
 		DADE646E204E326400BEBF95 /* TipOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipOld.swift; sourceTree = "<group>"; };
 		DADE646F204E326400BEBF95 /* Vision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
+		DAE1EC6520AA801E00EA9B3E /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		DAFAB2C920731E0800AF6923 /* JournalQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalQuotes.swift; sourceTree = "<group>"; };
 		DAFE6FCE205ED8D5008EF92F /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -219,6 +221,8 @@
 		DA359C622043324F000190AD /* finalProject */ = {
 			isa = PBXGroup;
 			children = (
+				DA359C632043324F000190AD /* AppDelegate.swift */,
+				DA361D3020844F41007ACE59 /* NewLoginViewController.swift */,
 				DA361D2B20840A25007ACE59 /* Storyboards */,
 				DA361D2A208409A8007ACE59 /* Services */,
 				DAA102292053801D00A25EFC /* Extensions */,
@@ -227,7 +231,6 @@
 				DA359C772043721F000190AD /* Model */,
 				DA015BF52073E3D500A0342F /* Helpers */,
 				DA5AEDA02076831D0094AA57 /* Supporting Files */,
-				DA359C632043324F000190AD /* AppDelegate.swift */,
 				DA359C6A2043324F000190AD /* Assets.xcassets */,
 			);
 			path = finalProject;
@@ -261,6 +264,7 @@
 				DAA1022620537D5200A25EFC /* Journal */,
 				DA78987D2050DBB6005046D8 /* Home */,
 				DA78987E2050DBBC005046D8 /* Profile */,
+				DAE1EC6520AA801E00EA9B3E /* EditButton.swift */,
 				DA78986D204F5F69005046D8 /* ViewModelItemType.swift */,
 				DAA1021C2053444000A25EFC /* RoundButton.swift */,
 				DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */,
@@ -320,13 +324,9 @@
 		DA5AEDA120769C190094AA57 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DA361D3020844F41007ACE59 /* NewLoginViewController.swift */,
 				DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */,
 				DA5AEDA420769C800094AA57 /* RegisterViewController.swift */,
 				DA78987F2051CEF1005046D8 /* OLD */,
-				DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */,
-				DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */,
-				DA361D3A208AB32D007ACE59 /* NewRegisterViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -397,6 +397,9 @@
 		DA78987F2051CEF1005046D8 /* OLD */ = {
 			isa = PBXGroup;
 			children = (
+				DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */,
+				DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */,
+				DA361D3A208AB32D007ACE59 /* NewRegisterViewController.swift */,
 				DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */,
 				DA361D3C208B8E77007ACE59 /* ThisLoginViewController.swift */,
 			);
@@ -529,7 +532,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -543,7 +545,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -592,6 +593,7 @@
 				DA361D3120844F41007ACE59 /* NewLoginViewController.swift in Sources */,
 				DA5EE4B62090EF7300B54438 /* PostHeaderCell.swift in Sources */,
 				DA78988F2053102E005046D8 /* Home2TableViewCell.swift in Sources */,
+				DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */,
 				DA359C7D20489C72000190AD /* Goal.swift in Sources */,
 				DA361D40208BC8B6007ACE59 /* SubscriptionViewController.swift in Sources */,
 				DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */,
@@ -786,6 +788,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.finalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -802,6 +805,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.finalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -25,8 +25,6 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
-    
-
 
     // Send/Type message bar
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -67,6 +65,7 @@ class JournalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         signedInStatus(isSignedIn: true)
 
         // VIEW SHADOW
@@ -78,18 +77,36 @@ class JournalViewController: UIViewController {
 
         dayOfWeekAndHour()
 
-
-
-
-
         quoteLabel.text = advice.quote
         authorLabel.text = advice.source
         questionLabel.text = advice.question
 
-
         messageTextView.layer.borderColor = UIColor.gray.cgColor
         messageTextView.layer.borderWidth = 1.0
 
+        setupKeyboardObservers()
+
+        
+    }
+
+    func setupKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    }
+
+    @objc func handleKeyboardWillShow(notification: NSNotification) {
+        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+        let keyboardDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+
+        print(keyboardFrame?.height)
+        print(keyboardDuration?.description)
+
+        // move the input area up somehow??
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Important: Need this when working with Observers to avoid memory leak!
+        NotificationCenter.default.removeObserver(self)
     }
 
     // OLD
@@ -303,14 +320,13 @@ class JournalViewController: UIViewController {
             journalTableView.dataSource = self
             journalTableView.delegate = self
 
+            // Set messageTextView delegate for UITextFieldDelegate
             messageTextView.delegate = self
             messageTextView.trimWhiteSpaceWhenEndEditing = false
             messageTextView.placeholder = "Say something..."
             messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
             messageTextView.backgroundColor = UIColor.white
             messageTextView.layer.cornerRadius = 4.0
-
-
 
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
             // TODO: could add this for the quote view too
@@ -323,10 +339,7 @@ class JournalViewController: UIViewController {
             retrieveMessages()
 
             journalTableView.separatorStyle = .none
-
-
         }
-
     }
 
     func configureDatabase() {
@@ -340,7 +353,6 @@ class JournalViewController: UIViewController {
 
     @objc func tableViewTapped() {
         messageTextView.endEditing(true)
-
     }
 
     // MARK: - IBActions
@@ -396,7 +408,6 @@ class JournalViewController: UIViewController {
                 self.sendButton.isEnabled = true
                 //                self.messageTextField.text = ""
                 self.messageTextView.text = ""
-
             }
         }
     }
@@ -431,6 +442,8 @@ class JournalViewController: UIViewController {
             newMessage.timestamp = timeStamp ?? ""
 
             self.messageArray.append(newMessage)
+
+            // TODO: Add response messages here based on button tapped
 
             // re-configure table view and reload data in table view
             self.configureTableView()
@@ -503,7 +516,6 @@ class JournalViewController: UIViewController {
             formatter.dateFormat = "MMMM d, yyyy h:mm a"
             let currentDate = formatter.string(from: now)
 
-
             // Create a new reference inside our main database
 
             // data we want to save in our database
@@ -537,12 +549,15 @@ class JournalViewController: UIViewController {
         }
     }
 
-    
 
 
-    
+
+
+
 
 }
+
+//MARK:- TextField Delegate Methods
 
 extension JournalViewController: GrowingTextViewDelegate {
 
@@ -578,6 +593,29 @@ extension JournalViewController: UITableViewDataSource {
 
 extension JournalViewController: UITableViewDelegate {
     // Add table view delagate methods
+
+}
+
+
+
+extension JournalViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        UIView.animate(withDuration: 0.18) {
+            // put in the animations that we want to happen
+            // increase height constraint from 50 to 308 (+258)
+            self.heightConstraint.constant = 272
+            // call autolayout to update the UI
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        UIView.animate(withDuration: 0.25) {
+            self.heightConstraint.constant = 132
+            self.view.layoutIfNeeded()
+        }
+    }
+
 
 }
 

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 import Firebase
-import IQKeyboardManagerSwift
+//import IQKeyboardManagerSwift
 //import FirebaseAuthUI
 
 @UIApplicationMain
@@ -51,8 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         // MARK: - IQKeyboardManagerSwift
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.reloadLayoutIfNeeded()
+        // I deleted this b/c it seemed to cause my app to crash.
+//        IQKeyboardManager.shared.enable = true
+//        IQKeyboardManager.shared.reloadLayoutIfNeeded()
 //        IQKeyboardManager.sharedManager().enable = true
 //        IQKeyboardManager.sharedManager().reloadLayoutIfNeeded()
 

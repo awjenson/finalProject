@@ -24,7 +24,7 @@ let bruceLee = ProfileSelectedPerson(name: "Bruce Lee", bio: "Actor, martial art
 
 let markDivine = ProfileSelectedPerson(name: "Mark Devine", bio: "Former Navy SEAL, and founder of SEALFIT and Unbeatable Mind podcast", advice: "\"To live an uncommon life, one needs learn uncommon disciplines.\"", adviceURL: "https://unbeatablemind.com/podcast/")
 
-let oprahWinfrey = ProfileSelectedPerson(name: "Oprah Winfrey", bio: "American television personality, actress, and entrepreneur", advice: "https://www.youtube.com/results?search_query=oprah+winfrey", adviceURL: "\"Turn your wounds into wisdom.\"")
+let oprahWinfrey = ProfileSelectedPerson(name: "Oprah Winfrey", bio: "American television personality, actress, and entrepreneur", advice: "\"Turn your wounds into wisdom.\"", adviceURL: "https://www.youtube.com/results?search_query=oprah+winfrey")
 
 let martinLutherKingJr = ProfileSelectedPerson(name: "Martin Luther King Jr.", bio: "an American minister and civil rights activist", advice: "What are you doing for others?", adviceURL: "https://www.youtube.com/results?search_query=martin+luther+king+jr")
 
@@ -95,12 +95,12 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var profileHeaderView: UIView!
     @IBOutlet weak var profileButton: UIButton!
-    
-//    let keyboardHeight = KeyboardService.keyboardHeight()
-//    let keyboardSize = KeyboardService.keyboardSize()
+
+    @IBOutlet weak var footerView: UIView!
+
 
     var noteArray = [[String:String]]() //an array of dicts, tableView datasource
-    var initialLoad = true
+    var canEditText = false
 
     var posts = [Post]()
 
@@ -137,12 +137,12 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 
 
+
         // NEW USER LIST
         newUserListArray = [myNewUserList.dailyRoutine, myNewUserList.oneYearGoal, myNewUserList.lifetimeGoal, myNewUserList.vision]
 
         profile3TableView.dataSource = self
         profile3TableView.delegate = self
-
 
         // Add profileArray indexes
         // Check order of statementArray[n] to make sure pulling correct text
@@ -157,7 +157,34 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         configureDatabase() // is the needed?
         retrieveProfileUserData()
 
+//        setupKeyboardObservers()
+
+        profile3TableView.keyboardDismissMode = .interactive
     }
+
+
+
+  
+
+
+    func setupKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    }
+
+    @objc func handleKeyboardWillShow(notification: NSNotification) {
+        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+
+        print(keyboardFrame?.height)
+
+        // move the input area up somehow??
+
+    }
+
+    override func keyboardWillShow(_ notification: Notification) {
+
+    }
+
+
 
 
     func dayOfWeekAndHour() {
@@ -234,29 +261,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         ref = Database.database().reference()
     }
 
-//    func fetchUserList() {
-//
-//        _refHandle = ref.child(Constants.DbChild.ProfileUserData).observe(.childAdded) { (snapshot) in
-//            if let dictionary = snapshot.value as? [String: AnyObject] {
-//
-//                print("Print Dictionary")
-//                print(dictionary)
-//                let user = ProfileStatement()
-//                // Set it to the values we're getting from our dictionary
-//                user.setValuesForKeys(dictionary)
-//                self.userList.append(user) // add to the list
-//
-//                // display UI in main queue
-//                performUIUpdatesOnMain({
-//
-//                    self.configureTableView()
-//                    self.profile3TableView.reloadData()
-//                })
-//            }
-//
-//            print("Nil")
-//        }
-//    }
+
 
     func retrieveProfileUserData() {
         // listen for new messages in the firebase database with 'observe'
@@ -300,7 +305,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             print("Profile Array is SUCCESS: \(self.newUserListArray.count)")
 
             // re-configure table view and reload data in table view on main queue
-
             performUIUpdatesOnMain {
                 self.configureTableView()
                 self.profile3TableView.reloadData()
@@ -312,6 +316,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     func configureTableView() {
         profile3TableView.estimatedRowHeight = 50
         profile3TableView.rowHeight = UITableViewAutomaticDimension
+
+
     }
 
     // viewDidLayoutSubviews()
@@ -330,6 +336,9 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
      */
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
+        
+
 
         guard let headerView = profile3TableView.tableHeaderView else {
             return
@@ -371,7 +380,9 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             print("verifyURL: \(verifyUrl(urlString: url))")
 
             if verifyUrl(urlString: url) == true {
-                app.open(URL(string:url)!)
+                performUIUpdatesOnMain {
+                    app.open(URL(string:url)!)
+                }
             } else {
                 performUIUpdatesOnMain {
                     self.createAlert(title: "Invalid URL", message: "Could not open URL")
@@ -384,6 +395,12 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
+
+        activateEditButton(bool: !canEditText)
+
+
+
+
         print("Print array count: \(newUserListArray.count)")
         print(newUserListArray)
 
@@ -420,6 +437,19 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             Constants.ProfileUserData.TimeStamp: currentDate]
 
         sendProfileUserData(userDictionary)
+    }
+
+    // Real magic, toggles button on/off
+    func activateEditButton(bool: Bool) {
+        canEditText = bool
+        let title = bool ? "SAVE" : "EDIT"
+
+        // enable textView to be editable
+
+
+
+
+
     }
 
     func sendProfileUserData(_ userDictionary: [String:String?]) {
@@ -464,13 +494,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 
 
-
-    func sortData() {
-        data[.dailyRoutine] = UserData.filter({ $0["type"] == "dailyRoutine" })
-        data[.oneYearGoal] = UserData.filter({ $0["type"] == "oneYearGoal" })
-        data[.lifetimeGoal] = UserData.filter({ $0["type"] == "lifetimeGoal" })
-        data[.vision] = UserData.filter({ $0["type"] == "vision" })
-    }
+//
+//    func sortData() {
+//        data[.dailyRoutine] = UserData.filter({ $0["type"] == "dailyRoutine" })
+//        data[.oneYearGoal] = UserData.filter({ $0["type"] == "oneYearGoal" })
+//        data[.lifetimeGoal] = UserData.filter({ $0["type"] == "lifetimeGoal" })
+//        data[.vision] = UserData.filter({ $0["type"] == "vision" })
+//    }
 
 
 
@@ -496,83 +526,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         return TableSection.total.rawValue
     }
 
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        // If we wanted to always show a section header regardless of whether or not there were rows in it,
-//        // then uncomment this line below:
-//        //return SectionHeaderHeight
-//        // First check if there is a valid section of table.
-//        // Then we check that for the section there is more than 1 row.
-//        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection], userData.count > 0 {
-//            return SectionHeaderHeight
-//        }
-//
-//        print("Are we here?")
-//        return 0
-//    }
-
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: SectionHeaderHeight))
-//        view.backgroundColor = UIColor(red: 253.0/255.0, green: 240.0/255.0, blue: 196.0/255.0, alpha: 1)
-//        let label = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.bounds.width - 30, height: SectionHeaderHeight))
-//        label.font = UIFont.boldSystemFont(ofSize: 15)
-//        label.textColor = UIColor.black
-//        if let tableSection = TableSection(rawValue: section) {
-//            switch tableSection {
-//            case .dailyRoutine:
-//                label.text = "Action"
-//            case .oneYearGoal:
-//                label.text = "Comedy"
-//            case .lifetimeGoal:
-//                label.text = "Drama"
-//            case .vision:
-//                label.text = "Indie"
-//            default:
-//                label.text = ""
-//            }
-//        }
-//        view.addSubview(label)
-//        return view
-//    }
-
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        // Similar to above, first check if there is a valid section of table.
-//        // Then we check that for the section there is a row.
-//        if let tableSection = TableSection(rawValue: indexPath.section), let statement = data[tableSection]?[indexPath.row] {
-//            if let titleLabel = cell.viewWithTag(10) as? UILabel {
-//                titleLabel.text = statement["statement"]
-//            }
-//            if let subtitleLabel = cell.viewWithTag(20) as? UILabel {
-//                subtitleLabel.text = statement["statement"]
-//            }
-//        }
-//        return cell
-//    }
-
-
-
-
-    /*
-     CELL - comes after each 'cell.'
-     categoryLabel: UILabel!
-     adviceTextLabel: UILabel!
-     adviceAuthorLabel: UILabel!
-     userTextView: UITextView!
-     quoteAuthorLabel: UILabel!
-     quoteLabel: UILabel!
-     quoteButton: UIButton!
-
-     Profile3DataModel - comes after each [indexPath.row]
-     category
-     adviceText
-     adviceAuthor
-     userInput
-     quoteText
-     quoteAuthor
-     quoteURL
-     */
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
@@ -604,6 +557,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //getting the index path of selected row
+
     }
 
 
@@ -651,7 +605,15 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 extension Profile3ViewController: UITextViewDelegate {
 
+    func textViewDidBeginEditing(_ textView: UITextView) {
+
+    }
+
     func textViewDidChange(_ textView: UITextView) {
+
+
+
+        print("textViewDidChange")
         /*
          According to article there is a UI bug, added code to fix it
          http://candycode.io/self-sizing-uitextview-in-a-uitableview-using-auto-layout-like-reminders-app/
@@ -667,20 +629,22 @@ extension Profile3ViewController: UITextViewDelegate {
     }
 
     func textViewDidEndEditing(_ textView: UITextView) {
+        print("textViewDidEndEditing")
 
-        var v : UIView = textView
-        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
-        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
-        let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell)!
-        // and now we have the index path! update the model
 
-        print("Selected Row: \(selectedIndexPath.row)")
-        print(selectedCell.userTextView.text)
-
-        // Update Array
-        newUserListArray[selectedIndexPath.row] = selectedCell.userTextView.text
-
-        print("Print Updated Array: \(newUserListArray)")
+//        var v : UIView = textView
+//        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
+//        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
+//        let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell)!
+//        // and now we have the index path! update the model
+//
+//        print("Selected Row: \(selectedIndexPath.row)")
+//        print(selectedCell.userTextView.text)
+//
+//        // Update Array
+//        newUserListArray[selectedIndexPath.row] = selectedCell.userTextView.text
+//
+//        print("Print Updated Array: \(newUserListArray)")
 
     }
 

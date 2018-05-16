@@ -11,7 +11,7 @@
 
 import UIKit
 import Firebase
-import FirebaseAuthUI
+import FirebaseUI
 //import FirebaseGoogleAuthUI
 import SVProgressHUD
 

@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseAuthUI
+import FirebaseUI
 import FirebaseDatabase
 
 // typealias created to avoid namespace conflicts for Xcode
