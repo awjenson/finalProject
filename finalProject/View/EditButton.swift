@@ -12,7 +12,7 @@ import UIKit
 
 class EditButton: UIButton {
 
-    // initially set to false
+    // initially set to false (users will need to tap the Edit button to edit text
     var isOn = false
 
     override init(frame: CGRect) {
@@ -28,7 +28,7 @@ class EditButton: UIButton {
     // This is where we'll do all the initial setup of our button
     // Example: color, corner radius, boarder
     func initButton() {
-//        setTitle("EDITX", for: .normal)
+        setTitle("EDIT", for: .normal)
 
         // Add target when the button is pressed
         addTarget(self, action: #selector(EditButton.buttonPressed), for: .touchUpInside)
@@ -43,12 +43,9 @@ class EditButton: UIButton {
     // Real magic, toggles button on/off
     func activateButton(bool: Bool) {
         isOn = bool
-        let title = bool ? "SAVEX" : "EDITX"
-
+        let title = bool ? "SAVE" : "EDIT"
         // set button attributes
         setTitle(title, for: .normal)
-
-
     }
 
 

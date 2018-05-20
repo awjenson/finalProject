@@ -30,6 +30,7 @@ struct Constants {
 
     struct DbChild {
         static let Messages = "Messages"
+        static let GoalItems = "GoalItems"
         static let ProfileUserData = "ProfileUserData"
 
     }
@@ -40,6 +41,13 @@ struct Constants {
         static let TimeStamp = "TimeStamp"
     }
 
+    struct GoalItem {
+        static let Name = "Name"
+        static let Count = "Count"
+        static let TimeStamp = "TimeStamp"
+        static let Color = "Color"
+    }
+
     struct ProfileUserData {
         static let Sender = "Sender"
         static let DailyRoutine = "DailyRoutine"
@@ -47,6 +55,21 @@ struct Constants {
         static let LifetimeGoal = "LifetimeGoal"
         static let Vision = "Vision"
         static let TimeStamp = "TimeStamp"
+    }
+
+    struct SelectedMood {
+        static let Button0 = "Sad"
+        static let Button1 = "Inferior"
+        static let Button2 = "Depressed"
+        static let Button3 = "Bored"
+        static let Button4 = "Relaxed"
+        static let Button5 = "Good"
+        static let Button6 = "Mad!"
+        static let Button7 = "Helpless"
+        static let Button8 = "Stressed"
+        static let Button9 = "Numb"
+        static let Button10 = "Motivated!"
+        static let Button11 = "Happy!"
     }
 
 }

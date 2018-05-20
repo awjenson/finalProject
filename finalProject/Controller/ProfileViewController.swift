@@ -95,14 +95,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var profileHeaderView: UIView!
     @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var saveButton: EditButton!
 
-    @IBOutlet weak var footerView: UIView!
 
 
-    var noteArray = [[String:String]]() //an array of dicts, tableView datasource
-    var canEditText = false
 
-    var posts = [Post]()
+//    var noteArray = [[String:String]]() //an array of dicts, tableView datasource
+//    var posts = [Post]()
 
     // Same property
     var userList = [ProfileStatement]()
@@ -110,8 +109,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     var ref: DatabaseReference!
     fileprivate var _refHandle: DatabaseHandle!
 
+    var canEditText = false
+
     var results = [ProfileDataResults]()
     var selectedResults = [ProfileDataModel]() // this will be used to stores the user's vision and goals
+
+//    var textSentFromEditUserTextVC: String?
+//    var indexSentFromEditUserTextVC: Int?
 
     // Time and Date
     let formatter = DateFormatter()
@@ -119,70 +123,63 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     let calendar = Calendar.current
 
 
-
-
-
     // NEW USER LIST
     var myNewUserList = NewUserList()
     var newUserListArray: [String] = []
 
 
-
-
     // initial setup
     var selectedPersonProfile = ProfileSelectedPerson(name: "", bio: "", advice: "", adviceURL: "")
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-
-
-        // NEW USER LIST
+        // NEW USER LIST. Add user data in desired order
         newUserListArray = [myNewUserList.dailyRoutine, myNewUserList.oneYearGoal, myNewUserList.lifetimeGoal, myNewUserList.vision]
 
-        profile3TableView.dataSource = self
-        profile3TableView.delegate = self
+        signedInStatus(isSignedIn: true)
 
-        // Add profileArray indexes
-        // Check order of statementArray[n] to make sure pulling correct text
-
-
-
-        // TODO: automate this setup
-        // This decides what person's advice gets displayed
         dayOfWeekAndHour()
-
-        configureTableView()
-        configureDatabase() // is the needed?
-        retrieveProfileUserData()
-
-//        setupKeyboardObservers()
-
-        profile3TableView.keyboardDismissMode = .interactive
     }
+
+    func signedInStatus(isSignedIn: Bool) {
+        if (isSignedIn) {
+            profile3TableView.dataSource = self
+            profile3TableView.delegate = self
+
+            configureTableView()
+            configureDatabase()
+            retrieveProfileUserData() // ERROR: Could not upload user's profile
+        }
+    }
+
+
 
 
 
   
 
 
-    func setupKeyboardObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-    }
-
-    @objc func handleKeyboardWillShow(notification: NSNotification) {
-        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-
-        print(keyboardFrame?.height)
-
-        // move the input area up somehow??
-
-    }
-
-    override func keyboardWillShow(_ notification: Notification) {
-
-    }
+//    func setupKeyboardObservers() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//    }
+//
+//    @objc func handleKeyboardWillShow(notification: NSNotification) {
+//        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+//
+//        print(keyboardFrame?.height)
+//
+//        // move the input area up somehow??
+//
+//    }
+//
+//    override func keyboardWillShow(_ notification: Notification) {
+//
+//    }
 
 
 
@@ -278,39 +275,43 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         _refHandle = ref.child(Constants.DbChild.ProfileUserData).child(currentUID).observe(.childAdded) { (snapshot) in
             // grab data from snapshot and format it into a custom JournalMessage object
             // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
-            let snapshotValue = snapshot.value as! Dictionary<String,String>
 
-            // use snapshotValue to pull-out values of keys
-            let sender = snapshotValue[Constants.ProfileUserData.Sender]!
-            let dailyRoutine = snapshotValue[Constants.ProfileUserData.DailyRoutine]!
-            let oneYearGoal = snapshotValue[Constants.ProfileUserData.OneYearGoal]!
-            let lifetimeGoal = snapshotValue[Constants.ProfileUserData.LifetimeGoal]!
-            let vision = snapshotValue[Constants.ProfileUserData.Vision]!
-            let timeStamp = snapshotValue[Constants.ProfileUserData.TimeStamp]
+            if snapshot.exists() {
+                print(snapshot.value)
+                let snapshotValue = snapshot.value as! Dictionary<String,String>
 
-            // now save these values into a new JournalMessage object
-            let editedProfileUserData = NewUserList()
-            editedProfileUserData.sender = sender
-            editedProfileUserData.dailyRoutine = dailyRoutine
-            editedProfileUserData.oneYearGoal = oneYearGoal
-            editedProfileUserData.lifetimeGoal = lifetimeGoal
-            editedProfileUserData.vision = vision
-            editedProfileUserData.timestamp = timeStamp ?? ""
+                // use snapshotValue to pull-out values of keys
+                let sender = snapshotValue[Constants.ProfileUserData.Sender]!
+                let dailyRoutine = snapshotValue[Constants.ProfileUserData.DailyRoutine]!
+                let oneYearGoal = snapshotValue[Constants.ProfileUserData.OneYearGoal]!
+                let lifetimeGoal = snapshotValue[Constants.ProfileUserData.LifetimeGoal]!
+                let vision = snapshotValue[Constants.ProfileUserData.Vision]!
+                let timeStamp = snapshotValue[Constants.ProfileUserData.TimeStamp]
 
-            self.newUserListArray = [editedProfileUserData.dailyRoutine,
-                                     editedProfileUserData.oneYearGoal,
-                                     editedProfileUserData.lifetimeGoal,
-                                     editedProfileUserData.vision]
+                // now save these values into a new JournalMessage object
+                let editedProfileUserData = NewUserList()
+                editedProfileUserData.sender = sender
+                editedProfileUserData.dailyRoutine = dailyRoutine
+                editedProfileUserData.oneYearGoal = oneYearGoal
+                editedProfileUserData.lifetimeGoal = lifetimeGoal
+                editedProfileUserData.vision = vision
+                editedProfileUserData.timestamp = timeStamp ?? ""
 
-            print("Profile Array is SUCCESS: \(self.newUserListArray.count)")
+                // Add user data to array
+                self.newUserListArray = [editedProfileUserData.dailyRoutine,
+                                         editedProfileUserData.oneYearGoal,
+                                         editedProfileUserData.lifetimeGoal,
+                                         editedProfileUserData.vision]
 
-            // re-configure table view and reload data in table view on main queue
-            performUIUpdatesOnMain {
-                self.configureTableView()
-                self.profile3TableView.reloadData()
+                print("Profile Array is SUCCESS: \(self.newUserListArray.count)")
+
+                // re-configure table view and reload data in table view on main queue
+                performUIUpdatesOnMain {
+                    self.configureTableView()
+                    self.profile3TableView.reloadData()
+                }
             }
         }
-        print("Profile Array if ERROR: \(self.newUserListArray.count)")
     }
 
     func configureTableView() {
@@ -337,9 +338,11 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        
+        setupHeightOfTableHeaderView()
 
+    }
 
+    func setupHeightOfTableHeaderView() {
         guard let headerView = profile3TableView.tableHeaderView else {
             return
         }
@@ -393,64 +396,52 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
 
-
     @IBAction func saveButtonTapped(_ sender: UIButton) {
 
         activateEditButton(bool: !canEditText)
 
+        if canEditText == true {
+            print("EDITing is enabled")
+            self.profileHeaderView.backgroundColor = UIColor.red
+            self.saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
 
 
+        } else {
+            print("stop all editing")
+            self.view.endEditing(true)
+            self.profileHeaderView.backgroundColor = UIColor.clear
 
-        print("Print array count: \(newUserListArray.count)")
-        print(newUserListArray)
+            // update array to Firebase Database
+            print("Print array count: \(newUserListArray.count)")
+            print(newUserListArray)
 
-//        let indexPath1 = NSIndexPath(row: 1, section: 0)
-//        let cell1 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath1 as IndexPath) as! ProfileTableViewCell
-//
-//        let indexPath2 = NSIndexPath(row: 2, section: 0)
-//        let cell2 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath2 as IndexPath) as! ProfileTableViewCell
-//
-//        let indexPath3 = NSIndexPath(row: 3, section: 0)
-//        let cell3 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath3 as IndexPath) as! ProfileTableViewCell
-//
-//        let indexPath4 = NSIndexPath(row: 4, section: 0)
-//        let cell4 = profile3TableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath4 as IndexPath) as! ProfileTableViewCell
-//
-//        print("Cell 1: \(cell1.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
-//        print("Cell 2: \(cell2.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
-//        print("Cell 3: \(cell3.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
-//        print("Cell 4: \(cell4.userTextView.text)") // Currently, it prints the default text from the Main.Storyboard's textView
+            let now = Date()
+            let formatter = DateFormatter()
+            // initially set the format based on your datepicker date
+            formatter.dateFormat = "MMMM d, yyyy"
+            let currentDate = formatter.string(from: now)
 
-        let now = Date()
-        let formatter = DateFormatter()
-        // initially set the format based on your datepicker date
-        formatter.dateFormat = "MMMM d, yyyy"
-        let currentDate = formatter.string(from: now)
+            // data we want to save into our database
+            let userDictionary = [
+                Constants.ProfileUserData.Sender: Auth.auth().currentUser?.email,
+                Constants.ProfileUserData.DailyRoutine: newUserListArray[0],
+                Constants.ProfileUserData.OneYearGoal: newUserListArray[1],
+                Constants.ProfileUserData.LifetimeGoal: newUserListArray[2],
+                Constants.ProfileUserData.Vision: newUserListArray[3],
+                Constants.ProfileUserData.TimeStamp: currentDate]
 
-        // data we want to save in our database
-        let userDictionary = [
-            Constants.ProfileUserData.Sender: Auth.auth().currentUser?.email,
-            Constants.ProfileUserData.DailyRoutine: newUserListArray[0],
-            Constants.ProfileUserData.OneYearGoal: newUserListArray[1],
-            Constants.ProfileUserData.LifetimeGoal: newUserListArray[3],
-            Constants.ProfileUserData.Vision: newUserListArray[3],
-            Constants.ProfileUserData.TimeStamp: currentDate]
-
-        sendProfileUserData(userDictionary)
+            // send data to database
+            sendProfileUserData(userDictionary)
+        }
     }
 
     // Real magic, toggles button on/off
     func activateEditButton(bool: Bool) {
         canEditText = bool
         let title = bool ? "SAVE" : "EDIT"
-
         // enable textView to be editable
-
-
-
-
-
     }
+
 
     func sendProfileUserData(_ userDictionary: [String:String?]) {
 
@@ -471,67 +462,21 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
 
+    // MARK: - Table View Methods
 
-
-    // This is the size of our header sections that we will use later on.
-    let SectionHeaderHeight: CGFloat = 25
+    // As long as `total` is the last case in our TableSection enum,
+    // this method will always be dynamically correct no mater how many table sections we add or remove.
 
     enum TableSection: Int {
         case dailyRoutine = 0, oneYearGoal, lifetimeGoal, vision, total
     }
 
-     var data = [TableSection: [[String: String]]]()
-
-    // Data is an array of Dictionary of type [String: String]
-    let UserData = [
-        ["type": "dailyRoutine", "statement": "textDaily"],
-        ["type": "oneYearGoal", "statement": "textOne"],
-        ["type": "lifetimeGoal", "statement": "textLife"],
-        ["type": "vision", "statement": "textVision"]
-    ]
-
-
-
-
-
-//
-//    func sortData() {
-//        data[.dailyRoutine] = UserData.filter({ $0["type"] == "dailyRoutine" })
-//        data[.oneYearGoal] = UserData.filter({ $0["type"] == "oneYearGoal" })
-//        data[.lifetimeGoal] = UserData.filter({ $0["type"] == "lifetimeGoal" })
-//        data[.vision] = UserData.filter({ $0["type"] == "vision" })
-//    }
-
-
-
-    // As long as `total` is the last case in our TableSection enum,
-    // this method will always be dynamically correct no mater how many table sections we add or remove.
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return TableSection.total.rawValue
-//    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Using Swift's optional lookup we first check if there is a valid section of table.
-        // Then we check that for the section there is data that goes with.
-//        if let tableSection = TableSection(rawValue: section), let userData = data[tableSection] {
-//            return userData.count
-//        }
-//
-//        print("In here?")
-//        return 0
-        print("HOW MANY ROWS?")
-        print(newUserListArray)
-        print(newUserListArray.count)
-
         return TableSection.total.rawValue
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
-
-        // set its text view’s delegate to self *** UNSURE WHY THIS DOESN'T WORK???
-//        cell.userTextView.delegate = self
 
         cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
         cell.userTextView.layer.borderWidth = 2
@@ -555,65 +500,64 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //getting the index path of selected row
 
+
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt indexPath")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
-
-
-    /* Update database when changes made to TextView in a cell. Seems to be similar as updating a like button UILabel each time the like button is clicked. Method for did tap away from textView.
-     https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/liking-posts */
-
-//    // Used for working with UITextView
-//    func didTapLikeButton(_ profileTextView: UITextView, on cell: ProfileTableViewCell) {
-//        // 1
-//        guard let indexPath = profileTableView.indexPath(for: cell)
-//            else { return }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        print("ARE WE IN SEGUE?")
 //
-//        // 2
-//        profileTextView.isUserInteractionEnabled = false
-//        // 3 Reference the correct Category corresponding with the ProfileTableViewCell that the user tapped.
-//        let post = posts[indexPath.section]
+//        if segue.identifier == "EditUserTextSegue" {
+//            let destinationVC = segue.destination as! EditUserTextViewController
+//            if let indexPath = profile3TableView.indexPathForSelectedRow {
 //
-//        // 4
-//        LikeService.setIsLiked(!post.isLiked, for: post) { (success) in
-//            // 5
-//            defer {
-//                likeButton.isUserInteractionEnabled = true
-//            }
+//                // register ProfileViewController (self) as the delegate
+//                destinationVC.editUserTextDelegate = self
+//                destinationVC.selectedIndex = indexPath.row
+//                destinationVC.selectedText = newUserListArray[indexPath.row]
+//                destinationVC.selectedTitle = selectedResults[indexPath.row].category
+//                print("selected index")
+//                print(indexPath.row)
 //
-//            // 6
-//            guard success else { return }
-//
-//            // 7
-//            post.likeCount += !post.isLiked ? 1 : -1
-//            post.isLiked = !post.isLiked
-//
-//            // 8
-//            guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
-//                else { return }
-//
-//            // 9
-//            DispatchQueue.main.async {
-//                self.configureCell(cell, with: post)
 //            }
 //        }
 //    }
 
+
+}
+
+extension Profile3ViewController: PassTextDelegate {
+
+    // Function below only gets called by second VC
+    // So, it's waiting here until it gets called by Second VC
+    // When inital VC get information from second VC, do what protocol requires
+    func send(text: String, toArray atIndex: Int) {
+        newUserListArray.insert(text, at: atIndex)
+    }
 }
 
 extension Profile3ViewController: UITextViewDelegate {
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if canEditText == false {
+            return false
+        } else {
+            return true
+        }
+    }
 
+    func textViewDidBeginEditing(_ textView: UITextView) {
     }
 
     func textViewDidChange(_ textView: UITextView) {
+        textViewWithDynamicHeightInsideTableViewCell()
+    }
 
-
-
-        print("textViewDidChange")
+    func textViewWithDynamicHeightInsideTableViewCell () {
         /*
          According to article there is a UI bug, added code to fix it
          http://candycode.io/self-sizing-uitextview-in-a-uitableview-using-auto-layout-like-reminders-app/
@@ -624,35 +568,35 @@ extension Profile3ViewController: UITextViewDelegate {
         profile3TableView.endUpdates()
         UIView.setAnimationsEnabled(true)
         profile3TableView.setContentOffset(currentOffset, animated: false)
-
-        // update Firebase Database
     }
+
 
     func textViewDidEndEditing(_ textView: UITextView) {
         print("textViewDidEndEditing")
 
+        var v : UIView = textView
+        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
+        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
 
-//        var v : UIView = textView
-//        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
-//        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
-//        let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell)!
-//        // and now we have the index path! update the model
-//
-//        print("Selected Row: \(selectedIndexPath.row)")
-//        print(selectedCell.userTextView.text)
-//
-//        // Update Array
-//        newUserListArray[selectedIndexPath.row] = selectedCell.userTextView.text
-//
-//        print("Print Updated Array: \(newUserListArray)")
+        // TODO: Fix
+        // Fatal error: Unexpectedly found nil while unwrapping an Optional value
+        guard let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell) else {
+            return
+        }
+        // and now we have the index path! update the model
 
+        print("Selected Cell: \(selectedIndexPath.row)")
+        print("Selected Cell: \(selectedCell.userTextView.text)")
+
+        // Update Array
+        newUserListArray[selectedIndexPath.row] = selectedCell.userTextView.text
+
+        print("Print Updated Array: \(newUserListArray)")
     }
 
-}
-
-extension Profile3ViewController: UITextFieldDelegate {
-
 
 }
+
+
 
 

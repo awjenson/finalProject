@@ -8,13 +8,7 @@
 
 import UIKit
 import Firebase
-import ChameleonFramework // for colors
 import GrowingTextView
-
-// leading = leading + 8
-// top = top + 10
-// trailing = trailing + 8
-// Send Button.leading = Message Text Field.trailing + 8
 
 class JournalViewController: UIViewController {
 
@@ -33,8 +27,28 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var journalTableView: UITableView!
 
-    
-    @IBOutlet var moodButtons: [UIButton]!
+
+
+    @IBOutlet weak var mood0Button: UIButton!
+    @IBOutlet weak var mood1Button: UIButton!
+    @IBOutlet weak var mood2Button: UIButton!
+    @IBOutlet weak var mood3Button: UIButton!
+    @IBOutlet weak var mood4Button: UIButton!
+    @IBOutlet weak var mood5Button: UIButton!
+    @IBOutlet weak var mood6Button: UIButton!
+    @IBOutlet weak var mood7Button: UIButton!
+    @IBOutlet weak var mood8Button: UIButton!
+    @IBOutlet weak var mood9Button: UIButton!
+    @IBOutlet weak var mood10Button: UIButton!
+    @IBOutlet weak var mood11Button: UIButton!
+
+
+
+
+
+
+
+
     
 
     // MARK: - Properties
@@ -47,7 +61,6 @@ class JournalViewController: UIViewController {
     fileprivate var _refHandle: DatabaseHandle!
     fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
 
-
     // Time and Date
     let formatter = DateFormatter()
     let date = Date()
@@ -56,8 +69,7 @@ class JournalViewController: UIViewController {
     // an empty JournalMessage array to contain the user's messages
     var messageArray = [JournalMessage]()
 
-//    let keyboardHeight = KeyboardService.keyboardHeight()
-//    let keyboardSize = KeyboardService.keyboardSize()
+
 
     var expandingCellHeight: CGFloat = 200
     let expandingIndexRow = 0
@@ -68,13 +80,6 @@ class JournalViewController: UIViewController {
 
         signedInStatus(isSignedIn: true)
 
-        // VIEW SHADOW
-//        quoteView.layer.cornerRadius = 10
-//        quoteView.layer.shadowColor = UIColor.gray.cgColor
-//        quoteView.layer.shadowOffset = CGSize(width: 5, height: 5)
-//        quoteView.layer.shadowOpacity = 0.7
-//        quoteView.layer.shadowRadius = 5
-
         dayOfWeekAndHour()
 
         quoteLabel.text = advice.quote
@@ -84,9 +89,21 @@ class JournalViewController: UIViewController {
         messageTextView.layer.borderColor = UIColor.gray.cgColor
         messageTextView.layer.borderWidth = 1.0
 
+        mood0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
+        mood1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
+        mood2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
+        mood3Button.setTitle(Constants.SelectedMood.Button3,for: .normal)
+        mood4Button.setTitle(Constants.SelectedMood.Button4,for: .normal)
+        mood5Button.setTitle(Constants.SelectedMood.Button5,for: .normal)
+        mood6Button.setTitle(Constants.SelectedMood.Button6,for: .normal)
+        mood7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
+        mood8Button.setTitle(Constants.SelectedMood.Button8,for: .normal)
+        mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
+        mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
+        mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
+
         setupKeyboardObservers()
 
-        
     }
 
     func setupKeyboardObservers() {
@@ -194,20 +211,19 @@ class JournalViewController: UIViewController {
         case 7:
             saturday(hour)
         default:
-            print("error with dayAndHour")
+            print("ERROR: error with dayAndHour")
             print(dayOfWeek)
-            print("^")
         }
     }
 
     func sunday(_ hour: Int) {
         switch hour {
         case 0..<14:
-            print("Weekend, Very Early Morning")
+            print("Sunday, Very Early Morning")
             // call function to display 9 time-based topics
             advice = am0
         case 14...24:
-            print("Weekend, Afternoon")
+            print("Sunday, Afternoon")
             // call function to display 9 time-based topics
             advice = pm0
         default:
@@ -218,11 +234,11 @@ class JournalViewController: UIViewController {
     func monday(_ hour: Int) {
         switch hour {
         case 0..<14:
-            print("Weekend, Very Early Morning")
+            print("Monday, Very Early Morning")
             // call function to display 9 time-based topics
             advice = am1
         case 14...24:
-            print("Weekend, Afternoon")
+            print("Monday, Afternoon")
             // call function to display 9 time-based topics
             advice = pm1
         default:
@@ -233,11 +249,11 @@ class JournalViewController: UIViewController {
     func tuesday(_ hour: Int) {
         switch hour {
         case 0..<14:
-            print("Weekend, Very Early Morning")
+            print("Tuesday, Very Early Morning")
             // call function to display 9 time-based topics
             advice = am2
         case 14...24:
-            print("Weekend, Afternoon")
+            print("Tuesday, Afternoon")
             // call function to display 9 time-based topics
             advice = pm2
         default:
@@ -248,11 +264,11 @@ class JournalViewController: UIViewController {
     func wednesday(_ hour: Int) {
         switch hour {
         case 0..<14:
-            print("Weekend, Very Early Morning")
+            print("Wednesday, Very Early Morning")
             // call function to display 9 time-based topics
             advice = am3
         case 14...24:
-            print("Weekend, Afternoon")
+            print("Wednesday, Afternoon")
             // call function to display 9 time-based topics
             advice = pm3
         default:
@@ -263,11 +279,11 @@ class JournalViewController: UIViewController {
     func thursday(_ hour: Int) {
         switch hour {
         case 0..<14:
-            print("Weekend, Very Early Morning")
+            print("Thursday, Very Early Morning")
             // call function to display 9 time-based topics
             advice = am4
         case 14...24:
-            print("Weekend, Afternoon")
+            print("Thursday, Afternoon")
             // call function to display 9 time-based topics
             advice = pm4
         default:
@@ -278,11 +294,11 @@ class JournalViewController: UIViewController {
     func friday(_ hour: Int) {
         switch hour {
         case 0..<14:
-            print("Weekend, Very Early Morning")
+            print("Friday, Very Early Morning")
             // call function to display 9 time-based topics
             advice = am5
         case 14...24:
-            print("Weekend, Afternoon")
+            print("Friday, Afternoon")
             // call function to display 9 time-based topics
             advice = pm5
         default:
@@ -293,11 +309,11 @@ class JournalViewController: UIViewController {
     func saturday(_ hour: Int) {
         switch hour {
         case 0..<14:
-            print("Weekend, Very Early Morning")
+            print("Saturday, Very Early Morning")
             // call function to display 9 time-based topics
             advice = am6
         case 14...24:
-            print("Weekend, Afternoon")
+            print("Saturday, Afternoon")
             // call function to display 9 time-based topics
             advice = pm6
         default:
@@ -310,7 +326,8 @@ class JournalViewController: UIViewController {
 
     deinit {
         // The database observer doesn't stop listen for changes in the database when the VC goes off screen. So if the observer isn't removed then the observer will continue to sync data to local memory casusing excessive memory use. So when an observer is no longer needed we should remove it. In this case, remove the observer when the VC is deinitalized.
-//        ref.child(Constants.DbChild.Messages).removeObserver(withHandle: _refHandle)
+
+        // ref.child(Constants.DbChild.Messages).removeObserver(withHandle: _refHandle)
     }
 
 
@@ -323,15 +340,20 @@ class JournalViewController: UIViewController {
             // Set messageTextView delegate for UITextFieldDelegate
             messageTextView.delegate = self
             messageTextView.trimWhiteSpaceWhenEndEditing = false
-            messageTextView.placeholder = "Say something..."
+            messageTextView.placeholder = "Text something..."
             messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
             messageTextView.backgroundColor = UIColor.white
             messageTextView.layer.cornerRadius = 4.0
 
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
-            // TODO: could add this for the quote view too
-            journalTableView.addGestureRecognizer(tapGesture)
+            // Enable Gesture Recognizers
+            let tapGestureTableView = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
 
+            let tapGestureHeaderView = UITapGestureRecognizer(target: self, action: #selector(headerViewTapped))
+            // TODO: could add this for the quote view too
+            journalTableView.addGestureRecognizer(tapGestureTableView)
+            quoteView.addGestureRecognizer(tapGestureHeaderView)
+
+            // Additional Setup
             configureTableView()
 
             configureDatabase()
@@ -340,6 +362,16 @@ class JournalViewController: UIViewController {
 
             journalTableView.separatorStyle = .none
         }
+    }
+
+
+
+    @objc func tableViewTapped() {
+        messageTextView.endEditing(true)
+    }
+
+    @objc func headerViewTapped() {
+        messageTextView.endEditing(true)
     }
 
     func configureDatabase() {
@@ -351,19 +383,15 @@ class JournalViewController: UIViewController {
         journalTableView.estimatedRowHeight = 100.0
     }
 
-    @objc func tableViewTapped() {
-        messageTextView.endEditing(true)
-    }
+
+
+
 
     // MARK: - IBActions
 
     @IBAction func sendButtonPressed(_ sender: UIButton) {
 
-//        messageTextField.endEditing(true)
         messageTextView.endEditing(true)
-
-        // Send the message to Firebase and save it in our database
-//        messageTextField.isEnabled = false
         messageTextView.isEditable = false
         sendButton.isEnabled = false
 
@@ -372,9 +400,6 @@ class JournalViewController: UIViewController {
         // initially set the format based on your datepicker date
         formatter.dateFormat = "MMMM d, yyyy h:mm a"
         let currentDate = formatter.string(from: now)
-
-
-        // Create a new reference inside our main database
 
         // data we want to save in our database
         if !messageTextView.text!.isEmpty {
@@ -412,8 +437,6 @@ class JournalViewController: UIViewController {
         }
     }
 
-
-
     // Create the retrieveMessages method
     func retrieveMessages() {
         // listen for new messages in the firebase database with 'observe'
@@ -446,11 +469,14 @@ class JournalViewController: UIViewController {
             // TODO: Add response messages here based on button tapped
 
             // re-configure table view and reload data in table view
-            self.configureTableView()
-            self.journalTableView.reloadData()
-            self.scrollToBottom()
+            performUIUpdatesOnMain {
+                self.configureTableView()
+                self.journalTableView.reloadData()
+                self.scrollToBottom()
+            }
         }
     }
+
 
     func scrollToBottom(){
         DispatchQueue.main.async {
@@ -459,6 +485,7 @@ class JournalViewController: UIViewController {
         }
     }
 
+    // Notes:
     // Replace anxious over Stressed
     // Optimistic
     // Loving
@@ -466,68 +493,71 @@ class JournalViewController: UIViewController {
 
     @IBAction func moodButtonTapped(_ sender: UIButton) {
 
+        var selectedMood = ""
         var response = ""
 
-        if let moodNumber: Int = moodButtons.index(of: sender) {
-            print(moodNumber)
+        switch sender {
+        case mood0Button:
+            selectedMood = Constants.SelectedMood.Button0
+            response = ""
+        case mood1Button:
+            selectedMood = Constants.SelectedMood.Button1
+            response = ""
+        case mood2Button:
+            selectedMood = Constants.SelectedMood.Button2
+            response = ""
 
-            var selectedMood = ""
+        case mood3Button:
+            selectedMood = Constants.SelectedMood.Button3
+            response = ""
+        case mood4Button:
+            selectedMood = Constants.SelectedMood.Button4
+            response = ""
+        case mood5Button:
+            selectedMood = Constants.SelectedMood.Button5
+            response = ""
 
-            switch moodNumber {
-            case 0:
-                print("Sad")
-                selectedMood = "Sad"
-                response = ""
-            case 1:
-                print("Depressed")
-                selectedMood = "Depressed"
-                response = ""
-            case 2:
-                print("Bored")
-                selectedMood = "Bored"
-                response = ""
-            case 3:
-                print("Good")
-                selectedMood = "Good"
-                response = ""
-            case 4:
-                print("Mad")
-                selectedMood = "Mad"
-                response = ""
-            case 5:
-                print("Stressed")
-                selectedMood = "Stressed"
-                response = "\"A couple of years from now, everything you’re stressing about won’t even matter. Keep moving forward.\""
-            case 6:
-                print("Numb")
-                selectedMood = "Numb"
-                response = ""
-            case 7:
-                print("Happy!")
-                selectedMood = "Happy!"
-                response = ""
-            default:
-                print("No button exists")
-            }
+        case mood6Button:
+            selectedMood = Constants.SelectedMood.Button6
+            response = ""
+        case mood7Button:
+            selectedMood = Constants.SelectedMood.Button7
+            response = ""
+        case mood8Button:
+            selectedMood = Constants.SelectedMood.Button8
+            response = ""
 
-            let now = Date()
-            let formatter = DateFormatter()
-            // initially set the format based on your datepicker date
-            formatter.dateFormat = "MMMM d, yyyy h:mm a"
-            let currentDate = formatter.string(from: now)
+        case mood9Button:
+            selectedMood = Constants.SelectedMood.Button9
+            response = ""
+        case mood10Button:
+            selectedMood = Constants.SelectedMood.Button10
+            response = ""
+        case mood11Button:
+            selectedMood = Constants.SelectedMood.Button11
+            response = ""
 
-            // Create a new reference inside our main database
+        default:
+            print("ERROR: No button exists")
+            break
 
-            // data we want to save in our database
-
-            let moodDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
-                                  Constants.Message.Text: "Mood: \(selectedMood)  \nWhy do you feel this way?",
-                                  Constants.Message.TimeStamp: currentDate]
-            sendMood(moodDictionary)
-
-        } else {
-            print("ERROR: button tapped not in topicButtons")
         }
+
+        let now = Date()
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date
+        formatter.dateFormat = "MMMM d, yyyy h:mm a"
+        let currentDate = formatter.string(from: now)
+
+        // Create a new reference inside our main database
+
+        // data we want to save in our database
+
+        let moodDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
+                              Constants.Message.Text: "Current Mood: \(selectedMood)",
+            Constants.Message.TimeStamp: currentDate]
+        sendMood(moodDictionary)
+
     }
 
     func sendMood(_ moodDictionary: [String:String?]) {
@@ -548,11 +578,6 @@ class JournalViewController: UIViewController {
             }
         }
     }
-
-
-
-
-
 
 
 }

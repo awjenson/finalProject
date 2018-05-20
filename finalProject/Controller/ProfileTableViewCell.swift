@@ -23,7 +23,6 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var bodyLabel: UILabel!
 
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,38 +32,56 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
 //        adviceURLButton.layer.cornerRadius = 10
 //        adviceURLButton.layer.borderWidth = 1.0
 
+
         userTextView.layer.cornerRadius = 5
 
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+//        let toolbar = UIToolbar()
+//        toolbar.sizeToFit()
+//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
 
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
+//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
 
-        // set order of toolbar
-        toolbar.setItems([flexibleSpace, doneButton], animated: false)
-        userTextView.inputAccessoryView = toolbar
-
-    }
-
-    @objc func doneClicked() {
-        viewWithTag(0)?.endEditing(true)
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.userTextView.resignFirstResponder()
-    }
-
-
-
-    func textViewDidEndEditing(_ textView: UITextView) {
+//        // set order of toolbar
+//        toolbar.setItems([flexibleSpace, doneButton], animated: false)
+//        userTextView.inputAccessoryView = toolbar
 
     }
+
+//    @objc func doneClicked() {
+//        viewWithTag(0)?.endEditing(true)
+//    }
+//
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//        // Configure the view for the selected state
+//    }
+//
+
+/*
+     !!!!!!!!! touchesBegan() is important for when user taps to edit TextView
+     NEED TO HIDE WHEN YOU WANT TO SELECT CELL
+     NEED TO UNHIDE WHEN YOU WANT TO SELECT TEXTVIEW
+     */
+
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.userTextView.resignFirstResponder()
+//    }
+
+
+//
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//
+//    }
+//
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        userTextView.isSelectable = true
+//    }
+
+
+
+
+
+    
 
     
     

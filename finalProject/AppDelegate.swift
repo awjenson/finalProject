@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 import Firebase
-//import IQKeyboardManagerSwift
+import IQKeyboardManagerSwift
 //import FirebaseAuthUI
 
 @UIApplicationMain
@@ -36,26 +36,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
 
-        // MARK: - Realm
         // Realms are like different persistent containers.
         // Location of our Realm file.
         print(Realm.Configuration.defaultConfiguration.fileURL!)
 
-        // Initalize new Realm object. Use the context to commit the current state to our persistent container (our Realm database)
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+
+        // Create a new piece of data that is going to be an object of the Data class
+
+
+        // Next, add our new item (Create in CRUD) and use the context to commit the current state to our persistent container (our Realm database)
+
         do {
             // both Realm() and .write could throw an error so that is why we put them inside do-try-catch statements. Since we're not using it we can make it an underscore.
             _ = try Realm()
 
         } catch {
-            print("Error initializing new realm, \(error)")
+            print("ERROR initializing new realm, \(error)")
         }
 
-        // MARK: - IQKeyboardManagerSwift
-        // I deleted this b/c it seemed to cause my app to crash.
-//        IQKeyboardManager.shared.enable = true
-//        IQKeyboardManager.shared.reloadLayoutIfNeeded()
-//        IQKeyboardManager.sharedManager().enable = true
-//        IQKeyboardManager.sharedManager().reloadLayoutIfNeeded()
+        // IQKeyboardManager code:
+        IQKeyboardManager.shared.enable = true
+
 
         // MARK: - UIStoryboard and UserDefaults
         // Determine which Storyboard to display at launch by checking if the user is already logged in.  See AppDelegate extension (related to UserDefaults and keeping users logged in on launch)

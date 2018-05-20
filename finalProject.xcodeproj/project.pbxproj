@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA015BF42073E36300A0342F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF32073E36300A0342F /* UIViewExtension.swift */; };
 		DA015BF72073E3FC00A0342F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */; };
+		DA037B5720AF03CF006AD2A7 /* EditUserTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA037B5620AF03CF006AD2A7 /* EditUserTextViewController.swift */; };
 		DA13C6422058468700762215 /* CategoryObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13C6412058468700762215 /* CategoryObjects.swift */; };
 		DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */; };
 		DA359C642043324F000190AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C632043324F000190AD /* AppDelegate.swift */; };
@@ -29,6 +30,8 @@
 		DA361D3D208B8E77007ACE59 /* ThisLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3C208B8E77007ACE59 /* ThisLoginViewController.swift */; };
 		DA361D40208BC8B6007ACE59 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
+		DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD420B103DC007220F4 /* CounterViewController.swift */; };
+		DA404BD720B11E0E007220F4 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD620B11E0E007220F4 /* SwipeViewController.swift */; };
 		DA59A246209D48AB008018D1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A245209D48AB008018D1 /* List.swift */; };
 		DA59A248209D48EA008018D1 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A247209D48EA008018D1 /* ListType.swift */; };
 		DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A249209E4845008018D1 /* NewUserList.swift */; };
@@ -67,6 +70,7 @@
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
 		DAA1022D2053808200A25EFC /* ExpandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022C2053808200A25EFC /* ExpandingCell.swift */; };
 		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
+		DAC6384A20B1CE310004891D /* GoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6384920B1CE310004891D /* GoalItem.swift */; };
 		DAC8DFF4206C86D2005D627B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF3206C86D2005D627B /* Colors.swift */; };
 		DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF5206ED93B005D627B /* TopicData.swift */; };
 		DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF7206EFB13005D627B /* NowData.swift */; };
@@ -88,6 +92,7 @@
 		9E01CAF586EE06F8F3C5C4CA /* Pods_finalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA015BF32073E36300A0342F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		DA037B5620AF03CF006AD2A7 /* EditUserTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserTextViewController.swift; sourceTree = "<group>"; };
 		DA13C6412058468700762215 /* CategoryObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryObjects.swift; sourceTree = "<group>"; };
 		DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectedPerson.swift; sourceTree = "<group>"; };
 		DA359C602043324F000190AD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +115,8 @@
 		DA361D3C208B8E77007ACE59 /* ThisLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisLoginViewController.swift; sourceTree = "<group>"; };
 		DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		DA404BD420B103DC007220F4 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		DA404BD620B11E0E007220F4 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		DA59A245209D48AB008018D1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		DA59A247209D48EA008018D1 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
 		DA59A249209E4845008018D1 /* NewUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserList.swift; sourceTree = "<group>"; };
@@ -148,6 +155,7 @@
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
 		DAA1022C2053808200A25EFC /* ExpandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingCell.swift; sourceTree = "<group>"; };
 		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
+		DAC6384920B1CE310004891D /* GoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalItem.swift; sourceTree = "<group>"; };
 		DAC8DFF3206C86D2005D627B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DAC8DFF5206ED93B005D627B /* TopicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicData.swift; sourceTree = "<group>"; };
 		DAC8DFF7206EFB13005D627B /* NowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowData.swift; sourceTree = "<group>"; };
@@ -279,12 +287,12 @@
 		DA359C792043722A000190AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DA5EE4AE2090E7F300B54438 /* PostViewController.swift */,
 				DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */,
 				DA78988C2052EFA1005046D8 /* Home2ViewController.swift */,
 				DA7898822051E39E005046D8 /* ProfileViewController.swift */,
 				DA59A249209E4845008018D1 /* NewUserList.swift */,
 				DA78987520507C86005046D8 /* ProfileTableViewCell.swift */,
+				DA037B5620AF03CF006AD2A7 /* EditUserTextViewController.swift */,
 				DA5AEDA120769C190094AA57 /* Login */,
 				DA5AEDAC2076FFDD0094AA57 /* Journal */,
 			);
@@ -325,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */,
-				DA5AEDA420769C800094AA57 /* RegisterViewController.swift */,
 				DA78987F2051CEF1005046D8 /* OLD */,
 			);
 			path = Login;
@@ -334,6 +341,10 @@
 		DA5AEDAC2076FFDD0094AA57 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				DA404BD620B11E0E007220F4 /* SwipeViewController.swift */,
+				DA404BD420B103DC007220F4 /* CounterViewController.swift */,
+				DAC6384920B1CE310004891D /* GoalItem.swift */,
+				DA359C7C20489C72000190AD /* Goal.swift */,
 				DAA1022420537A2400A25EFC /* JournalViewController.swift */,
 				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
 				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
@@ -345,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				DADE646F204E326400BEBF95 /* Vision.swift */,
-				DA359C7C20489C72000190AD /* Goal.swift */,
 				DADE646D204E326400BEBF95 /* DetailedTip.swift */,
 				DADE646E204E326400BEBF95 /* TipOld.swift */,
 				DAA1022020534E0300A25EFC /* HomeMenu.swift */,
@@ -397,6 +407,8 @@
 		DA78987F2051CEF1005046D8 /* OLD */ = {
 			isa = PBXGroup;
 			children = (
+				DA5AEDA420769C800094AA57 /* RegisterViewController.swift */,
+				DA5EE4AE2090E7F300B54438 /* PostViewController.swift */,
 				DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */,
 				DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */,
 				DA361D3A208AB32D007ACE59 /* NewRegisterViewController.swift */,
@@ -532,6 +544,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -545,6 +558,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -586,6 +600,7 @@
 				DAA1022D2053808200A25EFC /* ExpandingCell.swift in Sources */,
 				DA015BF42073E36300A0342F /* UIViewExtension.swift in Sources */,
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
+				DA404BD720B11E0E007220F4 /* SwipeViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
 				DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */,
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
@@ -593,6 +608,7 @@
 				DA361D3120844F41007ACE59 /* NewLoginViewController.swift in Sources */,
 				DA5EE4B62090EF7300B54438 /* PostHeaderCell.swift in Sources */,
 				DA78988F2053102E005046D8 /* Home2TableViewCell.swift in Sources */,
+				DAC6384A20B1CE310004891D /* GoalItem.swift in Sources */,
 				DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */,
 				DA359C7D20489C72000190AD /* Goal.swift in Sources */,
 				DA361D40208BC8B6007ACE59 /* SubscriptionViewController.swift in Sources */,
@@ -616,6 +632,7 @@
 				DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */,
 				DA5EE4BE209149A600B54438 /* UITableView+Utility.swift in Sources */,
 				DA5AEDA320769C5E0094AA57 /* LoginViewController.swift in Sources */,
+				DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */,
 				DA361D2F2084273E007ACE59 /* User.swift in Sources */,
 				DA361D2320818BDF007ACE59 /* Constants.swift in Sources */,
 				DA714C1B204E083700BCBB3D /* HomeTipTableViewCell.swift in Sources */,
@@ -628,6 +645,7 @@
 				DA361D3D208B8E77007ACE59 /* ThisLoginViewController.swift in Sources */,
 				DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */,
 				DA13C6422058468700762215 /* CategoryObjects.swift in Sources */,
+				DA037B5720AF03CF006AD2A7 /* EditUserTextViewController.swift in Sources */,
 				DA59A246209D48AB008018D1 /* List.swift in Sources */,
 				DA7898812051D72A005046D8 /* HomeHeaderCollectionReusableView.swift in Sources */,
 				DA5AEDA720769D0E0094AA57 /* WelcomeViewController.swift in Sources */,
