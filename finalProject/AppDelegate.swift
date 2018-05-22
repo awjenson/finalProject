@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import Firebase
 import IQKeyboardManagerSwift
 //import FirebaseAuthUI
@@ -34,29 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Firebase
         // Initialize and configure Firebase
         FirebaseApp.configure()
-
-
-        // Realms are like different persistent containers.
-        // Location of our Realm file.
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
-
-        // Create a new piece of data that is going to be an object of the Data class
-
-
-        // Next, add our new item (Create in CRUD) and use the context to commit the current state to our persistent container (our Realm database)
-
-        do {
-            // both Realm() and .write could throw an error so that is why we put them inside do-try-catch statements. Since we're not using it we can make it an underscore.
-            _ = try Realm()
-
-        } catch {
-            print("ERROR initializing new realm, \(error)")
-        }
 
         // IQKeyboardManager code:
         IQKeyboardManager.shared.enable = true

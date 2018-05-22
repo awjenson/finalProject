@@ -9,18 +9,18 @@
 import Foundation
 import Firebase
 
-// Firebase
-class GoalItem {
-
-    var name = ""
-    var count:Int = 0
-    var timestamp = ""
-    var color = ""
-}
+// Firebase Test
+//class GoalItemOLD {
+//
+//    var name = ""
+//    var count:Int = 0
+//    var timestamp = ""
+//    var color = ""
+//}
 
 // Change name later
 
-struct GroceryItem {
+struct GoalItem {
 
     let ref: DatabaseReference? // not set until snapshot received from Firebase
     let key: String  // not set until snapshot received from Firebase

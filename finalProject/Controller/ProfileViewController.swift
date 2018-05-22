@@ -395,6 +395,15 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
 
+    func changeTextViewBoarderColor(_ cell: ProfileTableViewCell) {
+
+        print("changeTextViewBoarderColor()")
+        if canEditText == true {
+            cell.userTextView.layer.borderColor = UIColor.red.cgColor
+            cell.userTextView.layer.borderWidth = 2
+        }
+    }
+
 
     @IBAction func saveButtonTapped(_ sender: UIButton) {
 
@@ -402,10 +411,9 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         if canEditText == true {
             print("EDITing is enabled")
-            self.profileHeaderView.backgroundColor = UIColor.red
-            self.saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-
-
+            self.profile3TableView.reloadData()
+            self.saveButton.setTitleColor(UIColor.red, for: .normal)
+            self.saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         } else {
             print("stop all editing")
             self.view.endEditing(true)
@@ -491,11 +499,14 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         // Set the delegate to be the VC when you create the cell
         cell.userTextView.delegate = self
         cell.userTextView.layer.borderWidth = 0.5
+        changeTextViewBoarderColor(cell)
 
         // Line separator (extend to left)
         cell.preservesSuperviewLayoutMargins = false
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
+
+
 
         return cell
     }

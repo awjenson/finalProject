@@ -10,7 +10,6 @@ import UIKit
 import Firebase
 
 /*
-
  Could create UI that allows users to follow filtered information based on interests and preferences.
 
     Example, you could follow male health tips or quotes from a specfic book or quotes from a successful athlete, muscian, actor, business leader
@@ -34,7 +33,6 @@ class UserInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     @IBAction func dismissButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -48,14 +46,11 @@ class UserInfoViewController: UIViewController {
         do  {
             try Auth.auth().signOut()
 
-//            performSegue(withIdentifier: "LogoutSegue", sender: self)
-
             let initialViewController = UIStoryboard.initialViewController(for: .login)
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
         } catch {
-            print(error)
-            // TODO: Update UILabel for user to know there was an error
+            print("ERROR: logout - \(error)")
             createAlert(title: "Error", message: error.localizedDescription)
         }
 

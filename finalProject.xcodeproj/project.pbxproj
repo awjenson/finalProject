@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA015BF42073E36300A0342F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF32073E36300A0342F /* UIViewExtension.swift */; };
 		DA015BF72073E3FC00A0342F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */; };
-		DA037B5720AF03CF006AD2A7 /* EditUserTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA037B5620AF03CF006AD2A7 /* EditUserTextViewController.swift */; };
 		DA13C6422058468700762215 /* CategoryObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13C6412058468700762215 /* CategoryObjects.swift */; };
 		DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */; };
 		DA359C642043324F000190AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C632043324F000190AD /* AppDelegate.swift */; };
@@ -31,7 +30,6 @@
 		DA361D40208BC8B6007ACE59 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD420B103DC007220F4 /* CounterViewController.swift */; };
-		DA404BD720B11E0E007220F4 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD620B11E0E007220F4 /* SwipeViewController.swift */; };
 		DA59A246209D48AB008018D1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A245209D48AB008018D1 /* List.swift */; };
 		DA59A248209D48EA008018D1 /* ListType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A247209D48EA008018D1 /* ListType.swift */; };
 		DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A249209E4845008018D1 /* NewUserList.swift */; };
@@ -92,7 +90,6 @@
 		9E01CAF586EE06F8F3C5C4CA /* Pods_finalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA015BF32073E36300A0342F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
-		DA037B5620AF03CF006AD2A7 /* EditUserTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserTextViewController.swift; sourceTree = "<group>"; };
 		DA13C6412058468700762215 /* CategoryObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryObjects.swift; sourceTree = "<group>"; };
 		DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectedPerson.swift; sourceTree = "<group>"; };
 		DA359C602043324F000190AD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +113,6 @@
 		DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA404BD420B103DC007220F4 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
-		DA404BD620B11E0E007220F4 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		DA59A245209D48AB008018D1 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		DA59A247209D48EA008018D1 /* ListType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListType.swift; sourceTree = "<group>"; };
 		DA59A249209E4845008018D1 /* NewUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserList.swift; sourceTree = "<group>"; };
@@ -287,12 +283,13 @@
 		DA359C792043722A000190AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA78987F2051CEF1005046D8 /* OLD */,
+				DAC6384B20B3A29C0004891D /* Logout */,
 				DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */,
 				DA78988C2052EFA1005046D8 /* Home2ViewController.swift */,
 				DA7898822051E39E005046D8 /* ProfileViewController.swift */,
 				DA59A249209E4845008018D1 /* NewUserList.swift */,
 				DA78987520507C86005046D8 /* ProfileTableViewCell.swift */,
-				DA037B5620AF03CF006AD2A7 /* EditUserTextViewController.swift */,
 				DA5AEDA120769C190094AA57 /* Login */,
 				DA5AEDAC2076FFDD0094AA57 /* Journal */,
 			);
@@ -333,7 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */,
-				DA78987F2051CEF1005046D8 /* OLD */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -341,7 +337,6 @@
 		DA5AEDAC2076FFDD0094AA57 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
-				DA404BD620B11E0E007220F4 /* SwipeViewController.swift */,
 				DA404BD420B103DC007220F4 /* CounterViewController.swift */,
 				DAC6384920B1CE310004891D /* GoalItem.swift */,
 				DA359C7C20489C72000190AD /* Goal.swift */,
@@ -410,7 +405,6 @@
 				DA5AEDA420769C800094AA57 /* RegisterViewController.swift */,
 				DA5EE4AE2090E7F300B54438 /* PostViewController.swift */,
 				DA361D3F208BC8B6007ACE59 /* SubscriptionViewController.swift */,
-				DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */,
 				DA361D3A208AB32D007ACE59 /* NewRegisterViewController.swift */,
 				DA5AEDA220769C5E0094AA57 /* LoginViewController.swift */,
 				DA361D3C208B8E77007ACE59 /* ThisLoginViewController.swift */,
@@ -435,6 +429,14 @@
 				DA5EE4BD209149A600B54438 /* UITableView+Utility.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DAC6384B20B3A29C0004891D /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */,
+			);
+			path = Logout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,8 +547,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -559,8 +559,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -600,7 +598,6 @@
 				DAA1022D2053808200A25EFC /* ExpandingCell.swift in Sources */,
 				DA015BF42073E36300A0342F /* UIViewExtension.swift in Sources */,
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
-				DA404BD720B11E0E007220F4 /* SwipeViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
 				DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */,
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
@@ -645,7 +642,6 @@
 				DA361D3D208B8E77007ACE59 /* ThisLoginViewController.swift in Sources */,
 				DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */,
 				DA13C6422058468700762215 /* CategoryObjects.swift in Sources */,
-				DA037B5720AF03CF006AD2A7 /* EditUserTextViewController.swift in Sources */,
 				DA59A246209D48AB008018D1 /* List.swift in Sources */,
 				DA7898812051D72A005046D8 /* HomeHeaderCollectionReusableView.swift in Sources */,
 				DA5AEDA720769D0E0094AA57 /* WelcomeViewController.swift in Sources */,
