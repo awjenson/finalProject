@@ -28,34 +28,7 @@ struct Constants {
         static let SignedIn = "onSignInCompleted"
     }
 
-    struct DbChild {
-        static let Messages = "Messages"
-        static let GoalItems = "GoalItems"
-        static let ProfileUserData = "ProfileUserData"
-
-    }
-
-    struct Message {
-        static let Sender = "Sender"
-        static let Text = "Text"
-        static let TimeStamp = "TimeStamp"
-    }
-
-    struct GoalItem {
-        static let Name = "Name"
-        static let Count = "Count"
-        static let TimeStamp = "TimeStamp"
-        static let Color = "Color"
-    }
-
-    struct ProfileUserData {
-        static let Sender = "Sender"
-        static let DailyRoutine = "DailyRoutine"
-        static let OneYearGoal = "OneYearGoal"
-        static let LifetimeGoal = "LifetimeGoal"
-        static let Vision = "Vision"
-        static let TimeStamp = "TimeStamp"
-    }
+    // Journal
 
     struct SelectedMood {
         static let Button0 = "Sad"

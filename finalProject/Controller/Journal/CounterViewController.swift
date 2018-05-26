@@ -15,26 +15,38 @@ import ChameleonFramework
 
 class CounterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    // MARK: - Outlets
+
     @IBOutlet weak var counterTableView: UITableView!
+
+    // MARK: - Properties
 
     // an empty JournalMessage array to contain the user's messages
     var items: [GoalItem] = []
+    // var items = [GoalItem]()
 
     var ref: DatabaseReference!
     fileprivate var _refHandle: DatabaseHandle!
     fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        print("Counter View Controller Will Appear")
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         signedInStatus(isSignedIn: true)
 
-//        loadGoals()
+    }
 
-        // Remove cell line seperators
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
 
-
-
+        print("Counter View Controller Will Disappear")
     }
 
     func signedInStatus(isSignedIn: Bool) {
@@ -45,7 +57,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
             counterTableView.allowsMultipleSelectionDuringEditing = false
 
-            configureDatabase()
+//            configureDatabase()
             retrieveGoalItems()
 
         }
@@ -53,14 +65,12 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func configureDatabase() {
 
-        let currentUID = User.current.uid
-        print("CurrentUID: \(currentUID)")
-
         // This is the path BEFORE .child("GoalItems").child(currentUID).child("typed goal")
-        ref = Database.database().reference().child(Constants.DbChild.GoalItems).child(currentUID)
+        ref = Database.database().reference().child(FirebaseConstants.DbChild.GoalItems).child(User.current.uid)
     }
 
-    // Create the retrieveMessages method
+    // TODO: Create the retrieveMessages method return Snapshot
+
     func retrieveGoalItems() {
         // listen for new messages in the firebase database with 'observe'
         // Configure database to sync messages
@@ -70,80 +80,53 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         // add .child(currentUID) so only current user can see their data
 
         // *** b/c of for loop, switch from .childAdded to .value
-        _refHandle = ref.observe(.value) { (snapshot) in
 
-            print("PATH:")
-            print(self.ref)
-            print("- - -")
 
-            var newItems: [GoalItem] = []
-            for child in snapshot.children {
-                if let snapshot = child as? DataSnapshot,
-                    // This is where ref and key get added to the property
-                    let goalItem = GoalItem(snapshot: snapshot) {
 
-                    print("ENTER HERE?")
+        // ***
 
-                    newItems.append(goalItem)
-                    print("NEW ITEMS")
-                    print(newItems)
-                    print("- - -")
-                }
-            }
-            print("SNAPSHOT")
-            print(snapshot)
-            print("- - -")
-
+        GoalItemService.readGoals(for: User.current) { (newItems) in
             self.items = newItems
-            print("ITEMS")
-            print(self.items)
-            print("- - -")
+            print("INSIDER GOALITEMSERVICE COMPLETION CLOSURE")
             self.counterTableView.reloadData()
-
-
-
-
-
-
-
-//            // grab data from snapshot and format it into a custom JournalMessage object
-//            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
-//            let snapshotValue = snapshot.value as! Dictionary<String,AnyObject>
-//
-//            // use snapshotValue to pull-out values of keys
-//            let name = snapshotValue[Constants.GoalItem.Name]!
-//            let count = snapshotValue[Constants.GoalItem.Count]!
-//            let timeStamp = snapshotValue[Constants.GoalItem.TimeStamp]
-//
-//            // now save these values into a new GoalItem object
-//            let newGoalItem = GoalItem()
-//            newGoalItem.name = name as! String
-//            newGoalItem.count = count as! Int
-//            newGoalItem.timestamp = timeStamp as? String ?? ""
-//
-//            self.goalItemArray.append(newGoalItem)
-//
-//            // TODO: Add response messages here based on button tapped
-//
-//            // re-configure table view and reload data in table view
-//            performUIUpdatesOnMain {
-////                self.configureTableView()
-//                self.counterTableView.reloadData()
-//            }
         }
+
+//
+//
+//        _refHandle = ref.observe(.value) { (snapshot) in
+//
+//            print("PATH:")
+//            print(self.ref)
+//            print("- - -")
+//
+//            var newItems: [GoalItem] = []
+//            for child in snapshot.children {
+//                if let snapshot = child as? DataSnapshot,
+//                    // This is where ref and key get added to the property
+//                    let goalItem = GoalItem(snapshot: snapshot) {
+//
+//                    print("ENTER HERE?")
+//
+//                    newItems.append(goalItem)
+//                    print("NEW ITEMS")
+//                    print(newItems)
+//                    print("- - -")
+//                }
+//            }
+//
+//            self.items = newItems
+//            print("ITEMS")
+//            print(self.items)
+//            print("- - -")
+//            self.counterTableView.reloadData()
+//        }
     }
-
-
-
-
-
 
 
     // MARK: UITableView Delegate methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-
 
     // Future Idea: Each sunday, the color/word cycle starts over. Increases until Saturday.
     // Goal would be to encourge people to take a bite out of a big goal, and provide encouragement for accomplishing something each week.
@@ -153,13 +136,15 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     // Make the user enjoy visiting this VC.
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! CounterTableViewCell
+
         let goalItemRow = items[indexPath.row]
 
-        cell.textLabel?.text = goalItemRow.name
+        cell.titleLabel.text = goalItemRow.name
 
         // This data gets updated in DetailTextLabel Text
         increaseCellCount(cell, newNumber: goalItemRow.count)
+
 
         // Line separator (extend to left)
         cell.preservesSuperviewLayoutMargins = false
@@ -177,9 +162,18 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         if editingStyle == .delete {
             let goalItemRow = items[indexPath.row]
             print("GROCERY ITEM TO DELETE")
-            print(goalItemRow.ref)
-            print("- - -")
-            // goalItemRow.ref should be the path all the way to the lowercase key name.
+            print("goalItemRow: \(goalItemRow)")
+
+            // Firebase (option A)
+//            // Code doesn't seem as efficient as code below to removeValue()
+//            GoalItemService.deleteGoal(for: User.current, goal: goalItemRow, success: { (success) in
+//                if success == true {
+//                    print("SUCCESS WRITING GOAL: \(success)")
+//                    return
+//                }
+//            })
+
+            // Firebase (option B)
             goalItemRow.ref?.removeValue()
         }
     }
@@ -189,14 +183,17 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         let goalItemRow = items[indexPath.row]
         var countNumber = goalItemRow.count
         countNumber += 1
-        increaseCellCount(cell, newNumber: countNumber)
+        increaseCellCount(cell as! CounterTableViewCell, newNumber: countNumber)
+
+        // Firebase
         goalItemRow.ref?.updateChildValues([
-            Constants.GoalItem.Count: countNumber
+            FirebaseConstants.GoalItem.Count: countNumber
             ])
     }
 
-    func increaseCellCount(_ cell: UITableViewCell, newNumber: Int) {
-        cell.detailTextLabel?.text = "\(newNumber)"
+    func increaseCellCount(_ cell: CounterTableViewCell, newNumber: Int) {
+        cell.countLabel.text = " \(newNumber)"
+        cell.bodyLabel.text = ""
     }
 
     // MARK: - IBActions
@@ -221,18 +218,17 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
             let goalItem = GoalItem(name: text, timestamp: currentDate, count: 0)
 
-            // *** This is creating the ref and key, right???
-
-            let goalItemRef = self.ref.child(text.lowercased())
-
-            // write data toAnyObject() which will store data in properties inside Model Class
-            goalItemRef.setValue(goalItem.toAnyObject())
+            // Firebase
+            GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
+                if success == true {
+                    print("SUCCESS WRITING GOAL: \(success)")
+                    return
+                }
+            })
         }
 
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .cancel)
-
-
 
         // In action, setup textField
         var textField = UITextField()
@@ -245,26 +241,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         alert.addAction(cancelAction)
 
         present(alert, animated: true, completion: nil)
-
-    }
-
-    func sendGoalItem(child pathString: String, _ goalItemDictionary: [String:AnyObject?]) {
-
-        let currentUID = User.current.uid
-        print("CurrentUID: \(currentUID)")
-
-        let goalItemsDB = ref.child(Constants.DbChild.GoalItems).child(currentUID)
-        // like specifying "/Messages/[some_auto_id]"
-        // Then, .setValue, sets a value to the key (key value pair)
-        goalItemsDB.child(pathString).setValue(goalItemDictionary) {
-            (error, reference) in
-            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-            if error != nil {
-                print(error!)
-            } else {
-                print("Goal Item saved successfully")
-            }
-        }
     }
 
 

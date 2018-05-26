@@ -27,8 +27,7 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var journalTableView: UITableView!
 
-
-
+    // Created individual buttons because Outlet Collection did not work
     @IBOutlet weak var mood0Button: UIButton!
     @IBOutlet weak var mood1Button: UIButton!
     @IBOutlet weak var mood2Button: UIButton!
@@ -43,15 +42,10 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var mood11Button: UIButton!
 
 
-
-
-
-
-
-
-    
-
     // MARK: - Properties
+
+    // pull to refresh tableView
+    let refreshControl = UIRefreshControl()
 
     var advice = JournalAdvice(quote: "", source: "", question: "")
 
@@ -67,12 +61,17 @@ class JournalViewController: UIViewController {
     let calendar = Calendar.current
 
     // an empty JournalMessage array to contain the user's messages
-    var messageArray = [JournalMessage]()
-
-
+//    var messageArray = [JournalMessage]()
+    var messageItems: [MessageItem] = []
 
     var expandingCellHeight: CGFloat = 200
     let expandingIndexRow = 0
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        print("Journal View Controller Will Appear")
+    }
 
 
     override func viewDidLoad() {
@@ -81,6 +80,57 @@ class JournalViewController: UIViewController {
         signedInStatus(isSignedIn: true)
 
         dayOfWeekAndHour()
+
+        setupUI()
+
+        setupTableView()
+
+        setupKeyboardObservers()
+    }
+
+    func setupTableView() {
+        // ...
+
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadMessages), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        journalTableView.addSubview(refreshControl)
+
+    }
+
+    @objc func reloadMessages() {
+
+        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
+        if self.refreshControl.isRefreshing {
+            // Reload time based array
+            loadMessagesAll()
+            self.refreshControl.endRefreshing()
+        }
+
+    }
+
+    func loadMessagesAll() {
+
+        MessageItemService.readMessagesAll(for: User.current) { (retrieveAllMessages) in
+            self.messageItems = retrieveAllMessages
+
+            var number = 0
+            print("THREAD: \(Thread.current) + \(number)")
+            number += 1
+            self.configureTableView()
+            self.scrollToBottom()
+            self.journalTableView.reloadData()
+
+        }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        print("Journal View Controller Will Disappear")
+    }
+
+    func setupUI() {
 
         quoteLabel.text = advice.quote
         authorLabel.text = advice.source
@@ -101,9 +151,6 @@ class JournalViewController: UIViewController {
         mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
         mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
         mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
-
-        setupKeyboardObservers()
-
     }
 
     func setupKeyboardObservers() {
@@ -322,8 +369,6 @@ class JournalViewController: UIViewController {
     }
 
 
-
-
     deinit {
         // The database observer doesn't stop listen for changes in the database when the VC goes off screen. So if the observer isn't removed then the observer will continue to sync data to local memory casusing excessive memory use. So when an observer is no longer needed we should remove it. In this case, remove the observer when the VC is deinitalized.
 
@@ -375,13 +420,77 @@ class JournalViewController: UIViewController {
     }
 
     func configureDatabase() {
-        ref = Database.database().reference()
+//        ref = Database.database().reference()
+        ref = Database.database().reference().child(FirebaseConstants.DbChild.Messages).child(User.current.uid)
     }
 
     func configureTableView() {
         journalTableView.rowHeight = UITableViewAutomaticDimension
         journalTableView.estimatedRowHeight = 100.0
     }
+
+    // Create the retrieveMessages method
+    func retrieveMessages() {
+        // listen for new messages in the firebase database with 'observe'
+        // Configure database to sync messages
+        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
+        // ask Firebase to 'observe' for any new child's events ('childAdded')
+
+        MessageItemService.readMessagesLastTen(for: User.current) { (retrievedMessages) in
+            self.messageItems = retrievedMessages
+
+            var number = 0
+            print("THREAD: \(Thread.current) + \(number)")
+            number += 1
+            self.configureTableView()
+            self.journalTableView.reloadData()
+            self.scrollToBottom()
+        }
+
+        // OLD CODE:
+//        let currentUID = User.current.uid
+//        print("CurrentUID: \(currentUID)")
+//
+//        // add .child(currentUID) so only current user can see their data
+//        _refHandle = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID).observe(.childAdded) { (snapshot) in
+//            // grab data from snapshot and format it into a custom JournalMessage object
+//            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
+//            let snapshotValue = snapshot.value as! Dictionary<String,String>
+//
+//            // use snapshotValue to pull-out values of keys
+//            let sender = snapshotValue[FirebaseConstants.Message.Sender]!
+//            let text = snapshotValue[FirebaseConstants.Message.Text]!
+//            let timeStamp = snapshotValue[FirebaseConstants.Message.TimeStamp]
+//
+//            // now save these values into a new JournalMessage object
+//            let newMessage = JournalMessage()
+//            newMessage.sender = sender
+//            newMessage.message = text
+//            newMessage.timestamp = timeStamp ?? ""
+//
+//            self.messageArray.append(newMessage)
+//
+//            // TODO: Add response messages here based on button tapped
+//
+//            // re-configure table view and reload data in table view
+//            performUIUpdatesOnMain {
+//                self.configureTableView()
+//                self.journalTableView.reloadData()
+//                self.scrollToBottom()
+//            }
+//        }
+
+    }
+
+
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.messageItems.count-1, section: 0)
+            self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+
+
 
 
 
@@ -403,11 +512,23 @@ class JournalViewController: UIViewController {
 
         // data we want to save in our database
         if !messageTextView.text!.isEmpty {
-            let messageDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
-                                     Constants.Message.Text: messageTextView.text! as String,
-                                     Constants.Message.TimeStamp: currentDate]
-            sendMessage(messageDictionary)
+//            let messageDictionary = [FirebaseConstants.Message.Sender: Auth.auth().currentUser?.email,
+//                                     FirebaseConstants.Message.Text: messageTextView.text! as String,
+//                                     FirebaseConstants.Message.TimeStamp: currentDate]
+
+            let messageItem = MessageItem(message: messageTextView.text, timestamp: currentDate)
+
+            MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
+                if success == true {
+                    print("SUCCESS WRITING MESSAGE: \(success)")
+                    self.messageTextView.text = ""
+                    self.messageTextView.isEditable = true
+                    self.sendButton.isEnabled = true
+                }
+            })
+//            sendMessage(messageDictionary)
         } else {
+            print("ERROR: NOT ABLE TO SEND MESSAGE")
             sendButton.isEnabled = true
         }
     }
@@ -417,7 +538,8 @@ class JournalViewController: UIViewController {
         let currentUID = User.current.uid
         print("CurrentUID: \(currentUID)")
 
-        let messagesDB = ref.child(Constants.DbChild.Messages).child(currentUID)
+        // ref = Database.database().reference()
+        let messagesDB = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID)
         // like specifying "/Messages/[some_auto_id]"
         // Then, .setValue, sets a value to the key (key value pair)
         messagesDB.childByAutoId().setValue(messageDictionary) {
@@ -428,64 +550,17 @@ class JournalViewController: UIViewController {
             } else {
                 print("Message saved successfully")
                 print("CurrentUID: \(currentUID)")
-                //                self.messageTextField.isEnabled = true
+
                 self.messageTextView.isEditable = true
                 self.sendButton.isEnabled = true
-                //                self.messageTextField.text = ""
                 self.messageTextView.text = ""
             }
         }
     }
 
-    // Create the retrieveMessages method
-    func retrieveMessages() {
-        // listen for new messages in the firebase database with 'observe'
-        // Configure database to sync messages
-        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
-        // ask Firebase to 'observe' for any new child's events ('childAdded')
-
-        let currentUID = User.current.uid
-        print("CurrentUID: \(currentUID)")
-
-        // add .child(currentUID) so only current user can see their data
-        _refHandle = ref.child(Constants.DbChild.Messages).child(currentUID).observe(.childAdded) { (snapshot) in
-            // grab data from snapshot and format it into a custom JournalMessage object
-            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
-            let snapshotValue = snapshot.value as! Dictionary<String,String>
-
-            // use snapshotValue to pull-out values of keys
-            let sender = snapshotValue[Constants.Message.Sender]!
-            let text = snapshotValue[Constants.Message.Text]!
-            let timeStamp = snapshotValue[Constants.Message.TimeStamp]
-
-            // now save these values into a new JournalMessage object
-            let newMessage = JournalMessage()
-            newMessage.sender = sender
-            newMessage.message = text
-            newMessage.timestamp = timeStamp ?? ""
-
-            self.messageArray.append(newMessage)
-
-            // TODO: Add response messages here based on button tapped
-
-            // re-configure table view and reload data in table view
-            performUIUpdatesOnMain {
-                self.configureTableView()
-                self.journalTableView.reloadData()
-                self.scrollToBottom()
-            }
-        }
-    }
 
 
-    func scrollToBottom(){
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0)
-            self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-        }
-    }
-
-    // Notes:
+    // User Notes:
     // Replace anxious over Stressed
     // Optimistic
     // Loving
@@ -549,23 +624,34 @@ class JournalViewController: UIViewController {
         formatter.dateFormat = "MMMM d, yyyy h:mm a"
         let currentDate = formatter.string(from: now)
 
-        // Create a new reference inside our main database
 
-        // data we want to save in our database
+        // ****
+        let selectedButtonText = "Current Mood: \(selectedMood)"
+        let messageItem = MessageItem(message: selectedButtonText, timestamp: currentDate)
 
-        let moodDictionary = [Constants.Message.Sender: Auth.auth().currentUser?.email,
-                              Constants.Message.Text: "Current Mood: \(selectedMood)",
-            Constants.Message.TimeStamp: currentDate]
-        sendMood(moodDictionary)
+        MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
+            if success == true {
+                print("SUCCESS WRITING BUTTON MOOD: \(success)")
+            }
+        })
+
+
+
+
+//        let moodDictionary = [FirebaseConstants.Message.Sender: Auth.auth().currentUser?.email,
+//                              FirebaseConstants.Message.Text: "Current Mood: \(selectedMood)",
+//            FirebaseConstants.Message.TimeStamp: currentDate]
+//        sendMood(moodDictionary)
 
     }
 
     func sendMood(_ moodDictionary: [String:String?]) {
 
+
         let currentUID = User.current.uid
         print("CurrentUID: \(currentUID)")
 
-        let messagesDB = ref.child(Constants.DbChild.Messages).child(currentUID)
+        let messagesDB = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID)
         // like specifying "/Messages/[some_auto_id]"
         // Then, .setValue, sets a value to the key (key value pair)
         messagesDB.childByAutoId().setValue(moodDictionary) {
@@ -598,7 +684,7 @@ extension JournalViewController: GrowingTextViewDelegate {
 extension JournalViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageArray.count
+        return messageItems.count
     }
 
     /* Configuring the Timestamp with DateFormatter:
@@ -608,9 +694,11 @@ extension JournalViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JournalTableViewCell
 
+        let messageItemRow = messageItems[indexPath.row]
+
         // To change UI of cell, see JournalTableViewCell.
-        cell.dateLabel.text = messageArray[indexPath.row].timestamp
-        cell.messageLabel.text = messageArray[indexPath.row].message
+        cell.dateLabel.text = messageItemRow.timestamp
+        cell.messageLabel.text = messageItemRow.message
 
         return cell
     }
@@ -618,7 +706,33 @@ extension JournalViewController: UITableViewDataSource {
 
 extension JournalViewController: UITableViewDelegate {
     // Add table view delagate methods
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt indexPath")
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let messageItemRow = messageItems[indexPath.row]
+            print("ITEM TO DELETE")
+            print("goalItemRow: \(messageItemRow)")
+
+            //            // Code doesn't seem as efficient as code below to removeValue()
+            //            GoalItemService.deleteGoal(for: User.current, goal: goalItemRow, success: { (success) in
+            //                if success == true {
+            //                    print("SUCCESS WRITING GOAL: \(success)")
+            //                    return
+            //                }
+            //            })
+
+            // Firebase
+            messageItemRow.ref?.removeValue()
+        }
+    }
 }
 
 

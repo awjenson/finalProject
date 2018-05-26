@@ -9,17 +9,6 @@
 import Foundation
 import Firebase
 
-// Firebase Test
-//class GoalItemOLD {
-//
-//    var name = ""
-//    var count:Int = 0
-//    var timestamp = ""
-//    var color = ""
-//}
-
-// Change name later
-
 struct GoalItem {
 
     let ref: DatabaseReference? // not set until snapshot received from Firebase
@@ -40,9 +29,9 @@ struct GoalItem {
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
-            let name = value[Constants.GoalItem.Name] as? String,
-            let timestamp = value[Constants.GoalItem.TimeStamp] as? String,
-            let count = value[Constants.GoalItem.Count] as? Int else {
+            let name = value[FirebaseConstants.GoalItem.Name] as? String,
+            let timestamp = value[FirebaseConstants.GoalItem.TimeStamp] as? String,
+            let count = value[FirebaseConstants.GoalItem.Count] as? Int else {
                 return nil
         }
 
@@ -53,11 +42,12 @@ struct GoalItem {
         self.count = count
     }
 
+    //toAnyObject() which will store data in properties inside Model Class
     func toAnyObject() -> Any {
         return [
-            Constants.GoalItem.Name: name,
-            Constants.GoalItem.TimeStamp: timestamp,
-            Constants.GoalItem.Count: count
+            FirebaseConstants.GoalItem.Name: name,
+            FirebaseConstants.GoalItem.TimeStamp: timestamp,
+            FirebaseConstants.GoalItem.Count: count
         ]
     }
 }
