@@ -10,7 +10,10 @@ import Foundation
 
 struct FirebaseConstants {
 
+
+
     struct DbChild {
+        static let Users = "Users"
         static let Messages = "Messages"
         static let GoalItems = "GoalItems"
         static let ProfileUserData = "ProfileUserData"

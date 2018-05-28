@@ -86,40 +86,15 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         // ***
 
         GoalItemService.readGoals(for: User.current) { (newItems) in
+
+            if newItems.isEmpty {
+                self.items = newItems
+                self.createAlert(title: "ERROR", message: "Could not read from database. Check your Internet connection and try again.")
+            }
             self.items = newItems
             print("INSIDER GOALITEMSERVICE COMPLETION CLOSURE")
             self.counterTableView.reloadData()
         }
-
-//
-//
-//        _refHandle = ref.observe(.value) { (snapshot) in
-//
-//            print("PATH:")
-//            print(self.ref)
-//            print("- - -")
-//
-//            var newItems: [GoalItem] = []
-//            for child in snapshot.children {
-//                if let snapshot = child as? DataSnapshot,
-//                    // This is where ref and key get added to the property
-//                    let goalItem = GoalItem(snapshot: snapshot) {
-//
-//                    print("ENTER HERE?")
-//
-//                    newItems.append(goalItem)
-//                    print("NEW ITEMS")
-//                    print(newItems)
-//                    print("- - -")
-//                }
-//            }
-//
-//            self.items = newItems
-//            print("ITEMS")
-//            print(self.items)
-//            print("- - -")
-//            self.counterTableView.reloadData()
-//        }
     }
 
 
@@ -161,8 +136,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let goalItemRow = items[indexPath.row]
-            print("GROCERY ITEM TO DELETE")
-            print("goalItemRow: \(goalItemRow)")
 
             // Firebase (option A)
 //            // Code doesn't seem as efficient as code below to removeValue()
@@ -223,6 +196,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
                 if success == true {
                     print("SUCCESS WRITING GOAL: \(success)")
                     return
+                } else if success == false {
+                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your internet connection and try again.")
                 }
             })
         }

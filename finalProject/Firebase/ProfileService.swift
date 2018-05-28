@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseDatabase
 
 struct ProfileService {
 
@@ -17,12 +17,11 @@ struct ProfileService {
         ref.queryLimited(toLast: 1).observe(.childAdded) { (snapshot) in
 
             if snapshot.exists(),
-                let retrievedProfileItem = ProfileItem(snapshot: snapshot)  {
-                print("PROFILE SNAPSHOT VALUE: \(snapshot.value)")
+                let retrievedProfileItem = ProfileItem(snapshot: snapshot) {
 
-                return completion(retrievedProfileItem)
+                completion(retrievedProfileItem)
             }
-            print("NO PROFILE USER DATA IN SNAPSHOT: \(snapshot)")
+            print("ERROR: ProfileService.readProfileItemAll: \(snapshot)")
         }
     }
 
@@ -32,11 +31,10 @@ struct ProfileService {
 
             if snapshot.exists(),
                 let retrievedProfileItem = ProfileItem(snapshot: snapshot)  {
-                print("PROFILE SNAPSHOT VALUE: \(snapshot.value)")
 
-                return completion(retrievedProfileItem)
+                completion(retrievedProfileItem)
             }
-            print("NO PROFILE USER DATA IN SNAPSHOT: \(snapshot)")
+            print("ERROR: ProfileService.readProfileItemLastOne: \(snapshot)")
         }
     }
 
@@ -45,10 +43,9 @@ struct ProfileService {
         ref.setValue(profileItem.toAnyObject()) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
-                return success(false)
+                success(false)
             }
-
-            return success(true)
+            success(true)
         }
     }
 

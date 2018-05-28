@@ -11,6 +11,18 @@ import UIKit
 
 extension UIViewController {
 
+    // MARK: Check Internet Connection
+    func internetConnected() -> Bool {
+        if InternetConnection.isConnectedToNetwork() {
+            print("Internet connection available")
+            return true
+        }
+        else{
+            print("No internet connection available")
+            return false
+        }
+    }
+
     // MARK: Alert Views
     func createAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

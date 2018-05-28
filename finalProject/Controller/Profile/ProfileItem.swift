@@ -9,17 +9,9 @@
 // 438 and 562 of ProfileVC
 
 import Foundation
-import Firebase
+import FirebaseDatabase
 
 struct ProfileItem {
-
-    // OLD MODEL CODE:
-//    var sender = ""
-//    var timestamp = ""
-//    var dailyRoutine = ""
-//    var oneYearGoal = ""
-//    var lifetimeGoal = ""
-//    var vision = ""
 
     let ref: DatabaseReference? // not set until snapshot received from Firebase
     let key: String  // not set until snapshot received from Firebase
@@ -30,7 +22,6 @@ struct ProfileItem {
     let purpose: String
     let goals: String
     let fears: String
-
 
     init(timestamp: String, passion: String, purpose: String, goals: String, fears: String, key: String = "") {
         self.ref = nil

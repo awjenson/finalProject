@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseDatabase // Used to be Firebase but switched to FirebaseDatabase
 
 struct MessageItemService {
 
@@ -15,33 +15,28 @@ struct MessageItemService {
         let ref = DatabaseReference.toLocation(.writeMessage(uid: user.uid))
         ref.setValue(message.toAnyObject()) { (error, _) in
             if let error = error {
-                print("ARE WE IN THIS ERROR?")
+                print("ERROR: MessageItemService.writeMessage")
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
-
             return success(true)
         }
     }
 
     static func readMessagesLastTen(for user: User, completion: @escaping ([MessageItem]) -> Void) {
+
         let ref = DatabaseReference.toLocation(.readMessages(uid: user.uid))
         ref.queryLimited(toLast: 10).observe(.value) { (snapshot) in
-
-            print("PATH:")
-            print(ref)
-            print("- - -")
 
             // Create message array that will be sent to VC and displayed in table view
             var retrievedMessagesLastTen: [MessageItem] = []
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot, let messageItem = MessageItem(snapshot: snapshot) {
-
                     retrievedMessagesLastTen.append(messageItem)
-                    // pass newItems in closure
-                    completion(retrievedMessagesLastTen)
                 }
-            }
+            } //end of for loop
+            // for loop complete, now pass newItems in closure
+            completion(retrievedMessagesLastTen)
         }
     }
 
@@ -53,12 +48,11 @@ struct MessageItemService {
             var retrievedMessagesAll: [MessageItem] = []
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot, let messageItem = MessageItem(snapshot: snapshot) {
-
                     retrievedMessagesAll.append(messageItem)
-                    // pass newItems in closure
-                    completion(retrievedMessagesAll)
                 }
-            }
+            } // end of for loop
+            // for loop complete, pass newItems in closure
+            completion(retrievedMessagesAll)
         }
     }
 }

@@ -17,6 +17,7 @@
 		DA2B85FD20B9CC27005B7DD6 /* MessageItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B85FC20B9CC27005B7DD6 /* MessageItemService.swift */; };
 		DA2B85FF20B9EB0E005B7DD6 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B85FE20B9EB0E005B7DD6 /* ProfileService.swift */; };
 		DA2B860120B9EB52005B7DD6 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */; };
+		DA2B860320BB3A30005B7DD6 /* InternetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B860220BB3A30005B7DD6 /* InternetService.swift */; };
 		DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */; };
 		DA359C642043324F000190AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C632043324F000190AD /* AppDelegate.swift */; };
 		DA359C692043324F000190AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C672043324F000190AD /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */; };
 		DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */; };
 		DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1EC6520AA801E00EA9B3E /* EditButton.swift */; };
+		DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2977920BB76EC00868BF2 /* InternetConnection.swift */; };
 		DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */; };
 		F6316E291CF11E78B27FF61E /* Pods_finalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01CAF586EE06F8F3C5C4CA /* Pods_finalProject.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +91,7 @@
 		DA2B85FC20B9CC27005B7DD6 /* MessageItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItemService.swift; sourceTree = "<group>"; };
 		DA2B85FE20B9EB0E005B7DD6 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
+		DA2B860220BB3A30005B7DD6 /* InternetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetService.swift; sourceTree = "<group>"; };
 		DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectedPerson.swift; sourceTree = "<group>"; };
 		DA359C602043324F000190AD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA359C632043324F000190AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 		DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundButton.swift; sourceTree = "<group>"; };
 		DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInforViewController.swift; sourceTree = "<group>"; };
 		DAE1EC6520AA801E00EA9B3E /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
+		DAE2977920BB76EC00868BF2 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				DA359C632043324F000190AD /* AppDelegate.swift */,
+				DAE2977920BB76EC00868BF2 /* InternetConnection.swift */,
 				DA361D2B20840A25007ACE59 /* Storyboards */,
 				DA361D2A208409A8007ACE59 /* Firebase */,
 				DAA102292053801D00A25EFC /* Extensions */,
@@ -224,6 +229,7 @@
 		DA359C772043721F000190AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAE2977620BB72DF00868BF2 /* OLD */,
 				DA361D2E2084273E007ACE59 /* User.swift */,
 				DAC8DFF5206ED93B005D627B /* TopicData.swift */,
 				DAC8DFF7206EFB13005D627B /* NowData.swift */,
@@ -242,6 +248,7 @@
 		DA359C7820437225000190AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA015BF32073E36300A0342F /* UIViewExtension.swift */,
 				DA5EE4B22090ECD500B54438 /* Post */,
 				DAA1022620537D5200A25EFC /* Journal */,
 				DA78987D2050DBB6005046D8 /* Home */,
@@ -252,7 +259,6 @@
 				DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */,
 				DAA1021E2053448200A25EFC /* RoundImage.swift */,
 				DAA1022C2053808200A25EFC /* ExpandingCell.swift */,
-				DA015BF32073E36300A0342F /* UIViewExtension.swift */,
 				DAC8DFF3206C86D2005D627B /* Colors.swift */,
 			);
 			path = View;
@@ -274,9 +280,10 @@
 		DA361D2A208409A8007ACE59 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				DA361D322084566E007ACE59 /* UserService.swift */,
-				DA5EE4B92091062F00B54438 /* UserTextService.swift */,
+				DAE2977720BB732E00868BF2 /* OLD */,
 				DA15AE1420B84C2900EFC4C2 /* FirebaseConstants.swift */,
+				DA2B860220BB3A30005B7DD6 /* InternetService.swift */,
+				DA361D322084566E007ACE59 /* UserService.swift */,
 				DA2B85F820B8E174005B7DD6 /* DatabaseReference+Location.swift */,
 				DA2B85FA20B8E413005B7DD6 /* GoalItemService.swift */,
 				DA2B85FC20B9CC27005B7DD6 /* MessageItemService.swift */,
@@ -377,10 +384,10 @@
 		DAA102292053801D00A25EFC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DAE2977820BB767C00868BF2 /* OLD */,
 				DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */,
 				DA361D3420858297007ACE59 /* Storyboard+Utility.swift */,
 				DA361D3820896E5D007ACE59 /* Date+convertToString.swift */,
-				DA5EE4BD209149A600B54438 /* UITableView+Utility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -418,6 +425,29 @@
 				DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */,
 			);
 			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		DAE2977620BB72DF00868BF2 /* OLD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OLD;
+			sourceTree = "<group>";
+		};
+		DAE2977720BB732E00868BF2 /* OLD */ = {
+			isa = PBXGroup;
+			children = (
+				DA5EE4B92091062F00B54438 /* UserTextService.swift */,
+			);
+			path = OLD;
+			sourceTree = "<group>";
+		};
+		DAE2977820BB767C00868BF2 /* OLD */ = {
+			isa = PBXGroup;
+			children = (
+				DA5EE4BD209149A600B54438 /* UITableView+Utility.swift */,
+			);
+			path = OLD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -580,7 +610,9 @@
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
 				DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */,
+				DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */,
 				DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */,
+				DA2B860320BB3A30005B7DD6 /* InternetService.swift in Sources */,
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
 				DA606B512064969100DD14C0 /* Topic.swift in Sources */,
 				DA361D3120844F41007ACE59 /* NewLoginViewController.swift in Sources */,

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GrowingTextView
+import SVProgressHUD
 
 class JournalViewController: UIViewController {
 
@@ -77,6 +78,14 @@ class JournalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if InternetConnection.isConnectedToNetwork() {
+            print("Internet connection available")
+        }
+        else{
+            print("No internet connection available")
+            createAlert(title: "No Internet connection", message: "Please connect to the Internet and try again.")
+        }
+
         signedInStatus(isSignedIn: true)
 
         dayOfWeekAndHour()
@@ -89,13 +98,10 @@ class JournalViewController: UIViewController {
     }
 
     func setupTableView() {
-        // ...
-
         // add pull to refresh
         refreshControl.addTarget(self, action: #selector(reloadMessages), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         journalTableView.addSubview(refreshControl)
-
     }
 
     @objc func reloadMessages() {
@@ -106,7 +112,6 @@ class JournalViewController: UIViewController {
             loadMessagesAll()
             self.refreshControl.endRefreshing()
         }
-
     }
 
     func loadMessagesAll() {
@@ -120,7 +125,6 @@ class JournalViewController: UIViewController {
             self.configureTableView()
             self.scrollToBottom()
             self.journalTableView.reloadData()
-
         }
     }
 
@@ -379,6 +383,8 @@ class JournalViewController: UIViewController {
     func signedInStatus(isSignedIn: Bool) {
         if (isSignedIn) {
 
+            retrieveMessages()
+
             journalTableView.dataSource = self
             journalTableView.delegate = self
 
@@ -403,9 +409,8 @@ class JournalViewController: UIViewController {
 
             configureDatabase()
 
-            retrieveMessages()
-
             journalTableView.separatorStyle = .none
+
         }
     }
 
@@ -431,13 +436,23 @@ class JournalViewController: UIViewController {
 
     // Create the retrieveMessages method
     func retrieveMessages() {
+
+        SVProgressHUD.show()
+
         // listen for new messages in the firebase database with 'observe'
         // Configure database to sync messages
         // .reference() gets a DatabaseReference for the root of the app's Firebase Database
         // ask Firebase to 'observe' for any new child's events ('childAdded')
 
         MessageItemService.readMessagesLastTen(for: User.current) { (retrievedMessages) in
+
             self.messageItems = retrievedMessages
+
+            if self.messageItems.isEmpty {
+                self.createAlert(title: "ERROR", message: "Not able to retrieve data. Check your Internet connection and try again.")
+                SVProgressHUD.dismiss()
+                return
+            }
 
             var number = 0
             print("THREAD: \(Thread.current) + \(number)")
@@ -445,6 +460,8 @@ class JournalViewController: UIViewController {
             self.configureTableView()
             self.journalTableView.reloadData()
             self.scrollToBottom()
+            SVProgressHUD.dismiss()
+            return
         }
 
         // OLD CODE:
@@ -512,9 +529,6 @@ class JournalViewController: UIViewController {
 
         // data we want to save in our database
         if !messageTextView.text!.isEmpty {
-//            let messageDictionary = [FirebaseConstants.Message.Sender: Auth.auth().currentUser?.email,
-//                                     FirebaseConstants.Message.Text: messageTextView.text! as String,
-//                                     FirebaseConstants.Message.TimeStamp: currentDate]
 
             let messageItem = MessageItem(message: messageTextView.text, timestamp: currentDate)
 
@@ -524,39 +538,41 @@ class JournalViewController: UIViewController {
                     self.messageTextView.text = ""
                     self.messageTextView.isEditable = true
                     self.sendButton.isEnabled = true
+                    return
+                } else if success == false {
+                    print("ERROR: NOT ABLE TO SEND MESSAGE")
+                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your Internet connection and try again.")
+                    self.sendButton.isEnabled = true
+                    return
                 }
             })
-//            sendMessage(messageDictionary)
-        } else {
-            print("ERROR: NOT ABLE TO SEND MESSAGE")
-            sendButton.isEnabled = true
         }
     }
 
-    func sendMessage(_ messageDictionary: [String:String?]) {
-
-        let currentUID = User.current.uid
-        print("CurrentUID: \(currentUID)")
-
-        // ref = Database.database().reference()
-        let messagesDB = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID)
-        // like specifying "/Messages/[some_auto_id]"
-        // Then, .setValue, sets a value to the key (key value pair)
-        messagesDB.childByAutoId().setValue(messageDictionary) {
-            (error, reference) in
-            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-            if error != nil {
-                print(error!)
-            } else {
-                print("Message saved successfully")
-                print("CurrentUID: \(currentUID)")
-
-                self.messageTextView.isEditable = true
-                self.sendButton.isEnabled = true
-                self.messageTextView.text = ""
-            }
-        }
-    }
+//    func sendMessage(_ messageDictionary: [String:String?]) {
+//
+//        let currentUID = User.current.uid
+//        print("CurrentUID: \(currentUID)")
+//
+//        // ref = Database.database().reference()
+//        let messagesDB = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID)
+//        // like specifying "/Messages/[some_auto_id]"
+//        // Then, .setValue, sets a value to the key (key value pair)
+//        messagesDB.childByAutoId().setValue(messageDictionary) {
+//            (error, reference) in
+//            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
+//            if error != nil {
+//                print(error!)
+//            } else {
+//                print("Message saved successfully")
+//                print("CurrentUID: \(currentUID)")
+//
+//                self.messageTextView.isEditable = true
+//                self.sendButton.isEnabled = true
+//                self.messageTextView.text = ""
+//            }
+//        }
+//    }
 
 
 

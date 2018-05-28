@@ -10,7 +10,6 @@ import Foundation
 import FirebaseAuth.FIRUser
 import FirebaseDatabase
 
-
 // The service struct will act as an intermediary for communicating between our app and Firebase.
 
 struct UserService {
@@ -48,22 +47,18 @@ struct UserService {
     static func readUser(forUID uid: String, completion: @escaping (User?) -> Void) {
 
         // construct a relative path to the reference of the user's information in our database.
-        let ref = Database.database().reference().child("Users").child(uid)
+        let ref = Database.database().reference().child(FirebaseConstants.DbChild.Users).child(uid)
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
 
             // 2 handle snapshot containing data. If there is no data at the location read from, the value of the snapshot returned is nil.
             guard let user = User(snapshot: snapshot) else {
-
                 // user is nil, this is a new user
                 return completion(nil)
             }
-
             // user contains data, this is an existing user
             completion(user)
         })
     }
-
-    
 
 
     /*
@@ -87,29 +82,29 @@ struct UserService {
 
     // write to the database the first time a FIRUser is created at Login and a user JSON object will also be created for them within our database.
     
-    static func writeUser(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
-
-        print("Entered writeUser()")
-
-        // create a dictionary to store the username the user has provided inside our database
-        let userAttrs = ["username": username]
-
-        // specify a path for the location of where we want to store our data
-        let ref = Database.database().reference().child("Users").child(firUser.uid)
-        // write the data we want to store at the location
-        ref.setValue(userAttrs) { (error, ref) in
-            if let error = error {
-                assertionFailure(error.localizedDescription)
-                return completion(nil)
-            }
-
-            // read the user we just wrote to the database and create a user from the snapshot
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let user = User(snapshot: snapshot)
-                completion(user)
-            })
-        }
-    }
+//    static func writeUser(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
+//
+//        print("Entered writeUser()")
+//
+//        // create a dictionary to store the username the user has provided inside our database
+//        let userAttrs = ["username": username]
+//
+//        // specify a path for the location of where we want to store our data
+//        let ref = Database.database().reference().child("Users").child(firUser.uid)
+//        // write the data we want to store at the location
+//        ref.setValue(userAttrs) { (error, ref) in
+//            if let error = error {
+//                assertionFailure(error.localizedDescription)
+//                return completion(nil)
+//            }
+//
+//            // read the user we just wrote to the database and create a user from the snapshot
+//            ref.observeSingleEvent(of: .value, with: { (snapshot) in
+//                let user = User(snapshot: snapshot)
+//                completion(user)
+//            })
+//        }
+//    }
 
 }
 

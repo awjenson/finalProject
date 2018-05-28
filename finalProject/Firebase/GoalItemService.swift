@@ -7,19 +7,18 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseDatabase // changed from Firebase to FirebaseDatabase
 
 struct GoalItemService {
 
-
     static func writeGoal(for user: User, goal: GoalItem, success: @escaping (Bool) -> Void) {
         let ref = DatabaseReference.toLocation(.writeGoal(uid: user.uid))
+
         ref.setValue(goal.toAnyObject()) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
-
             return success(true)
         }
     }
@@ -34,32 +33,21 @@ struct GoalItemService {
         }
     }
 
-
     static func readGoals(for user: User, completion: @escaping ([GoalItem]) -> Void) {
         let ref = DatabaseReference.toLocation(.readGoals(uid: user.uid))
         ref.observe(.value) { (snapshot) in
 
-            print("PATH:")
-            print(ref)
-            print("- - -")
+            var newItems: [GoalItem] = []
 
             // Create goals array that will display in table view
-            var newItems: [GoalItem] = []
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot, let goalItem = GoalItem(snapshot: snapshot) {
-
-                    print("ENTER HERE?")
-
                     newItems.append(goalItem)
-                    print("NEW ITEMS")
-                    print(newItems)
-                    print("- - -")
-                    // pass newItems in closure
-                    completion(newItems)
                 }
-            }
+            } // end of for-loop
+            // end of for-loop, now pass newItems in closure
+            completion(newItems)
         }
     }
-
 
 }

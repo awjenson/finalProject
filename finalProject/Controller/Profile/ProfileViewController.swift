@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 // * Helen doesn't like the word "Vision"
 // * Helen likes "Fears" instead of "Vision"
@@ -118,10 +119,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     let date = Date()
     let calendar = Calendar.current
 
-    // NEW USER LIST
-//    var myNewUserList = NewUserList()
-//    var newUserListArray: [String] = []
-
     // initial setup
     var selectedPersonProfile = ProfileSelectedPerson(name: "", bio: "", advice: "", adviceURL: "")
 
@@ -129,35 +126,39 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // NEW USER LIST. Add user data in desired order
-//        newUserListArray = [myNewUserList.dailyRoutine, myNewUserList.oneYearGoal, myNewUserList.lifetimeGoal, myNewUserList.vision]
+        if internetConnected() {
+            setupUI()
+        } else {
+            createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+        }
+    }
+
+    // MARK: - Methods
+
+    func setupUI() {
+
+        SVProgressHUD.show()
 
         profileItemArray = [profileItem.passion,
                             profileItem.purpose,
                             profileItem.goals,
                             profileItem.fears]
 
-        signedInStatus(isSignedIn: true)
+        retrieveProfileUserData()
 
         dayOfWeekAndHour()
-    }
 
-    // MARK: - Methods
+        profile3TableView.dataSource = self
+        profile3TableView.delegate = self
 
-    func signedInStatus(isSignedIn: Bool) {
-        if (isSignedIn) {
-            profile3TableView.dataSource = self
-            profile3TableView.delegate = self
-
-            configureTableView()
-            configureDatabase()
-            retrieveProfileUserData() // ERROR: Could not upload user's profile
-        }
+        configureTableView()
+        configureDatabase()
     }
 
     func dayOfWeekAndHour() {
@@ -227,14 +228,12 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         bioTextLabel.text = selectedPersonProfile.bio
         quoteTextLabel.text = selectedPersonProfile.advice
 
-        // TODO: update array to display cells
     }
 
+    // May not need this anymore
     func configureDatabase() {
         ref = Database.database().reference()
     }
-
-
 
     func retrieveProfileUserData() {
         // listen for new messages in the firebase database with 'observe'
@@ -259,49 +258,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
             self.configureTableView()
             self.profile3TableView.reloadData()
+            SVProgressHUD.dismiss()
         }
-
-        // OLD CODE
-//        _refHandle = ref.child(FirebaseConstants.DbChild.ProfileUserData).child(User.current.uid).observe(.childAdded) { (snapshot) in
-//            // grab data from snapshot and format it into a custom JournalMessage object
-//            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
-//
-//            if snapshot.exists() {
-//                print(snapshot.value)
-//                let snapshotValue = snapshot.value as! Dictionary<String,String>
-//
-//                // use snapshotValue to pull-out values of keys
-//                let sender = snapshotValue[FirebaseConstants.ProfileUserData.Sender]!
-//                let dailyRoutine = snapshotValue[FirebaseConstants.ProfileUserData.DailyRoutine]!
-//                let oneYearGoal = snapshotValue[FirebaseConstants.ProfileUserData.OneYearGoal]!
-//                let lifetimeGoal = snapshotValue[FirebaseConstants.ProfileUserData.LifetimeGoal]!
-//                let vision = snapshotValue[FirebaseConstants.ProfileUserData.Vision]!
-//                let timeStamp = snapshotValue[FirebaseConstants.ProfileUserData.TimeStamp]
-//
-//                // now save these values into a new JournalMessage object
-//                let editedProfileUserData = NewUserList()
-//                editedProfileUserData.sender = sender
-//                editedProfileUserData.dailyRoutine = dailyRoutine
-//                editedProfileUserData.oneYearGoal = oneYearGoal
-//                editedProfileUserData.lifetimeGoal = lifetimeGoal
-//                editedProfileUserData.vision = vision
-//                editedProfileUserData.timestamp = timeStamp ?? ""
-//
-//                // Add user data to array
-//                self.newUserListArray = [editedProfileUserData.dailyRoutine,
-//                                         editedProfileUserData.oneYearGoal,
-//                                         editedProfileUserData.lifetimeGoal,
-//                                         editedProfileUserData.vision]
-//
-//                print("Profile Array is SUCCESS: \(self.newUserListArray.count)")
-//
-//                // re-configure table view and reload data in table view on main queue
-//                performUIUpdatesOnMain {
-//                    self.configureTableView()
-//                    self.profile3TableView.reloadData()
-//                }
-//            }
-//        }
     }
 
     func configureTableView() {
@@ -367,22 +325,23 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
 
-    func sendProfileUserData(_ userDictionary: [String:String?]) {
-
-        let messagesDB = ref.child(FirebaseConstants.DbChild.ProfileUserData).child(User.current.uid)
-        // like specifying "/Messages/[some_auto_id]"
-        // Then, .setValue, sets a value to the key (key value pair)
-        messagesDB.childByAutoId().setValue(userDictionary) {
-            (error, reference) in
-            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-            if error != nil {
-                print(error!)
-            } else {
-                print("Message saved successfully")
-                print(reference)
-            }
-        }
-    }
+    // OLD CODE:
+//    func sendProfileUserData(_ userDictionary: [String:String?]) {
+//
+//        let messagesDB = ref.child(FirebaseConstants.DbChild.ProfileUserData).child(User.current.uid)
+//        // like specifying "/Messages/[some_auto_id]"
+//        // Then, .setValue, sets a value to the key (key value pair)
+//        messagesDB.childByAutoId().setValue(userDictionary) {
+//            (error, reference) in
+//            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
+//            if error != nil {
+//                print(error!)
+//            } else {
+//                print("Message saved successfully")
+//                print(reference)
+//            }
+//        }
+//    }
 
     // Toggles button on/off
     func activateEditButton(bool: Bool) {
@@ -410,7 +369,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             } else {
                 performUIUpdatesOnMain {
-                    self.createAlert(title: "Invalid URL", message: "Could not open URL")
+                    self.createAlert(title: "Could not open URL", message: "Check Internet connection and try again.")
                     print(self.selectedPersonProfile.adviceURL)
                 }
             }
@@ -431,9 +390,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             self.view.endEditing(true)
             self.profileHeaderView.backgroundColor = UIColor.clear
 
-            // update array to Firebase Database
-//            print("Print array count: \(newUserListArray.count)")
-//            print(newUserListArray)
 
             let now = Date()
             let formatter = DateFormatter()
@@ -451,22 +407,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             ProfileService.writeProfileItem(for: User.current, profileItem: newProfileItem, success: { (success) in
                 if success == true {
                     print("SUCCESS WRITING PROFILE USER DATA: \(success)")
-                    return
+                } else if success == false {
+                    self.createAlert(title: "Error", message: "Unable to write to database. Check your Internet connection and try again.")
                 }
             })
-
-
-            // data we want to save into our database
-//            let userDictionary = [
-//                FirebaseConstants.ProfileUserData.Sender: Auth.auth().currentUser?.email,
-//                FirebaseConstants.ProfileUserData.DailyRoutine: newUserListArray[0],
-//                FirebaseConstants.ProfileUserData.OneYearGoal: newUserListArray[1],
-//                FirebaseConstants.ProfileUserData.LifetimeGoal: newUserListArray[2],
-//                FirebaseConstants.ProfileUserData.Vision: newUserListArray[3],
-//                FirebaseConstants.ProfileUserData.TimeStamp: currentDate]
-
-            // send data to database
-//            sendProfileUserData(userDictionary)
         }
     }
 
@@ -510,7 +454,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.userTextView.delegate = self
         cell.userTextView.layer.borderWidth = 0.5
         changeTextViewBoarderColor(cell)
-
 
         return cell
     }

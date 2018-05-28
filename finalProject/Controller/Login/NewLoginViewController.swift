@@ -74,8 +74,10 @@ extension NewLoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
 
         if error != nil {
-            createAlert(title: "Unable to login", message: "Please try again")
-            return
+            performUIUpdatesOnMain {
+                self.createAlert(title: "Error", message: "Check your Internet connection and try again.")
+                return
+            }
         }
 
         // Handle user sign in / login
@@ -99,12 +101,12 @@ extension NewLoginViewController: FUIAuthDelegate {
                 // Check UserDefaults
                 // make use of the User.setCurrent method when an existing user logs in.
                 User.setCurrent(user, writeToUserDefaults: true)
+                print("EXISTING USER LOGGED IN")
 
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             } else {
-
                 print("NEW USER SUCCESSFULLY LOGGED IN")
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController

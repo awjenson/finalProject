@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseDatabase // changed from Firebase to FirebaseDatabase
 
 struct GoalItem {
 
