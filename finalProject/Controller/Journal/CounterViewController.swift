@@ -25,9 +25,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     var items: [GoalItem] = []
     // var items = [GoalItem]()
 
+    // NEED THIS REF
     var ref: DatabaseReference!
-    fileprivate var _refHandle: DatabaseHandle!
-    fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,7 +38,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        signedInStatus(isSignedIn: true)
+        if internetConnected() {
+            setupUI()
+        } else {
+            createAlert(title: "No Internet Connection", message: "Please connect to the Internet and try again.")
+        }
+
+
 
     }
 
@@ -49,16 +54,21 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         print("Counter View Controller Will Disappear")
     }
 
+    func setupUI() {
+
+        counterTableView.dataSource = self
+        counterTableView.delegate = self
+
+        counterTableView.allowsMultipleSelectionDuringEditing = false
+
+        //            configureDatabase()
+        retrieveGoalItems()
+    }
+
     func signedInStatus(isSignedIn: Bool) {
         if (isSignedIn) {
 
-            counterTableView.dataSource = self
-            counterTableView.delegate = self
 
-            counterTableView.allowsMultipleSelectionDuringEditing = false
-
-//            configureDatabase()
-            retrieveGoalItems()
 
         }
     }
@@ -80,8 +90,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         // add .child(currentUID) so only current user can see their data
 
         // *** b/c of for loop, switch from .childAdded to .value
-
-
 
         // ***
 

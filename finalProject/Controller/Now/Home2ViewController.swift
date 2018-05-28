@@ -400,10 +400,7 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
         return UITableViewAutomaticDimension
     }
 
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        print("Number of tips in table view: \(tips.count)")
         return tips.count
     }
 
@@ -414,7 +411,6 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
 
         // Whatever tip is at each row
         let tip = tips[indexPath.row]
-
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Home2TableViewCell
 

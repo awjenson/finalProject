@@ -53,20 +53,18 @@ class JournalViewController: UIViewController {
     var messageSentToday = false
 
     var ref: DatabaseReference!
-    fileprivate var _refHandle: DatabaseHandle!
-    fileprivate var _authHandle: AuthStateDidChangeListenerHandle!
 
     // Time and Date
     let formatter = DateFormatter()
     let date = Date()
     let calendar = Calendar.current
 
-    // an empty JournalMessage array to contain the user's messages
-//    var messageArray = [JournalMessage]()
     var messageItems: [MessageItem] = []
 
     var expandingCellHeight: CGFloat = 200
     let expandingIndexRow = 0
+
+    // MARK: - Lifecycle Methods
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -74,27 +72,85 @@ class JournalViewController: UIViewController {
         print("Journal View Controller Will Appear")
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if InternetConnection.isConnectedToNetwork() {
-            print("Internet connection available")
+        if internetConnected() {
+            setupUI()
+        } else {
+            createAlert(title: "No Internet Connection", message: "Please connect to the Internet and try again.")
         }
-        else{
-            print("No internet connection available")
-            createAlert(title: "No Internet connection", message: "Please connect to the Internet and try again.")
-        }
+    }
 
-        signedInStatus(isSignedIn: true)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        print("Journal View Controller Will Disappear")
+    }
+
+    // MARK: - Methods
+
+    func setupUI() {
+
+        retrieveMessages()
 
         dayOfWeekAndHour()
 
-        setupUI()
+        journalTableView.dataSource = self
+        journalTableView.delegate = self
+        journalTableView.separatorStyle = .none
+
+        // Additional Setup
+        configureTableView()
+
+        configureDatabase() // I don't think I need this anymore
+
+        setupGestureRecognizers()
 
         setupTableView()
 
         setupKeyboardObservers()
+    }
+
+    func setupGestureRecognizers() {
+
+        // Enable Gesture Recognizers
+        let tapGestureTableView = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+
+        let tapGestureHeaderView = UITapGestureRecognizer(target: self, action: #selector(headerViewTapped))
+        // TODO: could add this for the quote view too
+        journalTableView.addGestureRecognizer(tapGestureTableView)
+        quoteView.addGestureRecognizer(tapGestureHeaderView)
+    }
+
+    func setupButtonsLabelsTextViews() {
+
+        quoteLabel.text = advice.quote
+        authorLabel.text = advice.source
+        questionLabel.text = advice.question
+
+        messageTextView.layer.borderColor = UIColor.gray.cgColor
+        messageTextView.layer.borderWidth = 1.0
+        // Set messageTextView delegate for UITextFieldDelegate
+        messageTextView.delegate = self
+        messageTextView.trimWhiteSpaceWhenEndEditing = false
+        messageTextView.placeholder = "Text something..."
+        messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
+        messageTextView.backgroundColor = UIColor.white
+        messageTextView.layer.cornerRadius = 4.0
+
+        mood0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
+        mood1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
+        mood2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
+        mood3Button.setTitle(Constants.SelectedMood.Button3,for: .normal)
+        mood4Button.setTitle(Constants.SelectedMood.Button4,for: .normal)
+        mood5Button.setTitle(Constants.SelectedMood.Button5,for: .normal)
+        mood6Button.setTitle(Constants.SelectedMood.Button6,for: .normal)
+        mood7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
+        mood8Button.setTitle(Constants.SelectedMood.Button8,for: .normal)
+        mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
+        mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
+        mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
     }
 
     func setupTableView() {
@@ -128,34 +184,7 @@ class JournalViewController: UIViewController {
         }
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
 
-        print("Journal View Controller Will Disappear")
-    }
-
-    func setupUI() {
-
-        quoteLabel.text = advice.quote
-        authorLabel.text = advice.source
-        questionLabel.text = advice.question
-
-        messageTextView.layer.borderColor = UIColor.gray.cgColor
-        messageTextView.layer.borderWidth = 1.0
-
-        mood0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
-        mood1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
-        mood2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
-        mood3Button.setTitle(Constants.SelectedMood.Button3,for: .normal)
-        mood4Button.setTitle(Constants.SelectedMood.Button4,for: .normal)
-        mood5Button.setTitle(Constants.SelectedMood.Button5,for: .normal)
-        mood6Button.setTitle(Constants.SelectedMood.Button6,for: .normal)
-        mood7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
-        mood8Button.setTitle(Constants.SelectedMood.Button8,for: .normal)
-        mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
-        mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
-        mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
-    }
 
     func setupKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -380,39 +409,9 @@ class JournalViewController: UIViewController {
     }
 
 
-    func signedInStatus(isSignedIn: Bool) {
-        if (isSignedIn) {
 
-            retrieveMessages()
 
-            journalTableView.dataSource = self
-            journalTableView.delegate = self
 
-            // Set messageTextView delegate for UITextFieldDelegate
-            messageTextView.delegate = self
-            messageTextView.trimWhiteSpaceWhenEndEditing = false
-            messageTextView.placeholder = "Text something..."
-            messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
-            messageTextView.backgroundColor = UIColor.white
-            messageTextView.layer.cornerRadius = 4.0
-
-            // Enable Gesture Recognizers
-            let tapGestureTableView = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
-
-            let tapGestureHeaderView = UITapGestureRecognizer(target: self, action: #selector(headerViewTapped))
-            // TODO: could add this for the quote view too
-            journalTableView.addGestureRecognizer(tapGestureTableView)
-            quoteView.addGestureRecognizer(tapGestureHeaderView)
-
-            // Additional Setup
-            configureTableView()
-
-            configureDatabase()
-
-            journalTableView.separatorStyle = .none
-
-        }
-    }
 
 
 
@@ -448,11 +447,11 @@ class JournalViewController: UIViewController {
 
             self.messageItems = retrievedMessages
 
-            if self.messageItems.isEmpty {
-                self.createAlert(title: "ERROR", message: "Not able to retrieve data. Check your Internet connection and try again.")
-                SVProgressHUD.dismiss()
-                return
-            }
+//            if self.messageItems.isEmpty {
+//                self.createAlert(title: "ERROR", message: "Not able to retrieve data. Check your Internet connection and try again.")
+//                SVProgressHUD.dismiss()
+//                return
+//            }
 
             var number = 0
             print("THREAD: \(Thread.current) + \(number)")
@@ -461,42 +460,7 @@ class JournalViewController: UIViewController {
             self.journalTableView.reloadData()
             self.scrollToBottom()
             SVProgressHUD.dismiss()
-            return
         }
-
-        // OLD CODE:
-//        let currentUID = User.current.uid
-//        print("CurrentUID: \(currentUID)")
-//
-//        // add .child(currentUID) so only current user can see their data
-//        _refHandle = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID).observe(.childAdded) { (snapshot) in
-//            // grab data from snapshot and format it into a custom JournalMessage object
-//            // we know what 'value' type we will receive from the DB because we created it above that contains a [String:String]
-//            let snapshotValue = snapshot.value as! Dictionary<String,String>
-//
-//            // use snapshotValue to pull-out values of keys
-//            let sender = snapshotValue[FirebaseConstants.Message.Sender]!
-//            let text = snapshotValue[FirebaseConstants.Message.Text]!
-//            let timeStamp = snapshotValue[FirebaseConstants.Message.TimeStamp]
-//
-//            // now save these values into a new JournalMessage object
-//            let newMessage = JournalMessage()
-//            newMessage.sender = sender
-//            newMessage.message = text
-//            newMessage.timestamp = timeStamp ?? ""
-//
-//            self.messageArray.append(newMessage)
-//
-//            // TODO: Add response messages here based on button tapped
-//
-//            // re-configure table view and reload data in table view
-//            performUIUpdatesOnMain {
-//                self.configureTableView()
-//                self.journalTableView.reloadData()
-//                self.scrollToBottom()
-//            }
-//        }
-
     }
 
 
@@ -506,10 +470,6 @@ class JournalViewController: UIViewController {
             self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
-
-
-
-
 
 
 
@@ -548,32 +508,6 @@ class JournalViewController: UIViewController {
             })
         }
     }
-
-//    func sendMessage(_ messageDictionary: [String:String?]) {
-//
-//        let currentUID = User.current.uid
-//        print("CurrentUID: \(currentUID)")
-//
-//        // ref = Database.database().reference()
-//        let messagesDB = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID)
-//        // like specifying "/Messages/[some_auto_id]"
-//        // Then, .setValue, sets a value to the key (key value pair)
-//        messagesDB.childByAutoId().setValue(messageDictionary) {
-//            (error, reference) in
-//            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-//            if error != nil {
-//                print(error!)
-//            } else {
-//                print("Message saved successfully")
-//                print("CurrentUID: \(currentUID)")
-//
-//                self.messageTextView.isEditable = true
-//                self.sendButton.isEnabled = true
-//                self.messageTextView.text = ""
-//            }
-//        }
-//    }
-
 
 
     // User Notes:
@@ -650,15 +584,6 @@ class JournalViewController: UIViewController {
                 print("SUCCESS WRITING BUTTON MOOD: \(success)")
             }
         })
-
-
-
-
-//        let moodDictionary = [FirebaseConstants.Message.Sender: Auth.auth().currentUser?.email,
-//                              FirebaseConstants.Message.Text: "Current Mood: \(selectedMood)",
-//            FirebaseConstants.Message.TimeStamp: currentDate]
-//        sendMood(moodDictionary)
-
     }
 
     func sendMood(_ moodDictionary: [String:String?]) {
@@ -680,22 +605,10 @@ class JournalViewController: UIViewController {
             }
         }
     }
-
-
 }
 
-//MARK:- TextField Delegate Methods
 
-extension JournalViewController: GrowingTextViewDelegate {
-
-    func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
-        UIView.animate(withDuration: 0.2) {
-            self.view.layoutIfNeeded()
-        }
-    }
-}
-
-// MARK: - TableView Data Source and Delegate Protocol Methods
+// MARK: - TableView Data Source Methods
 
 extension JournalViewController: UITableViewDataSource {
 
@@ -720,6 +633,8 @@ extension JournalViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Table View Delegate
+
 extension JournalViewController: UITableViewDelegate {
     // Add table view delagate methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -737,6 +652,7 @@ extension JournalViewController: UITableViewDelegate {
             print("ITEM TO DELETE")
             print("goalItemRow: \(messageItemRow)")
 
+            // Alternative Firebase Code:
             //            // Code doesn't seem as efficient as code below to removeValue()
             //            GoalItemService.deleteGoal(for: User.current, goal: goalItemRow, success: { (success) in
             //                if success == true {
@@ -751,7 +667,18 @@ extension JournalViewController: UITableViewDelegate {
     }
 }
 
+//MARK:- TextField Delegate Methods
 
+extension JournalViewController: GrowingTextViewDelegate {
+
+    func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
+    }
+}
+
+// MARK: - Text View Delegate
 
 extension JournalViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -770,8 +697,6 @@ extension JournalViewController: UITextViewDelegate {
             self.view.layoutIfNeeded()
         }
     }
-
-
 }
 
 
