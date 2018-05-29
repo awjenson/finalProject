@@ -78,7 +78,9 @@ class JournalViewController: UIViewController {
         if internetConnected() {
             setupUI()
         } else {
-            createAlert(title: "No Internet Connection", message: "Please connect to the Internet and try again.")
+            performUIUpdatesOnMain {
+                self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+            }
         }
     }
 
@@ -106,6 +108,8 @@ class JournalViewController: UIViewController {
         configureDatabase() // I don't think I need this anymore
 
         setupGestureRecognizers()
+
+        setupButtonsLabelsTextViews()
 
         setupTableView()
 
@@ -270,7 +274,7 @@ class JournalViewController: UIViewController {
 
 
     func dayOfWeekAndHour() {
-        print("Refresh NOW table view")
+        print("Refresh JOURNAL table view")
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 

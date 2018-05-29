@@ -36,7 +36,7 @@ struct UserService {
      After the user is authenticated, we'll want to redirect the user to a different view controller depending on whether they are a new user or an existing user:
 
      New users will be sent to choose their username
-     Existing users will be sent to the home view controller that displays their feed
+     Existing users will be sent to the now view controller that displays their feed
      To determine if the user is a new user, we'll need to have some way to retrieve previous data about the user.
 
      Build a DatabaseReference to the location you want to read from

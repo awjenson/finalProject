@@ -10,8 +10,6 @@ import UIKit
 
 class HomeTipTableViewCell: UITableViewCell {
 
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -34,18 +34,16 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         print("Counter View Controller Will Appear")
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if internetConnected() {
             setupUI()
         } else {
-            createAlert(title: "No Internet Connection", message: "Please connect to the Internet and try again.")
+            performUIUpdatesOnMain {
+                self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+            }
         }
-
-
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,46 +59,20 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         counterTableView.allowsMultipleSelectionDuringEditing = false
 
-        //            configureDatabase()
+        //            configureDatabase() // I don't think this is needed anymore
         retrieveGoalItems()
     }
 
-    func signedInStatus(isSignedIn: Bool) {
-        if (isSignedIn) {
-
-
-
-        }
-    }
-
     func configureDatabase() {
-
         // This is the path BEFORE .child("GoalItems").child(currentUID).child("typed goal")
         ref = Database.database().reference().child(FirebaseConstants.DbChild.GoalItems).child(User.current.uid)
     }
 
-    // TODO: Create the retrieveMessages method return Snapshot
-
     func retrieveGoalItems() {
-        // listen for new messages in the firebase database with 'observe'
-        // Configure database to sync messages
-        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
-        // ask Firebase to 'observe' for any new child's events ('childAdded')
-
-        // add .child(currentUID) so only current user can see their data
-
-        // *** b/c of for loop, switch from .childAdded to .value
-
-        // ***
-
         GoalItemService.readGoals(for: User.current) { (newItems) in
 
-            if newItems.isEmpty {
-                self.items = newItems
-                self.createAlert(title: "ERROR", message: "Could not read from database. Check your Internet connection and try again.")
-            }
             self.items = newItems
-            print("INSIDER GOALITEMSERVICE COMPLETION CLOSURE")
+            print("Inside GoalItemService.readGoals")
             self.counterTableView.reloadData()
         }
     }

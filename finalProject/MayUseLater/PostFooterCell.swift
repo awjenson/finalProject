@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Handling Like Button Events. We'll start by creating a delegate for our PostActionCell to communicate with our HomeViewController. Whenever the likeButton on the PostActionCell is tapped, it'll notify it's delegate to handle the event.
+// Handling Like Button Events. We'll start by creating a delegate for our PostActionCell to communicate with our NowViewController. Whenever the likeButton on the PostActionCell is tapped, it'll notify it's delegate to handle the event.
 // The PostFooterCellDelegate allows us to define a protocol that any delegate of PostFooterCell must conform to. This will allow the delegate to handle the event of the quoteButton being tapped.
 protocol PostFooterCellDelegate: class {
     func didTapQuoteButton(_ quoteButton: UIButton, on cell: PostFooterCell)

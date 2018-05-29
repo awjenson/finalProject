@@ -21,15 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         print("didFinishLaunchingWithOptions")
 
-
-
-//        if window?.rootViewController as? UITabBarController != nil {
-//            let tabBarController = window!.rootViewController as! UITabBarController
-//            tabBarController.selectedIndex = 1 // Opens the 4th Tab
-//        } else{
-//            print("AppDelegate: couldn't reach rootViewController named UITabBarController")
-//        }
-
         // MARK: - Firebase
         // Initialize and configure Firebase
         FirebaseApp.configure()
@@ -46,11 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-
-    // FirebaseAuthUI
-//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//        return FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication ?? "") ?? false
-//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

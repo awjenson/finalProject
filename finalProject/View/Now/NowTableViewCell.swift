@@ -1,5 +1,5 @@
 //
-//  Home2TableViewCell.swift
+//  NowTableViewCell.swift
 //  finalProject
 //
 //  Created by Andrew Jenson on 3/9/18.
@@ -8,20 +8,21 @@
 
 import UIKit
 
-protocol Home2TableViewCellDelegate {
-    // Implement these functions in the HomeViewController
+protocol NowTableViewCellDelegate {
+    // Implement these functions in the NowViewController
     func goToSourceURL(url: String)
 }
 
-class Home2TableViewCell: UITableViewCell {
+class NowTableViewCell: UITableViewCell {
 
-    // For protocol, create a delegate variable here (the Boss) so we can set HomeViewController as our delegate (the intern)
-    var delegate: Home2TableViewCellDelegate?
+    // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
+    var delegate: NowTableViewCellDelegate?
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
 
+    // Plan to use in next version release:
 //    @IBOutlet weak var sponsorLabel: UILabel!
 //    @IBOutlet weak var sponsorButton: RoundButton!
 
@@ -35,6 +36,8 @@ class Home2TableViewCell: UITableViewCell {
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
         sourceLabel.text = tip.sourceName
+
+        // Plan to use in next version release:
 //        sponsorLabel.text = ""
 //        sponsorButton.setBackgroundImage(UIImage(named: tip.sponsorLogo), for: .normal)
 //        sponsorButton.setTitle("", for: .normal)
@@ -45,13 +48,10 @@ class Home2TableViewCell: UITableViewCell {
         // set text view delegate
     }
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -59,9 +59,10 @@ class Home2TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    // Plan to use in next version release:
     @IBAction func sponsorButtonTapped(_ sender: Any) {
 
-        print("Sponsor Button Tapped, tell intern, HomeViewController, to execute goToSourceURL() and tell it the url to open up")
+        print("Sponsor Button Tapped, tell intern, NowViewController, to execute goToSourceURL() and tell it the url to open up")
         delegate?.goToSourceURL(url: tipItem.sponsorURL!)
     }
 }

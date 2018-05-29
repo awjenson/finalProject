@@ -83,7 +83,7 @@ extension NewLoginViewController: FUIAuthDelegate {
         // Handle user sign in / login
         // After the user is authenticated, we'll want to redirect the user to a different view controller depending on whether they are a new user or an existing user
         // 1. New users will be sent to choose their username
-        // 2. Existing users will be sent to the home view controller that displays their feed
+        // 2. Existing users will be sent to the now view controller that displays their feed
 
         // reading the user JSON object from our database if it exists
 

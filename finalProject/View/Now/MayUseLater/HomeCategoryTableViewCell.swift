@@ -6,12 +6,16 @@
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
 
+// OLD CODE
+
 import UIKit
 
 class HomeCategoryTableViewCell: UITableViewCell {
 
     // added collection view within Table View Cell
     // This is a standard IBOutlet, except I marked it as private. This is to create a separation of concerns – our view controller shouldn’t be accessing the collection view through the table view cell.
+
+    // MARK: - IBOutlets
 
     @IBOutlet weak var homeCollectionView: UICollectionView!
 
@@ -25,8 +29,7 @@ class HomeCategoryTableViewCell: UITableViewCell {
 
     var selectedNumber = 0
 
-
-
+    // MARK: - Lifecycle Methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,8 +49,6 @@ class HomeCategoryTableViewCell: UITableViewCell {
 //        homeCollectionView.isScrollEnabled = false
         homeCollectionView.dataSource = self
         homeCollectionView.delegate = self
-
-        
 
     }
 }

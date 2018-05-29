@@ -1,5 +1,5 @@
 //
-//  Home2ViewController.swift
+//  NowViewController.swift
 //  finalProject
 //
 //  Created by Andrew Jenson on 3/9/18.
@@ -21,14 +21,11 @@ https://www.youtube.com/watch?v=k-GvIqh5Xcs
 import UIKit
 import SafariServices // to display webview
 
-class Home2ViewController: UIViewController {
+class NowViewController: UIViewController {
 
     // MARK: - IBOutlets
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var profileButton: UIButton!
-
-    @IBOutlet weak var homeTableView: UITableView!
+    @IBOutlet weak var nowTableView: UITableView!
     @IBOutlet weak var topicView: UIView!
 
     // topicButtion OutletCollection only used for flipping UI when buttons tapped
@@ -75,11 +72,7 @@ class Home2ViewController: UIViewController {
     var tipArray8 = [Tip]() // Now tip array
 
 
-    func signedInStatus(isSignedIn: Bool) {
-        if (isSignedIn) {
-
-        }
-    }
+    // MARK: - Lifecycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,10 +80,13 @@ class Home2ViewController: UIViewController {
         if internetConnected() {
             setupUI()
         } else {
-            createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+            performUIUpdatesOnMain {
+                self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+            }
         }
+    }
 
-    } // End of ViewDidLoad
+    // MARK: - Methods
 
     func setupUI() {
         // call configureTableView() and reloadTimeline() in viewDidLoad
@@ -98,17 +94,17 @@ class Home2ViewController: UIViewController {
         dayOfWeekAndHour()
 
         // set estimated row height (needed for auto row height size)
-        homeTableView.rowHeight = UITableViewAutomaticDimension
-        homeTableView.estimatedRowHeight = 44
-        homeTableView.dataSource = self
-        homeTableView.delegate = self
+        nowTableView.rowHeight = UITableViewAutomaticDimension
+        nowTableView.estimatedRowHeight = 44
+        nowTableView.dataSource = self
+        nowTableView.delegate = self
     }
 
     // Call this inside UIButton to scroll to top
     func scrollToTop(){
         DispatchQueue.main.async {
             let indexPath = IndexPath(row: self.tips.count-1, section: 0)
-            self.homeTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            self.nowTableView.scrollToRow(at: indexPath, at: .top, animated: true)
         }
     }
 
@@ -120,7 +116,7 @@ class Home2ViewController: UIViewController {
             dayOfWeekAndHour()
             self.refreshControl.endRefreshing()
         }
-        self.homeTableView.reloadData()
+        self.nowTableView.reloadData()
 
         /* Advanced way to refresh posts in timeline
          https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/building-the-timeline
@@ -132,7 +128,7 @@ class Home2ViewController: UIViewController {
         //                self.refreshControl.endRefreshing()
         //            }
         //
-        //            self.homeTableView.reloadData()
+        //            self.nowTableView.reloadData()
         //        }
     }
 
@@ -142,7 +138,7 @@ class Home2ViewController: UIViewController {
         // add pull to refresh
         refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        homeTableView.addSubview(refreshControl)
+        nowTableView.addSubview(refreshControl)
 
     }
 
@@ -335,14 +331,12 @@ class Home2ViewController: UIViewController {
 
 
 
-
-
     // MARK: - IBActions
 
     @IBAction func topicButtonTapped(_ sender: RoundButton) {
         if let topicNumber = topicButtons.index(of: sender) {
             flipButton(at: topicNumber, withText: topics[topicNumber].icon, on: sender)
-            homeTableView.reloadData()
+            nowTableView.reloadData()
         } else {
             createAlert(title: "ERROR", message: "Could not laod buttons.")
         }
@@ -394,7 +388,7 @@ class Home2ViewController: UIViewController {
 
 // MARK: - Table View Methods
 
-extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
+extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -412,7 +406,7 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
         // Whatever tip is at each row
         let tip = tips[indexPath.row]
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Home2TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
 
         // extend the bottom line
         cell.layoutMargins = UIEdgeInsets.zero
@@ -433,11 +427,11 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        homeTableView.deselectRow(at: indexPath, animated: true)
+        nowTableView.deselectRow(at: indexPath, animated: true)
         let tip = tips[indexPath.row]
 
         let app = UIApplication.shared
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! Home2TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
         if let url = tip.sourceURL {
 
             // print: true or false
@@ -456,7 +450,7 @@ extension Home2ViewController: UITableViewDataSource, UITableViewDelegate {
 
 // MARK: - Table View Cell Methods
 
-extension Home2ViewController: Home2TableViewCellDelegate {
+extension NowViewController: NowTableViewCellDelegate {
 
     func goToSourceURL(url: String) {
         // get the URL from the delegate and presents in Safari VC

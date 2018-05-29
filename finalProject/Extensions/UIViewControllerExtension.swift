@@ -1,5 +1,5 @@
 //
-//  UIViewExtension.swift
+//  UIViewControllerExtension.swift
 //  finalProject
 //
 //  Created by Andrew Jenson on 4/3/18.
@@ -14,11 +14,11 @@ extension UIViewController {
     // MARK: Check Internet Connection
     func internetConnected() -> Bool {
         if InternetConnection.isConnectedToNetwork() {
-            print("Internet connection available")
+            print("Internet connection available. Return TRUE")
             return true
         }
         else{
-            print("No internet connection available")
+            print("No internet connection available. Return FALSE")
             return false
         }
     }

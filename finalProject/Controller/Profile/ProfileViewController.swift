@@ -19,8 +19,6 @@ import SVProgressHUD
 
 // Checkout Code With Chris's Question Bank Tutorial. Each question could be like each textView (Vision, Goals, etc.)
 
-// Headers
-
 let bruceLee = ProfileSelectedPerson(name: "Bruce Lee", bio: "Actor, martial artist, philosopher, and founder of the martial art Jeet Kune Do", advice: "\"Do not pray for an easy life, pray for the strength to endure a difficult one.\"", adviceURL: "https://www.brucelee.com/podcast")
 
 let markDivine = ProfileSelectedPerson(name: "Mark Devine", bio: "Former Navy SEAL, and founder of SEALFIT and Unbeatable Mind podcast", advice: "\"To live an uncommon life, one needs learn uncommon disciplines.\"", adviceURL: "https://unbeatablemind.com/podcast/")
@@ -135,7 +133,9 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         if internetConnected() {
             setupUI()
         } else {
-            createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+            performUIUpdatesOnMain {
+                self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+            }
         }
     }
 
@@ -247,8 +247,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         ProfileService.readProfileItemAll(for: User.current) { (retrievedProfileItem) in
             self.profileItem = retrievedProfileItem
-            print("$$$")
-            print("retrievedProfileItem: \(self.profileItem)")
 
             // Update array with retrieved data
             self.profileItemArray = [self.profileItem.passion,
