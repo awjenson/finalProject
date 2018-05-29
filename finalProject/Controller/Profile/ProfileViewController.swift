@@ -368,7 +368,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             } else {
                 performUIUpdatesOnMain {
                     self.createAlert(title: "Could not open URL", message: "Check Internet connection and try again.")
-                    print(self.selectedPersonProfile.adviceURL)
                 }
             }
         }

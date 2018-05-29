@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import ChameleonFramework
 
 // RESOURCE: https://www.raywenderlich.com/187417/firebase-tutorial-getting-started-3
 // RESOURCE TO IMPROVE FIREBASE CODE: http://jaronoff.com/Firebase-and-Swift/

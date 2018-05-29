@@ -197,11 +197,6 @@ class JournalViewController: UIViewController {
     @objc func handleKeyboardWillShow(notification: NSNotification) {
         let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
         let keyboardDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
-
-        print(keyboardFrame?.height)
-        print(keyboardDuration?.description)
-
-        // move the input area up somehow??
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -210,7 +205,7 @@ class JournalViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-    // OLD
+    // PLAN TO USE IN NEXT VERSION OF APP:
 //
 //    let am0 = JournalAdvice(quote: "David McCullough, the Pulitzer Prize winning author and historian has said if you want to become the voice of your generation, write a journal entry every day and then gift it to your local university library at the end of your life. Voice of your generation or not, I believe that a journal is one of the most precious gifts you can give to those you leave behind.", source: "Greg McKeown, author of Essentialism: The Disciplined Pursuit of Less", question: "https://gregmckeown.com/blog/one-thing-productive-people-reaching-phones/")
 //
@@ -523,6 +518,7 @@ class JournalViewController: UIViewController {
     @IBAction func moodButtonTapped(_ sender: UIButton) {
 
         var selectedMood = ""
+        // Plan to add response in next version of app
         var response = ""
 
         switch sender {
@@ -591,7 +587,6 @@ class JournalViewController: UIViewController {
     }
 
     func sendMood(_ moodDictionary: [String:String?]) {
-
 
         let currentUID = User.current.uid
         print("CurrentUID: \(currentUID)")
