@@ -70,6 +70,11 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     func retrieveGoalItems() {
         GoalItemService.readGoals(for: User.current) { (newItems) in
 
+            if newItems.isEmpty {
+                print("retrievedMessages count: \(newItems.count)")
+                return
+            }
+
             self.items = newItems
             print("Inside GoalItemService.readGoals")
             self.counterTableView.reloadData()

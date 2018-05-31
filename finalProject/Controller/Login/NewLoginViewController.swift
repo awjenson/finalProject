@@ -73,11 +73,10 @@ extension NewLoginViewController: FUIAuthDelegate {
     // After you present the authentication view and the user signs in, the result is returned to the FirebaseUI Auth delegate in the didSignInWithUser:error: method
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
 
-        if error != nil {
-            performUIUpdatesOnMain {
-                self.createAlert(title: "Error", message: "Check your Internet connection and try again.")
-                return
-            }
+        if let error = error {
+            print(error.localizedDescription)
+            assertionFailure("Error signing in: \(error.localizedDescription)")
+            return
         }
 
         // Handle user sign in / login
@@ -88,8 +87,6 @@ extension NewLoginViewController: FUIAuthDelegate {
         // reading the user JSON object from our database if it exists
 
         // check that the FIRUser returned from authentication is not nil by unwrapping it. We guard this statement, because we cannot proceed further if the user is nil. We need the FIRUser object's uid property to build the relative path for the user at /users/#{uid}.
-
-        // 1
         guard let user = user
             else { return }
 
@@ -97,20 +94,32 @@ extension NewLoginViewController: FUIAuthDelegate {
             if let user = user {
                 // completion return data for user. handle existing user
 
-                // Once we receive the user from the database, we set the singleton with our custom setter method. After the singleton is set, it will remain in memory for the rest of the app's lifecycle. It will be accessible from any view controller with the following code: let user = User.current
+                // SINGLETON: Once we receive the user from the database, we set the singleton with our custom setter method. After the singleton is set, it will remain in memory for the rest of the app's lifecycle. It will be accessible from any view controller with the following code: let user = User.current
                 // Check UserDefaults
                 // make use of the User.setCurrent method when an existing user logs in.
                 User.setCurrent(user, writeToUserDefaults: true)
-                print("EXISTING USER LOGGED IN")
+                print("EXISTING USER LOGGED IN: \(user.email)")
 
                 let initialViewController = UIStoryboard.initialViewController(for: .main)
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             } else {
-                print("NEW USER SUCCESSFULLY LOGGED IN")
-                let initialViewController = UIStoryboard.initialViewController(for: .main)
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
+                print("NEW USER SUCCESSFULLY LOGGED IN...")
+
+                guard let firUser = Auth.auth().currentUser else {return}
+
+                UserService.writeUser(firUser, completion: { (user) in
+                    guard let user = user else {return}
+
+                    // Check UserDefaults
+                    User.setCurrent(user, writeToUserDefaults: true)
+                    print("...CREATED new user: \(user.email)...")
+
+                    let initialViewController = UIStoryboard.initialViewController(for: .main)
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
+                    print("... LEFT LOGIN PAGE.")
+                })
             }
         }
     }

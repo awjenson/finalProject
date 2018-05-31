@@ -42,7 +42,6 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var mood10Button: UIButton!
     @IBOutlet weak var mood11Button: UIButton!
 
-
     // MARK: - Properties
 
     // pull to refresh tableView
@@ -105,7 +104,7 @@ class JournalViewController: UIViewController {
         // Additional Setup
         configureTableView()
 
-        configureDatabase() // I don't think I need this anymore
+        configureDatabase()
 
         setupGestureRecognizers()
 
@@ -177,6 +176,11 @@ class JournalViewController: UIViewController {
     func loadMessagesAll() {
 
         MessageItemService.readMessagesAll(for: User.current) { (retrieveAllMessages) in
+
+            if retrieveAllMessages.isEmpty {
+                print("retrievedMessages count: \(retrieveAllMessages.count)")
+                return
+            }
             self.messageItems = retrieveAllMessages
 
             var number = 0
@@ -264,7 +268,6 @@ class JournalViewController: UIViewController {
     let am6 = JournalAdvice(quote: "\"Refuse to be average. Let your heart soar as high as it will.\"", source: "A. W. Tozer", question: "Who improves your life?")
 
     let pm6 = JournalAdvice(quote: "\"The awakening of consciousness is the next evolutionary step for mankind.\"", source: "Eckhart Tolle", question: "What's one thing that I am grateful for today?")
-
 
 
 
@@ -400,20 +403,6 @@ class JournalViewController: UIViewController {
         }
     }
 
-
-    deinit {
-        // The database observer doesn't stop listen for changes in the database when the VC goes off screen. So if the observer isn't removed then the observer will continue to sync data to local memory casusing excessive memory use. So when an observer is no longer needed we should remove it. In this case, remove the observer when the VC is deinitalized.
-
-        // ref.child(Constants.DbChild.Messages).removeObserver(withHandle: _refHandle)
-    }
-
-
-
-
-
-
-
-
     @objc func tableViewTapped() {
         messageTextView.endEditing(true)
     }
@@ -423,7 +412,6 @@ class JournalViewController: UIViewController {
     }
 
     func configureDatabase() {
-//        ref = Database.database().reference()
         ref = Database.database().reference().child(FirebaseConstants.DbChild.Messages).child(User.current.uid)
     }
 
@@ -444,13 +432,15 @@ class JournalViewController: UIViewController {
 
         MessageItemService.readMessagesLastTen(for: User.current) { (retrievedMessages) in
 
-            self.messageItems = retrievedMessages
+            if retrievedMessages.isEmpty {
+                print("retrievedMessages count: \(retrievedMessages.count)")
+                self.configureTableView()
+                self.journalTableView.reloadData()
+                SVProgressHUD.dismiss()
+                return
+            }
 
-//            if self.messageItems.isEmpty {
-//                self.createAlert(title: "ERROR", message: "Not able to retrieve data. Check your Internet connection and try again.")
-//                SVProgressHUD.dismiss()
-//                return
-//            }
+            self.messageItems = retrievedMessages
 
             var number = 0
             print("THREAD: \(Thread.current) + \(number)")
@@ -462,14 +452,12 @@ class JournalViewController: UIViewController {
         }
     }
 
-
     func scrollToBottom(){
         DispatchQueue.main.async {
             let indexPath = IndexPath(row: self.messageItems.count-1, section: 0)
             self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
-
 
 
     // MARK: - IBActions

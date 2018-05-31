@@ -27,7 +27,7 @@ class User: NSObject {
     // MARK: - Properties
 
     let uid: String
-    let username: String
+    let email: String
 
     // MARK: - Initializers and UserDefaults
 
@@ -43,22 +43,18 @@ class User: NSObject {
 
         // retrieve the data from the DataSnapshot using the value property. We unwrap and check that the type is what we're expecting it to be, in this case a dictionary.
         guard let dict = snapshot.value as? [String : Any],
-            let username = dict["username"] as? String
+            let email = dict["email"] as? String
             else { return nil }
 
-        print(snapshot.debugDescription)
-        print(username)
-
         self.uid = snapshot.key
-        self.username = username
+        self.email = email
 
         super.init()
     }
 
-
-    init(uid: String, username: String) {
+    init(uid: String, email: String) {
         self.uid = uid
-        self.username = username
+        self.email = email
 
         super.init()
     }
@@ -67,11 +63,11 @@ class User: NSObject {
     // Required init?() allows users to conform to the NSCoding protocol and to be decoded from data.
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
-            let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String
+            let email = aDecoder.decodeObject(forKey: Constants.UserDefaults.email) as? String
             else { return nil }
-
+        print("email: \(email)")
         self.uid = uid
-        self.username = username
+        self.email = email
 
         super.init()
     }
@@ -82,12 +78,9 @@ class User: NSObject {
     // Now that we've created a User singleton, we need to make sure to set it. Once we receive the user from the database, we set the singleton with our custom setter method. After the singleton is set, it will remain in memory for the rest of the app's lifecycle. It will be accessible from any view controller
 
     // 1 Create a private static variable to hold our current user. This method is private so it can't be access outside of this class.
-    // MARK: - Singleton
-
-    // 1
     private static var _current: User?
 
-    // 2
+    // 2 computed property
     static var current: User {
         // 3
         guard let currentUser = _current else {
@@ -109,6 +102,7 @@ class User: NSObject {
 
             // 4 We store the data for our current user with the correct key in UserDefaults.
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
+            print("Wrote to UserDefaults complete")
         }
 
         _current = user
@@ -119,7 +113,7 @@ class User: NSObject {
 extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
-        aCoder.encode(username, forKey: Constants.UserDefaults.username)
+        aCoder.encode(email, forKey: Constants.UserDefaults.email)
     }
 }
 

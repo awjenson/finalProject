@@ -13,12 +13,6 @@ import SVProgressHUD
 // * Helen doesn't like the word "Vision"
 // * Helen likes "Fears" instead of "Vision"
 
-// Our timeline will retrieve post data from our database and display it to our user.
-
-// Firebase push happens when use taps out of textView. But, when does the retrive happen.. in the viewDidLoad.
-
-// Checkout Code With Chris's Question Bank Tutorial. Each question could be like each textView (Vision, Goals, etc.)
-
 let bruceLee = ProfileSelectedPerson(name: "Bruce Lee", bio: "Actor, martial artist, philosopher, and founder of the martial art Jeet Kune Do", advice: "\"Do not pray for an easy life, pray for the strength to endure a difficult one.\"", adviceURL: "https://www.brucelee.com/podcast")
 
 let markDivine = ProfileSelectedPerson(name: "Mark Devine", bio: "Former Navy SEAL, and founder of SEALFIT and Unbeatable Mind podcast", advice: "\"To live an uncommon life, one needs learn uncommon disciplines.\"", adviceURL: "https://unbeatablemind.com/podcast/")
@@ -104,8 +98,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     var userList = [ProfileStatement]()
     var profileArray = [ProfileUserData]()
-    var ref: DatabaseReference!
-    fileprivate var _refHandle: DatabaseHandle!
 
     var canEditText = false
 
@@ -122,16 +114,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     // MARK: - Lifecycle Methods
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        SVProgressHUD.show()
+
         if internetConnected() {
-            setupUI()
+            return setupUI()
         } else {
             performUIUpdatesOnMain {
                 self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
@@ -142,8 +131,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Methods
 
     func setupUI() {
-
-        SVProgressHUD.show()
 
         profileItemArray = [profileItem.passion,
                             profileItem.purpose,
@@ -158,12 +145,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         profile3TableView.delegate = self
 
         configureTableView()
-        configureDatabase()
     }
 
     func dayOfWeekAndHour() {
         let dayOfWeek = calendar.component(.weekday, from: date)
-//        let hour = calendar.component(.hour, from: date)
 
         switch dayOfWeek {
         case 1: // Sun
@@ -230,10 +215,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     }
 
-    // May not need this anymore
-    func configureDatabase() {
-        ref = Database.database().reference()
-    }
 
     func retrieveProfileUserData() {
         // listen for new messages in the firebase database with 'observe'
@@ -244,8 +225,14 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         // 2 Write the data by setting the value for the location specified
 
         // add .child(currentUID) so only current user can see their data
+        print("Current user: \(User.current.uid)")
 
         ProfileService.readProfileItemAll(for: User.current) { (retrievedProfileItem) in
+
+            print("***")
+            print(retrievedProfileItem)
+            print("***")
+
             self.profileItem = retrievedProfileItem
 
             // Update array with retrieved data
@@ -259,6 +246,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             SVProgressHUD.dismiss()
         }
     }
+
+
 
     func configureTableView() {
         profile3TableView.estimatedRowHeight = 50
@@ -320,26 +309,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         if canEditText == true {
             cell.userTextView.layer.borderColor = UIColor.red.cgColor
             cell.userTextView.layer.borderWidth = 2
-        }
+        } 
     }
-
-    // OLD CODE:
-//    func sendProfileUserData(_ userDictionary: [String:String?]) {
-//
-//        let messagesDB = ref.child(FirebaseConstants.DbChild.ProfileUserData).child(User.current.uid)
-//        // like specifying "/Messages/[some_auto_id]"
-//        // Then, .setValue, sets a value to the key (key value pair)
-//        messagesDB.childByAutoId().setValue(userDictionary) {
-//            (error, reference) in
-//            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-//            if error != nil {
-//                print(error!)
-//            } else {
-//                print("Message saved successfully")
-//                print(reference)
-//            }
-//        }
-//    }
 
     // Toggles button on/off
     func activateEditButton(bool: Bool) {
@@ -377,16 +348,14 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         activateEditButton(bool: !canEditText)
 
-        if canEditText == true {
-            print("EDITing is enabled")
-            self.profile3TableView.reloadData()
-            self.saveButton.setTitleColor(UIColor.red, for: .normal)
-            self.saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        if canEditText {
+            profile3TableView.reloadData()
+            saveButton.setTitleColor(UIColor.red, for: .normal)
+            saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         } else {
-            print("stop all editing")
-            self.view.endEditing(true)
-            self.profileHeaderView.backgroundColor = UIColor.clear
-
+            view.endEditing(true)
+            saveButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1), for: .normal)
+            saveButton.titleLabel?.font = UIFont(name: "System", size: 8)
 
             let now = Date()
             let formatter = DateFormatter()
@@ -403,7 +372,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
             ProfileService.writeProfileItem(for: User.current, profileItem: newProfileItem, success: { (success) in
                 if success == true {
-                    print("SUCCESS WRITING PROFILE USER DATA: \(success)")
+                    return
                 } else if success == false {
                     self.createAlert(title: "Error", message: "Unable to write to database. Check your Internet connection and try again.")
                 }
@@ -456,8 +425,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt indexPath")
         tableView.deselectRow(at: indexPath, animated: true)
+        print(indexPath.row)
     }
 }
 
@@ -470,9 +439,6 @@ extension Profile3ViewController: UITextViewDelegate {
         } else {
             return true
         }
-    }
-
-    func textViewDidBeginEditing(_ textView: UITextView) {
     }
 
     func textViewDidChange(_ textView: UITextView) {
@@ -492,31 +458,20 @@ extension Profile3ViewController: UITextViewDelegate {
         profile3TableView.setContentOffset(currentOffset, animated: false)
     }
 
-
     func textViewDidEndEditing(_ textView: UITextView) {
-        print("textViewDidEndEditing")
 
         var v : UIView = textView
         repeat { v = v.superview! } while !(v is ProfileTableViewCell)
         let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
 
+
         guard let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell) else {
             return
         }
-        // and now we have the index path! update the model
 
-        print("Selected Cell: \(selectedIndexPath.row)")
-        print("Selected Cell: \(selectedCell.userTextView.text)")
+        print("Selected IndexPath: \(selectedIndexPath)")
 
         // Update Array with latest user textField.text
         profileItemArray[selectedIndexPath.row] = selectedCell.userTextView.text
-
-        print("Print Updated Array: \(profileItemArray)")
     }
-
 }
-
-
-
-
-

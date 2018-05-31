@@ -81,6 +81,7 @@ extension AppDelegate {
 
             // Existing User
             User.setCurrent(user)
+            print("APP DELEGATE, EXISTING USER: \(user.uid)")
 
             initialViewController = UIStoryboard.initialViewController(for: .main)
         } else {
