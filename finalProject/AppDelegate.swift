@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // IQKeyboardManager code:
         IQKeyboardManager.shared.enable = true
+//        IQKeyboardManager.shared.enableAutoToolbar = false
+
 
 
         // MARK: - UIStoryboard and UserDefaults

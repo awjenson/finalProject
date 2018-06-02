@@ -29,19 +29,6 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
         userTextView.delegate = self
         userTextView.layer.cornerRadius = 5
 
-        // BUTTON UI
-//        adviceURLButton.layer.cornerRadius = 10
-//        adviceURLButton.layer.borderWidth = 1.0
-
-//        let toolbar = UIToolbar()
-//        toolbar.sizeToFit()
-//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-
-//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.doneClicked))
-
-//        // set order of toolbar
-//        toolbar.setItems([flexibleSpace, doneButton], animated: false)
-//        userTextView.inputAccessoryView = toolbar
 
     }
 

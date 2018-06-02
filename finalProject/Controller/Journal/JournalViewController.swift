@@ -39,8 +39,7 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var mood7Button: UIButton!
     @IBOutlet weak var mood8Button: UIButton!
     @IBOutlet weak var mood9Button: UIButton!
-    @IBOutlet weak var mood10Button: UIButton!
-    @IBOutlet weak var mood11Button: UIButton!
+
 
     // MARK: - Properties
 
@@ -75,12 +74,13 @@ class JournalViewController: UIViewController {
         super.viewDidLoad()
 
         if internetConnected() {
-            setupUI()
+            retrieveMessages()
         } else {
             performUIUpdatesOnMain {
                 self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
             }
         }
+        setupUI()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -92,8 +92,6 @@ class JournalViewController: UIViewController {
     // MARK: - Methods
 
     func setupUI() {
-
-        retrieveMessages()
 
         dayOfWeekAndHour()
 
@@ -110,7 +108,7 @@ class JournalViewController: UIViewController {
 
         setupButtonsLabelsTextViews()
 
-        setupTableView()
+        setupRefreshControl()
 
         setupKeyboardObservers()
     }
@@ -152,11 +150,11 @@ class JournalViewController: UIViewController {
         mood7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
         mood8Button.setTitle(Constants.SelectedMood.Button8,for: .normal)
         mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
-        mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
-        mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
     }
 
-    func setupTableView() {
+    // MARK: - Refresh Control Methods
+
+    func setupRefreshControl() {
         // add pull to refresh
         refreshControl.addTarget(self, action: #selector(reloadMessages), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -172,6 +170,8 @@ class JournalViewController: UIViewController {
             self.refreshControl.endRefreshing()
         }
     }
+
+    // MARK: - Database Methods
 
     func loadMessagesAll() {
 
@@ -191,8 +191,6 @@ class JournalViewController: UIViewController {
             self.journalTableView.reloadData()
         }
     }
-
-
 
     func setupKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -268,7 +266,6 @@ class JournalViewController: UIViewController {
     let am6 = JournalAdvice(quote: "\"Refuse to be average. Let your heart soar as high as it will.\"", source: "A. W. Tozer", question: "Who improves your life?")
 
     let pm6 = JournalAdvice(quote: "\"The awakening of consciousness is the next evolutionary step for mankind.\"", source: "Eckhart Tolle", question: "What's one thing that I am grateful for today?")
-
 
 
     func dayOfWeekAndHour() {
@@ -542,12 +539,6 @@ class JournalViewController: UIViewController {
 
         case mood9Button:
             selectedMood = Constants.SelectedMood.Button9
-            response = ""
-        case mood10Button:
-            selectedMood = Constants.SelectedMood.Button10
-            response = ""
-        case mood11Button:
-            selectedMood = Constants.SelectedMood.Button11
             response = ""
 
         default:

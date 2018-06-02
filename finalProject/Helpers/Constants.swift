@@ -32,17 +32,15 @@ struct Constants {
 
     struct SelectedMood {
         static let Button0 = "Sad"
-        static let Button1 = "Inferior"
-        static let Button2 = "Depressed"
-        static let Button3 = "Bored"
-        static let Button4 = "Relaxed"
-        static let Button5 = "Good"
-        static let Button6 = "Mad!"
-        static let Button7 = "Helpless"
-        static let Button8 = "Stressed"
-        static let Button9 = "Numb"
-        static let Button10 = "Motivated!"
-        static let Button11 = "Happy!"
+        static let Button1 = "Depressed"
+        static let Button2 = "Bored"
+        static let Button3 = "Grateful"
+        static let Button4 = "Good"
+        static let Button5 = "Mad!"
+        static let Button6 = "Stressed"
+        static let Button7 = "Numb"
+        static let Button8 = "Motivated"
+        static let Button9 = "Happy!"
     }
 
 }

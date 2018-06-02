@@ -22,10 +22,12 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     // an empty JournalMessage array to contain the user's messages
     var items: [GoalItem] = []
-    // var items = [GoalItem]()
 
-    // NEED THIS REF
-    var ref: DatabaseReference!
+//    // NEED THIS REF
+//    var ref: DatabaseReference!
+
+    // pull to refresh tableView
+    let refreshControl = UIRefreshControl()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,12 +39,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         if internetConnected() {
-            setupUI()
+            retrieveGoalItems()
         } else {
             performUIUpdatesOnMain {
                 self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
             }
         }
+        setupUI()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,17 +58,36 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         counterTableView.dataSource = self
         counterTableView.delegate = self
-
         counterTableView.allowsMultipleSelectionDuringEditing = false
 
-        //            configureDatabase() // I don't think this is needed anymore
-        retrieveGoalItems()
+        setupRefreshControl()
     }
 
-    func configureDatabase() {
-        // This is the path BEFORE .child("GoalItems").child(currentUID).child("typed goal")
-        ref = Database.database().reference().child(FirebaseConstants.DbChild.GoalItems).child(User.current.uid)
+//    func configureDatabase() {
+//        // This is the path BEFORE .child("GoalItems").child(currentUID).child("typed goal")
+//        ref = Database.database().reference().child(FirebaseConstants.DbChild.GoalItems).child(User.current.uid)
+//    }
+
+    // MARK: - Refresh Control Methods
+
+    func setupRefreshControl() {
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadGoals), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        counterTableView.addSubview(refreshControl)
     }
+
+    @objc func reloadGoals() {
+
+        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
+        if self.refreshControl.isRefreshing {
+            // Reload time based array
+            retrieveGoalItems()
+            self.refreshControl.endRefreshing()
+        }
+    }
+
+    // MARK: - Database Methods
 
     func retrieveGoalItems() {
         GoalItemService.readGoals(for: User.current) { (newItems) in
@@ -74,7 +96,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
                 print("retrievedMessages count: \(newItems.count)")
                 return
             }
-
             self.items = newItems
             print("Inside GoalItemService.readGoals")
             self.counterTableView.reloadData()
@@ -119,19 +140,24 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+
             let goalItemRow = items[indexPath.row]
 
             // Firebase (option A)
-//            // Code doesn't seem as efficient as code below to removeValue()
+            // Code doesn't seem as efficient as code below to removeValue()
 //            GoalItemService.deleteGoal(for: User.current, goal: goalItemRow, success: { (success) in
 //                if success == true {
 //                    print("SUCCESS WRITING GOAL: \(success)")
+//                    print(self.items)
+//                    print(self.items.count)
 //                    return
 //                }
 //            })
 
-            // Firebase (option B)
+            // Firebase (option B, seems more simple)
             goalItemRow.ref?.removeValue()
+            items.remove(at: indexPath.row)
+            counterTableView.reloadData()
         }
     }
 
@@ -160,7 +186,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         let now = Date()
         let formatter = DateFormatter()
         // initially set the format based on your datepicker date
-        formatter.dateFormat = "MMMM d, yyyy"
+        formatter.dateFormat = "MMMM d, yyyy h:mm a"
         let currentDate = formatter.string(from: now)
 
         let alert = UIAlertController(title: "Add a New Goal to Track Daily",
@@ -201,6 +227,4 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         present(alert, animated: true, completion: nil)
     }
-
-
 }

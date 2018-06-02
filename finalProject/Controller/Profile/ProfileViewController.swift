@@ -112,20 +112,22 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     // initial setup
     var selectedPersonProfile = ProfileSelectedPerson(name: "", bio: "", advice: "", adviceURL: "")
 
+    let refreshControl = UIRefreshControl()
+
     // MARK: - Lifecycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        SVProgressHUD.show()
-
         if internetConnected() {
-            return setupUI()
+            SVProgressHUD.show()
+            retrieveProfileUserData()
         } else {
             performUIUpdatesOnMain {
                 self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
             }
         }
+        setupUI()
     }
 
     // MARK: - Methods
@@ -137,14 +139,33 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
                             profileItem.goals,
                             profileItem.fears]
 
-        retrieveProfileUserData()
-
         dayOfWeekAndHour()
 
         profile3TableView.dataSource = self
         profile3TableView.delegate = self
 
         configureTableView()
+
+        setupRefreshControl()
+    }
+
+    func setupRefreshControl() {
+
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadProfile), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        profile3TableView.addSubview(refreshControl)
+    }
+
+    @objc func reloadProfile() {
+
+        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
+        if self.refreshControl.isRefreshing {
+            // Reload time based array
+            retrieveProfileUserData()
+            self.refreshControl.endRefreshing()
+        }
+        self.profile3TableView.reloadData()
     }
 
     func dayOfWeekAndHour() {
@@ -206,13 +227,11 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func displaySelectedPersonProfile(person: ProfileSelectedPerson) {
-        // Randomize the selected profile
         selectedPersonProfile = person
 
         fullNameLabel.text = selectedPersonProfile.name
         bioTextLabel.text = selectedPersonProfile.bio
         quoteTextLabel.text = selectedPersonProfile.advice
-
     }
 
 
@@ -225,13 +244,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         // 2 Write the data by setting the value for the location specified
 
         // add .child(currentUID) so only current user can see their data
-        print("Current user: \(User.current.uid)")
 
         ProfileService.readProfileItemAll(for: User.current) { (retrievedProfileItem) in
-
-            print("***")
-            print(retrievedProfileItem)
-            print("***")
 
             self.profileItem = retrievedProfileItem
 
@@ -246,6 +260,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             SVProgressHUD.dismiss()
         }
     }
+
 
 
 
@@ -304,8 +319,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func changeTextViewBoarderColor(_ cell: ProfileTableViewCell) {
-
-        print("changeTextViewBoarderColor()")
         if canEditText == true {
             cell.userTextView.layer.borderColor = UIColor.red.cgColor
             cell.userTextView.layer.borderWidth = 2
@@ -315,8 +328,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     // Toggles button on/off
     func activateEditButton(bool: Bool) {
         canEditText = bool
-        let title = bool ? "SAVE" : "EDIT"
-        // enable textView to be editable
+        print("canEditText \(canEditText)")
     }
 
     // MARK: - IBActions
@@ -354,13 +366,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         } else {
             view.endEditing(true)
-            saveButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1), for: .normal)
-            saveButton.titleLabel?.font = UIFont(name: "System", size: 8)
+            saveButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
+            saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
 
             let now = Date()
             let formatter = DateFormatter()
             // initially set the format based on your datepicker date
-            formatter.dateFormat = "MMMM d, yyyy"
+            formatter.dateFormat = "MMMM d, yyyy h:mm a"
             let currentDate = formatter.string(from: now)
 
             // Input array of user data into property, write to Firebase
@@ -426,7 +438,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(indexPath.row)
     }
 }
 
@@ -458,20 +469,36 @@ extension Profile3ViewController: UITextViewDelegate {
         profile3TableView.setContentOffset(currentOffset, animated: false)
     }
 
-    func textViewDidEndEditing(_ textView: UITextView) {
+    func textViewDidBeginEditing(_ textView: UITextView) {
 
+        // Only created this code to test (print statement)
         var v : UIView = textView
         repeat { v = v.superview! } while !(v is ProfileTableViewCell)
         let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
-
 
         guard let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell) else {
             return
         }
 
-        print("Selected IndexPath: \(selectedIndexPath)")
+        print("Entered IndexPath: \(selectedIndexPath)")
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+
+        print("textViewDidEndEditing (Exited IndexPath)")
+        var v : UIView = textView
+        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
+        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
+
+        guard let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell) else {
+            return
+        }
+
+        print("Exited IndexPath: \(selectedIndexPath)")
 
         // Update Array with latest user textField.text
         profileItemArray[selectedIndexPath.row] = selectedCell.userTextView.text
+        print(profileItemArray)
+        print("^^^")
     }
 }

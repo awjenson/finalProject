@@ -10,14 +10,10 @@ import UIKit
 
 class CounterTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
-
-
-
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,5 +25,4 @@ class CounterTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

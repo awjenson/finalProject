@@ -16,6 +16,7 @@ class HomeFooterCell: UITableViewCell {
         super.awakeFromNib()
     }
 
+    /* I'll keep this button in for now because I eventually hope to get sponsors for this app and to use this button to link to the sponsor's website. */
     @IBAction func sponsorLogoButtonTapped(_ sender: UIButton) {
         print("Go to Sponsor's Website")
     }

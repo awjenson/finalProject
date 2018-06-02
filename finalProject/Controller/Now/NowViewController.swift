@@ -71,6 +71,15 @@ class NowViewController: UIViewController {
     var tipArray7 = [Tip]()
     var tipArray8 = [Tip]() // Now tip array
 
+//    lazy var refreshControl: UIRefreshControl = {
+//        let refreshControl = UIRefreshControl()
+//        refreshControl.addTarget(self, action:
+//            #selector(NowViewController.handleRefresh(_:)),
+//                                 for: UIControlEvents.valueChanged)
+//        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+//
+//        return refreshControl
+//    }()
 
     // MARK: - Lifecycle Methods
 
@@ -82,15 +91,24 @@ class NowViewController: UIViewController {
         } else {
             performUIUpdatesOnMain {
                 self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+                self.setupRefreshControl()
             }
         }
     }
+
+//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+//        setupUI()
+//        refreshControl.endRefreshing()
+//    }
 
     // MARK: - Methods
 
     func setupUI() {
         // call configureTableView() and reloadTimeline() in viewDidLoad
-        configureTableView()
+//        configureTableView()
+
+
+
         dayOfWeekAndHour()
 
         // set estimated row height (needed for auto row height size)
@@ -108,39 +126,29 @@ class NowViewController: UIViewController {
         }
     }
 
-    @objc func reloadTimeline() {
+    // MARK: - Refresh Control
 
-        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
-        if self.refreshControl.isRefreshing {
-            // Reload time based array
-            dayOfWeekAndHour()
-            self.refreshControl.endRefreshing()
-        }
-        self.nowTableView.reloadData()
-
-        /* Advanced way to refresh posts in timeline
-         https://www.makeschool.com/online-courses/tutorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/building-the-timeline
-         */
-        //        UserService.timeline { (posts) in
-        //            self.posts = posts
-        //
-        //            if self.refreshControl.isRefreshing {
-        //                self.refreshControl.endRefreshing()
-        //            }
-        //
-        //            self.nowTableView.reloadData()
-        //        }
-    }
-
-    func configureTableView() {
-        // ...
+    func setupRefreshControl() {
 
         // add pull to refresh
         refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         nowTableView.addSubview(refreshControl)
-
     }
+
+    @objc func reloadTimeline() {
+
+        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
+        if self.refreshControl.isRefreshing {
+            // Reload time based array
+            setupUI()
+
+            self.refreshControl.endRefreshing()
+        }
+        self.nowTableView.reloadData()
+    }
+
+    // MARK: - Time-based Functions
 
     func dayOfWeekAndHour() {
 
@@ -344,27 +352,40 @@ class NowViewController: UIViewController {
 
     func refreshTopicButtons() {
         topic0Button.setTitle("\(topics[0].icon)", for: .normal)
+        topic0Button.backgroundColor = UIColor.darkGray
+
         topic1Button.setTitle("\(topics[1].icon)", for: .normal)
+        topic1Button.backgroundColor = UIColor.darkGray
+
         topic2Button.setTitle("\(topics[2].icon)", for: .normal)
+        topic2Button.backgroundColor = UIColor.darkGray
+
         topic3Button.setTitle("\(topics[3].icon)", for: .normal)
+        topic3Button.backgroundColor = UIColor.darkGray
+
         topic4Button.setTitle("\(topics[4].icon)", for: .normal)
+        topic4Button.backgroundColor = UIColor.darkGray
+
         topic5Button.setTitle("\(topics[5].icon)", for: .normal)
+        topic5Button.backgroundColor = UIColor.darkGray
     }
 
     func flipButton(at indexNumber: Int, withText text: String, on button: RoundButton) {
 
         let selectedButtonIcon = "X"
 
+
+
         if button.currentTitle == text {
             print("Tapped a topic button button")
             refreshTopicButtons()
             button.setTitle("\(selectedButtonIcon)", for: .normal)
-//            button.backgroundColor = UIColor.gray
+            button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
             topicSelected(indexNumber)
         } else {
             print("Tapped 'X' button")
             button.setTitle(text, for: .normal)
-//            button.backgroundColor = UIColor.blue
+            button.backgroundColor = UIColor.darkGray
             refreshTopicButtons()
             topicSelected(topicButtons.count)
         }

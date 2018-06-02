@@ -25,7 +25,6 @@
 		DA359C692043324F000190AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C672043324F000190AD /* Main.storyboard */; };
 		DA359C6B2043324F000190AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA359C6A2043324F000190AD /* Assets.xcassets */; };
 		DA359C6E2043324F000190AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C6C2043324F000190AD /* LaunchScreen.storyboard */; };
-		DA359C7B204375BF000190AD /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C7A204375BF000190AD /* HomeCollectionViewCell.swift */; };
 		DA361D2320818BDF007ACE59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D2220818BDF007ACE59 /* Constants.swift */; };
 		DA361D2D20840DD3007ACE59 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA361D2C20840DD3007ACE59 /* Login.storyboard */; };
 		DA361D2F2084273E007ACE59 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D2E2084273E007ACE59 /* User.swift */; };
@@ -36,6 +35,7 @@
 		DA361D3920896E5D007ACE59 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3820896E5D007ACE59 /* Date+convertToString.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD420B103DC007220F4 /* CounterViewController.swift */; };
+		DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */; };
 		DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A249209E4845008018D1 /* NewUserList.swift */; };
 		DA5AED9F207683120094AA57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5AED9E207683120094AA57 /* GoogleService-Info.plist */; };
 		DA5AEDA720769D0E0094AA57 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */; };
@@ -47,11 +47,8 @@
 		DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */; };
 		DA606B512064969100DD14C0 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA606B502064969100DD14C0 /* Topic.swift */; };
 		DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */; };
-		DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA714C16204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift */; };
-		DA714C1B204E083700BCBB3D /* HomeTipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA714C1A204E083700BCBB3D /* HomeTipTableViewCell.swift */; };
 		DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78986D204F5F69005046D8 /* ViewModelItemType.swift */; };
 		DA78987620507C86005046D8 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78987520507C86005046D8 /* ProfileTableViewCell.swift */; };
-		DA7898812051D72A005046D8 /* HomeHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898802051D72A005046D8 /* HomeHeaderCollectionReusableView.swift */; };
 		DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898822051E39E005046D8 /* ProfileViewController.swift */; };
 		DA7898872051E5E0005046D8 /* ProfileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898862051E5E0005046D8 /* ProfileDataModel.swift */; };
 		DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898882051E8EC005046D8 /* ProfileDataResults.swift */; };
@@ -99,7 +96,6 @@
 		DA359C6A2043324F000190AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA359C6D2043324F000190AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA359C6F2043324F000190AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA359C7A204375BF000190AD /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA361D2220818BDF007ACE59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA361D2C20840DD3007ACE59 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		DA361D2E2084273E007ACE59 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -110,6 +106,7 @@
 		DA361D3820896E5D007ACE59 /* Date+convertToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA404BD420B103DC007220F4 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorneredButton.swift; sourceTree = "<group>"; };
 		DA59A249209E4845008018D1 /* NewUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserList.swift; sourceTree = "<group>"; };
 		DA5AED9E207683120094AA57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -121,11 +118,8 @@
 		DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAdvice.swift; sourceTree = "<group>"; };
 		DA606B502064969100DD14C0 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
-		DA714C16204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryTableViewCell.swift; sourceTree = "<group>"; };
-		DA714C1A204E083700BCBB3D /* HomeTipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTipTableViewCell.swift; sourceTree = "<group>"; };
 		DA78986D204F5F69005046D8 /* ViewModelItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelItemType.swift; sourceTree = "<group>"; };
 		DA78987520507C86005046D8 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
-		DA7898802051D72A005046D8 /* HomeHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		DA7898822051E39E005046D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DA7898862051E5E0005046D8 /* ProfileDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataModel.swift; sourceTree = "<group>"; };
 		DA7898882051E8EC005046D8 /* ProfileDataResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataResults.swift; sourceTree = "<group>"; };
@@ -233,16 +227,12 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		DA272D0920BCDCCB00137039 /* MayUseLater */ = {
+		DA272D0920BCDCCB00137039 /* PlanToUseInLaterVersion */ = {
 			isa = PBXGroup;
 			children = (
 				DA361D3620882A7A007ACE59 /* HomeFooterCell.swift */,
-				DA714C16204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift */,
-				DA359C7A204375BF000190AD /* HomeCollectionViewCell.swift */,
-				DA714C1A204E083700BCBB3D /* HomeTipTableViewCell.swift */,
-				DA7898802051D72A005046D8 /* HomeHeaderCollectionReusableView.swift */,
 			);
-			path = MayUseLater;
+			path = PlanToUseInLaterVersion;
 			sourceTree = "<group>";
 		};
 		DA359C572043324F000190AD = {
@@ -303,6 +293,7 @@
 				DAA1021C2053444000A25EFC /* RoundButton.swift */,
 				DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */,
 				DA78986D204F5F69005046D8 /* ViewModelItemType.swift */,
+				DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,7 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				DA78988E2053102E005046D8 /* NowTableViewCell.swift */,
-				DA272D0920BCDCCB00137039 /* MayUseLater */,
+				DA272D0920BCDCCB00137039 /* PlanToUseInLaterVersion */,
 			);
 			path = Now;
 			sourceTree = "<group>";
@@ -612,13 +603,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */,
 				DA361D3920896E5D007ACE59 /* Date+convertToString.swift in Sources */,
 				DA015BF42073E36300A0342F /* UIViewControllerExtension.swift in Sources */,
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
 				DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */,
 				DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */,
-				DA714C17204D8D9C00BCBB3D /* HomeCategoryTableViewCell.swift in Sources */,
 				DA2B860320BB3A30005B7DD6 /* InternetService.swift in Sources */,
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
 				DA606B512064969100DD14C0 /* Topic.swift in Sources */,
@@ -652,15 +643,12 @@
 				DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */,
 				DA361D2F2084273E007ACE59 /* User.swift in Sources */,
 				DA361D2320818BDF007ACE59 /* Constants.swift in Sources */,
-				DA714C1B204E083700BCBB3D /* HomeTipTableViewCell.swift in Sources */,
 				DA2B85FD20B9CC27005B7DD6 /* MessageItemService.swift in Sources */,
 				DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */,
 				DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */,
 				DA361D332084566E007ACE59 /* UserService.swift in Sources */,
 				DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */,
-				DA7898812051D72A005046D8 /* HomeHeaderCollectionReusableView.swift in Sources */,
 				DA5AEDA720769D0E0094AA57 /* WelcomeViewController.swift in Sources */,
-				DA359C7B204375BF000190AD /* HomeCollectionViewCell.swift in Sources */,
 				DA015BF72073E3FC00A0342F /* GCDBlackBox.swift in Sources */,
 				DA78988D2052EFA1005046D8 /* NowViewController.swift in Sources */,
 				DAC8DFF4206C86D2005D627B /* Colors.swift in Sources */,

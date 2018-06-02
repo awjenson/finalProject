@@ -521,10 +521,10 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RTc-8q-R2F">
-                                            <rect key="frame" x="16" y="10" width="343" height="183"/>
+                                            <rect key="frame" x="16" y="10" width="0.0" height="183"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn from the best minds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-2M-tGe" userLabel="Title Label">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="22"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="cls-8V-ePh"/>
                                                     </constraints>
@@ -533,30 +533,32 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Quote Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0J-Lx-1bb">
-                                                    <rect key="frame" x="0.0" y="32" width="343" height="51.5"/>
+                                                    <rect key="frame" x="0.0" y="32" width="0.0" height="51.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpL-xC-uQD">
-                                                    <rect key="frame" x="0.0" y="93.5" width="343" height="21.5"/>
+                                                    <rect key="frame" x="0.0" y="93.5" width="0.0" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vd6-86-25M">
-                                                    <rect key="frame" x="0.0" y="125" width="343" height="18"/>
+                                                    <rect key="frame" x="0.0" y="125" width="0.0" height="18"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                     <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypF-Zx-AxK">
-                                                    <rect key="frame" x="0.0" y="153" width="343" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypF-Zx-AxK" customClass="RoundCorneredButton" customModule="finalProject" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="153" width="0.0" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="rQa-Kt-amB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title="LEARN MORE"/>
+                                                    <state key="normal" title="LEARN MORE">
+                                                        <color key="titleColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="learnMoreButtonTapped:" destination="F3y-eH-bqn" eventType="touchUpInside" id="Qn7-3B-fCS"/>
                                                     </connections>
@@ -667,7 +669,9 @@
                                             <constraint firstAttribute="height" constant="31" id="BlK-4F-OsB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="LOGOUT"/>
+                                        <state key="normal" title="LOGOUT">
+                                            <color key="titleColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="dI1-zL-jwA" kind="presentation" identifier="LogoutSegue" id="vYn-x3-AQB"/>
                                         </connections>
@@ -679,7 +683,9 @@
                                             <constraint firstAttribute="height" constant="31" id="x5V-O7-Bjx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="TAP"/>
+                                        <state key="normal" title="TAP">
+                                            <color key="titleColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="F3y-eH-bqn" eventType="touchUpInside" id="DhI-rG-mLg"/>
                                         </connections>
@@ -946,45 +952,38 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-KB-uSm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
-                                                        <state key="normal" title="Sad "/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                                        <state key="normal" title="Zero"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="olI-3N-03j"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gl-oN-1mU">
-                                                        <rect key="frame" x="42" y="0.0" width="54" height="30"/>
-                                                        <state key="normal" title="Inferior"/>
+                                                        <rect key="frame" x="67" y="0.0" width="55" height="30"/>
+                                                        <state key="normal" title="One"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="4al-FP-zel"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8i-fA-nh1">
-                                                        <rect key="frame" x="104" y="0.0" width="81" height="30"/>
-                                                        <state key="normal" title="Depressed"/>
+                                                        <rect key="frame" x="130" y="0.0" width="55.5" height="30"/>
+                                                        <state key="normal" title="Two"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="6FQ-x2-mh2"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-S4-qHP">
-                                                        <rect key="frame" x="193" y="0.0" width="45" height="30"/>
-                                                        <state key="normal" title="Bored"/>
+                                                        <rect key="frame" x="193.5" y="0.0" width="73.5" height="30"/>
+                                                        <state key="normal" title="Three"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="5bl-89-QAN"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-kB-snS">
-                                                        <rect key="frame" x="246" y="0.0" width="59.5" height="30"/>
-                                                        <state key="normal" title="Relaxed"/>
+                                                        <rect key="frame" x="275" y="0.0" width="84" height="30"/>
+                                                        <state key="normal" title="Four"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="F8y-P0-zjv"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owE-Em-cft">
-                                                        <rect key="frame" x="313.5" y="0.0" width="45.5" height="30"/>
-                                                        <state key="normal" title="Good"/>
-                                                        <connections>
-                                                            <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="zkb-hN-kse"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -992,46 +991,39 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mRP-7z-Afy">
                                                 <rect key="frame" x="0.0" y="34" width="359" height="30"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owE-Em-cft">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="Five"/>
+                                                        <connections>
+                                                            <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="zkb-hN-kse"/>
+                                                        </connections>
+                                                    </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-SK-qRA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
-                                                        <state key="normal" title="Mad!"/>
+                                                        <rect key="frame" x="61.5" y="0.0" width="53.5" height="30"/>
+                                                        <state key="normal" title="Six"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="ASW-xL-ZjL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlU-dm-dR7">
-                                                        <rect key="frame" x="43" y="0.0" width="59" height="30"/>
-                                                        <state key="normal" title="Helpless"/>
+                                                        <rect key="frame" x="123" y="0.0" width="75" height="30"/>
+                                                        <state key="normal" title="Seven"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="f3H-FA-My9"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-0x-0Wu">
-                                                        <rect key="frame" x="110" y="0.0" width="61" height="30"/>
-                                                        <state key="normal" title="Stressed"/>
+                                                        <rect key="frame" x="206" y="0.0" width="62.5" height="30"/>
+                                                        <state key="normal" title="Eight"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="ig5-DW-weI"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ae-WH-G7R">
-                                                        <rect key="frame" x="179" y="0.0" width="42" height="30"/>
-                                                        <state key="normal" title="Numb"/>
+                                                        <rect key="frame" x="276.5" y="0.0" width="82.5" height="30"/>
+                                                        <state key="normal" title="Nine"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="PGw-CW-DGI"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zO-5F-hey">
-                                                        <rect key="frame" x="229" y="0.0" width="73" height="30"/>
-                                                        <state key="normal" title="Motivated!"/>
-                                                        <connections>
-                                                            <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="poc-OL-ySh"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNi-rL-rbF">
-                                                        <rect key="frame" x="310" y="0.0" width="49" height="30"/>
-                                                        <state key="normal" title="Happy!"/>
-                                                        <connections>
-                                                            <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="uPR-jO-mFb"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -1080,8 +1072,6 @@
                         <outlet property="journalTableView" destination="tMD-hh-5Jr" id="SuO-f6-gL7"/>
                         <outlet property="messageTextView" destination="ZpC-WO-543" id="6gU-Pm-fDQ"/>
                         <outlet property="mood0Button" destination="KhV-KB-uSm" id="R3v-Op-F2q"/>
-                        <outlet property="mood10Button" destination="2zO-5F-hey" id="cOd-rR-bwY"/>
-                        <outlet property="mood11Button" destination="pNi-rL-rbF" id="LPz-6M-naT"/>
                         <outlet property="mood1Button" destination="2Gl-oN-1mU" id="zGc-8E-S7f"/>
                         <outlet property="mood2Button" destination="C8i-fA-nh1" id="IIw-Ec-u3f"/>
                         <outlet property="mood3Button" destination="SWz-S4-qHP" id="d0a-ct-MhV"/>
@@ -1131,7 +1121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQh-c4-Oap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="967"/>
+            <point key="canvasLocation" x="1632.8" y="966.56671664167925"/>
         </scene>
         <!--Counter View Controller-->
         <scene sceneID="OL5-SB-avY">
@@ -1151,8 +1141,8 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Lc-O5-2sL">
                                             <rect key="frame" x="16" y="10" width="343" height="144"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design your ideal daily routine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZH-fS-cVH">
-                                                    <rect key="frame" x="99.5" y="0.0" width="144" height="16.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Define the habits that define you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZH-fS-cVH">
+                                                    <rect key="frame" x="93.5" y="0.0" width="156" height="16.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1169,8 +1159,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-tr-Rdr">
-                                                    <rect key="frame" x="110" y="114" width="123" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-tr-Rdr" customClass="RoundCorneredButton" customModule="finalProject" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="114" width="343" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="RRW-Tb-hx1"/>
                                                     </constraints>
@@ -1183,7 +1173,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Jhf-Re-YWE" firstAttribute="leading" secondItem="4Lc-O5-2sL" secondAttribute="leading" id="9hI-zL-Jza"/>
+                                                <constraint firstAttribute="trailing" secondItem="K5x-tr-Rdr" secondAttribute="trailing" id="N2j-lT-jwM"/>
                                                 <constraint firstAttribute="trailing" secondItem="Jhf-Re-YWE" secondAttribute="trailing" id="nyz-kH-9k7"/>
+                                                <constraint firstItem="K5x-tr-Rdr" firstAttribute="leading" secondItem="4Lc-O5-2sL" secondAttribute="leading" id="vMZ-VS-ikR"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>

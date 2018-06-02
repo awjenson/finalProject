@@ -14,17 +14,32 @@ struct ProfileService {
     // Retrieve only one ProfileItem
     static func readProfileItemAll(for user: User, completion: @escaping (ProfileItem) -> Void) {
 
+        var retrievedProfileItem = ProfileItem(timestamp: "", passion: "", purpose: "", goals: "", fears: "")
+
         let ref = DatabaseReference.toLocation(.readProfileItem(uid: user.uid))
-        ref.queryLimited(toLast: 1).observe(.childAdded) { (snapshot) in
+        print("Profile ref: \(ref)")
 
-            var retrievedProfileItem = ProfileItem(timestamp: "", passion: "", purpose: "", goals: "", fears: "")
+        ref.observe(.value) { (snapshot) in
 
-            if snapshot.hasChildren(),
-                let profileItem = ProfileItem(snapshot: snapshot) {
-                retrievedProfileItem = profileItem
-                print("SNAPSHOT HAS CHILDREN: \(snapshot)")
+            if snapshot.exists() {
+
+                ref.queryLimited(toLast: 1).observe(.childAdded) { (snapshot) in
+
+                    print("snapshot: \(snapshot)")
+
+                    if snapshot.exists(),
+                        let profileItem = ProfileItem(snapshot: snapshot) {
+                        retrievedProfileItem = profileItem
+                        print("SNAPSHOT HAS CHILDREN: \(snapshot)")
+                    } else {
+                        print("NO SNAPSHOT EXISTS")
+                    }
+                    completion(retrievedProfileItem)
+                }
+            } else {
+                print("NO SNAPSHOT EXISTS")
+                completion(retrievedProfileItem)
             }
-            completion(retrievedProfileItem)
         }
     }
 
