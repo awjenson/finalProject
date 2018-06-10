@@ -93,8 +93,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var saveButton: EditButton!
 
     // MARK: - Properites
-    var profileItem = ProfileItem(timestamp: "", passion: "", purpose: "", goals: "", fears: "")
-    var profileItemArray: [String] = []
+    var userProfileItem = ProfileItem(timestamp: "", passion: "", purpose: "", goals: "", fears: "")
+    var userProfileArray: [String] = []
 
     var userList = [ProfileStatement]()
     var profileArray = [ProfileUserData]()
@@ -134,10 +134,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func setupUI() {
 
-        profileItemArray = [profileItem.passion,
-                            profileItem.purpose,
-                            profileItem.goals,
-                            profileItem.fears]
+        userProfileArray = [userProfileItem.passion,
+                            userProfileItem.purpose,
+                            userProfileItem.goals,
+                            userProfileItem.fears]
 
         dayOfWeekAndHour()
 
@@ -247,13 +247,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         ProfileService.readProfileItemAll(for: User.current) { (retrievedProfileItem) in
 
-            self.profileItem = retrievedProfileItem
+            self.userProfileItem = retrievedProfileItem
 
             // Update array with retrieved data
-            self.profileItemArray = [self.profileItem.passion,
-                                     self.profileItem.purpose,
-                                     self.profileItem.goals,
-                                     self.profileItem.fears]
+            self.userProfileArray = [self.userProfileItem.passion,
+                                     self.userProfileItem.purpose,
+                                     self.userProfileItem.goals,
+                                     self.userProfileItem.fears]
 
             self.configureTableView()
             self.profile3TableView.reloadData()
@@ -377,10 +377,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
             // Input array of user data into property, write to Firebase
             let newProfileItem = ProfileItem(timestamp: currentDate,
-                                             passion: profileItemArray[0],
-                                             purpose: profileItemArray[1],
-                                             goals: profileItemArray[2],
-                                             fears: profileItemArray[3])
+                                             passion: userProfileArray[0],
+                                             purpose: userProfileArray[1],
+                                             goals: userProfileArray[2],
+                                             fears: userProfileArray[3])
 
             ProfileService.writeProfileItem(for: User.current, profileItem: newProfileItem, success: { (success) in
                 if success == true {
@@ -426,7 +426,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.headerUserTextViewLabel.text = selectedResults[indexPath.row].headerUserTextLabel
 
         // USER DATA - array
-        cell.userTextView.text = profileItemArray[indexPath.row]
+        cell.userTextView.text = userProfileArray[indexPath.row]
 
         // Set the delegate to be the VC when you create the cell
         cell.userTextView.delegate = self
@@ -497,8 +497,8 @@ extension Profile3ViewController: UITextViewDelegate {
         print("Exited IndexPath: \(selectedIndexPath)")
 
         // Update Array with latest user textField.text
-        profileItemArray[selectedIndexPath.row] = selectedCell.userTextView.text
-        print(profileItemArray)
+        userProfileArray[selectedIndexPath.row] = selectedCell.userTextView.text
+        print(userProfileArray)
         print("^^^")
     }
 }
