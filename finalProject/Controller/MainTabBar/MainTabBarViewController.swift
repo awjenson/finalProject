@@ -22,16 +22,11 @@ class MainTabBarViewController: UITabBarController{
             self.view.window?.makeKeyAndVisible()
         } else {
             // user is logged in
-            print("USER LOGGED IN")
+            print("USER IS LOGGED IN")
         }
 
         // selected VC to display
         self.selectedIndex = 1
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

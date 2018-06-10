@@ -46,7 +46,6 @@ class NowViewController: UIViewController {
     @IBOutlet weak var topic4Label: UILabel!
     @IBOutlet weak var topic5Label: UILabel!
 
-
     // MARK: - Properties
 
     let formatter = DateFormatter()
@@ -70,6 +69,9 @@ class NowViewController: UIViewController {
     var tipArray6 = [Tip]()
     var tipArray7 = [Tip]()
     var tipArray8 = [Tip]() // Now tip array
+
+    var cellHeaderColor: [UIColor] = []
+    var topicColor: UIColor?
 
 //    lazy var refreshControl: UIRefreshControl = {
 //        let refreshControl = UIRefreshControl()
@@ -104,10 +106,6 @@ class NowViewController: UIViewController {
     // MARK: - Methods
 
     func setupUI() {
-        // call configureTableView() and reloadTimeline() in viewDidLoad
-//        configureTableView()
-
-
 
         dayOfWeekAndHour()
 
@@ -175,6 +173,8 @@ class NowViewController: UIViewController {
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 
+        colorOfUI(hour)
+
         switch dayOfWeek {
         case 1,7: // S,S
             print("today is a weekend")
@@ -190,6 +190,77 @@ class NowViewController: UIViewController {
             print(dayOfWeek)
             print("^")
         }
+    }
+
+    func colorOfUI(_ hour: Int) {
+        switch hour {
+        case 0...4:
+            topicColor = NowConstants.HeaderIndigo.color900
+            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
+                               NowConstants.HeaderIndigo.color700,
+                                NowConstants.HeaderIndigo.color600,
+                                NowConstants.HeaderIndigo.color500,
+                                NowConstants.HeaderIndigo.color400,
+                                NowConstants.HeaderIndigo.color300,
+                                NowConstants.HeaderIndigo.color200,]
+        case 5...8:
+            topicColor = NowConstants.HeaderAmber.color900
+            cellHeaderColor = [NowConstants.HeaderAmber.color800,
+                               NowConstants.HeaderAmber.color700,
+                               NowConstants.HeaderAmber.color600,
+                               NowConstants.HeaderAmber.color500,
+                               NowConstants.HeaderAmber.color400,
+                               NowConstants.HeaderAmber.color300,
+                               NowConstants.HeaderAmber.color200,]
+        case 9..<11:
+            topicColor = NowConstants.HeaderGreen.color900
+            cellHeaderColor = [NowConstants.HeaderGreen.color800,
+                               NowConstants.HeaderGreen.color700,
+                               NowConstants.HeaderGreen.color600,
+                               NowConstants.HeaderGreen.color500,
+                               NowConstants.HeaderGreen.color400,
+                               NowConstants.HeaderGreen.color300,
+                               NowConstants.HeaderGreen.color200,]
+        case 11..<14:
+            topicColor = NowConstants.HeaderCyan.color900
+            cellHeaderColor = [NowConstants.HeaderCyan.color800,
+                               NowConstants.HeaderCyan.color700,
+                               NowConstants.HeaderCyan.color600,
+                               NowConstants.HeaderCyan.color500,
+                               NowConstants.HeaderCyan.color400,
+                               NowConstants.HeaderCyan.color300,
+                               NowConstants.HeaderCyan.color200,]
+        case 14...16:
+            topicColor = NowConstants.HeaderTeal.color900
+            cellHeaderColor = [NowConstants.HeaderTeal.color800,
+                               NowConstants.HeaderTeal.color700,
+                               NowConstants.HeaderTeal.color600,
+                               NowConstants.HeaderTeal.color500,
+                               NowConstants.HeaderTeal.color400,
+                               NowConstants.HeaderTeal.color300,
+                               NowConstants.HeaderTeal.color200,]
+        case 17...20:
+            topicColor = NowConstants.HeaderOrange.color900
+            cellHeaderColor = [NowConstants.HeaderOrange.color800,
+                               NowConstants.HeaderOrange.color700,
+                               NowConstants.HeaderOrange.color600,
+                               NowConstants.HeaderOrange.color500,
+                               NowConstants.HeaderOrange.color400,
+                               NowConstants.HeaderOrange.color300,
+                               NowConstants.HeaderOrange.color200,]
+        case 21..<24:
+            topicColor = NowConstants.HeaderBlue.color900
+            cellHeaderColor = [NowConstants.HeaderBlue.color800,
+                               NowConstants.HeaderBlue.color700,
+                               NowConstants.HeaderBlue.color600,
+                               NowConstants.HeaderBlue.color500,
+                               NowConstants.HeaderBlue.color400,
+                               NowConstants.HeaderBlue.color300,
+                               NowConstants.HeaderBlue.color200,]
+        default:
+            print("ERROR with TopicColor and cellHeaderColor")
+        }
+
     }
 
     func weekend(_ hour: Int) {
@@ -224,7 +295,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(barTopic0, dateTopic0, homePMTopic0, meditationTopic0, bedtimeTopic0, lateNightSnackTopic0, weekendNow21to24Topic0)
+            appendSevenTopics(barTopic0, dateTopic0, homePMTopic0, bathroomPMTopic0, bedtimeTopic0, lateNightSnackTopic0, weekendNow21to24Topic0)
         default:
             print("Weekend,INVALID HOUR!")
         }
@@ -239,7 +310,7 @@ class NowViewController: UIViewController {
         case 5...8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, cafeTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
+            appendSevenTopics(meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, cafeTopic0, commuteAMTopic0, weekday0Now5to8Topic0)
 
         case 9..<11:
             print("weekdayMTW, Late Morning")
@@ -253,16 +324,19 @@ class NowViewController: UIViewController {
         case 14...16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, commutePMTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, mindfulnessTopic0, commutePMTopic0, happyHourTopic0, weekdayNow11to14Topic0)
 
-        case 17...20:
+        case 17...18:
+            print("weekdayMTW, Early-Evening")
+            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic0, groceryStoreTopic0, dinnerTopic0, dateTopic0, weekdayNow17to20Topic0)
+        case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic0, groceryStoreTopic0, dinnerTopic0, dateTopic0, weekdayNow17to20Topic0)
+            appendSevenTopics(gymTopic0, groceryStoreTopic0, dinnerTopic0, dateTopic0, barTopic0, homePMTopic0, weekdayNow17to20Topic0)
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(barTopic0, dateTopic0, lateNightSnackTopic0, homePMTopic0, bedtimeTopic0, meditationTopic0, weekdayNow21to24Topic0)
+            appendSevenTopics(barTopic0, dateTopic0, lateNightSnackTopic0, homePMTopic0, bedtimeTopic0, bathroomPMTopic0, weekdayNow21to24Topic0)
         default:
             print("Weekday,INVALID HOUR!")
         }
@@ -277,7 +351,7 @@ class NowViewController: UIViewController {
         case 5...8:
             print("weekdayTF, Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(homeAMTopic0, meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, commuteAMTopic0, weekdayNow5to8Topic0)
+            appendSevenTopics(homeAMTopic0, meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, commuteAMTopic0, weekday1Now5to8Topic0)
         case 9..<11:
             print("weekdayTF, Late Morning")
             // call function to display 9 time-based topics
@@ -313,22 +387,34 @@ class NowViewController: UIViewController {
         // Set-up the six buttons and six labels for display with topics array
         topic0Button.setTitle("\(topics[0].icon)", for: .normal)
         topic0Label.text = topics[0].title
+        topic0Label.textColor = topicColor
+//        topic0Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
         topic1Button.setTitle("\(topics[1].icon)", for: .normal)
         topic1Label.text = topics[1].title
+        topic1Label.textColor = topicColor
+//        topic1Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
         topic2Button.setTitle("\(topics[2].icon)", for: .normal)
         topic2Label.text = topics[2].title
+        topic2Label.textColor = topicColor
+//        topic2Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
         topic3Button.setTitle("\(topics[3].icon)", for: .normal)
         topic3Label.text = topics[3].title
+        topic3Label.textColor = topicColor
+//        topic3Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
         //// Added topic4, topic5, topic6, topic7
         topic4Button.setTitle("\(topics[4].icon)", for: .normal)
         topic4Label.text = topics[4].title
+        topic4Label.textColor = topicColor
+//        topic4Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
         topic5Button.setTitle("\(topics[5].icon)", for: .normal)
         topic5Label.text = topics[5].title
+        topic5Label.textColor = topicColor
+//        topic5Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
         // set 4 'Now' tips to be displayed in initial table view
         tips = [topics[6].tip[0],
@@ -374,16 +460,14 @@ class NowViewController: UIViewController {
 
         let selectedButtonIcon = "X"
 
-
-
         if button.currentTitle == text {
             print("Tapped a topic button button")
             refreshTopicButtons()
             button.setTitle("\(selectedButtonIcon)", for: .normal)
-            button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
+            button.backgroundColor = topicColor
             topicSelected(indexNumber)
         } else {
-            print("Tapped 'X' button")
+            print("Tapped 'X' button, reset")
             button.setTitle(text, for: .normal)
             button.backgroundColor = UIColor.darkGray
             refreshTopicButtons()
@@ -434,6 +518,8 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 
         // configure cell in UITableViewCell file
         cell.configureCell(tip: tip)
+
+        cell.headerLabel.textColor = cellHeaderColor[indexPath.row]
 
         // Tell the UITableViewCell who its delegate is, set it in the table view method. Self is the View Controller because we are in the View Controller file. This is equivalent of giving the boss an intern. The View Controller is the intern of the delegate.
 //        cell.delegate = self

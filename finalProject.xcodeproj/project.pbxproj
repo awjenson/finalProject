@@ -60,6 +60,8 @@
 		DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */; };
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
 		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
+		DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */; };
+		DABCD8F820CC49210091AD0B /* NowConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD8F720CC49210091AD0B /* NowConstants.swift */; };
 		DAC6384A20B1CE310004891D /* GoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6384920B1CE310004891D /* GoalItem.swift */; };
 		DAC8DFF4206C86D2005D627B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF3206C86D2005D627B /* Colors.swift */; };
 		DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF5206ED93B005D627B /* TopicData.swift */; };
@@ -131,6 +133,8 @@
 		DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
 		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
+		DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Conveinence.swift"; sourceTree = "<group>"; };
+		DABCD8F720CC49210091AD0B /* NowConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowConstants.swift; sourceTree = "<group>"; };
 		DAC6384920B1CE310004891D /* GoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalItem.swift; sourceTree = "<group>"; };
 		DAC8DFF3206C86D2005D627B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DAC8DFF5206ED93B005D627B /* TopicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicData.swift; sourceTree = "<group>"; };
@@ -386,6 +390,7 @@
 			children = (
 				DA78988E2053102E005046D8 /* NowTableViewCell.swift */,
 				DA272D0920BCDCCB00137039 /* PlanToUseInLaterVersion */,
+				DABCD8F720CC49210091AD0B /* NowConstants.swift */,
 			);
 			path = Now;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */,
 				DA361D3420858297007ACE59 /* Storyboard+Utility.swift */,
 				DA361D3820896E5D007ACE59 /* Date+convertToString.swift */,
+				DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -633,6 +639,7 @@
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,
+				DABCD8F820CC49210091AD0B /* NowConstants.swift in Sources */,
 				DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */,
 				DA361D3720882A7A007ACE59 /* HomeFooterCell.swift in Sources */,
 				DA2B85FF20B9EB0E005B7DD6 /* ProfileService.swift in Sources */,
@@ -656,6 +663,7 @@
 				DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */,
 				DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
+				DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */,
 				DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */,
 				DA15AE1220B649B400EFC4C2 /* CounterTableViewCell.swift in Sources */,
 				DA5EE4B82090EFA400B54438 /* PostFooterCell.swift in Sources */,

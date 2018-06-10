@@ -17,11 +17,22 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: - Outlets
 
     @IBOutlet weak var counterTableView: UITableView!
+    @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var sourceLabel: UILabel!
+
+    @IBOutlet weak var rewardLabel: UILabel!
 
     // MARK: - Properties
 
+    // Time and Date
+    let formatter = DateFormatter()
+    let date = Date()
+    let calendar = Calendar.current
+
     // an empty JournalMessage array to contain the user's messages
     var items: [GoalItem] = []
+    var quote = CounterAdvice(quote: "", source: "")
+    var selectedEmoji = ""
 
 //    // NEED THIS REF
 //    var ref: DatabaseReference!
@@ -60,7 +71,63 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         counterTableView.delegate = self
         counterTableView.allowsMultipleSelectionDuringEditing = false
 
+        dayOfWeekAndHour()
+        setupQuote()
+
         setupRefreshControl()
+
+        selectedEmoji = "😴"
+        rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+    }
+
+    var counter = 0
+
+    func increaseEmoji(count: Int) {
+        print("Refresh COUNTER table view")
+        switch count {
+        case 1:
+            selectedEmoji = "🙂"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 2:
+            selectedEmoji = "😀"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 3:
+            selectedEmoji = "😎"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 4:
+            selectedEmoji = "👍👍"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 5:
+            selectedEmoji = "👏👏"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 6:
+            selectedEmoji = "💪💪"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 7:
+            selectedEmoji = "🔥👍"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 8:
+            selectedEmoji = "🔥🔥👏🥉"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 9:
+            selectedEmoji = "🔥🔥🔥💪🥈"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        case 10:
+            selectedEmoji = "💥💯🏆🎊🥇🎉"
+            rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+
+
+
+
+        default:
+            print("ERROR: error with increaseEmoji")
+
+        }
+    }
+
+    func setupQuote() {
+        quoteLabel.text = quote.quote
+        sourceLabel.text = quote.source
     }
 
 //    func configureDatabase() {
@@ -86,6 +153,176 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
             self.refreshControl.endRefreshing()
         }
     }
+
+    // MARK: Quotes
+
+
+    // NEW
+    let am0 = CounterAdvice(quote: "\"I am not a product of my circumstances. I am a product of my decisions.\"", source: "Stephen R. Covey")
+
+    let pm0 = CounterAdvice(quote: "\"Don't judge each day by the harvest you reap but by the seeds that you plant.\"", source: "Robert Louis Stevenson")
+
+    let pm1 = CounterAdvice(quote: "\"I made a commitment to myself that anything I do or engage with has to be tied to what drives me and motivates me.\"", source: "Andre Agassi")
+
+    let am1 = CounterAdvice(quote: "\"The way to be a better comic was to create better jokes and the way to create better jokes was to write every day. Don't break the chain. After a few days you'll have a chain. Just keep at it and the chain will grow longer every day. You'll like seeing that chain, especially when you get a few weeks under your belt. Your only job next is to not break the chain.\"", source: "Jerry Seinfeld")
+
+    let am2 = CounterAdvice(quote: "\"We are what we repeatedly do. Excellence, then is not an act, but a habit.\"", source: "Aristotle")
+
+    let pm2 = CounterAdvice(quote: "\"Your net worth to the world is usually determined by what remains after your bad habits are subtracted from your good ones.\"", source: "Bejamin Franklin")
+
+    let am3 = CounterAdvice(quote: "\"On average, it takes 66 days to develop a new habit.\"", source: "University College London")
+
+    let pm3 = CounterAdvice(quote: "\"Whenever you are angry, be assured that it is not only a present evil, but that you have increased a habit.\"", source: "Epictetus")
+
+    let am4 = CounterAdvice(quote: "\"Cultivate only the habits that you are willing should master you.\"", source: "Elbert Hubbard")
+
+    let pm4 = CounterAdvice(quote: "\"I never could have done what I have done without the habits of punctuality, order, and diligence, without the determination to concentrate myself on one subject at a time.\"", source: "Charles Dickens")
+
+    let am5 = CounterAdvice(quote: "\"Happiness is a habit - cultivate it\"", source: "Elbert Hubbard")
+
+    let pm5 = CounterAdvice(quote: "\"You’ll never change your life until you change something you do daily. The secret of your success is found in your daily routine.\"", source: "John C. Maxwell")
+
+    let am6 = CounterAdvice(quote: "\"I can predict the long-term outcome of your success if you show me your daily habits.\"", source: "John Maxwell")
+
+    let pm6 = CounterAdvice(quote: "\"Good habits are the key to all success.\"", source: "Og Mandino")
+
+    // MARK: Time-based Methods
+
+
+
+    func dayOfWeekAndHour() {
+        print("Refresh COUNTER table view")
+        let dayOfWeek = calendar.component(.weekday, from: date)
+        let hour = calendar.component(.hour, from: date)
+
+        switch dayOfWeek {
+        case 1: // Sun
+            print("today is a weekend")
+            sunday(hour)
+        case 2:
+            monday(hour)
+        case 3:
+            tuesday(hour)
+        case 4:
+            wednesday(hour)
+        case 5:
+            thursday(hour)
+        case 6:
+            friday(hour)
+        case 7:
+            saturday(hour)
+        default:
+            print("ERROR: error with dayAndHour")
+            print(dayOfWeek)
+        }
+    }
+
+    func sunday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Sunday, Very Early Morning")
+            // call function to display 9 time-based topics
+            quote = am0
+        case 14...24:
+            print("Sunday, Afternoon")
+            // call function to display 9 time-based topics
+            quote = pm0
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func monday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Monday, Very Early Morning")
+            // call function to display 9 time-based topics
+            quote = am1
+        case 14...24:
+            print("Monday, Afternoon")
+            // call function to display 9 time-based topics
+            quote = pm1
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func tuesday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Tuesday, Very Early Morning")
+            // call function to display 9 time-based topics
+            quote = am2
+        case 14...24:
+            print("Tuesday, Afternoon")
+            // call function to display 9 time-based topics
+            quote = pm2
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func wednesday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Wednesday, Very Early Morning")
+            // call function to display 9 time-based topics
+            quote = am3
+        case 14...24:
+            print("Wednesday, Afternoon")
+            // call function to display 9 time-based topics
+            quote = pm3
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func thursday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Thursday, Very Early Morning")
+            // call function to display 9 time-based topics
+            quote = am4
+        case 14...24:
+            print("Thursday, Afternoon")
+            // call function to display 9 time-based topics
+            quote = pm4
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func friday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Friday, Very Early Morning")
+            // call function to display 9 time-based topics
+            quote = am5
+        case 14...24:
+            print("Friday, Afternoon")
+            // call function to display 9 time-based topics
+            quote = pm5
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+    func saturday(_ hour: Int) {
+        switch hour {
+        case 0..<14:
+            print("Saturday, Very Early Morning")
+            // call function to display 9 time-based topics
+            quote = am6
+        case 14...24:
+            print("Saturday, Afternoon")
+            // call function to display 9 time-based topics
+            quote = pm6
+        default:
+            print("ERROR: INVALID HOUR!")
+        }
+    }
+
+
 
     // MARK: - Database Methods
 
@@ -121,6 +358,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         let goalItemRow = items[indexPath.row]
 
         cell.titleLabel.text = goalItemRow.name
+        cell.bodyLabel.text = goalItemRow.why
 
         // This data gets updated in DetailTextLabel Text
         increaseCellCount(cell, newNumber: goalItemRow.count)
@@ -130,6 +368,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.preservesSuperviewLayoutMargins = false
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
+
+
 
         return cell
     }
@@ -163,6 +403,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
+
         let goalItemRow = items[indexPath.row]
         var countNumber = goalItemRow.count
         countNumber += 1
@@ -172,11 +413,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         goalItemRow.ref?.updateChildValues([
             FirebaseConstants.GoalItem.Count: countNumber
             ])
+
+        counter += 1
+        increaseEmoji(count: counter)
     }
 
     func increaseCellCount(_ cell: CounterTableViewCell, newNumber: Int) {
         cell.countLabel.text = " \(newNumber)"
-        cell.bodyLabel.text = ""
+//        cell.bodyLabel.text = ""
     }
 
     // MARK: - IBActions
@@ -189,17 +433,34 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         formatter.dateFormat = "MMMM d, yyyy h:mm a"
         let currentDate = formatter.string(from: now)
 
-        let alert = UIAlertController(title: "Add a New Goal to Track Daily",
+        let alert = UIAlertController(title: "Add a New Habit to Track Daily",
                                       message: "",
                                       preferredStyle: .alert)
 
         // guard to make sure text is not nil ("")
-        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+        let doAction = UIAlertAction(title: "Save as DO", style: .default) { _ in
 
-            guard let textField = alert.textFields?.first, textField.text != "",
-                let text = textField.text else { return }
+            guard let textField1 = alert.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = alert.textFields?.last, textField2.text != "", let text2 = textField2.text else { return }
 
-            let goalItem = GoalItem(name: text, timestamp: currentDate, count: 0)
+            let goalItem = GoalItem(name: "DO: \(text1)", why: text2, timestamp: currentDate, count: 0)
+
+            // Firebase
+            GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
+                if success == true {
+                    print("SUCCESS WRITING GOAL: \(success)")
+                    return
+                } else if success == false {
+                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your internet connection and try again.")
+                }
+            })
+        }
+
+        // guard to make sure text is not nil ("")
+        let dontAction = UIAlertAction(title: "Save as DON'T", style: .default) { _ in
+
+            guard let textField1 = alert.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = alert.textFields?.last, textField2.text != "", let text2 = textField2.text else { return }
+
+            let goalItem = GoalItem(name: "DON'T: \(text1)", why: text2, timestamp: currentDate, count: 0)
 
             // Firebase
             GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
@@ -216,13 +477,20 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
                                          style: .cancel)
 
         // In action, setup textField
-        var textField = UITextField()
+        var textField1 = UITextField()
         alert.addTextField { (alertTextField) in
-            textField = alertTextField
-            textField.placeholder = "Add a New Goal"
+            textField1 = alertTextField
+            textField1.placeholder = "Add a New Habit"
         }
 
-        alert.addAction(saveAction)
+        var textField2 = UITextField()
+        alert.addTextField { (alertTextField) in
+            textField2 = alertTextField
+            textField2.placeholder = "Reason Why?"
+        }
+
+        alert.addAction(doAction)
+        alert.addAction(dontAction)
         alert.addAction(cancelAction)
 
         present(alert, animated: true, completion: nil)

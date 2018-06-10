@@ -92,7 +92,7 @@ class MasterJournalViewController: UIViewController {
         // Configure Segmented Control with two segments
         segmentedControl.removeAllSegments()
         segmentedControl.insertSegment(withTitle: "Journal", at: 0, animated: false)
-        segmentedControl.insertSegment(withTitle: "Routine", at: 1, animated: false)
+        segmentedControl.insertSegment(withTitle: "Habits", at: 1, animated: false)
         segmentedControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
 
         // Select First Segment

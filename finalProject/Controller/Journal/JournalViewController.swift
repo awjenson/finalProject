@@ -16,6 +16,7 @@ class JournalViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
 
+    // remove quote view when keyboard appears
     @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!

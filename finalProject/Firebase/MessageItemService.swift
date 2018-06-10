@@ -25,7 +25,6 @@ struct MessageItemService {
 
     static func readMessagesLastTen(for user: User, completion: @escaping ([MessageItem]) -> Void) {
 
-
         let ref = DatabaseReference.toLocation(.readMessages(uid: user.uid))
         ref.queryLimited(toLast: 10).observe(.value) { (snapshot) in
 

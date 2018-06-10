@@ -27,6 +27,7 @@ struct FirebaseConstants {
 
     struct GoalItem {
         static let Name = "Name"
+        static let Why = "Why"
         static let Count = "Count"
         static let TimeStamp = "TimeStamp"
         static let Color = "Color"

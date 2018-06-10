@@ -12,6 +12,7 @@ class Tip {
 
     // MARK: Properties
     let id: String
+    let header: String
     let title: String
     let body: String
     let sourceName: String
@@ -21,9 +22,10 @@ class Tip {
 
     // MARK: Initializer
 
-    init(title: String, body: String, sourceName: String, sourceURL: String?, sponsorLogo: String, sponsorURL: String?) {
+    init(header: String, title: String, body: String, sourceName: String, sourceURL: String?, sponsorLogo: String, sponsorURL: String?) {
 
         self.id = UUID().uuidString
+        self.header = header
         self.title = title
         self.body = body
         self.sourceName = sourceName
@@ -31,7 +33,6 @@ class Tip {
         self.sponsorLogo = sponsorLogo
         self.sponsorURL = sponsorURL
     }
-
 }
 
 
