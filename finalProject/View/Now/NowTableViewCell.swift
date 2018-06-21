@@ -18,6 +18,10 @@ class NowTableViewCell: UITableViewCell {
     // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
     var delegate: NowTableViewCellDelegate?
 
+
+    @IBOutlet weak var boarderColorView: UIView!
+    @IBOutlet weak var boardNoColorView: UIView!
+
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
@@ -34,7 +38,7 @@ class NowTableViewCell: UITableViewCell {
 
         // Display summarized text in
         tipItem = tip
-        headerLabel.text = tip.header
+//        headerLabel.text = tip.header
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
         sourceLabel.text = tip.sourceName

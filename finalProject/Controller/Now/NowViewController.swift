@@ -457,7 +457,14 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         // configure cell in UITableViewCell file
         cell.configureCell(tip: tip)
 
-        cell.headerLabel.textColor = cellHeaderColor[indexPath.row]
+        cell.boardNoColorView.layer.cornerRadius = 2
+        cell.boarderColorView.layer.cornerRadius = 2
+        cell.boarderColorView.layer.shadowColor = cellHeaderColor[indexPath.row].cgColor
+        cell.boarderColorView.layer.shadowOpacity = 0.9
+        cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.5, height: 1)
+        cell.boarderColorView.layer.shadowRadius = 1
+
+//        cell.headerLabel.textColor = cellHeaderColor[indexPath.row]
 
         // Line seperator (extend to left)
         cell.preservesSuperviewLayoutMargins = false
