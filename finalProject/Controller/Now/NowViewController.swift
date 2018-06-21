@@ -17,7 +17,6 @@
 https://www.youtube.com/watch?v=k-GvIqh5Xcs
  */
 
-
 import UIKit
 import SafariServices // to display webview
 
@@ -73,15 +72,6 @@ class NowViewController: UIViewController {
     var cellHeaderColor: [UIColor] = []
     var topicColor: UIColor?
 
-//    lazy var refreshControl: UIRefreshControl = {
-//        let refreshControl = UIRefreshControl()
-//        refreshControl.addTarget(self, action:
-//            #selector(NowViewController.handleRefresh(_:)),
-//                                 for: UIControlEvents.valueChanged)
-//        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-//
-//        return refreshControl
-//    }()
 
     // MARK: - Lifecycle Methods
 
@@ -97,11 +87,6 @@ class NowViewController: UIViewController {
             }
         }
     }
-
-//    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-//        setupUI()
-//        refreshControl.endRefreshing()
-//    }
 
     // MARK: - Methods
 
@@ -149,26 +134,6 @@ class NowViewController: UIViewController {
     // MARK: - Time-based Functions
 
     func dayOfWeekAndHour() {
-
-        // TEST CODE:
-//        let year = calendar.component(.year, from: date)
-//        let weekOfYear = calendar.component(.weekOfYear, from: date)
-//        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
-//        let weekdayOrdinal = calendar.component(.weekdayOrdinal, from: date)
-//        let weekday = calendar.component(.weekday, from: date) // Sunday is represented by 1
-//        let month = calendar.component(.month, from: date)
-//        let day = calendar.component(.day, from: date)
-//        let hour = calendar.component(.hour, from: date)
-//
-//        print("XXXXXX")
-//        print(year)
-//        print("WeekOfYear: \(weekOfYear)")
-//        print(weekOfMonth)
-//        print("Weekday: \(weekday)") // Sunday is represented by 1
-//        print("Month: \(month)")
-//        print("Day: \(day)")
-//        print("Hour: \(hour)")
-//        print("XXXXXX")
 
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
@@ -260,7 +225,6 @@ class NowViewController: UIViewController {
         default:
             print("ERROR with TopicColor and cellHeaderColor")
         }
-
     }
 
     func weekend(_ hour: Int) {
@@ -379,50 +343,47 @@ class NowViewController: UIViewController {
         }
     }
 
+    func setupTopicLabels() {
+        styleTopicLabel(label: topic0Label, labelTitle: topics[0].title)
+        styleTopicLabel(label: topic1Label, labelTitle: topics[1].title)
+        styleTopicLabel(label: topic2Label, labelTitle: topics[2].title)
+        styleTopicLabel(label: topic3Label, labelTitle: topics[3].title)
+        styleTopicLabel(label: topic4Label, labelTitle: topics[4].title)
+        styleTopicLabel(label: topic5Label, labelTitle: topics[5].title)
+    }
+
+    func setupTopicButtons() {
+        styleTopicButton(button: topic0Button, buttonTitle: topics[0].icon)
+        styleTopicButton(button: topic1Button, buttonTitle: topics[1].icon)
+        styleTopicButton(button: topic2Button, buttonTitle: topics[2].icon)
+        styleTopicButton(button: topic3Button, buttonTitle: topics[3].icon)
+        styleTopicButton(button: topic4Button, buttonTitle: topics[4].icon)
+        styleTopicButton(button: topic5Button, buttonTitle: topics[5].icon)
+    }
+
+    private func styleTopicButton(button: RoundButton, buttonTitle: String) {
+        button.setTitle(buttonTitle, for: .normal)
+        button.backgroundColor = UIColor.darkGray
+    }
+
+    private func styleTopicLabel(label: UILabel, labelTitle: String) {
+        label.text = labelTitle
+        label.textColor = topicColor
+    }
 
     func appendSevenTopics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic,_ topic4: Topic,_ topic5: Topic, _ topic6Now: Topic) {
 
         topics = [topic0, topic1, topic2, topic3, topic4, topic5, topic6Now]
-
-        // Set-up the six buttons and six labels for display with topics array
-        topic0Button.setTitle("\(topics[0].icon)", for: .normal)
-        topic0Label.text = topics[0].title
-        topic0Label.textColor = topicColor
-//        topic0Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
-
-        topic1Button.setTitle("\(topics[1].icon)", for: .normal)
-        topic1Label.text = topics[1].title
-        topic1Label.textColor = topicColor
-//        topic1Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
-
-        topic2Button.setTitle("\(topics[2].icon)", for: .normal)
-        topic2Label.text = topics[2].title
-        topic2Label.textColor = topicColor
-//        topic2Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
-
-        topic3Button.setTitle("\(topics[3].icon)", for: .normal)
-        topic3Label.text = topics[3].title
-        topic3Label.textColor = topicColor
-//        topic3Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
-
-        //// Added topic4, topic5, topic6, topic7
-        topic4Button.setTitle("\(topics[4].icon)", for: .normal)
-        topic4Label.text = topics[4].title
-        topic4Label.textColor = topicColor
-//        topic4Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
-
-        topic5Button.setTitle("\(topics[5].icon)", for: .normal)
-        topic5Label.text = topics[5].title
-        topic5Label.textColor = topicColor
-//        topic5Button.backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
         // set 4 'Now' tips to be displayed in initial table view
         tips = [topics[6].tip[0],
                 topics[6].tip[1],
                 topics[6].tip[2],
                 topics[6].tip[3]]
-    }
 
+        setupTopicLabels()
+        setupTopicButtons()
+    }
 
 
     // MARK: - IBActions
@@ -436,33 +397,13 @@ class NowViewController: UIViewController {
         }
     }
 
-    func refreshTopicButtons() {
-        topic0Button.setTitle("\(topics[0].icon)", for: .normal)
-        topic0Button.backgroundColor = UIColor.darkGray
-
-        topic1Button.setTitle("\(topics[1].icon)", for: .normal)
-        topic1Button.backgroundColor = UIColor.darkGray
-
-        topic2Button.setTitle("\(topics[2].icon)", for: .normal)
-        topic2Button.backgroundColor = UIColor.darkGray
-
-        topic3Button.setTitle("\(topics[3].icon)", for: .normal)
-        topic3Button.backgroundColor = UIColor.darkGray
-
-        topic4Button.setTitle("\(topics[4].icon)", for: .normal)
-        topic4Button.backgroundColor = UIColor.darkGray
-
-        topic5Button.setTitle("\(topics[5].icon)", for: .normal)
-        topic5Button.backgroundColor = UIColor.darkGray
-    }
-
     func flipButton(at indexNumber: Int, withText text: String, on button: RoundButton) {
 
-        let selectedButtonIcon = "X"
+        let selectedButtonIcon = Constants.Now.selectedIconDisplay
 
         if button.currentTitle == text {
             print("Tapped a topic button button")
-            refreshTopicButtons()
+            setupTopicButtons()
             button.setTitle("\(selectedButtonIcon)", for: .normal)
             button.backgroundColor = topicColor
             topicSelected(indexNumber)
@@ -470,7 +411,7 @@ class NowViewController: UIViewController {
             print("Tapped 'X' button, reset")
             button.setTitle(text, for: .normal)
             button.backgroundColor = UIColor.darkGray
-            refreshTopicButtons()
+            setupTopicButtons()
             topicSelected(topicButtons.count)
         }
     }
@@ -482,9 +423,6 @@ class NowViewController: UIViewController {
         var counter = (topics[index].tip.count - 1)
 
         for item in 0...counter {
-            print("counter: \(counter)")
-            print("index: \(index)")
-            print("item: \(item)")
             tips.append(topics[index].tip[item])
         }
     }
@@ -520,10 +458,6 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configureCell(tip: tip)
 
         cell.headerLabel.textColor = cellHeaderColor[indexPath.row]
-
-        // Tell the UITableViewCell who its delegate is, set it in the table view method. Self is the View Controller because we are in the View Controller file. This is equivalent of giving the boss an intern. The View Controller is the intern of the delegate.
-//        cell.delegate = self
-//        cell.bodyTextView.delegate = self
 
         // Line seperator (extend to left)
         cell.preservesSuperviewLayoutMargins = false

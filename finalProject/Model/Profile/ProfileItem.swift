@@ -6,8 +6,6 @@
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
 
-// 438 and 562 of ProfileVC
-
 import Foundation
 import FirebaseDatabase
 

@@ -5,6 +5,7 @@
 //  Created by Andrew Jenson on 5/28/18.
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
+// Sugar Ray Lenard, Robin Willians, George Carlin, Evander Holyfield, and Tony Robbins
 
 import Foundation
 

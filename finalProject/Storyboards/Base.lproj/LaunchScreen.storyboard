@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm the Greatest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2T-yf-fGo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I am the Greatest&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2T-yf-fGo">
                                 <rect key="frame" x="16" y="313.5" width="343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="92y-Ev-bgA"/>
@@ -27,10 +27,18 @@
                                 <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Ali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8le-R9-lM0">
+                                <rect key="frame" x="170" y="361" width="35.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="8le-R9-lM0" firstAttribute="top" secondItem="V2T-yf-fGo" secondAttribute="bottom" constant="7.5" id="6eY-DY-m0w"/>
                             <constraint firstItem="V2T-yf-fGo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BGA-6x-lEq"/>
+                            <constraint firstItem="8le-R9-lM0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EnL-fb-qrw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V2T-yf-fGo" secondAttribute="trailing" constant="16" id="Ens-1Q-Ey3"/>
                             <constraint firstItem="V2T-yf-fGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kCq-6W-4aJ"/>
                             <constraint firstItem="V2T-yf-fGo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zMK-w4-Fsq"/>

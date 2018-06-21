@@ -10,6 +10,10 @@ import Foundation
 
 struct Constants {
 
+    struct Now {
+        static let selectedIconDisplay = "X"
+    }
+
     struct Segue {
         static let subscribeSegue = "subscribeSegue"
     }
