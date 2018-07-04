@@ -23,13 +23,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="92y-Ev-bgA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Muhammad Ali and You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8le-R9-lM0">
-                                <rect key="frame" x="101" y="378.5" width="173" height="18"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <rect key="frame" x="106.5" y="378.5" width="162.5" height="17"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>

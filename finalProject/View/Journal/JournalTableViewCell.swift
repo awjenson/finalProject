@@ -13,6 +13,8 @@ import UIKit
 class JournalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dateLabelHeight: NSLayoutConstraint!
+
     @IBOutlet var messageBackground: UIView!
     @IBOutlet weak var messageLabel: UILabel!
 

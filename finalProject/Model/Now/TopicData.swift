@@ -32,6 +32,16 @@ let fitness = "FITNESS"
 let coffee = "COFFEE"
 let preventStess = "PREVENT STRESS"
 let ceoAdvice = "CEO ADVICE"
+let success = "SUCCESS"
+let getSmarter = "GET SMARTER"
+let relax = "RELAX"
+let health = "HEALTH"
+let beer = "BEER"
+let qualityOfSleep = "QUALITY OF SLEEP"
+let strategy = "STRATEGY"
+let beMoreProductive = "BE MORE PRODUCTIVE"
+let betterSkin = "BETTER SKIN"
+let reduceAging = "REDUCE AGING"
 
 // MARK: - Breakfast
 
@@ -51,13 +61,13 @@ let breakfastTopic0 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: bre
 let brunchTitle = "Brunch"
 let brunchIcon = "Bru"
 
-let brunchTip1 = Tip(header: planAhead, title: "Eat a little food before your brunch to reduce chances of weight gain", body: "If you're not meeting until 11 a.m. or noon, have a light breakfast at home. That way you'll keep your hands out of the muffin basket while you're waiting for your meal to be served. An egg-white veggie omelet with whole-wheat toast is a great diet choice because it delivers filling protein and fiber to keep you fuller longer." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2012/08/11/healthy-weekend_n_1760981.html?slideshow=true#gallery/243861/5", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let brunchTip1 = Tip(header: planAhead, title: "Eat a little food before your brunch to reduce chances of weight gain", body: "If you're not meeting until 11 a.m. or noon, have a light breakfast at home. Breaking the fast from the night before will rev up your metabolism for the day, keep you feeling satisfied until brunch and help prevent you from over-ordering and overeating at brunch." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/04/28/healthy-brunch-tips_n_3134586.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let brunchTip2 = Tip(header: "BRUNCH", title: "brunch 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let brunchTip2 = Tip(header: "BRUNCH", title: "Healthiest alcoholic drinks are champagne and Bloody Marys. Avoid mimosas and margaritas", body: "If you want to watch your calories, skip mimosas: They're generally made with cheap sparkling wine and additional sugar in the form of juice. Instead, choose champagne: one 4-ounce glass has 84 calories. \n\nMargaritas, and other drinks with pre-made mixes are an easy way to tack on lots of sugar. Instead, choose Bloody Marys: tomato juice offers a great source of vitamins A and C as well as potassium." , sourceName: "Everyday Health", sourceURL: "https://www.everydayhealth.com/pictures/what-to-order-at-brunch/#02", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let brunchTip3 = Tip(header: "BRUNCH", title: "brunch 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let brunchTip3 = Tip(header: "BRUNCH", title: "Healthiest meals are omelets. Avoid eggs Benedictor huevos rancheros which are high in calories and fat", body: "Smart ingredient picks include spinach, mushrooms, peppers, tomatoes, onions, and even a dash of cheese. Avoid roasted vegetables, like peppers, that are marinated in oil, as well as fattening bacon or sausages (choose turkey bacon or ham instead)." , sourceName: "Everyday Health", sourceURL: "https://www.everydayhealth.com/pictures/what-to-order-at-brunch/#04", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let brunchTip4 = Tip(header: "BRUNCH", title: "brunch 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let brunchTip4 = Tip(header: "BRUNCH", title: "For sides, choose either whole-grain toast or the potatoes — not both", body: "Otherwise, you end up with too many carbs on your plate. In place of potatoes, ask for fruit or a side salad to add some low-calorie, high nutritional value to your meal. And avoid home fries and hashbrowns which are likely deep fried and covered in butter and oil." , sourceName: "Everyday Health", sourceURL: "https://www.everydayhealth.com/pictures/what-to-order-at-brunch/#06", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var brunchTipArray0 = [brunchTip1, brunchTip2, brunchTip3, brunchTip4]
 
@@ -68,12 +78,13 @@ let brunchTopic0 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArr
 let lunchTitle = "Lunch"
 let lunchIcon = "Lun"
 
-let lunchTip1 = Tip(header: planAhead, title: "Avoid the afternoon slump by eating a healthy lunch.", body: "Eating and drinking regular meals and snacks can help keep your blood sugar levels from dipping and eliminate the '3 p.m. slump'. Eating a balanced lunch, including whole grains, lean proteins, good fats, and plenty of vegetables. You can pack healthy snacks to eat throughout the day and drink water throughout the day to keep yourself hydrated. \n\nUnhealthy snacks are not going to keep us full until dinner, meaning we're more likely to eat more of them and gain weight." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let lunchTip2 = Tip(header: "Lunch", title: "Lunch 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let lunchTip1 = Tip(header: planAhead, title: "Prevent the afternoon slump by eating a healthy lunch", body: "Unhealthy snacks don't keep you full, meaning you'll eat more and gain weight. Eat whole grains, lean proteins, vegetables, and good fats." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let lunchTip3 = Tip(header: "Lunch", title: "Lunch 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let lunchTip2 = Tip(header: "Lunch", title: "Eat lean protein because it takes longer for your body to digest, keeping you feeling full longer", body: "Also, protein helps to build and maintain metabolism-boosting muscle mass. Your body becomes more effective at burning calories when you eat protein." , sourceName: "Very Well Fit", sourceURL: "https://www.verywellfit.com/healthy-lunch-ideas-and-recipes-3495782", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let lunchTip4 = Tip(header: "Lunch", title: "Lunch 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let lunchTip3 = Tip(header: "Lunch", title: "Eat Fiber: It helps you lose weight by making you feel full for a longer period of time" , body: "Research: people who ate 30 grams of fiber a day lost roughly the same weight as people who followed a complex diet published by the American Heart Association. Eat vegetables, fruit, and whole grain bread and pasta.", sourceName: "Very Well Fit", sourceURL: "https://www.verywellfit.com/how-to-eat-fiber-to-lose-weight-3495368", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let lunchTip4 = Tip(header: "Lunch", title: "Walking 15 minutes after lunch speeds up digestion, prevents stomach problems, and increases metabolism which burns belly fat", body: "Walking after a meal, as short as 15 minutes, increases metabolism, which in turn helps in burning calories. The faster your metabolism, the faster you’ll burn calories, and thus, the better your weight will be controlled." , sourceName: "NYTimes", sourceURL: "https://food.ndtv.com/health/how-30-minutes-of-walking-after-meals-can-help-you-stay-fit-1662358", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
 
@@ -84,17 +95,29 @@ let lunchTopic0 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray0)
 let dinnerTitle = "Dinner"
 let dinnerIcon = "Din"
 
-let dinnerTip1 = Tip(header: "Dinner", title: "Dinner 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip1 = Tip(header: "Dinner", title: "Reduce weight gain by reducing your plate size", body: "The average dinner plate has increased in size 36% since 1960. By switching from a 12 inch plate to a 10 inch plate you eat 22% less." , sourceName: "Eat Out, Eat Well.", sourceURL: "https://eatouteatwell.com/how-big-are-your-dinner-plates-and-why-it-matters/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let dinnerTip2 = Tip(header: "Dinner", title: "Dinner 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip2 = Tip(header: "Dinner", title: "Eat three hours before bedtime to allow for proper digestion", body: "But, the time you eat is not as important as compared to the quantity you eat. If you want to lose weight, your caloric intake must be less than your caloric expenditure." , sourceName: "Sleep Advisor", sourceURL: "https://www.sleepadvisor.org/eat-just-before-bed-risks/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let dinnerTip3 = Tip(header: "Dinner", title: "Dinner 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip3 = Tip(header: "Weight Loss", title: "Reading or watching TV while you eat may add to weight gain", body: "It takes 20 minutes before the brain begins to start sending out \"I'm full\" signals that turn off appetite. If you're hurrying or not paying attention, it's easy to take in more calories than you need. \n\n• Don't multitask \n• Slow down \n• Savor your food", sourceName: "Harvard Medical School", sourceURL: "https://www.health.harvard.edu/healthbeat/mindful-eating-may-help-with-weight-loss", sponsorLogo: "", sponsorURL: "")
 
-let dinnerTip4 = Tip(header: "Dinner", title: "Dinner 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip4 = Tip(header: "Health", title: "Don't eat a heavy dinner (greasy or high-fat) because you're body shuts down while you sleep and the food will be stored as fat", body: "Greasy or high-fat dinners take longer to digest which causes the food to be stored as fat while you sleep. Also, it can cause issues with reflux or heartburn." , sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let dinnerTip5 = Tip(header: "Dinner", title: "Walking after dinner helps you sleep better", body: "The gentle physical activity and the fading light before nightfall can recalibrate your body clock, helping you sleep better. It's a simple way to aid digestion, lower the postmeal surge in insulin, increase blood circulation, and stimulate metabolism - all important for a good night sleep." , sourceName: "Prevention", sourceURL: "https://www.prevention.com/weight-loss/a20503013/try-this-15-minute-after-dinner-ritual-that-helps-italians-lose-weight/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let dinnerAfter9PM1 = Tip(header: "Dinner", title: "Late Dinner: avoid large portions, greasy, fatty, spicy, and fried foods, and high-sugar, high-carbohydrate treats like cookies or ice cream", body: "These foods can cause indigestion (feeling bloated and gassy), heartburn, and even acid reflux before bedtime. The result is poor sleep and poor health.", sourceName: "Life Hacker", sourceURL: "https://lifehacker.com/the-late-night-snacks-that-wont-upset-your-stomach-and-1717594825", sponsorLogo: "text", sponsorURL: "text")
+
+let dinnerAfter9PM2 = Tip(header: "Dinner", title: "Drinking a glass of milk before bed will help you sleep at night", body: "Milk is a sleep supporter because it has tryptophan, which raises melatonin and serotonin levels in the body, both of which induce sleep. Plus, milk has calcium, and recent research has found that calcium deficiency in the diet can cause disturbed sleep patterns.", sourceName: "Cooking Light", sourceURL: "http://www.cookinglight.com/healthy-living/health/foods-that-help-you-sleep", sponsorLogo: "text", sponsorURL: "text")
+
+let dinnerAfter9PM3 = Tip(header: "Health", title: "Don't have large amounts of carbohydrates-heavy food like pasta, bread, and fried foods", body: "Carbohydrates turns into sugar in your blood and you get a rise in insulin. Since you are just going to bed, you aren't using that sugar for energy, so you're more likely to store it as fat. \n\nIf you do go for whole grain carbs, make sure to pair it with protein and healthy fats (avocado, salmon, olive oil, or nuts).", sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "test", sponsorURL: "test")
+
+let dinnerAfter9PM4 = Tip(header: "Health", title: "Eat protein for dinner so your body can build muscle while you sleep.", body: "The body rebuilds muscle through a process called protein synthesis. If you go to bed without eating enough protein your body can’t produce enough protein synthesis to rebuild the muscle. \n\nProtein-based snacks like string cheese a handful of almonds, whole grain crackers with a bit of guacamole, greek yogurt, and almond butter with an apple can stabilize your blood sugar when you sleep. Make sure to allow an hour for staying upright before going to sleep for good digestion.", sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "test", sponsorURL: "test")
 
 var dinnerTipArray0 = [dinnerTip1, dinnerTip2, dinnerTip3, dinnerTip4]
-
 let dinnerTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
+
+var dinnerAfter9PMTipArray0 = [dinnerAfter9PM1, dinnerAfter9PM2, dinnerAfter9PM3, dinnerAfter9PM4]
+let dinnerAfter9PMTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
 
 // MARK: - AfternoonSnack
 
@@ -103,11 +126,11 @@ let afternoonSnackIcon = "Sna"
 
 let afternoonSnackTip1 = Tip(header: diet, title: "Make sure you are hydrated, as being thirsty can sometimes be confused with hunger.", body: "Drinking water before a meal has also been shown to reduce the amount of food you eat overall, while also increasing the amount of energy your body burns." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3032498/why-you-should-rethink-that-morning-meeting", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let afternoonSnackTip2 = Tip(header: diet, title: "It's perfectly normal to feel hungry at 3 p.m, just choose the right snacks.", body: "Cravings can occur for many different reasons, but often later in the day our energy levels tend to slump due to a drop in our blood sugar levels. \n\nWhat we're craving is something to bring our sugar levels back up to normal. Instead of chips or a chocolate bar, have yoghurt (protein) with fruit (fiber) or a handful of nuts (healthy fat)." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let afternoonSnackTip2 = Tip(header: diet, title: "It's perfectly normal to feel hungry at 3 p.m, just choose the right snacks: protein, healthy fats and veggies", body: "Later in the day our energy levels tend to slump due to a drop in our blood sugar levels. What we're craving is something to bring our sugar levels back up to normal. Instead of chips or a chocolate bar, have yoghurt (protein) with fruit (fiber) or a handful of nuts (healthy fat)." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let afternoonSnackTip3 = Tip(header: avoidTemptation, title: "If you have your healthy afternoon snack all ready to go, you're less likely to choose chips and chocolate.", body: "Have your afternoon snack prepared. Crackers and cheese, nuts, or peanut butter on wholegrain toast are great mid afternoon snacks. They can curb a craving without added sugar and saturated fats." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let afternoonSnackTip4 = Tip(header: "Snack", title: "Snack 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let afternoonSnackTip4 = Tip(header: "Snack", title: "Don't eat your snack while doing something else — like surfing the Internet, watching TV, or working at your desk", body: "Often times we find ourselves mindlessly snacking because of certain emotions or situations (boredom, loneliness, stress). Start to notice when your emotions are fueling your eating and try to find a different outlet for those emotions." , sourceName: "Eating Bird Food", sourceURL: "https://www.eatingbirdfood.com/how-to-stop-mindless-snacking/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var afternoonSnackTipArray0 = [afternoonSnackTip1, afternoonSnackTip2, afternoonSnackTip3, afternoonSnackTip4]
 
@@ -132,18 +155,49 @@ let lateNightSnackTopic0 = Topic(title: lateNightSnackTitle, icon: lateNightSnac
 
 // MARK: - Journal
 
+// PLAN TO USE IN NEXT VERSION OF APP:
+//
+//    let am0 = JournalAdvice(quote: "David McCullough, the Pulitzer Prize winning author and historian has said if you want to become the voice of your generation, write a journal entry every day and then gift it to your local university library at the end of your life. Voice of your generation or not, I believe that a journal is one of the most precious gifts you can give to those you leave behind.", source: "Greg McKeown, author of Essentialism: The Disciplined Pursuit of Less", question: "https://gregmckeown.com/blog/one-thing-productive-people-reaching-phones/")
+//
+
+//
+//    let pm1 = JournalAdvice(quote: "Journaling helps you know yourself better. By writing routinely you will get to know what makes you feel happy and confident. You will also become clear about situations and people who are toxic for you — important information for your emotional well-being.", source: "Psych Central", question: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+//
+//    let am1 = JournalAdvice(quote: "Journaling helps to reduce stress. Writing about anger, sadness and other painful emotions helps to release the intensity of these feelings. By doing so you will feel calmer and better able to stay in the present.", source: "Psych Central", question: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+//
+//    let am2 = JournalAdvice(quote: "Journaling helps you solve problems more effectively. Typically we problem solve from a left-brained, analytical perspective. But sometimes the answer can only be found by engaging right-brained creativity and intuition. Writing unlocks these other capabilities, and affords the opportunity for unexpected solutions to seemingly unsolvable problems.", source: "Psych Central", question: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+//
+//    let pm2 = JournalAdvice(quote: "Keeping a journal allows you to track patterns, trends and improvement and growth over time. When current circumstances appear insurmountable, you will be able to look back on previous dilemmas that you have since resolved.", source: "Psych Central", question: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+//
+//    let am3 = JournalAdvice(quote: "Your journaling will be most effective if you do it daily for about 20 minutes. Begin anywhere, and forget spelling and punctuation. Privacy is key if you are to write without censor. Write quickly, as this frees your brain from \"shoulds\" and other blocks to successful journaling. If it helps, pick a theme for the day, week or month (for example, peace of mind, confusion, change or anger). The most important rule of all is that there are no rules. You’ll discover that your journal is an all-accepting, nonjudgmental friend. And it may provide the cheapest therapy you will ever get.", source: "Psych Central", question: "https://psychcentral.com/lib/the-health-benefits-of-journaling/")
+//
+
+//
+//    let am4 = JournalAdvice(quote: "Even if you start a journal session in a bad mood, a five-minute a day gratitude journal can increase your long-term well-being by more than 10 percent. Those who pay attention to what is good in their life instead of what is bad are more likely to feel positively about their life. Gratitude makes us feel more gratitude.", source: "Positive Psychology Program", question: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+//
+//    let pm4 = JournalAdvice(quote: "Journaling gratitude . It also keeps suicidal thoughts and attempts at bay. A study found that gratitude is a protective factor when it comes to suicidal ideation in stressed and depressed individuals. Enhancing our own practice of gratitude can help protect us when we are weakest.", source: "Positive Psychology Program", question: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+//
+//    let am5 = JournalAdvice(quote: "Regular gratitude journaling has been shown to result in 5% to 15% increases in optimism, meaning that the more we think about what we are grateful for, the more we find to be grateful for.", source: "Positive Psychology Program", question: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+//
+
+//    let am6 = JournalAdvice(quote: "Journaling can help you achieve your goals. ", source: "Huffington Post", question: "https://www.huffingtonpost.com/thai-nguyen/benefits-of-journaling-_b_6648884.html")
+//
+//    let pm5 = JournalAdvice(quote: " ", source: "", question: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+//
+
+
 let journalTitle = "Journal"
 let journalIcon = "Jou"
 
-let success = "SUCCESS"
+//    let pm0 = JournalAdvice(quote: "", source: "", question: "")
 
-let journalTip1 = Tip(header: success, title: "Bill Gates takes time to reflect", body: "The founder of Microsoft famously said, \"It’s fine to celebrate success but it is more important to heed the lessons of failure.\" Reflection should be a daily practice but the weekends are a perfect opportunity to step back and reflect on the lessons of the previous week and to make improvements for the next. \n\nAuthor of \"The Happiness Project,\" Gretchen Rubin, suggests starting a “one sentence journal” to encourage daily reflection." , sourceName: "LifeHack.org", sourceURL: "https://www.lifehack.org/articles/productivity/12-weekend-habits-highly-successful-people.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let journalTip1 = Tip(header: success, title: "Journaling helps you clarify your thoughts and feelings", body: "Do you ever seem all jumbled up inside, unsure of what you want or feel? Taking a few minutes to jot down your thoughts and emotions (no editing!) will quickly get you in touch with your internal world." , sourceName: "Psych Central", sourceURL: "https://psychcentral.com/lib/the-health-benefits-of-journaling/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let journalTip2 = Tip(header: journalTitle, title: "journal 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let journalTip2 = Tip(header: journalTitle, title: "Gratitude journaling has a strong positive impact on psychological well-being, self-esteem, and depression", body: "Study: participants who practiced gratitude journaling experienced a 35% reduction in depressive symptoms for as long as the journaling continued. Think of at least one thing that you are greatful for today." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let journalTip3 = Tip(header: journalTitle, title: "journal 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let journalTip3 = Tip(header: journalTitle, title: "To create a new journaling habit, write less than you feel like writing", body: "When people start journaling they write pages the first day. Then by the second day the thought of writing a page is daunting, and they procrastinate or abandon the exercise. So even if you feel like writing more, force yourself to write no more than one sentence a day." , sourceName: "Essentialism: The Disciplined Pursuit of Less", sourceURL: "https://gregmckeown.com/blog/one-thing-productive-people-reaching-phones/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let journalTip4 = Tip(header: journalTitle, title: "journal 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let journalTip4 = Tip(header: journalTitle, title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for. Participants of a two week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var journalTipArray0 = [journalTip1, journalTip2, journalTip3, journalTip4]
 
@@ -228,15 +282,13 @@ let runningTitle = "Running"
 let runningIcon = "Run"
 
 let runningTip1 = Tip(header: improvePerformance, title: "Drink about 17 ounces of fluid about two hours before running.", body: "The American College of Sports Medicine recommends that people drink about 17 ounces of fluid about two hours before exercise. During exercise, they recommend that people start drinking fluids early, and drink them at regular intervals to replace fluids lost by sweating. \n\nCells that don't maintain their balance of fluids and electrolytes shrivel, which can result in muscle fatigue and performance can suffer." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let runningTip2 = Tip(header: runningTitle, title: "Running 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let runningTip2 = Tip(header: runningTitle, title: "Run faster by adding short sprints into your endurance training on a regular basis", body: "You won’t make performance gains if you always run at the same speed. Work short speedwork into one of your long-distance runs to vary the pace. \n\nDuring an acceleration, you slowly, but steadily increase your running speed from a recovery pace to a sprint over a distance of 80-100 m.! A deceleration begins with a sprint and gradually slows down to a jog." , sourceName: "Runtastic", sourceURL: "https://www.runtastic.com/blog/en/5-effective-tips-for-improving-your-running-performance/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let runningTip3 = Tip(header: runningTitle, title: "Running 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let runningTip3 = Tip(header: runningTitle, title: "Land on the midsole of your foot, body", body: "Landing on your forefoot (instead of your heels) allows your muscles to catch the weight of your body in flight, reducing the effects of impact on the joints and bones. \n\nAvoid running with a heel landing first because it can contribute to back and knee pain.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/cardio/10-ways-improve-your-running-technique", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let runningTip4 = Tip(header: runningTitle, title: "Running 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let runningTip4 = Tip(header: runningTitle, title: "Take short effective strides to conserve energy and reduce join pain", body: "Stand tall and lean forward, and when you feel like you are going to fall, step forward just enough to catch yourself.  This should be the length of your stride. It takes less energy to fall than to reach your foot in front of you. Taking long strides while you run is inefficient and an energy drain. \n\nShorter strides help to reduce the movement within any joint (for running, this means the joints of the ankles, knees, and hips), and less movement means a longer, healthier life for these joints." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let runningTip5 = Tip(header: runningTitle, title: "Running 5 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-var runningTipArray0 = [runningTip1, runningTip2, runningTip3, runningTip4, runningTip5]
+var runningTipArray0 = [runningTip1, runningTip2, runningTip3, runningTip4]
 
 let runningTopic0 = Topic(title: runningTitle, icon: runningIcon, tip: runningTipArray0)
 
@@ -246,13 +298,13 @@ let runningTopic0 = Topic(title: runningTitle, icon: runningIcon, tip: runningTi
 let yogaTitle = "Yoga"
 let yogaIcon = "Yog"
 
-let yogaTip1 = Tip(header: yogaTitle, title: "Yoga 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let yogaTip1 = Tip(header: yogaTitle, title: "Ideally, yoga is practiced in the early morning at sunrise when the mind is clearest and the world is quiet", body: "The traditional yogic texts state that the hours between 4 am and 6 am are the most conducive to reaching a meditative state. Practicing first thing in the morning allows you to avoid distraction and start the day off with health and intentionality, thus setting the tone for the rest of the day." , sourceName: "Art of Living", sourceURL: "https://www.artofliving.org/us-en/yoga/yoga-for-beginners/get-started-with-yoga", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let yogaTip2 = Tip(header: yogaTitle, title: "Yoga 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let yogaTip2 = Tip(header: yogaTitle, title: "It is best to practice yoga on an empty stomach or at least 2-3 hours after your last meal", body: "When practicing yoga, you are much more in tune to your body’s subtle feelings than at any other point, and practicing with food in your stomach inevitably leads to discomfort. Eating before practicing can lead to feelings of heaviness, and can disrupt the digestion process." , sourceName: "Art of Living", sourceURL: "https://www.artofliving.org/us-en/yoga/yoga-for-beginners/get-started-with-yoga", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let yogaTip3 = Tip(header: yogaTitle, title: "Yoga 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let yogaTip3 = Tip(header: yogaTitle, title: "Research: Yoga yoga could benefit those living with depression, schizophrenia, other psychiatric conditions, and sleep problems.", body: "Practicing in a group setting, such as a yoga class, stimulates the production of oxytocin, the love and bonding hormone. Practicing mindfulness through yoga also results in higher serotonin levels (the happiness hormone), and long-term practitioners have shown more mass in the areas of the brain associated with contentment (a state of happiness)." , sourceName: "Everyday Health", sourceURL: "https://www.everydayhealth.com/fitness-pictures/10-surprising-health-perks-of-yoga.aspx#02", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let yogaTip4 = Tip(header: yogaTitle, title: "Yoga 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let yogaTip4 = Tip(header: yogaTitle, title: "Before starting your practice, create an intention that sets the tone for your practice and prepares your mind for an introspective experience", body: "Centering your mind around one thought will help bring you into the present moment before beginning. As you continue to focus on your intention, even after class has finished, you uplift your energy and increase your vibration, thereby acting as an example to inspire the lives of those you encounter." , sourceName: "Mind Body Green", sourceURL: "https://www.mindbodygreen.com/0-18626/the-power-behind-setting-an-intention-in-yoga.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var yogaTipArray0 = [yogaTip1, yogaTip2, yogaTip3, yogaTip4]
 
@@ -263,11 +315,6 @@ let yogaTopic0 = Topic(title: yogaTitle, icon: yogaIcon, tip: yogaTipArray0)
 
 let barTitle = "Bar"
 let barIcon = "Bar"
-
-let health = "HEALTH"
-let beer = "BEER"
-let qualityOfSleep = "QUALITY OF SLEEP"
-
 
 let barTip1 = Tip(header: beer, title: "Reduce your chance getting a migraine by drinking beer in a bottle instead of on tap", body: "Beer on tap has about 25 times the migraine-inducing tyramine as beer in bottles. So if you really want a cold one, ask for a bottle. Or change it up and order a bourbon. It doesn’t have any of the stuff." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/migraines-headaches/ss/slideshow-food-migraines?ecd=wnl_din_121716&ctr=wnl-din-121716_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -283,7 +330,7 @@ let barTopic0 = Topic(title: barTitle, icon: barIcon, tip: barTipArray0)
 
 // MARK: - MORE BAR TIPS
 
-let barTip5 = Tip(header: diet, title: "Some drinks have more calories and make you hungrier.", body: "When it comes to waist-friendly cocktails, the simpler the drink, the better. The sweet-and-fancy ones tend to have more calories and the additional sugar can make you even hungrier: Your blood sugar skyrockets higher than it does on beer, wine, or a shot of something, making the resulting cravings worse. \n\nAlcohol has 7 calories per gram, making it the second-most calorie-dense macronutrient. (That's just below pure fat, which has 9 calories per gram.) This means a only 1.5-ounce of vodka has almost 100 calories. \n\nSo if you're going to drink, have something straight up and simple like wine or beer. Any wine or beer works, but to reduce about 10 calories per glass, choose a rosé or white wine instead of a heavier red. Dark beer has less calories than regular beer and may leave you feeling fuller than because it's so starchy and rich. Avoid juices, liqueurs (which are sweet and syrupy), colas, tonics, and super-sugary bottled mixes like the ones for a lot of margaritas and daiquiris." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2013/04/03/health/wine-waistline/index.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let barTip5 = Tip(header: diet, title: "Some drinks have more calories and make you hungrier.", body: "When it comes to waist-friendly cocktails, the simpler the drink, the better. The sweet-and-fancy ones tend to have more calories and the additional sugar can make you even hungrier: Your blood sugar skyrockets higher than it does on beer, wine, or a shot of something, making the resulting cravings worse. \n\nAlcohol has 7 calories per gram, making it the second-most calorie-dense macronutrient. (That's just below pure fat, which has 9 calories per gram.) This means a only 1.5-ounce of vodka has almost 100 calories. \n\nSo if you're going to drink, have something straight up and simple like wine or beer. Any wine or beer works, but to reduce about 10 calories per glass, choose a rosé or white wine instead of a heavier red. Dark beer has less calories than regular beer and may leave you feeling fuller than because it's so starchy and rich." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2013/04/03/health/wine-waistline/index.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let barTip6 = Tip(header: health, title: "Drinking multiple drinks on one night is worse for you body than drinking one drink a day", body: "When you down three or four drinks in one night, your body has many hundreds of alcohol calories to process before it can continue to break down food calories or stored fat. All those drinks increase your blood sugar which makes you hungrier and because you're tipsy, your prefrontal cortex is misfiring and you now have zero hesitation about ordering the fried mozzarella sticks with a side of ranch and eating all of them. \n\nHave four drinks every Saturday night and you'll be up about 10 pounds in a year." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2013/04/03/health/wine-waistline/index.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -308,32 +355,49 @@ let happyHourTopic0 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: hap
 let cafeTitle = "Cafe"
 let cafeIcon = "Caf"
 
-let cafeTip1 = Tip(header: health, title: "Caffeine (in moderation) may help you live longer.", body: "Part of coffee's health-sustaining power is derived from its caffeine content. If you take your coffee daily and often, and abstain from smoking, you’re likely to live longer than the average adult, says a study of 500,000 men and women." , sourceName: "New England Journal of Medicine", sourceURL: "https://www.nejm.org/doi/full/10.1056/NEJMoa1112010", sponsorLogo: "GM_logo", sponsorURL: "https://gm.com")
+let cafeTip1 = Tip(header: health, title: "Caffeine (in moderation) may help you live longer", body: "Research: If you take your coffee daily, and abstain from smoking, you’re likely to live longer than the average adult." , sourceName: "New England Journal of Medicine", sourceURL: "https://www.nejm.org/doi/full/10.1056/NEJMoa1112010", sponsorLogo: "GM_logo", sponsorURL: "https://gm.com")
 
-let cafeTip2 = Tip(header: loseWeight, title: "Coffee can help you lose weight as long as your don't add sugar or cream.", body: "Coffee does stimulate the metabolismm which can help you lose weight, but only a little. Don't count on this for weight loss, especially if you add calories with toppings." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/ss/slideshow-fat-fighting-foods?ecd=wnl_din_112616&ctr=wnl-din-112616_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d%22,%22Source:%20WebMD", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let cafeTip2 = Tip(header: loseWeight, title: "Coffee can help you lose weight as long as your don't add sugar or cream", body: "Coffee stimulates your metabolismm which can help you lose weight, but only a little. Don't count on this for weight loss, especially if you add calories with toppings." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/ss/slideshow-fat-fighting-foods?ecd=wnl_din_112616&ctr=wnl-din-112616_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d%22,%22Source:%20WebMD", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let cafeTip3 = Tip(header: loseWeight, title: "Green tea promotes weight loss by stimulating the body to burn fat.", body: "Green tea contains catechins, a type of phytochemical that may briefly affect the metabolism to burn body fat. To get the most benefit, you may need to drink green tea several times a day. Try taking your tea hot, because it takes longer to drink, providing a soothing, mindful experience." , sourceName: "SourceName", sourceURL: "https://www.webmd.com/diet/ss/slideshow-fat-fighting-foods?ecd=wnl_din_112616&ctr=wnl-din-112616_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d%22,%22Source:%20WebMD", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let cafeTip3 = Tip(header: loseWeight, title: "Coffee may help prevent diseases like stroke and certain cancers, lower risk of Parkinson's and dementia, and boost concentration and memory", body: "But, remember: caffeine is a drug and can become an addiction. Experts say 400 milligrams of caffeine a day is a safe amount — about the amount in four 8-ounce cups of coffee." , sourceName: "Mayo Clinic", sourceURL: "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/caffeine/art-20045678", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let cafeTip4 = Tip(header: health, title: "Green tea contains antioxidants which may protect against some forms of cancer, especially if you drink it hot", body: "Research suggests it may protect against some forms of cancer, including liver. You'll get more catechins if you brew tea yourself and drink it hot. Iced tea and ready-to-drink green teas have much lower levels." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let cafeTip4 = Tip(header: health, title: "Green tea increases metabolism to help you burn fat and helps to decrease cancer risk", body: "To get higher levels of cancer-fighting antioxidants, it's best to brew tea yourself and drink it hot. Iced tea and ready-to-drink green teas have less antioxidants." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let cafeTip5 = Tip(header: health, title: "A California judge ruled that coffee should come with a cancer warning.", body: "The culprit is a chemical produced in the bean roasting process that is a known carcinogen. Studies indicate coffee is unlikely to cause breast, prostate, or pancreatic cancer, and it seems to lower the risks for liver and uterine cancers, the agency said. Evidence is inadequate to determine its effect on dozens of other cancer types. \n\nThe Council for Education and Research on Toxics wanted the coffee industry to remove acrylamide from its processing — like potato chip makers did when it sued them years ago — or disclose the danger in ominous warning signs or labels. The industry, led by Starbucks Corp., said the level of the chemical in coffee isn't harmful and any risks are outweighed by benefits.", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/health/a19643946/starbucks-coffee-cancer-warning/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-var cafeTipArray0 = [cafeTip1, cafeTip2, cafeTip3, cafeTip4, cafeTip5]
+var cafeTipArray0 = [cafeTip1, cafeTip2, cafeTip3, cafeTip4]
 
 let cafeTopic0 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray0)
+
+
+// MARK: - Quick Break
+
+let breakTitle = "Break"
+let breakIcon = "Bre"
+
+let breakTip1 = Tip(header: breakTitle, title: "Research: Take a break every 52 minutes", body: "One study found the top 10% of productive workers all worked an average of 52 minutes before taking a 17 minute break. Working for any longer can cause cognitive boredom. By knowing you have a break coming up, you’re more likely to stay focused and work with purpose. And taking breaks at regular intervals in your day will improve your health and mental focus." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/40475204/youre-taking-breaks-the-wrong-way-heres-how-to-fix-that", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let breakTip2 = Tip(header: breakTitle, title: "High efficiency breaks = walking outside, especially in green spaces. Low efficiency breaks = Scrolling through the news or social media", body: "Get up and move around to get the blood flowing and clear the mind. Researchers found that just 10 minutes of exercise is enough to boost memory and attention performance throughout the day. \n\nAdditionally, increased exposure to sunlight and fresh air helps increase productivity and can even improve your sleep. Researchers found that workers with more exposure to natural light during the day slept an average of 46 minutes more per night." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/40475204/youre-taking-breaks-the-wrong-way-heres-how-to-fix-that", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let breakTip3 = Tip(header: breakTitle, title: "Research: Increase meditative state by walking in green spaces, not in busy streets", body: "Compared to city shopping streets and busy business areas, feelings of a meditative state were the highest when the participants walked through green spaces, as well as less frustration. \n\nThe findings don’t mean the green space triggered a meditative state — rather, the energy required to walk through a green space is more \"effortless.\"" , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/29/green-space-meditation-brain-walk-park_n_2964199.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let breakTip4 = Tip(header: breakTitle, title: "Take vision breaks from looking at digital devices because your eyes will strain in as little as two hours", body: "The 20-20-20 exercise to reduce your eye fatigue: Every 20 minutes look away from your computer screen and focus on an item at least 20 feet away for at least 20 seconds." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+var breakTipArray0 = [breakTip1, breakTip2, breakTip3, breakTip4]
+
+let breakTopic0 = Topic(title: breakTitle, icon: breakIcon, tip: breakTipArray0)
+
 
 // MARK: - Date
 
 let dateTitle = "Date"
 let dateIcon = "Dat"
 
-let dateTip1 = Tip(header: dateTitle, title: "Date 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dateTip1 = Tip(header: dateTitle, title: "Put your phone away. A study found that the mere presence of a cell phone during conversation lowers relationship development", body: "Cell phones, even when not being used, can intrude into awareness when you see a cell phone. You find yourself thinking about all the things you could be doing with your cell phone. Once those thoughts enter awareness, you may devote less attention to this new person." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-mishaps/201407/date-you-and-our-cell-phones", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let dateTip2 = Tip(header: dateTitle, title: "Date 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dateTip2 = Tip(header: dateTitle, title: "If you keep conversation fun, your date is more likely to come away in a good mood and feeling more positive towards you", body: "Ask them about their family, favorite trips and find out what they are passionate about. Showing interest in someone and letting them feel heard is very attracting. \n\nConversly, if you complain or ask something associated with a negative topic, they'll think the same of you." , sourceName: "The Independent", sourceURL: "https://www.independent.co.uk/life-style/love-sex/first-date-rules-for-men-women-conversation-negative-topics-politics-james-preece-a8288116.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+ 
+let dateTip3 = Tip(header: dateTitle, title: "Body language signs that show your date is into you", body: "Good eye contact, smileing, leaning in when you speak, laughing at your jokes, blushing, open posture, mirroring your actions, angling their body towards you, and they an excuse to touch you" , sourceName: "Ask Men", sourceURL: "https://www.askmen.com/top_10/dating/10-first-date-success-signs_4.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let dateTip3 = Tip(header: dateTitle, title: "Date 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-let dateTip4 = Tip(header: dateTitle, title: "Date 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dateTip4 = Tip(header: dateTitle, title: "Eat these aphrodisiac foods to increase romance and sexual desire", body: "Eat: Oysters, chili peppers, dark chocolate, vanila, whipped cream, honey, coffee, chai tea, watermelon, bananas, strawberries, cherries, figs, nuts, olive oil, avocado, arugula, asparagus, artichokes. \n\nDon't eat: red meat, broccoli, dairy, whole grains, and beans." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/food/fun/aphrodisiac-foods/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var dateTipArray0 = [dateTip1, dateTip2, dateTip3, dateTip4]
 
@@ -397,10 +461,6 @@ let commuteAMIcon = "Com"
 
 let commuteAMTip1 = Tip(header: health, title: "Long commutes are bad for your health and productivity.", body: "Research found that longer-commuting workers more likely to suffer from depression, have financial worries, and report multiple aspects of work-related stress. They were also more likely to get less than the recommended seven hours of sleep each night and more likely to be obese." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/long-commutes-have-an-impact-on-health-and-productivity-2017-5", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let getSmarter = "GET SMARTER"
-let relax = "RELAX"
-
-
 let commuteAMTip2 = Tip(header: getSmarter, title: "Support your ongoing learning and development.", body: "Read a book listen to a podcast, Ted talk, audio book or perhaps even learn a new language. Consider it breakfast for your brain." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-to-do-on-your-commute-2015-12#5-listen-to-music-or-audio-books-5", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let commuteAMTip3 = Tip(header: relax, title: "Practice calming your mind, or just enjoy the environment around you.", body: "The idea is to just be present in the moment and relax. \n\nIf you spend a majority of your commute doing some deep breathing and being mindful, it can be an excellent transitional time so you don't walk in the door feeling wound up." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-to-do-on-your-commute-2015-12#8-relax-8", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -424,7 +484,7 @@ let commutePMTip2 = Tip(header: health, title: "Pollution at intersections is 29
 
 let commutePMTip3 = Tip(header: improvePerformance, title: "Use your commuting time to bring yourself closer to the life you want to live.", body: "Think back through your day hour by hour and glean wisdom and connection from it. How did the day go? What worked? What didn’t? What do you want to do the same – or differently – tomorrow? With whom can you share feedback? Who should you thank? What happened today for which you can feel grateful? These questions will help you learn, grow, and connect." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let commutePMTip4 = Tip(header: improvePerformance, title: "Identify an area in your life that you want to improve and use your commute to fix it.", body: "If it’s exercise you need, then bike or walk to work, even if it’s just partway. Or park far away from your office and walk an extra minute. If it’s relaxation you’re missing, then do nothing, or read a fun book, or take a quick walk around your office before you leave for home. \n\nIf you want to learn something, then read about it or, if you have internet access, watch a video or participate in an online course. If you’re feeling lonely, call, text, or email people you cherish." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let commutePMTip4 = Tip(header: improvePerformance, title: "Identify an area in your life that you want to improve and use your commute to fix it.", body: "If it’s exercise you need, then bike or walk to work, even if it’s just partway. Or park far away from your office and walk an extra minute. \n\nIf it’s relaxation you’re missing, then do nothing, or read a fun book, or take a quick walk around your office before you leave for home. \n\nIf you want to learn something, then read about it or, if you have internet access, watch a video or participate in an online course. If you’re feeling lonely, call, text, or email people you cherish." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var commutePMTipArray0 = [commutePMTip1, commutePMTip2, commutePMTip3, commutePMTip4]
 
@@ -435,15 +495,17 @@ let commutePMTopic0 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: com
 let workAMTitle = "Work"
 let workAMIcon = "Wor"
 
-let workAMTip1 = Tip(header: improvePerformance, title: "Don’t check your social media or email until after your 3 hours of deep work. Your morning should be spent on output.", body: "A common strategy for this is known as the “90–90–1” rule, where you spend the first 90 minutes of your workday on your #1 priority." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let workAMTip1 = Tip(header: improvePerformance, title: "Produce at a peak level: Work for extended periods with full concentration on a single task free from distraction", body: "Stop constantly checking your email, phone, and multitasking. Your brain's attention remains stuck thinking about the previous task when beginning your next task. This results in lower performance and increases the amount of time to complete your work.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/wharton-adam-grant-uses-deep-work-for-maximum-productivity-2016-2", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let workAMTip2 = Tip(header: improvePerformance, title: "Don't schedule your meetings in the morning. Instead, schedule them for the afternoon, after lunch.", body: "Research shows we are more focused in the morning. So spend this time doing difficult tasks, not sitting in a meeting. \n\nSchedule your meetings for the afternoon, because the thing about meetings is that if they're scheduled, people will show up. While many teams meet first thing in the morning to figure out what everyone will do that day. Another option is to have that meeting at 3:30 or 4 p.m., figure out the next day’s plan, send everyone home, and then come in the next morning ready to roll." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3032498/why-you-should-rethink-that-morning-meeting", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let workAMTip2 = Tip(header: improvePerformance, title: "Don't schedule your meetings in the morning. Instead, schedule them for the afternoon, after lunch.", body: "Our brains are more focused in the morning. So spend this time doing difficult tasks, not sitting in a meeting. For team meetings, schedule it at 3:30 or 4 p.m. and use it to plan for the next day." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3032498/why-you-should-rethink-that-morning-meeting", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let workAMTip3 = Tip(header: improvePerformance, title: "Be more productive at work by taking your cell phone moving it out of sight or face-down.", body:  "A recent study found people were much more likely to make errors and not pay attention to their main task if they were interrupted by notifications from their phone - such as a text or a call. \n\nTo boost our productivity, it's important to recognize not all emails and texts are created equal and therefore don’t warrant immediate notification.", sourceName: "WIRED", sourceURL: "https://www.wired.co.uk/article/what-is-productivity-be-more-productive-how-to-work", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let workAMTip3 = Tip(header: improvePerformance, title: "Be more productive at work by placing your cell phone out of sight or face-down", body: "A study found people were much more likely to make errors and not pay attention to their main task if they were interrupted by notifications from their phone - such as a text or a call.", sourceName: "WIRED", sourceURL: "https://www.wired.co.uk/article/what-is-productivity-be-more-productive-how-to-work", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let workAMTip4 = Tip(header: improvePerformance, title: "Try to avoid meetings because they are the biggest office time-sucks.", body: "The average office worker spends over 31 hours each month in unproductive meetings. Before booking your next meeting, ask yourself whether you can accomplish the same goals or tasks via email, phone, or Web-based meeting (which may be slightly more productive). \n\nIf you must have a meeting, there's some evidence that standing meetings can result in increased group arousal, decreased territoriality, and improved group performance.", sourceName: "Inc", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let workAMTip4 = Tip(header: improvePerformance, title: "The best time to take a break from work is midmorning", body: "Your mental resources are generally at their highest soon after you wake up, and they gradually diminish throughout the day. It's easier to restore those resources when you take a midmorning break.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5#-5", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 
-let workAMTip5 = Tip(header: improvePerformance, title: "The best time to take a break from work is midmorning.", body: "That's because your mental resources are generally at their highest soon after you wake up, and they gradually diminish throughout the day. So it's easier to restore those resources when you take a break closer to the start of the workday. \n\nResearchers found that people who took breaks earlier in the day, and used them to do activities they preferred, reported less physical distress and feeling more satisfied with their jobs.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5#-5", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
+//
+let workAMTip5 = Tip(header: improvePerformance, title: "Try to avoid meetings because they are the biggest office time-sucks", body: "The average office worker spends over 31 hours each month in unproductive meetings. Before booking your next meeting, ask yourself whether you can accomplish the same goals or tasks via email, phone, or Web-based meeting.", sourceName: "Inc", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
 
 var workAMTipArray0 = [workAMTip1, workAMTip2, workAMTip3, workAMTip4]
 
@@ -453,8 +515,6 @@ let workAMTopic0 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArr
 
 let workPMTitle = "Work"
 let workPMIcon = "Wor"
-
-let strategy = "STRATEGY"
 
 let workPMTip1 = Tip(header: strategy, title: "Your best work — which for most people is thinking — will actually happen while you’re away from your work, \"recovering.\" For best results: Spend 20% of your energy on your work and 80% of your energy on recovery and self-improvement.", body: "In one study, only 16 percent of respondents reported getting creative insight while at work. Ideas generally came while the person was at home, in transportation, or during recreational activity. \n\n\"The most creative ideas aren’t going to come while sitting in front of your monitor,\" says Scott Birnbaum, a vice president of Samsung Semiconductor. The reason for this is simple. When you’re working directly on a task, your mind is tightly focused on the problem at hand (i.e., direct reflection). Conversely, when you’re not working, your mind loosely wanders(i.e., indirect reflection)." , sourceName: "Benjamin P. Hardy, author of Willpower Doesn't Work", sourceURL: "https://medium.com/@benjaminhardy/this-morning-routine-will-save-you-20-hours-per-week-409f8acbde1", sponsorLogo: "logo", sponsorURL: "https://www.test.com/")
 
@@ -501,7 +561,8 @@ let homeAMTip2 = Tip(header: health, title: "Drink a glass or two of water befor
 
 let homeAMTip3 = Tip(header: loseWeight, title: "Reduce weight gain and have more energy by eating a healthy breakfast.", body: "Our metabolism works better earlier in the day so that body is able to turn the calories you eat into energy that you can use in the morning. Researchers found that skipping your first meal can make you more likely to overeat later in the day. And with the slower metabolism at night, you're more likely to gain weight by eating bigger meals at night." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let homeAMTip4 = Tip(header: homeAMTitle, title: "Home, AM 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homeAMTip4 = Tip(header: increaseConfidence, title: "Every time you walk through a doorway, remember to stand up, put your chin up, put your shoulders back, and smile.", body: "This will create a first impression that causes other people to view you as confident, open, positive, and friendly. That will change the way that we think about ourselves." , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
 var homeAMTipArray0 = [homeAMTip1, homeAMTip2, homeAMTip3, homeAMTip4]
 
 let homeAMTopic0 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray0)
@@ -540,7 +601,7 @@ let kitchenTip4 = Tip(header: kitchenTitle, title: "Home, kitchen Title", body: 
 
 var kitchenTipArray0 = [homeAMTip1, homeAMTip2, homeAMTip3, homeAMTip4]
 
-let kitchenTopic0 = Topic(title: kitchenTitle, icon: kitchenIcon, tip: kitchenTipArray0)
+//let kitchenTopic0 = Topic(title: kitchenTitle, icon: kitchenIcon, tip: kitchenTipArray0)
 
 // MARK: - AM Bathroom
 

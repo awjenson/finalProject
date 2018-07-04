@@ -116,9 +116,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
             selectedEmoji = "💥💯🏆🎊🥇🎉"
             rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
 
-
-
-
         default:
             print("ERROR: error with increaseEmoji")
 
@@ -187,7 +184,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     let pm6 = CounterAdvice(quote: "\"Good habits are the key to all success.\"", source: "Og Mandino")
 
     // MARK: Time-based Methods
-
 
 
     func dayOfWeekAndHour() {
@@ -425,6 +421,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     // MARK: - IBActions
 
+    var alert: UIAlertController?
+
+    @objc func alertTextFieldDidChange(_ sender: UITextField) {
+
+            alert?.actions[0].isEnabled = sender.text!.count > 0
+            alert?.actions[1].isEnabled = sender.text!.count > 0
+    }
+
     @IBAction func addButtonTapped(_ sender: UIButton) {
 
         let now = Date()
@@ -433,14 +437,17 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         formatter.dateFormat = "MMMM d, yyyy h:mm a"
         let currentDate = formatter.string(from: now)
 
-        let alert = UIAlertController(title: "Add a New Habit to Track Daily",
-                                      message: "",
+        // 1. Create the alert controller
+        alert = UIAlertController(title: "Add New Habit",
+                                      message: "Include a strong reason WHY to keep yourself motivated",
                                       preferredStyle: .alert)
 
         // guard to make sure text is not nil ("")
-        let doAction = UIAlertAction(title: "Save as DO", style: .default) { _ in
+        let doAction = UIAlertAction(title: "Save as a DO", style: .default) { _ in
 
-            guard let textField1 = alert.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = alert.textFields?.last, textField2.text != "", let text2 = textField2.text else { return }
+            guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
+                print("$$$")
+                return }
 
             let goalItem = GoalItem(name: "DO: \(text1)", why: text2, timestamp: currentDate, count: 0)
 
@@ -456,9 +463,11 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         }
 
         // guard to make sure text is not nil ("")
-        let dontAction = UIAlertAction(title: "Save as DON'T", style: .default) { _ in
+        let dontAction = UIAlertAction(title: "Save as a DON'T", style: .default) { (action) -> Void in
 
-            guard let textField1 = alert.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = alert.textFields?.last, textField2.text != "", let text2 = textField2.text else { return }
+            guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
+                print("$$$")
+                return }
 
             let goalItem = GoalItem(name: "DON'T: \(text1)", why: text2, timestamp: currentDate, count: 0)
 
@@ -478,21 +487,28 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         // In action, setup textField
         var textField1 = UITextField()
-        alert.addTextField { (alertTextField) in
-            textField1 = alertTextField
-            textField1.placeholder = "Add a New Habit"
-        }
-
         var textField2 = UITextField()
-        alert.addTextField { (alertTextField) in
-            textField2 = alertTextField
-            textField2.placeholder = "Reason Why?"
+
+        alert?.addTextField { (alertTextField) in
+            textField1 = alertTextField
+            textField1.placeholder = "Habit (Your WHAT)"
+            textField1.addTarget(self, action: #selector(self.alertTextFieldDidChange(_:)), for: .editingChanged)
         }
 
-        alert.addAction(doAction)
-        alert.addAction(dontAction)
-        alert.addAction(cancelAction)
+        alert?.addTextField { (alertTextField) in
+            textField2 = alertTextField
+            textField2.placeholder = "Because (Your WHY)"
+            textField2.addTarget(self, action: #selector(self.alertTextFieldDidChange(_:)), for: .editingChanged)
+        }
 
-        present(alert, animated: true, completion: nil)
+        // Do and Don't buttons initally disabled
+        doAction.isEnabled = false
+        dontAction.isEnabled = false
+
+        alert?.addAction(doAction)
+        alert?.addAction(dontAction)
+        alert?.addAction(cancelAction)
+
+        present(alert!, animated: true, completion: nil)
     }
 }

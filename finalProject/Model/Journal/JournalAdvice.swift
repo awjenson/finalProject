@@ -15,12 +15,19 @@ class JournalAdvice {
     var quote: String
     var source: String
     var question: String?
+    var description: String
+    var time: String
+    var url: String?
 
-    init(quote: String, source: String, question: String?) {
+    init(quote: String, source: String, question: String?, description: String, time: String, url: String?) {
 
         self.quote = quote
         self.source = source
         self.question = question
+        self.description = description
+        self.time = time
+        self.url = url
+
     }
 
     

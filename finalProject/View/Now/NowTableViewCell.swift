@@ -31,27 +31,14 @@ class NowTableViewCell: UITableViewCell {
 //    @IBOutlet weak var sponsorLabel: UILabel!
 //    @IBOutlet weak var sponsorButton: RoundButton!
 
-
     var tipItem: Tip!
 
     func configureCell(tip: Tip) {
-
         // Display summarized text in
         tipItem = tip
-//        headerLabel.text = tip.header
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
         sourceLabel.text = tip.sourceName
-
-        // Plan to use in next version release:
-//        sponsorLabel.text = ""
-//        sponsorButton.setBackgroundImage(UIImage(named: tip.sponsorLogo), for: .normal)
-//        sponsorButton.setTitle("", for: .normal)
-//        if sponsorButton.titleLabel?.text == "" {
-//            sourceLabel.text = ""
-//        }
-
-        // set text view delegate
     }
 
     override func awakeFromNib() {

@@ -99,6 +99,7 @@ class NowViewController: UIViewController {
         nowTableView.estimatedRowHeight = 44
         nowTableView.dataSource = self
         nowTableView.delegate = self
+        nowTableView.separatorStyle = .none
     }
 
     // Call this inside UIButton to scroll to top
@@ -246,16 +247,16 @@ class NowViewController: UIViewController {
 
         case 11..<14:
             print("Weekend, Midday")
-            appendSevenTopics(lunchTopic0, cafeTopic0, shoppingClothesTopic0, groceryStoreTopic0, gymTopic0, yogaTopic0, weekendNow11to14Topic0)
+            appendSevenTopics(lunchTopic0, cafeTopic0, groceryStoreTopic0, runningTopic0, gymTopic0, yogaTopic0, weekendNow11to14Topic0)
 
         case 14...16:
             print("Weekend, Afternoon")
             // call function to display 9 time-based topics
             appendSevenTopics(cafeTopic0, runningTopic0, yogaTopic0, gymTopic0, mindfulnessTopic0, groceryStoreTopic0, weekendNow14to16Topic0)
         case 17...20:
-            print("Weekend, Evening")
+            print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerTopic0, homePMTopic0, bathroomTopic0, kitchenTopic0, groceryStoreTopic0, shoppingClothesTopic0, weekendNow17to20Topic0)
+            appendSevenTopics(dinnerTopic0, dateTopic0, groceryStoreTopic0, barTopic0, homePMTopic0, mindfulnessTopic0, weekendNow17to20Topic0)
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
@@ -279,16 +280,16 @@ class NowViewController: UIViewController {
         case 9..<11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(commuteAMTopic0, workAMTopic0, leadershipAMTopic0, courageTopic0, cafeTopic0, mindfulnessTopic0, weekdayNow9to11Topic0)
+            appendSevenTopics(breakfastTopic0, cafeTopic0, commuteAMTopic0, workAMTopic0, leadershipAMTopic0, mindfulnessTopic0, weekdayNow9to11Topic0)
 
         case 11..<14:
             print("weekdayMTW, Midday")
-            appendSevenTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, breakTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
 
         case 14...16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, mindfulnessTopic0, commutePMTopic0, happyHourTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, breakTopic0, mindfulnessTopic0, commutePMTopic0, happyHourTopic0, weekdayNow14to16Topic0)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
@@ -300,7 +301,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(barTopic0, dateTopic0, lateNightSnackTopic0, homePMTopic0, bedtimeTopic0, bathroomPMTopic0, weekdayNow21to24Topic0)
+            appendSevenTopics(barTopic0, dinnerAfter9PMTopic0, homePMTopic0, lateNightSnackTopic0, bedtimeTopic0, bathroomPMTopic0, weekdayNow21to24Topic0)
         default:
             print("Weekday,INVALID HOUR!")
         }
@@ -319,16 +320,16 @@ class NowViewController: UIViewController {
         case 9..<11:
             print("weekdayTF, Late Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(commuteAMTopic0, workAMTopic0, lunchTopic0, leadershipAMTopic0, courageTopic0, mindfulnessTopic0,  weekdayNow9to11Topic0)
+            appendSevenTopics(commuteAMTopic0, workAMTopic0, lunchTopic0, cafeTopic0, breakTopic0, mindfulnessTopic0,  weekdayNow9to11Topic0)
 
         case 11..<14:
             print("weekdayTF, Midday")
-            appendSevenTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, cafeTopic0, breakTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
 
         case 14...16:
             print("weekdayTF, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, leadershipPMTopic0, courageTopic0, mindfulnessTopic0, commutePMTopic0, weekdayNow11to14Topic0)
+            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, cafeTopic0, breakTopic0, mindfulnessTopic0, commutePMTopic0, weekdayNow11to14Topic0)
 
         case 17...20:
             print("weekdayTF, Evening")
@@ -337,7 +338,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerTopic0, barTopic0, dateTopic0, homePMTopic0, bedtimeTopic0, lateNightSnackTopic0, weekdayNow21to24Topic0)
+            appendSevenTopics(dinnerAfter9PMTopic0, barTopic0, dateTopic0, homePMTopic0, bedtimeTopic0, lateNightSnackTopic0, weekdayNow21to24Topic0)
         default:
             print("weekdayTF,INVALID HOUR!")
         }
@@ -457,12 +458,16 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         // configure cell in UITableViewCell file
         cell.configureCell(tip: tip)
 
-        cell.boardNoColorView.layer.cornerRadius = 2
-        cell.boarderColorView.layer.cornerRadius = 2
+//        cell.boardNoColorView.layer.cornerRadius = 3
+//        cell.boarderColorView.layer.cornerRadius = 3
+        cell.boarderColorView.layer.borderWidth = 1
+        cell.boarderColorView.layer.cornerRadius = 4
+        cell.boarderColorView.layer.borderColor = cellHeaderColor[indexPath.row].cgColor
         cell.boarderColorView.layer.shadowColor = cellHeaderColor[indexPath.row].cgColor
         cell.boarderColorView.layer.shadowOpacity = 0.9
-        cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.5, height: 1)
+        cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.6, height: 1.2)
         cell.boarderColorView.layer.shadowRadius = 1
+        cell.boarderColorView.backgroundColor = UIColor.white
 
 //        cell.headerLabel.textColor = cellHeaderColor[indexPath.row]
 

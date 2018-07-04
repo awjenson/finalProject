@@ -11,6 +11,7 @@
 		DA015BF72073E3FC00A0342F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */; };
 		DA15AE1220B649B400EFC4C2 /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */; };
 		DA15AE1520B84C2900EFC4C2 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1420B84C2900EFC4C2 /* FirebaseConstants.swift */; };
+		DA2223A220E8672800103829 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2223A120E8672800103829 /* ResponseTableViewCell.swift */; };
 		DA272D0B20BCE62200137039 /* FamousPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA272D0A20BCE62200137039 /* FamousPerson.swift */; };
 		DA272D0D20BCE72B00137039 /* CounterAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA272D0C20BCE72B00137039 /* CounterAdvice.swift */; };
 		DA2B85F720B8D59E005B7DD6 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B85F620B8D59E005B7DD6 /* MessageItem.swift */; };
@@ -35,6 +36,7 @@
 		DA361D3920896E5D007ACE59 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3820896E5D007ACE59 /* Date+convertToString.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD420B103DC007220F4 /* CounterViewController.swift */; };
+		DA43FD6220EB08ED00E09BBE /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43FD6120EB08ED00E09BBE /* TriangleView.swift */; };
 		DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */; };
 		DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A249209E4845008018D1 /* NewUserList.swift */; };
 		DA5AED9F207683120094AA57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5AED9E207683120094AA57 /* GoogleService-Info.plist */; };
@@ -68,6 +70,7 @@
 		DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF7206EFB13005D627B /* NowData.swift */; };
 		DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */; };
 		DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */; };
+		DADE4C7A20E9A5D300E19393 /* AdviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE4C7920E9A5D300E19393 /* AdviceData.swift */; };
 		DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1EC6520AA801E00EA9B3E /* EditButton.swift */; };
 		DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2977920BB76EC00868BF2 /* InternetConnection.swift */; };
 		DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */; };
@@ -82,6 +85,7 @@
 		DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
 		DA15AE1420B84C2900EFC4C2 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
+		DA2223A120E8672800103829 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
 		DA272D0A20BCE62200137039 /* FamousPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousPerson.swift; sourceTree = "<group>"; };
 		DA272D0C20BCE72B00137039 /* CounterAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAdvice.swift; sourceTree = "<group>"; };
 		DA2B85F620B8D59E005B7DD6 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 		DA361D3820896E5D007ACE59 /* Date+convertToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA404BD420B103DC007220F4 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		DA43FD6120EB08ED00E09BBE /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorneredButton.swift; sourceTree = "<group>"; };
 		DA59A249209E4845008018D1 /* NewUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserList.swift; sourceTree = "<group>"; };
 		DA5AED9E207683120094AA57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 		DAC8DFF7206EFB13005D627B /* NowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowData.swift; sourceTree = "<group>"; };
 		DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundButton.swift; sourceTree = "<group>"; };
 		DAC8DFFB206F5A67005D627B /* UserInforViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInforViewController.swift; sourceTree = "<group>"; };
+		DADE4C7920E9A5D300E19393 /* AdviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceData.swift; sourceTree = "<group>"; };
 		DAE1EC6520AA801E00EA9B3E /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		DAE2977920BB76EC00868BF2 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +225,7 @@
 				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
 				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
 				DA272D0C20BCE72B00137039 /* CounterAdvice.swift */,
+				DADE4C7920E9A5D300E19393 /* AdviceData.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -298,6 +305,7 @@
 				DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */,
 				DA78986D204F5F69005046D8 /* ViewModelItemType.swift */,
 				DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */,
+				DA43FD6120EB08ED00E09BBE /* TriangleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,6 +416,7 @@
 			children = (
 				DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */,
 				DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */,
+				DA2223A120E8672800103829 /* ResponseTableViewCell.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -636,6 +645,8 @@
 				DA2B860120B9EB52005B7DD6 /* ProfileItem.swift in Sources */,
 				DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */,
 				DA272D0D20BCE72B00137039 /* CounterAdvice.swift in Sources */,
+				DADE4C7A20E9A5D300E19393 /* AdviceData.swift in Sources */,
+				DA43FD6220EB08ED00E09BBE /* TriangleView.swift in Sources */,
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,
@@ -649,6 +660,7 @@
 				DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */,
 				DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */,
 				DA361D2F2084273E007ACE59 /* User.swift in Sources */,
+				DA2223A220E8672800103829 /* ResponseTableViewCell.swift in Sources */,
 				DA361D2320818BDF007ACE59 /* Constants.swift in Sources */,
 				DA2B85FD20B9CC27005B7DD6 /* MessageItemService.swift in Sources */,
 				DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */,
