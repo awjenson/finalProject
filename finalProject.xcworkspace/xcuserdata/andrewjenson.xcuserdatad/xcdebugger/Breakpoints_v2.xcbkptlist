@@ -10,45 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "finalProject/Model/Now/TopicData.swift"
-            timestampString = "552432166.258464"
+            timestampString = "552448416.8842551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "439"
             endingLineNumber = "439"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "globalinit_33_BCCB55619BE3EF63150DD3276E803EEC_func204"
-                  moduleName = "finalProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrewjenson/Desktop/iOS%20Developer%20Nanodegree/Udacity-FINAL-Project/finalProject/finalProject/Model/Now/TopicData.swift"
-                  timestampString = "552432166.504801"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "442"
-                  endingLineNumber = "442"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "finalProject.goingOutTitle.unsafeMutableAddressor : Swift.String"
-                  moduleName = "finalProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrewjenson/Desktop/iOS%20Developer%20Nanodegree/Udacity-FINAL-Project/finalProject/finalProject/Model/Now/TopicData.swift"
-                  timestampString = "552432166.508325"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "442"
-                  endingLineNumber = "442"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

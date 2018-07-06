@@ -629,9 +629,9 @@ let bathroomPMTip1 = Tip(header: fresherBreath, title: "Cleaning your tongue is 
 
 let bathroomPMTip2 = Tip(header: reduceGerms, title: "Scientist recommend changing your bathroom towels every other day.", body: "Bath towels become loaded with bacteria (including staph and fecal) and if your towel doesn’t fully dry, that bacteria can grow. Plus, dandruff-causing fungi can also grow in them." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bathroomPMTip3 = Tip(header: sleepBetter, title: "Trade your shower for a bath to reduce stress, sleep better, and lose weight.", body: "When you take a hot bath your body temperature rises, and then quickly cools down, which relaxes your body and primes it for sleep. A pre-snooze bath also helps induce higher quality sleep (which can be hard to come by when you’re stressed). Making baths a habit can also lower blood pressure (which tends to spike when we’re chronically stressed). Plus, you can burn some calories while you’re soaking: Researchers at Loughborough University found that relaxing in a hot bath and doing absolutely nothing burned 130 calories, the same amount you’ll burn on a half-hour walk." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/5-science-backed-ways-have-healthier-weekend-ncna782761", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomPMTip3 = Tip(header: sleepBetter, title: "Trade your shower for a bath to reduce stress, sleep better, and lose weight", body: "When you take a hot bath your body temperature rises, and then quickly cools down, which relaxes your body, burns calories, and primes it for sleep." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/5-science-backed-ways-have-healthier-weekend-ncna782761", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bathroomPMTip4 = Tip(header: reduceGerms, title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within six feet of the toilet and in the sink. To keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every two weeks — more if you shower often. Your shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomPMTip4 = Tip(header: reduceGerms, title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within six feet of the toilet and in the sink. To keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every two weeks." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var bathroomPMTipArray0 = [bathroomPMTip1, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
 
@@ -646,11 +646,11 @@ let bedtimeTip1 = Tip(header: reduceCavities, title: "Brush your teeth before be
 
 let bedtimeTip2 = Tip(header: navySealAdvice, title: "Wake up early tomorrow and exercise. Don't think. Just execute the plan.", body: "One of the most common ways to sabotage your morning is to get a slow start by gradually waking up and doing tasks that require thinking. Instead, wake up early, jump out of bed, and puts on the workout clothes you prepared the night before. By the time you've finished your workout, most people are just waking up." , sourceName: "Jocko Willink, retired Navy SEAL commander", sourceURL: "https://www.businessinsider.com/jocko-willink-how-to-wake-up-earlier-2017-11", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bedtimeTip3 = Tip(header: sleepBetter, title: "A nighttime ritual will help to reduce stress and fall asleep faster.", body: "Taking a hot bath, reading a book, journaling, going for an evening stroll or listening to calming music, is critical to priming the brain to sleep well." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/how-effectively-manage-stress-so-it-doesn-t-hurt-your-ncna815626", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bedtimeTip3 = Tip(header: sleepBetter, title: "A nighttime ritual will help to reduce stress and fall asleep faster", body: "Taking a hot bath, reading a book, journaling, going for an evening stroll or listening to calming music, is critical to priming the brain to sleep well." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/how-effectively-manage-stress-so-it-doesn-t-hurt-your-ncna815626", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bedtimeTip4 = Tip(header: planAhead, title: "Reduce decision fatigure tomorrow by making a plan tonight.", body: "It doesn’t need to be a minute-by-minute itinerary, but it should map out the major tasks or things you want to accomplish the next day — and how you want to spend the first few hours of the day. Lay out the clothes you’ll wear and make sure you have ingredients ready to make a healthy breakfast. It helps to plan the small things that might slow you down. The idea is to avoid \"decision fatigue\". Habits that get you out the door in the morning without having to stress over decisions enables you to have more willpower to make [other] decisions during the day about important things." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bedtimeTip4 = Tip(header: planAhead, title: "Reduce decision fatigure tomorrow by making a plan tonight", body: "List the major tasks you want to accomplish the next day — and how you want to spend the first few hours of the day. Lay out the clothes you’ll wear and have ingredients ready to make a healthy breakfast. Making less decisions in the morning helps you have more willpower later in the day." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bedtimeTip5 = Tip(header: increaseConfidence, title: "Increase your confidence. Before you even get out of bed tomorrow, stretch your body as wide as possible in an 'X' or 'Y' position.", body: "We can become more confident simply by striking a power pose — or stretching out in the morning. There is some preliminary evidence that people who wake up in a fetal position are much more stressed out. Sleeping in a low power position may explain why you feel angsty or vulnerable in the mornings.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
+let bedtimeTip5 = Tip(header: increaseConfidence, title: "Increase your confidence. Before you even get out of bed tomorrow, stretch your body as wide as possible in an 'X' or 'Y' position.", body: "We can become more confident simply by striking a power pose or stretching out in the morning. Sleeping in the fetal position sends a subtle signal to your brain that your body is under attack. But if you open up your posture in bed, you’ll see an improvement in your daily confidence levels and happiness.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 
 var bedtimeTipArray0 = [ bedtimeTip1,  bedtimeTip2,  bedtimeTip3,  bedtimeTip4]
 
@@ -687,21 +687,25 @@ var leadershipPMTipArray0 = [leadershipPMTip1, leadershipPMTip2, leadershipPMTip
 
 let leadershipPMTopic0 = Topic(title: leadershipPMTitle, icon: leadershipPMIcon, tip: leadershipPMTipArray0)
 
-// MARK: - Leadership, PM
 
-let courageTitle = "Courage"
-let courageIcon = "Cou"
+// MARK: - Restaurant (Friends or Family)
 
-let courageTip1 = Tip(header: courageTitle, title: "Never give up. Sam Walton's first store went out of business. Walton learned from his first missteps and started a new business. Today Wal-Mart is the world's largest retailer. ", body: "Successful people agree with Anne Frank: \"No one has ever become poor from giving.\" Author Tom Corley studied the rich for five years and found that 73% of wealthy people volunteer for five or more hours per month. Nothing helps put things in perspective and reduce stress more than helping those less fortunate. Weekends are a great time to get involved in local and community volunteer events." , sourceName: "LifeHack.org", sourceURL: "https://www.lifehack.org/articles/productivity/12-weekend-habits-highly-successful-people.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let restaurantTitle = "Restaurant"
+let restaurantIcon = "Res"
 
-let courageTip2 = Tip(header: courageTitle, title: "Leadership, PM 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let restaurantTip1 = Tip(header: success, title: "Volunteer to help others", body: "Successful people agree with Anne Frank: \"No one has ever become poor from giving.\" Author Tom Corley studied the rich for five years and found that 73% of wealthy people volunteer for five or more hours per month. Nothing helps put things in perspective and reduce stress more than helping those less fortunate. Weekends are a great time to get involved in local and community volunteer events." , sourceName: "LifeHack.org", sourceURL: "https://www.lifehack.org/articles/productivity/12-weekend-habits-highly-successful-people.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let courageTip3 = Tip(header: courageTitle, title: "Leadership, PM 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let restaurantTip2 = Tip(header: leadershipPMTitle, title: "Leadership, PM 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let courageTip4 = Tip(header: courageTitle, title: "Leadership, PM 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let restaurantTip3 = Tip(header: leadershipPMTitle, title: "Leadership, PM 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-var courageTipArray0 = [courageTip1, courageTip2, courageTip3, courageTip4]
-let courageTopic0 = Topic(title: courageTitle, icon: courageIcon, tip: courageTipArray0)
+let restaurantTip4 = Tip(header: leadershipPMTitle, title: "Leadership, PM 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+var restaurantTipArray0 = [leadershipPMTip1, leadershipPMTip2, leadershipPMTip3, leadershipPMTip4]
+
+let restaurantTopic0 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray0)
+
+
 
 
 

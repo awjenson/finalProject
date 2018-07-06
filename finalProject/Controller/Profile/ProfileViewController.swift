@@ -21,10 +21,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var mediaTitleLabel: UILabel!
 
     @IBOutlet weak var profile3TableView: UITableView!
+    @IBOutlet weak var profileTableViewFooter: UIView!
 
     @IBOutlet weak var profileHeaderView: UIView!
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var saveButton: EditButton!
+
+
 
     // MARK: - Properites
     var userProfileItem = ProfileItem(timestamp: "", passion: "", purpose: "", goals: "", fears: "")
@@ -48,7 +51,26 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     let refreshControl = UIRefreshControl()
 
+    var currentKeyboardHeight:CGFloat = 10
+
     // MARK: - Lifecycle Methods
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+        let keyboardHeight = KeyboardService.keyboardHeight()
+        let keyboardSize = KeyboardService.keyboardSize()
+        currentKeyboardHeight = keyboardHeight
+
+        print("keyboardHeight \(keyboardHeight)")
+        profileTableViewFooter.frame.size.height = keyboardHeight
+
+        // Add notification observers
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +84,11 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
         setupUI()
+    }
+
+    override open func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        NotificationCenter.default.removeObserver(self)
     }
 
     // MARK: - Methods
@@ -105,8 +132,6 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     func dayOfWeekAndHour() {
         let dayOfWeek = calendar.component(.weekday, from: date)
 
-
-        
         switch dayOfWeek {
         case 1: // Sun
             print("today is Sunday")
@@ -208,6 +233,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     func configureTableView() {
         profile3TableView.estimatedRowHeight = 50
         profile3TableView.rowHeight = UITableViewAutomaticDimension
+        profile3TableView.allowsSelection = false
+
     }
 
     // viewDidLayoutSubviews()
@@ -257,6 +284,8 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             // This only seems to be necessary on iOS 9.
             profile3TableView.layoutIfNeeded()
         }
+
+
     }
 
     func changeTextViewBoarderColor(_ cell: ProfileTableViewCell) {
@@ -271,6 +300,24 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         canEditText = bool
         print("canEditText \(canEditText)")
     }
+
+    //MARK: - getKayboardHeight
+    // Source: http://www.iostutorialjunction.com/2017/07/Programmatically-get-height-of-keyboard-in-swift-3-language-in-iOS-app-Tutorial.html
+    @objc func keyboardWillShow(notification: Notification) {
+        let userInfo:NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let keyboardRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keyboardRectangle.height
+        // do whatever you want with this keyboard height
+        print("currentKeyboardHeight: \(keyboardHeight)")
+        profileTableViewFooter.frame.size.height = keyboardHeight
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        // keyboard is dismissed/hidden from the screen
+        profileTableViewFooter.frame.size.height = 10
+    }
+
 
     // MARK: - IBActions
 
@@ -301,11 +348,15 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
         activateEditButton(bool: !canEditText)
 
+
+
         if canEditText {
+            profileTableViewFooter.frame.size.height = currentKeyboardHeight
             profile3TableView.reloadData()
             saveButton.setTitleColor(UIColor.red, for: .normal)
             saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         } else {
+            profileTableViewFooter.frame.size.height = 10
             view.endEditing(true)
             saveButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
             saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
@@ -380,6 +431,9 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
+    
+
 }
 
 
@@ -426,11 +480,15 @@ extension Profile3ViewController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
 
+        print("$$$")
         print("textViewDidEndEditing (Exited IndexPath)")
         var v : UIView = textView
         repeat { v = v.superview! } while !(v is ProfileTableViewCell)
         let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
 
+        print("%%%")
+        print(selectedCell)
+        print("&&&")
         guard let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell) else {
             return
         }
