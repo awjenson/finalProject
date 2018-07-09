@@ -52,5 +52,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Font.dmg</string>
+	</array>
 </dict>
 </plist>

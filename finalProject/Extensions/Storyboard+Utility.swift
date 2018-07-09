@@ -32,7 +32,6 @@ extension UIStoryboard {
     }
 
 
-
     // We no longer have to optionally unwrap the initial view controller and instead can use our convenience class method for getting a reference to the initial view controller of a storyboard. And its type safe. 
     static func initialViewController(for type: StoryType) -> UIViewController {
         let storyboard = UIStoryboard(type: type)

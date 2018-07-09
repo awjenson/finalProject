@@ -16,6 +16,8 @@ import WebKit
 
 class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
 
+    
+    @IBOutlet weak var categoryCardView: CardView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var headerUserTextViewLabel: UILabel!
     @IBOutlet weak var userTextView: UITextView! // TEXTVIEW
@@ -26,8 +28,8 @@ class ProfileTableViewCell: UITableViewCell, UITextViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        userTextView.delegate = self
-        userTextView.layer.cornerRadius = 5
+//        userTextView.delegate = self
+//        userTextView.layer.cornerRadius = 5
 
 
     }

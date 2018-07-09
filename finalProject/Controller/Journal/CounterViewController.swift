@@ -17,9 +17,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: - Outlets
 
     @IBOutlet weak var counterTableView: UITableView!
+
+    @IBOutlet weak var habitCardView: CardView!
+
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
 
+    @IBOutlet weak var rewardCardView: CardView!
     @IBOutlet weak var rewardLabel: UILabel!
 
     // MARK: - Properties
@@ -39,6 +43,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     // pull to refresh tableView
     let refreshControl = UIRefreshControl()
+
+
+    // Card Color UI
+    var topicColor: UIColor?
+    var cellHeaderColor: [UIColor] = []
+
+
+    // MARK: - Lifecycle Methods
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -72,6 +84,9 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         counterTableView.allowsMultipleSelectionDuringEditing = false
 
         dayOfWeekAndHour()
+
+        configureCards()
+        
         setupQuote()
 
         setupRefreshControl()
@@ -120,6 +135,86 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
             print("ERROR: error with increaseEmoji")
 
         }
+    }
+
+    func colorOfUI(_ hour: Int) {
+
+        switch hour {
+        case 0...4:
+            topicColor = NowConstants.HeaderIndigo.color900
+            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
+                               NowConstants.HeaderIndigo.color700,
+                               NowConstants.HeaderIndigo.color600,
+                               NowConstants.HeaderIndigo.color500,
+                               NowConstants.HeaderIndigo.color400,
+                               NowConstants.HeaderIndigo.color300,
+                               NowConstants.HeaderIndigo.color200,]
+        case 5...8:
+            topicColor = NowConstants.HeaderAmber.color900
+            cellHeaderColor = [NowConstants.HeaderAmber.color800,
+                               NowConstants.HeaderAmber.color700,
+                               NowConstants.HeaderAmber.color600,
+                               NowConstants.HeaderAmber.color500,
+                               NowConstants.HeaderAmber.color400,
+                               NowConstants.HeaderAmber.color300,
+                               NowConstants.HeaderAmber.color200,]
+        case 9..<11:
+            topicColor = NowConstants.HeaderGreen.color900
+            cellHeaderColor = [NowConstants.HeaderGreen.color800,
+                               NowConstants.HeaderGreen.color700,
+                               NowConstants.HeaderGreen.color600,
+                               NowConstants.HeaderGreen.color500,
+                               NowConstants.HeaderGreen.color400,
+                               NowConstants.HeaderGreen.color300,
+                               NowConstants.HeaderGreen.color200,]
+        case 11..<14:
+            topicColor = NowConstants.HeaderCyan.color900
+            cellHeaderColor = [NowConstants.HeaderCyan.color800,
+                               NowConstants.HeaderCyan.color700,
+                               NowConstants.HeaderCyan.color600,
+                               NowConstants.HeaderCyan.color500,
+                               NowConstants.HeaderCyan.color400,
+                               NowConstants.HeaderCyan.color300,
+                               NowConstants.HeaderCyan.color200,]
+        case 14...16:
+            topicColor = NowConstants.HeaderTeal.color900
+            cellHeaderColor = [NowConstants.HeaderTeal.color800,
+                               NowConstants.HeaderTeal.color700,
+                               NowConstants.HeaderTeal.color600,
+                               NowConstants.HeaderTeal.color500,
+                               NowConstants.HeaderTeal.color400,
+                               NowConstants.HeaderTeal.color300,
+                               NowConstants.HeaderTeal.color200,]
+        case 17...20:
+            topicColor = NowConstants.HeaderOrange.color900
+            cellHeaderColor = [NowConstants.HeaderOrange.color800,
+                               NowConstants.HeaderOrange.color700,
+                               NowConstants.HeaderOrange.color600,
+                               NowConstants.HeaderOrange.color500,
+                               NowConstants.HeaderOrange.color400,
+                               NowConstants.HeaderOrange.color300,
+                               NowConstants.HeaderOrange.color200,]
+        case 21..<24:
+            topicColor = NowConstants.HeaderBlue.color900
+            cellHeaderColor = [NowConstants.HeaderBlue.color800,
+                               NowConstants.HeaderBlue.color700,
+                               NowConstants.HeaderBlue.color600,
+                               NowConstants.HeaderBlue.color500,
+                               NowConstants.HeaderBlue.color400,
+                               NowConstants.HeaderBlue.color300,
+                               NowConstants.HeaderBlue.color200,]
+        default:
+            print("ERROR with TopicColor and cellHeaderColor")
+        }
+    }
+
+    func configureCards() {
+        habitCardView.layer.borderColor = topicColor?.cgColor
+        habitCardView.layer.shadowColor = topicColor?.cgColor
+
+        rewardCardView.layer.borderColor = topicColor?.cgColor
+        rewardCardView.layer.shadowColor = topicColor?.cgColor
+
     }
 
     func setupQuote() {
@@ -190,6 +285,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         print("Refresh COUNTER table view")
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
+
+        colorOfUI(hour)
 
         switch dayOfWeek {
         case 1: // Sun
@@ -365,8 +462,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
 
-
-
         return cell
     }
 
@@ -412,7 +507,10 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         counter += 1
         increaseEmoji(count: counter)
+
     }
+
+
 
     func increaseCellCount(_ cell: CounterTableViewCell, newNumber: Int) {
         cell.countLabel.text = " \(newNumber)"
@@ -439,17 +537,17 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         // 1. Create the alert controller
         alert = UIAlertController(title: "Add New Habit",
-                                      message: "Include a strong reason WHY to keep yourself motivated",
-                                      preferredStyle: .alert)
+                                  message: "Include a strong reason WHY to keep yourself motivated",
+                                  preferredStyle: .alert)
 
         // guard to make sure text is not nil ("")
-        let doAction = UIAlertAction(title: "Save as a DO", style: .default) { _ in
+        let doAction = UIAlertAction(title: "SAVE", style: .default) { _ in
 
             guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
                 print("$$$")
                 return }
 
-            let goalItem = GoalItem(name: "DO: \(text1)", why: text2, timestamp: currentDate, count: 0)
+            let goalItem = GoalItem(name: text1, why: text2, timestamp: currentDate, count: 0)
 
             // Firebase
             GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
@@ -506,9 +604,10 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         dontAction.isEnabled = false
 
         alert?.addAction(doAction)
-        alert?.addAction(dontAction)
+        //        alert?.addAction(dontAction)
         alert?.addAction(cancelAction)
 
         present(alert!, animated: true, completion: nil)
     }
+
 }

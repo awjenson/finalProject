@@ -36,6 +36,7 @@
 		DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3420858297007ACE59 /* Storyboard+Utility.swift */; };
 		DA361D3720882A7A007ACE59 /* HomeFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3620882A7A007ACE59 /* HomeFooterCell.swift */; };
 		DA361D3920896E5D007ACE59 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3820896E5D007ACE59 /* Date+convertToString.swift */; };
+		DA388FA620F2957000AC5EDC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA388FA520F2957000AC5EDC /* CardView.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD420B103DC007220F4 /* CounterViewController.swift */; };
 		DA43FD6220EB08ED00E09BBE /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA43FD6120EB08ED00E09BBE /* TriangleView.swift */; };
@@ -114,6 +115,7 @@
 		DA361D3420858297007ACE59 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		DA361D3620882A7A007ACE59 /* HomeFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterCell.swift; sourceTree = "<group>"; };
 		DA361D3820896E5D007ACE59 /* Date+convertToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
+		DA388FA520F2957000AC5EDC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA404BD420B103DC007220F4 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		DA43FD6120EB08ED00E09BBE /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				DA359C772043721F000190AD /* Model */,
 				DA359C7820437225000190AD /* View */,
 				DA5EE4B22090ECD500B54438 /* MayUseLater */,
+				DA388FA720F2E1C200AC5EDC /* Fonts */,
 				DA015BF52073E3D500A0342F /* Helpers */,
 				DAA102292053801D00A25EFC /* Extensions */,
 				DA5AEDA02076831D0094AA57 /* Supporting Files */,
@@ -311,6 +314,7 @@
 				DA78986D204F5F69005046D8 /* ViewModelItemType.swift */,
 				DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */,
 				DA43FD6120EB08ED00E09BBE /* TriangleView.swift */,
+				DA388FA520F2957000AC5EDC /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +354,14 @@
 				DA359C672043324F000190AD /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DA388FA720F2E1C200AC5EDC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		DA5AEDA02076831D0094AA57 /* Supporting Files */ = {
@@ -658,6 +670,7 @@
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,
+				DA388FA620F2957000AC5EDC /* CardView.swift in Sources */,
 				DABCD8F820CC49210091AD0B /* NowConstants.swift in Sources */,
 				DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */,
 				DA361D3720882A7A007ACE59 /* HomeFooterCell.swift in Sources */,

@@ -40,11 +40,18 @@ struct Constants {
         static let Button2 = "Bored"
         static let Button3 = "Good"
         static let Button4 = "Grateful"
+
         static let Button5 = "Mad!"
         static let Button6 = "Stressed"
         static let Button7 = "Anxious"
         static let Button8 = "Motivated"
         static let Button9 = "Happy!"
+
+        static let Button10 = "Lonely"
+        static let Button11 = "Jealous"
+        static let Button12 = "Tired"
+        static let Button13 = "Proud"
+        static let Button14 = "Love"
     }
 
 }

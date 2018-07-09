@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SVProgressHUD
 
-class Profile3ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - IBOutlets
 
@@ -20,12 +20,16 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet weak var mediaTitleLabel: UILabel!
 
-    @IBOutlet weak var profile3TableView: UITableView!
+    @IBOutlet weak var profileTableView: UITableView!
     @IBOutlet weak var profileTableViewFooter: UIView!
 
     @IBOutlet weak var profileHeaderView: UIView!
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var saveButton: EditButton!
+
+    @IBOutlet weak var quoteCardView: CardView!
+    @IBOutlet weak var mediaCardView: CardView!
+
 
 
 
@@ -46,6 +50,11 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     let date = Date()
     let calendar = Calendar.current
 
+    // Card Color UI
+    var topicColor: UIColor?
+    var cellHeaderColor: [UIColor] = []
+
+
     // initial setup
     var selectedPersonProfile = ProfileSelectedPerson(name: "", bio: "", advice: "", description: "", time: "", url: "")
 
@@ -61,15 +70,15 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         let keyboardHeight = KeyboardService.keyboardHeight()
         let keyboardSize = KeyboardService.keyboardSize()
         currentKeyboardHeight = keyboardHeight
-
-        print("keyboardHeight \(keyboardHeight)")
-        profileTableViewFooter.frame.size.height = keyboardHeight
+//
+//        print("keyboardHeight \(keyboardHeight)")
+//        profileTableViewFooter.frame.size.height = keyboardHeight
 
         // Add notification observers
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
+//                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
+//                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func viewDidLoad() {
@@ -86,36 +95,118 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         setupUI()
     }
 
-    override open func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        NotificationCenter.default.removeObserver(self)
-    }
+//    override open func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(true)
+////        NotificationCenter.default.removeObserver(self)
+//    }
 
     // MARK: - Methods
 
     func setupUI() {
 
-        userProfileArray = [userProfileItem.passion,
-                            userProfileItem.purpose,
-                            userProfileItem.goals,
-                            userProfileItem.fears]
+//        userProfileArray = [userProfileItem.passion,
+//                            userProfileItem.purpose,
+//                            userProfileItem.goals,
+//                            userProfileItem.fears]
 
         dayOfWeekAndHour()
+        
+        configureCards()
 
-        profile3TableView.dataSource = self
-        profile3TableView.delegate = self
+        profileTableView.dataSource = self
+        profileTableView.delegate = self
 
         configureTableView()
 
         setupRefreshControl()
     }
 
+    func colorOfUI(_ hour: Int) {
+
+        switch hour {
+        case 0...4:
+            topicColor = NowConstants.HeaderIndigo.color900
+            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
+                               NowConstants.HeaderIndigo.color700,
+                               NowConstants.HeaderIndigo.color600,
+                               NowConstants.HeaderIndigo.color500,
+                               NowConstants.HeaderIndigo.color400,
+                               NowConstants.HeaderIndigo.color300,
+                               NowConstants.HeaderIndigo.color200,]
+        case 5...8:
+            topicColor = NowConstants.HeaderAmber.color900
+            cellHeaderColor = [NowConstants.HeaderAmber.color800,
+                               NowConstants.HeaderAmber.color700,
+                               NowConstants.HeaderAmber.color600,
+                               NowConstants.HeaderAmber.color500,
+                               NowConstants.HeaderAmber.color400,
+                               NowConstants.HeaderAmber.color300,
+                               NowConstants.HeaderAmber.color200,]
+        case 9..<11:
+            topicColor = NowConstants.HeaderGreen.color900
+            cellHeaderColor = [NowConstants.HeaderGreen.color800,
+                               NowConstants.HeaderGreen.color700,
+                               NowConstants.HeaderGreen.color600,
+                               NowConstants.HeaderGreen.color500,
+                               NowConstants.HeaderGreen.color400,
+                               NowConstants.HeaderGreen.color300,
+                               NowConstants.HeaderGreen.color200,]
+        case 11..<14:
+            topicColor = NowConstants.HeaderCyan.color900
+            cellHeaderColor = [NowConstants.HeaderCyan.color800,
+                               NowConstants.HeaderCyan.color700,
+                               NowConstants.HeaderCyan.color600,
+                               NowConstants.HeaderCyan.color500,
+                               NowConstants.HeaderCyan.color400,
+                               NowConstants.HeaderCyan.color300,
+                               NowConstants.HeaderCyan.color200,]
+        case 14...16:
+            topicColor = NowConstants.HeaderTeal.color900
+            cellHeaderColor = [NowConstants.HeaderTeal.color800,
+                               NowConstants.HeaderTeal.color700,
+                               NowConstants.HeaderTeal.color600,
+                               NowConstants.HeaderTeal.color500,
+                               NowConstants.HeaderTeal.color400,
+                               NowConstants.HeaderTeal.color300,
+                               NowConstants.HeaderTeal.color200,]
+        case 17...20:
+            topicColor = NowConstants.HeaderOrange.color900
+            cellHeaderColor = [NowConstants.HeaderOrange.color800,
+                               NowConstants.HeaderOrange.color700,
+                               NowConstants.HeaderOrange.color600,
+                               NowConstants.HeaderOrange.color500,
+                               NowConstants.HeaderOrange.color400,
+                               NowConstants.HeaderOrange.color300,
+                               NowConstants.HeaderOrange.color200,]
+        case 21..<24:
+            topicColor = NowConstants.HeaderBlue.color900
+            cellHeaderColor = [NowConstants.HeaderBlue.color800,
+                               NowConstants.HeaderBlue.color700,
+                               NowConstants.HeaderBlue.color600,
+                               NowConstants.HeaderBlue.color500,
+                               NowConstants.HeaderBlue.color400,
+                               NowConstants.HeaderBlue.color300,
+                               NowConstants.HeaderBlue.color200,]
+        default:
+            print("ERROR with TopicColor and cellHeaderColor")
+        }
+    }
+
+    func configureCards() {
+        quoteCardView.layer.borderColor = topicColor?.cgColor
+        quoteCardView.layer.shadowColor = topicColor?.cgColor
+
+        mediaCardView.layer.borderColor = topicColor?.cgColor
+        mediaCardView.layer.shadowColor = topicColor?.cgColor
+    }
+
+
     func setupRefreshControl() {
 
         // add pull to refresh
         refreshControl.addTarget(self, action: #selector(reloadProfile), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        profile3TableView.addSubview(refreshControl)
+        profileTableView.addSubview(refreshControl)
     }
 
     @objc func reloadProfile() {
@@ -126,11 +217,14 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             retrieveProfileUserData()
             self.refreshControl.endRefreshing()
         }
-        self.profile3TableView.reloadData()
+        self.profileTableView.reloadData()
     }
 
     func dayOfWeekAndHour() {
         let dayOfWeek = calendar.component(.weekday, from: date)
+        let hour = calendar.component(.hour, from: date)
+
+        colorOfUI(hour)
 
         switch dayOfWeek {
         case 1: // Sun
@@ -222,7 +316,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
                                      self.userProfileItem.fears]
 
             self.configureTableView()
-            self.profile3TableView.reloadData()
+            self.profileTableView.reloadData()
             SVProgressHUD.dismiss()
         }
     }
@@ -231,9 +325,10 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
 
 
     func configureTableView() {
-        profile3TableView.estimatedRowHeight = 50
-        profile3TableView.rowHeight = UITableViewAutomaticDimension
-        profile3TableView.allowsSelection = false
+        profileTableView.estimatedRowHeight = 50
+        profileTableView.rowHeight = UITableViewAutomaticDimension
+        profileTableView.allowsSelection = false
+        profileTableView.separatorStyle = .none
 
     }
 
@@ -259,7 +354,7 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func setupHeightOfTableHeaderView() {
-        guard let headerView = profile3TableView.tableHeaderView else {
+        guard let headerView = profileTableView.tableHeaderView else {
             return
         }
 
@@ -276,13 +371,13 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
             // Need to set the header view property of the table view
             // to trigger the new layout. Be careful to only do this
             // once when the height changes or we get stuck in a layout loop.
-            profile3TableView.tableHeaderView = headerView
+            profileTableView.tableHeaderView = headerView
 
             // Now that the table view header is sized correctly have
             // the table view redo its layout so that the cells are
             // correcly positioned for the new header size.
             // This only seems to be necessary on iOS 9.
-            profile3TableView.layoutIfNeeded()
+            profileTableView.layoutIfNeeded()
         }
 
 
@@ -302,21 +397,21 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     //MARK: - getKayboardHeight
-    // Source: http://www.iostutorialjunction.com/2017/07/Programmatically-get-height-of-keyboard-in-swift-3-language-in-iOS-app-Tutorial.html
-    @objc func keyboardWillShow(notification: Notification) {
-        let userInfo:NSDictionary = notification.userInfo! as NSDictionary
-        let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
-        let keyboardRectangle = keyboardFrame.cgRectValue
-        let keyboardHeight = keyboardRectangle.height
-        // do whatever you want with this keyboard height
-        print("currentKeyboardHeight: \(keyboardHeight)")
-        profileTableViewFooter.frame.size.height = keyboardHeight
-    }
-
-    @objc func keyboardWillHide(notification: Notification) {
-        // keyboard is dismissed/hidden from the screen
-        profileTableViewFooter.frame.size.height = 10
-    }
+//    // Source: http://www.iostutorialjunction.com/2017/07/Programmatically-get-height-of-keyboard-in-swift-3-language-in-iOS-app-Tutorial.html
+//    @objc func keyboardWillShow(notification: Notification) {
+//        let userInfo:NSDictionary = notification.userInfo! as NSDictionary
+//        let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
+//        let keyboardRectangle = keyboardFrame.cgRectValue
+//        let keyboardHeight = keyboardRectangle.height
+//        // do whatever you want with this keyboard height
+//        print("currentKeyboardHeight: \(keyboardHeight)")
+//        profileTableViewFooter.frame.size.height = keyboardHeight
+//    }
+//
+//    @objc func keyboardWillHide(notification: Notification) {
+//        // keyboard is dismissed/hidden from the screen
+//        profileTableViewFooter.frame.size.height = 10
+//    }
 
 
     // MARK: - IBActions
@@ -344,45 +439,45 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
 
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
-
-        activateEditButton(bool: !canEditText)
-
-
-
-        if canEditText {
-            profileTableViewFooter.frame.size.height = currentKeyboardHeight
-            profile3TableView.reloadData()
-            saveButton.setTitleColor(UIColor.red, for: .normal)
-            saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        } else {
-            profileTableViewFooter.frame.size.height = 10
-            view.endEditing(true)
-            saveButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
-            saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-
-            let now = Date()
-            let formatter = DateFormatter()
-            // initially set the format based on your datepicker date
-            formatter.dateFormat = "MMMM d, yyyy h:mm a"
-            let currentDate = formatter.string(from: now)
-
-            // Input array of user data into property, write to Firebase
-            let newProfileItem = ProfileItem(timestamp: currentDate,
-                                             passion: userProfileArray[0],
-                                             purpose: userProfileArray[1],
-                                             goals: userProfileArray[2],
-                                             fears: userProfileArray[3])
-
-            ProfileService.writeProfileItem(for: User.current, profileItem: newProfileItem, success: { (success) in
-                if success == true {
-                    return
-                } else if success == false {
-                    self.createAlert(title: "Error", message: "Unable to write to database. Check your Internet connection and try again.")
-                }
-            })
-        }
-    }
+//    @IBAction func saveButtonTapped(_ sender: UIButton) {
+//
+//        activateEditButton(bool: !canEditText)
+//
+//
+//
+//        if canEditText {
+//            profileTableViewFooter.frame.size.height = currentKeyboardHeight
+//            profile3TableView.reloadData()
+//            saveButton.setTitleColor(UIColor.red, for: .normal)
+//            saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+//        } else {
+//            profileTableViewFooter.frame.size.height = 10
+//            view.endEditing(true)
+//            saveButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
+//            saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+//
+//            let now = Date()
+//            let formatter = DateFormatter()
+//            // initially set the format based on your datepicker date
+//            formatter.dateFormat = "MMMM d, yyyy h:mm a"
+//            let currentDate = formatter.string(from: now)
+//
+//            // Input array of user data into property, write to Firebase
+//            let newProfileItem = ProfileItem(timestamp: currentDate,
+//                                             passion: userProfileArray[0],
+//                                             purpose: userProfileArray[1],
+//                                             goals: userProfileArray[2],
+//                                             fears: userProfileArray[3])
+//
+//            ProfileService.writeProfileItem(for: User.current, profileItem: newProfileItem, success: { (success) in
+//                if success == true {
+//                    return
+//                } else if success == false {
+//                    self.createAlert(title: "Error", message: "Unable to write to database. Check your Internet connection and try again.")
+//                }
+//            })
+//        }
+//    }
 
 
     // MARK: - Table View Methods
@@ -403,27 +498,32 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
 
         // Line separator (extend to left)
-        cell.preservesSuperviewLayoutMargins = false
-        cell.separatorInset = UIEdgeInsets.zero
-        cell.layoutMargins = UIEdgeInsets.zero
+//        cell.preservesSuperviewLayoutMargins = false
+//        cell.separatorInset = UIEdgeInsets.zero
+//        cell.layoutMargins = UIEdgeInsets.zero
 
         // FAMOUS PERSON DATA
-        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
-        cell.userTextView.layer.borderWidth = 2
-        cell.userTextView.delegate = self
+//        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
+//        cell.userTextView.layer.borderWidth = 2
+//        cell.userTextView.delegate = self
 
         cell.categoryLabel.text = selectedResults[indexPath.row].category
         cell.titleLabel.text = selectedResults[indexPath.row].title
         cell.bodyLabel.text = selectedResults[indexPath.row].body
-        cell.headerUserTextViewLabel.text = selectedResults[indexPath.row].headerUserTextLabel
 
-        // USER DATA - array
-        cell.userTextView.text = userProfileArray[indexPath.row]
+        cell.categoryCardView.layer.borderColor = topicColor?.cgColor
 
-        // Set the delegate to be the VC when you create the cell
-        cell.userTextView.delegate = self
-        cell.userTextView.layer.borderWidth = 0.5
-        changeTextViewBoarderColor(cell)
+        cell.categoryCardView.layer.shadowColor = topicColor?.cgColor
+
+        // MARK: - Removed because I'm no longer including user text
+//        cell.headerUserTextViewLabel.text = selectedResults[indexPath.row].headerUserTextLabel
+
+//        // USER DATA - array
+//        cell.userTextView.text = userProfileArray[indexPath.row]
+//        // Set the delegate to be the VC when you create the cell
+//        cell.userTextView.delegate = self
+//        cell.userTextView.layer.borderWidth = 0.5
+//        changeTextViewBoarderColor(cell)
 
         return cell
     }
@@ -432,12 +532,16 @@ class Profile3ViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    // MARK: - TableViewCellDelegate methods
+
+
+
     
 
 }
 
 
-extension Profile3ViewController: UITextViewDelegate {
+extension ProfileViewController: UITextViewDelegate {
 
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         if canEditText == false {
@@ -456,12 +560,12 @@ extension Profile3ViewController: UITextViewDelegate {
          According to article there is a UI bug, added code to fix it
          http://candycode.io/self-sizing-uitextview-in-a-uitableview-using-auto-layout-like-reminders-app/
          */
-        let currentOffset = profile3TableView.contentOffset
+        let currentOffset = profileTableView.contentOffset
         UIView.setAnimationsEnabled(false)
-        profile3TableView.beginUpdates()
-        profile3TableView.endUpdates()
+        profileTableView.beginUpdates()
+        profileTableView.endUpdates()
         UIView.setAnimationsEnabled(true)
-        profile3TableView.setContentOffset(currentOffset, animated: false)
+        profileTableView.setContentOffset(currentOffset, animated: false)
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -471,7 +575,7 @@ extension Profile3ViewController: UITextViewDelegate {
         repeat { v = v.superview! } while !(v is ProfileTableViewCell)
         let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
 
-        guard let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell) else {
+        guard let selectedIndexPath = self.profileTableView.indexPath(for: selectedCell) else {
             return
         }
 
@@ -489,7 +593,7 @@ extension Profile3ViewController: UITextViewDelegate {
         print("%%%")
         print(selectedCell)
         print("&&&")
-        guard let selectedIndexPath = self.profile3TableView.indexPath(for: selectedCell) else {
+        guard let selectedIndexPath = self.profileTableView.indexPath(for: selectedCell) else {
             return
         }
 

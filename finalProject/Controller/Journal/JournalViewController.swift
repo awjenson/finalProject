@@ -17,14 +17,19 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
 
     // remove quote view when keyboard appears
-    @IBOutlet weak var quoteView: UIView!
+
+  
+    @IBOutlet weak var quoteCardView: CardView!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+
+    // Question
+    @IBOutlet weak var questionCardView: CardView!
     @IBOutlet weak var questionLabel: UILabel!
 
     // Media Link
+    @IBOutlet weak var mediaCardView: CardView!
     @IBOutlet weak var mediaButton: UIButton!
-    @IBOutlet weak var mediaTimeLabel: UILabel!
     @IBOutlet weak var mediaTitleLabel: UILabel!
 
     // Send/Type message bar
@@ -45,6 +50,11 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var mood7Button: UIButton!
     @IBOutlet weak var mood8Button: UIButton!
     @IBOutlet weak var mood9Button: UIButton!
+    @IBOutlet weak var mood10Button: UIButton!
+    @IBOutlet weak var mood11Button: UIButton!
+    @IBOutlet weak var mood12Button: UIButton!
+    @IBOutlet weak var mood13Button: UIButton!
+    @IBOutlet weak var mood14Button: UIButton!
 
 
     // MARK: - Properties
@@ -68,6 +78,10 @@ class JournalViewController: UIViewController {
 
     var expandingCellHeight: CGFloat = 200
     let expandingIndexRow = 0
+
+    // Card Color UI
+    var topicColor: UIColor?
+    var cellHeaderColor: [UIColor] = []
 
     // MARK: - Lifecycle Methods
 
@@ -107,11 +121,14 @@ class JournalViewController: UIViewController {
         journalTableView.separatorStyle = .none
 
         // Additional Setup
+
+        configureCards()
+
         configureTableView()
 
         configureDatabase()
 
-        setupGestureRecognizers()
+//        setupGestureRecognizers()
 
         setupButtonsLabelsTextViews()
 
@@ -120,15 +137,22 @@ class JournalViewController: UIViewController {
         setupKeyboardObservers()
     }
 
-    func setupGestureRecognizers() {
 
-        // Enable Gesture Recognizers
-        let tapGestureTableView = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
 
-        let tapGestureHeaderView = UITapGestureRecognizer(target: self, action: #selector(headerViewTapped))
-        // TODO: could add this for the quote view too
-        journalTableView.addGestureRecognizer(tapGestureTableView)
-        quoteView.addGestureRecognizer(tapGestureHeaderView)
+    // REMVOED because no longer using textView
+//    func setupGestureRecognizers() {
+//
+//        // Enable Gesture Recognizers
+//        let tapGestureTableView = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+//
+//        let tapGestureHeaderView = UITapGestureRecognizer(target: self, action: #selector(headerViewTapped))
+//        // TODO: could add this for the quote view too
+//        journalTableView.addGestureRecognizer(tapGestureTableView)
+//        quoteView.addGestureRecognizer(tapGestureHeaderView)
+//    }
+
+    func configureCardViews() {
+        // TODO: Add boarder colors
     }
 
     func setupButtonsLabelsTextViews() {
@@ -142,16 +166,17 @@ class JournalViewController: UIViewController {
         mediaTitleLabel.text = advice.description
 
         // Text Messages
-        messageTextView.layer.borderColor = UIColor.gray.cgColor
-        messageTextView.layer.borderWidth = 1.0
-        // Set messageTextView delegate for UITextFieldDelegate
-        messageTextView.delegate = self
-        messageTextView.trimWhiteSpaceWhenEndEditing = false
-        messageTextView.placeholder = "Text something..."
-        messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
-        messageTextView.backgroundColor = UIColor.white
-        messageTextView.layer.cornerRadius = 4.0
+//        messageTextView.layer.borderColor = UIColor.gray.cgColor
+//        messageTextView.layer.borderWidth = 1.0
+//        // Set messageTextView delegate for UITextFieldDelegate
+//        messageTextView.delegate = self
+//        messageTextView.trimWhiteSpaceWhenEndEditing = false
+//        messageTextView.placeholder = "Text something..."
+//        messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
+//        messageTextView.backgroundColor = UIColor.white
+//        messageTextView.layer.cornerRadius = 4.0
 
+        // Buttons
         mood0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
         mood1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
         mood2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
@@ -162,6 +187,12 @@ class JournalViewController: UIViewController {
         mood7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
         mood8Button.setTitle(Constants.SelectedMood.Button8,for: .normal)
         mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
+
+        mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
+        mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
+        mood12Button.setTitle(Constants.SelectedMood.Button12,for: .normal)
+        mood13Button.setTitle(Constants.SelectedMood.Button13,for: .normal)
+        mood14Button.setTitle(Constants.SelectedMood.Button14,for: .normal)
     }
 
     // MARK: - Refresh Control Methods
@@ -228,10 +259,13 @@ class JournalViewController: UIViewController {
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 
+        colorOfUI(hour)
+
         switch dayOfWeek {
         case 1: // Sun
             print("today is a weekend")
             sunday(hour)
+
         case 2:
             monday(hour)
         case 3:
@@ -355,13 +389,104 @@ class JournalViewController: UIViewController {
         }
     }
 
-    @objc func tableViewTapped() {
-        messageTextView.endEditing(true)
+
+    func colorOfUI(_ hour: Int) {
+
+        switch hour {
+        case 0...4:
+            topicColor = NowConstants.HeaderIndigo.color900
+            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
+                               NowConstants.HeaderIndigo.color700,
+                               NowConstants.HeaderIndigo.color600,
+                               NowConstants.HeaderIndigo.color500,
+                               NowConstants.HeaderIndigo.color400,
+                               NowConstants.HeaderIndigo.color300,
+                               NowConstants.HeaderIndigo.color200,]
+        case 5...8:
+            topicColor = NowConstants.HeaderAmber.color900
+            cellHeaderColor = [NowConstants.HeaderAmber.color800,
+                               NowConstants.HeaderAmber.color700,
+                               NowConstants.HeaderAmber.color600,
+                               NowConstants.HeaderAmber.color500,
+                               NowConstants.HeaderAmber.color400,
+                               NowConstants.HeaderAmber.color300,
+                               NowConstants.HeaderAmber.color200,]
+        case 9..<11:
+            topicColor = NowConstants.HeaderGreen.color900
+            cellHeaderColor = [NowConstants.HeaderGreen.color800,
+                               NowConstants.HeaderGreen.color700,
+                               NowConstants.HeaderGreen.color600,
+                               NowConstants.HeaderGreen.color500,
+                               NowConstants.HeaderGreen.color400,
+                               NowConstants.HeaderGreen.color300,
+                               NowConstants.HeaderGreen.color200,]
+        case 11..<14:
+            topicColor = NowConstants.HeaderCyan.color900
+            cellHeaderColor = [NowConstants.HeaderCyan.color800,
+                               NowConstants.HeaderCyan.color700,
+                               NowConstants.HeaderCyan.color600,
+                               NowConstants.HeaderCyan.color500,
+                               NowConstants.HeaderCyan.color400,
+                               NowConstants.HeaderCyan.color300,
+                               NowConstants.HeaderCyan.color200,]
+        case 14...16:
+            topicColor = NowConstants.HeaderTeal.color900
+            cellHeaderColor = [NowConstants.HeaderTeal.color800,
+                               NowConstants.HeaderTeal.color700,
+                               NowConstants.HeaderTeal.color600,
+                               NowConstants.HeaderTeal.color500,
+                               NowConstants.HeaderTeal.color400,
+                               NowConstants.HeaderTeal.color300,
+                               NowConstants.HeaderTeal.color200,]
+        case 17...20:
+            topicColor = NowConstants.HeaderOrange.color900
+            cellHeaderColor = [NowConstants.HeaderOrange.color800,
+                               NowConstants.HeaderOrange.color700,
+                               NowConstants.HeaderOrange.color600,
+                               NowConstants.HeaderOrange.color500,
+                               NowConstants.HeaderOrange.color400,
+                               NowConstants.HeaderOrange.color300,
+                               NowConstants.HeaderOrange.color200,]
+        case 21..<24:
+            topicColor = NowConstants.HeaderBlue.color900
+            cellHeaderColor = [NowConstants.HeaderBlue.color800,
+                               NowConstants.HeaderBlue.color700,
+                               NowConstants.HeaderBlue.color600,
+                               NowConstants.HeaderBlue.color500,
+                               NowConstants.HeaderBlue.color400,
+                               NowConstants.HeaderBlue.color300,
+                               NowConstants.HeaderBlue.color200,]
+        default:
+            print("ERROR with TopicColor and cellHeaderColor")
+        }
     }
 
-    @objc func headerViewTapped() {
-        messageTextView.endEditing(true)
+    func configureCards() {
+        quoteCardView.layer.borderColor = topicColor?.cgColor
+        quoteCardView.layer.shadowColor = topicColor?.cgColor
+
+        mediaCardView.layer.borderColor = topicColor?.cgColor
+        mediaCardView.layer.shadowColor = topicColor?.cgColor
+
+        questionCardView.layer.borderColor = topicColor?.cgColor
+        questionCardView.layer.shadowColor = topicColor?.cgColor
+
     }
+
+
+
+
+
+
+
+    // REMOVED
+//    @objc func tableViewTapped() {
+//        messageTextView.endEditing(true)
+//    }
+//
+//    @objc func headerViewTapped() {
+//        messageTextView.endEditing(true)
+//    }
 
     func configureDatabase() {
         ref = Database.database().reference().child(FirebaseConstants.DbChild.Messages).child(User.current.uid)
@@ -414,39 +539,39 @@ class JournalViewController: UIViewController {
 
     // MARK: - IBActions
 
-    @IBAction func sendButtonPressed(_ sender: UIButton) {
-
-        messageTextView.endEditing(true)
-        messageTextView.isEditable = false
-        sendButton.isEnabled = false
-
-        let now = Date()
-        let formatter = DateFormatter()
-        // initially set the format based on your datepicker date
-        formatter.dateFormat = "MMMM d, yyyy h:mm a"
-        let currentDate = formatter.string(from: now)
-
-        // data we want to save in our database
-        if !messageTextView.text!.isEmpty {
-
-            let messageItem = MessageItem(message: messageTextView.text, timestamp: currentDate)
-
-            MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
-                if success == true {
-                    print("SUCCESS WRITING MESSAGE: \(success)")
-                    self.messageTextView.text = ""
-                    self.messageTextView.isEditable = true
-                    self.sendButton.isEnabled = true
-                    return
-                } else if success == false {
-                    print("ERROR: NOT ABLE TO SEND MESSAGE")
-                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your Internet connection and try again.")
-                    self.sendButton.isEnabled = true
-                    return
-                }
-            })
-        }
-    }
+//    @IBAction func sendButtonPressed(_ sender: UIButton) {
+//
+//        messageTextView.endEditing(true)
+//        messageTextView.isEditable = false
+//        sendButton.isEnabled = false
+//
+//        let now = Date()
+//        let formatter = DateFormatter()
+//        // initially set the format based on your datepicker date
+//        formatter.dateFormat = "MMMM d, yyyy h:mm a"
+//        let currentDate = formatter.string(from: now)
+//
+//        // data we want to save in our database
+//        if !messageTextView.text!.isEmpty {
+//
+//            let messageItem = MessageItem(message: messageTextView.text, timestamp: currentDate)
+//
+//            MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
+//                if success == true {
+//                    print("SUCCESS WRITING MESSAGE: \(success)")
+//                    self.messageTextView.text = ""
+//                    self.messageTextView.isEditable = true
+//                    self.sendButton.isEnabled = true
+//                    return
+//                } else if success == false {
+//                    print("ERROR: NOT ABLE TO SEND MESSAGE")
+//                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your Internet connection and try again.")
+//                    self.sendButton.isEnabled = true
+//                    return
+//                }
+//            })
+//        }
+//    }
 
     // User Notes:
     // Replace anxious over Stressed
@@ -504,6 +629,20 @@ class JournalViewController: UIViewController {
         case mood9Button:
             selectedMood = Constants.SelectedMood.Button9
             updateAdvice(AdviceData.happy0)
+        case mood10Button:
+            selectedMood = Constants.SelectedMood.Button10
+
+            // MARK: - TODO
+            updateAdvice(AdviceData.stressed0)// Update
+        case mood11Button:
+            selectedMood = Constants.SelectedMood.Button11
+            updateAdvice(AdviceData.anxiety0)// Update
+        case mood12Button:
+            selectedMood = Constants.SelectedMood.Button12
+            updateAdvice(AdviceData.motivated0)// Update
+        case mood13Button:
+            selectedMood = Constants.SelectedMood.Button13
+            updateAdvice(AdviceData.happy0)// Update
         default:
             print("ERROR: No button exists")
             break
@@ -516,7 +655,7 @@ class JournalViewController: UIViewController {
         let currentDate = formatter.string(from: now)
 
         // ****
-        let selectedButtonText = "Current Mood: \(selectedMood)"
+        let selectedButtonText = "Mood:  \(selectedMood)"
         let messageItem = MessageItem(message: selectedButtonText, timestamp: currentDate)
 
         MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
@@ -611,6 +750,7 @@ extension JournalViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt indexPath")
         tableView.deselectRow(at: indexPath, animated: true)
+        
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

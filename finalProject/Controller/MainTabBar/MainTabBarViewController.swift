@@ -26,7 +26,7 @@ class MainTabBarViewController: UITabBarController{
         }
 
         // selected VC to display
-        self.selectedIndex = 1
+        self.selectedIndex = 0
     }
 
 }
