@@ -527,7 +527,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="c6O-8D-8do">
                                             <rect key="frame" x="10" y="10" width="355" height="246"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Learn from the best minds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-2M-tGe" userLabel="Title Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Learn from the best" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-2M-tGe" userLabel="Title Label">
                                                     <rect key="frame" x="0.0" y="0.0" width="355" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="nx8-Q0-f1m"/>
@@ -764,7 +764,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wy5-Yk-Olw">
                                                 <rect key="frame" x="10" y="15" width="355" height="244.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observe your thoughts and increase your consciousness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-H1-27U" userLabel="Title Label">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your emotions influence your decisions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-H1-27U" userLabel="Title Label">
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="hrg-Z8-s07"/>
@@ -964,6 +964,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-KB-uSm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Zero"/>
                                                                 <connections>
@@ -996,6 +997,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-kB-snS">
                                                                 <rect key="frame" x="272.5" y="0.0" width="82.5" height="30"/>
+                                                                <color key="backgroundColor" red="0.69803921570000005" green="0.87450980389999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Four"/>
                                                                 <connections>
@@ -1194,43 +1196,47 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSH-m6-6UZ" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2M-bg-CMh">
-                                        <rect key="frame" x="15" y="27" width="48" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="d4l-hw-yzd"/>
-                                        </constraints>
-                                        <state key="normal" title="Logout"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSG-Ur-5lK">
-                                        <rect key="frame" x="292" y="27" width="68" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="i8N-X5-E72"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Add Habit"/>
-                                        <connections>
-                                            <action selector="addButtonTapped:" destination="egr-Vc-3Tn" eventType="touchUpInside" id="PbO-zW-8m2"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your daily habits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZH-fS-cVH">
-                                        <rect key="frame" x="133" y="42" width="107.5" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="Nmf-XH-iVy"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-mC-Q4z">
+                                        <rect key="frame" x="15" y="27" width="345" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2M-bg-CMh">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="bwB-gM-fbk"/>
+                                                    <constraint firstAttribute="height" constant="30" id="d4l-hw-yzd"/>
+                                                </constraints>
+                                                <state key="normal" title="Logout"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A majority of your actions are not conscious decisions but habits" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZH-fS-cVH">
+                                                <rect key="frame" x="88" y="0.0" width="169" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Nmf-XH-iVy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSG-Ur-5lK">
+                                                <rect key="frame" x="265" y="0.0" width="80" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="3W6-w4-vIn"/>
+                                                    <constraint firstAttribute="height" constant="30" id="i8N-X5-E72"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Add Habit"/>
+                                                <connections>
+                                                    <action selector="addButtonTapped:" destination="egr-Vc-3Tn" eventType="touchUpInside" id="PbO-zW-8m2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="e2M-bg-CMh" firstAttribute="leading" secondItem="tSH-m6-6UZ" secondAttribute="leading" constant="15" id="1vk-DK-hFq"/>
                                     <constraint firstAttribute="height" constant="65" id="61h-i4-aFE"/>
-                                    <constraint firstAttribute="trailing" secondItem="TSG-Ur-5lK" secondAttribute="trailing" constant="15" id="YFb-By-VtE"/>
-                                    <constraint firstAttribute="bottom" secondItem="e2M-bg-CMh" secondAttribute="bottom" constant="8" id="Zh8-4V-HpE"/>
-                                    <constraint firstAttribute="bottom" secondItem="qZH-fS-cVH" secondAttribute="bottom" constant="8" id="hy6-MB-gFP"/>
-                                    <constraint firstItem="qZH-fS-cVH" firstAttribute="centerX" secondItem="tSH-m6-6UZ" secondAttribute="centerX" id="lVs-qa-sJA"/>
-                                    <constraint firstAttribute="bottom" secondItem="TSG-Ur-5lK" secondAttribute="bottom" constant="8" id="xRY-KE-Odm"/>
+                                    <constraint firstItem="e8S-mC-Q4z" firstAttribute="leading" secondItem="tSH-m6-6UZ" secondAttribute="leading" constant="15" id="B2e-LV-Xng"/>
+                                    <constraint firstAttribute="bottom" secondItem="e8S-mC-Q4z" secondAttribute="bottom" constant="8" id="Bau-49-usC"/>
+                                    <constraint firstAttribute="trailing" secondItem="e8S-mC-Q4z" secondAttribute="trailing" constant="15" id="Zqt-wp-6S3"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gSN-Oy-DZl">
