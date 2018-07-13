@@ -35,9 +35,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="aoE-D3-JO4"/>
                                         </constraints>
-                                        <string key="text">You make an average of 35,000 decisions each day.
+                                        <string key="text">You average 35,000 decisions each day.
 
-Self- provides location and time-based advice to help you make smarter decisions throughout your day. 
+Self- provides time, location, and mood-based advice to help you make smarter decisions throughout your day. 
 
 The goal is to help you live each day as the best version of yourself. </string>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>

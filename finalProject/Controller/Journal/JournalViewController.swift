@@ -122,7 +122,7 @@ class JournalViewController: UIViewController {
 
         // Additional Setup
 
-        configureCards()
+//        configureCards()
 
         configureTableView()
 

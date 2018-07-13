@@ -85,7 +85,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         dayOfWeekAndHour()
 
-        configureCards()
+//        configureCards()
         
         setupQuote()
 
