@@ -266,7 +266,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(barTopic0, dateTopic0, homePMTopic0, bathroomPMTopic0, bedtimeTopic0, lateNightSnackTopic0, weekendNow21to24Topic0)
+            appendSevenTopics(barTopic0, dateTopic0, homePMTopic0, bathroomPMTopic0, lateNightSnackTopic0, bedtimeTopic0, weekendNow21to24Topic0)
         default:
             print("Weekend,INVALID HOUR!")
         }
@@ -304,7 +304,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(barTopic1, dateTopic0, homePMTopic0, bathroomPMTopic0, bedtimeTopic0, lateNightSnackTopic0, weekendNow21to24Topic0)
+            appendSevenTopics(barTopic1, dateTopic0, homePMTopic0, bathroomPMTopic0, lateNightSnackTopic0, bedtimeTopic0, weekendNow21to24Topic0)
         default:
             print("Weekend,INVALID HOUR!")
         }

@@ -22,17 +22,17 @@ class RoundCorneredButton: UIButton {
 
     func initButton() {
         //        layer.borderWidth = 2.0
-        layer.cornerRadius = 12
+        layer.cornerRadius = 20
 
         //        layer.borderColor = UIColor.darkGray.cgColor
         //        layer.borderWidth = 1.0
         clipsToBounds = true
 
-        layer.borderWidth = 1.0
+        layer.borderWidth = 1
         layer.borderColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1).cgColor
-        backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 0.05)
+        backgroundColor = UIColor.init(red: 0, green: 122/255, blue: 255, alpha: 1)
 
-
+        setTitleColor(UIColor.white, for: .normal)
 
     }
 

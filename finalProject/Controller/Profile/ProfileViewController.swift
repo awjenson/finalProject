@@ -110,8 +110,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 //                            userProfileItem.fears]
 
         dayOfWeekAndHour()
-        
-        configureCards()
 
         profileTableView.dataSource = self
         profileTableView.delegate = self
@@ -510,10 +508,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.categoryLabel.text = selectedResults[indexPath.row].category
         cell.titleLabel.text = selectedResults[indexPath.row].title
         cell.bodyLabel.text = selectedResults[indexPath.row].body
-
-        cell.categoryCardView.layer.borderColor = topicColor?.cgColor
-
-        cell.categoryCardView.layer.shadowColor = topicColor?.cgColor
 
         // MARK: - Removed because I'm no longer including user text
 //        cell.headerUserTextViewLabel.text = selectedResults[indexPath.row].headerUserTextLabel

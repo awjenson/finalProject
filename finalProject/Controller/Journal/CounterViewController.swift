@@ -23,6 +23,10 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
 
+    @IBOutlet weak var factQuote: UILabel!
+    @IBOutlet weak var factAuthor: UILabel!
+
+
     @IBOutlet weak var rewardCardView: CardView!
     @IBOutlet weak var rewardLabel: UILabel!
 
@@ -36,6 +40,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     // an empty JournalMessage array to contain the user's messages
     var items: [GoalItem] = []
     var quote = CounterAdvice(quote: "", source: "")
+    var fact = CounterAdvice(quote: "", source: "")
     var selectedEmoji = ""
 
 //    // NEED THIS REF
@@ -87,7 +92,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
 //        configureCards()
         
-        setupQuote()
+        setupQuotes()
 
         setupRefreshControl()
 
@@ -217,9 +222,15 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     }
 
-    func setupQuote() {
+    func setupQuotes() {
+        // Inspirational Quote
         quoteLabel.text = quote.quote
         sourceLabel.text = quote.source
+
+        // Fact Quote
+        factQuote.text = fact.quote
+        factAuthor.text = fact.source
+
     }
 
 //    func configureDatabase() {
@@ -246,37 +257,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
 
-    // MARK: Quotes
 
-
-    // NEW
-    let am0 = CounterAdvice(quote: "\"I am not a product of my circumstances. I am a product of my decisions.\"", source: "Stephen R. Covey")
-
-    let pm0 = CounterAdvice(quote: "\"Don't judge each day by the harvest you reap but by the seeds that you plant.\"", source: "Robert Louis Stevenson")
-
-    let pm1 = CounterAdvice(quote: "\"I made a commitment to myself that anything I do or engage with has to be tied to what drives me and motivates me.\"", source: "Andre Agassi")
-
-    let am1 = CounterAdvice(quote: "\"The way to be a better comic was to create better jokes and the way to create better jokes was to write every day. Don't break the chain. After a few days you'll have a chain. Just keep at it and the chain will grow longer every day. You'll like seeing that chain, especially when you get a few weeks under your belt. Your only job next is to not break the chain.\"", source: "Jerry Seinfeld")
-
-    let am2 = CounterAdvice(quote: "\"We are what we repeatedly do. Excellence, then is not an act, but a habit.\"", source: "Aristotle")
-
-    let pm2 = CounterAdvice(quote: "\"Your net worth to the world is usually determined by what remains after your bad habits are subtracted from your good ones.\"", source: "Bejamin Franklin")
-
-    let am3 = CounterAdvice(quote: "\"On average, it takes 66 days to develop a new habit.\"", source: "University College London")
-
-    let pm3 = CounterAdvice(quote: "\"Whenever you are angry, be assured that it is not only a present evil, but that you have increased a habit.\"", source: "Epictetus")
-
-    let am4 = CounterAdvice(quote: "\"Cultivate only the habits that you are willing should master you.\"", source: "Elbert Hubbard")
-
-    let pm4 = CounterAdvice(quote: "\"I never could have done what I have done without the habits of punctuality, order, and diligence, without the determination to concentrate myself on one subject at a time.\"", source: "Charles Dickens")
-
-    let am5 = CounterAdvice(quote: "\"Happiness is a habit - cultivate it\"", source: "Elbert Hubbard")
-
-    let pm5 = CounterAdvice(quote: "\"You’ll never change your life until you change something you do daily. The secret of your success is found in your daily routine.\"", source: "John C. Maxwell")
-
-    let am6 = CounterAdvice(quote: "\"I can predict the long-term outcome of your success if you show me your daily habits.\"", source: "John Maxwell")
-
-    let pm6 = CounterAdvice(quote: "\"Good habits are the key to all success.\"", source: "Og Mandino")
 
     // MARK: Time-based Methods
 
@@ -315,11 +296,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0..<14:
             print("Sunday, Very Early Morning")
             // call function to display 9 time-based topics
-            quote = am0
+            quote = HabitQuote.am1
+            fact = HabitFact.am0
         case 14...24:
             print("Sunday, Afternoon")
             // call function to display 9 time-based topics
-            quote = pm0
+            quote = HabitQuote.pm1
+            fact = HabitFact.pm0
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -330,11 +313,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0..<14:
             print("Monday, Very Early Morning")
             // call function to display 9 time-based topics
-            quote = am1
+            quote = HabitQuote.am1
+            fact = HabitFact.am1
         case 14...24:
             print("Monday, Afternoon")
             // call function to display 9 time-based topics
-            quote = pm1
+            quote = HabitQuote.pm1
+            fact = HabitFact.pm1
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -345,11 +330,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0..<14:
             print("Tuesday, Very Early Morning")
             // call function to display 9 time-based topics
-            quote = am2
+            quote = HabitQuote.am2
+            fact = HabitFact.am2
         case 14...24:
             print("Tuesday, Afternoon")
             // call function to display 9 time-based topics
-            quote = pm2
+            quote = HabitQuote.pm2
+            fact = HabitFact.pm2
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -360,11 +347,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0..<14:
             print("Wednesday, Very Early Morning")
             // call function to display 9 time-based topics
-            quote = am3
+            quote = HabitQuote.am3
+            fact = HabitFact.am3
         case 14...24:
             print("Wednesday, Afternoon")
             // call function to display 9 time-based topics
-            quote = pm3
+            quote = HabitQuote.pm3
+            fact = HabitFact.pm3
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -375,11 +364,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0..<14:
             print("Thursday, Very Early Morning")
             // call function to display 9 time-based topics
-            quote = am4
+            quote = HabitQuote.am4
+            fact = HabitFact.am4
         case 14...24:
             print("Thursday, Afternoon")
             // call function to display 9 time-based topics
-            quote = pm4
+            quote = HabitQuote.pm4
+            fact = HabitFact.pm4
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -390,11 +381,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0..<14:
             print("Friday, Very Early Morning")
             // call function to display 9 time-based topics
-            quote = am5
+            quote = HabitQuote.am5
+            fact = HabitFact.pm6
         case 14...24:
             print("Friday, Afternoon")
             // call function to display 9 time-based topics
-            quote = pm5
+            quote = HabitQuote.pm5
+            fact = HabitFact.pm5
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -405,11 +398,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 0..<14:
             print("Saturday, Very Early Morning")
             // call function to display 9 time-based topics
-            quote = am6
+            quote = HabitQuote.am6
+            fact = HabitFact.am6
         case 14...24:
             print("Saturday, Afternoon")
             // call function to display 9 time-based topics
-            quote = pm6
+            quote = HabitQuote.pm6
+            fact = HabitFact.pm6
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -541,13 +536,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
                                   preferredStyle: .alert)
 
         // guard to make sure text is not nil ("")
-        let doAction = UIAlertAction(title: "SAVE", style: .default) { _ in
+        let doAction = UIAlertAction(title: "SAVE as a DO", style: .default) { _ in
 
             guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
                 print("$$$")
                 return }
 
-            let goalItem = GoalItem(name: text1, why: text2, timestamp: currentDate, count: 0)
+            let goalItem = GoalItem(name: "DO: \(text1)", why: text2, timestamp: currentDate, count: 0)
 
             // Firebase
             GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
@@ -561,7 +556,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         }
 
         // guard to make sure text is not nil ("")
-        let dontAction = UIAlertAction(title: "Save as a DON'T", style: .default) { (action) -> Void in
+        let dontAction = UIAlertAction(title: "SAVE as a DON'T", style: .default) { (action) -> Void in
 
             guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
                 print("$$$")
@@ -604,7 +599,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         dontAction.isEnabled = false
 
         alert?.addAction(doAction)
-        //        alert?.addAction(dontAction)
+        alert?.addAction(dontAction)
         alert?.addAction(cancelAction)
 
         present(alert!, animated: true, completion: nil)

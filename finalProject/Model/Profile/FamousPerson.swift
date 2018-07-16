@@ -19,7 +19,7 @@ struct FamousPerson {
 
     static let markDivine = ProfileSelectedPerson(name: "Mark Devine", bio: "Former Navy SEAL, and founder of SEALFIT and Unbeatable Mind podcast", advice: "\"To live an uncommon life, one needs learn uncommon disciplines.\"", description: "Win Before Battle - Mark Divine | Inside Quest #38", time: "52 min", url: "https://www.youtube.com/watch?v=rvDO_1GUnAo")
 
-    static let oprahWinfrey = ProfileSelectedPerson(name: "Oprah Winfrey", bio: "American television personality, actress, and entrepreneur", advice: "\"Turn your wounds into wisdom.\"", description: "\"You BECOME What You #BELIEVE!\" - Oprah Winfrey (@Oprah) - Top 10 Rules", time: "29 min", url: "https://www.youtube.com/watch?v=xe99QWlM_9A")
+    static let oprahWinfrey = ProfileSelectedPerson(name: "Oprah Winfrey", bio: "American television personality, actress, and entrepreneur", advice: "\"Turn your wounds into wisdom. Turn your wounds into wisdom. Turn your wounds into wisdom. Turn your wounds into wisdom.\"", description: "\"You BECOME What You #BELIEVE!\" - Oprah Winfrey (@Oprah) - Top 10 Rules", time: "29 min", url: "https://www.youtube.com/watch?v=xe99QWlM_9A")
 
     static let martinLutherKingJr = ProfileSelectedPerson(name: "Martin Luther King Jr.", bio: "an American minister and civil rights activist", advice: "\"What are you doing for others?\"", description: "\"#BELIEVE In Your WORTHINESS!\" - Martin Luther King Jr. - Top 10 Rules", time: "24 min", url: "https://www.youtube.com/watch?v=t6lH7Z3_46A")
 

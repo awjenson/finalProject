@@ -39,6 +39,10 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var journalTableView: UITableView!
 
+    // Nature Pic
+    @IBOutlet weak var imageView: UIImageView!
+
+
     // Created individual buttons because Outlet Collection did not work
     @IBOutlet weak var mood0Button: UIButton!
     @IBOutlet weak var mood1Button: UIButton!
@@ -63,6 +67,8 @@ class JournalViewController: UIViewController {
     let refreshControl = UIRefreshControl()
 
     var advice = JournalAdvice(quote: "", source: "", question: "", description: "", time: "", url: "")
+    var selectedImage: String?
+
 
     // initial setup
     var messageSentToday = false
@@ -95,7 +101,7 @@ class JournalViewController: UIViewController {
         super.viewDidLoad()
 
         if internetConnected() {
-            retrieveMessages()
+//            retrieveMessages()
         } else {
             performUIUpdatesOnMain {
                 self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
@@ -116,25 +122,24 @@ class JournalViewController: UIViewController {
 
         dayOfWeekAndHour()
 
-        journalTableView.dataSource = self
-        journalTableView.delegate = self
-        journalTableView.separatorStyle = .none
+        configureDatabase()
+
+        setupButtonsLabelsTextViews()
+
+//        journalTableViewSetup()
 
         // Additional Setup
 
 //        configureCards()
 
-        configureTableView()
-
-        configureDatabase()
+//        configureTableView()
 
 //        setupGestureRecognizers()
 
-        setupButtonsLabelsTextViews()
 
-        setupRefreshControl()
-
-        setupKeyboardObservers()
+//        setupRefreshControl()
+//
+//        setupKeyboardObservers()
     }
 
 
@@ -151,19 +156,30 @@ class JournalViewController: UIViewController {
 //        quoteView.addGestureRecognizer(tapGestureHeaderView)
 //    }
 
+    func journalTableViewSetup() {
+        journalTableView.dataSource = self
+        journalTableView.delegate = self
+        journalTableView.separatorStyle = .none
+    }
+
     func configureCardViews() {
         // TODO: Add boarder colors
     }
+
 
     func setupButtonsLabelsTextViews() {
 
         // Quote
         quoteLabel.text = advice.quote
         authorLabel.text = advice.source
-        questionLabel.text = advice.question
+        questionLabel.text = "How are you feeling right now?"
 
         // Meida
         mediaTitleLabel.text = advice.description
+
+        if let imageToLoad = selectedImage {
+            imageView.image  = UIImage(named: imageToLoad)
+        }
 
         // Text Messages
 //        messageTextView.layer.borderColor = UIColor.gray.cgColor
@@ -285,15 +301,34 @@ class JournalViewController: UIViewController {
     }
 
     func sunday(_ hour: Int) {
+        
         switch hour {
-        case 0..<14:
+        case 0...4:
             print("Sunday, Very Early Morning")
-            // call function to display 9 time-based topics
-            advice = AdviceData.am0
-        case 14...24:
-            print("Sunday, Afternoon")
-            // call function to display 9 time-based topics
-            advice = AdviceData.pm0
+            // night
+            advice = AdviceData.am1
+            selectedImage = Constants.JournalImages.night1
+        case 5...9:
+            // morning
+            advice = AdviceData.am1
+            selectedImage = Constants.JournalImages.morning1
+        case 10...13:
+            // day
+            advice = AdviceData.am1
+            selectedImage = Constants.JournalImages.day1
+        case 14...17:
+            // afternoon
+            advice = AdviceData.pm1
+            selectedImage = Constants.JournalImages.afternoon1
+        case 18...21:
+            // sunset
+            advice = AdviceData.pm1
+            selectedImage = Constants.JournalImages.sunset1
+        case 22...24:
+            // night
+            advice = AdviceData.pm1
+            selectedImage = Constants.JournalImages.night1
+
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -301,14 +336,31 @@ class JournalViewController: UIViewController {
 
     func monday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Monday, Very Early Morning")
-            // call function to display 9 time-based topics
-            advice = AdviceData.am1
-        case 14...24:
-            print("Monday, Afternoon")
-            // call function to display 9 time-based topics
-            advice = AdviceData.pm1
+        case 0...4:
+            print("Sunday, Very Early Morning")
+            // night
+            advice = AdviceData.am2
+            selectedImage = Constants.JournalImages.night2
+        case 5...9:
+            // morning
+            advice = AdviceData.am2
+            selectedImage = Constants.JournalImages.morning2
+        case 10...13:
+            // day
+            advice = AdviceData.am2
+            selectedImage = Constants.JournalImages.day2
+        case 14...17:
+            // afternoon
+            advice = AdviceData.pm2
+            selectedImage = Constants.JournalImages.afternoon2
+        case 18...21:
+            // sunset
+            advice = AdviceData.pm2
+            selectedImage = Constants.JournalImages.sunset2
+        case 22...24:
+            // night
+            advice = AdviceData.pm2
+            selectedImage = Constants.JournalImages.night2
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -316,14 +368,31 @@ class JournalViewController: UIViewController {
 
     func tuesday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Tuesday, Very Early Morning")
-            // call function to display 9 time-based topics
-            advice = AdviceData.am2
-        case 14...24:
-            print("Tuesday, Afternoon")
-            // call function to display 9 time-based topics
-            advice = AdviceData.pm2
+        case 0...4:
+            print("Sunday, Very Early Morning")
+            // night
+            advice = AdviceData.am3
+            selectedImage = Constants.JournalImages.night3
+        case 5...9:
+            // morning
+            advice = AdviceData.am3
+            selectedImage = Constants.JournalImages.morning3
+        case 10...13:
+            // day
+            advice = AdviceData.am3
+            selectedImage = Constants.JournalImages.day3
+        case 14...17:
+            // afternoon
+            advice = AdviceData.pm3
+            selectedImage = Constants.JournalImages.afternoon3
+        case 18...21:
+            // sunset
+            advice = AdviceData.pm3
+            selectedImage = Constants.JournalImages.sunset3
+        case 22...24:
+            // night
+            advice = AdviceData.pm3
+            selectedImage = Constants.JournalImages.night3
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -331,14 +400,31 @@ class JournalViewController: UIViewController {
 
     func wednesday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Wednesday, Very Early Morning")
-            // call function to display 9 time-based topics
-            advice = AdviceData.am3
-        case 14...24:
-            print("Wednesday, Afternoon")
-            // call function to display 9 time-based topics
-            advice = AdviceData.pm3
+        case 0...4:
+            print("Sunday, Very Early Morning")
+            // night
+            advice = AdviceData.am4
+            selectedImage = Constants.JournalImages.night4
+        case 5...9:
+            // morning
+            advice = AdviceData.am4
+            selectedImage = Constants.JournalImages.morning4
+        case 10...13:
+            // day
+            advice = AdviceData.am4
+            selectedImage = Constants.JournalImages.day4
+        case 14...17:
+            // afternoon
+            advice = AdviceData.pm4
+            selectedImage = Constants.JournalImages.afternoon4
+        case 18...21:
+            // sunset
+            advice = AdviceData.pm4
+            selectedImage = Constants.JournalImages.sunset4
+        case 22...24:
+            // night
+            advice = AdviceData.pm4
+            selectedImage = Constants.JournalImages.night4
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -346,14 +432,31 @@ class JournalViewController: UIViewController {
 
     func thursday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Thursday, Very Early Morning")
-            // call function to display 9 time-based topics
-            advice = AdviceData.am4
-        case 14...24:
-            print("Thursday, Afternoon")
-            // call function to display 9 time-based topics
-            advice = AdviceData.pm4
+        case 0...4:
+            print("Sunday, Very Early Morning")
+            // night
+            advice = AdviceData.am5
+            selectedImage = Constants.JournalImages.night5
+        case 5...9:
+            // morning
+            advice = AdviceData.am5
+            selectedImage = Constants.JournalImages.morning5
+        case 10...13:
+            // day
+            advice = AdviceData.am5
+            selectedImage = Constants.JournalImages.day5
+        case 14...17:
+            // afternoon
+            advice = AdviceData.pm5
+            selectedImage = Constants.JournalImages.afternoon5
+        case 18...21:
+            // sunset
+            advice = AdviceData.pm5
+            selectedImage = Constants.JournalImages.sunset5
+        case 22...24:
+            // night
+            advice = AdviceData.pm5
+            selectedImage = Constants.JournalImages.night5
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -361,14 +464,31 @@ class JournalViewController: UIViewController {
 
     func friday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Friday, Very Early Morning")
-            // call function to display 9 time-based topics
-            advice = AdviceData.am5
-        case 14...24:
-            print("Friday, Afternoon")
-            // call function to display 9 time-based topics
-            advice = AdviceData.pm5
+        case 0...4:
+            print("Sunday, Very Early Morning")
+            // night
+            advice = AdviceData.am6
+            selectedImage = Constants.JournalImages.night6
+        case 5...9:
+            // morning
+            advice = AdviceData.am6
+            selectedImage = Constants.JournalImages.morning6
+        case 10...13:
+            // day
+            advice = AdviceData.am6
+            selectedImage = Constants.JournalImages.day6
+        case 14...17:
+            // afternoon
+            advice = AdviceData.pm6
+            selectedImage = Constants.JournalImages.afternoon6
+        case 18...21:
+            // sunset
+            advice = AdviceData.pm6
+            selectedImage = Constants.JournalImages.sunset6
+        case 22...24:
+            // night
+            advice = AdviceData.pm6
+            selectedImage = Constants.JournalImages.night6
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -376,14 +496,31 @@ class JournalViewController: UIViewController {
 
     func saturday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Saturday, Very Early Morning")
-            // call function to display 9 time-based topics
-            advice = AdviceData.am6
-        case 14...24:
-            print("Saturday, Afternoon")
-            // call function to display 9 time-based topics
-            advice = AdviceData.pm6
+        case 0...4:
+            print("Sunday, Very Early Morning")
+            // night
+            advice = AdviceData.am7
+            selectedImage = Constants.JournalImages.night7
+        case 5...9:
+            // morning
+            advice = AdviceData.am7
+            selectedImage = Constants.JournalImages.morning7
+        case 10...13:
+            // day
+            advice = AdviceData.am7
+            selectedImage = Constants.JournalImages.day7
+        case 14...17:
+            // afternoon
+            advice = AdviceData.pm7
+            selectedImage = Constants.JournalImages.afternoon7
+        case 18...21:
+            // sunset
+            advice = AdviceData.pm7
+            selectedImage = Constants.JournalImages.sunset7
+        case 22...24:
+            // night
+            advice = AdviceData.pm7
+            selectedImage = Constants.JournalImages.night7
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -461,17 +598,7 @@ class JournalViewController: UIViewController {
         }
     }
 
-    func configureCards() {
-        quoteCardView.layer.borderColor = topicColor?.cgColor
-        quoteCardView.layer.shadowColor = topicColor?.cgColor
 
-        mediaCardView.layer.borderColor = topicColor?.cgColor
-        mediaCardView.layer.shadowColor = topicColor?.cgColor
-
-        questionCardView.layer.borderColor = topicColor?.cgColor
-        questionCardView.layer.shadowColor = topicColor?.cgColor
-
-    }
 
 
 
@@ -633,21 +760,32 @@ class JournalViewController: UIViewController {
             selectedMood = Constants.SelectedMood.Button10
 
             // MARK: - TODO
-            updateAdvice(AdviceData.stressed0)// Update
+            updateAdvice(AdviceData.lost0)// Update
         case mood11Button:
             selectedMood = Constants.SelectedMood.Button11
-            updateAdvice(AdviceData.anxiety0)// Update
+            updateAdvice(AdviceData.lonely0)// Update
         case mood12Button:
             selectedMood = Constants.SelectedMood.Button12
-            updateAdvice(AdviceData.motivated0)// Update
+            updateAdvice(AdviceData.jealous0)// Update
         case mood13Button:
             selectedMood = Constants.SelectedMood.Button13
-            updateAdvice(AdviceData.happy0)// Update
+            updateAdvice(AdviceData.proud0)// Update
+
+        case mood14Button:
+            selectedMood = Constants.SelectedMood.Button14
+            updateAdvice(AdviceData.loved0)// Update
         default:
             print("ERROR: No button exists")
             break
         }
 
+        // No longer sending mood to DB
+//        sendMoodToFirebase(selectedMood: selectedMood)
+
+
+    }
+
+    func sendMoodToFirebase(selectedMood: String) {
         let now = Date()
         let formatter = DateFormatter()
         // initially set the format based on your datepicker date
@@ -656,6 +794,8 @@ class JournalViewController: UIViewController {
 
         // ****
         let selectedButtonText = "Mood:  \(selectedMood)"
+
+
         let messageItem = MessageItem(message: selectedButtonText, timestamp: currentDate)
 
         MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
@@ -663,6 +803,8 @@ class JournalViewController: UIViewController {
                 print("SUCCESS WRITING BUTTON MOOD: \(success)")
             }
         })
+
+
     }
 
     func sendMood(_ moodDictionary: [String:String?]) {
