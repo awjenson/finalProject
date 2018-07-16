@@ -44,7 +44,7 @@ struct Constants {
         static let Button5 = "Mad!"
         static let Button6 = "Stressed"
         static let Button7 = "Anxious"
-        static let Button8 = "Motivated"
+        static let Button8 = "Shy"
         static let Button9 = "Happy!"
 
         static let Button10 = "Lost"

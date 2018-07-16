@@ -712,11 +712,16 @@ class JournalViewController: UIViewController {
         // update model object
         self.advice = newAdvice
 
+        self.quoteLabel.fadeTransition(0.4)
+        self.authorLabel.fadeTransition(0.4)
+        self.questionLabel.fadeTransition(0.4)
+        self.mediaTitleLabel.fadeTransition(0.4)
+
         // update UI
-        self.quoteLabel.text = newAdvice.quote
         self.authorLabel.text = newAdvice.source
         self.questionLabel.text = newAdvice.question
         self.mediaTitleLabel.text = newAdvice.description
+        self.quoteLabel.text = newAdvice.quote
     }
 
 

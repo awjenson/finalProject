@@ -60,6 +60,8 @@
 		DA78988F2053102E005046D8 /* NowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988E2053102E005046D8 /* NowTableViewCell.swift */; };
 		DA8C088920FC2BD0000E050E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8C088820FC2BD0000E050E /* Assets.xcassets */; };
 		DA8C088B20FC31EC000E050E /* JournalImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C088A20FC31EC000E050E /* JournalImages.swift */; };
+		DA9CC27720FD3B58001A89B7 /* RoundedSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CC27620FD3B58001A89B7 /* RoundedSquareButton.swift */; };
+		DA9CC27920FD5413001A89B7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CC27820FD5413001A89B7 /* UIView+Extension.swift */; };
 		DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1021C2053444000A25EFC /* RoundButton.swift */; };
 		DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1021E2053448200A25EFC /* RoundImage.swift */; };
 		DAA1022520537A2400A25EFC /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022420537A2400A25EFC /* JournalViewController.swift */; };
@@ -142,6 +144,8 @@
 		DA78988E2053102E005046D8 /* NowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowTableViewCell.swift; sourceTree = "<group>"; };
 		DA8C088820FC2BD0000E050E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8C088A20FC31EC000E050E /* JournalImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalImages.swift; sourceTree = "<group>"; };
+		DA9CC27620FD3B58001A89B7 /* RoundedSquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSquareButton.swift; sourceTree = "<group>"; };
+		DA9CC27820FD5413001A89B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DAA1021C2053444000A25EFC /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		DAA1021E2053448200A25EFC /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		DAA1022420537A2400A25EFC /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +327,7 @@
 				DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */,
 				DA43FD6120EB08ED00E09BBE /* TriangleView.swift */,
 				DA388FA520F2957000AC5EDC /* CardView.swift */,
+				DA9CC27620FD3B58001A89B7 /* RoundedSquareButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				DA361D3420858297007ACE59 /* Storyboard+Utility.swift */,
 				DA361D3820896E5D007ACE59 /* Date+convertToString.swift */,
 				DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */,
+				DA9CC27820FD5413001A89B7 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -661,6 +667,7 @@
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
 				DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */,
+				DA9CC27920FD5413001A89B7 /* UIView+Extension.swift in Sources */,
 				DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */,
 				DA2B860320BB3A30005B7DD6 /* InternetService.swift in Sources */,
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
@@ -715,6 +722,7 @@
 				DA272D0B20BCE62200137039 /* FamousPerson.swift in Sources */,
 				DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */,
 				DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */,
+				DA9CC27720FD3B58001A89B7 /* RoundedSquareButton.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
 				DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */,
 				DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */,

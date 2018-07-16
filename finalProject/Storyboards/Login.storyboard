@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-0X-b0r">
-                                <rect key="frame" x="20" y="80" width="335" height="428"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-0X-b0r">
+                                <rect key="frame" x="20" y="80" width="335" height="438"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-Dl-ZAh">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
@@ -31,9 +31,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgH-VH-C6l">
-                                        <rect key="frame" x="0.0" y="114" width="335" height="200"/>
+                                        <rect key="frame" x="0.0" y="94" width="335" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="aoE-D3-JO4"/>
+                                            <constraint firstAttribute="height" constant="250" id="aoE-D3-JO4"/>
                                         </constraints>
                                         <string key="text">You average 35,000 decisions each day.
 
@@ -45,7 +45,7 @@ The goal is to help you live each day as the best version of yourself. </string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-Jt-22R">
-                                        <rect key="frame" x="0.0" y="384" width="335" height="44"/>
+                                        <rect key="frame" x="0.0" y="394" width="335" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fm5-2i-DvB"/>
