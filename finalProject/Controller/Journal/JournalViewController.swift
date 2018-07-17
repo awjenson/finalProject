@@ -712,16 +712,18 @@ class JournalViewController: UIViewController {
         // update model object
         self.advice = newAdvice
 
-        self.quoteLabel.fadeTransition(0.4)
-        self.authorLabel.fadeTransition(0.4)
-        self.questionLabel.fadeTransition(0.4)
-        self.mediaTitleLabel.fadeTransition(0.4)
+        UIView.animate(withDuration: 0.5) {
+            // update UI
+            self.authorLabel.text = newAdvice.source
+            self.questionLabel.text = newAdvice.question
+            self.mediaTitleLabel.text = newAdvice.description
+            self.quoteLabel.text = newAdvice.quote
 
-        // update UI
-        self.authorLabel.text = newAdvice.source
-        self.questionLabel.text = newAdvice.question
-        self.mediaTitleLabel.text = newAdvice.description
-        self.quoteLabel.text = newAdvice.quote
+            self.quoteLabel.fadeTransition(0.5)
+            self.authorLabel.fadeTransition(0.5)
+            self.questionLabel.fadeTransition(0.5)
+            self.mediaTitleLabel.fadeTransition(0.5)
+        }
     }
 
 
@@ -757,14 +759,12 @@ class JournalViewController: UIViewController {
             updateAdvice(AdviceData.anxiety0)
         case mood8Button:
             selectedMood = Constants.SelectedMood.Button8
-            updateAdvice(AdviceData.motivated0)
+            updateAdvice(AdviceData.shy0)
         case mood9Button:
             selectedMood = Constants.SelectedMood.Button9
             updateAdvice(AdviceData.happy0)
         case mood10Button:
             selectedMood = Constants.SelectedMood.Button10
-
-            // MARK: - TODO
             updateAdvice(AdviceData.lost0)// Update
         case mood11Button:
             selectedMood = Constants.SelectedMood.Button11

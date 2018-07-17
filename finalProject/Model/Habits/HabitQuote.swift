@@ -18,7 +18,7 @@ struct HabitQuote {
 
     static let am2 = CounterAdvice(quote: "\"I made a commitment to myself that anything I do or engage with has to be tied to what drives me and motivates me.\"", source: "Andre Agassi")
 
-    static let pm2 = CounterAdvice(quote: "\"The way to be a better comic was to create better jokes and the way to create better jokes was to write every day. Don't break the chain. Just keep at it and the chain will grow longer every day. You'll like seeing that chain, especially when you get a few weeks under your belt. Your only job next is to not break the chain.\"", source: "Jerry Seinfeld")
+    static let pm2 = CounterAdvice(quote: "\"The way to be a better comic was to create better jokes and the way to create better jokes was to write every day. Don't break the chain. Just keep at it and the chain will grow longer every day. Your only job next is to not break the chain.\"", source: "Jerry Seinfeld")
 
     static let am3 = CounterAdvice(quote: "\"We are what we repeatedly do. Excellence, then is not an act, but a habit.\"", source: "Aristotle")
 

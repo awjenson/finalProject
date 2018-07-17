@@ -108,9 +108,11 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 1:
             selectedEmoji = "🙂"
             rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+
         case 2:
             selectedEmoji = "😀"
             rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+
         case 3:
             selectedEmoji = "😎"
             rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
@@ -142,85 +144,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
 
-    func colorOfUI(_ hour: Int) {
 
-        switch hour {
-        case 0...4:
-            topicColor = NowConstants.HeaderIndigo.color900
-            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
-                               NowConstants.HeaderIndigo.color700,
-                               NowConstants.HeaderIndigo.color600,
-                               NowConstants.HeaderIndigo.color500,
-                               NowConstants.HeaderIndigo.color400,
-                               NowConstants.HeaderIndigo.color300,
-                               NowConstants.HeaderIndigo.color200,]
-        case 5...8:
-            topicColor = NowConstants.HeaderAmber.color900
-            cellHeaderColor = [NowConstants.HeaderAmber.color800,
-                               NowConstants.HeaderAmber.color700,
-                               NowConstants.HeaderAmber.color600,
-                               NowConstants.HeaderAmber.color500,
-                               NowConstants.HeaderAmber.color400,
-                               NowConstants.HeaderAmber.color300,
-                               NowConstants.HeaderAmber.color200,]
-        case 9..<11:
-            topicColor = NowConstants.HeaderGreen.color900
-            cellHeaderColor = [NowConstants.HeaderGreen.color800,
-                               NowConstants.HeaderGreen.color700,
-                               NowConstants.HeaderGreen.color600,
-                               NowConstants.HeaderGreen.color500,
-                               NowConstants.HeaderGreen.color400,
-                               NowConstants.HeaderGreen.color300,
-                               NowConstants.HeaderGreen.color200,]
-        case 11..<14:
-            topicColor = NowConstants.HeaderCyan.color900
-            cellHeaderColor = [NowConstants.HeaderCyan.color800,
-                               NowConstants.HeaderCyan.color700,
-                               NowConstants.HeaderCyan.color600,
-                               NowConstants.HeaderCyan.color500,
-                               NowConstants.HeaderCyan.color400,
-                               NowConstants.HeaderCyan.color300,
-                               NowConstants.HeaderCyan.color200,]
-        case 14...16:
-            topicColor = NowConstants.HeaderTeal.color900
-            cellHeaderColor = [NowConstants.HeaderTeal.color800,
-                               NowConstants.HeaderTeal.color700,
-                               NowConstants.HeaderTeal.color600,
-                               NowConstants.HeaderTeal.color500,
-                               NowConstants.HeaderTeal.color400,
-                               NowConstants.HeaderTeal.color300,
-                               NowConstants.HeaderTeal.color200,]
-        case 17...20:
-            topicColor = NowConstants.HeaderOrange.color900
-            cellHeaderColor = [NowConstants.HeaderOrange.color800,
-                               NowConstants.HeaderOrange.color700,
-                               NowConstants.HeaderOrange.color600,
-                               NowConstants.HeaderOrange.color500,
-                               NowConstants.HeaderOrange.color400,
-                               NowConstants.HeaderOrange.color300,
-                               NowConstants.HeaderOrange.color200,]
-        case 21..<24:
-            topicColor = NowConstants.HeaderBlue.color900
-            cellHeaderColor = [NowConstants.HeaderBlue.color800,
-                               NowConstants.HeaderBlue.color700,
-                               NowConstants.HeaderBlue.color600,
-                               NowConstants.HeaderBlue.color500,
-                               NowConstants.HeaderBlue.color400,
-                               NowConstants.HeaderBlue.color300,
-                               NowConstants.HeaderBlue.color200,]
-        default:
-            print("ERROR with TopicColor and cellHeaderColor")
-        }
-    }
-
-    func configureCards() {
-        habitCardView.layer.borderColor = topicColor?.cgColor
-        habitCardView.layer.shadowColor = topicColor?.cgColor
-
-        rewardCardView.layer.borderColor = topicColor?.cgColor
-        rewardCardView.layer.shadowColor = topicColor?.cgColor
-
-    }
 
     func setupQuotes() {
         // Inspirational Quote
@@ -261,13 +185,10 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     // MARK: Time-based Methods
 
-
     func dayOfWeekAndHour() {
         print("Refresh COUNTER table view")
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
-
-        colorOfUI(hour)
 
         switch dayOfWeek {
         case 1: // Sun

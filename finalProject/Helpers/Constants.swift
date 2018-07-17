@@ -51,7 +51,7 @@ struct Constants {
         static let Button11 = "Lonely"
         static let Button12 = "Jealous"
         static let Button13 = "Proud"
-        static let Button14 = "Loved"
+        static let Button14 = "Loved!"
     }
 
     struct JournalImages {

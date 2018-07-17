@@ -182,7 +182,7 @@ let lateNightSnackTopic0 = Topic(title: lateNightSnackTitle, icon: lateNightSnac
 
 //    let am6 = JournalAdvice(quote: "Journaling can help you achieve your goals. ", source: "Huffington Post", question: "https://www.huffingtonpost.com/thai-nguyen/benefits-of-journaling-_b_6648884.html")
 //
-//    let pm5 = JournalAdvice(quote: " ", source: "", question: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/")
+//    let pm5 = Tip(header: success, title: "Benjamin Franklin, a founding father of America, stared his day with writing in his journal.", body: "Franklin had specific rules for how he started each morning. His three-hour block of morning routine stretched from 5:00 a.m. to 7:00 a.m. and included addressing \"Powerful Goodness\" and setting a plan for the rest of his day. \n\nEvery morning Franklin asked himself, \"What good shall I do today?\"" , sourceName: "FastCompany", sourceURL: "https://www.fastcompany.com/3033652/the-morning-routines-of-the-most-successful-people", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 //
 
 
@@ -265,16 +265,30 @@ let gymTip7 = Tip(header: navySealAdvice, title: "Start by visualizing your work
 
 let gymTip8 = Tip(header: improvePerformance, title: "Perform better during high-instensity training by breathing through your nose.", body: "It allows for deeper, more penetrating breaths into your diaphragm. If you feel you're not getting air, use your mouth to take a few extra gulps of air and then go back to nostril breathing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
 
-let gymTip9 = Tip(header: navySealAdvice, title: "Gaining deep awareness and control of your breath is one of the most essential tools in life.", body: "It's a secret practice of ancient yogis and matrial artists to develop more power, presence, and mental control. Before your training session, perform the box breathing exercise for 5 minutes. This will ground you, clear any baggage from your mind, and energize you from the work ahead.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
 
-let gymTip10 = Tip(header: mentalToughness, title: "Training isn't \"working out\". Develop a disciplined habit of training.", body: "Training is is lifelong growth of your physical, mental, emotional, and spiritual skills neeeded to become a better person. \n\nDon't bump a training session without serious thought. When its cold, you train. When it rains, you train. If you must, make it up.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
+
+let gymTip9 = Tip(header: "Gym", title: "Get pumped up by reminding yourself why you are working out", body: "When you catch yourself slacking or feeling like you want to quit, remind yourself why you are working out. If you have a powerful reason why, you can get through anything.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/health-fitness/mental-toughness-training/", sponsorLogo: "", sponsorURL: "")
+
+let gymTip10 = Tip(header: "Post-Workout", title: "0:00-10:00 minutes post-workout: stretch to prevent injury", body: "Strech before the muscles have time to cool down, which takes 30-40 minutes. Do five minutes of stretching followed by five minutes of ironing out the kinks with a foam roller for proper recovery.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
+
+let gymTip11 = Tip(header: "Post-Workout", title: "10:00-20:00 minutes post-workout: shower or change your clothes", body: "Don't wait longer than 30 minutes to shower or change your clothes. Your wet clothes trap moisture that encourages the growth of germs, bacteria, fungus and yeast, which could invite a skin infection or cause breakouts.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
+
+let gymTip12 = Tip(header: "Post-Workout", title: "20:00-30:00 minutes post-workout: eat carbs and protein", body: "The 30-minute window is the peak time for potential to start rebuilding and replenishing muscles.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
+
+let gymTip13 = Tip(header: navySealAdvice, title: "Gaining deep awareness and control of your breath is one of the most essential tools in life.", body: "It's a secret practice of ancient yogis and matrial artists to develop more power, presence, and mental control. Before your training session, perform the box breathing exercise for 5 minutes. This will ground you, clear any baggage from your mind, and energize you from the work ahead.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
+
+let gymTip14 = Tip(header: mentalToughness, title: "Training isn't \"working out\". Develop a disciplined habit of training.", body: "Training is is lifelong growth of your physical, mental, emotional, and spiritual skills neeeded to become a better person. \n\nDon't bump a training session without serious thought. When its cold, you train. When it rains, you train. If you must, make it up.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
 
 
 var gymTipArray0 = [gymTip1, gymTip2, gymTip3, gymTip4]
 var gymTipArray1 = [gymTip5, gymTip6, gymTip7, gymTip8]
+var gymTipArray2 = [gymTip9, gymTip10, gymTip11, gymTip12]
 
 let gymTopic0 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray0)
 let gymTopic1 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray1)
+let gymTopic2 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray2)
+
+
 
 // MARK: - Running
 
@@ -739,6 +753,12 @@ var restaurantTipArray1 = [restaurantTip5, restaurantTip6, restaurantTip7, resta
 
 let restaurantTopic1 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray1)
 
+
+// MARK: - Getting Ready AM
+let getReadyAM0 = Tip(header: "Get Ready", title: "Reduce decision fatigue wearing the same type of clothes each day", body: "Steve Jobs, Mark Zuckerberg, and Barack Obama have all applied this idea to their lives. Wearing the same thing each day frees up the brainpower you would have put into picking out an outfit to make other, more important decisions." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/barack-obama-mark-zuckerberg-wear-the-same-outfit-2015-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+// MARK: - Getting Ready PM
+let getReadyPM0 = Tip(header: "Get Ready", title: "Wearing the color red can actually make you feel more attractive", body: "In one experiment, a group of individuals who were wearing red were rated as more attractive by another group of individuals — despite the fact that the first groups’ clothing wasn’t visible to the group do the rating." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/can-wearing-work-uniform-help-you-get-ahead-ncna788136?cid=eml_better_20180716", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 
 
