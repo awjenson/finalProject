@@ -171,11 +171,15 @@ class JournalViewController: UIViewController {
 
         // Quote
         quoteLabel.text = advice.quote
+
         authorLabel.text = advice.source
+
         questionLabel.text = "How are you feeling right now?"
+
 
         // Meida
         mediaTitleLabel.text = advice.description
+
 
         if let imageToLoad = selectedImage {
             imageView.image  = UIImage(named: imageToLoad)

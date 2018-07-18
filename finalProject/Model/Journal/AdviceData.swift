@@ -22,7 +22,7 @@ struct AdviceData {
 
     static let am3 = JournalAdvice(quote: "\"Self awareness is the ability to take an honest look at your life without any attachment to it being right or wrong, good or bad.\"", source: "Debbie Ford", question: "When was a last time that I lost control of my emotions?", description: "MORNING MOTIVATION - Start Your Day Positively!", time: "12 min", url: "https://www.youtube.com/watch?v=vPMQdVdR0gw")
 
-    static let pm3 = JournalAdvice(quote: "\"I think self-awareness is probably the most important thing towards being a champion.\"", source: "Billie Jean King", question: "What daily acitivies add value to my life?", description: "MORNING MOTIVATION - Start Your Day Positively!", time: "12 min", url: "https://www.youtube.com/watch?v=vPMQdVdR0gw")
+    static let pm3 = JournalAdvice(quote: "\"I think self-awareness is probably the most important thing towards being a champion.\"", source: "Billie Jean King", question: "What daily acitivies add value to my life?", description: "Top 10 - Most Epic Motivational Speeches", time: "16 min", url: "https://www.youtube.com/watch?v=imB8rVYjMXA")
 
     static let am4 = JournalAdvice(quote: "\"Whenever you are angry, be assured that it is not only a present evil, but that you have increased a habit.\"", source: "Epictetus", question: "What habits do not add value to my life?", description: "MORNING MOTIVATION - What Successful People Do In the First 8 Minutes of Their Morning", time: "7 min", url: "https://www.youtube.com/watch?v=5diEq1gTE4Y")
 

@@ -331,7 +331,11 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Midday")
             appendSevenTopics(workAMTopic0, lunchTopic0, afternoonSnackTopic0, leadershipPMTopic0, breakTopic0, mindfulnessTopic0, weekdayNow11to14Topic0)
 
-        case 14...16:
+        case 14...15:
+            print("weekdayMTW, Afternoon")
+            // call function to display 9 time-based topics
+            appendSevenTopics(workPMTopic0, leadershipPMTopic0, mindfulnessTopic0, afternoonSnackTopic0, breakTopic0,   happyHourTopic0, weekdayNow14to16Topic0)
+        case 16..<17:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
             appendSevenTopics(workPMTopic0, afternoonSnackTopic0, breakTopic0, mindfulnessTopic0, commutePMTopic0, happyHourTopic0, weekdayNow14to16Topic0)

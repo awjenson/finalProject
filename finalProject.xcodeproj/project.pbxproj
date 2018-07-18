@@ -11,6 +11,7 @@
 		DA015BF72073E3FC00A0342F /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */; };
 		DA05883620EEF47F0065098D /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883520EEF47F0065098D /* KeyboardService.swift */; };
 		DA05883820EEFC970065098D /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883720EEFC970065098D /* UITextView+DoneButton.swift */; };
+		DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */; };
 		DA15AE1220B649B400EFC4C2 /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */; };
 		DA15AE1520B84C2900EFC4C2 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1420B84C2900EFC4C2 /* FirebaseConstants.swift */; };
 		DA2223A220E8672800103829 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2223A120E8672800103829 /* ResponseTableViewCell.swift */; };
@@ -93,6 +94,7 @@
 		DA015BF62073E3FC00A0342F /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		DA05883520EEF47F0065098D /* KeyboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
 		DA05883720EEFC970065098D /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
+		DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
 		DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
 		DA15AE1420B84C2900EFC4C2 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		DA2223A120E8672800103829 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				DA43FD6120EB08ED00E09BBE /* TriangleView.swift */,
 				DA388FA520F2957000AC5EDC /* CardView.swift */,
 				DA9CC27620FD3B58001A89B7 /* RoundedSquareButton.swift */,
+				DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -723,6 +726,7 @@
 				DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */,
 				DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */,
 				DA9CC27720FD3B58001A89B7 /* RoundedSquareButton.swift in Sources */,
+				DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
 				DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */,
 				DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */,
