@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,33 +15,28 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am the Greatest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2T-yf-fGo">
-                                <rect key="frame" x="16" y="313.5" width="343" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="92y-Ev-bgA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
-                                <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reduce stress now:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vn-dP-Kj0">
+                                <rect key="frame" x="94" y="120" width="132.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muhammad Ali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8le-R9-lM0">
-                                <rect key="frame" x="140" y="373.5" width="96" height="17"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe, Exhale Slowly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF0-g5-WEj">
+                                <rect key="frame" x="27.5" y="178" width="266.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0078431372549019607" green="0.53333333333333333" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8le-R9-lM0" firstAttribute="top" secondItem="V2T-yf-fGo" secondAttribute="bottom" constant="20" id="6eY-DY-m0w"/>
-                            <constraint firstItem="V2T-yf-fGo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BGA-6x-lEq"/>
-                            <constraint firstItem="8le-R9-lM0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="EnL-fb-qrw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V2T-yf-fGo" secondAttribute="trailing" constant="16" id="Ens-1Q-Ey3"/>
-                            <constraint firstItem="V2T-yf-fGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kCq-6W-4aJ"/>
-                            <constraint firstItem="V2T-yf-fGo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zMK-w4-Fsq"/>
+                            <constraint firstItem="3vn-dP-Kj0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="96t-fk-UBE"/>
+                            <constraint firstItem="uF0-g5-WEj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DxX-DM-DGT"/>
+                            <constraint firstItem="3vn-dP-Kj0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="HFi-0s-0CO"/>
+                            <constraint firstItem="uF0-g5-WEj" firstAttribute="top" secondItem="3vn-dP-Kj0" secondAttribute="bottom" constant="40" id="cvm-Lh-a39"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

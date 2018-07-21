@@ -35,23 +35,23 @@ struct Constants {
     // Journal
 
     struct SelectedMood {
-        static let Button0 = "Sad"
-        static let Button1 = "Depressed"
-        static let Button2 = "Bored"
-        static let Button3 = "Good"
-        static let Button4 = "Grateful"
+        static let Button0 = " Sad " //
+        static let Button1 = "Depressed" //
+        static let Button2 = "Bored" //
+        static let Button3 = "Good" //
+        static let Button4 = "Great" //
 
-        static let Button5 = "Mad!"
-        static let Button6 = "Stressed"
-        static let Button7 = "Anxious"
-        static let Button8 = "Shy"
-        static let Button9 = "Happy!"
+        static let Button5 = " Mad " //
+        static let Button6 = "Stressed" //
+        static let Button7 = "Anxious" //
+        static let Button8 = "Hopeful"
+        static let Button9 = "Proud" // cookie jar
 
-        static let Button10 = "Lost"
-        static let Button11 = "Lonely"
-        static let Button12 = "Jealous"
-        static let Button13 = "Proud"
-        static let Button14 = "Loved!"
+        static let Button10 = "Lonely"
+        static let Button11 = "Worried" //
+        static let Button12 = "Insecure"
+        static let Button13 = "Restless" //
+        static let Button14 = "Calm"
     }
 
     struct JournalImages {

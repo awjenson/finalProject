@@ -66,7 +66,7 @@ class JournalViewController: UIViewController {
     // pull to refresh tableView
     let refreshControl = UIRefreshControl()
 
-    var advice = JournalAdvice(quote: "", source: "", question: "", description: "", time: "", url: "")
+    var advice = JournalAdvice(quote: "", quoteSource: "", tip: "", tipSource: "", mediaTitle: "", url: "")
     var selectedImage: String?
 
 
@@ -172,13 +172,13 @@ class JournalViewController: UIViewController {
         // Quote
         quoteLabel.text = advice.quote
 
-        authorLabel.text = advice.source
+        authorLabel.text = advice.quoteSource
 
-        questionLabel.text = "How are you feeling right now?"
+        questionLabel.text = ""
 
 
         // Meida
-        mediaTitleLabel.text = advice.description
+        mediaTitleLabel.text = advice.mediaTitle
 
 
         if let imageToLoad = selectedImage {
@@ -718,9 +718,9 @@ class JournalViewController: UIViewController {
 
         UIView.animate(withDuration: 0.5) {
             // update UI
-            self.authorLabel.text = newAdvice.source
-            self.questionLabel.text = newAdvice.question
-            self.mediaTitleLabel.text = newAdvice.description
+            self.authorLabel.text = newAdvice.quoteSource
+            self.questionLabel.text = newAdvice.tip
+            self.mediaTitleLabel.text = newAdvice.mediaTitle
             self.quoteLabel.text = newAdvice.quote
 
             self.quoteLabel.fadeTransition(0.5)
@@ -739,58 +739,56 @@ class JournalViewController: UIViewController {
         switch sender {
         case mood0Button:
             selectedMood = Constants.SelectedMood.Button0
-            updateAdvice(AdviceData.sad0)
+            updateAdvice(AdviceData.sadQuote0)
         case mood1Button:
             selectedMood = Constants.SelectedMood.Button1
-            updateAdvice(AdviceData.depressed0)
+            updateAdvice(AdviceData.depressedQuote0)
         case mood2Button:
             selectedMood = Constants.SelectedMood.Button2
-            updateAdvice(AdviceData.bored0)
+            updateAdvice(AdviceData.boredQuote0)
         case mood3Button:
             selectedMood = Constants.SelectedMood.Button3
-            updateAdvice(AdviceData.good0)
+            updateAdvice(AdviceData.goodQuote0)
         case mood4Button:
             selectedMood = Constants.SelectedMood.Button4
-            updateAdvice(AdviceData.grateful0)
+            updateAdvice(AdviceData.greatQuote0)
         case mood5Button:
             selectedMood = Constants.SelectedMood.Button5
-            updateAdvice(AdviceData.mad0)
+            updateAdvice(AdviceData.madQuote0)
         case mood6Button:
             selectedMood = Constants.SelectedMood.Button6
-            updateAdvice(AdviceData.stressed0)//
+            updateAdvice(AdviceData.stressedQuote0)//
         case mood7Button:
             selectedMood = Constants.SelectedMood.Button7
-            updateAdvice(AdviceData.anxiety0)
+            updateAdvice(AdviceData.anxietyQuote0)
         case mood8Button:
             selectedMood = Constants.SelectedMood.Button8
-            updateAdvice(AdviceData.shy0)
+            updateAdvice(AdviceData.hopefulQuote0)
         case mood9Button:
             selectedMood = Constants.SelectedMood.Button9
-            updateAdvice(AdviceData.happy0)
+            updateAdvice(AdviceData.proudQuote0)
         case mood10Button:
             selectedMood = Constants.SelectedMood.Button10
-            updateAdvice(AdviceData.lost0)// Update
+            updateAdvice(AdviceData.lonelyQuote0)// Update
         case mood11Button:
             selectedMood = Constants.SelectedMood.Button11
-            updateAdvice(AdviceData.lonely0)// Update
+            updateAdvice(AdviceData.worriedQuote0)// Update
         case mood12Button:
             selectedMood = Constants.SelectedMood.Button12
-            updateAdvice(AdviceData.jealous0)// Update
+            updateAdvice(AdviceData.insecureQuote0)// Update
         case mood13Button:
             selectedMood = Constants.SelectedMood.Button13
-            updateAdvice(AdviceData.proud0)// Update
-
+            updateAdvice(AdviceData.restlessQuote0)// Update
         case mood14Button:
             selectedMood = Constants.SelectedMood.Button14
-            updateAdvice(AdviceData.loved0)// Update
+            updateAdvice(AdviceData.calmQuote0)// Update
         default:
             print("ERROR: No button exists")
             break
         }
 
-        // No longer sending mood to DB
+        // MARK: No longer sending mood to DB
 //        sendMoodToFirebase(selectedMood: selectedMood)
-
 
     }
 

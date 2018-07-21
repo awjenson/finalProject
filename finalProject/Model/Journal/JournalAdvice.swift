@@ -13,19 +13,19 @@ class JournalAdvice {
     // MARK: - Properties
 
     var quote: String
-    var source: String
-    var question: String?
-    var description: String
-    var time: String
+    var quoteSource: String
+    var tip: String
+    var tipSource: String
+    var mediaTitle: String
     var url: String?
 
-    init(quote: String, source: String, question: String?, description: String, time: String, url: String?) {
+    init(quote: String, quoteSource: String, tip: String, tipSource: String, mediaTitle: String, url: String?) {
 
         self.quote = quote
-        self.source = source
-        self.question = question
-        self.description = description
-        self.time = time
+        self.quoteSource = quoteSource
+        self.tip = tip
+        self.tipSource = tipSource
+        self.mediaTitle = mediaTitle
         self.url = url
 
     }
