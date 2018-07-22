@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe, Exhale Slowly" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF0-g5-WEj">
-                                <rect key="frame" x="27.5" y="178" width="266.5" height="31.5"/>
+                                <rect key="frame" x="27.5" y="163" width="266.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                             <constraint firstItem="3vn-dP-Kj0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="96t-fk-UBE"/>
                             <constraint firstItem="uF0-g5-WEj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DxX-DM-DGT"/>
                             <constraint firstItem="3vn-dP-Kj0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="HFi-0s-0CO"/>
-                            <constraint firstItem="uF0-g5-WEj" firstAttribute="top" secondItem="3vn-dP-Kj0" secondAttribute="bottom" constant="40" id="cvm-Lh-a39"/>
+                            <constraint firstItem="uF0-g5-WEj" firstAttribute="top" secondItem="3vn-dP-Kj0" secondAttribute="bottom" constant="25" id="cvm-Lh-a39"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

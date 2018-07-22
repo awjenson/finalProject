@@ -680,16 +680,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iWW-x8-s1a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="487"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jQf-5V-Ueq">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ak-qG-Mfm">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="447.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="467.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="wy5-Yk-Olw">
-                                                <rect key="frame" x="10" y="10" width="355" height="427.5"/>
+                                                <rect key="frame" x="10" y="10" width="355" height="447.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80% of your decisions are based on emotions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-H1-27U" userLabel="Title Label" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="15"/>
@@ -700,18 +700,18 @@
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NQu-gm-ygG">
-                                                        <rect key="frame" x="0.0" y="33" width="355" height="68.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" axis="vertical" distribution="fillProportionally" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="NQu-gm-ygG">
+                                                        <rect key="frame" x="0.0" y="33" width="355" height="62.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="QuoteText Size Inspector - Content Hugging Property - Verticle 252" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="dhm-5E-Dfn" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="24.5" y="0.0" width="306.5" height="43"/>
+                                                                <rect key="frame" x="32.5" y="0.0" width="290" height="42"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHE-ps-faC" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="134" y="51" width="87" height="17.5"/>
+                                                                <rect key="frame" x="134" y="45" width="87" height="17.5"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="18" id="9Fe-Xf-fAC"/>
@@ -722,48 +722,53 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wC9-sV-1Da">
-                                                        <rect key="frame" x="0.0" y="119.5" width="355" height="182"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gp-6k-1y9">
+                                                        <rect key="frame" x="0.0" y="113.5" width="355" height="201.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LjI-e2-iiM">
-                                                        <rect key="frame" x="0.0" y="319.5" width="355" height="70"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-Bw-JgE">
+                                                        <rect key="frame" x="0.0" y="333" width="355" height="36.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-ce-e32">
-                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="70" id="8y1-VF-TSS"/>
-                                                                    <constraint firstAttribute="width" constant="70" id="XFH-j6-lGg"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                <state key="normal" image="redPlayButton">
-                                                                    <color key="titleColor" red="0.7843137255" green="0.90196078430000004" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="mediaButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="xaK-iX-zqO"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" text="Title Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LS8-zg-WSd" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="78" y="0.0" width="277" height="70"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-gu-QlE" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="18.5"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDF-rR-NRb" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="21.5" width="35" height="15"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="15" id="DDw-P9-cs2"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-Bw-JgE">
-                                                        <rect key="frame" x="0.0" y="407.5" width="355" height="20"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LjI-e2-iiM">
+                                                        <rect key="frame" x="0.0" y="387.5" width="355" height="60"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-gu-QlE" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="155.5" y="0.0" width="44.5" height="20"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-ce-e32" customClass="RoundButton" customModule="finalProject" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                <color key="backgroundColor" red="0.89803921568627454" green="0.22352941176470587" blue="0.20784313725490194" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="R30-tt-k1I"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="8y1-VF-TSS"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="XFH-j6-lGg"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                                <state key="normal" title="YouTube"/>
+                                                                <connections>
+                                                                    <action selector="mediaButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="xaK-iX-zqO"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" text="Title Label" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LS8-zg-WSd" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
+                                                                <rect key="frame" x="68" y="0.0" width="287" height="60"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -780,22 +785,22 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iD-PJ-MB4" userLabel="LineDividerView">
-                                        <rect key="frame" x="0.0" y="447.5" width="375" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="467.5" width="375" height="0.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="vN3-0E-cVF"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-u9-o5f" userLabel="Compose Msg View">
-                                        <rect key="frame" x="0.0" y="448" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="468" width="375" height="130"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IW9-SA-mbZ">
-                                                <rect key="frame" x="10" y="4" width="355" height="136"/>
+                                                <rect key="frame" x="10" y="4" width="355" height="116"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Kge-09-3cs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="41.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-KB-uSm" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="41.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Zero"/>
                                                                 <connections>
@@ -803,7 +808,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gl-oN-1mU" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="67.5" y="0.0" width="56" height="41.5"/>
+                                                                <rect key="frame" x="67.5" y="0.0" width="56" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="One"/>
                                                                 <connections>
@@ -811,7 +816,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8i-fA-nh1" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="129.5" y="0.0" width="56.5" height="41.5"/>
+                                                                <rect key="frame" x="129.5" y="0.0" width="56.5" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Two"/>
                                                                 <connections>
@@ -819,7 +824,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-S4-qHP" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="192" y="0.0" width="76.5" height="41.5"/>
+                                                                <rect key="frame" x="192" y="0.0" width="76.5" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Three"/>
                                                                 <connections>
@@ -827,7 +832,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-kB-snS" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="274.5" y="0.0" width="80.5" height="41.5"/>
+                                                                <rect key="frame" x="274.5" y="0.0" width="80.5" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Four"/>
                                                                 <connections>
@@ -837,10 +842,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mRP-7z-Afy">
-                                                        <rect key="frame" x="0.0" y="47.5" width="355" height="41"/>
+                                                        <rect key="frame" x="0.0" y="40.5" width="355" height="35"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owE-Em-cft" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Five"/>
                                                                 <connections>
@@ -848,7 +853,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-SK-qRA" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="60.5" y="0.0" width="54" height="41"/>
+                                                                <rect key="frame" x="60.5" y="0.0" width="54" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Six"/>
                                                                 <connections>
@@ -856,7 +861,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlU-dm-dR7" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="120.5" y="0.0" width="78" height="41"/>
+                                                                <rect key="frame" x="120.5" y="0.0" width="78" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Seven"/>
                                                                 <connections>
@@ -864,7 +869,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-0x-0Wu" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="204.5" y="0.0" width="67" height="41"/>
+                                                                <rect key="frame" x="204.5" y="0.0" width="67" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Eight"/>
                                                                 <connections>
@@ -872,7 +877,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ae-WH-G7R" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="277.5" y="0.0" width="77.5" height="41"/>
+                                                                <rect key="frame" x="277.5" y="0.0" width="77.5" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Nine"/>
                                                                 <connections>
@@ -882,10 +887,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="84E-d0-IVv">
-                                                        <rect key="frame" x="0.0" y="94.5" width="355" height="41.5"/>
+                                                        <rect key="frame" x="0.0" y="81.5" width="355" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3R-Bj-Ziw" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="41.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Ten"/>
                                                                 <connections>
@@ -893,7 +898,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcI-Nf-2GD" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="57" y="0.0" width="78" height="41.5"/>
+                                                                <rect key="frame" x="57" y="0.0" width="78" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Eleven"/>
                                                                 <connections>
@@ -901,7 +906,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnl-Vs-ean" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="141" y="0.0" width="83.5" height="41.5"/>
+                                                                <rect key="frame" x="141" y="0.0" width="83.5" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="Twelve"/>
                                                                 <connections>
@@ -909,7 +914,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF4-Pu-l0M" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="230.5" y="0.0" width="51" height="41.5"/>
+                                                                <rect key="frame" x="230.5" y="0.0" width="51" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="13"/>
                                                                 <connections>
@@ -917,7 +922,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-CN-36a" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                                <rect key="frame" x="287.5" y="0.0" width="67.5" height="41.5"/>
+                                                                <rect key="frame" x="287.5" y="0.0" width="67.5" height="34.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                                 <state key="normal" title="14"/>
                                                                 <connections>
@@ -935,7 +940,7 @@
                                             <constraint firstItem="IW9-SA-mbZ" firstAttribute="top" secondItem="PyK-u9-o5f" secondAttribute="top" constant="4" id="JqS-lb-fJn"/>
                                             <constraint firstItem="IW9-SA-mbZ" firstAttribute="leading" secondItem="PyK-u9-o5f" secondAttribute="leading" constant="10" id="VIe-zh-OL9"/>
                                             <constraint firstAttribute="trailing" secondItem="IW9-SA-mbZ" secondAttribute="trailing" constant="10" id="nRC-fU-vvj"/>
-                                            <constraint firstAttribute="height" constant="150" id="vyA-Qo-X7z"/>
+                                            <constraint firstAttribute="height" constant="130" id="vyA-Qo-X7z"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -944,7 +949,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iWW-x8-s1a" firstAttribute="leading" secondItem="QWf-MI-rha" secondAttribute="leading" id="4ZQ-pi-zbs"/>
-                            <constraint firstAttribute="bottom" secondItem="iWW-x8-s1a" secondAttribute="bottom" constant="200" id="d1k-62-vVo"/>
+                            <constraint firstAttribute="bottom" secondItem="iWW-x8-s1a" secondAttribute="bottom" constant="180" id="d1k-62-vVo"/>
                             <constraint firstItem="iWW-x8-s1a" firstAttribute="top" secondItem="pXG-kF-aoE" secondAttribute="top" id="fOg-Fm-5id"/>
                             <constraint firstItem="jQf-5V-Ueq" firstAttribute="top" secondItem="QWf-MI-rha" secondAttribute="top" id="fyE-C4-9Oy"/>
                             <constraint firstItem="QWf-MI-rha" firstAttribute="trailing" secondItem="jQf-5V-Ueq" secondAttribute="trailing" id="h9K-ZK-gMt"/>
@@ -980,6 +985,7 @@
                         <outlet property="mood9Button" destination="6ae-WH-G7R" id="5Ui-Ha-MeU"/>
                         <outlet property="questionLabel" destination="5oG-gu-QlE" id="LQF-5g-1uG"/>
                         <outlet property="quoteLabel" destination="dhm-5E-Dfn" id="8rs-5k-bv5"/>
+                        <outlet property="tipSourceLabel" destination="VDF-rR-NRb" id="o8Q-Jt-CK3"/>
                         <outlet property="titleLabel" destination="cpA-H1-27U" id="lxR-eF-NWu"/>
                     </connections>
                 </viewController>

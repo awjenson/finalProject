@@ -27,6 +27,8 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var questionCardView: CardView!
     @IBOutlet weak var questionLabel: UILabel!
 
+    @IBOutlet weak var tipSourceLabel: UILabel!
+
     // Media Link
     @IBOutlet weak var mediaCardView: CardView!
     @IBOutlet weak var mediaButton: UIButton!
@@ -175,6 +177,7 @@ class JournalViewController: UIViewController {
         authorLabel.text = advice.quoteSource
 
         questionLabel.text = ""
+        tipSourceLabel.text = ""
 
 
         // Meida
@@ -718,14 +721,18 @@ class JournalViewController: UIViewController {
 
         UIView.animate(withDuration: 0.5) {
             // update UI
-            self.authorLabel.text = newAdvice.quoteSource
-            self.questionLabel.text = newAdvice.tip
-            self.mediaTitleLabel.text = newAdvice.mediaTitle
             self.quoteLabel.text = newAdvice.quote
+            self.authorLabel.text = newAdvice.quoteSource
+
+            self.questionLabel.text = newAdvice.tip
+            self.tipSourceLabel.text = newAdvice.tipSource
+
+            self.mediaTitleLabel.text = newAdvice.mediaTitle
 
             self.quoteLabel.fadeTransition(0.5)
             self.authorLabel.fadeTransition(0.5)
             self.questionLabel.fadeTransition(0.5)
+            self.tipSourceLabel.fadeTransition(0.5)
             self.mediaTitleLabel.fadeTransition(0.5)
         }
     }

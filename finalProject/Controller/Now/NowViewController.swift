@@ -142,20 +142,20 @@ class NowViewController: UIViewController {
         colorOfUI(hour)
 
         switch dayOfWeek {
-        case 1: // S,S
-            print("today is a weekend")
+        case 1: // Sunday
+            print("today is Sunday")
             sunday(hour)
         case 2,3,4: // M,T,W
             print("today is a Mon/Tues/Wed")
             weekdayMTW(hour)
-        case 5:
+        case 5: // Thursday
             print("today is Thursday")
             thursday(hour)
-        case 6:
+        case 6: // Friday
             print("today is Friday")
             friday(hour)
-        case 7:
-            print("today is Sunday")
+        case 7: // Saturday
+            print("today is Saturday")
             saturday(hour)
         default:
             print("error with dayAndHour")
@@ -258,11 +258,11 @@ class NowViewController: UIViewController {
         case 14...16:
             print("Weekend, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(cafeTopic0, runningTopic0, yogaTopic0, gymTopic1, mindfulnessTopic0, groceryStoreTopic1, weekendNow14to16Topic0)
+            appendSevenTopics(cafeTopic0, runningTopic0, gymTopic1, groceryStoreTopic1, dateTopic0, barTopic0, weekendNow14to16Topic0)
         case 17...20:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerTopic0, dateTopic0, groceryStoreTopic2, barTopic0, restaurantTopic1, homePMTopic0, weekendNow17to20Topic0)
+            appendSevenTopics(dinnerTopic0, dateTopic0, barTopic0, restaurantTopic1, groceryStoreTopic2, homePMTopic0, weekendNow17to20Topic0)
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
