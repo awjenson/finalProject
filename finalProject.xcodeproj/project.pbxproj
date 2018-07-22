@@ -12,6 +12,8 @@
 		DA05883620EEF47F0065098D /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883520EEF47F0065098D /* KeyboardService.swift */; };
 		DA05883820EEFC970065098D /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883720EEFC970065098D /* UITextView+DoneButton.swift */; };
 		DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */; };
+		DA0EDE0C2104EEB300B9363F /* JournalQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0B2104EEB300B9363F /* JournalQuote.swift */; };
+		DA0EDE0E2104EF6D00B9363F /* JournalTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0D2104EF6D00B9363F /* JournalTip.swift */; };
 		DA15AE1220B649B400EFC4C2 /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */; };
 		DA15AE1520B84C2900EFC4C2 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1420B84C2900EFC4C2 /* FirebaseConstants.swift */; };
 		DA2223A220E8672800103829 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2223A120E8672800103829 /* ResponseTableViewCell.swift */; };
@@ -95,6 +97,8 @@
 		DA05883520EEF47F0065098D /* KeyboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
 		DA05883720EEFC970065098D /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
 		DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
+		DA0EDE0B2104EEB300B9363F /* JournalQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalQuote.swift; sourceTree = "<group>"; };
+		DA0EDE0D2104EF6D00B9363F /* JournalTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTip.swift; sourceTree = "<group>"; };
 		DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
 		DA15AE1420B84C2900EFC4C2 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		DA2223A120E8672800103829 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
@@ -239,12 +243,13 @@
 		DA272D0720BCB70900137039 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				DA0EDE0B2104EEB300B9363F /* JournalQuote.swift */,
+				DA0EDE0D2104EF6D00B9363F /* JournalTip.swift */,
+				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
+				DADE4C7920E9A5D300E19393 /* AdviceData.swift */,
 				DAC6384920B1CE310004891D /* GoalItem.swift */,
 				DA2B85F620B8D59E005B7DD6 /* MessageItem.swift */,
-				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
 				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
-				DA272D0C20BCE72B00137039 /* CounterAdvice.swift */,
-				DADE4C7920E9A5D300E19393 /* AdviceData.swift */,
 				DA8C088A20FC31EC000E050E /* JournalImages.swift */,
 			);
 			path = Journal;
@@ -504,6 +509,7 @@
 		DACA911A20FBD06500475CE5 /* Habits */ = {
 			isa = PBXGroup;
 			children = (
+				DA272D0C20BCE72B00137039 /* CounterAdvice.swift */,
 				DACA911B20FBD09200475CE5 /* HabitFact.swift */,
 				DACA911D20FBD0B700475CE5 /* HabitQuote.swift */,
 			);
@@ -670,6 +676,7 @@
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
 				DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */,
+				DA0EDE0E2104EF6D00B9363F /* JournalTip.swift in Sources */,
 				DA9CC27920FD5413001A89B7 /* UIView+Extension.swift in Sources */,
 				DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */,
 				DA2B860320BB3A30005B7DD6 /* InternetService.swift in Sources */,
@@ -684,6 +691,7 @@
 				DA2B85F920B8E174005B7DD6 /* DatabaseReference+Location.swift in Sources */,
 				DA15AE1520B84C2900EFC4C2 /* FirebaseConstants.swift in Sources */,
 				DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */,
+				DA0EDE0C2104EEB300B9363F /* JournalQuote.swift in Sources */,
 				DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */,
 				DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */,
 				DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */,

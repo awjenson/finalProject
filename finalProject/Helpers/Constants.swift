@@ -34,6 +34,10 @@ struct Constants {
 
     // Journal
 
+    struct Header {
+        static let watch = "WATCH"
+    }
+
     struct SelectedMood {
         static let Button0 = " Sad " //
         static let Button1 = "Depressed" //
@@ -53,6 +57,8 @@ struct Constants {
         static let Button13 = "Restless" //
         static let Button14 = "Calm"
     }
+
+
 
     struct JournalImages {
         static let morning = "morning"

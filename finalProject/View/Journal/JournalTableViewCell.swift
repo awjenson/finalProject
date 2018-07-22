@@ -12,6 +12,12 @@ import UIKit
 
 class JournalTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var boarderColorView: CardView!
+    @IBOutlet weak var titleLabel: ShadowLabel!
+    @IBOutlet weak var bodyLabel: ShadowLabel!
+    @IBOutlet weak var sourceLabel: ShadowLabel!
+
+
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dateLabelHeight: NSLayoutConstraint!
 
@@ -20,6 +26,6 @@ class JournalTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        messageBackground.layer.cornerRadius = 12.5
+//        messageBackground.layer.cornerRadius = 12.5
     }
 }

@@ -19,7 +19,7 @@ class JournalViewController: UIViewController {
     // remove quote view when keyboard appears
 
   
-    @IBOutlet weak var quoteCardView: CardView!
+
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
@@ -128,7 +128,7 @@ class JournalViewController: UIViewController {
 
         setupButtonsLabelsTextViews()
 
-//        journalTableViewSetup()
+        journalTableViewSetup()
 
         // Additional Setup
 

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
 
-//import Foundation
+import Foundation
 
 class CounterAdvice {
 
