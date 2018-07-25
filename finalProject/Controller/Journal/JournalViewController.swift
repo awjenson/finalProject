@@ -10,39 +10,26 @@ import UIKit
 import Firebase
 import GrowingTextView
 import SVProgressHUD
+import SafariServices // to display webview
 
 class JournalViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var journalTableView: UITableView!
 
-    // remove quote view when keyboard appears
-
-  
-
+    // Quote
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
-    // Question
-    @IBOutlet weak var questionCardView: CardView!
-    @IBOutlet weak var questionLabel: UILabel!
-
-    @IBOutlet weak var tipSourceLabel: UILabel!
-
-    // Media Link
-    @IBOutlet weak var mediaCardView: CardView!
-    @IBOutlet weak var mediaButton: UIButton!
-    @IBOutlet weak var mediaTitleLabel: UILabel!
-
-    // Send/Type message bar
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-//    @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet weak var messageTextView: GrowingTextView! // Changed to GrowingTextView!
-    @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var journalTableView: UITableView!
-
     // Nature Pic
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var moodButtonViewHeight: NSLayoutConstraint!
+
+    @IBOutlet weak var hideButton: UIButton!
+
+    @IBOutlet weak var selectedMoodLabel: UILabel!
+
+
 
 
     // Created individual buttons because Outlet Collection did not work
@@ -68,8 +55,9 @@ class JournalViewController: UIViewController {
     // pull to refresh tableView
     let refreshControl = UIRefreshControl()
 
-    var advice = JournalAdvice(quote: "", quoteSource: "", tip: "", tipSource: "", mediaTitle: "", url: "")
+    var advice = JournalQuote(quote: "", source: "")
     var selectedImage: String?
+    var tipItems: [JournalTip] = []
 
 
     // initial setup
@@ -82,7 +70,8 @@ class JournalViewController: UIViewController {
     let date = Date()
     let calendar = Calendar.current
 
-    var messageItems: [MessageItem] = []
+    var displayMoodButtonView = true
+    var selectedMood = ""
 
     var expandingCellHeight: CGFloat = 200
     let expandingIndexRow = 0
@@ -161,6 +150,8 @@ class JournalViewController: UIViewController {
     func journalTableViewSetup() {
         journalTableView.dataSource = self
         journalTableView.delegate = self
+        journalTableView.rowHeight = UITableViewAutomaticDimension
+        journalTableView.estimatedRowHeight = 44
         journalTableView.separatorStyle = .none
     }
 
@@ -171,22 +162,25 @@ class JournalViewController: UIViewController {
 
     func setupButtonsLabelsTextViews() {
 
-        // Quote
-        quoteLabel.text = advice.quote
-
-        authorLabel.text = advice.quoteSource
-
-        questionLabel.text = ""
-        tipSourceLabel.text = ""
-
-
-        // Meida
-        mediaTitleLabel.text = advice.mediaTitle
-
-
         if let imageToLoad = selectedImage {
             imageView.image  = UIImage(named: imageToLoad)
         }
+
+        selectedMoodLabel.text = "Select Mood:"
+
+        hideButton.setTitle("Hide", for: .normal)
+        // Shadow and Radius
+        hideButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        hideButton.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
+        hideButton.layer.shadowOpacity = 0.9
+        hideButton.layer.shadowRadius = 0.0
+        hideButton.layer.masksToBounds = false
+        hideButton.layer.cornerRadius = 5.0
+
+
+        // Quote
+//        quoteLabel.text = advice.quote
+//        authorLabel.text = advice.source
 
         // Text Messages
 //        messageTextView.layer.borderColor = UIColor.gray.cgColor
@@ -200,17 +194,19 @@ class JournalViewController: UIViewController {
 //        messageTextView.layer.cornerRadius = 4.0
 
         // Buttons
+        // Row 1
         mood0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
         mood1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
         mood2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
         mood3Button.setTitle(Constants.SelectedMood.Button3,for: .normal)
         mood4Button.setTitle(Constants.SelectedMood.Button4,for: .normal)
+        // Row 2
         mood5Button.setTitle(Constants.SelectedMood.Button5,for: .normal)
         mood6Button.setTitle(Constants.SelectedMood.Button6,for: .normal)
         mood7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
         mood8Button.setTitle(Constants.SelectedMood.Button8,for: .normal)
         mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
-
+        // Row 3
         mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
         mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
         mood12Button.setTitle(Constants.SelectedMood.Button12,for: .normal)
@@ -231,41 +227,42 @@ class JournalViewController: UIViewController {
 
         // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
         if self.refreshControl.isRefreshing {
-            // Reload time based array
-            loadMessagesAll()
+
+            // TODO: - Fix
+//            loadMessagesAll()
             self.refreshControl.endRefreshing()
         }
     }
 
     // MARK: - Database Methods
 
-    func loadMessagesAll() {
+//    func loadMessagesAll() {
+//
+//        MessageItemService.readMessagesAll(for: User.current) { (retrieveAllMessages) in
+//
+//            if retrieveAllMessages.isEmpty {
+//                print("retrievedMessages count: \(retrieveAllMessages.count)")
+//                return
+//            }
+//            self.messageItems = retrieveAllMessages
+//
+//            var number = 0
+//            print("THREAD: \(Thread.current) + \(number)")
+//            number += 1
+//            self.configureTableView()
+//            self.scrollToBottom()
+//            self.journalTableView.reloadData()
+//        }
+//    }
 
-        MessageItemService.readMessagesAll(for: User.current) { (retrieveAllMessages) in
-
-            if retrieveAllMessages.isEmpty {
-                print("retrievedMessages count: \(retrieveAllMessages.count)")
-                return
-            }
-            self.messageItems = retrieveAllMessages
-
-            var number = 0
-            print("THREAD: \(Thread.current) + \(number)")
-            number += 1
-            self.configureTableView()
-            self.scrollToBottom()
-            self.journalTableView.reloadData()
-        }
-    }
-
-    func setupKeyboardObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-    }
-
-    @objc func handleKeyboardWillShow(notification: NSNotification) {
-        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-        let keyboardDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
-    }
+//    func setupKeyboardObservers() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//    }
+//
+//    @objc func handleKeyboardWillShow(notification: NSNotification) {
+//        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+//        let keyboardDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+//    }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -286,9 +283,7 @@ class JournalViewController: UIViewController {
 
         switch dayOfWeek {
         case 1: // Sun
-            print("today is a weekend")
             sunday(hour)
-
         case 2:
             monday(hour)
         case 3:
@@ -313,28 +308,34 @@ class JournalViewController: UIViewController {
         case 0...4:
             print("Sunday, Very Early Morning")
             // night
-            advice = AdviceData.am1
+
             selectedImage = Constants.JournalImages.night1
+            tipItems = AdviceData.am1Tips1
         case 5...9:
             // morning
-            advice = AdviceData.am1
+
             selectedImage = Constants.JournalImages.morning1
+            tipItems = AdviceData.am1Tips1
         case 10...13:
             // day
-            advice = AdviceData.am1
+
             selectedImage = Constants.JournalImages.day1
+            tipItems = AdviceData.am1Tips1
         case 14...17:
             // afternoon
-            advice = AdviceData.pm1
+
             selectedImage = Constants.JournalImages.afternoon1
+            tipItems = AdviceData.pm1Tips1
         case 18...21:
             // sunset
-            advice = AdviceData.pm1
+
             selectedImage = Constants.JournalImages.sunset1
+            tipItems = AdviceData.pm1Tips1
         case 22...24:
             // night
-            advice = AdviceData.pm1
+
             selectedImage = Constants.JournalImages.night1
+            tipItems = AdviceData.pm1Tips1
 
         default:
             print("ERROR: INVALID HOUR!")
@@ -346,27 +347,27 @@ class JournalViewController: UIViewController {
         case 0...4:
             print("Sunday, Very Early Morning")
             // night
-            advice = AdviceData.am2
+            tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.night2
         case 5...9:
             // morning
-            advice = AdviceData.am2
+            tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.morning2
         case 10...13:
             // day
-            advice = AdviceData.am2
+            tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.day2
         case 14...17:
             // afternoon
-            advice = AdviceData.pm2
+            tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.afternoon2
         case 18...21:
             // sunset
-            advice = AdviceData.pm2
+            tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.sunset2
         case 22...24:
             // night
-            advice = AdviceData.pm2
+            tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.night2
         default:
             print("ERROR: INVALID HOUR!")
@@ -378,27 +379,27 @@ class JournalViewController: UIViewController {
         case 0...4:
             print("Sunday, Very Early Morning")
             // night
-            advice = AdviceData.am3
+            tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.night3
         case 5...9:
             // morning
-            advice = AdviceData.am3
+            tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.morning3
         case 10...13:
             // day
-            advice = AdviceData.am3
+            tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.day3
         case 14...17:
             // afternoon
-            advice = AdviceData.pm3
+            tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.afternoon3
         case 18...21:
             // sunset
-            advice = AdviceData.pm3
+            tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.sunset3
         case 22...24:
             // night
-            advice = AdviceData.pm3
+            tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.night3
         default:
             print("ERROR: INVALID HOUR!")
@@ -422,7 +423,7 @@ class JournalViewController: UIViewController {
             selectedImage = Constants.JournalImages.day4
         case 14...17:
             // afternoon
-            advice = AdviceData.pm4
+            tipItems = AdviceData.pm1Tips1
             selectedImage = Constants.JournalImages.afternoon4
         case 18...21:
             // sunset
@@ -632,43 +633,43 @@ class JournalViewController: UIViewController {
     }
 
     // Create the retrieveMessages method
-    func retrieveMessages() {
+//    func retrieveMessages() {
+//
+//        SVProgressHUD.show()
+//
+//        // listen for new messages in the firebase database with 'observe'
+//        // Configure database to sync messages
+//        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
+//        // ask Firebase to 'observe' for any new child's events ('childAdded')
+//
+//        MessageItemService.readMessagesLastTen(for: User.current) { (retrievedMessages) in
+//
+//            if retrievedMessages.isEmpty {
+//                print("retrievedMessages count: \(retrievedMessages.count)")
+//                self.configureTableView()
+//                self.journalTableView.reloadData()
+//                SVProgressHUD.dismiss()
+//                return
+//            }
+//
+//            self.messageItems = retrievedMessages
+//
+//            var number = 0
+//            print("THREAD: \(Thread.current) + \(number)")
+//            number += 1
+//            self.configureTableView()
+//            self.journalTableView.reloadData()
+//            self.scrollToBottom()
+//            SVProgressHUD.dismiss()
+//        }
+//    }
 
-        SVProgressHUD.show()
-
-        // listen for new messages in the firebase database with 'observe'
-        // Configure database to sync messages
-        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
-        // ask Firebase to 'observe' for any new child's events ('childAdded')
-
-        MessageItemService.readMessagesLastTen(for: User.current) { (retrievedMessages) in
-
-            if retrievedMessages.isEmpty {
-                print("retrievedMessages count: \(retrievedMessages.count)")
-                self.configureTableView()
-                self.journalTableView.reloadData()
-                SVProgressHUD.dismiss()
-                return
-            }
-
-            self.messageItems = retrievedMessages
-
-            var number = 0
-            print("THREAD: \(Thread.current) + \(number)")
-            number += 1
-            self.configureTableView()
-            self.journalTableView.reloadData()
-            self.scrollToBottom()
-            SVProgressHUD.dismiss()
-        }
-    }
-
-    func scrollToBottom(){
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(row: self.messageItems.count-1, section: 0)
-            self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-        }
-    }
+//    func scrollToBottom(){
+//        DispatchQueue.main.async {
+//            let indexPath = IndexPath(row: self.messageItems.count-1, section: 0)
+//            self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+//        }
+//    }
 
 
     // MARK: - IBActions
@@ -714,81 +715,86 @@ class JournalViewController: UIViewController {
     // Good or OK
 
     // MARK: TODO
-    func updateAdvice(_ newAdvice: JournalAdvice) {
+    func updateAdvice(_ newTips: [JournalTip]) {
 
         // update model object
-        self.advice = newAdvice
 
         UIView.animate(withDuration: 0.5) {
-            // update UI
-            self.quoteLabel.text = newAdvice.quote
-            self.authorLabel.text = newAdvice.quoteSource
 
-            self.questionLabel.text = newAdvice.tip
-            self.tipSourceLabel.text = newAdvice.tipSource
+            self.selectedMoodLabel.text = "Selected: \(self.selectedMood)"
+            // update tableview
+            self.tipItems = newTips
+            self.configureTableView()
+            self.journalTableView.reloadData()
 
-            self.mediaTitleLabel.text = newAdvice.mediaTitle
-
-            self.quoteLabel.fadeTransition(0.5)
-            self.authorLabel.fadeTransition(0.5)
-            self.questionLabel.fadeTransition(0.5)
-            self.tipSourceLabel.fadeTransition(0.5)
-            self.mediaTitleLabel.fadeTransition(0.5)
         }
+    }
+
+
+    @IBAction func hideButtonTapped(_ sender: Any) {
+        displayMoodButtonView = !displayMoodButtonView
+
+        if displayMoodButtonView == false {
+            moodButtonViewHeight.constant = 0
+            hideButton.setTitle("Unhide", for: .normal)
+        } else {
+            moodButtonViewHeight.constant = 130
+            hideButton.setTitle("Hide", for: .normal)
+        }
+
     }
 
 
     @IBAction func moodButtonTapped(_ sender: UIButton) {
 
-        var selectedMood = ""
         // Plan to add response in next version of app
 
         switch sender {
         case mood0Button:
             selectedMood = Constants.SelectedMood.Button0
-            updateAdvice(AdviceData.sadQuote0)
+            updateAdvice(AdviceData.sad0Tips1)
         case mood1Button:
             selectedMood = Constants.SelectedMood.Button1
-            updateAdvice(AdviceData.depressedQuote0)
+            updateAdvice(AdviceData.depressed0Tips1) //
         case mood2Button:
             selectedMood = Constants.SelectedMood.Button2
-            updateAdvice(AdviceData.boredQuote0)
+            updateAdvice(AdviceData.bored0Tips1) //
         case mood3Button:
             selectedMood = Constants.SelectedMood.Button3
-            updateAdvice(AdviceData.goodQuote0)
+            updateAdvice(AdviceData.good0Tips1) //
         case mood4Button:
             selectedMood = Constants.SelectedMood.Button4
-            updateAdvice(AdviceData.greatQuote0)
+            updateAdvice(AdviceData.great0Tips1) //
         case mood5Button:
             selectedMood = Constants.SelectedMood.Button5
-            updateAdvice(AdviceData.madQuote0)
+            updateAdvice(AdviceData.mad0Tips1) //
         case mood6Button:
             selectedMood = Constants.SelectedMood.Button6
-            updateAdvice(AdviceData.stressedQuote0)//
+            updateAdvice(AdviceData.stressed0Tips1) //
         case mood7Button:
             selectedMood = Constants.SelectedMood.Button7
-            updateAdvice(AdviceData.anxietyQuote0)
+            updateAdvice(AdviceData.anxiety0Tips1) //
         case mood8Button:
             selectedMood = Constants.SelectedMood.Button8
-            updateAdvice(AdviceData.hopefulQuote0)
+            updateAdvice(AdviceData.hopeful0Tips1) //
         case mood9Button:
             selectedMood = Constants.SelectedMood.Button9
-            updateAdvice(AdviceData.proudQuote0)
+            updateAdvice(AdviceData.proud0Tips1) //
         case mood10Button:
             selectedMood = Constants.SelectedMood.Button10
-            updateAdvice(AdviceData.lonelyQuote0)// Update
+            updateAdvice(AdviceData.lonely0Tips1) //
         case mood11Button:
             selectedMood = Constants.SelectedMood.Button11
-            updateAdvice(AdviceData.worriedQuote0)// Update
+            updateAdvice(AdviceData.worried0Tips1) //
         case mood12Button:
             selectedMood = Constants.SelectedMood.Button12
-            updateAdvice(AdviceData.insecureQuote0)// Update
+            updateAdvice(AdviceData.insecure0Tips1) //
         case mood13Button:
             selectedMood = Constants.SelectedMood.Button13
-            updateAdvice(AdviceData.restlessQuote0)// Update
+            updateAdvice(AdviceData.restless0Tips1) //
         case mood14Button:
             selectedMood = Constants.SelectedMood.Button14
-            updateAdvice(AdviceData.calmQuote0)// Update
+            updateAdvice(AdviceData.calm0Tips1) //
         default:
             print("ERROR: No button exists")
             break
@@ -843,25 +849,25 @@ class JournalViewController: UIViewController {
 
     @IBAction func mediaButtonTapped(_ sender: UIButton) {
 
-        print("Learn more button tapped")
-
-        let app = UIApplication.shared
-
-        if let url = advice.url {
-
-            // print: true or false
-            print("verifyURL: \(verifyUrl(urlString: url))")
-
-            if verifyUrl(urlString: url) == true {
-                performUIUpdatesOnMain {
-                    app.open(URL(string:url)!)
-                }
-            } else {
-                performUIUpdatesOnMain {
-                    self.createAlert(title: "Could not open URL", message: "Check Internet connection and try again.")
-                }
-            }
-        }
+//        print("Learn more button tapped")
+//
+//        let app = UIApplication.shared
+//
+//        if let url = advice.url {
+//
+//            // print: true or false
+//            print("verifyURL: \(verifyUrl(urlString: url))")
+//
+//            if verifyUrl(urlString: url) == true {
+//                performUIUpdatesOnMain {
+//                    app.open(URL(string:url)!)
+//                }
+//            } else {
+//                performUIUpdatesOnMain {
+//                    self.createAlert(title: "Could not open URL", message: "Check Internet connection and try again.")
+//                }
+//            }
+//        }
     }
 
 
@@ -877,7 +883,7 @@ extension JournalViewController: UITableViewDataSource {
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messageItems.count
+        return tipItems.count
     }
 
     /* Configuring the Timestamp with DateFormatter:
@@ -886,13 +892,12 @@ extension JournalViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! JournalTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath) as! JournalTableViewCell
 
-        let messageItemRow = messageItems[indexPath.row]
+        let tip = tipItems[indexPath.row]
 
         // To change UI of cell, see JournalTableViewCell.
-        cell.dateLabel.text = messageItemRow.timestamp
-        cell.messageLabel.text = messageItemRow.message
+        cell.configureCell(tip: tip)
 
         return cell
     }
@@ -903,70 +908,71 @@ extension JournalViewController: UITableViewDataSource {
 
 extension JournalViewController: UITableViewDelegate {
     // Add table view delagate methods
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt indexPath")
-        tableView.deselectRow(at: indexPath, animated: true)
-        
+        journalTableView.deselectRow(at: indexPath, animated: true)
+        let tip = tipItems[indexPath.row]
+
+        let app = UIApplication.shared
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath) as! JournalTableViewCell
+        if let url = tip.sourceURL {
+
+            // print: true or false
+            print("verifyURL: \(verifyUrl(urlString: url))")
+
+            if verifyUrl(urlString: url) == true {
+                app.open(URL(string:url)!)
+            } else {
+                performUIUpdatesOnMain {
+                    self.createAlert(title: "Could not open URL", message: "Check your Internet connection and try again.")
+                }
+            }
+        }
     }
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let messageItemRow = messageItems[indexPath.row]
-            print("ITEM TO DELETE")
-            print("goalItemRow: \(messageItemRow)")
 
-            // Alternative Firebase Code:
-            //            // Code doesn't seem as efficient as code below to removeValue()
-            //            GoalItemService.deleteGoal(for: User.current, goal: goalItemRow, success: { (success) in
-            //                if success == true {
-            //                    print("SUCCESS WRITING GOAL: \(success)")
-            //                    return
-            //                }
-            //            })
-
-            // Firebase
-            messageItemRow.ref?.removeValue()
-        }
-    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            let messageItemRow = messageItems[indexPath.row]
+//            print("ITEM TO DELETE")
+//            print("goalItemRow: \(messageItemRow)")
+//
+//            // Alternative Firebase Code:
+//            //            // Code doesn't seem as efficient as code below to removeValue()
+//            //            GoalItemService.deleteGoal(for: User.current, goal: goalItemRow, success: { (success) in
+//            //                if success == true {
+//            //                    print("SUCCESS WRITING GOAL: \(success)")
+//            //                    return
+//            //                }
+//            //            })
+//
+//            // Firebase
+//            messageItemRow.ref?.removeValue()
+//        }
+//    }
 
 
 }
 
-//MARK:- TextField Delegate Methods
+// MARK: - Table View Cell Methods
 
-extension JournalViewController: GrowingTextViewDelegate {
+extension JournalViewController: JournalTableViewCellDelegate {
 
-    func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
-        UIView.animate(withDuration: 0.2) {
-            self.view.layoutIfNeeded()
-        }
+    func goToSourceURL(url: String) {
+        // get the URL from the delegate and presents in Safari VC
+        let sponsorURL = URL(string: url)!
+        let safariVC = SFSafariViewController(url: sponsorURL)
+        present(safariVC, animated: true, completion: nil)
     }
 }
 
-// MARK: - Text View Delegate
 
-extension JournalViewController: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        UIView.animate(withDuration: 0.18) {
-            // put in the animations that we want to happen
-            // increase height constraint from 50 to 308 (+258)
-            self.heightConstraint.constant = 272
-            // call autolayout to update the UI
-            self.view.layoutIfNeeded()
-        }
-    }
 
-    func textViewDidEndEditing(_ textView: UITextView) {
-        UIView.animate(withDuration: 0.25) {
-            self.heightConstraint.constant = 132
-            self.view.layoutIfNeeded()
-        }
-    }
-}
+
 
 
 

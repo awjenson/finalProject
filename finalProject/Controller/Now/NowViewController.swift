@@ -592,7 +592,7 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
                 app.open(URL(string:url)!)
             } else {
                 performUIUpdatesOnMain {
-                    self.createAlert(title: "Could not open URL", message: "Check your Internet connectio and try again.")
+                    self.createAlert(title: "Could not open URL", message: "Check your Internet connection and try again.")
                 }
             }
         }

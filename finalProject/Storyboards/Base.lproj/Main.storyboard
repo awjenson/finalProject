@@ -680,153 +680,134 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iWW-x8-s1a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="487"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1e9-jg-De1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="467"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="NSJ-6y-Hla">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ND8-AW-bmJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="428"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="FOK-u9-pr6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3JA-dq-bEf">
-                                            <rect key="frame" x="10" y="8" width="355" height="79"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80% of your decisions are based on emotions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpA-H1-27U" userLabel="Title Label" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                    <rect key="frame" x="69" y="0.0" width="217.5" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="hrg-Z8-s07"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
-                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="QuoteText" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="dhm-5E-Dfn" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                    <rect key="frame" x="136" y="15" width="83.5" height="47"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="Quote Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHE-ps-faC" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                    <rect key="frame" x="134" y="62" width="87" height="17"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80% of your decisions are based on emotions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nz4-Ee-zL8" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
+                                            <rect key="frame" x="79" y="8" width="218" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="12" id="xSC-NZ-VPN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="3JA-dq-bEf" secondAttribute="trailing" constant="10" id="4Ae-aK-nkv"/>
-                                        <constraint firstItem="3JA-dq-bEf" firstAttribute="top" secondItem="NSJ-6y-Hla" secondAttribute="top" constant="8" id="T7M-Qd-YJq"/>
-                                        <constraint firstAttribute="bottom" secondItem="3JA-dq-bEf" secondAttribute="bottom" constant="8" id="Zhb-OR-HSI"/>
-                                        <constraint firstItem="3JA-dq-bEf" firstAttribute="leading" secondItem="NSJ-6y-Hla" secondAttribute="leading" constant="10" id="lHB-1V-y3u"/>
+                                        <constraint firstItem="nz4-Ee-zL8" firstAttribute="centerX" secondItem="FOK-u9-pr6" secondAttribute="centerX" id="Rpz-D7-XnW"/>
+                                        <constraint firstItem="nz4-Ee-zL8" firstAttribute="top" secondItem="FOK-u9-pr6" secondAttribute="top" constant="8" id="Xux-YK-FL1"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JournalCell" rowHeight="134" id="t4K-N3-Y1U" customClass="JournalTableViewCell" customModule="finalProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="123" width="375" height="134"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JournalCell" rowHeight="130" id="jA6-4R-Ez5" customClass="JournalTableViewCell" customModule="finalProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4K-N3-Y1U" id="Tkm-eh-bbm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jA6-4R-Ez5" id="Hvn-Ok-Icw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gke-9E-Bpa" customClass="CardView" customModule="finalProject" customModuleProvider="target">
-                                                    <rect key="frame" x="18" y="14" width="345" height="112"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-Bw-JgE">
-                                                    <rect key="frame" x="35" y="31" width="305" height="72"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJQ-Jg-VBm" customClass="CardView" customModule="finalProject" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="10" width="355" height="109"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-hE-BqE" userLabel="Title Label" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="305" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-gu-QlE" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="23.5" width="305" height="28.5"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDF-rR-NRb" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="55" width="305" height="17"/>
-                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="O3F-FB-6Lg">
+                                                            <rect key="frame" x="10" y="10" width="335" height="89"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mM0-O2-hpY" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="39.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEe-FN-Lar" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="45.5" width="335" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-qd-7bY" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="72" width="335" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
-                                                </stackView>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="O3F-FB-6Lg" firstAttribute="top" secondItem="NJQ-Jg-VBm" secondAttribute="top" constant="10" id="AEn-Qi-qtf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="O3F-FB-6Lg" secondAttribute="trailing" constant="10" id="khr-hB-H68"/>
+                                                        <constraint firstAttribute="bottom" secondItem="O3F-FB-6Lg" secondAttribute="bottom" constant="10" id="ntX-CN-Rgu"/>
+                                                        <constraint firstItem="O3F-FB-6Lg" firstAttribute="leading" secondItem="NJQ-Jg-VBm" secondAttribute="leading" constant="10" id="yb9-gb-xWi"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gke-9E-Bpa" firstAttribute="leading" secondItem="Tkm-eh-bbm" secondAttribute="leadingMargin" constant="3" id="LfS-2z-rdt"/>
-                                                <constraint firstItem="gke-9E-Bpa" firstAttribute="top" secondItem="Tkm-eh-bbm" secondAttribute="topMargin" constant="3" id="MMB-Zb-CXL"/>
-                                                <constraint firstItem="gke-9E-Bpa" firstAttribute="trailing" secondItem="Tkm-eh-bbm" secondAttribute="trailingMargin" constant="3" id="NEr-Ne-1mq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="3VY-Bw-JgE" secondAttribute="trailing" constant="20" id="QVM-Vr-TjA"/>
-                                                <constraint firstItem="3VY-Bw-JgE" firstAttribute="leading" secondItem="Tkm-eh-bbm" secondAttribute="leadingMargin" constant="20" id="SUF-5c-F5U"/>
-                                                <constraint firstItem="3VY-Bw-JgE" firstAttribute="top" secondItem="Tkm-eh-bbm" secondAttribute="topMargin" constant="20" id="TgR-v7-OBx"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="3VY-Bw-JgE" secondAttribute="bottom" constant="20" id="k4g-ia-IKO"/>
-                                                <constraint firstItem="gke-9E-Bpa" firstAttribute="bottom" secondItem="Tkm-eh-bbm" secondAttribute="bottomMargin" constant="3" id="yAh-nM-vAB"/>
+                                                <constraint firstItem="NJQ-Jg-VBm" firstAttribute="top" secondItem="Hvn-Ok-Icw" secondAttribute="top" constant="10" id="acW-g8-E1G"/>
+                                                <constraint firstAttribute="trailing" secondItem="NJQ-Jg-VBm" secondAttribute="trailing" constant="10" id="baH-O3-k1N"/>
+                                                <constraint firstAttribute="bottom" secondItem="NJQ-Jg-VBm" secondAttribute="bottom" constant="10" id="cqI-YJ-B01"/>
+                                                <constraint firstItem="NJQ-Jg-VBm" firstAttribute="leading" secondItem="Hvn-Ok-Icw" secondAttribute="leading" constant="10" id="laD-wC-kBM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="boarderColorView" destination="gke-9E-Bpa" id="csU-70-wGs"/>
-                                            <outlet property="bodyLabel" destination="5oG-gu-QlE" id="7QS-b3-uTP"/>
-                                            <outlet property="sourceLabel" destination="VDF-rR-NRb" id="6a5-vw-wFV"/>
-                                            <outlet property="titleLabel" destination="zMy-hE-BqE" id="2lT-LC-fx8"/>
+                                            <outlet property="boarderColorView" destination="NJQ-Jg-VBm" id="0cK-l4-O6l"/>
+                                            <outlet property="bodyLabel" destination="dEe-FN-Lar" id="yBT-ZX-qVC"/>
+                                            <outlet property="sourceLabel" destination="gpI-qd-7bY" id="Xq4-zm-2bf"/>
+                                            <outlet property="titleLabel" destination="mM0-O2-hpY" id="OKO-zV-Hkc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-u9-o5f" userLabel="Compose Msg View">
-                                <rect key="frame" x="79" y="488" width="216" height="130"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-u9-o5f" userLabel="Compose Msg View">
+                                <rect key="frame" x="0.0" y="488" width="375" height="130"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IW9-SA-mbZ">
-                                        <rect key="frame" x="10" y="4" width="196" height="116"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IW9-SA-mbZ">
+                                        <rect key="frame" x="5" y="5" width="365" height="120"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Kge-09-3cs">
-                                                <rect key="frame" x="0.0" y="0.0" width="196" height="35"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Kge-09-3cs">
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="36"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-KB-uSm" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="35"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-KB-uSm" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Zero"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="olI-3N-03j"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gl-oN-1mU" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="40" y="0.0" width="31" height="35"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gl-oN-1mU" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="69.5" y="0.0" width="57.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="One"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="4al-FP-zel"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8i-fA-nh1" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="77" y="0.0" width="31" height="35"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8i-fA-nh1" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="133" y="0.0" width="57.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Two"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="6FQ-x2-mh2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-S4-qHP" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="114" y="0.0" width="42" height="35"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-S4-qHP" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="196.5" y="0.0" width="79" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Three"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="5bl-89-QAN"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-kB-snS" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="162" y="0.0" width="34" height="35"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-kB-snS" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="281.5" y="0.0" width="83.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Four"/>
                                                         <connections>
@@ -835,43 +816,43 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mRP-7z-Afy">
-                                                <rect key="frame" x="0.0" y="41" width="196" height="34.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="mRP-7z-Afy">
+                                                <rect key="frame" x="0.0" y="42" width="365" height="36"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owE-Em-cft" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owE-Em-cft" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Five"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="zkb-hN-kse"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-SK-qRA" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="36" y="0.0" width="30" height="34.5"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-SK-qRA" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="0.0" width="55.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Six"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="ASW-xL-ZjL"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlU-dm-dR7" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="72" y="0.0" width="43" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlU-dm-dR7" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="123.5" y="0.0" width="80.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Seven"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="f3H-FA-My9"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-0x-0Wu" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="121" y="0.0" width="37" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-0x-0Wu" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="210" y="0.0" width="68.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Eight"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="ig5-DW-weI"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ae-WH-G7R" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="164" y="0.0" width="32" height="34.5"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ae-WH-G7R" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="284.5" y="0.0" width="80.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Nine"/>
                                                         <connections>
@@ -880,43 +861,43 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="84E-d0-IVv">
-                                                <rect key="frame" x="0.0" y="81.5" width="196" height="34.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="84E-d0-IVv">
+                                                <rect key="frame" x="0.0" y="84" width="365" height="36"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3R-Bj-Ziw" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3R-Bj-Ziw" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Ten"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="cs5-IY-LPe"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcI-Nf-2GD" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="34" y="0.0" width="43.5" height="34.5"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcI-Nf-2GD" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="58.5" y="0.0" width="80" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Eleven"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="PyG-IT-jdZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnl-Vs-ean" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="83.5" y="0.0" width="45.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnl-Vs-ean" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="144.5" y="0.0" width="86" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="Twelve"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="VMb-fL-PUU"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF4-Pu-l0M" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="135" y="0.0" width="28.5" height="34.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EF4-Pu-l0M" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="236.5" y="0.0" width="52" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="13"/>
                                                         <connections>
                                                             <action selector="moodButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="jFs-1y-RzT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-CN-36a" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
-                                                        <rect key="frame" x="169.5" y="0.0" width="26.5" height="34.5"/>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-CN-36a" customClass="RoundedSquareButton" customModule="finalProject" customModuleProvider="target">
+                                                        <rect key="frame" x="294.5" y="0.0" width="70.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <state key="normal" title="14"/>
                                                         <connections>
@@ -930,20 +911,69 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="IW9-SA-mbZ" secondAttribute="bottom" constant="10" id="CYg-dK-SUs"/>
-                                    <constraint firstItem="IW9-SA-mbZ" firstAttribute="top" secondItem="PyK-u9-o5f" secondAttribute="top" constant="4" id="JqS-lb-fJn"/>
-                                    <constraint firstItem="IW9-SA-mbZ" firstAttribute="leading" secondItem="PyK-u9-o5f" secondAttribute="leading" constant="10" id="VIe-zh-OL9"/>
-                                    <constraint firstAttribute="trailing" secondItem="IW9-SA-mbZ" secondAttribute="trailing" constant="10" id="nRC-fU-vvj"/>
-                                    <constraint firstAttribute="height" constant="130" id="vyA-Qo-X7z"/>
+                                    <constraint firstAttribute="bottom" secondItem="IW9-SA-mbZ" secondAttribute="bottom" constant="5" id="8J5-om-Y2e"/>
+                                    <constraint firstAttribute="height" constant="130" id="KNY-df-2KU"/>
+                                    <constraint firstItem="IW9-SA-mbZ" firstAttribute="leading" secondItem="PyK-u9-o5f" secondAttribute="leading" constant="5" id="blG-5g-0LB"/>
+                                    <constraint firstItem="IW9-SA-mbZ" firstAttribute="top" secondItem="PyK-u9-o5f" secondAttribute="top" constant="5" id="l7M-ej-lzL"/>
+                                    <constraint firstAttribute="trailing" secondItem="IW9-SA-mbZ" secondAttribute="trailing" constant="5" id="skT-JK-jjW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRF-gH-qvO" userLabel="HideMoodButtonView">
+                                <rect key="frame" x="0.0" y="448" width="375" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-0R-klf">
+                                        <rect key="frame" x="5" y="5" width="365" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Mood:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umb-JS-Afa">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zh-Tm-rzG">
+                                                <rect key="frame" x="265" y="0.0" width="100" height="31"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="7DA-Gv-Giv"/>
+                                                </constraints>
+                                                <state key="normal" title="Display">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hideButtonTapped:" destination="ErU-2B-DrK" eventType="touchUpInside" id="I5F-eQ-eXJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="T0X-0R-klf" firstAttribute="top" secondItem="xRF-gH-qvO" secondAttribute="top" constant="5" id="C95-0T-pOd"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0X-0R-klf" secondAttribute="trailing" constant="5" id="DgK-TI-ttW"/>
+                                    <constraint firstItem="T0X-0R-klf" firstAttribute="centerX" secondItem="xRF-gH-qvO" secondAttribute="centerX" id="GEO-Jd-IO5"/>
+                                    <constraint firstItem="T0X-0R-klf" firstAttribute="centerY" secondItem="xRF-gH-qvO" secondAttribute="centerY" id="GxY-kq-4or"/>
+                                    <constraint firstAttribute="bottom" secondItem="T0X-0R-klf" secondAttribute="bottom" constant="4" id="VZ6-qa-WR3"/>
+                                    <constraint firstItem="T0X-0R-klf" firstAttribute="leading" secondItem="xRF-gH-qvO" secondAttribute="leading" constant="5" id="i8Z-1o-Mhw"/>
+                                    <constraint firstAttribute="height" constant="40" id="zjI-C5-sVt"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iWW-x8-s1a" firstAttribute="leading" secondItem="QWf-MI-rha" secondAttribute="leading" id="4ZQ-pi-zbs"/>
-                            <constraint firstAttribute="bottom" secondItem="iWW-x8-s1a" secondAttribute="bottom" constant="180" id="d1k-62-vVo"/>
+                            <constraint firstItem="xRF-gH-qvO" firstAttribute="trailing" secondItem="QWf-MI-rha" secondAttribute="trailing" id="Cfp-hN-sjE"/>
+                            <constraint firstItem="xRF-gH-qvO" firstAttribute="top" secondItem="ND8-AW-bmJ" secondAttribute="bottom" id="CwM-wO-rIC"/>
+                            <constraint firstItem="PyK-u9-o5f" firstAttribute="top" secondItem="xRF-gH-qvO" secondAttribute="bottom" id="FaS-dq-ISb"/>
+                            <constraint firstItem="ND8-AW-bmJ" firstAttribute="trailing" secondItem="QWf-MI-rha" secondAttribute="trailing" id="GaU-4K-XKx"/>
+                            <constraint firstItem="QWf-MI-rha" firstAttribute="trailing" secondItem="PyK-u9-o5f" secondAttribute="trailing" id="MK8-BX-77J"/>
+                            <constraint firstItem="ND8-AW-bmJ" firstAttribute="top" secondItem="QWf-MI-rha" secondAttribute="top" id="PtJ-D5-ASW"/>
+                            <constraint firstItem="xRF-gH-qvO" firstAttribute="leading" secondItem="QWf-MI-rha" secondAttribute="leading" id="SmG-Yv-F8L"/>
+                            <constraint firstAttribute="bottom" secondItem="iWW-x8-s1a" secondAttribute="bottom" constant="90" id="d1k-62-vVo"/>
                             <constraint firstItem="iWW-x8-s1a" firstAttribute="top" secondItem="pXG-kF-aoE" secondAttribute="top" id="fOg-Fm-5id"/>
+                            <constraint firstItem="PyK-u9-o5f" firstAttribute="leading" secondItem="QWf-MI-rha" secondAttribute="leading" id="kWI-1d-CRV"/>
                             <constraint firstItem="iWW-x8-s1a" firstAttribute="trailing" secondItem="QWf-MI-rha" secondAttribute="trailing" id="wI1-4K-zlI"/>
+                            <constraint firstItem="ND8-AW-bmJ" firstAttribute="leading" secondItem="QWf-MI-rha" secondAttribute="leading" id="wje-a4-Ur1"/>
+                            <constraint firstItem="QWf-MI-rha" firstAttribute="bottom" secondItem="PyK-u9-o5f" secondAttribute="bottom" id="yvR-pl-1Jr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QWf-MI-rha"/>
                     </view>
@@ -952,9 +982,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Tracker" id="UXB-Fq-tF0"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="authorLabel" destination="HHE-ps-faC" id="Sup-Cp-YuW"/>
+                        <outlet property="hideButton" destination="8Zh-Tm-rzG" id="C4V-sX-Ad9"/>
                         <outlet property="imageView" destination="iWW-x8-s1a" id="nTN-Tp-ZBJ"/>
-                        <outlet property="journalTableView" destination="1e9-jg-De1" id="ueh-ct-oUu"/>
+                        <outlet property="journalTableView" destination="ND8-AW-bmJ" id="82Y-ZW-lcv"/>
                         <outlet property="mood0Button" destination="KhV-KB-uSm" id="R3v-Op-F2q"/>
                         <outlet property="mood10Button" destination="C3R-Bj-Ziw" id="Fh7-5i-f36"/>
                         <outlet property="mood11Button" destination="xcI-Nf-2GD" id="8Lf-jh-r2x"/>
@@ -970,15 +1000,13 @@
                         <outlet property="mood7Button" destination="DlU-dm-dR7" id="GeQ-Eg-m2A"/>
                         <outlet property="mood8Button" destination="hpu-0x-0Wu" id="5fJ-cH-QU5"/>
                         <outlet property="mood9Button" destination="6ae-WH-G7R" id="5Ui-Ha-MeU"/>
-                        <outlet property="questionLabel" destination="5oG-gu-QlE" id="LQF-5g-1uG"/>
-                        <outlet property="quoteLabel" destination="dhm-5E-Dfn" id="8rs-5k-bv5"/>
-                        <outlet property="tipSourceLabel" destination="VDF-rR-NRb" id="o8Q-Jt-CK3"/>
-                        <outlet property="titleLabel" destination="cpA-H1-27U" id="lxR-eF-NWu"/>
+                        <outlet property="moodButtonViewHeight" destination="KNY-df-2KU" id="l1C-VR-de4"/>
+                        <outlet property="selectedMoodLabel" destination="umb-JS-Afa" id="tOZ-oK-UaO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J04-ba-lzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-154.40000000000001" y="935.98200899550227"/>
+            <point key="canvasLocation" x="-178.5" y="935.5"/>
         </scene>
         <!--Master Journal View Controller-->
         <scene sceneID="PUo-OI-jFq">
@@ -1225,7 +1253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgf-bd-b9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637.60000000000002" y="935.98200899550227"/>
+            <point key="canvasLocation" x="598" y="936"/>
         </scene>
         <!--Daily-->
         <scene sceneID="TuK-1p-EWp">
