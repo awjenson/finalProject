@@ -23,6 +23,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
 
+    // Removed
     @IBOutlet weak var factQuote: UILabel!
     @IBOutlet weak var factAuthor: UILabel!
 
@@ -56,6 +57,21 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
 
     // MARK: - Lifecycle Methods
+
+    override func viewDidLayoutSubviews() {
+        // Code to adjust size of tableviewHeader
+        // Source: https://useyourloaf.com/blog/variable-height-table-view-header/
+        super.viewDidLayoutSubviews()
+        guard let headerView = counterTableView.tableHeaderView else {
+            return
+        }
+        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        if headerView.frame.size.height != size.height {
+            headerView.frame.size.height = size.height
+            counterTableView.tableHeaderView = headerView
+            counterTableView.layoutIfNeeded()
+        }
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -152,8 +168,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         sourceLabel.text = quote.source
 
         // Fact Quote
-        factQuote.text = fact.quote
-        factAuthor.text = fact.source
+//        factQuote.text = fact.quote
+//        factAuthor.text = fact.source
 
     }
 
@@ -366,8 +382,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         let goalItemRow = items[indexPath.row]
 
-        cell.titleLabel.text = goalItemRow.name
-        cell.bodyLabel.text = goalItemRow.why
+        cell.configureCell(habit: goalItemRow)
+
 
         // This data gets updated in DetailTextLabel Text
         increaseCellCount(cell, newNumber: goalItemRow.count)

@@ -14,6 +14,19 @@ class CounterTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var emojiLabel: UILabel!
+
+    var habitItem: GoalItem!
+
+    func configureCell(habit: GoalItem) {
+        // Display summarized text in
+        habitItem = habit
+        titleLabel.text = habit.name
+        bodyLabel.text = habit.why
+        countLabel.text = String(habit.count)
+        emojiLabel.text = displayEmoji(habit.count)
+
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +37,31 @@ class CounterTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func displayEmoji(_ count: Int) -> String {
+        switch count {
+        case 0:
+            return "😴"
+        case 1...9:
+            return "🙂"
+        case 10...20:
+            return "😎"
+        case 21...65:
+            return "💪"
+        case 66...99:
+            return "🙌"
+        case 100...199:
+            return "🔥"
+        case 200...299:
+            return "🥉"
+        case 300...399:
+            return "🥈"
+        case 400...1000:
+            return "🏆"
+        default:
+            return "⭐️"
+        }
     }
 
 }

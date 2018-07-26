@@ -33,6 +33,7 @@ class JournalTableViewCell: UITableViewCell {
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
         sourceLabel.text = tip.sourceName
+        
     }
 
     override func awakeFromNib() {
@@ -41,7 +42,7 @@ class JournalTableViewCell: UITableViewCell {
         // cell
         backgroundColor = UIColor.clear
 
-        // UIView
-        boarderColorView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+//        // UIView
+//        boarderColorView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
     }
 }

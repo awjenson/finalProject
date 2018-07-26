@@ -82,6 +82,21 @@ class JournalViewController: UIViewController {
 
     // MARK: - Lifecycle Methods
 
+    override func viewDidLayoutSubviews() {
+        // Code to adjust size of tableviewHeader
+        // Source: https://useyourloaf.com/blog/variable-height-table-view-header/
+        super.viewDidLayoutSubviews()
+        guard let headerView = journalTableView.tableHeaderView else {
+            return
+        }
+        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+        if headerView.frame.size.height != size.height {
+            headerView.frame.size.height = size.height
+            journalTableView.tableHeaderView = headerView
+            journalTableView.layoutIfNeeded()
+        }
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -165,6 +180,10 @@ class JournalViewController: UIViewController {
         if let imageToLoad = selectedImage {
             imageView.image  = UIImage(named: imageToLoad)
         }
+
+        // Set initial quote
+        quoteLabel.text = advice.quote
+        authorLabel.text = advice.source
 
         selectedMoodLabel.text = "Select Mood:"
 
@@ -308,32 +327,32 @@ class JournalViewController: UIViewController {
         case 0...4:
             print("Sunday, Very Early Morning")
             // night
-
+            advice = AdviceData.am1
             selectedImage = Constants.JournalImages.night1
             tipItems = AdviceData.am1Tips1
         case 5...9:
             // morning
-
+            advice = AdviceData.am1
             selectedImage = Constants.JournalImages.morning1
             tipItems = AdviceData.am1Tips1
         case 10...13:
             // day
-
+            advice = AdviceData.am1
             selectedImage = Constants.JournalImages.day1
             tipItems = AdviceData.am1Tips1
         case 14...17:
             // afternoon
-
+            advice = AdviceData.pm1
             selectedImage = Constants.JournalImages.afternoon1
             tipItems = AdviceData.pm1Tips1
         case 18...21:
             // sunset
-
+            advice = AdviceData.pm1
             selectedImage = Constants.JournalImages.sunset1
             tipItems = AdviceData.pm1Tips1
         case 22...24:
             // night
-
+            advice = AdviceData.pm1
             selectedImage = Constants.JournalImages.night1
             tipItems = AdviceData.pm1Tips1
 
@@ -347,26 +366,32 @@ class JournalViewController: UIViewController {
         case 0...4:
             print("Sunday, Very Early Morning")
             // night
+            advice = AdviceData.am2
             tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.night2
         case 5...9:
             // morning
+            advice = AdviceData.am2
             tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.morning2
         case 10...13:
             // day
+            advice = AdviceData.am2
             tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.day2
         case 14...17:
             // afternoon
+            advice = AdviceData.pm2
             tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.afternoon2
         case 18...21:
             // sunset
+            advice = AdviceData.pm2
             tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.sunset2
         case 22...24:
             // night
+            advice = AdviceData.pm2
             tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.night2
         default:
@@ -379,26 +404,32 @@ class JournalViewController: UIViewController {
         case 0...4:
             print("Sunday, Very Early Morning")
             // night
+            advice = AdviceData.am3
             tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.night3
         case 5...9:
             // morning
+            advice = AdviceData.am3
             tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.morning3
         case 10...13:
             // day
+            advice = AdviceData.am3
             tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.day3
         case 14...17:
             // afternoon
+            advice = AdviceData.pm3
             tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.afternoon3
         case 18...21:
             // sunset
+            advice = AdviceData.pm3
             tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.sunset3
         case 22...24:
             // night
+            advice = AdviceData.pm3
             tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.night3
         default:
@@ -409,7 +440,6 @@ class JournalViewController: UIViewController {
     func wednesday(_ hour: Int) {
         switch hour {
         case 0...4:
-            print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am4
             selectedImage = Constants.JournalImages.night4
@@ -423,7 +453,8 @@ class JournalViewController: UIViewController {
             selectedImage = Constants.JournalImages.day4
         case 14...17:
             // afternoon
-            tipItems = AdviceData.pm1Tips1
+            advice = AdviceData.pm4
+//            tipItems = AdviceData.pm1Tips1
             selectedImage = Constants.JournalImages.afternoon4
         case 18...21:
             // sunset
@@ -746,6 +777,11 @@ class JournalViewController: UIViewController {
 
 
     @IBAction func moodButtonTapped(_ sender: UIButton) {
+
+        quoteLabel.text = nil
+        authorLabel.text = nil
+        
+        
 
         // Plan to add response in next version of app
 

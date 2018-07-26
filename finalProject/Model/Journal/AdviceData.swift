@@ -14,7 +14,7 @@ struct AdviceData {
 
 
 
-    static let am1 = JournalQuote(quote: "", source: "")
+    static let am1 = JournalQuote(quote: "\"Those who are unaware they are walking in darkness will never seek the light.\"", source: "Bruce Lee")
 
     static let am1Tip1 = JournalTip(title: "\"Those who are unaware they are walking in darkness will never seek the light.\"", body: "Bruce Lee", sourceName: "", sourceURL: "")
     static let am1Tip2 = JournalTip(title: Constants.Header.watch, body: "MORNING MOTIVATION - How Successful People Start Their Day", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=iLNyiaAscQ0")
@@ -65,7 +65,7 @@ struct AdviceData {
 
     static let am4Tips1 = [am4Tip1, am4Tip2]
 
-    static let pm4 = JournalQuote(quote: "", source: "")
+    static let pm4 = JournalQuote(quote: "\"Be mindful of your self talk. It's a conversation with the universe.\"", source: "David James Lees")
     static let pm4Tip1 = JournalTip(title: "\"Be mindful of your self talk. It's a conversation with the universe.\"", body: "David James Lees", sourceName: "", sourceURL: "")
     static let pm4Tip2 = JournalTip(title: Constants.Header.watch, body: "WINNING PSYCHOLOGY - New Motivational Videos Compilation", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ZNmdEau_JNM")
 
