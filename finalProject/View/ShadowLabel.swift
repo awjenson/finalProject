@@ -25,7 +25,7 @@ class ShadowLabel: UILabel {
         backgroundColor = UIColor.clear
         textColor = UIColor.white
 //        textAlignment = .center
-        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOffset = CGSize(width: 0.25, height: 0.25)
         layer.shadowOpacity = 1
         layer.shadowRadius = 7
 

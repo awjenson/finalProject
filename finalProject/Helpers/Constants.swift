@@ -35,12 +35,12 @@ struct Constants {
     // Journal
 
     struct Header {
-        static let advice = "ADVICE"
+        static let advice = "Advice to reduce anxiety"
         static let tip = "TIP"
         static let mindfulness = "MINDFULNESS"
         static let quote = "QUOTE"
         static let research = "RESEARCH"
-        static let watch = "WATCH"
+        static let watch = "Watch this"
     }
 
     struct SelectedMood {

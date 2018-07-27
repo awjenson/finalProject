@@ -64,6 +64,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
     // MARK: - Lifecycle Methods
 
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 

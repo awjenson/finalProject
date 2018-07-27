@@ -380,6 +380,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! CounterTableViewCell
 
+
         let goalItemRow = items[indexPath.row]
 
         cell.configureCell(habit: goalItemRow)
@@ -439,14 +440,11 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         counter += 1
         increaseEmoji(count: counter)
-
     }
-
 
 
     func increaseCellCount(_ cell: CounterTableViewCell, newNumber: Int) {
         cell.countLabel.text = " \(newNumber)"
-//        cell.bodyLabel.text = ""
     }
 
     // MARK: - IBActions
