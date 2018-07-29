@@ -86,8 +86,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         if internetConnected() {
-            SVProgressHUD.show()
-            retrieveProfileUserData()
+            // Will retrieve profile user data in beta version
+//            retrieveProfileUserData()
         } else {
             performUIUpdatesOnMain {
                 self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
@@ -191,15 +191,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
 
-    func configureCards() {
-        quoteCardView.layer.borderColor = topicColor?.cgColor
-        quoteCardView.layer.shadowColor = topicColor?.cgColor
-
-        mediaCardView.layer.borderColor = topicColor?.cgColor
-        mediaCardView.layer.shadowColor = topicColor?.cgColor
-    }
-
-
     func setupRefreshControl() {
 
         // add pull to refresh
@@ -212,8 +203,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
         // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
         if self.refreshControl.isRefreshing {
-            // Reload time based array
-            retrieveProfileUserData()
+            // Reload time based array. Currently not using this (will add for beta release)
+//            retrieveProfileUserData()
             self.refreshControl.endRefreshing()
         }
         self.profileTableView.reloadData()
@@ -290,11 +281,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
         // Media
         mediaTitleLabel.text = selectedPersonProfile.description
-
     }
 
 
     func retrieveProfileUserData() {
+
+        SVProgressHUD.show()
         // listen for new messages in the firebase database with 'observe'
         // Configure database to sync messages
         // .reference() gets a DatabaseReference for the root of the app's Firebase Database

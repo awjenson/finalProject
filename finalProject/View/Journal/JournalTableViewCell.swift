@@ -17,7 +17,7 @@ protocol JournalTableViewCellDelegate {
 
 class JournalTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var boarderColorView: CardView!
+    @IBOutlet weak var boarderColorView: UIView!
     @IBOutlet weak var titleLabel: ShadowLabel!
     @IBOutlet weak var bodyLabel: ShadowLabel!
     @IBOutlet weak var sourceLabel: ShadowLabel!

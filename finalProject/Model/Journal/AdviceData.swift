@@ -129,7 +129,7 @@ struct AdviceData {
 
     // Button1 = "Depressed"
     //
-    static let depressedQuote0 = JournalQuote(quote: "\"I found that with depression, one of the most important things you could realize is that you're not along.\"", source: "Dwayne Johnson")
+    static let depressedQuote0 = JournalQuote(quote: "\"I found that with depression, one of the most important things you could realize is that you're not alone.\"", source: "Dwayne Johnson")
 
     static let depressedTip1 = JournalTip(title: "Advice to reduce depression", body: "Follow a daily routine to get back on track. Exercise will release feel-good chemicals. Challenge your negative thoughts with logical questioning. Help others. Eat healthy foods. Do something that you enjoy (watch a movie, walk in nature, or spend time with friends). Go to bed and get up at the same time every day.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/depression/features/natural-treatments")
     static let depressedTip2 = JournalTip(title: Constants.Header.watch, body: "Depression Motivation - Broken heart, Anxiety and Hard Times", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=VFX2Nqwwm44")
@@ -174,13 +174,15 @@ struct AdviceData {
     static let mad0Tips1 = [madTip1, madTip2]
 
     // Button6 = "Stressed"
-    //
     static let stressedQuote0 = JournalQuote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew J. Berstein")
 
-    static let stressedTip1 = JournalTip(title: "Ways to de-stress right now", body: "Breathe deeply, go for a walk, visualize a peaceful forest or beach, list to classical music, watch a funny video, call a friend, or even turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
+    static let stressedTip1 = JournalTip(title: "Reduce stress right now", body: "Breathe deeply, go for a walk, visualize a peaceful forest or beach, list to classical music, watch a funny video, call a friend, or even turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
     static let stressedTip2 = JournalTip(title: Constants.Header.watch, body: "WHEN YOU FEEL STRESSED - Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5QbtU8daKc8")
 
-    static let stressed0Tips1 = [stressedTip1, stressedTip2]
+    static let stressedTip3 = JournalTip(title: "Reading for six minutes reduces stress by 68%", body: "Psychologists believe this is because the human mind has to concentrate on reading and the distraction of being taken into a literary world eases the tension in your body. \n\nAnd it works better and faster than other methods to calm frazzled nerves such as listening to music (61%), having a cup of coffee or tea (54%), or going for a walk (42%).", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/health/news/5070874/Reading-can-help-reduce-stress.html")
+
+
+    static let stressed0Tips1 = [stressedTip1, stressedTip2, stressedTip3]
 
     // Button7 = "Anxious"
     //

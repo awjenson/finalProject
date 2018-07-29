@@ -166,11 +166,6 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         // Inspirational Quote
         quoteLabel.text = quote.quote
         sourceLabel.text = quote.source
-
-        // Fact Quote
-//        factQuote.text = fact.quote
-//        factAuthor.text = fact.source
-
     }
 
 //    func configureDatabase() {
@@ -230,16 +225,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func sunday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Sunday, Very Early Morning")
-            // call function to display 9 time-based topics
+        case 0...9:
             quote = HabitQuote.am1
-            fact = HabitFact.am0
-        case 14...24:
-            print("Sunday, Afternoon")
-            // call function to display 9 time-based topics
+        case 10...14:
+            quote = HabitFact.am1
+        case 15...19:
             quote = HabitQuote.pm1
-            fact = HabitFact.pm0
+        case 20...24:
+            quote = HabitFact.pm1
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -247,16 +240,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func monday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Monday, Very Early Morning")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.am1
-            fact = HabitFact.am1
-        case 14...24:
-            print("Monday, Afternoon")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.pm1
-            fact = HabitFact.pm1
+        case 0...9:
+            quote = HabitQuote.am2
+        case 10...14:
+            quote = HabitFact.am2
+        case 15...19:
+            quote = HabitQuote.pm2
+        case 20...24:
+            quote = HabitFact.pm2
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -264,16 +255,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tuesday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Tuesday, Very Early Morning")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.am2
-            fact = HabitFact.am2
-        case 14...24:
-            print("Tuesday, Afternoon")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.pm2
-            fact = HabitFact.pm2
+        case 0...9:
+            quote = HabitQuote.am3
+        case 10...14:
+            quote = HabitFact.am3
+        case 15...19:
+            quote = HabitQuote.pm3
+        case 20...24:
+            quote = HabitFact.pm3
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -281,16 +270,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func wednesday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Wednesday, Very Early Morning")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.am3
-            fact = HabitFact.am3
-        case 14...24:
-            print("Wednesday, Afternoon")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.pm3
-            fact = HabitFact.pm3
+        case 0...9:
+            quote = HabitQuote.am4
+        case 10...14:
+            quote = HabitFact.am4
+        case 15...19:
+            quote = HabitQuote.pm4
+        case 20...24:
+            quote = HabitFact.pm4
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -298,16 +285,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func thursday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Thursday, Very Early Morning")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.am4
-            fact = HabitFact.am4
-        case 14...24:
-            print("Thursday, Afternoon")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.pm4
-            fact = HabitFact.pm4
+        case 0...9:
+            quote = HabitQuote.am5
+        case 10...14:
+            quote = HabitFact.am5
+        case 15...19:
+            quote = HabitQuote.pm5
+        case 20...24:
+            quote = HabitFact.pm5
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -315,16 +300,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func friday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Friday, Very Early Morning")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.am5
-            fact = HabitFact.pm6
-        case 14...24:
-            print("Friday, Afternoon")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.pm5
-            fact = HabitFact.pm5
+        case 0...9:
+            quote = HabitQuote.am6
+        case 10...14:
+            quote = HabitFact.am6
+        case 15...19:
+            quote = HabitQuote.pm6
+        case 20...24:
+            quote = HabitFact.pm6
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -332,16 +315,14 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func saturday(_ hour: Int) {
         switch hour {
-        case 0..<14:
-            print("Saturday, Very Early Morning")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.am6
-            fact = HabitFact.am6
-        case 14...24:
-            print("Saturday, Afternoon")
-            // call function to display 9 time-based topics
-            quote = HabitQuote.pm6
-            fact = HabitFact.pm6
+        case 0...9:
+            quote = HabitQuote.am7
+        case 10...14:
+            quote = HabitFact.am7
+        case 15...19:
+            quote = HabitQuote.pm7
+        case 20...24:
+            quote = HabitFact.pm7
         default:
             print("ERROR: INVALID HOUR!")
         }

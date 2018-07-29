@@ -571,67 +571,25 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             topicColor = NowConstants.HeaderIndigo.color900
-            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
-                               NowConstants.HeaderIndigo.color700,
-                               NowConstants.HeaderIndigo.color600,
-                               NowConstants.HeaderIndigo.color500,
-                               NowConstants.HeaderIndigo.color400,
-                               NowConstants.HeaderIndigo.color300,
-                               NowConstants.HeaderIndigo.color200,]
+
         case 5...8:
             topicColor = NowConstants.HeaderAmber.color900
-            cellHeaderColor = [NowConstants.HeaderAmber.color800,
-                               NowConstants.HeaderAmber.color700,
-                               NowConstants.HeaderAmber.color600,
-                               NowConstants.HeaderAmber.color500,
-                               NowConstants.HeaderAmber.color400,
-                               NowConstants.HeaderAmber.color300,
-                               NowConstants.HeaderAmber.color200,]
+
         case 9..<11:
             topicColor = NowConstants.HeaderGreen.color900
-            cellHeaderColor = [NowConstants.HeaderGreen.color800,
-                               NowConstants.HeaderGreen.color700,
-                               NowConstants.HeaderGreen.color600,
-                               NowConstants.HeaderGreen.color500,
-                               NowConstants.HeaderGreen.color400,
-                               NowConstants.HeaderGreen.color300,
-                               NowConstants.HeaderGreen.color200,]
+
         case 11..<14:
             topicColor = NowConstants.HeaderCyan.color900
-            cellHeaderColor = [NowConstants.HeaderCyan.color800,
-                               NowConstants.HeaderCyan.color700,
-                               NowConstants.HeaderCyan.color600,
-                               NowConstants.HeaderCyan.color500,
-                               NowConstants.HeaderCyan.color400,
-                               NowConstants.HeaderCyan.color300,
-                               NowConstants.HeaderCyan.color200,]
+
         case 14...16:
             topicColor = NowConstants.HeaderTeal.color900
-            cellHeaderColor = [NowConstants.HeaderTeal.color800,
-                               NowConstants.HeaderTeal.color700,
-                               NowConstants.HeaderTeal.color600,
-                               NowConstants.HeaderTeal.color500,
-                               NowConstants.HeaderTeal.color400,
-                               NowConstants.HeaderTeal.color300,
-                               NowConstants.HeaderTeal.color200,]
+
         case 17...20:
             topicColor = NowConstants.HeaderOrange.color900
-            cellHeaderColor = [NowConstants.HeaderOrange.color800,
-                               NowConstants.HeaderOrange.color700,
-                               NowConstants.HeaderOrange.color600,
-                               NowConstants.HeaderOrange.color500,
-                               NowConstants.HeaderOrange.color400,
-                               NowConstants.HeaderOrange.color300,
-                               NowConstants.HeaderOrange.color200,]
+
         case 21..<24:
             topicColor = NowConstants.HeaderBlue.color900
-            cellHeaderColor = [NowConstants.HeaderBlue.color800,
-                               NowConstants.HeaderBlue.color700,
-                               NowConstants.HeaderBlue.color600,
-                               NowConstants.HeaderBlue.color500,
-                               NowConstants.HeaderBlue.color400,
-                               NowConstants.HeaderBlue.color300,
-                               NowConstants.HeaderBlue.color200,]
+
         default:
             print("ERROR with TopicColor and cellHeaderColor")
         }
@@ -757,7 +715,9 @@ class JournalViewController: UIViewController {
             self.tipItems = newTips
             self.configureTableView()
             self.journalTableView.reloadData()
-
+            // Scroll to top
+            self.journalTableView.layoutIfNeeded()
+            self.journalTableView.contentOffset = CGPoint(x: 0, y: -self.journalTableView.contentInset.top)
         }
     }
 
@@ -772,7 +732,6 @@ class JournalViewController: UIViewController {
             moodButtonViewHeight.constant = 130
             hideButton.setTitle("Hide", for: .normal)
         }
-
     }
 
 
@@ -934,6 +893,17 @@ extension JournalViewController: UITableViewDataSource {
 
         // To change UI of cell, see JournalTableViewCell.
         cell.configureCell(tip: tip)
+
+        cell.boarderColorView.layer.borderWidth = 0.5
+        cell.boarderColorView.layer.cornerRadius = 4
+        cell.boarderColorView.layer.borderColor = topicColor?.cgColor
+        cell.boarderColorView.layer.shadowColor = topicColor?.cgColor
+        cell.boarderColorView.layer.shadowOpacity = 0.9
+        cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.6, height: 1.2)
+        cell.boarderColorView.layer.shadowRadius = 1
+        cell.boarderColorView.backgroundColor = UIColor.white
+
+
 
         return cell
     }
