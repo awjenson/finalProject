@@ -63,8 +63,6 @@ struct Constants {
         static let Button14 = "Calm"
     }
 
-
-
     struct JournalImages {
         static let morning = "morning"
         static let day = "day"

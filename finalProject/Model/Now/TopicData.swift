@@ -362,8 +362,6 @@ let barTip7 = Tip(header: health, title: "Drinking three or four drinks drinks o
 
 let barTip8 = Tip(header: "Bar", title: "When trying to talk with someone you don't know, start with playful banter", body: "It helps you to get the other person to have fun, laugh, and relax. Compare this to more serious conversation starters like \"What do you do for a living\" and \"Where do you live\" which can create stress by demanding personal information from a total stranger.", sourceName: "The Art of Charm", sourceURL: "https://theartofcharm.com/building-a-connection/what-to-say-to-a-girl-you-meet-at-a-bar/", sponsorLogo: "", sponsorURL: "")
 
-//////////
-let barTip9 = Tip(header: "Bar", title: "When trying to talk with someone you don't know, start with playful banter", body: "It helps you to get the other person to have fun, laugh, and relax. Compare this to more serious conversation starters like \"What do you do for a living\" and \"Where do you live\" which can create stress by demanding personal information from a total stranger.", sourceName: "The Art of Charm", sourceURL: "https://theartofcharm.com/building-a-connection/what-to-say-to-a-girl-you-meet-at-a-bar/", sponsorLogo: "", sponsorURL: "")
 
 var barTipArray0 = [barTip1, barTip2, barTip3, barTip4]
 
@@ -538,22 +536,26 @@ let groceryStoreTip17 = Tip(header: "Grocery Store", title: "Shop in the morning
 let groceryStoreTip18 = Tip(header: "Grocery Store", title: "Weekends are the busiest days to grocery shop", body: "Midday is the most crowded time to show on Saturday and Sunday.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
 
 // Weekdays
-let groceryStoreTip19 = Tip(header: "Grocery Store", title: "The most crowded times to shop during the week are between 4 p.m. and 6 p.m. when most people are getting off of work", body: "Shop after dinner time if you want to avoid the crowds. Mondays and Tuesdays are the least busy days but stores may be out of a lot of items, especially if sales start on Wednesday.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip19 = Tip(header: "Grocery Store", title: "The most crowded times to shop during the week are between 4 p.m. and 6 p.m.", body: "Shop after dinner time if you want to avoid the crowds. Mondays and Tuesdays are the least busy days but stores may be out of a lot of items, especially if sales start on Wednesday.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
 
 let groceryStoreTipArray0 = [groceryStoreTip1, groceryStoreTip2, groceryStoreTip3, groceryStoreTip4]
 let groceryStoreTipArray1 = [groceryStoreTip5, groceryStoreTip6, groceryStoreTip7, groceryStoreTip8]
 let groceryStoreTipArray2 = [groceryStoreTip9, groceryStoreTip10, groceryStoreTip11, groceryStoreTip12]
 let groceryStoreTipArray3 = [groceryStoreTip13, groceryStoreTip14, groceryStoreTip15, groceryStoreTip16]
 
-// Weekend
-let groceryStoreTipArray4 = [groceryStoreTip18, groceryStoreTip3, groceryStoreTip4, groceryStoreTip8]
-// Weekday
-let groceryStoreTipArray5 = [groceryStoreTip19, groceryStoreTip12, groceryStoreTip13, groceryStoreTip16]
-
 let groceryStoreTopic0 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray0)
 let groceryStoreTopic1 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray1)
 let groceryStoreTopic2 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray2)
 let groceryStoreTopic3 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray3)
+
+// Weekend (18)
+let groceryStoreTipArrayWEND = [groceryStoreTip18, groceryStoreTip3, groceryStoreTip4, groceryStoreTip8]
+let groceryStoreTopicWEND = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrayWEND)
+// Weekday (19)
+let groceryStoreTipArrayWDAY = [groceryStoreTip19, groceryStoreTip12, groceryStoreTip13, groceryStoreTip16]
+let groceryStoreTopicWDAY = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrayWDAY)
+
+
 
 // MARK: - Shopping, Clothes
 

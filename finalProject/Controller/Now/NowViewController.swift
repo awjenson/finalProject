@@ -45,6 +45,11 @@ class NowViewController: UIViewController {
     @IBOutlet weak var topic4Label: UILabel!
     @IBOutlet weak var topic5Label: UILabel!
 
+    // Return button
+    @IBOutlet weak var returnToTopButton: UIButton!
+    @IBOutlet weak var footerView: UIView!
+
+
     // MARK: - Properties
 
     let formatter = DateFormatter()
@@ -100,6 +105,14 @@ class NowViewController: UIViewController {
         nowTableView.dataSource = self
         nowTableView.delegate = self
         nowTableView.separatorStyle = .none
+
+        // Shadow and Radius
+        returnToTopButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
+        returnToTopButton.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
+        returnToTopButton.layer.shadowOpacity = 0.9
+        returnToTopButton.layer.shadowRadius = 0.0
+        returnToTopButton.layer.masksToBounds = false
+        returnToTopButton.layer.cornerRadius = 5.0
     }
 
     // Call this inside UIButton to scroll to top
@@ -262,7 +275,7 @@ class NowViewController: UIViewController {
 
         case 11..<14:
             print("Weekend, Midday")
-            appendSevenTopics(lunchTopic0, cafeTopic1, groceryStoreTopic0, runningTopic0, gymTopic2, yogaTopic0, sundayNow11to14Topic1)
+            appendSevenTopics(lunchTopic0, cafeTopic1, groceryStoreTopicWEND, runningTopic0, gymTopic2, yogaTopic0, sundayNow11to14Topic1)
 
         case 14...16:
             print("Weekend, Afternoon")
@@ -310,7 +323,7 @@ class NowViewController: UIViewController {
         case 16..<17:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic1, afternoonSnackTopic0, breakTopic0, commutePMTopic0, groceryStoreTopic2, happyHourTopic0, weekdayNow14to16Topic0)
+            appendSevenTopics(workPMTopic1, afternoonSnackTopic0, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, weekdayNow14to16Topic0)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
@@ -353,7 +366,7 @@ class NowViewController: UIViewController {
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic2, mindfulnessTopic1, afternoonSnackTopic0, breakTopic0,   cafePMTopic0, happyHourTopic0, weekdayNow14to16Topic1)
+            appendSevenTopics(workPMTopic2, mindfulnessTopic1, afternoonSnackTopic0, breakTopic0, cafePMTopic0, happyHourTopic0, weekdayNow14to16Topic1)
         case 16..<17:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
@@ -400,11 +413,11 @@ class NowViewController: UIViewController {
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic4, mindfulnessTopic0, afternoonSnackTopic0, breakTopic0,   cafePMTopic0, happyHourTopic0, weekdayNow14to16Topic0)
+            appendSevenTopics(workPMTopic4, mindfulnessTopic0, afternoonSnackTopic0, breakTopic0, cafePMTopic0, happyHourTopic0, weekdayNow14to16Topic0)
         case 16..<17:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, breakTopic0, commutePMTopic0, groceryStoreTopic2, happyHourTopic0, weekdayNow14to16Topic0)
+            appendSevenTopics(workPMTopic0, afternoonSnackTopic0, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, weekdayNow14to16Topic0)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
@@ -524,7 +537,7 @@ class NowViewController: UIViewController {
 
         case 11..<14:
             print("Weekend, Midday")
-            appendSevenTopics(lunchTopic0, cafeTopic0, groceryStoreTopic0, runningTopic0, gymTopic0, yogaTopic0, saturdayNow11to14Topic0)
+            appendSevenTopics(lunchTopic0, cafeTopic0, groceryStoreTopicWEND, runningTopic0, gymTopic0, yogaTopic0, saturdayNow11to14Topic0)
 
         case 14...16:
             print("Weekend, Afternoon")
@@ -588,6 +601,11 @@ class NowViewController: UIViewController {
 
 
     // MARK: - IBActions
+
+    @IBAction func returnToTopTapped(_ sender: Any) {
+        nowTableView.setContentOffset(.zero, animated: true)
+    }
+
 
     @IBAction func topicButtonTapped(_ sender: RoundButton) {
         if let topicNumber = topicButtons.index(of: sender) {

@@ -329,33 +329,26 @@ class JournalViewController: UIViewController {
             // night
             advice = AdviceData.am1
             selectedImage = Constants.JournalImages.night1
-            tipItems = AdviceData.am1Tips1
         case 5...9:
             // morning
             advice = AdviceData.am1
             selectedImage = Constants.JournalImages.morning1
-            tipItems = AdviceData.am1Tips1
         case 10...13:
             // day
             advice = AdviceData.am1
             selectedImage = Constants.JournalImages.day1
-            tipItems = AdviceData.am1Tips1
         case 14...17:
             // afternoon
             advice = AdviceData.pm1
             selectedImage = Constants.JournalImages.afternoon1
-            tipItems = AdviceData.pm1Tips1
         case 18...21:
             // sunset
             advice = AdviceData.pm1
             selectedImage = Constants.JournalImages.sunset1
-            tipItems = AdviceData.pm1Tips1
         case 22...24:
             // night
             advice = AdviceData.pm1
             selectedImage = Constants.JournalImages.night1
-            tipItems = AdviceData.pm1Tips1
-
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -367,32 +360,26 @@ class JournalViewController: UIViewController {
             print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am2
-            tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.night2
         case 5...9:
             // morning
             advice = AdviceData.am2
-            tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.morning2
         case 10...13:
             // day
             advice = AdviceData.am2
-            tipItems = AdviceData.am2Tips1
             selectedImage = Constants.JournalImages.day2
         case 14...17:
             // afternoon
             advice = AdviceData.pm2
-            tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.afternoon2
         case 18...21:
             // sunset
             advice = AdviceData.pm2
-            tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.sunset2
         case 22...24:
             // night
             advice = AdviceData.pm2
-            tipItems = AdviceData.pm2Tips1
             selectedImage = Constants.JournalImages.night2
         default:
             print("ERROR: INVALID HOUR!")
@@ -405,32 +392,26 @@ class JournalViewController: UIViewController {
             print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am3
-            tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.night3
         case 5...9:
             // morning
             advice = AdviceData.am3
-            tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.morning3
         case 10...13:
             // day
             advice = AdviceData.am3
-            tipItems = AdviceData.am3Tips1
             selectedImage = Constants.JournalImages.day3
         case 14...17:
             // afternoon
             advice = AdviceData.pm3
-            tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.afternoon3
         case 18...21:
             // sunset
             advice = AdviceData.pm3
-            tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.sunset3
         case 22...24:
             // night
             advice = AdviceData.pm3
-            tipItems = AdviceData.pm3Tips1
             selectedImage = Constants.JournalImages.night3
         default:
             print("ERROR: INVALID HOUR!")
@@ -454,7 +435,6 @@ class JournalViewController: UIViewController {
         case 14...17:
             // afternoon
             advice = AdviceData.pm4
-//            tipItems = AdviceData.pm1Tips1
             selectedImage = Constants.JournalImages.afternoon4
         case 18...21:
             // sunset

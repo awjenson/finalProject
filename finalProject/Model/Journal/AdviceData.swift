@@ -13,7 +13,6 @@ struct AdviceData {
     // MARK: - BASED ON TIME
 
 
-
     static let am1 = JournalQuote(quote: "\"Those who are unaware they are walking in darkness will never seek the light.\"", source: "Bruce Lee")
 
     static let am1Tip1 = JournalTip(title: "\"Those who are unaware they are walking in darkness will never seek the light.\"", body: "Bruce Lee", sourceName: "", sourceURL: "")
