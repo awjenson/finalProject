@@ -714,62 +714,77 @@ class JournalViewController: UIViewController {
         }
     }
 
+    func updateQuote(_ item:JournalQuote) {
+        quoteLabel.text = item.quote
+        authorLabel.text = item.source
+    }
+
 
     @IBAction func moodButtonTapped(_ sender: UIButton) {
-
-        quoteLabel.text = nil
-        authorLabel.text = nil
-        
-        
 
         // Plan to add response in next version of app
 
         switch sender {
         case mood0Button:
             selectedMood = Constants.SelectedMood.Button0
-            updateAdvice(AdviceData.sad0Tips1)
+            updateQuote(AdviceData.greatQuote0)
+            updateAdvice(AdviceData.great0Tips1) //*
         case mood1Button:
             selectedMood = Constants.SelectedMood.Button1
-            updateAdvice(AdviceData.depressed0Tips1) //
+            updateQuote(AdviceData.goodQuote0)
+            updateAdvice(AdviceData.good0Tips1) //*
         case mood2Button:
             selectedMood = Constants.SelectedMood.Button2
+            updateQuote(AdviceData.boredQuote0)
             updateAdvice(AdviceData.bored0Tips1) //
         case mood3Button:
             selectedMood = Constants.SelectedMood.Button3
-            updateAdvice(AdviceData.good0Tips1) //
+            updateQuote(AdviceData.depressedQuote0)
+            updateAdvice(AdviceData.depressed0Tips1) //*
         case mood4Button:
             selectedMood = Constants.SelectedMood.Button4
-            updateAdvice(AdviceData.great0Tips1) //
+            updateQuote(AdviceData.sadQuote0)
+            updateAdvice(AdviceData.sad0Tips1) //*
         case mood5Button:
             selectedMood = Constants.SelectedMood.Button5
-            updateAdvice(AdviceData.mad0Tips1) //
+            updateQuote(AdviceData.proudQuote0)
+            updateAdvice(AdviceData.proud0Tips1) //*
         case mood6Button:
             selectedMood = Constants.SelectedMood.Button6
-            updateAdvice(AdviceData.stressed0Tips1) //
+            updateQuote(AdviceData.hopefulQuote0)
+            updateAdvice(AdviceData.hopeful0Tips1) //*
         case mood7Button:
             selectedMood = Constants.SelectedMood.Button7
+            updateQuote(AdviceData.anxietyQuote0)
             updateAdvice(AdviceData.anxiety0Tips1) //
         case mood8Button:
             selectedMood = Constants.SelectedMood.Button8
-            updateAdvice(AdviceData.hopeful0Tips1) //
+            updateQuote(AdviceData.stressedQuote0)
+            updateAdvice(AdviceData.stressed0Tips1) //*
         case mood9Button:
             selectedMood = Constants.SelectedMood.Button9
-            updateAdvice(AdviceData.proud0Tips1) //
+            updateQuote(AdviceData.madQuote0)
+            updateAdvice(AdviceData.mad0Tips1) //*
         case mood10Button:
             selectedMood = Constants.SelectedMood.Button10
-            updateAdvice(AdviceData.lonely0Tips1) //
+            updateQuote(AdviceData.calmQuote0)
+            updateAdvice(AdviceData.calm0Tips1) //*
         case mood11Button:
             selectedMood = Constants.SelectedMood.Button11
-            updateAdvice(AdviceData.worried0Tips1) //
+            updateQuote(AdviceData.restlessQuote0)
+            updateAdvice(AdviceData.restless0Tips1) //*
         case mood12Button:
             selectedMood = Constants.SelectedMood.Button12
+            updateQuote(AdviceData.insecureQuote0)
             updateAdvice(AdviceData.insecure0Tips1) //
         case mood13Button:
             selectedMood = Constants.SelectedMood.Button13
-            updateAdvice(AdviceData.restless0Tips1) //
+            updateQuote(AdviceData.envyQuote0)
+            updateAdvice(AdviceData.envy0Tips1) //*
         case mood14Button:
             selectedMood = Constants.SelectedMood.Button14
-            updateAdvice(AdviceData.calm0Tips1) //
+            updateQuote(AdviceData.lonelyQuote0)
+            updateAdvice(AdviceData.lonely0Tips1) //*
         default:
             print("ERROR: No button exists")
             break

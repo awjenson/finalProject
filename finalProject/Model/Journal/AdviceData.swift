@@ -114,12 +114,12 @@ struct AdviceData {
 
     static let pm7Tips1 = [pm7Tip1, pm7Tip2]
 
+
     // MARK: - BASED ON MOOD
 
     // Button0 = " Sad "
     // Tip:
     static let sadQuote0 = JournalQuote(quote: "\"Things that I feel really sad about, I talk about. That way, if it's funny, it doesn't hurt anymore.\"", source: "Pete Davidson")
-
     static let sadTip1 = JournalTip(title: "Advice to reduce sadness", body: "Remember, it will get better. Talk to someone. Get out in nature. Listen to upbeat music. Watch a funny TV show. Cry. Focus on the good and move on.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/maria-rodale/21-ways-to-deal-with-sadn_b_5803672.html")
     static let sadTip2 = JournalTip(title: Constants.Header.watch, body: "PROBLEMS - Watch This When You Feel Down (Powerful Motivation!)", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=p4F5UXN_AVk")
 
@@ -132,7 +132,6 @@ struct AdviceData {
 
     static let depressedTip1 = JournalTip(title: "Advice to reduce depression", body: "Follow a daily routine to get back on track. Exercise will release feel-good chemicals. Challenge your negative thoughts with logical questioning. Help others. Eat healthy foods. Do something that you enjoy (watch a movie, walk in nature, or spend time with friends). Go to bed and get up at the same time every day.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/depression/features/natural-treatments")
     static let depressedTip2 = JournalTip(title: Constants.Header.watch, body: "Depression Motivation - Broken heart, Anxiety and Hard Times", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=VFX2Nqwwm44")
-
     static let depressedTip3 = JournalTip(title: "Foods that boost your mood naturally", body: "Breakfast: fresh fruit (apples, bananas, and blueberries), citrus (oranges and lemons), dairy, eggs, flax seed, and whole grains. \n\nLunch: veggies (spinach, onions), avocados, nuts, foods with probiotics, and dark chocolate. \n\nDinner: fish (salmon and tuna), lean red meats, turkey, sweat potatoes, and olive oil. \n\nAvoid Eating: sweets, refined cereals, fried food, processed meats, and sugary drinks.", sourceName: "Health", sourceURL: "https://www.health.com/depression/best-foods-depression#mediterranean-diet-depression")
 
     static let depressed0Tips1 = [depressedTip1, depressedTip2, depressedTip3]
@@ -167,17 +166,18 @@ struct AdviceData {
     //
     static let madQuote0 = JournalQuote(quote: "\"Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.\"", source: "Buddha")
 
+    static let madTip0 = JournalTip(title: "Daily Stoic: How To Not Be Angry", body: "Let every thought be the thought of a dying man, the Stoics say, over and over again. A dying man doesn’t have twenty four hours to be angry. A person who realizes how fragile life is doesn’t take chances in saying things they’ll have to apologize for—because they know they might not get to. Don’t hang onto anger you know you’re going to let go of later—let go of it right this second.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/how-to-not-be-angry/")
     static let madTip1 = JournalTip(title: "Advice to reduce anger", body: "Anger can be simple to manage, once you know the basics of how and why the brain reacts to triggers. Scientific ways to calm down: take deep breaths, take a walk, write down why you're mad, play loud orheavy music, and even doing nothing for two minutes was found to diminish feeling of anger.", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/134593-6-ways-to-calm-down-when-youre-angry")
     static let madTip2 = JournalTip(title: Constants.Header.watch, body: "WHEN IT HURTS - 2016 MOTIVATION", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=XNj_KDPp_iM")
 
-    static let mad0Tips1 = [madTip1, madTip2]
+
+    static let mad0Tips1 = [madTip0, madTip1, madTip2]
 
     // Button6 = "Stressed"
     static let stressedQuote0 = JournalQuote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew J. Berstein")
 
     static let stressedTip1 = JournalTip(title: "Reduce stress right now", body: "Breathe deeply, go for a walk, visualize a peaceful forest or beach, list to classical music, watch a funny video, call a friend, or even turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
     static let stressedTip2 = JournalTip(title: Constants.Header.watch, body: "WHEN YOU FEEL STRESSED - Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5QbtU8daKc8")
-
     static let stressedTip3 = JournalTip(title: "Reading for six minutes reduces stress by 68%", body: "Psychologists believe this is because the human mind has to concentrate on reading and the distraction of being taken into a literary world eases the tension in your body. \n\nAnd it works better and faster than other methods to calm frazzled nerves such as listening to music (61%), having a cup of coffee or tea (54%), or going for a walk (42%).", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/health/news/5070874/Reading-can-help-reduce-stress.html")
 
 
@@ -189,10 +189,7 @@ struct AdviceData {
 
     static let anxietyTip1 = JournalTip(title: "Taking action reduces anxiety", body: "Breathe deeply and exhale slowly, stay away from sugar, caffeine, and processed foods, get rid of the clutter around you, think of one thing you're grateful for, go for a walk, go to the gym, know that your feelings are not facts and challenge negative beliefs, and go to bed early (sleep deprivation is a huge cause of anxiety).", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201405/22-quick-tips-change-your-anxiety-forever")
     static let anxietyTip2 = JournalTip(title: Constants.Header.watch, body: "STOP WORRYING | Anxiety Relief Speech feat Les Brown, Alan Watts and Tom O'bedlam", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=oYadJQq0cHQ")
-
     static let anxietyTip3 = JournalTip(title: "10 foods that reduce anxiety", body: "Breakfast: Oatmeal, Oranges, and Blueberries \n\nLunch: Almonds, Avocado, and Spinach, \n\nDinner: Asparagus, Salmon, and Turkey \n\nBedtime: Milk and Almond Butter", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/8-spinach-2/")
-
-
 
     static let anxiety0Tips1 = [anxietyTip1, anxietyTip2, anxietyTip3]
 
@@ -208,7 +205,6 @@ struct AdviceData {
     // Button9 = "Proud" // cookie jar
     //
     static let proudQuote0 = JournalQuote(quote: "\"Whether you're tall or short, or a little bigger, more curves, skinny - you just have to be proud of what you have, and everyone is beautiful.\"", source: "Caroline Wozniacki")
-
     static let proudTip1 = JournalTip(title: "Try a practice used by a former Navy SEAL, David Goggins, called the \"cookie jar\" when you're feeling proud", body: "Your cookie jar contains all your proudest moments and failures in your life that you came back from. Then, whenever you face a challenge, you pull out a cookie — a memory that reminds you of a time that you did make it through that tough situation.", sourceName: "Big Think", sourceURL: "https://bigthink.com/videos/david-goggins-to-win-in-life-win-the-war-in-your-mind-navy-seal")
     static let proudTip2 = JournalTip(title: Constants.Header.watch, body: "The art of being yourself | Caroline McHugh | TEDxMiltonKeynesWomen", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=veEQQ-N9xWU")
 
@@ -223,19 +219,20 @@ struct AdviceData {
 
     static let lonely0Tips1 = [lonelyTip1, lonelyTip2]
 
-    // Button11 = "Worried"
-    static let worriedQuote0 = JournalQuote(quote: "\"Our fatigue is often caused not by work, but by worry, frustration and resentment.\"", source: "Dale Carnegie")
+    // Button11 = "Envy"
+    static let envyQuote0 = JournalQuote(quote: "\"Envy blinds men and makes it impossible for them to think clearly\"", source: "Malcolm X")
 
-    static let worriedTip1 = JournalTip(title: "Advice on feeling worried", body: "Uncertainty is a fact of life, so accept that you will always have to live with and tolerate some uncertainty. Acknowledge the worries that enter your head, but spending your time worrying about things that might happen in the future means that you’ll spend less time enjoying the present moment.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/why-we-worry/201206/10-tips-manage-your-worrying")
-    static let worriedTip2 = JournalTip(title: Constants.Header.watch, body: "Want to be happier? Stay in the moment | Matt Killingsworth", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=Qy5A8dVYU3k")
+    static let envyTip0 = JournalTip(title: "Too much social media increases envy, according to many studies", body: "A study found that when Facebook evoked envy, it increased symptoms of depression. But, you can control how Facebook makes you feel. If you tend to compare yourself with others or get envious easily, you might consider limiting your time spent on social networking sites or make a conscious effort to use them in active ways (commenting and posting) rather than passive ways (browsing news feeds).", sourceName: "Scientific American", sourceURL: "https://www.scientificamerican.com/article/green-with-facebook-envy-red-with-twitter-rage/")
+    static let envyTip1 = JournalTip(title: "Daily Stoic: Do You Know What Envy Is?", body: "If we’re not careful, can we waste enormous chunks of today being miserable over the fact that so-and-so is doing well or how badly we feel we deserve what so-and-so is enjoying? Because jealousy is a blinding passion. So if you want to know what envy is, here’s your answer: It’s insanity. It’s death. It’s a thing to be avoided at all costs.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/do-you-know-what-envy-is/")
+    static let envyTip2 = JournalTip(title: Constants.Header.watch, body: "How To Overcome Envy | Think Out Loud With Jay Shetty", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ImJRLrNdDtE")
 
-    static let worried0Tips1 = [worriedTip1, worriedTip2]
+    static let envy0Tips1 = [envyTip0, envyTip1, envyTip2]
 
     // Button12 = "Insecure"
     //
     static let insecureQuote0 = JournalQuote(quote: "\"Because one believes in oneself, one doesn't try to convince others. Because one is content with oneself, one doesn't need others' approval. Because one accepts oneself, the whole world accepts him or her.\"", source: "Lao Tzu")
 
-    static let insecureTip1 = JournalTip(title: "Boost confidence right now", body: "Spray on our favorite fragrance (a study found that it will make you feel more confident), sit up straight, two minutes in a wide stance with your hands in the air will give you a confidence boost, nod your head up-and-down (the movement signals positive thoughts in your brain), listening to heavy-bass songs, exercise regularly, picture yourself scoring the winning goal or even going through a tough workout, and smile (the movement of the muscles in your face causes your brain to release endorphins which causess you to feel happy).", sourceName: "Greatist", sourceURL: "https://greatist.com/grow/easy-confidence-boosters")
+    static let insecureTip1 = JournalTip(title: "Boost confidence right now", body: "• Sit up straight \n\n• Smile (the movement of the muscles in your face causes your brain to release endorphins which causess you to feel happy) \n\n• Nod your head up-and-down (the movement signals positive thoughts in your brain) \n\n• Visualize yourself scoring the winning goal or going through a tough workout (you first need to win in your head; only then can you win in the battleground) \n\n• Stand for two minutes in a wide stance with your hands in the air \n\n• Listen to heavy-bass songs \n\n• Exercise regularly \n\n• Spray on our favorite fragrance (a study found that it will make you feel more confident)", sourceName: "Greatist", sourceURL: "https://greatist.com/grow/easy-confidence-boosters")
     static let insecureTip2 = JournalTip(title: Constants.Header.watch, body: "Tony Robbins - How to Be More Confident and overcome shyness", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ikpvdDQWmXI")
 
     static let insecure0Tips1 = [insecureTip1, insecureTip2]

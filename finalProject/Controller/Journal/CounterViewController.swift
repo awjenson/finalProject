@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 // RESOURCE: https://www.raywenderlich.com/187417/firebase-tutorial-getting-started-3
 // RESOURCE TO IMPROVE FIREBASE CODE: http://jaronoff.com/Firebase-and-Swift/
@@ -94,6 +95,9 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        if SVProgressHUD.isVisible() {
+            SVProgressHUD.dismiss()
+        }
 
         print("Counter View Controller Will Disappear")
     }
@@ -333,15 +337,18 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: - Database Methods
 
     func retrieveGoalItems() {
+        SVProgressHUD.isVisible()
         GoalItemService.readGoals(for: User.current) { (newItems) in
 
             if newItems.isEmpty {
                 print("retrievedMessages count: \(newItems.count)")
+                SVProgressHUD.dismiss()
                 return
             }
             self.items = newItems
             print("Inside GoalItemService.readGoals")
             self.counterTableView.reloadData()
+            SVProgressHUD.dismiss()
         }
     }
 
