@@ -74,14 +74,10 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        print("Counter View Controller Will Appear")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
 
         if internetConnected() {
             retrieveGoalItems()
@@ -337,7 +333,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: - Database Methods
 
     func retrieveGoalItems() {
-        SVProgressHUD.isVisible()
+
+        SVProgressHUD.show()
         GoalItemService.readGoals(for: User.current) { (newItems) in
 
             if newItems.isEmpty {
@@ -454,18 +451,18 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         let currentDate = formatter.string(from: now)
 
         // 1. Create the alert controller
-        alert = UIAlertController(title: "Add New Habit",
-                                  message: "Include a strong reason WHY to keep yourself motivated",
+        alert = UIAlertController(title: "Add Habit you want to Create or Break",
+                                  message: "Include a strong reason WHY to keep yourself motivated.",
                                   preferredStyle: .alert)
 
         // guard to make sure text is not nil ("")
-        let doAction = UIAlertAction(title: "SAVE as a DO", style: .default) { _ in
+        let doAction = UIAlertAction(title: "SAVE", style: .default) { _ in
 
             guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
                 print("$$$")
                 return }
 
-            let goalItem = GoalItem(name: "DO: \(text1)", why: text2, timestamp: currentDate, count: 0)
+            let goalItem = GoalItem(name: text1, why: text2, timestamp: currentDate, count: 0)
 
             // Firebase
             GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
@@ -479,24 +476,24 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         }
 
         // guard to make sure text is not nil ("")
-        let dontAction = UIAlertAction(title: "SAVE as a DON'T", style: .default) { (action) -> Void in
-
-            guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
-                print("$$$")
-                return }
-
-            let goalItem = GoalItem(name: "DON'T: \(text1)", why: text2, timestamp: currentDate, count: 0)
-
-            // Firebase
-            GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
-                if success == true {
-                    print("SUCCESS WRITING GOAL: \(success)")
-                    return
-                } else if success == false {
-                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your internet connection and try again.")
-                }
-            })
-        }
+//        let dontAction = UIAlertAction(title: "SAVE as a DON'T", style: .default) { (action) -> Void in
+//
+//            guard let textField1 = self.alert?.textFields?.first, textField1.text != "", let text1 = textField1.text, let textField2 = self.alert?.textFields?.last, let text2 = textField2.text else {
+//                print("$$$")
+//                return }
+//
+//            let goalItem = GoalItem(name: "DON'T: \(text1)", why: text2, timestamp: currentDate, count: 0)
+//
+//            // Firebase
+//            GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in
+//                if success == true {
+//                    print("SUCCESS WRITING GOAL: \(success)")
+//                    return
+//                } else if success == false {
+//                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your internet connection and try again.")
+//                }
+//            })
+//        }
 
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .cancel)
@@ -518,11 +515,13 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         }
 
         // Do and Don't buttons initally disabled
+//        dontAction.isEnabled = false
         doAction.isEnabled = false
-        dontAction.isEnabled = false
+
 
         alert?.addAction(doAction)
-        alert?.addAction(dontAction)
+        // Removed Don't since it's a little confusing to new users
+//        alert?.addAction(dontAction)
         alert?.addAction(cancelAction)
 
         present(alert!, animated: true, completion: nil)

@@ -25,7 +25,6 @@
                         <segue destination="aQ2-jV-H5y" kind="relationship" relationship="viewControllers" id="422-h5-GX0"/>
                         <segue destination="ErU-2B-DrK" kind="relationship" relationship="viewControllers" id="vPk-U4-Dup"/>
                         <segue destination="egr-Vc-3Tn" kind="relationship" relationship="viewControllers" id="PCE-rS-ucj"/>
-                        <segue destination="F3y-eH-bqn" kind="relationship" relationship="viewControllers" id="mpN-mb-oBw"/>
                         <segue destination="dI1-zL-jwA" kind="relationship" relationship="viewControllers" id="rQ9-ci-PAQ"/>
                     </connections>
                 </tabBarController>
@@ -432,8 +431,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Imr-dd-o6y">
-                                <rect key="frame" x="15" y="70" width="290" height="264"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Imr-dd-o6y">
+                                <rect key="frame" x="15" y="70" width="290" height="247"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9K-Up-llU">
                                         <rect key="frame" x="95.5" y="0.0" width="99" height="26.5"/>
@@ -442,20 +441,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are using the Alpha version of the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR0-CO-uJS">
-                                        <rect key="frame" x="13" y="41.5" width="264" height="41"/>
+                                        <rect key="frame" x="13" y="42.5" width="264" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm3-zX-M8X">
-                                        <rect key="frame" x="0.0" y="97.5" width="290" height="101.5"/>
-                                        <string key="text">We're developing the next version of the app which will allow you to personalize the information displayed based on your age, gender, diet, interests, etc.</string>
+                                        <rect key="frame" x="5" y="99.5" width="280" height="81.5"/>
+                                        <string key="text">We're developing the next version which will allow you to personalize the information displayed based on your age, gender, diet, interests, etc.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-Du-bga" customClass="RoundCorneredButton" customModule="finalProject" customModuleProvider="target">
-                                        <rect key="frame" x="95" y="214" width="100" height="50"/>
+                                        <rect key="frame" x="95" y="197" width="100" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dwa-30-1xB"/>
@@ -487,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJo-LO-ogd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="936"/>
+            <point key="canvasLocation" x="1384" y="935"/>
         </scene>
         <!--Wisdom-->
         <scene sceneID="lnA-dT-kXd">
@@ -656,7 +655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfV-Ns-BEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1525.5999999999999" y="935.98200899550227"/>
+            <point key="canvasLocation" x="2098" y="935"/>
         </scene>
         <!--Mood-->
         <scene sceneID="966-hb-0va">
@@ -932,7 +931,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-0R-klf">
                                         <rect key="frame" x="5" y="5" width="310" height="31"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Mood:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umb-JS-Afa">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Mood:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="umb-JS-Afa">
                                                 <rect key="frame" x="0.0" y="0.0" width="159" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1017,37 +1016,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J04-ba-lzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-180" y="935"/>
-        </scene>
-        <!--Master Journal View Controller-->
-        <scene sceneID="PUo-OI-jFq">
-            <objects>
-                <viewController id="hA7-Du-jUg" customClass="MasterJournalViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BaR-7k-7pC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="fHJ-od-0s5"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="oxI-iJ-6H0">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="zpL-OU-zVE">
-                            <rect key="frame" x="19.5" y="7" width="281" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="First" width="140"/>
-                                <segment title="Second" width="140"/>
-                            </segments>
-                        </segmentedControl>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="segmentedControl" destination="zpL-OU-zVE" id="eYc-dR-vhB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OQh-c4-Oap" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1574" y="1674"/>
         </scene>
         <!--Habits-->
         <scene sceneID="OL5-SB-avY">
@@ -1251,28 +1219,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgf-bd-b9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="596.25" y="935"/>
-        </scene>
-        <!--Daily-->
-        <scene sceneID="TuK-1p-EWp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KLz-LQ-820" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Daily" image="stories_deselected_icon" id="cvf-M4-C6q"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3H1-OX-WEl">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hSf-a4-enP">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="hA7-Du-jUg" kind="relationship" relationship="rootViewController" id="f5w-pY-YoL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3z0-Wr-MKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="878" y="1674"/>
         </scene>
     </scenes>
     <resources>
