@@ -185,7 +185,7 @@ class JournalViewController: UIViewController {
         quoteLabel.text = advice.quote
         authorLabel.text = advice.source
 
-        selectedMoodLabel.text = "Select Mood:"
+        selectedMoodLabel.text = "Increase Self-Awareness, \nSelect Your Mood:"
 
         hideButton.setTitle("Hide", for: .normal)
         // Shadow and Radius
@@ -325,7 +325,6 @@ class JournalViewController: UIViewController {
         
         switch hour {
         case 0...4:
-            print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am1
             selectedImage = Constants.JournalImages.night1
@@ -357,7 +356,6 @@ class JournalViewController: UIViewController {
     func monday(_ hour: Int) {
         switch hour {
         case 0...4:
-            print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am2
             selectedImage = Constants.JournalImages.night2
@@ -389,7 +387,6 @@ class JournalViewController: UIViewController {
     func tuesday(_ hour: Int) {
         switch hour {
         case 0...4:
-            print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am3
             selectedImage = Constants.JournalImages.night3
@@ -452,7 +449,6 @@ class JournalViewController: UIViewController {
     func thursday(_ hour: Int) {
         switch hour {
         case 0...4:
-            print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am5
             selectedImage = Constants.JournalImages.night5
@@ -484,7 +480,6 @@ class JournalViewController: UIViewController {
     func friday(_ hour: Int) {
         switch hour {
         case 0...4:
-            print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am6
             selectedImage = Constants.JournalImages.night6
@@ -516,7 +511,6 @@ class JournalViewController: UIViewController {
     func saturday(_ hour: Int) {
         switch hour {
         case 0...4:
-            print("Sunday, Very Early Morning")
             // night
             advice = AdviceData.am7
             selectedImage = Constants.JournalImages.night7
@@ -803,7 +797,7 @@ class JournalViewController: UIViewController {
         let currentDate = formatter.string(from: now)
 
         // ****
-        let selectedButtonText = "Mood:  \(selectedMood)"
+        let selectedButtonText = "Mood: \(selectedMood)"
 
 
         let messageItem = MessageItem(message: selectedButtonText, timestamp: currentDate)
@@ -896,16 +890,15 @@ extension JournalViewController: UITableViewDataSource {
         cell.boarderColorView.layer.shadowOpacity = 0.9
         cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.6, height: 1.2)
         cell.boarderColorView.layer.shadowRadius = 1
-        cell.boarderColorView.backgroundColor = UIColor.white
-
 
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView()
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 48))
         footerView.backgroundColor = UIColor.clear
+
         return footerView
     }
 

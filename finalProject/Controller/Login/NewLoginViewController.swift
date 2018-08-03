@@ -74,8 +74,8 @@ extension NewLoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
 
         if let error = error {
+            print("ERROR: authUI")
             print(error.localizedDescription)
-            assertionFailure("Error signing in: \(error.localizedDescription)")
             return
         }
 
@@ -106,6 +106,7 @@ extension NewLoginViewController: FUIAuthDelegate {
             } else {
                 print("NEW USER SUCCESSFULLY LOGGED IN...")
 
+                // create current user
                 guard let firUser = Auth.auth().currentUser else {return}
 
                 UserService.writeUser(firUser, completion: { (user) in
@@ -115,12 +116,24 @@ extension NewLoginViewController: FUIAuthDelegate {
                     User.setCurrent(user, writeToUserDefaults: true)
                     print("...CREATED new user: \(user.email)...")
 
-                    let initialViewController = UIStoryboard.initialViewController(for: .main)
-                    self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
-                    print("... LEFT LOGIN PAGE.")
+                    // TODO:
+                    // Setup inital Keystone habits
+                    GoalItemService.writeKeystoneGoals(for: User.current, success: { (success) in
+
+                        guard success == true else {return}
+
+                        let initialViewController = UIStoryboard.initialViewController(for: .main)
+                        self.view.window?.rootViewController = initialViewController
+                        self.view.window?.makeKeyAndVisible()
+
+                        print("... LEFT LOGIN PAGE TO GO TO NOW VC.")
+
+
+                    })
+
                 })
-            }
+
+            } // end of '} else {'
         }
     }
 }

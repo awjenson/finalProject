@@ -113,6 +113,8 @@ class NowViewController: UIViewController {
         returnToTopButton.layer.shadowRadius = 0.0
         returnToTopButton.layer.masksToBounds = false
         returnToTopButton.layer.cornerRadius = 5.0
+
+        footerView.frame.size.height = 60
     }
 
     // Call this inside UIButton to scroll to top

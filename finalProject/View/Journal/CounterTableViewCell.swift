@@ -45,9 +45,9 @@ class CounterTableViewCell: UITableViewCell {
             return "😴"
         case 1...9:
             return "🙂"
-        case 10...20:
+        case 10...24:
             return "😎"
-        case 21...65:
+        case 25...65:
             return "💪"
         case 66...99:
             return "🙌"
@@ -57,10 +57,12 @@ class CounterTableViewCell: UITableViewCell {
             return "🥉"
         case 300...399:
             return "🥈"
-        case 400...1000:
+        case 400...499:
             return "🏆"
+        case 500...999:
+            return "🦄"
         default:
-            return "⭐️"
+            return "🌟"
         }
     }
 

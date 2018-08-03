@@ -163,13 +163,11 @@ struct AdviceData {
     static let great0Tips1 = [greatTip1, greatTip2]
 
     // Button5 = " Mad "
-    //
+    // •
     static let madQuote0 = JournalQuote(quote: "\"Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.\"", source: "Buddha")
-
-    static let madTip0 = JournalTip(title: "Daily Stoic: How To Not Be Angry", body: "Let every thought be the thought of a dying man, the Stoics say, over and over again. A dying man doesn’t have twenty four hours to be angry. A person who realizes how fragile life is doesn’t take chances in saying things they’ll have to apologize for—because they know they might not get to. Don’t hang onto anger you know you’re going to let go of later—let go of it right this second.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/how-to-not-be-angry/")
-    static let madTip1 = JournalTip(title: "Advice to reduce anger", body: "Anger can be simple to manage, once you know the basics of how and why the brain reacts to triggers. Scientific ways to calm down: take deep breaths, take a walk, write down why you're mad, play loud orheavy music, and even doing nothing for two minutes was found to diminish feeling of anger.", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/134593-6-ways-to-calm-down-when-youre-angry")
+    static let madTip0 = JournalTip(title: "Advice to reduce anger", body: "Anger can be simple to manage, once you know the basics of how and why the brain reacts to triggers. Scientific ways to calm down: \n\n• Take deep breaths \n\n• take a walk and get some fresh air \n\n• Write down why you're mad \n\n• Play loud or heavy music \n\n• Even doing nothing for two minutes was found to diminish feeling of anger", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/134593-6-ways-to-calm-down-when-youre-angry")
+    static let madTip1 = JournalTip(title: "Daily Stoic: How To Not Be Angry", body: "Let every thought be the thought of a dying man, the Stoics say, over and over again. A dying man doesn’t have twenty four hours to be angry. A person who realizes how fragile life is doesn’t take chances in saying things they’ll have to apologize for—because they know they might not get to. Don’t hang onto anger you know you’re going to let go of later—let go of it right this second.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/how-to-not-be-angry/")
     static let madTip2 = JournalTip(title: Constants.Header.watch, body: "WHEN IT HURTS - 2016 MOTIVATION", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=XNj_KDPp_iM")
-
 
     static let mad0Tips1 = [madTip0, madTip1, madTip2]
 
@@ -222,8 +220,8 @@ struct AdviceData {
     // Button11 = "Envy"
     static let envyQuote0 = JournalQuote(quote: "\"Envy blinds men and makes it impossible for them to think clearly\"", source: "Malcolm X")
 
-    static let envyTip0 = JournalTip(title: "Too much social media increases envy, according to many studies", body: "A study found that when Facebook evoked envy, it increased symptoms of depression. But, you can control how Facebook makes you feel. If you tend to compare yourself with others or get envious easily, you might consider limiting your time spent on social networking sites or make a conscious effort to use them in active ways (commenting and posting) rather than passive ways (browsing news feeds).", sourceName: "Scientific American", sourceURL: "https://www.scientificamerican.com/article/green-with-facebook-envy-red-with-twitter-rage/")
-    static let envyTip1 = JournalTip(title: "Daily Stoic: Do You Know What Envy Is?", body: "If we’re not careful, can we waste enormous chunks of today being miserable over the fact that so-and-so is doing well or how badly we feel we deserve what so-and-so is enjoying? Because jealousy is a blinding passion. So if you want to know what envy is, here’s your answer: It’s insanity. It’s death. It’s a thing to be avoided at all costs.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/do-you-know-what-envy-is/")
+    static let envyTip0 = JournalTip(title: "Too much social media increases envy", body: "Research found that when Facebook evoked envy, it increased symptoms of depression. If you tend to compare yourself with others or get envious easily, you might consider limiting your time spent on social networking sites or make a conscious effort to use them in active ways (commenting and posting) rather than passive ways (browsing news feeds).", sourceName: "Scientific American", sourceURL: "https://www.scientificamerican.com/article/green-with-facebook-envy-red-with-twitter-rage/")
+    static let envyTip1 = JournalTip(title: "Daily Stoic: Envy", body: "If we’re not careful, we can waste enormous chunks of today being miserable over the fact that so-and-so is doing well or how badly we feel we deserve what so-and-so is enjoying? Because jealousy is a blinding passion. \n\nSo if you want to know what envy is, here’s your answer: It’s insanity. It’s death. It’s a thing to be avoided at all costs.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/do-you-know-what-envy-is/")
     static let envyTip2 = JournalTip(title: Constants.Header.watch, body: "How To Overcome Envy | Think Out Loud With Jay Shetty", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ImJRLrNdDtE")
 
     static let envy0Tips1 = [envyTip0, envyTip1, envyTip2]

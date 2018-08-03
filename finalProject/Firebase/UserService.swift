@@ -86,6 +86,8 @@ struct UserService {
 
         print("Entered writeUser()")
 
+        // MARK: - Create New User in Firebase
+
         // create a dictionary to store the username the user has provided inside our database
         // Can add more later
         let userAttrs = ["email": firUser.email]

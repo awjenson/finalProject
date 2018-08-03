@@ -32,6 +32,8 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var rewardCardView: CardView!
     @IBOutlet weak var rewardLabel: UILabel!
 
+    @IBOutlet weak var footerKeyLabel: UILabel!
+
     // MARK: - Properties
 
     // Time and Date
@@ -40,10 +42,12 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
     let calendar = Calendar.current
 
     // an empty JournalMessage array to contain the user's messages
+
     var items: [GoalItem] = []
     var quote = CounterAdvice(quote: "", source: "")
     var fact = CounterAdvice(quote: "", source: "")
     var selectedEmoji = ""
+    var counter = 0
 
 //    // NEED THIS REF
 //    var ref: DatabaseReference!
@@ -114,9 +118,10 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
 
         selectedEmoji = "😴"
         rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
+        footerKeyLabel.text = ""
     }
 
-    var counter = 0
+
 
     func increaseEmoji(count: Int) {
         print("Refresh COUNTER table view")
@@ -345,6 +350,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
             self.items = newItems
             print("Inside GoalItemService.readGoals")
             self.counterTableView.reloadData()
+            self.footerKeyLabel.text = Constants.Habits.footerKey
             SVProgressHUD.dismiss()
         }
     }
@@ -451,7 +457,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         let currentDate = formatter.string(from: now)
 
         // 1. Create the alert controller
-        alert = UIAlertController(title: "Add Habit you want to Create or Break",
+        alert = UIAlertController(title: "Add New Habit",
                                   message: "Include a strong reason WHY to keep yourself motivated.",
                                   preferredStyle: .alert)
 
@@ -462,7 +468,7 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
                 print("$$$")
                 return }
 
-            let goalItem = GoalItem(name: text1, why: text2, timestamp: currentDate, count: 0)
+            let goalItem = GoalItem(name: "♦️\(text1)", why: text2, timestamp: currentDate, count: 0)
 
             // Firebase
             GoalItemService.writeGoal(for: User.current, goal: goalItem, success: { (success) in

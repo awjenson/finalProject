@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-0X-b0r">
-                                <rect key="frame" x="20" y="80" width="335" height="438"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-0X-b0r">
+                                <rect key="frame" x="20" y="80" width="335" height="418"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-Dl-ZAh">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
@@ -30,22 +30,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgH-VH-C6l">
-                                        <rect key="frame" x="0.0" y="94" width="335" height="250"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="aoE-D3-JO4"/>
-                                        </constraints>
-                                        <string key="text">You average 10,000 decisions each day.
-
-Self- provides time, location, and mood-based advice to help you make smarter decisions throughout your day. 
-
-The goal is to help you live each day as the best version of yourself. </string>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-Jt-22R" customClass="RoundCorneredButton" customModule="finalProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="394" width="335" height="44"/>
+                                        <rect key="frame" x="0.0" y="84" width="335" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="fm5-2i-DvB"/>
@@ -57,6 +43,20 @@ The goal is to help you live each day as the best version of yourself. </string>
                                             <action selector="signInSignUpButtonTapped:" destination="Bje-A6-3zB" eventType="touchUpInside" id="V4R-m2-yi3"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgH-VH-C6l">
+                                        <rect key="frame" x="0.0" y="168" width="335" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="aoE-D3-JO4"/>
+                                        </constraints>
+                                        <string key="text">You average 10,000 decisions each day.
+
+Self- provides time-based advice to help you make smarter decisions throughout your day. 
+
+The goal is to help you live each day as the best version of yourself. </string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="VRU-Dl-ZAh" firstAttribute="leading" secondItem="OTh-0X-b0r" secondAttribute="leading" id="3gg-TH-daw"/>

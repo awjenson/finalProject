@@ -958,3 +958,8 @@ let parenting0 = Tip(header: "Parenting", title: "Children who are held, rocked,
 
 let parenting1 = Tip(header: "Parenting", title: "Studies found that kids who do chores have higher GPAs and were more likely to have sucessful relationships and careers", body: "One study found that kids with the highest GPA’s did more chores, had less than 30 minutes of daily screen-time, and spent more time with their parents. Another study showed that children who started doing chores at age 3 or 4 were more likely to have successful relationships and careers and were more self-sufficient.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "", sponsorURL: "")
 
+let parenting2 = Tip(header: "Parenting", title: "Children who live near transportation noise are more likely to test poorly for language and cognitive skills and have lower reading scores", body: "", sourceName: "American Psychological Association", sourceURL: "https://www.apa.org/monitor/2011/07-08/silence.aspx", sponsorLogo: "", sponsorURL: "")
+
+
+
+

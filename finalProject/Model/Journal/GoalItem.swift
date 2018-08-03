@@ -46,7 +46,7 @@ struct GoalItem {
         self.count = count
     }
 
-    //toAnyObject() which will store data in properties inside Model Class
+    //toAnyObject() which will store (single habit) data in properties inside Model Class
     func toAnyObject() -> Any {
         return [
             FirebaseConstants.GoalItem.Name: name,

@@ -62,8 +62,8 @@ struct HabitFact {
 
     static let am2 = CounterAdvice(quote: "Within our brains, habits are a three-step process. First there is a cue, a trigger that tells your brain to go into automatic mode and which habit to use. Then there is the routine, which can be physical, mental, or emotional. Finally, there is a reward, which helps your brain figure out if this particular loop is worth remembering for the future. Over time, this loop-cue, routine, reward-becomes more and more automatic. Eventually, a habit is born.", source: "The Power of Habit by Charles Duhigg")
 
-
-    static let pm2 = CounterAdvice(quote: "\"You don’t have to change dozens of habits to get to your goals. You only have to change a few keystone habits that will have a ripple effect on your outcomes. A huge body of research has shown that small wins have enormous power. Once a small win has been accomplished, forces are set in motion that favor another small win.\"", source: "The Power of Habit by Charles Duhigg")
+///////////////////
+    static let pm2 = CounterAdvice(quote: "\"Studies found that when people habitually exercise, even as infrequently as once a week, they start changing other, unrelated patterns in their lives, often unknowingly. Typically, people who exercise start eating better and becoming more productive at work. They smoke less and show more patience with colleagues and family. They use their credit cards less frequently and say they feel less stressed. There's something about exercise that makes other good habits easier.\"", source: "The Power of Habit by Charles Duhigg")
 
     static let am3 = CounterAdvice(quote: "When a habit emerges, the brain stops fully participating in decision making. It stops working so hard, or diverts focus to other task. So unless you deliberately fight a habit-unless you find new routines-the pattern will unfold automatically.", source: "The Power of Habit by Charles Duhigg")
 
