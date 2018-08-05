@@ -40,7 +40,7 @@ struct Constants {
         static let mindfulness = "MINDFULNESS"
         static let quote = "QUOTE"
         static let research = "RESEARCH"
-        static let watch = "Tap to Watch"
+        static let watch = "Tap to Watch ▶️"
     }
 
     struct SelectedMood {
