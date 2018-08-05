@@ -175,11 +175,13 @@ struct AdviceData {
     static let stressedQuote0 = JournalQuote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew J. Berstein")
 
     static let stressedTip1 = JournalTip(title: "Reduce stress right now", body: "Breathe deeply, go for a walk, visualize a peaceful forest or beach, list to classical music, watch a funny video, call a friend, or even turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
-    static let stressedTip2 = JournalTip(title: Constants.Header.watch, body: "WHEN YOU FEEL STRESSED - Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5QbtU8daKc8")
+    static let stressedTip2 = JournalTip(title: "Viewing stress as a helpful part of life, rather than as harmful, is associated with better health, emotional well-being and productivity at work – even during periods of high stress", body: "Three ways to best handle stress are: 1) to view your body's stress response as helpful, not debilitating – for example, to view stress as energy you can use; 2) to view yourself as able to handle, and even grow from, the stress in your life; and 3) to view stress as something that everyone deals with, and not something that proves how uniquely screwed up you or your life is.", sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/pr/2015/pr-stress-embrace-mcgonigal-050715.html")
     static let stressedTip3 = JournalTip(title: "Reading for six minutes reduces stress by 68%", body: "Psychologists believe this is because the human mind has to concentrate on reading and the distraction of being taken into a literary world eases the tension in your body. \n\nAnd it works better and faster than other methods to calm frazzled nerves such as listening to music (61%), having a cup of coffee or tea (54%), or going for a walk (42%).", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/health/news/5070874/Reading-can-help-reduce-stress.html")
 
+    static let stressedTip4 = JournalTip(title: Constants.Header.watch, body: "WHEN YOU FEEL STRESSED - Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5QbtU8daKc8")
 
-    static let stressed0Tips1 = [stressedTip1, stressedTip2, stressedTip3]
+
+    static let stressed0Tips1 = [stressedTip1, stressedTip2, stressedTip3, stressedTip4]
 
     // Button7 = "Anxious"
     //

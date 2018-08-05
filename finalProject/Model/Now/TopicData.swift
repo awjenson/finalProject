@@ -510,7 +510,7 @@ let groceryStoreTip7 = Tip(header: "Grocery Store", title: "The most important c
 let groceryStoreTip8 = Tip(header: "Grocery Store", title: "Buy what you and your family is realistically going to eat. Buying in bulk only saves money if you actually eat it", body: "In the United States, food waste consumes between 30 to 40 percent of the food supply. That doesn’t just hurt your wallet, but the planet, too.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/07/03/smarter-living/the-terms-on-a-food-label-to-ignore-and-the-ones-to-watch-for.html?rref=collection%2Fsectioncollection%2Fsmarter-living&action=click&contentCollection=smarter-living&region=stream&module=stream_unit&version=latest&contentPlacement=3&pgtype=sectionfront", sponsorLogo: "", sponsorURL: "")
 
 ///////////////
-let groceryStoreTip9 = Tip(header: "Grocery Store", title: "Shopping carts were invented to make it easy for consumers to buy more", body: "The larger the cart, the more prone you are to spending more, so opt for the hand basket — or even the old-school armful of purchases — if you can.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tricks-stores-use-to-make-you-spend-more-money-2015-10#-3", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip9 = Tip(header: "Grocery Store", title: "The average household wastes 20% of their groceries, costing them $2,000 per year", body: "That's because people impulse-buy at the supermarkets, giving in to the psychological tactics stores use to encourage consumers to shop more. Plan ahead by making a shopping list.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2015/04/22/americas-165-billion-food-waste-problem.html", sponsorLogo: "", sponsorURL: "")
 
 let groceryStoreTip10 = Tip(header: "Grocery Store", title: "Look for foods with less than 20 percent daily value of sodium and saturated fat, less than 10 grams of added sugar, and a nice amount of fiber", body: "The FDA requires that labels of nutrition facts include added sugars and serving size. Even supposed \"single-serving\" packages can contain multiples.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/07/03/smarter-living/the-terms-on-a-food-label-to-ignore-and-the-ones-to-watch-for.html?rref=collection%2Fsectioncollection%2Fsmarter-living&action=click&contentCollection=smarter-living&region=stream&module=stream_unit&version=latest&contentPlacement=3&pgtype=sectionfront", sponsorLogo: "", sponsorURL: "")
 
@@ -528,15 +528,17 @@ let groceryStoreTip15 = Tip(header: "Grocery Store", title: "Check the unit pric
 
 let groceryStoreTip16 = Tip(header: "Grocery Store", title: "It's counter intuitive, but to checkout faster you should get in line behind the cart loaded up the most", body: "The science behind it states that if you choose a line with lots of people each carrying a few items, your wait time is increased by each interaction between the customer and checkout clerk.", sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/7-tricks-saving-time-money-grocery-store-ncna775791", sponsorLogo: "", sponsorURL: "")
 
+let groceryStoreTip17 = Tip(header: "Grocery Store", title: "Shopping carts were invented to make it easy for consumers to buy more", body: "The larger the cart, the more prone you are to spending more, so opt for the hand basket — or even the old-school armful of purchases — if you can.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tricks-stores-use-to-make-you-spend-more-money-2015-10#-3", sponsorLogo: "", sponsorURL: "")
+
 ///////////
 // Morning
-let groceryStoreTip17 = Tip(header: "Grocery Store", title: "Shop in the morning if you want the best selection", body: "Early to mid-morning is the best time of day for the finest selection. That’s when dairy, bakery goods, produce, meat and seafood are newly stocked and freshest.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip18 = Tip(header: "Grocery Store", title: "Shop in the morning if you want the best selection", body: "Early to mid-morning is the best time of day for the finest selection. That’s when dairy, bakery goods, produce, meat and seafood are newly stocked and freshest.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
 
 // Weekend
-let groceryStoreTip18 = Tip(header: "Grocery Store", title: "Weekends are the busiest days to grocery shop", body: "Midday is the most crowded time to show on Saturday and Sunday.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip19 = Tip(header: "Grocery Store", title: "Weekends are the busiest days to grocery shop", body: "Midday is the most crowded time to show on Saturday and Sunday.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
 
 // Weekdays
-let groceryStoreTip19 = Tip(header: "Grocery Store", title: "The most crowded times to shop during the week are between 4 p.m. and 6 p.m.", body: "Shop after dinner time if you want to avoid the crowds. Mondays and Tuesdays are the least busy days but stores may be out of a lot of items, especially if sales start on Wednesday.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip20 = Tip(header: "Grocery Store", title: "The most crowded times to shop during the week are between 4 p.m. and 6 p.m.", body: "Shop after dinner time if you want to avoid the crowds. Mondays and Tuesdays are the least busy days but stores may be out of a lot of items, especially if sales start on Wednesday.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
 
 let groceryStoreTipArray0 = [groceryStoreTip1, groceryStoreTip2, groceryStoreTip3, groceryStoreTip4]
 let groceryStoreTipArray1 = [groceryStoreTip5, groceryStoreTip6, groceryStoreTip7, groceryStoreTip8]
@@ -549,10 +551,10 @@ let groceryStoreTopic2 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon,
 let groceryStoreTopic3 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray3)
 
 // Weekend (18)
-let groceryStoreTipArrayWEND = [groceryStoreTip18, groceryStoreTip3, groceryStoreTip4, groceryStoreTip8]
+let groceryStoreTipArrayWEND = [groceryStoreTip19, groceryStoreTip3, groceryStoreTip4, groceryStoreTip8]
 let groceryStoreTopicWEND = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrayWEND)
 // Weekday (19)
-let groceryStoreTipArrayWDAY = [groceryStoreTip19, groceryStoreTip12, groceryStoreTip13, groceryStoreTip16]
+let groceryStoreTipArrayWDAY = [groceryStoreTip20, groceryStoreTip12, groceryStoreTip13, groceryStoreTip16]
 let groceryStoreTopicWDAY = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrayWDAY)
 
 
@@ -930,6 +932,8 @@ let restaurantTip6 = Tip(header: "Restaurant", title: "Fat and calories hide in 
 let restaurantTip7 = Tip(header: "Restaurant", title: "Look for these healthy buzzwords", body: "Roasted, baked, braised, broiled, poached, rubbed, seared, grilled, steamed, sautéed, spiced, seasoned indicate that the food was cooked in the healthiest way possible." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let restaurantTip8 = Tip(header: "Restaurant", title: "Plan to do some light exercise after dinner", body: "A nice stroll after dinner will not only help you digest, it’ll keep you from ordering something heavy while out. Why? You simply won’t want to feel weighed down and sluggish for a walk." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let restaurantTip9 = Tip(header: "Restaurant", title: "Diners leave 17% of their meals uneaten and 55% of edible leftovers are left at the restaurant.", body: "Portion sizes have increased significantly over the past 30 years. The average pizza slice has grown 70% in calories, the average chicken caesar salad doubled in calories, and the average chocolate chip cookie has quadrupled. Today, portion sizes can be two to eight times larger than USDA or FDA standard serving sizes." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2015/04/22/americas-165-billion-food-waste-problem.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 // TODO
 var restaurantTipArray0 = [restaurantTip1, restaurantTip2, restaurantTip3, restaurantTip4]

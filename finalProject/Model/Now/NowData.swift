@@ -87,10 +87,14 @@ let weekendNow9to11Tip4 = Tip(header: success, title: "Have some \"me time\" eac
 
 let weekendNow9to11Tip5 = Tip(header: health, title: "Being in nature increases feelings of happiness and healthiness", body: "Being in nature may provide people with resilience to meet the challenges of everyday life, while also facilitating exercise, social contact and a sense of purpose. It also reduces blood pressure and contributes to longer lifespans amongst senior citizens." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
+let weekendNow9to11Tip6 = Tip(header: health, title: "Drinking water throughout the day could lower your risk of a heart attack", body: "A six-year study found that people who drank more than 5 glasses of water a day were 41% less likely to die from a heart attack during the study period than those who drank less than 2 glasses." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let weekendNow9to11Tip7 = Tip(header: health, title: "Exercise today because studies show that sitting for more than 8 hours a day with no physical activity leads to the same risk of dying posed by obesity and smoking", body: "Another study found that sitting time contributed little to mortality for people who were most active. 60 to 75 minutes of moderately intense physical activity a day countered the effects of too much sitting." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
 let weekendNow9to11TipArray0 = [weekendNow9to11Tip0, weekendNow9to11Tip1, weekendNow9to11Tip2, weekendNow9to11Tip3]
 let weekendNow9to11Topic0 = Topic(title: weekendNow9to11Title, icon: weekendNow9to11Icon, tip: weekendNow9to11TipArray0)
 
-let weekendNow9to11TipArray1 = [weekendNow9to11Tip5, weekendNow9to11Tip4, weekendNow9to11Tip3, weekendNow9to11Tip2]
+let weekendNow9to11TipArray1 = [weekendNow9to11Tip4, weekendNow9to11Tip5, weekendNow9to11Tip6, weekendNow9to11Tip7]
 let weekendNow9to11Topic1 = Topic(title: weekendNow9to11Title, icon: weekendNow9to11Icon, tip: weekendNow9to11TipArray1)
 
 // MARK: - Now, Weekend, 11to14
@@ -135,14 +139,16 @@ let weekendNow14to16Tip2 = Tip(header: loseWeight, title: "Use your day off to d
 let weekendNow14to16Tip3 = Tip(header: fitness, title: "Physical performance is usually best, and the risk of injury least, from about 3 p.m. to 6 p.m.", body: "Muscle strength tends to peak between 2 p.m. and 6 p.m. at levels as much as 6% above the day's lows, improving your ability to grip a club or racquet. Eye-hand coordination is best in late afternoon, making that a good time for racquetball or Frisbee. And joints and muscles are as much as 20% more flexible in the evening, lowering the risk of injury.", sourceName: "Wall Street Journal", sourceURL: "https://www.wsj.com/articles/SB10000872396390444180004578018294057070544", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 
 /////////////
-let weekendNow14to16Tip4 = Tip(header: improvePerformance, title: "Research: the best time to take a nap is between 2 p.m and 3 p.m.", body: "We typically experience some sleepiness or decrease in alertness after lunch. A 10 to 30 minute nap at this time is less likely to interfere with nighttime rest than naps later in the day." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5#-6", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekendNow14to16Tip4 = Tip(header: "Happiness", title: "Drinking water may reduce cancer risk", body: "Staying hydrated can reduce risk of colon cancer by 45%, bladder cancer by 50%, and possibly reduce breast cancer risk too." , sourceName: "Shape", sourceURL: "https://www.shape.com/healthy-eating/healthy-drinks/6-reasons-drinking-water-helps-solve-any-problem", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let weekendNow14to16Tip5 = Tip(header: "Happiness", title: "Focus on face-to-face relationships. The more you use Facebook/social media, the worse you feel", body: "While real-world social networks were positively associated with overall well-being, the use of Facebook was negatively associated with overall well-being. Exposure to the carefully curated images from others’ lives leads to negative self-comparison, and the sheer quantity of social media interaction detracts from more meaningful real-life experiences." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/04/a-new-more-rigorous-study-confirms-the-more-you-use-facebook-the-worse-you-feel", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekendNow14to16Tip5 = Tip(header: improvePerformance, title: "Research: the best time to take a nap is between 2 p.m and 3 p.m.", body: "We typically experience some sleepiness or decrease in alertness after lunch. A 10 to 30 minute nap at this time is less likely to interfere with nighttime rest than naps later in the day." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5#-6", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let weekendNow14to16Tip6 = Tip(header: "Happiness", title: "Focus on face-to-face relationships. The more you use Facebook/social media, the worse you feel", body: "While real-world social networks were positively associated with overall well-being, the use of Facebook was negatively associated with overall well-being. Exposure to the carefully curated images from others’ lives leads to negative self-comparison, and the sheer quantity of social media interaction detracts from more meaningful real-life experiences." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/04/a-new-more-rigorous-study-confirms-the-more-you-use-facebook-the-worse-you-feel", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let weekendNow14to16TipArray0 = [weekendNow14to16Tip0, weekendNow14to16Tip1, weekendNow14to16Tip2, weekendNow14to16Tip3]
 let weekendNow14to16Topic0 = Topic(title: weekendNow14to16Title, icon: weekendNow14to16Icon, tip: weekendNow14to16TipArray0)
 
-let weekendNow14to16TipArray1 = [weekendNow14to16Tip2, weekendNow14to16Tip3, weekendNow14to16Tip4, weekendNow14to16Tip5]
+let weekendNow14to16TipArray1 = [weekendNow14to16Tip4, weekendNow14to16Tip5, weekendNow14to16Tip6, weekendNow14to16Tip2]
 let weekendNow14to16Topic1 = Topic(title: weekendNow14to16Title, icon: weekendNow14to16Icon, tip: weekendNow14to16TipArray1)
 
 // MARK: - Now, Weekend, 17to20
@@ -150,9 +156,9 @@ let weekendNow14to16Topic1 = Topic(title: weekendNow14to16Title, icon: weekendNo
 let weekendNow17to20Title = "Now, Weekday, 17to20"
 let weekendNow17to20Icon = "Now"
 
-let weekendNow17to20Tip0 = Tip(header: increaseConfidence, title: "Build a Habit of Confidence: Every time you walk through a doorway, remember to stand up, put your chin up, put your shoulders back, and smile.", body: "This will create a first impression that causes other people to view you as confident, open, positive, and friendly. That will change the way that we think about ourselves." , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekendNow17to20Tip0 = Tip(header: increaseConfidence, title: "Build a Habit of Confidence: Every time you walk through a doorway, remember to stand up, put your chin up, put your shoulders back, and smile.", body: "This will create a first impression that causes other people to view you as confident, open, positive, and friendly." , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let weekendNow17to20Tip1 = Tip(header: weekendNow17to20Title, title: "Enjoy your weekend by not checking your smartphone because studies show that being connected 24/7 can take its toll on your physical and emotional health", body: "The blue light from our screens can sabotage a good night's sleep, and social media obsession can cause depression." , sourceName: "CNET Magazine", sourceURL: "https://www.cnet.com/news/take-a-break-from-your-smartphone/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekendNow17to20Tip1 = Tip(header: weekendNow17to20Title, title: "Enjoy your weekend by not checking your smartphone. Studies show that being connected 24/7 takes its toll on health", body: "The blue light from our screens can sabotage a good night's sleep, and social media obsession can cause depression." , sourceName: "CNET Magazine", sourceURL: "https://www.cnet.com/news/take-a-break-from-your-smartphone/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let weekendNow17to20Tip2 = Tip(header: weekendNow17to20Title, title: "Receive health benefits by watching the sunset tonight", body: "Research: By witnessing the beauty and awe of the sunset, you can slow down your perception of time. Experiences of awe brings you into the present momement, resulting in the feeling of having more time available and makes life feel more satisfying than it would otherwise." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/04/04/make-time-for-sunset_n_5066629.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -239,10 +245,12 @@ let weekday0Now5to8Tip3 = Tip(header: betterSkin, title: "Before you leave for w
 //////////
 let weekday0Now5to8Tip4 = Tip(header: coffee, title: "The best time to drink coffee is after 9:30 a.m.", body: "That's because the stress hormone cortisol, which regulates energy, generally peaks between 8 a.m. and 9 a.m., so you don't need the boost right then.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5#-2", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 
+let weekday0Now5to8Tip5 = Tip(header: "Water", title: "Drinking water first thing in the morning helps to rehydrate the body", body: "Our body is 60% water. But, our bodies are slightly dehydrated when we wake up in the morning. Drinking a couple glasses of water allows the body to rehydrate and helps with digestion after breakfast.", sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
+
 let weekday0Now5to8TipArray0 = [weekday0Now5to8Tip0, weekday0Now5to8Tip1, weekday0Now5to8Tip2, weekday0Now5to8Tip3]
 let weekday0Now5to8Topic0 = Topic(title: weekday0Now5to8Title, icon: weekday0Now5to8Icon, tip: weekday0Now5to8TipArray0)
 
-var weekday0Now5to8TipArray1 = [weekday0Now5to8Tip4, weekday0Now5to8Tip3, weekday0Now5to8Tip2, weekday0Now5to8Tip1]
+var weekday0Now5to8TipArray1 = [weekday0Now5to8Tip5, weekday0Now5to8Tip4, weekday0Now5to8Tip2, weekday0Now5to8Tip3]
 let weekday0Now5to8Topic1 = Topic(title: weekday0Now5to8Title, icon: weekday0Now5to8Icon, tip: weekday0Now5to8TipArray1)
 
 // MARK: - Now, Weekday, 5to8 (1)
@@ -262,6 +270,9 @@ let weekday1Now5to8Tip3 = Tip(header: success, title: "Gratitude journaling is a
 let weekday1Now5to8Tip4 = Tip(header: success, title: "Top CEOs wake up early", body: "In a poll of 20 executives, 90% said they wake up before 6 a.m. on weekdays. \n\nPepsiCo CEO Indra Nooyi, wakes at 4 a.m., Disney CEO Bob Iger gets up at 4:30 a.m. to read, and Twitter and Square CEO Jack Dorsey is up at 5:30 to exercise." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-before-breakfast-2015-10", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let weekday1Now5to8Tip5 = Tip(header: "Coffee", title: "Avoid drinking coffee until the hours of 9:30 am to 11:00 am", body: "Cortisol is a hormone which makes us feel alert and awake. The peak production of cortisol in your body occurs between 8am to 9 am (under normal circumstances). So, by consuming caffeine when it is not needed, your body will build a faster tolerance to it, and the buzz you get will greatly diminish.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/anthonykosner/2014/01/05/why-the-best-time-to-drink-coffee-is-not-first-thing-in-the-morning/#322f5acd7a71", sponsorLogo: "", sponsorURL: "")
+
+//
+let weekday1Now5to8Tip6 = Tip(header: "Water", title: "Drinking water in the morning increases your metabolism and ability to burn fat", body: "You are dehydrated when you wake up which can slow down metabolism by as much as 3%. Drinking about 17oz of water increases metabolic rate by 30%. Plus, drinking one or two glasses of water before a meal can fill you up so you naturally eat less.", sourceName: "Shape", sourceURL: "https://www.shape.com/healthy-eating/healthy-drinks/6-reasons-drinking-water-helps-solve-any-problem", sponsorLogo: "", sponsorURL: "")
 
 
 let weekday1Now5to8TipArray0 = [weekday1Now5to8Tip0, weekday1Now5to8Tip1, weekday1Now5to8Tip2, weekday1Now5to8Tip3]
@@ -285,12 +296,15 @@ let weekdayNow9to11Tip3 = Tip(header: sleepBetter, title: "People exposed to sun
 /////////////////
 let weekdayNow9to11Tip4 = Tip(header: improvePerformance, title: "Having your smartphone in reach, even if it’s silenced or turned off lowers your ability to think", body: "Research: People who kept their phones in another room significantly outperformed the ones who kept them nearby in concentration tests. Having your phone within reach makes it harder to focus because a percentage of the brain has to actively work to not pick up or use the device.", sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/heres-why-you-need-to-put-your-phone-away-according-to-science.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
+let weekdayNow9to11Tip5 = Tip(header: improvePerformance, title: "You only have 7 seconds to make a good \"first impression\"", body: "First impressions are more influenced by your facial appearance and body language than your words. So, straighten your posture, make eye contact, and smile. Standing tall, pulling your shoulders back, and holding your head straight are all signals of confidence and competence.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/carolkinseygoman/2011/02/13/seven-seconds-to-make-a-first-impression/#3b38025d2722", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let weekdayNow9to11Tip6 = Tip(header: improvePerformance, title: "Sitting for more than 8 hours a day with no physical activity results in the same risk of dying as posed by obesity and smoking", body: "Long periods of sitting causes excess body fat around the waist and increases the risk of death from cardiovascular disease and cancer. For better health, take a break from sitting every 30 minutes, stand while talking on the phone, and try a standing desk at work.", sourceName: "Mayo Clinic", sourceURL: "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/sitting/faq-20058005", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+//
 let weekdayNow9to11TipArray0 = [weekdayNow9to11Tip0, weekdayNow9to11Tip1, weekdayNow9to11Tip2, weekdayNow9to11Tip3]
-
 let weekdayNow9to11Topic0 = Topic(title: weekdayNow9to11Title, icon: weekdayNow9to11Icon, tip: weekdayNow9to11TipArray0)
-
-let weekdayNow9to11TipArray1 = [weekdayNow9to11Tip0, weekdayNow9to11Tip1, weekdayNow9to11Tip2, weekdayNow9to11Tip3]
-
+//
+let weekdayNow9to11TipArray1 = [weekdayNow9to11Tip6, weekdayNow9to11Tip5, weekdayNow9to11Tip4, weekdayNow9to11Tip3]
 let weekdayNow9to11Topic1 = Topic(title: weekdayNow9to11Title, icon: weekdayNow9to11Icon, tip: weekdayNow9to11TipArray1)
 
 // MARK: - Now, Weekday, 11to14
@@ -298,16 +312,21 @@ let weekdayNow9to11Topic1 = Topic(title: weekdayNow9to11Title, icon: weekdayNow9
 let weekdayNow11to14Title = "Now, Weekday, 11to14"
 let weekdayNow11to14Icon = "Now"
 
-let weekdayNow11to14Tip0 = Tip(header: beMoreProductive, title: "Decorating your office with plants or pictures of your family or pet can increase productivity up to 15%", body: "Seeing plants around you can improve morale, increase satisfaction with your work, and make you more patient. Set your screensaver or web browser to display nature images." , sourceName: "Inc.", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow11to14Tip0 =  Tip(header: "Water", title: "Drinking water keeps you alert during the day", body: "Dehydration is the single most common cause of daytime fatigue. A 2% dehydration level can trigger short-term memory problems and difficulty focusing on a computer screen or printed page." , sourceName: "Shape", sourceURL: "https://www.shape.com/healthy-eating/healthy-drinks/6-reasons-drinking-water-helps-solve-any-problem", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip1 = Tip(header: beMoreProductive, title: "Be happier and more productive at at work by taking regular exercise breaks", body: "Health experts are warning of the dangers of people sitting too long. Taking a walk will get your muscles moving and the oxygen flowing, and it also allows you to clear your head.", sourceName: "Huffington Post", sourceURL: "https://www.businessinsider.com/successful-people-do-during-afternoon-lull-2014-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip2 = Tip(header: beMoreProductive, title: "Multitasking makes us 40% less productive, increases our errors by 50%, and increases the time to complete a single task by 50%", body: "Heavy multitasking can temporarily lower your IQ by up to 15 points. Focus on one thing exclusively, and you’ll find yourself completing it much faster." , sourceName: "Inc.", sourceURL: "https://www.inc.com/laura-montini/infographic/the-high-cost-of-multitasking.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip3 = Tip(header: preventStess, title: "The next time you get stressed at work, pause before you respond", body: "The more something makes you mad or causes your heart to race, the more important it is to take a deep breath before speaking or typing a single word because you risk making the situation worse." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/work-career/successful-people-habits-work/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 ////////////////
-let weekdayNow11to14Tip4 = Tip(header: "Productive", title: "Nearby speech distracts 48% of office workers.  Increase your focus and mood by listening to nature sounds while you work", body: "Sounds of nature can mask intelligible speech just as well as white noise while also enhancing cognitive functioning, optimizing the ability to concentrate, and increasing overall worker satisfaction." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-music-for-productivity-2015-7", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow11to14Tip4 = Tip(header: "Water", title: "Drinking water helps your brain function at optimum levels", body: "Drinking 8 to 10 cups of water per day can improve your levels of cognitive performance by 30%. A dehydration level of just 1% of your body weight reduces thinking functions, so staying well-hydrated is important for your mental performance." , sourceName: "Shape", sourceURL: "https://www.shape.com/healthy-eating/healthy-drinks/6-reasons-drinking-water-helps-solve-any-problem", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip5 = Tip(header: "Productive", title: "Listening to music you like, especially songs without lyrics, improves your mood and productivity", body: "Research: participants who listened to music they enjoyed completed their tasks more quickly and came up with better ideas than those who didn't because the music improved their mood. Music is also effective in raising efficiency in repetitive work." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-music-for-productivity-2015-7", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip6 = Tip(header: "Happiness", title: "Workers lose as much as 86 minutes per day due to noise distractions", body: "Wear large, over-the-ear headphones to help block out unwanted noise. Or, listen to white noise to mask conversations. Employees should speak to an office manager or human resources director on this issue." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/03/stop-noise-from-ruining-your-open-office", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip7 = Tip(header: "Happiness", title: "The more you use Facebook/social media, the worse you feel", body: "While real-world social networks were positively associated with overall well-being, the use of Facebook was negatively associated with overall well-being. \n\nLiking others’ content and clicking links significantly predicted a reduction in self-reported physical health, mental health, and life satisfaction. Exposure to the carefully curated images from others’ lives leads to negative self-comparison, and the sheer quantity of social media interaction detracts from more meaningful real-life experiences." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/04/a-new-more-rigorous-study-confirms-the-more-you-use-facebook-the-worse-you-feel", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+//////
+let weekdayNow11to14Tip8 = Tip(header: "Productive", title: "Nearby speech distracts 48% of office workers.  Increase your focus and mood by listening to nature sounds while you work", body: "Sounds of nature can mask intelligible speech just as well as white noise while also enhancing cognitive functioning, optimizing the ability to concentrate, and increasing overall worker satisfaction." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-music-for-productivity-2015-7", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let weekdayNow11to14Tip9 = Tip(header: beMoreProductive, title: "Decorating your office with plants or pictures of your family or pet can increase productivity up to 15%", body: "Seeing plants around you can improve morale, increase satisfaction with your work, and make you more patient. Set your screensaver or web browser to display nature images." , sourceName: "Inc.", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 // 0
 var weekdayNow11to14TipArray0 = [weekdayNow11to14Tip0, weekdayNow11to14Tip1, weekdayNow11to14Tip2, weekdayNow11to14Tip3]
@@ -318,7 +337,7 @@ var weekdayNow11to14TipArray1 = [weekdayNow11to14Tip4, weekdayNow11to14Tip5, wee
 let weekdayNow11to14Topic1 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray1)
 
 // 2 (re-order of existing tips)
-var weekdayNow11to14TipArray2 = [weekdayNow11to14Tip6, weekdayNow11to14Tip2, weekdayNow11to14Tip3, weekdayNow11to14Tip7]
+var weekdayNow11to14TipArray2 = [weekdayNow11to14Tip8, weekdayNow11to14Tip9, weekdayNow11to14Tip2, weekdayNow11to14Tip6]
 let weekdayNow11to14Topic2 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray2)
 
 // MARK: - Now, Weekday, 14to16
@@ -333,11 +352,9 @@ let weekdayNow14to16Tip2 = Tip(header: ceoAdvice, title: "Before you leave work,
 let weekdayNow14to16Tip3 = Tip(header: success, title: "Improve your performance: Ask yourself how did your day go?", body: "Research: employees were separated into two groups: a control group and another that was encouraged to spend 15 minutes at the end of each day reflecting about how their day went. After 10 days, the employees who set aside time for reflection were outperforming the control group by 23%." , sourceName: "LinkedIn", sourceURL: "https://learning.linkedin.com/blog/learning-tips/want-to-get-better-at-your-job--build-in-time-to-reflect", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let weekdayNow14to16TipArray0 = [weekdayNow14to16Tip0, weekdayNow14to16Tip1, weekdayNow14to16Tip2, weekdayNow14to16Tip3]
-
 let weekdayNow14to16Topic0 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray0)
 
 let weekdayNow14to16TipArray1 = [weekdayNow14to16Tip3, weekdayNow14to16Tip2, weekdayNow14to16Tip1, weekdayNow14to16Tip0]
-
 let weekdayNow14to16Topic1 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray1)
 
 // MARK: - Now, Weekday, 17to20
@@ -352,7 +369,7 @@ let weekdayNow17to20Tip2 = Tip(header: success, title: "After a long day: Increa
 let weekdayNow17to20Tip3 = Tip(header: success, title: "Focus on maintaining your relationships outside of social media", body: "Frequent Facebook users tend to have higher levels of credit-card debt and lower credit scores. If your friends are doing all these cool things, you might feel envious or pressured to participate in those things as well." , sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-socialmedia-envy-consumers/how-to-avoid-the-high-price-of-social-media-envy-idUSKBN0KM1CU20150113", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 /////////////
 
-let weekdayNow17to20Tip4 = Tip(header: success, title: "Avoid screen-time tonight because it reduces creativity", body: "When your brain is fed a constant stream of stimulating entertainment on a 2-D screen with flat, unnatural light, your senses are saturated and creative drive is reduced. In contrast, non-digital creative activities stimulate the right brain, the hemisphere that is often less active in our information-overloaded culture." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow17to20Tip4 = Tip(header: success, title: "Avoid screen-time tonight because it reduces creativity", body: "When your brain is fed a constant stream of stimulating entertainment on a 2-D screen with flat, unnatural light, your senses are saturated and creative drive is reduced." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow17to20Tip5 = Tip(header: success, title: "Stay productive after work by not going home right away", body: "When you get home, it's easy to relax and watch TV. The key for you to make progress on your passion project is to stop by your local coffee shop before you go home. You'll be less distracted there." , sourceName: "LifeHacker", sourceURL: "https://lifehacker.com/5921271/how-to-stay-productive-after-work", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let weekdayNow17to20TipArray0 = [weekdayNow17to20Tip0, weekdayNow17to20Tip1, weekdayNow17to20Tip2, weekdayNow17to20Tip3]
