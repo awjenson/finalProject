@@ -24,6 +24,7 @@
 #import "FUIAuthUtils.h"
 #import "FUIAuth_Internal.h"
 #import "FUIPasswordRecoveryViewController.h"
+#import "FUIPrivacyAndTermsOfServiceView.h"
 
 /** @var kCellReuseIdentifier
     @brief The reuse identifier for table view cell.
@@ -58,6 +59,12 @@ static NSString *const kCellReuseIdentifier = @"cellReuseIdentifier";
       @brief The @c UIButton which handles forgot password action.
    */
   __weak IBOutlet UIButton *_forgotPasswordButton;
+
+  /** @var _termsOfServiceView
+   @brief The @c Text view which displays Terms of Service.
+   */
+  __weak IBOutlet FUIPrivacyAndTermsOfServiceView *_termsOfServiceView;
+
 }
 
 - (instancetype)initWithAuthUI:(FUIAuth *)authUI
@@ -100,8 +107,10 @@ static NSString *const kCellReuseIdentifier = @"cellReuseIdentifier";
   FUIAuthTableHeaderView *tableHeaderView =
       [[FUIAuthTableHeaderView alloc] initWithFrame:_tableView.bounds];
   _tableView.tableHeaderView = tableHeaderView;
-  [_forgotPasswordButton setTitle:FUILocalizedString(kStr_ForgotPasswordTitle) forState:UIControlStateNormal];
-
+  [_forgotPasswordButton setTitle:FUILocalizedString(kStr_ForgotPasswordTitle)
+                         forState:UIControlStateNormal];
+  _termsOfServiceView.authUI = self.authUI;
+  [_termsOfServiceView useFooterMessage];
   [self enableDynamicCellHeightForTableView:_tableView];
 }
 
@@ -158,7 +167,7 @@ static NSString *const kCellReuseIdentifier = @"cellReuseIdentifier";
       [self decrementActivity];
 
       // Ignore any error (shouldn't happen) and treat the user as successfully signed in.
-      [self.navigationController dismissViewControllerAnimated:YES completion:^{
+      [self dismissNavigationControllerAnimated:YES completion:^{
         [self.authUI invokeResultCallbackWithAuthDataResult:authResult error:nil];
       }];
     }];

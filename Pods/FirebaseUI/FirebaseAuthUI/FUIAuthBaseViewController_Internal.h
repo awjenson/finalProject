@@ -56,12 +56,66 @@ NS_ASSUME_NONNULL_BEGIN
                  actionTitle:(NSString *)actionTitle
     presentingViewController:(UIViewController *)presentingViewController;
 
+/** @fn showAlertWithTitle:message:actionTitle:presentingViewController:
+    @brief Displays an alert view with given title, message and action title  on top of the
+        specified view controller.
+    @param title The title of the alert.
+    @param message The message of the alert.
+    @param actionTitle The title of the action button.
+    @param actionHandler The block to execute if the action button is tapped.
+    @param cancelHandler The block to execute if the cancel button is tapped.
+    @param presentingViewController The controller which shows alert.
+ */
++ (void)showAlertWithTitle:(nullable NSString *)title
+                   message:(NSString *)message
+               actionTitle:(NSString *)actionTitle
+  presentingViewController:(UIViewController *)presentingViewController
+             actionHandler:(FUIAuthAlertActionHandler)actionHandler
+             cancelHandler:(FUIAuthAlertActionHandler)cancelHandler;
+
+/** @fn showSignInAlertWithEmail:provider:handler:
+    @brief Displays an alert to conform with user whether she wants to proceed with the provider.
+    @param email The email address to sign in with.
+    @param provider The identity provider to sign in with.
+    @param signinHandler Handler for the sign in action of the alert.
+    @param cancelHandler Handler for the cancel action of the alert.
+ */
++ (void)showSignInAlertWithEmail:(NSString *)email
+                        provider:(id<FUIAuthProvider>)provider
+        presentingViewController:(UIViewController *)presentingViewController
+                   signinHandler:(FUIAuthAlertActionHandler)signinHandler
+                   cancelHandler:(FUIAuthAlertActionHandler)cancelHandler;
+
+/** @fn showSignInAlertWithEmail:providerShortName:providerSignInLabel:handler:
+    @brief Displays an alert to conform with user whether she wants to proceed with the provider.
+    @param email The email address to sign in with.
+    @param providerShortName The name of the provider as displayed in the sign-in alert message.
+    @param providerSignInLabel The name of the provider as displayed in the sign-in alert button.
+    @param signinHandler Handler for the sign in action of the alert.
+    @param cancelHandler Handler for the cancel action of the alert.
+ */
++ (void)showSignInAlertWithEmail:(NSString *)email
+               providerShortName:(NSString *)providerShortName
+             providerSignInLabel:(NSString *)providerSignInLabel
+        presentingViewController:(UIViewController *)presentingViewController
+                   signinHandler:(FUIAuthAlertActionHandler)signinHandler
+                   cancelHandler:(FUIAuthAlertActionHandler)cancelHandler;
+
 /** @fn pushViewController:
     @brief Push the view controller to the navigation controller of the current view controller
         with animation. The pushed view controller will have a fixed "Back" title for back button.
     @param viewController The view controller to be pushed.
  */
 - (void)pushViewController:(UIViewController *)viewController;
+
+/** @fn dismissNavigationControllerAnimated:completion:
+    @brief dismiss navigation controller if it is not the rootViewController. If it is set as
+        the rootViewController only perform the completion block.
+    @param animated Use animation when dismissing the ViewControler.
+    @param completion Code to be executed upon completion
+ */
+- (void)dismissNavigationControllerAnimated:(BOOL)animated
+                                 completion:(void (^)(void))completion;
 
 /** @fn pushViewController:
     @brief Push the view controller to the navigation controller of the current view controller

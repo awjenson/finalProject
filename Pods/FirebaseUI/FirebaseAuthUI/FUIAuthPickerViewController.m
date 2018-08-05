@@ -23,6 +23,8 @@
 #import "FUIAuthUtils.h"
 #import "FUIAuth_Internal.h"
 #import "FUIEmailEntryViewController.h"
+#import "FUIPrivacyAndTermsOfServiceView.h"
+
 
 /** @var kErrorUserInfoEmailKey
     @brief The key for the email address in the userinfo dictionary of a sign in error.
@@ -56,10 +58,12 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
 
 @implementation FUIAuthPickerViewController {
   UIView *_buttonContainerView;
+
+  IBOutlet FUIPrivacyAndTermsOfServiceView *_privacyPolicyAndTOSView;
 }
 
 - (instancetype)initWithAuthUI:(FUIAuth *)authUI {
-  return [self initWithNibName:NSStringFromClass([self class])
+  return [self initWithNibName:@"FUIAuthPickerViewController"
                         bundle:[FUIAuthUtils bundleNamed:FUIAuthBundleName]
                         authUI:authUI];
 }
@@ -80,11 +84,13 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  UIBarButtonItem *cancelBarButton =
-      [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                    target:self
-                                                    action:@selector(cancelAuthorization)];
-  self.navigationItem.leftBarButtonItem = cancelBarButton;
+  if (!self.authUI.shouldHideCancelButton) {
+    UIBarButtonItem *cancelBarButton =
+        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                      target:self
+                                                      action:@selector(cancelAuthorization)];
+    self.navigationItem.leftBarButtonItem = cancelBarButton;
+  }
   self.navigationItem.backBarButtonItem =
       [[UIBarButtonItem alloc] initWithTitle:FUILocalizedString(kStr_Back)
                                        style:UIBarButtonItemStylePlain
@@ -97,7 +103,7 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
     ++numberOfButtons;
   }
   CGFloat buttonContainerViewHeight =
-      kSignInButtonHeight * numberOfButtons + kSignInButtonVerticalMargin * (numberOfButtons - 1);
+      kSignInButtonHeight * numberOfButtons + kSignInButtonVerticalMargin * (numberOfButtons);
   CGRect buttonContainerViewFrame = CGRectMake(0, 0, kSignInButtonWidth, buttonContainerViewHeight);
   _buttonContainerView = [[UIView alloc] initWithFrame:buttonContainerViewFrame];
   [self.view addSubview:_buttonContainerView];
@@ -131,6 +137,8 @@ static const CGFloat kButtonContainerBottomMargin = 56.0f;
     emailButton.accessibilityIdentifier = kEmailButtonAccessibilityID;
     [_buttonContainerView addSubview:emailButton];
   }
+  _privacyPolicyAndTOSView.authUI = self.authUI;
+  [_privacyPolicyAndTOSView useFullMessage];
 }
 
 - (void)viewDidLayoutSubviews {

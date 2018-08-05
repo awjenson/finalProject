@@ -176,6 +176,16 @@ __attribute__((deprecated("Instead use authUI:didSignInWithAuthDataResult:error:
  */
 @property(nonatomic, assign, getter=isSignInWithEmailHidden) BOOL signInWithEmailHidden;
 
+/** @property allowNewEmailAccounts
+ @brief Whether to allow new user sign, defaults to YES.
+ */
+@property(nonatomic, assign) BOOL allowNewEmailAccounts;
+
+/** @property shouldHideCancelButton
+ @brief Whether to hide the canel button, defaults to NO.
+ */
+@property(nonatomic, assign) BOOL shouldHideCancelButton;
+
 /** @property customStringsBundle
     @brief Custom strings bundle supplied by the developer. Nil when there is no custom strings
         bundle set. In which case the default bundle will be used.
@@ -186,9 +196,22 @@ __attribute__((deprecated("Instead use authUI:didSignInWithAuthDataResult:error:
 
 /** @property TOSURL
     @brief The URL of your app's Terms of Service. If not nil, a Terms of Service notice is
-        displayed on the email/password account creation screen.
+        displayed on the initial sign-in screen and potentially the phone number auth and
+        email/password account creation screen.
  */
 @property(nonatomic, copy, nullable) NSURL *TOSURL;
+
+/** @property shouldAutoUpgradeAnonymousUsers
+    @brief Whether to enable auto upgrading of anonymous accounts, defaults to NO.
+ */
+@property(nonatomic, assign, getter=shouldAutoUpgradeAnonymousUsers) BOOL autoUpgradeAnonymousUsers;
+
+/** @property privacyPolicyURL
+    @brief The URL of your app's Privacy Policy. If not nil, a privacy policy notice is
+        displayed on the initial sign-in screen and potentially the phone number auth and
+        email/password account creation screen.
+ */
+@property(nonatomic, copy, nullable) NSURL *privacyPolicyURL;
 
 /** @property delegate
     @brief A delegate that receives callbacks or provides custom UI for @c FUIAuth.

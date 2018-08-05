@@ -25,6 +25,7 @@
 #import "FUIAuth_Internal.h"
 #import "FUIPasswordSignInViewController.h"
 #import "FUIPasswordSignUpViewController.h"
+#import "FUIPrivacyAndTermsOfServiceView.h"
 
 /** @var kCellReuseIdentifier
     @brief The reuse identifier for table view cell.
@@ -64,6 +65,12 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
       @brief The @c UITableView used to store all UI elements.
    */
   __weak IBOutlet UITableView *_tableView;
+
+  /** @var _termsOfServiceView
+   @brief The @c Text view which displays Terms of Service.
+   */
+  __weak IBOutlet FUIPrivacyAndTermsOfServiceView *_termsOfServiceView;
+
 }
 
 - (instancetype)initWithAuthUI:(FUIAuth *)authUI {
@@ -80,7 +87,7 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
                          bundle:nibBundleOrNil
                          authUI:authUI];
   if (self) {
-    self.title = FUILocalizedString(kStr_SignInWithEmail);
+    self.title = FUILocalizedString(kStr_EnterYourEmail);
   }
   return self;
 }
@@ -94,6 +101,8 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
                                            action:@selector(next)];
   nextButtonItem.accessibilityIdentifier = kNextButtonAccessibilityID;
   self.navigationItem.rightBarButtonItem = nextButtonItem;
+  _termsOfServiceView.authUI = self.authUI;
+  [_termsOfServiceView useFullMessage];
 
   [self enableDynamicCellHeightForTableView:_tableView];
 }
@@ -102,11 +111,13 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
   [super viewWillAppear:animated];
 
   if (self.navigationController.viewControllers.firstObject == self) {
-    UIBarButtonItem *cancelBarButton =
-    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                  target:self
-                                                  action:@selector(cancelAuthorization)];
-    self.navigationItem.leftBarButtonItem = cancelBarButton;
+    if (!self.authUI.shouldHideCancelButton) {
+      UIBarButtonItem *cancelBarButton =
+          [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                        target:self
+                                                        action:@selector(cancelAuthorization)];
+      self.navigationItem.leftBarButtonItem = cancelBarButton;
+    }
     self.navigationItem.backBarButtonItem =
         [[UIBarButtonItem alloc] initWithTitle:FUILocalizedString(kStr_Back)
                                          style:UIBarButtonItemStylePlain
@@ -138,7 +149,7 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
       if (error.code == FIRAuthErrorCodeInvalidEmail) {
         [self showAlertWithMessage:FUILocalizedString(kStr_InvalidEmailError)];
       } else {
-        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        [self dismissNavigationControllerAnimated:YES completion:^{
           [self.authUI invokeResultCallbackWithAuthDataResult:nil error:error];
         }];
       }
@@ -174,12 +185,16 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
       } else {
         // New user.
         UIViewController *controller;
-        if ([self.authUI.delegate respondsToSelector:@selector(passwordSignUpViewControllerForAuthUI:email:)]) {
-          controller = [self.authUI.delegate passwordSignUpViewControllerForAuthUI:self.authUI
+        if (self.authUI.allowNewEmailAccounts) {
+          if ([self.authUI.delegate respondsToSelector:@selector(passwordSignUpViewControllerForAuthUI:email:)]) {
+            controller = [self.authUI.delegate passwordSignUpViewControllerForAuthUI:self.authUI
                                                                              email:emailText];
-        } else {
-          controller = [[FUIPasswordSignUpViewController alloc] initWithAuthUI:self.authUI
+          } else {
+            controller = [[FUIPasswordSignUpViewController alloc] initWithAuthUI:self.authUI
                                                                          email:emailText];
+          }
+        } else {
+            [self showAlertWithMessage:FUILocalizedString(kStr_UserNotFoundError)];
         }
         [self pushViewController:controller];
       }
@@ -271,7 +286,7 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
         result(nil, error);
       }
 
-      [self.navigationController dismissViewControllerAnimated:YES completion:^{
+      [self dismissNavigationControllerAnimated:YES completion:^{
         [self.authUI invokeResultCallbackWithAuthDataResult:nil error:error];
       }];
       return;
@@ -288,7 +303,7 @@ static NSString *const kNextButtonAccessibilityID = @"NextButtonAccessibilityID"
       if (error) {
         [self.authUI invokeResultCallbackWithAuthDataResult:nil error:error];
       } else {
-        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        [self dismissNavigationControllerAnimated:YES completion:^{
           [self.authUI invokeResultCallbackWithAuthDataResult:authResult error:error];
         }];
       }

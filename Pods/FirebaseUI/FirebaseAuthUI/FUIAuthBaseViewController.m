@@ -242,30 +242,79 @@ static NSString *const kAuthUICodingKey = @"authUI";
   [presentingViewController presentViewController:alertController animated:YES completion:nil];
 }
 
++ (void)showAlertWithTitle:(nullable NSString *)title
+                   message:(NSString *)message
+               actionTitle:(NSString *)actionTitle
+  presentingViewController:(UIViewController *)presentingViewController
+             actionHandler:(FUIAuthAlertActionHandler)actionHandler
+             cancelHandler:(FUIAuthAlertActionHandler)cancelHandler {
+  UIAlertController *alertController =
+      [UIAlertController alertControllerWithTitle:title
+                                          message:message
+                                   preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *okAction =
+      [UIAlertAction actionWithTitle:actionTitle
+                               style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction *_Nonnull action) {
+        if (actionHandler) {
+          actionHandler();
+        }
+      }];
+  [alertController addAction:okAction];
+  UIAlertAction *cancelAction =
+      [UIAlertAction actionWithTitle:FUILocalizedString(kStr_Cancel)
+                               style:UIAlertActionStyleCancel
+                               handler:^(UIAlertAction * _Nonnull action) {
+        if (cancelHandler) {
+          cancelHandler();
+        }
+      }];
+  [alertController addAction:cancelAction];
+  [presentingViewController presentViewController:alertController animated:YES completion:nil];
+}
+
 + (void)showSignInAlertWithEmail:(NSString *)email
                         provider:(id<FUIAuthProvider>)provider
         presentingViewController:(UIViewController *)presentingViewController
                    signinHandler:(FUIAuthAlertActionHandler)signinHandler
                    cancelHandler:(FUIAuthAlertActionHandler)cancelHandler {
+  [self showSignInAlertWithEmail:email
+               providerShortName:provider.shortName
+             providerSignInLabel:provider.signInLabel
+        presentingViewController:presentingViewController
+                   signinHandler:signinHandler
+                   cancelHandler:cancelHandler];
+}
+
++ (void)showSignInAlertWithEmail:(NSString *)email
+               providerShortName:(NSString *)providerShortName
+             providerSignInLabel:(NSString *)providerSignInLabel
+        presentingViewController:(UIViewController *)presentingViewController
+                   signinHandler:(FUIAuthAlertActionHandler)signinHandler
+                   cancelHandler:(FUIAuthAlertActionHandler)cancelHandler {
   NSString *message =
       [NSString stringWithFormat:FUILocalizedString(kStr_ProviderUsedPreviouslyMessage),
-          email, provider.shortName];
+          email, providerShortName];
   UIAlertController *alertController =
       [UIAlertController alertControllerWithTitle:FUILocalizedString(kStr_ExistingAccountTitle)
                                           message:message
                                    preferredStyle:UIAlertControllerStyleAlert];
   UIAlertAction *signInAction =
-      [UIAlertAction actionWithTitle:provider.signInLabel
+      [UIAlertAction actionWithTitle:providerSignInLabel
                                style:UIAlertActionStyleDefault
                              handler:^(UIAlertAction *_Nonnull action) {
-        signinHandler();
+        if (signinHandler) {
+          signinHandler();
+        }
       }];
   [alertController addAction:signInAction];
   UIAlertAction *cancelAction =
       [UIAlertAction actionWithTitle:FUILocalizedString(kStr_Cancel)
                                style:UIAlertActionStyleCancel
                                handler:^(UIAlertAction * _Nonnull action) {
-        cancelHandler();
+        if (cancelHandler) {
+          cancelHandler();
+        }
       }];
   [alertController addAction:cancelAction];
   [presentingViewController presentViewController:alertController animated:YES completion:nil];
@@ -274,6 +323,16 @@ static NSString *const kAuthUICodingKey = @"authUI";
 - (void)pushViewController:(UIViewController *)viewController {
   [[self class] pushViewController:viewController
               navigationController:self.navigationController];
+}
+
+- (void)dismissNavigationControllerAnimated:(BOOL)animated completion:(void (^)(void))completion {
+     if (self.navigationController.presentingViewController == nil){
+         if (completion){
+             completion();
+         }
+     } else {
+         [self.navigationController dismissViewControllerAnimated:animated completion:completion];
+     }
 }
 
 + (void)pushViewController:(UIViewController *)viewController
@@ -313,7 +372,7 @@ static NSString *const kAuthUICodingKey = @"authUI";
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
                               (int64_t)(kActivityIndiactorAnimationDelay * NSEC_PER_SEC)),
                  dispatch_get_main_queue(), ^{
-    [self->_activityIndicator.superview bringSubviewToFront:_activityIndicator];
+    [self->_activityIndicator.superview bringSubviewToFront:self->_activityIndicator];
     if (self->_activityCount > 0) {
       [self->_activityIndicator startAnimating];
     }
@@ -335,7 +394,7 @@ static NSString *const kAuthUICodingKey = @"authUI";
 }
 
 - (void)cancelAuthorization {
-  [self.navigationController dismissViewControllerAnimated:YES completion:^{
+  [self dismissNavigationControllerAnimated:YES completion:^{
     NSError *error = [FUIAuthErrorUtils userCancelledSignInError];
     [self.authUI invokeResultCallbackWithAuthDataResult:nil error:error];
   }];
