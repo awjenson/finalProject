@@ -31,7 +31,7 @@ struct GoalItemService {
         let keystone0 = GoalItem(name: "🔑 Make Your Bed", why: "Making your bed is correlated with increased happiness, better productivity, and starts the day with a sense of accomplishment", timestamp: currentDate, count: 0)
         let keystone1 = GoalItem(name: "🔑 Practice Gratitude", why: "Gratitude is correlated with increased happiness and health and reduced depression and negative emotions", timestamp: currentDate, count: 0)
         let keystone2 = GoalItem(name: "🔑 Exercise 30+ Minutes", why: "Exercise is correlated with healthier eating, better mood, less stress, and more confidence", timestamp: currentDate, count: 0)
-        let keystone3 = GoalItem(name: "🔑 Meditate", why: "Meditation is correlated with increased memory and awareness and reduced stress and anxiety", timestamp: currentDate, count: 0)
+        let keystone3 = GoalItem(name: "🔑 Meditate 5+ Minutes", why: "Meditation is correlated with increased memory and awareness and reduced stress and anxiety", timestamp: currentDate, count: 0)
         let keystone4 = GoalItem(name: "🔑 Read Book For 10+ Minutes", why: "Reading is correlated with higher income and inteligence, lower stress, and longer life", timestamp: currentDate, count: 0)
 
 

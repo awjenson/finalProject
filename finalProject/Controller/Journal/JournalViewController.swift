@@ -134,18 +134,6 @@ class JournalViewController: UIViewController {
 
         journalTableViewSetup()
 
-        // Additional Setup
-
-//        configureCards()
-
-//        configureTableView()
-
-//        setupGestureRecognizers()
-
-
-//        setupRefreshControl()
-//
-//        setupKeyboardObservers()
     }
 
 
@@ -326,27 +314,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am1
+            advice = AdviceData.am1a
             selectedImage = Constants.JournalImages.night1
         case 5...9:
             // morning
-            advice = AdviceData.am1
+            advice = AdviceData.am1b
             selectedImage = Constants.JournalImages.morning1
         case 10...13:
             // day
-            advice = AdviceData.am1
+            advice = AdviceData.am1c
             selectedImage = Constants.JournalImages.day1
         case 14...17:
             // afternoon
-            advice = AdviceData.pm1
+            advice = AdviceData.pm1a
             selectedImage = Constants.JournalImages.afternoon1
         case 18...21:
             // sunset
-            advice = AdviceData.pm1
+            advice = AdviceData.pm1b
             selectedImage = Constants.JournalImages.sunset1
         case 22...24:
             // night
-            advice = AdviceData.pm1
+            advice = AdviceData.pm1c
             selectedImage = Constants.JournalImages.night1
         default:
             print("ERROR: INVALID HOUR!")
@@ -357,27 +345,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am2
+            advice = AdviceData.am2a
             selectedImage = Constants.JournalImages.night2
         case 5...9:
             // morning
-            advice = AdviceData.am2
+            advice = AdviceData.am2b
             selectedImage = Constants.JournalImages.morning2
         case 10...13:
             // day
-            advice = AdviceData.am2
+            advice = AdviceData.am2c
             selectedImage = Constants.JournalImages.day2
         case 14...17:
             // afternoon
-            advice = AdviceData.pm2
+            advice = AdviceData.pm2a
             selectedImage = Constants.JournalImages.afternoon2
         case 18...21:
             // sunset
-            advice = AdviceData.pm2
+            advice = AdviceData.pm2b
             selectedImage = Constants.JournalImages.sunset2
         case 22...24:
             // night
-            advice = AdviceData.pm2
+            advice = AdviceData.pm2c
             selectedImage = Constants.JournalImages.night2
         default:
             print("ERROR: INVALID HOUR!")
@@ -388,27 +376,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am3
+            advice = AdviceData.am3a
             selectedImage = Constants.JournalImages.night3
         case 5...9:
             // morning
-            advice = AdviceData.am3
+            advice = AdviceData.am3b
             selectedImage = Constants.JournalImages.morning3
         case 10...13:
             // day
-            advice = AdviceData.am3
+            advice = AdviceData.am3c
             selectedImage = Constants.JournalImages.day3
         case 14...17:
             // afternoon
-            advice = AdviceData.pm3
+            advice = AdviceData.pm3a
             selectedImage = Constants.JournalImages.afternoon3
         case 18...21:
             // sunset
-            advice = AdviceData.pm3
+            advice = AdviceData.pm3b
             selectedImage = Constants.JournalImages.sunset3
         case 22...24:
             // night
-            advice = AdviceData.pm3
+            advice = AdviceData.pm3c
             selectedImage = Constants.JournalImages.night3
         default:
             print("ERROR: INVALID HOUR!")
@@ -419,27 +407,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am4
+            advice = AdviceData.am4a
             selectedImage = Constants.JournalImages.night4
         case 5...9:
             // morning
-            advice = AdviceData.am4
+            advice = AdviceData.am4b
             selectedImage = Constants.JournalImages.morning4
         case 10...13:
             // day
-            advice = AdviceData.am4
+            advice = AdviceData.am4c
             selectedImage = Constants.JournalImages.day4
         case 14...17:
             // afternoon
-            advice = AdviceData.pm4
+            advice = AdviceData.pm4a
             selectedImage = Constants.JournalImages.afternoon4
         case 18...21:
             // sunset
-            advice = AdviceData.pm4
+            advice = AdviceData.pm4b
             selectedImage = Constants.JournalImages.sunset4
         case 22...24:
             // night
-            advice = AdviceData.pm4
+            advice = AdviceData.pm4c
             selectedImage = Constants.JournalImages.night4
         default:
             print("ERROR: INVALID HOUR!")
@@ -450,27 +438,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am5
+            advice = AdviceData.am5a
             selectedImage = Constants.JournalImages.night5
         case 5...9:
             // morning
-            advice = AdviceData.am5
+            advice = AdviceData.am5b
             selectedImage = Constants.JournalImages.morning5
         case 10...13:
             // day
-            advice = AdviceData.am5
+            advice = AdviceData.am5c
             selectedImage = Constants.JournalImages.day5
         case 14...17:
             // afternoon
-            advice = AdviceData.pm5
+            advice = AdviceData.pm5a
             selectedImage = Constants.JournalImages.afternoon5
         case 18...21:
             // sunset
-            advice = AdviceData.pm5
+            advice = AdviceData.pm5b
             selectedImage = Constants.JournalImages.sunset5
         case 22...24:
             // night
-            advice = AdviceData.pm5
+            advice = AdviceData.pm5c
             selectedImage = Constants.JournalImages.night5
         default:
             print("ERROR: INVALID HOUR!")
@@ -481,27 +469,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am6
+            advice = AdviceData.am6a
             selectedImage = Constants.JournalImages.night6
         case 5...9:
             // morning
-            advice = AdviceData.am6
+            advice = AdviceData.am6b
             selectedImage = Constants.JournalImages.morning6
         case 10...13:
             // day
-            advice = AdviceData.am6
+            advice = AdviceData.am6c
             selectedImage = Constants.JournalImages.day6
         case 14...17:
             // afternoon
-            advice = AdviceData.pm6
+            advice = AdviceData.pm6a
             selectedImage = Constants.JournalImages.afternoon6
         case 18...21:
             // sunset
-            advice = AdviceData.pm6
+            advice = AdviceData.pm6b
             selectedImage = Constants.JournalImages.sunset6
         case 22...24:
             // night
-            advice = AdviceData.pm6
+            advice = AdviceData.pm6c
             selectedImage = Constants.JournalImages.night6
         default:
             print("ERROR: INVALID HOUR!")
@@ -512,27 +500,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am7
+            advice = AdviceData.am7a
             selectedImage = Constants.JournalImages.night7
         case 5...9:
             // morning
-            advice = AdviceData.am7
+            advice = AdviceData.am7b
             selectedImage = Constants.JournalImages.morning7
         case 10...13:
             // day
-            advice = AdviceData.am7
+            advice = AdviceData.am7c
             selectedImage = Constants.JournalImages.day7
         case 14...17:
             // afternoon
-            advice = AdviceData.pm7
+            advice = AdviceData.pm7a
             selectedImage = Constants.JournalImages.afternoon7
         case 18...21:
             // sunset
-            advice = AdviceData.pm7
+            advice = AdviceData.pm7b
             selectedImage = Constants.JournalImages.sunset7
         case 22...24:
             // night
-            advice = AdviceData.pm7
+            advice = AdviceData.pm7c
             selectedImage = Constants.JournalImages.night7
         default:
             print("ERROR: INVALID HOUR!")

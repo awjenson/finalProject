@@ -155,13 +155,11 @@ class CounterViewController: UIViewController, UITableViewDataSource, UITableVie
         case 9:
             selectedEmoji = "🔥🔥🔥💪🥈"
             rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
-        case 10:
+        case 10...Int.max:
             selectedEmoji = "💥💯🏆🎊🥇🎉"
             rewardLabel.text = "Your Daily Result: \(selectedEmoji)"
-
         default:
             print("ERROR: error with increaseEmoji")
-
         }
     }
 

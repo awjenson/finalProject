@@ -43,8 +43,10 @@ class CounterTableViewCell: UITableViewCell {
         switch count {
         case 0:
             return "😴"
-        case 1...9:
+        case 1...2:
             return "🙂"
+        case 3...9:
+            return "😀"
         case 10...24:
             return "😎"
         case 25...65:
@@ -59,7 +61,7 @@ class CounterTableViewCell: UITableViewCell {
             return "🥈"
         case 400...499:
             return "🏆"
-        case 500...999:
+        case 500...Int.max:
             return "🦄"
         default:
             return "🌟"

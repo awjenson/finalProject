@@ -33,7 +33,6 @@ class NewLoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +42,17 @@ class NewLoginViewController: UIViewController {
 
     @IBAction func signInSignUpButtonTapped(_ sender: UIButton) {
 
-        // GOAL: read data from the database to see if New or Existing User. 
+        if internetConnected() {
+            beginLoginAuth()
+        } else {
+            performUIUpdatesOnMain {
+                self.createAlert(title: "No Internet Connection", message: "Not able to login. Please connect to the Internet and try again.")
+            }
+        }
+    }
+
+    func beginLoginAuth() {
+        // GOAL: read data from the database to see if New or Existing User.
 
         // get a ref to the currentUser that's logged into Firebase. We'll need the user uid to create the relative path to write to.
         // Check that the username has entered a username
@@ -56,7 +65,7 @@ class NewLoginViewController: UIViewController {
         // NOTE: Here we set NewLoginViewController to be a delegate of authUI, we confirm to the FUIAuthDelegate protocol below
         authUI.delegate = self
         // If you want to list another provider: PhoneNumber, Google
-//        authUI.providers = [PhoneAuth(authUI: self.authUI!),]
+        //        authUI.providers = [PhoneAuth(authUI: self.authUI!),]
 
         // 3 - present the auth view controller
         let authViewController = authUI.authViewController()
