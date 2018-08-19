@@ -156,6 +156,8 @@ struct AdviceData {
 
 
     // MARK: - BASED ON MOOD
+    // Lazy
+    // Self-doubt
 
     // Button0 = " Sad "
     // Tip:
@@ -188,7 +190,7 @@ struct AdviceData {
     //
     static let goodQuote0 = JournalQuote(quote: "\"The more you praise and celebrate your life, the more there is in life to celebrate.\"", source: "Oprah Winfrey")
 
-    static let goodTip1 = JournalTip(title: "Advice to improve wellbeing", body: "Practicing gratitude because it's strongly associated with greater happiness and health. Thank someone, count your blessings, pray, keep a gratitude journal. One study found that middle-aged divorced women who kept gratitude journals were no more satisfied with their lives than those who did not.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier")
+    static let goodTip1 = JournalTip(title: "Advice to improve wellbeing", body: "Practice gratitude because it's strongly associated with greater happiness and health. Thank someone, count your blessings, pray, keep a gratitude journal. One study found that people who wrote about gratitude were more optimistic and felt better about their lives.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier")
     static let goodTip2 = JournalTip(title: Constants.Header.watch, body: "WINNING PSYCHOLOGY - New Motivational Videos Compilation", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ZNmdEau_JNM&t=1s")
 
     static let good0Tips1 = [goodTip1, goodTip2]
@@ -197,7 +199,7 @@ struct AdviceData {
     //
     static let greatQuote0 = JournalQuote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams")
 
-    static let greatTip1 = JournalTip(title: "Advice to imrpove wellbeing", body: "Research finds that practicing gratitude has many benefits: leads to more relationships, improves physical and psychological health, increases empathy and self-esteem, and reduces aggression and stress. What are you thankful for?", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/amymorin/2014/11/23/7-scientifically-proven-benefits-of-gratitude-that-will-motivate-you-to-give-thanks-year-round/#16c4850f183c")
+    static let greatTip1 = JournalTip(title: "Advice to improve wellbeing", body: "Research finds that practicing gratitude has many benefits: leads to more relationships, improves physical and psychological health, increases empathy and self-esteem, and reduces aggression and stress. What are you thankful for?", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/amymorin/2014/11/23/7-scientifically-proven-benefits-of-gratitude-that-will-motivate-you-to-give-thanks-year-round/#16c4850f183c")
     static let greatTip2 = JournalTip(title: Constants.Header.watch, body: "BEST MOTIVATIONAL VIDEO EVER - BE PHENOMENAL", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=wzhzkKccBi8")
 
     static let great0Tips1 = [greatTip1, greatTip2]
@@ -214,11 +216,16 @@ struct AdviceData {
     // Button6 = "Stressed"
     static let stressedQuote0 = JournalQuote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew J. Berstein")
 
-    static let stressedTip1 = JournalTip(title: "Reduce stress right now", body: "Breathe deeply, go for a walk, visualize a peaceful forest or beach, list to classical music, watch a funny video, call a friend, or even turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
+    static let stressedTip1 = JournalTip(title: "Reduce stress right now", body: "• Breathe deeply, \n\n • Go for a walk, \n\n • Visualize a peaceful forest or beach, \n\n • List to classical music, \n\n • watch a funny video, \n\n • call a friend, \n\n • turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
+
     static let stressedTip2 = JournalTip(title: "Viewing stress as a helpful part of life, rather than as harmful, is associated with better health, emotional well-being and productivity at work – even during periods of high stress", body: "Three ways to best handle stress are: 1) to view your body's stress response as helpful, not debilitating – for example, to view stress as energy you can use; 2) to view yourself as able to handle, and even grow from, the stress in your life; and 3) to view stress as something that everyone deals with, and not something that proves how uniquely screwed up you or your life is.", sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/pr/2015/pr-stress-embrace-mcgonigal-050715.html")
+
     static let stressedTip3 = JournalTip(title: "Reading for six minutes reduces stress by 68%", body: "Psychologists believe this is because the human mind has to concentrate on reading and the distraction of being taken into a literary world eases the tension in your body. \n\nAnd it works better and faster than other methods to calm frazzled nerves such as listening to music (61%), having a cup of coffee or tea (54%), or going for a walk (42%).", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/health/news/5070874/Reading-can-help-reduce-stress.html")
 
-    static let stressedTip4 = JournalTip(title: Constants.Header.watch, body: "WHEN YOU FEEL STRESSED - Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5QbtU8daKc8")
+        static let stressedTip4 = JournalTip(title: "Decrease your stress by breathing deeply through your nose", body: "filters impurities from the air and can help regulate body temperature. Simply concentrate on my breath. Most of us simply don’t breathe deeply enough. Breathing using all four stages: inhaling, full pause, exhaling, and empty pause helps increase oxygen in the blood. The more oxygen in your blood, the less fatigued and more mentally alert you are. Shallow breathing does not exercise the diaphragm and lungs enough and most people only use a small portion of their lung capacity. When inhaling fully, you should relax your belly so that it can move outward on the in-breath and your diaphragm can expand and move through more of its full range of motion. When exhaling fully, you should allow your belly to retract toward your spine, which supports the diaphragm’s upward movement to help empty the lungs.", sourceName: "Sealfit", sourceURL: "https://sealfit.com/breathing-lessons-2/")
+
+
+    static let stressedTip5 = JournalTip(title: Constants.Header.watch, body: "WHEN YOU FEEL STRESSED - Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5QbtU8daKc8")
 
 
     static let stressed0Tips1 = [stressedTip1, stressedTip2, stressedTip3, stressedTip4]
@@ -227,11 +234,15 @@ struct AdviceData {
     //
     static let anxietyQuote0 = JournalQuote(quote: "\"Nothing diminishes anxiety faster than action.\"", source: "Walter Anderson")
 
-    static let anxietyTip1 = JournalTip(title: "Taking action reduces anxiety", body: "Breathe deeply and exhale slowly, stay away from sugar, caffeine, and processed foods, get rid of the clutter around you, think of one thing you're grateful for, go for a walk, go to the gym, know that your feelings are not facts and challenge negative beliefs, and go to bed early (sleep deprivation is a huge cause of anxiety).", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201405/22-quick-tips-change-your-anxiety-forever")
-    static let anxietyTip2 = JournalTip(title: Constants.Header.watch, body: "STOP WORRYING | Anxiety Relief Speech feat Les Brown, Alan Watts and Tom O'bedlam", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=oYadJQq0cHQ")
+    static let anxietyTip1 = JournalTip(title: "Taking action reduces anxiety", body: "• Breathe deeply and exhale slowly: Slow breathing helps slow your heart rate, and naturally calms all of the body systems involved in your body's fight-or-flight response \n\n• Think of one thing you're grateful: Research shows that it reduces stress and increases your well-being \n\n• Know that your feelings are not facts and challenge negative beliefs", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201405/22-quick-tips-change-your-anxiety-forever")
+    // \n\n• Stay away from sugar, caffeine, and processed foods \n\n• Get rid of the clutter around you \n\n \n\n• Go to bed early: Sleep deprivation is a huge cause of anxiety
+    static let anxietyTip2 = JournalTip(title: "Moving your body reduces anxiety", body: "• Go for a 10-minute walk in nature: Exposure to nature has been shown repeatedly to reduce stress and boost well-being. \n\n• Go workout: Exercise releases endorphins which create a positive feeling in the body", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201405/22-quick-tips-change-your-anxiety-forever")
+    static let anxietyTipZ = JournalTip(title: Constants.Header.watch, body: "STOP WORRYING | Anxiety Relief Speech feat Les Brown, Alan Watts and Tom O'bedlam", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=oYadJQq0cHQ")
     static let anxietyTip3 = JournalTip(title: "10 foods that reduce anxiety", body: "Breakfast: Oatmeal, Oranges, and Blueberries \n\nLunch: Almonds, Avocado, and Spinach, \n\nDinner: Asparagus, Salmon, and Turkey \n\nBedtime: Milk and Almond Butter", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/8-spinach-2/")
+    //  anxietyTip4: The ability to self-monitor and change your interior dialogue is one of the most critical faculties that distinguishes a mature, adult human.
+    static let anxietyTip4 = JournalTip(title: "Mastering anxiety is about recognizing your inner dialogue and using positive self-talk to change the conversation in your head", body: "Far too often, we focus on our fears, and by focusing on it, we magnify it in our heads. \n\nRedirect your thoughts by focusing on what you can do right and take positive steps forward instead of becoming overwhelmed by what might go wrong.", sourceName: "Medium", sourceURL: "https://medium.com/s/story/how-to-master-your-fear-like-a-navy-seal-ffde5fe8d11")
 
-    static let anxiety0Tips1 = [anxietyTip1, anxietyTip2, anxietyTip3]
+    static let anxiety0Tips1 = [anxietyTip1, anxietyTip2, anxietyTip3, anxietyTip4]
 
     // Button8 = "Hopeful"
 //

@@ -26,13 +26,16 @@ struct GoalItemService {
         let ref2 = DatabaseReference.toLocation(.writeGoal(uid: user.uid))
         let ref3 = DatabaseReference.toLocation(.writeGoal(uid: user.uid))
         let ref4 = DatabaseReference.toLocation(.writeGoal(uid: user.uid))
+        let ref5 = DatabaseReference.toLocation(.writeGoal(uid: user.uid))
 
         // Keystone habits
         let keystone0 = GoalItem(name: "🔑 Make Your Bed", why: "Making your bed is correlated with increased happiness, better productivity, and starts the day with a sense of accomplishment", timestamp: currentDate, count: 0)
         let keystone1 = GoalItem(name: "🔑 Practice Gratitude", why: "Gratitude is correlated with increased happiness and health and reduced depression and negative emotions", timestamp: currentDate, count: 0)
         let keystone2 = GoalItem(name: "🔑 Exercise 30+ Minutes", why: "Exercise is correlated with healthier eating, better mood, less stress, and more confidence", timestamp: currentDate, count: 0)
-        let keystone3 = GoalItem(name: "🔑 Meditate 5+ Minutes", why: "Meditation is correlated with increased memory and awareness and reduced stress and anxiety", timestamp: currentDate, count: 0)
-        let keystone4 = GoalItem(name: "🔑 Read Book For 10+ Minutes", why: "Reading is correlated with higher income and inteligence, lower stress, and longer life", timestamp: currentDate, count: 0)
+        let keystone3 = GoalItem(name: "🔑 Meditate/Sit in Silience 5+ Minutes", why: "Meditation is correlated with reduced anxiety and stress and increased memory and awareness", timestamp: currentDate, count: 0)
+        let keystone4 = GoalItem(name: "🔑 Clean-up 3 Items At Home", why: "A cleaner home is correlated with healthier eating, more physical activity, less anxiety, and less depression", timestamp: currentDate, count: 0)
+        let keystone5 = GoalItem(name: "🔑 Read 2+ Pages of a Book", why: "Reading is correlated with higher income and inteligence, lower stress, and longer life", timestamp: currentDate, count: 0)
+
 
 
         // WRITE KEYSTONE HABITS TO FIREBASE
@@ -69,6 +72,14 @@ struct GoalItemService {
         }
 
         ref4.setValue(keystone4.toAnyObject()) { (error, _) in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                return success(false)
+            }
+            return success(true)
+        }
+
+        ref5.setValue(keystone5.toAnyObject()) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return success(false)

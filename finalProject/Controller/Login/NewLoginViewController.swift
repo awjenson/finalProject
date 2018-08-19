@@ -131,7 +131,7 @@ extension NewLoginViewController: FUIAuthDelegate {
 
                         guard success == true else {return}
 
-                        let initialViewController = UIStoryboard.initialViewController(for: .main)
+                        let initialViewController = UIStoryboard.initialViewController(for: .login)
                         self.view.window?.rootViewController = initialViewController
                         self.view.window?.makeKeyAndVisible()
 

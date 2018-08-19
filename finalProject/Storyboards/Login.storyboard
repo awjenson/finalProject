@@ -255,7 +255,7 @@ Self- provides time-based advice to help you make smarter decisions throughout y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfr-94-Pib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="863"/>
+            <point key="canvasLocation" x="1990" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AdW-oS-fMr">

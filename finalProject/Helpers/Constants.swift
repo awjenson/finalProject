@@ -114,7 +114,7 @@ struct Constants {
 
     // "😎=10, 💪=25, 🙌=66, 🔥=100, 🥉=200, 🥈=300, 🏆=400, ?🤔?=500"
     struct Habits {
-        static let footerKey = "🔑 = Keystone Habits are correlated with promoting other good habits while also helping to eliminate bad habits"
+        static let footerKey = "🔑 = Keystone Habits are correlated with developing other good habits while also reducing bad habits"
     }
 
 }

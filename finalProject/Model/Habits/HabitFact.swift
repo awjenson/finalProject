@@ -84,4 +84,13 @@ struct HabitFact {
     static let am7 = CounterAdvice(quote: "For you to create a new habit, you need to have a strong belief that you can do it. In her book Mindset: The New Psychology of Success, Stanford Professor Dr. Carol Dweck states that having a growth, or a \"I can do it\", mindset is key to outperforming those with a fixed mindset. If you believe that you can’t do something, then you won’t do it. However, if you believe that you can achieve something, you’ll at least attempt to do it.", source: "The Power of Habit by Charles Duhigg")
 
     static let pm7 = CounterAdvice(quote: "Studies found that when people habitually exercise, even as infrequently as once a week, they start changing other, unrelated patterns in their lives, often unknowingly. Typically, people who exercise start eating better and becoming more productive at work. They smoke less and show more patience with colleagues and family. They use their credit cards less frequently and say they feel less stressed. For many people, exercise is a keystone habit that triggers widespread change.", source: "The Power of Habit by Charles Duhigg")
+
+    // TO BE ADDED:
+    static let new1 = CounterAdvice(quote: "The best way to create new habits is to make them so small that they seem super easy to do - eat one vegetable, do one push-up, or clean for one minute. Habits don’t start feeling \"automatic\" until you’ve done them for about 66 days straight. And the bigger a goal seems, the less likely we are to complete it, since it seems like too much effort. When you make tiny habits that are really easy to do you’ll feel ridiculous for not getting it into your day. Then, over time, that tiny act becomes a part of your day.", source: "Research from Stanford University")
+
+    static let new2 = CounterAdvice(quote: "To create a real lifelong habit, the focus should be on training your brain to succeed at a small tasks - called Tiny Habits - that put you on the path toward a larger habit. Tiny habits work by removing the need to feel highly motivated to get a task done. After carrying through with a tiny habit, give yourself  praise for an achievement to wire your brain for success.", source: "Research from Stanford University")
+
+
+
+
 }
