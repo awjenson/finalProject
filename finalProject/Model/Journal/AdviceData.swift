@@ -154,8 +154,19 @@ struct AdviceData {
 
     static let pm7Tips1 = [pm7Tip1, pm7Tip2]
 
+    // MARK: - More Quotes
+        static let quote1 = JournalQuote(quote: "\"Great minds discuss ideas; average minds discuss events; small minds discuss people.\"", source: "Eleanor Roosevelt")
+    static let quote2 = JournalQuote(quote: "\"You pile up enough tomorrows, and you’ll find you are left with nothing but a lot of empty yesterdays.\"", source: "Harold Hill")
+    static let quote3 = JournalQuote(quote: "\"Pessimism leads to weakness, optimism to power.\"", source: "William James")
+
+
+
+
+
+
 
     // MARK: - BASED ON MOOD
+
     // Lazy
     // Self-doubt
 
@@ -164,6 +175,9 @@ struct AdviceData {
     static let sadQuote0 = JournalQuote(quote: "\"Things that I feel really sad about, I talk about. That way, if it's funny, it doesn't hurt anymore.\"", source: "Pete Davidson")
     static let sadTip1 = JournalTip(title: "Advice to reduce sadness", body: "Remember, it will get better. Talk to someone. Get out in nature. Listen to upbeat music. Watch a funny TV show. Cry. Focus on the good and move on.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/maria-rodale/21-ways-to-deal-with-sadn_b_5803672.html")
     static let sadTip2 = JournalTip(title: Constants.Header.watch, body: "PROBLEMS - Watch This When You Feel Down (Powerful Motivation!)", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=p4F5UXN_AVk")
+
+    //////
+
 
     static let sad0Tips1 = [sadTip1, sadTip2]
     
@@ -174,7 +188,11 @@ struct AdviceData {
 
     static let depressedTip1 = JournalTip(title: "Advice to reduce depression", body: "Follow a daily routine to get back on track. Exercise will release feel-good chemicals. Challenge your negative thoughts with logical questioning. Help others. Eat healthy foods. Do something that you enjoy (watch a movie, walk in nature, or spend time with friends). Go to bed and get up at the same time every day.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/depression/features/natural-treatments")
     static let depressedTip2 = JournalTip(title: Constants.Header.watch, body: "Depression Motivation - Broken heart, Anxiety and Hard Times", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=VFX2Nqwwm44")
-    static let depressedTip3 = JournalTip(title: "Foods that boost your mood naturally", body: "Breakfast: fresh fruit (apples, bananas, and blueberries), citrus (oranges and lemons), dairy, eggs, flax seed, and whole grains. \n\nLunch: veggies (spinach, onions), avocados, nuts, foods with probiotics, and dark chocolate. \n\nDinner: fish (salmon and tuna), lean red meats, turkey, sweat potatoes, and olive oil. \n\nAvoid Eating: sweets, refined cereals, fried food, processed meats, and sugary drinks.", sourceName: "Health", sourceURL: "https://www.health.com/depression/best-foods-depression#mediterranean-diet-depression")
+    static let depressedTip3 = JournalTip(title: "Foods that boost your mood naturally", body: "Breakfast: fresh fruit (apples, bananas, and blueberries), citrus (oranges and lemons), dairy, eggs, flax seed, and whole grains. \n\nLunch: veggies (spinach, onions), avocados, nuts, foods with probiotics, and dark chocolate. \n\nDinner: fish (salmon and tuna), lean red meats, turkey, sweet potatoes, and olive oil. \n\nAvoid Eating: sweets, refined cereals, fried food, processed meats, and sugary drinks.", sourceName: "Health", sourceURL: "https://www.health.com/depression/best-foods-depression#mediterranean-diet-depression")
+
+    ////////
+    static let depressedTip4 = JournalTip(title: "People who report using 7 to 11 social media platforms had more than 3 times the risk of depression and anxiety than their peers who use no more than 2 platforms", body: "This association is strong enough that clinicians could consider asking their patients with depression and anxiety about multiple platform use and counseling them that this use may be related to their symptoms.", sourceName: "University of Pittsburgh", sourceURL: "http://www.braininstitute.pitt.edu/using-lots-social-media-sites-raises-depression-risk")
+    static let depressedTip5 = JournalTip(title: "Exercise reduces depression symptoms and also helps keep depression from coming back once you're feeling better", body: "Exercise releases feel-good endorphins, natural cannabis-like brain chemicals (endogenous cannabinoids) and other natural brain chemicals that can enhance your sense of well-being. Broaden how you think of exercise and find ways to add small amounts of physical activity throughout your day. For example, take the stairs instead of the elevator. Park a little farther away from work to fit in a short walk.", sourceName: "Mayo Clinic", sourceURL: "https://www.mayoclinic.org/diseases-conditions/depression/in-depth/depression-and-exercise/art-20046495")
 
     static let depressed0Tips1 = [depressedTip1, depressedTip2, depressedTip3]
 
@@ -265,8 +283,14 @@ struct AdviceData {
     //
     static let lonelyQuote0 = JournalQuote(quote: "\"It’s important to remember that loneliness is an epidemic shaped by many forces; the proliferation of social media, the scattered nature of American life, the transience of jobs, divorce, rise in single-parent homes, and the popularity of living alone. Acknowledging these forces takes some of the burdens off yourself.", source: "Gina Ryder")
 
-    static let lonelyTip1 = JournalTip(title: "Remember we all feel lonely sometimes (one in five Americans suffer from loneliness)", body: "Accept your need for social connection (humans are social beings), listen to music, do something creative, work in a social setting (cafe or co-working space), call, text, or meetup with a friend, avoid using social media (scrolling mindlessly makes us lonelier), make eye contact with people, and be kind to strangers.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/conditions/how-to-not-feel-lonely/")
+    static let lonelyTip1 = JournalTip(title: "Remember we all feel lonely sometimes (1 in 5 Americans suffer from loneliness)", body: "Accept your need for social connection (humans are social beings), listen to music, do something creative, work in a social setting (cafe or co-working space), call, text, or meetup with a friend, avoid using social media (scrolling mindlessly makes us lonelier), make eye contact with people, and be kind to strangers.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/conditions/how-to-not-feel-lonely/")
     static let lonelyTip2 = JournalTip(title: Constants.Header.watch, body: "The Simple Cure for Loneliness | Baya Voce | TEDxSaltLakeCity", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=KSXh1YfNyVA")
+
+    /////////
+    static let lonelyTip4 = JournalTip(title: "You're not alone. 40% of U.S. adults report feeling lonely", body: "As a society, we have used technology to build stronger online connections, but our offline connections have deteriorated. We evolved to be social creatures and thousands of years ago if you were connected to other people you were more likely to have a stable food supply and to be protected from predators. So when you're disconnected, you're in a stress state. Loneliness is associated with a reduction in your lifespan that is as severe as the lifespan you see with smoking 15 cigarettes a day.", sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/loneliness-epidemic-former-surgeon-general-dr-vivek-murthy/")
+
+    static let lonelyTip5 = JournalTip(title: "Reduce feelings of loneliness by spending less time on social media and more time with friends face-to-face", body: "Researchers found that people who reported spending the most time on social media had twice the odds of perceived social isolation than those who said they spent less on those sites. Replacing your real-world relationships with social media use is detrimental to your well-being. However, face-to-face social connectedness is strongly associated with well-being.", sourceName: "NPR", sourceURL: "https://www.npr.org/sections/health-shots/2017/03/06/518362255/feeling-lonely-too-much-time-on-social-media-may-be-why")
+
 
     static let lonely0Tips1 = [lonelyTip1, lonelyTip2]
 

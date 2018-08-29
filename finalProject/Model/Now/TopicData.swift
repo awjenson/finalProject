@@ -114,9 +114,13 @@ let dinnerTip2 = Tip(header: "Dinner", title: "Eat three hours before bedtime to
 
 let dinnerTip3 = Tip(header: "Weight Loss", title: "Reading or watching TV while you eat may add to weight gain", body: "It takes 20 minutes before the brain begins to start sending out \"I'm full\" signals that turn off appetite. If you're hurrying or not paying attention, it's easy to take in more calories than you need. \n\n• Don't multitask \n• Eat slowly \n• Savor your food", sourceName: "Harvard Medical School", sourceURL: "https://www.health.harvard.edu/healthbeat/mindful-eating-may-help-with-weight-loss", sponsorLogo: "", sponsorURL: "")
 
-let dinnerTip4 = Tip(header: "Health", title: "Don't eat a heavy dinner (greasy or high-fat) because you're body shuts down while you sleep and the food will be stored as fat", body: "Greasy or high-fat dinners take longer to digest which causes the food to be stored as fat while you sleep. Also, it can cause issues with reflux or heartburn." , sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip4 = Tip(header: "Dinner", title: "Walking after dinner helps you sleep better", body: "The gentle physical activity and the fading light before nightfall can recalibrate your body clock, helping you sleep better. It's a simple way to aid digestion, lower the postmeal surge in insulin, increase blood circulation, and stimulate metabolism - all important for a good night sleep." , sourceName: "Prevention", sourceURL: "https://www.prevention.com/weight-loss/a20503013/try-this-15-minute-after-dinner-ritual-that-helps-italians-lose-weight/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let dinnerTip5 = Tip(header: "Dinner", title: "Walking after dinner helps you sleep better", body: "The gentle physical activity and the fading light before nightfall can recalibrate your body clock, helping you sleep better. It's a simple way to aid digestion, lower the postmeal surge in insulin, increase blood circulation, and stimulate metabolism - all important for a good night sleep." , sourceName: "Prevention", sourceURL: "https://www.prevention.com/weight-loss/a20503013/try-this-15-minute-after-dinner-ritual-that-helps-italians-lose-weight/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//////////
+let dinnerTip5 = Tip(header: "Health", title: "Don't eat a heavy dinner (greasy or high-fat) because you're body shuts down while you sleep and the food will be stored as fat", body: "Greasy or high-fat dinners take longer to digest which causes the food to be stored as fat while you sleep. Also, it can cause issues with reflux or heartburn." , sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let dinnerTip6 = Tip(header: "Dinner", title: "Slouched posture after a meal can trigger heartburn caused by acid reflux (when stomach acid squirts back up into the esophagus)", body: "Slouching puts pressure on the abdomen, which can force stomach acid in the wrong direction. And some evidence suggests that transit in the intestines slows down when you slouch." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/3-surprising-risks-of-poor-posture", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
 
 ////////////
 let dinnerAfter9PM1 = Tip(header: "Dinner", title: "Late Dinner: avoid large portions, greasy, fatty, spicy, and fried foods, and high-sugar, high-carbohydrate treats like cookies or ice cream", body: "These foods can cause indigestion (feeling bloated and gassy), heartburn, and even acid reflux before bedtime. The result is poor sleep and poor health.", sourceName: "Life Hacker", sourceURL: "https://lifehacker.com/the-late-night-snacks-that-wont-upset-your-stomach-and-1717594825", sponsorLogo: "text", sponsorURL: "text")
@@ -127,8 +131,15 @@ let dinnerAfter9PM3 = Tip(header: "Health", title: "Don't have large amounts of 
 
 let dinnerAfter9PM4 = Tip(header: "Health", title: "Eat protein for dinner so your body can build muscle while you sleep.", body: "The body rebuilds muscle through a process called protein synthesis. If you go to bed without eating enough protein your body can’t produce enough protein synthesis to rebuild the muscle. \n\nProtein-based snacks like string cheese a handful of almonds, whole grain crackers with a bit of guacamole, greek yogurt, and almond butter with an apple can stabilize your blood sugar when you sleep. Make sure to allow an hour for staying upright before going to sleep for good digestion.", sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "test", sponsorURL: "test")
 
+/////////
+
+
 var dinnerTipArray0 = [dinnerTip1, dinnerTip2, dinnerTip3, dinnerTip4]
 let dinnerTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
+
+/// Work in progress
+var dinnerTipArray1 = [dinnerTip5, dinnerTip2, dinnerTip3, dinnerTip6]
+let dinnerTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray1)
 
 var dinnerAfter9PMTipArray0 = [dinnerAfter9PM1, dinnerAfter9PM2, dinnerAfter9PM3, dinnerAfter9PM4]
 let dinnerAfter9PMTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
@@ -361,7 +372,7 @@ let barTip1 = Tip(header: beer, title: "Reduce your chance getting a migraine by
 
 let barTip2 = Tip(header: qualityOfSleep, title: "Alcohol will help you fall asleep, but it will reduce the quality of your sleep.", body: "Drinking within three hours of bedtime helps you fall asleep — alcohol is a depressant. But once the alcohol is metabolized hours later, you’re more likely to wake up or start tossing and turning. \n\nWhile any amount of alcohol can increase short-wave sleep — the kind you get in the first half of the night that repairs body tissues and boost your immune system — it can disrupt REM sleep, the later sleep stage that encourages learning and memory formation." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/12/14/bedtime-rituals_n_6309564.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let barTip3 = Tip(header: health, title: "Drinking once a day or five to 10 alcoholic drinks a week is likely to shortern your life by up to six months.", body: "While non-fatel heart attacks are less likely in people who drink alchool, scientists say this benefit is swamped by the increase of other forms of heart disearse including fatal heart attacks and stroke. \n\nIf you already drink, drinking less may help you live longer and lower your risk of several cardiovascular conditions." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/health-43738644", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let barTip3 = Tip(header: health, title: "Drinking once a day or 5 to 10 alcoholic drinks a week is likely to shortern your life by up to 6 months", body: "While non-fatel heart attacks are less likely in people who drink alchool, scientists say this benefit is swamped by the increase of other forms of heart disease including fatal heart attacks and stroke. \n\nIf you already drink, drinking less may help you live longer and lower your risk of several cardiovascular conditions." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/health-43738644", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let barTip4 = Tip(header: health, title: "After a night of drinking, drink coffee in the morning because it can protect your liver from damage casused by too much alcohol", body: "Studies show that drinking two to three cups a day can protect your liver from damage caused by too much alcohol or an unhealthy diet. Some research suggests it may lower your risk of liver cancer." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -376,14 +387,17 @@ let barTip8 = Tip(header: "Bar", title: "When trying to talk with someone you do
 
 //////////
 let barTip9 = Tip(header: "Bar", title: "Beer has more calories than wine and hard alcohol", body: "A standard 12-ounce beer contains about 150 calories; a light beer, about 110 calories. For comparison, a 5½-ounce glass of wine or a 1½-ounce shot of hard liquor provides about 100 calories. Since all these beverages contain approximately the same amount of alcohol, you can see that regular beer does have extra calories.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier", sponsorLogo: "", sponsorURL: "")
+let barTip10 = Tip(header: "Bar", title: "No amount of alcohol is good for your overall health, global study says", body: "Drinking alcoholic beverages is linked to some 2.8 million deaths each year. The chemical in beer, wine and hard liquor is associated with nearly one in 10 deaths in people ages 15 to 49 around the world. Any health benefits of drinking are outweighed by the combined health risks.", sourceName: "Bloomberg", sourceURL: "https://www.bloomberg.com/news/articles/2018-08-23/no-amount-of-alcohol-use-is-safe-analysis-of-studies-finds", sponsorLogo: "", sponsorURL: "")
+
 
 var barTipArray0 = [barTip1, barTip2, barTip3, barTip4]
-
 let barTopic0 = Topic(title: barTitle, icon: barIcon, tip: barTipArray0)
 
 var barTipArray1 = [barTip5, barTip6, barTip7, barTip8]
-
 let barTopic1 = Topic(title: barTitle, icon: barIcon, tip: barTipArray1)
+
+var barTipArray2 = [barTip9, barTip10, barTip4, barTip8]
+let barTopic2 = Topic(title: barTitle, icon: barIcon, tip: barTipArray2)
 
 // MARK: - Happy Hour
 
@@ -472,7 +486,7 @@ let dateTip1 = Tip(header: dateTitle, title: "Put your phone away. A study found
 
 let dateTip2 = Tip(header: dateTitle, title: "If you keep conversation fun, your date is more likely to come away in a good mood and feeling more positive towards you", body: "Ask them about their family, favorite trips and find out what they are passionate about. Showing interest in someone and letting them feel heard is very attracting. \n\nConversly, if you complain or ask something associated with a negative topic, they'll think the same of you." , sourceName: "The Independent", sourceURL: "https://www.independent.co.uk/life-style/love-sex/first-date-rules-for-men-women-conversation-negative-topics-politics-james-preece-a8288116.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
  
-let dateTip3 = Tip(header: dateTitle, title: "Body language signs that show your date is into you", body: "Good eye contact, smiling, leaning in when you speak, laughing at your jokes, blushing, open posture, mirroring your actions, angling their body towards you, and they an excuse to touch you" , sourceName: "Ask Men", sourceURL: "https://www.askmen.com/top_10/dating/10-first-date-success-signs_4.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dateTip3 = Tip(header: dateTitle, title: "Body language signs that show your date is into you", body: "Good eye contact, smiling, leaning in when you speak, laughing at your jokes, blushing, open posture, mirroring your actions, angling their body towards you, and they make physical contact." , sourceName: "Ask Men", sourceURL: "https://www.askmen.com/top_10/dating/10-first-date-success-signs.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let dateTip4 = Tip(header: dateTitle, title: "Eat these aphrodisiac foods to increase romance", body: "Eat: Oysters, chili peppers, dark chocolate, vanila, whipped cream, honey, coffee, chai tea, watermelon, bananas, strawberries, cherries, figs, nuts, olive oil, avocado, arugula, asparagus, artichokes. \n\nDon't eat: red meat, broccoli, dairy, whole grains, and beans." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/food/fun/aphrodisiac-foods/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -655,7 +669,7 @@ let commutePMTip3 = Tip(header: improvePerformance, title: "Use your commuting t
 let commutePMTip4 = Tip(header: improvePerformance, title: "Identify an area in your life that you want to improve and use your commute to fix it", body: "If it’s exercise you need, then bike or walk to work, even if it’s just partway. Or park far away from your office and walk an extra minute. \n\nIf it’s relaxation you’re missing, then do nothing, or read a fun book, or take a quick walk around your office before you leave for home. \n\nIf you want to learn something, then read about it or, if you have internet access, watch a video or participate in an online course. If you’re feeling lonely, call, text, or email people you cherish." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //////////////////
-let commutePMTip5 = Tip(header: improvePerformance, title: "Don’t grocery shop right after work to in order to reduce your chances of buying unhealthy foods", body: "After a long day of work, you're likely to be both hungry and tired. When you're hungry or tired, your brain craves fatty, sugary foods. The best time to go to the grocery store during the week is after dinner when you're well-fed and it's less crowded." , sourceName: "LifeHacker", sourceURL: "https://lifehacker.com/avoid-grocery-shopping-right-after-work-to-save-money-1616069034", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let commutePMTip5 = Tip(header: improvePerformance, title: "Don’t grocery shop right after work in order to reduce your chances of buying unhealthy foods", body: "After a long day of work, you're likely to be both hungry and tired. When you're hungry or tired, your brain craves fatty, sugary foods. During the week, the best time to go to grocery shopping is after dinner when you're well-fed and it's less crowded." , sourceName: "LifeHacker", sourceURL: "https://lifehacker.com/avoid-grocery-shopping-right-after-work-to-save-money-1616069034", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let commutePMTip6 = Tip(header: improvePerformance, title: "The commute is a great time for people who say \"I'm too busy to meditate\"", body: "De-stress and let go of the busy day. Put your hand on your belly. Then deeply, slowly breathe in, feeling your belly rise. Then feel it gently recede as you breathe out. This quickly activates the parasympathetic nervous system, which leads to relaxation." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/04/12/quick-mindfulness-exercises_n_9657876.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let commutePMTip7 = Tip(header: improvePerformance, title: "People who frequently cook meals at home consume fewer carbohydrates, less sugar, and less fat than those who cook less or not at all – even if they are not trying to lose weight", body: "People who cook at home more frequently rely less on frozen foods and are less likely to choose fast foods on the occasions when they eat out. The research also found that individuals who work more than 35 hours a week outside the home cook less." , sourceName: "Johns Hopkins University", sourceURL: "https://www.jhsph.edu/research/centers-and-institutes/johns-hopkins-center-for-a-livable-future/news-room/News-Releases/2014/Study-Suggests-Home-Cooking-Main-Ingredient-in-Healthier-Diet.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let commutePMTip8 = Tip(header: improvePerformance, title: "Bringing your work problems, stress, and low energy into your life after work can be disruptive to your relationships and to your mental health", body: "Research suggests that spending some time outside before you go home can help with reducing stress and being more productive once you get home. Take a stroll around your block or skip public transportation and walk home." , sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/159080-11-healthy-after-work-habits-to-try-instead-of-sitting-on-the-couch-all-night", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -708,13 +722,18 @@ let workAMTip12 = Tip(header: improvePerformance, title: "Mentor in hindsight. E
 
 let workAMTip13 = Tip(header: improvePerformance, title: "Lowering the pitch of your voice can make you think and act more confident", body: "Research results showed that people who spoke in a lower voice were more likely to be described as choose the more powerful traits than students in the other two groups." , sourceName: "The Wall Street Journal", sourceURL: "https://www.wsj.com/articles/SB10001424127887323735604578440851083674898", sponsorLogo: "GM_logo", sponsorURL: "https://www.gm.com/")
 let workAMTip14 = Tip(header: improvePerformance, title: "Sitting all day causes sore muscles, strained eyes, poor circulation, and weight gain", body: "For proper posture, sit at the end of your chair and let yourself slouch. Now, try to sit up straight, accentuating the curve of your back as much as possible. Hold this position for a few seconds. Next, release the position a little bit — no more than about 10 degrees. This is your proper sitting position." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/daily-routine-according-to-science-2017-12", sponsorLogo: "GM_logo", sponsorURL: "https://www.gm.com/")
-
 let workAMTip15 = Tip(header: improvePerformance, title: "Low self-esteem at work results in thousands of dollars of lost income", body: "Individuals who are from blue-collar families and possess self-confidence earn roughly $7,000 more per year than their peers who have low self-esteem. Individuals who are from white-collar families, the gap is even larger. Those with high self-esteem earn approximately $28,000 more annually than those who lack confidence. Over a 40-year career, that adds up to $280,000 to $1.12 million in lost earnings." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/why-low-self-esteem-may-be-hurting-your-career-ncna814156", sponsorLogo: "", sponsorURL: "")
+let workAMTip16 = Tip(header: improvePerformance, title: "Job switchers are earning 48% higher annual pay increases in 2018 than those who stay in their jobs", body: "The pay raise gap between job seekers and job stayers in 2018 hasn't been this big since 2000. More workers are quitting their jobs and taking advantage of a labor market that's prioritizing employees over employers." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-get-a-raise-quit-your-job-2018-7", sponsorLogo: "", sponsorURL: "")
+
+/////////////
+let workAMTip17 = Tip(header: improvePerformance, title: "Poor posture can lead to neck pain, back problems, and slowed digestion", body: "To attain a neutral, upright spine position, put your shoulders down and back, pull your head back, and engage your core muscles. Bring your belly button in toward your spine, as if you're zipping up a snug pair of jeans. This will help to engage the transverse abdominis muscle, which acts like a corset around the spine." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/3-surprising-risks-of-poor-posture", sponsorLogo: "", sponsorURL: "")
+let workAMTip18 = Tip(header: improvePerformance, title: "Ask youself these questions to determine if you should stay at your current job", body: "Is this work meaningful to me? Will I have an opportunity for recognition and achievement? Am I going to learn new things? These motivators are stable across professions and over time-giving us a sense of \"true north\" against which we can recalibrate the trajectories of our careers. \n\nWe should always remember that beyond a certain point, money, status, compensation, and job security are much more a by-product of being happy with a job rather than the cause of it. Realizing this frees us to focus on the things that really matter." , sourceName: "How Will You Measure Your Life?", sourceURL: "https://www.amazon.com/dp/B006ID0CH4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
 
 /*
  In the AM:
  If you aren’t confident in your outward appearance, then you may find yourself hiding, apologizing or overcompensating. And in many cases, there are three common pain points: teeth, weight and blemished or scarred skin. By dealing with appearance issues, you can give yourself an immediate boost of confidence and turn your attention toward the root of your self-esteem problem.
  */
+
 
 var workAMTipArray0 = [workAMTip1, workAMTip2, workAMTip3, workAMTip4]
 let workAMTopic0 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray0)
@@ -725,8 +744,11 @@ let workAMTopic1 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArr
 var workAMTipArray2 = [workAMTip9, workAMTip10, workAMTip11, workAMTip12]
 let workAMTopic2 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray2)
 
-var workAMTipArray3 = [workAMTip13, workAMTip14, workAMTip15, workAMTip12]
+var workAMTipArray3 = [workAMTip13, workAMTip14, workAMTip15, workAMTip16]
 let workAMTopic3 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray3)
+
+var workAMTipArray4 = [workAMTip17, workAMTip18, workAMTip15, workAMTip16]
+let workAMTopic4 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray4)
 
 // MARK: - Work, PM
 
@@ -766,12 +788,13 @@ let workPMTip14 = Tip(header: "Career", title: "Building your status outside the
 
 let workPMTip15 = Tip(header: "Career", title: "Increase your influence at work through body language", body: "Standing up straight with your shoulders back helps you come across as confident and commanding; slouching and looking down at your feet has the opposite effect. When you adopt a certain [slumping] posture, you think and talk in subordinate terms, and it increases the likelihood that you’ll be seen as less confident. Also, speaking in a lower tone lower than you normally do suggests power. This is useful to work on because it counteracts the effect of nervousness, which tends to push your tone higher.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/07/how-to-advance-in-your-career-when-your-boss-wont-help", sponsorLogo: "", sponsorURL: "")
 
-let workPMTip16 = Tip(header: "Career", title: "Increase your influence at work by speaking in a lower tone than you normally do", body: "People relate a low tone voice to both leadership and dominance. Speaking in a lower tone counteracts the effect of nervousness, which tends to push your tone higher.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work?utm_medium=email&utm_source=newsletter_daily&utm_campaign=mtod&referral=00203", sponsorLogo: "", sponsorURL: "")
+let workPMTip16 = Tip(header: improvePerformance, title: "Staying employed at the same company for over two years on average is going to make you earn less over your lifetime by 50% or more", body: "The problem with staying at a company forever is you start with a base salary and usually annual raises are based on a percentage of your current salary. There is often a limit to how high your manager can bump you up since it's based on a percentage of your current salary. However, if you move to another company, you start fresh and can usually command a higher base salary to hire you.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/cameronkeng/2014/06/22/employees-that-stay-in-companies-longer-than-2-years-get-paid-50-less/#2501fb00e07f", sponsorLogo: "", sponsorURL: "")
 
 ////////////
 let workPMTip17 = Tip(header: "Career", title: "Having influence in the workplace helps you get noticed, get promoted, and receive raises", body: "Having a good relationship with your coworkers helps you get your project or budget approved because they like and trust you. The best way to get coworkers to back you and your agenda is to make them feel heard. Give them your undivided attention - turn your body toward the other person, freeze in place, and listen.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work?utm_medium=email&utm_source=newsletter_daily&utm_campaign=mtod&referral=00203", sponsorLogo: "", sponsorURL: "")
-
 let workPMTip18 = Tip(header: "Career", title: "Increase your influence on a particular issue by framing it as a benefit to the people you want to persuade", body: "If your proposal is fundamentally self-interested, people won’t line up. Don't use “I” too much. Instead, talk about how an idea will “benefit the organization” as a whole. “Use the word ‘we,’ as in ‘We’ll see value'. ", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work?utm_medium=email&utm_source=newsletter_daily&utm_campaign=mtod&referral=00203", sponsorLogo: "", sponsorURL: "")
+let workPMTip19 = Tip(header: improvePerformance, title: "Switching jobs will probably give you a bigger pay increase than staying with your current employer", body: "Employees who changed jobs earned about 1% more year-over-year than those who stayed with the same employer. That might not make a huge difference for one year, but it could add up to hundreds of thousands of dollars of lost wages over the course of your career. If your job doesn’t offer much in terms of professional or financial growth, then maybe it’s time to look for new opportunities.", sourceName: "LinkedIn", sourceURL: "https://www.linkedin.com/pulse/employees-who-stay-companies-more-than-2-years-get-paid-preitam-jape/", sponsorLogo: "", sponsorURL: "")
+let workPMTip20 = Tip(header: "Career", title: "Increase your influence at work by speaking in a lower tone than you normally do", body: "People relate a low tone voice to both leadership and dominance. Speaking in a lower tone counteracts the effect of nervousness, which tends to push your tone higher.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work?utm_medium=email&utm_source=newsletter_daily&utm_campaign=mtod&referral=00203", sponsorLogo: "", sponsorURL: "")
 
 // Male CEOs with lower-pitched voices tended to manage large companies, make $187,000 a year more than their higher-pitched peers, and last in political office on average five months longer.
 
@@ -797,7 +820,7 @@ var workPMTipArray3 = [workPMTip13, workPMTip14, workPMTip15, workPMTip16]
 let workPMTopic3 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray3)
 
 // Fri
-var workPMTipArray4 = [workPMTip17, workPMTip18, workPMTip8, workPMTip12]
+var workPMTipArray4 = [workPMTip17, workPMTip18, workPMTip19, workPMTip20]
 let workPMTopic4 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray4)
 
 // MARK: - Work Late
@@ -826,11 +849,11 @@ let workLateTopic1 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLa
 let homeAMTitle = "Home"
 let homeAMIcon = "Hom"
 
-let homeAMTip1 = Tip(header: improvePerformance, title: "If you wake up energized, you’re going to carry that energy through the rest of the day.", body: "The morning is a critical time that can set the tone for the entire day. Start your morning with little \"wins\" to prime your brain to work toward more \"wins\" and successes throughout the day. \n\nEat breakfast, say one thing you're grateful for, get outside, exercise, or talk with your family or friends." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homeAMTip1 = Tip(header: improvePerformance, title: "If you wake up energized, you’re going to carry that energy through the rest of the day", body: "The morning is a critical time that can set the tone for the entire day. Start your morning with little \"wins\" to prime your brain to work toward more \"wins\" and successes throughout the day. \n\nEat breakfast, say one thing you're grateful for, get outside, exercise, or talk with your family or friends." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let homeAMTip2 = Tip(header: health, title: "Drink a glass or two of water before breakfast to rehydrate your body and aid digestion and metabolism.", body: "After being asleep all night, we wake up every day slightly dehydrated. Drinking a couple glasses of water allows the body to rehydrate for better digestion when you do eat. It also helps with moving the lower bowels for regularity in the mornings." , sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homeAMTip2 = Tip(header: health, title: "Drink a glass or two of water before breakfast to rehydrate your body and aid digestion and metabolism", body: "After being asleep all night, we wake up every day slightly dehydrated. Drinking a couple glasses of water allows the body to rehydrate for better digestion when you do eat. It also helps with moving the lower bowels for regularity in the mornings." , sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let homeAMTip3 = Tip(header: loseWeight, title: "Reduce weight gain and have more energy by eating a healthy breakfast.", body: "Our metabolism works better earlier in the day so that body is able to turn the calories you eat into energy that you can use in the morning. Researchers found that skipping your first meal can make you more likely to overeat later in the day. And with the slower metabolism at night, you're more likely to gain weight by eating bigger meals at night." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homeAMTip3 = Tip(header: loseWeight, title: "Front-load your calories early in the day to jump-start your metabolism and prevent obesity, starting with a healthy breakfast and tapering off to a smaller lunch and light dinner", body: "Having the largest meal in the morning appears to have advantages for weight control compared with having a large meal in the evening, she said, since the digestive process and the action of insulin, the pancreatic hormone that the body uses to process the sugars in carbohydrates and store glucose, appear to be at their peak performance early in the day. Researchers also found that those who ate their largest meal early in the day were more likely to have less body fat than those who ate a large lunch or dinner." , sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2017/08/21/well/eat/the-case-for-a-breakfast-feast.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let homeAMTip4 = Tip(header: increaseConfidence, title: "Every time you walk through a doorway, remember to stand up, put your chin up, put your shoulders back, and smile", body: "This will create a first impression that causes other people to view you as confident, open, positive, and friendly. That will change the way that we think about ourselves." , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -924,9 +947,13 @@ let bathroomPMTip4 = Tip(header: reduceGerms, title: "Scientist recommend wiping
 //////////
 let bathroomPMTip5 = Tip(header: reduceGerms, title: "While a hot bath may even help relax and prime your body for sleep, showers often wake people up, so it might not be the best thing to do before bed", body: "Also, people with long hair should be careful not to go to bed with wet hair because it can also make sheets and pillows damp, which could cause mold to grow." , sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#take-a-shower", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-var bathroomPMTipArray0 = [bathroomPMTip1, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
+let bathroomPMTip6 = Tip(header: reduceGerms, title: "Throwing contacts down the toilet or sink contributes to microplastic pollution. Throw contacts away in the trash", body: "Contacts don’t decompose, and as a result, nearly 50 tons of contacts could end up in American water supplies each year. Tiny bits of plastic from many sources have also been spotted in the oceans and other bodies of water, where they may be ingested by fish, corals and other animals." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/health/archive/2018/08/contacts-down-the-drain/567850/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
+let bathroomPMTipArray0 = [bathroomPMTip1, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
 let bathroomPMTopic0 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray0)
+
+let bathroomPMTipArray1 = [bathroomPMTip5, bathroomPMTip6, bathroomPMTip4, bathroomPMTip3]
+let bathroomPMTopic1 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray1)
 
 // MARK: - Bedtime
 
@@ -952,12 +979,16 @@ let bedtimeTip8 = Tip(header: increaseConfidence, title: "Increase your confiden
 
 ////////////
 let bedtimeTip9 = Tip(header: increaseConfidence, title: "Use mouthwash before bed to give your mouth an extra layer of protection from cavity-causing acids", body: "Saliva prevents cavity-causing acids from building up. But we produce less saliva when we sleep. That can dry out your mouth, leaving teeth and gums vulnerable to things like tooth decay and gingivitis.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
+let bedtimeTip10 = Tip(header: "Phone", title: "Put your phone in another room or somewhere across the bedroom, far away from your arms' reach, so you're not tempted to check it first thing in the morning", body: "Immediately checking your phone when you wake up is more likely to increase stress and leave you feeling overwhelmed. The information overload that hits you before you're fully awake also interferes with your ability to priority tasks during the day.", sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/p/is-it-bad-to-look-at-your-phone-right-when-you-wake-up-it-might-be-sabotaging-your-day-8437383", sponsorLogo: "", sponsorURL: "")
 
 var bedtimeTipArray0 = [ bedtimeTip1,  bedtimeTip2,  bedtimeTip3,  bedtimeTip4]
 let bedtimeTopic0 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray0)
 
 var bedtimeTipArray1 = [ bedtimeTip5,  bedtimeTip6,  bedtimeTip7,  bedtimeTip8]
 let bedtimeTopic1 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray1)
+
+var bedtimeTipArray2 = [ bedtimeTip9,  bedtimeTip10,  bedtimeTip8,  bedtimeTip7]
+let bedtimeTopic2 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray2)
 
 // MARK: - Leadership, AM
 
@@ -1039,6 +1070,14 @@ let sex0 = Tip(header: "Sex", title: "Females should always pee after sex to pre
 
 let relationship0 = Tip(header: "Gratitude", title: "Expressing gratitude can improve relationships", body: "A study of couples found that individuals who took time to express gratitude for their partner not only felt more positive toward the other person but also felt more comfortable expressing concerns about their relationship. Express gratitude in person or via a phone call or text message.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier", sponsorLogo: "", sponsorURL: "")
 
+let relationship1 = Tip(header: "Cheating", title: "People who have cheated before are 350% more likely to cheat again", body: "People who’ve been cheated on in the past are more likely to date a cheater again down the line. In addition, cheaters are significantly more prone to dating other cheaters.", sourceName: "Women's Health", sourceURL: "https://www.womenshealthmag.com/relationships/a19932020/will-they-cheat-again/", sponsorLogo: "", sponsorURL: "")
+
+// MARK: - Breakup
+
+
+let breakup1 = Tip(header: "Breakup", title: "The most humane and fair thing to do is to break the bad news to them as quickly as possible", body: "That means that if you want to break up with someone, you shouldn't sit through an awkward dinner beforehand or tell them there's something on your mind three days before you see them. You also shouldn't try and sugarcoat it so much that they get confused as to what you're talking about. But all you need is a 'we need to talk' buffer — just a couple of seconds for the other person to process that bad news is coming. Think about it like a band-aid— the faster you rip it off, the better you feel.", sourceName: "Insider", sourceURL: "https://www.thisisinsider.com/best-way-you-can-break-up-with-someone-2017-10", sponsorLogo: "", sponsorURL: "")
+
+
 // MARK: - Parenting
 
 let parenting0 = Tip(header: "Parenting", title: "Children who are held, rocked, soothed and attended to by an \"in tune\" parent have larger brains than children who are touched less or who are outright neglected", body: "Eye contact in particular fosters bonding and stimulates brain development, and children these days receive less eye contact than ever because of both kids and parents being locked onto screens. Eye contact, face to face interaction, touch, and observing body language all help children learn to regulate emotion and  arousal, develop a sense of self, and build capacity for intimacy. ", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "", sponsorURL: "")
@@ -1056,5 +1095,15 @@ let student1 = Tip(header: "Confidence", title: "confidence during teenage years
 // Female Student
 let fStudent1 = Tip(header: "Female", title: "Girls who play team sports are more likely to graduate from college, find a job, and be employed in male-dominated industries.", body: "There’s even a direct link between playing sports in high school and earning a bigger salary as an adult. Learning to own victory and survive defeat in sports is apparently good training for owning triumphs and surviving setbacks at work.", sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2014/05/the-confidence-gap/359815/", sponsorLogo: "", sponsorURL: "")
 // Male Student
+
+// MARRIAGE
+let marriage1 = Tip(header: "Marriage", title: "Women are most likely to cheat between 6 and 10 years of a relationship, and men are most likely to cheat after 11 years", body: "The research identified being female, being more religious, and being married for a shorter amount of time as the 3 most influential factors in people resisting cheating. The decision to stay out of an affair was motivated more by internal than external factors-fear of being alone and the desire to adhere to moral standards were found to be more influential in keeping people out of extramarital affairs than concerns of how cheating would impact their kids or partner.", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/sex-women/a19541650/marriage-when-is-cheating-most-likely-to-happen/", sponsorLogo: "", sponsorURL: "")
+
+let marriage2 = Tip(header: "Marriage", title: "The best age to get married seems to be somewhere between 28 and 32", body: "Overall, those who marry before age 25 tend to be more likely to divorce than those who marry after that age. In general, marrying later in life tends to point to better odds of staying married.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
+
+let marriage3 = Tip(header: "Marriage", title: "People with a college degree are about 10% less likely to divorce", body: "Women who had completed their college education had a rate of about 14.2 divorces per 1,000 while those who only completed some college had a rate of 23 per 1,000.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
+
+let marriage4 = Tip(header: "Marriage", title: "Couples are less likely to get divorced if they have children", body: "Ratings of happiness and life satisfaction in that same study tended to decrease after couples had children.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
+
 
 

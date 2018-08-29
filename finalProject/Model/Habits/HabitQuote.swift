@@ -39,4 +39,18 @@ struct HabitQuote {
     static let am7 = CounterAdvice(quote: "\"I can predict the long-term outcome of your success if you show me your daily habits.\"", source: "John Maxwell")
 
     static let pm7 = CounterAdvice(quote: "\"Good habits are the key to all success.\"", source: "Og Mandino")
+
+    /*
+     "All our life is but a mass of habits-practical, emotional, and intellectual-systematically organized for our weal or woe, and bearing us irresistibly toward our destiny, whatever the latter may be." - William James
+
+     Some thinkers, hold that it is by nature that people become good, others that it is by habit, and others that it is by instruction. However, according to me, habits reign supreme. The behaviors that occur unthinkingly are the evidence of our truest selves. - Aristotle
+
+
+
+
+
+     */
 }
+
+
+

@@ -137,7 +137,6 @@ extension NewLoginViewController: FUIAuthDelegate {
 
                         print("... LEFT LOGIN PAGE TO GO TO NOW VC.")
 
-
                     })
 
                 })

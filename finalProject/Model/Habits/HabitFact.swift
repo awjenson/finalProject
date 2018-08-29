@@ -53,6 +53,33 @@ import Foundation
 
 "Dozens of studies show that willpower is the single most important keystone habit for individual success. In a 2005 study, for instance, the University of Pennsylvania analyzed 164 eighth-grade students, measuring their IQs and other factors, including how much willpower the students demonstrated, as measured by tests of their self-discipline. Students who exerted high levels of willpower were more likely to earn higher grades in their classes and gain admission into more selective schoools. They had fewer absences and spent less time watching television and more hours on homework. Highly self-disciplined adolescents outperformed their more impulsive peeers on every academic-performance variable. Self-discipline predicted academic performance more robustly than did IQ. Self-discipline also predicted which students would improve their grades over the course of the school year, whereas IQ did not. Self-discipline has a bigger effect on academic performance than does intellectual talent. And the best way to strengthen willpower and give students a leg up, studies indicate, is to make it into a habit so that willpower occurs without them having to think about it." (p.131)
 
+ "Researchers discovered that four-year olds who could delay gratification the longest ended up with the best grades and SAT scores 210 points higher, on averag, than everyone else. They were more popular and did fewer drugs. If you knew how to avoid temptation of a marshmallow as a preschooler, it seemed, you also knew how to get yourself to class on time and finish your homework once you got older, as well  as how to make friends and resist peer presure. Scientists began trying to figure out how to help kids increase their self-regulatory skills. They learned that teaching them simple trick-such as distracting themselves by drawing a picture, or imagining a frame around the marshmallow, so it seemed more like a photo and less like a real temptation-helped them learn self-control." (p.133)
+
+ Willpower isn't just a skill. It's a muscle, like the muscles in your arms or legs, and it gets tired as it works harder, so there's less power left over for other things." (p.137)
+
+ When people are asked to do something that takes self-control, if they think they are doing it for personal reasons-if they feel like it's a choice or something they enjoy because it helps someone else-it's much less taxing. If they feel like they have no autonomy, if they're just following orders, their willpower muscles get tired much faster. People who were treated like cogs, rather than people, it took a lot more willpower." (p.151)
+
+ Simply giving employees a sense of agency-a feeling that they are in control, that they have genuine decision-making authority-can radically increase how much energy and focus they bring to their jobs. One 2010 study at a manufacturing plant in Ohio, for instance, scrutinized assembly-line workers who were empowered to make small decisions about their schedules at work environment. They designed their own uniforms and had authority over shifts. Nothing else changed. All the manufacturing processes and pay scales stayed the same. Within two months, productivity at the plant increased by 20 percent. Giving employees a sense of control improved how much self-discipline they brought to their jobs. (p.151)
+
+ Marketers and psychologists have figured out long ago, if we start out shopping sprees by loading up on healthy stuff, we're much more likely to buy Doritos, Oreos, and frozen pizza when we encouter them later on. The burst of subconscious virtuousness that comes from first buying butternut squash makes it easier to put a pint of ice cream in the cart later. (p. 185)
+
+ To change people's diets, the exotic must be made familiar. And to do that, you much camouflage it in everday garb... Soldiers were more likely to eat food, whether familiar or unfamiliar, when it was prepared similar to their prior experiences and served in a familiar fashion. (p.205)
+
+ If you dress a new something in old habits, it's easier for the public to accept it. (p.210)
+
+ People, it turns out, often go to the gym looking for a human connection, not a treadmill. If a member made a friend at the YMCA, they were much more likely to show up for workout sessions. In other words, people who join the YMCA have certain social habits. To sell a new habit-in this case exercise-wrap it in something that people already know and like, such as the instinct to go places where it's easy to make friends. People want to visit places that satify their social needs. Getting people to exercise in groups makes it more likely they'll stick with a workout. You can change the health of the nation this way. To market a new habit-be it groceries or aerobics-you must understand how to make the novel seem familiar. (p. 212)
+
+ A movement starts because of social habits of friendship and the strong ties between close acquaintances. And it endures because a movement's leaders give participants new habits that create a fresh sense of identity and feeling of ownership. (p. 217)
+
+ In general, sociologists say, most of us have friends who are like us. We might have a few close acquaintances who are richer, a few who are poorer, and a few of different races-but, on the whole, our deepest relationships tend to be with people who look like us, earn about the same amount of money, and come from similar backgrounds. (p. 220)
+
+ To modify a habit, you must decide to change it. You must consciously accept the hard work of identifying the cues and rewards that drive the habits' routines, and find alternatives. You must know you have control and be self-conscious enough to use it. (p. 270)
+
+A habit is a choice that we deliberately make at some point, and then stop thinking about, but continue doing, often every day. (p. 284)
+
+
+
+
 */
 struct HabitFact {
 
