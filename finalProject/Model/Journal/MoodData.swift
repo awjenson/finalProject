@@ -93,6 +93,7 @@ struct MoodData {
     static let stressedTip5 = JournalTip(title: Constants.Header.watch, body: "WHEN YOU FEEL STRESSED - Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5QbtU8daKc8")
 
 
+
     static let stressed0Tips1 = [stressedTip1, stressedTip2, stressedTip3, stressedTip4]
 
     // Button7 = "Anxious"

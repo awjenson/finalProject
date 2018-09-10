@@ -210,11 +210,21 @@ let weekdayNow0to4Tip4 = Tip(header: "Sleep", title: "Fall asleep faster: Readin
 
 let weekdayNow0to4Tip5 = Tip(header: improvePerformance, title: "Lower your body mass index (BMI) by getting at least 20 to 30 minutes of sunlight light before noon", body: "Not getting enough light before noon disturbs your internal body clock, which is known to alter metabolism and lead to weight gain (increased BMI). In one study, morning light exposure accounted for about 20% of a person’s BMI.", sourceName: "Northwestern University", sourceURL: "https://news.northwestern.edu/stories/2014/04/morning-rays-keep-off-the-pounds", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
+let weekdayNow0to4Tip6 = Tip(header: improvePerformance, title: "For a healthy weight, avoid eating at night and only eat during the day", body: "The circadian rhythm of our metabolism has not evolved for a world with 24-7 access to food and it still expects us to stop eating at sundown. This mismatch between programmed biology and modern society can lead to myriad health problems. Limiting food intake to a period of 8 to 12 hours during the day can help people lose weight and may help prevent illnesses including diabetes, heart disease and cancer.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/national/health-science/timing-your-meals-may-help-with-weight-loss-thats-what-it-seems-to-do-in-mice/2018/03/23/14672fc0-f718-11e7-a9e3-ab18ce41436a_story.html?utm_term=.b6892739a880", sponsorLogo: "", sponsorURL: "")
+
+
+
+
+
+
+
+
+
 
 let weekdayNow0to4TipArray0 = [weekdayNow0to4Tip0, weekdayNow0to4Tip1, weekdayNow0to4Tip2, weekdayNow0to4Tip3]
 let weekdayNow0to4Topic0 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0to4Icon, tip: weekdayNow0to4TipArray0)
 
-let weekdayNow0to4TipArray1 = [weekdayNow0to4Tip5, weekdayNow0to4Tip4, weekdayNow0to4Tip3, weekdayNow0to4Tip2]
+let weekdayNow0to4TipArray1 = [weekdayNow0to4Tip4, weekdayNow0to4Tip5, weekdayNow0to4Tip6, weekdayNow0to4Tip2]
 let weekdayNow0to4Topic1 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0to4Icon, tip: weekdayNow0to4TipArray1)
 
 // MARK: - Now, Weekday, 5to8 (0) - MONDAY, TUESDAY, WEDNESDAY

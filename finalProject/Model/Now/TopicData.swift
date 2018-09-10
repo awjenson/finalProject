@@ -375,9 +375,9 @@ let barIcon = "Bar"
 
 let barTip1 = Tip(header: beer, title: "Reduce your chance getting a migraine by drinking beer in a bottle instead of on tap", body: "Beer on tap has about 25 times the migraine-inducing tyramine as beer in bottles. So if you really want a cold one, ask for a bottle. Or change it up and order a bourbon. It doesn’t have any of the stuff." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/migraines-headaches/ss/slideshow-food-migraines?ecd=wnl_din_121716&ctr=wnl-din-121716_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let barTip2 = Tip(header: qualityOfSleep, title: "Alcohol will help you fall asleep, but it will reduce the quality of your sleep.", body: "Drinking within three hours of bedtime helps you fall asleep — alcohol is a depressant. But once the alcohol is metabolized hours later, you’re more likely to wake up or start tossing and turning. \n\nWhile any amount of alcohol can increase short-wave sleep — the kind you get in the first half of the night that repairs body tissues and boost your immune system — it can disrupt REM sleep, the later sleep stage that encourages learning and memory formation." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/12/14/bedtime-rituals_n_6309564.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let barTip2 = Tip(header: qualityOfSleep, title: "Alcohol will help you fall asleep, but it will reduce the quality of your sleep.", body: "Drinking within three hours of bedtime helps you fall asleep — alcohol is a depressant. But once the alcohol is metabolized hours later, you’re more likely to wake up or start tossing and turning. \n\nWhile any amount of alcohol can increase short-wave sleep — the kind you get in the first half of the night that repairs body tissues and boosts your immune system — it can disrupt REM sleep, the later sleep stage that encourages learning and memory formation." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/12/14/bedtime-rituals_n_6309564.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let barTip3 = Tip(header: health, title: "Drinking once a day or 5 to 10 alcoholic drinks a week is likely to shortern your life by up to 6 months", body: "While non-fatel heart attacks are less likely in people who drink alchool, scientists say this benefit is swamped by the increase of other forms of heart disease including fatal heart attacks and stroke. \n\nIf you already drink, drinking less may help you live longer and lower your risk of several cardiovascular conditions." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/health-43738644", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let barTip3 = Tip(header: health, title: "Drinking once a day or 5 to 10 alcoholic drinks a week is likely to shortern your life by up to 6 months", body: "While non-fatal heart attacks are less likely in people who drink alcohol, scientists say this benefit is swamped by the increase of other forms of heart disease including fatal heart attacks and stroke. \n\nIf you already drink, drinking less may help you live longer and lower your risk of several cardiovascular conditions." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/health-43738644", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let barTip4 = Tip(header: health, title: "After a night of drinking, drink coffee in the morning because it can protect your liver from damage casused by too much alcohol", body: "Studies show that drinking two to three cups a day can protect your liver from damage caused by too much alcohol or an unhealthy diet. Some research suggests it may lower your risk of liver cancer." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -734,14 +734,20 @@ let workAMTip16 = Tip(header: improvePerformance, title: "Job switchers are earn
 let workAMTip17 = Tip(header: improvePerformance, title: "Poor posture can lead to neck pain, back problems, and slowed digestion", body: "To attain a neutral, upright spine position, put your shoulders down and back, pull your head back, and engage your core muscles. Bring your belly button in toward your spine, as if you're zipping up a snug pair of jeans. This will help to engage the transverse abdominis muscle, which acts like a corset around the spine." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/3-surprising-risks-of-poor-posture", sponsorLogo: "", sponsorURL: "")
 let workAMTip18 = Tip(header: improvePerformance, title: "Ask youself these questions to determine if you should stay at your current job", body: "Is this work meaningful to me? Will I have an opportunity for recognition and achievement? Am I going to learn new things? These motivators are stable across professions and over time-giving us a sense of \"true north\" against which we can recalibrate the trajectories of our careers. \n\nWe should always remember that beyond a certain point, money, status, compensation, and job security are much more a by-product of being happy with a job rather than the cause of it. Realizing this frees us to focus on the things that really matter." , sourceName: "How Will You Measure Your Life?", sourceURL: "https://www.amazon.com/dp/B006ID0CH4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
 
-Tip(header: "Career", title: "Increase your influence at work by speaking in a lower tone than you normally do", body: "People relate a low tone voice to both leadership and dominance. Speaking in a lower tone counteracts the effect of nervousness, which tends to push your tone higher.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work?utm_medium=email&utm_source=newsletter_daily&utm_campaign=mtod&referral=00203", sponsorLogo: "", sponsorURL: "")
+let workAMTip19 = Tip(header: "Career", title: "Increase your influence at work by speaking in a lower tone than you normally do", body: "People relate a low tone voice to both leadership and dominance. Speaking in a lower tone counteracts the effect of nervousness, which tends to push your tone higher.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work?utm_medium=email&utm_source=newsletter_daily&utm_campaign=mtod&referral=00203", sponsorLogo: "", sponsorURL: "")
 
-Tip(header: reduceStress, title: "Reduce stress and increase motivation by surrounding yourself with plants, water, or animals", body: "Researchers noted that simply staring at an image of natural scenery for 40 seconds was enough to trigger the brain into a more relaxed state. People looking at plants also made fewer mistakes and were less distracted all around." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/why-natural-scenery-improves-your-mood-makes-you-more-productive-ncna860806", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let workAMTip20 = Tip(header: reduceStress, title: "Reduce stress and increase motivation by surrounding yourself with plants, water, or animals", body: "Researchers noted that simply staring at an image of natural scenery for 40 seconds was enough to trigger the brain into a more relaxed state. People looking at plants also made fewer mistakes and were less distracted all around." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/why-natural-scenery-improves-your-mood-makes-you-more-productive-ncna860806", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
+////////// * NOT USED YET
 /*
  In the AM:
  If you aren’t confident in your outward appearance, then you may find yourself hiding, apologizing or overcompensating. And in many cases, there are three common pain points: teeth, weight and blemished or scarred skin. By dealing with appearance issues, you can give yourself an immediate boost of confidence and turn your attention toward the root of your self-esteem problem.
  */
+
+let workAMTip21 = Tip(header: "Productive", title: "Be more productive at work by matching your daily tasks with your circadian rhythm", body: "Humans have an internal clock that shapes our energy levels throughout the day: our circadian rhythm. On average, you should work on important tasks that require deep cognitive processing in the morning hours when your body is at or near its first peak in alertness (around noon). Then, early afternoon is a good time to do administrative work like responding to emails because not long after lunch, your energy levels begin to decline, hitting a low at around 3pm." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/the-ideal-work-schedule-as-determined-by-circadian-rhythms", sponsorLogo: "", sponsorURL: "")
+let workAMTip22 = Tip(header: "Happy", title: "Taking vacations improve your productivity at work", body: "Professional services firm Ernst & Young conducted an internal study of its employees and found that for each additional 10 hours of vacation time employees took, their year-end performance ratings improved 8%. When you're more productive, you're happier, and when you're happier, you excel at what you do." , sourceName: "Inc.", sourceURL: "https://www.inc.com/lolly-daskal/4-scientific-reasons-why-vacation-is-awesome-for-you.html", sponsorLogo: "", sponsorURL: "")
+let workAMTip23 = Tip(header: "Happy", title: "Taking vacations could help you live longer", body: "In one study, men at risk for heart disease who skipped vacations for 5 consecutive years were 30% more likely to suffer heart attacks than those who took at least a week off each year. In another study, women who took a vacation once every 6 years or less were almost eight times more likely to develop heart disease, have a heart attack, or die of a coronary-related cause than those who took at least 2 vacations a year." , sourceName: "Inc.", sourceURL: "https://www.inc.com/lolly-daskal/4-scientific-reasons-why-vacation-is-awesome-for-you.html", sponsorLogo: "", sponsorURL: "")
+let workAMTip24 = Tip(header: "Happy", title: "When an organization’s culture encourages time off, employees are more likely to benefit from vacation time and those benefits last longer", body: "Upon returning from vacation, employees who said their organization’s culture encourages time off were more likely to report having more motivation (71%) compared to employees who said their organization doesn’t encourage time off (45%). They were also more likely to say they are satisfied with their job (88% vs. 50%) and that the organization treats them fairly (88% vs. 47%). If your organization's culture does not encourage time off then it may be time to look for a new job." , sourceName: "American Psychology Association", sourceURL: "http://www.apa.org/news/press/releases/2018/06/vacation-recharges-workers.aspx", sponsorLogo: "", sponsorURL: "")
 
 
 var workAMTipArray0 = [workAMTip1, workAMTip2, workAMTip3, workAMTip4]
@@ -756,8 +762,11 @@ let workAMTopic2 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArr
 var workAMTipArray3 = [workAMTip13, workAMTip14, workAMTip15, workAMTip16]
 let workAMTopic3 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray3)
 
-var workAMTipArray4 = [workAMTip17, workAMTip18, workAMTip15, workAMTip16]
+var workAMTipArray4 = [workAMTip17, workAMTip18, workAMTip19, workAMTip20]
 let workAMTopic4 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray4)
+
+var workAMTipArray5 = [workAMTip21, workAMTip22, workAMTip23, workAMTip24]
+let workAMTopic5 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray5)
 
 // MARK: - Work, PM
 
@@ -806,6 +815,9 @@ let workPMTip18 = Tip(header: "Career", title: "Increase your influence on a par
 let workPMTip19 = Tip(header: improvePerformance, title: "Switching jobs will probably give you a bigger pay increase than staying with your current employer", body: "Employees who changed jobs earned about 1% more year-over-year than those who stayed with the same employer. That might not make a huge difference for one year, but it could add up to hundreds of thousands of dollars of lost wages over the course of your career. If your job doesn’t offer much in terms of professional or financial growth, then maybe it’s time to look for new opportunities.", sourceName: "LinkedIn", sourceURL: "https://www.linkedin.com/pulse/employees-who-stay-companies-more-than-2-years-get-paid-preitam-jape/", sponsorLogo: "", sponsorURL: "")
 let workPMTip20 = Tip(header: "Career", title: "You should always be passively job searching while you have a job because it puts you in control of your career", body: "Passive job searching puts you in a position of strength because you have leverage of being employed. You’re able to negotiate for better pay and a better position than you have now. When you don’t have a job or want to leave a job that you dislike, on the other hand, you may appear and act more desperate. \n\nPassive job searching either helps you be grateful for the job you have and therefore more committed to your choice, or it makes you realize that you would feel more fulfilled (and therefore more committed) in another position or company.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/forbeshumanresourcescouncil/2018/04/25/four-reasons-you-should-be-always-passively-job-hunting/#6cd852ab49ff", sponsorLogo: "", sponsorURL: "")
 
+////// * NOT USED
+let workPMTip21 = Tip(header: "Productive", title: "Be more productive at work by matching your daily tasks with your circadian rhythm", body: "Humans have an internal clock that shapes our energy levels throughout the day: our circadian rhythm. On average, early afternoon is a good time to do less important work like responding to emails because not long after lunch, your energy levels begin to decline, hitting a low at around 3pm. We often blame this on lunch, but in reality this is just a natural part of the circadian process. Then, use the late afternoon, early evening to work on important tasks that require deep cognitive processing because, after the 3pm dip, alertness tends to increase again until hitting a second peak at approximately 6pm." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/the-ideal-work-schedule-as-determined-by-circadian-rhythms", sponsorLogo: "", sponsorURL: "")
+let workPMTip22 = Tip(header: "Productive", title: "Humans naturally move from full focus and energy to physiological fatigue every 90 minutes", body: "Our cognitive capacity declines throughout the day; you must build in frequent mental breaks to recharge and maintain productivity. Take short breaks every 90 minutes throughout the day to drink water, walk, or to eat healthy snacks. Power walking breaks get your blood pumping and feed the brain with oxygen that boost your energy levels." , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/kevinkruse/2017/02/06/want-to-get-more-done-try-taking-more-breaks/#36a8909a6db4", sponsorLogo: "", sponsorURL: "")
 
 // Male CEOs with lower-pitched voices tended to manage large companies, make $187,000 a year more than their higher-pitched peers, and last in political office on average five months longer.
 
@@ -815,24 +827,28 @@ let workPMTip20 = Tip(header: "Career", title: "You should always be passively j
 
 
 // Mon
-var workPMTipArray0 = [workPMTip1, workPMTip2, workPMTip3, workPMTip4]
+let workPMTipArray0 = [workPMTip1, workPMTip2, workPMTip3, workPMTip4]
 let workPMTopic0 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray0)
 
 // Tues
-var workPMTipArray1 = [workPMTip5, workPMTip6, workPMTip7, workPMTip8]
+let workPMTipArray1 = [workPMTip5, workPMTip6, workPMTip7, workPMTip8]
 let workPMTopic1 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray1)
 
 // Wed
-var workPMTipArray2 = [workPMTip9, workPMTip10, workPMTip11, workPMTip12]
+let workPMTipArray2 = [workPMTip9, workPMTip10, workPMTip11, workPMTip12]
 let workPMTopic2 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray2)
 
 // Thurs
-var workPMTipArray3 = [workPMTip13, workPMTip14, workPMTip15, workPMTip16]
+let workPMTipArray3 = [workPMTip13, workPMTip14, workPMTip15, workPMTip16]
 let workPMTopic3 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray3)
 
 // Fri
-var workPMTipArray4 = [workPMTip17, workPMTip18, workPMTip19, workPMTip20]
+let workPMTipArray4 = [workPMTip17, workPMTip18, workPMTip19, workPMTip20]
 let workPMTopic4 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray4)
+
+let workPMTipArray5 = [workPMTip21, workPMTip22, workPMTip16, workPMTip12]
+let workPMTopic5 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray5)
+
 
 // MARK: - Work Late
 
@@ -847,6 +863,7 @@ let workLateTip3 = Tip(header: health, title: "If you have to stay late, take a 
 
 let workLateTip4 = Tip(header: health, title: "Working more than 45 hours a week increases a person’s risk for heart-related health problems, like heart attacks", body: "The risk for heart disease progressively increases the more hours a person works. Regularly working late can increase risk for stroke and affect focus and mood. \n\nNeed more convincing? Working more could actually make you less productive. One mind-blowing study found that someone who spends 70 hours working produces nothing more than they would have at 55 hours. That’s 15 hours entirely wasted.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/work-stress-late-hours-heart-disease_us_56e85252e4b0860f99da951a", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 
+/////////
 let workLateTip5 = Tip(header: improvePerformance, title: "Your output falls sharply after working 50 hours in a week", body: "Employee output falls sharply after a 50-hour work-week, and falls off a cliff after 55 hours—so much so that someone who puts in 70 hours produces nothing more with those extra 15 hours. \n\nWork, both mental and physical, results in fatigue that limits the cognitive and bodily resources people have to put towards their work. When you're not thinking clearly or moving as quickly or precisely you must work more slowly to maintain quality and safety requirements." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2015/01/26/working-more-than-50-hours-makes-you-less-productive.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let workLateTipArray0 = [workLateTip1, workLateTip2, workLateTip3, workLateTip4]
@@ -1121,7 +1138,17 @@ let marriage4 = Tip(header: "Marriage", title: "Couples are less likely to get d
 // TRAVEL
 
 let travel0 = Tip(header: "Jet Lag", title: "Reduce jet lag by changing your bedtime to better match the local time of your destination", body: "Jet lag occurs when we cross three or more time zone changes, because it throws off our circadian rhythm -- the biological clock that helps control when we wake and fall asleep. Try to sleep on the plane if it’s nighttime where you’re going or stay awake if it’s daytime -- but don’t force it.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/travel/want-to-minimize-jet-lag-heres-what-the-doctors-order/2018/08/29/23c14836-a7d8-11e8-97ce-cc9042272f07_story.html?noredirect=on&utm_term=.cb43c744e8ee", sponsorLogo: "", sponsorURL: "")
+let travel1 = Tip(header: "Health", title: "Vacations can be a good way to relieve stress", body: "Shorter vacations were associated with excess deaths in the intervention group. In the intervention group, men who took three weeks or less annual vacation had a 37% greater chance of dying in 1974 to 2004 than those who took more than three weeks.", sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
+
+
+
+//while daily self-care habits like exercise and getting enough sleep are a great way to manage our stress loads and help us live longer, healthier lives overall, research shows that there’s
+
+// In our study, men with shorter vacations worked more and slept less than those who took longer vacations. This stressful lifestyle may have overruled any benefit of the intervention.
+// stress reduction is an essential part of programmes aimed at reducing the risk of cardiovascular disease
+// men with shorter vacations worked more and slept less than those who took longer vacations. This stressful lifestyle may have overruled any benefit of the intervention
+// Shorter vacations were associated with excess deaths in the intervention group. In the intervention group, men who took three weeks or less annual vacation had a 37% greater chance of dying in 1974 to 2004 than those who took more than three weeks.
 
 
 
