@@ -212,15 +212,6 @@ let weekdayNow0to4Tip5 = Tip(header: improvePerformance, title: "Lower your body
 
 let weekdayNow0to4Tip6 = Tip(header: improvePerformance, title: "For a healthy weight, avoid eating at night and only eat during the day", body: "The circadian rhythm of our metabolism has not evolved for a world with 24-7 access to food and it still expects us to stop eating at sundown. This mismatch between programmed biology and modern society can lead to myriad health problems. Limiting food intake to a period of 8 to 12 hours during the day can help people lose weight and may help prevent illnesses including diabetes, heart disease and cancer.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/national/health-science/timing-your-meals-may-help-with-weight-loss-thats-what-it-seems-to-do-in-mice/2018/03/23/14672fc0-f718-11e7-a9e3-ab18ce41436a_story.html?utm_term=.b6892739a880", sponsorLogo: "", sponsorURL: "")
 
-
-
-
-
-
-
-
-
-
 let weekdayNow0to4TipArray0 = [weekdayNow0to4Tip0, weekdayNow0to4Tip1, weekdayNow0to4Tip2, weekdayNow0to4Tip3]
 let weekdayNow0to4Topic0 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0to4Icon, tip: weekdayNow0to4TipArray0)
 
@@ -347,7 +338,7 @@ let weekdayNow11to14Tip10 = Tip(header: beMoreProductive, title: "In order to be
 let weekdayNow11to14Tip11 = Tip(header: beMoreProductive, title: "Holding eye contact while speaking denotes authority, confidence, and has an enormous impact on your ability to persuade.", body: "Lack of eye contact often implies deception. When breaking eye contact, it is better to break off to the left or to the right, as looking down suggests insecurity." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/common-body-language-mistakes-employees-make-2014-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //// TUESDAY, 11AM-2PM
-let tuesdayNow11to14Tip0 = Tip(header: "Stress", title: "Tuesday morning at 11:45am is the most stressful time of the work week", body: "Tuesday is the day when workers are most likely to work through their lunch break and stay late at work. Makeing sure you are eating the right foods and drinking enough water will keep your energy levels high when you're busy and over-worked." , sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/newstopics/howaboutthat/5113653/Tuesday-at-1145-is-most-stressful-time-of-the-week-survey-suggests.html", sponsorLogo: "", sponsorURL: "")
+let tuesdayNow11to14Tip0 = Tip(header: "Stress", title: "Tuesday morning at 11:45am is the most stressful time of the work week, survey suggests", body: "Tuesday is the day when workers are most likely to work through their lunch break and stay late at work. Eating healthy foods and drinking enough water will keep your energy levels high when you're busy and over-worked." , sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/newstopics/howaboutthat/5113653/Tuesday-at-1145-is-most-stressful-time-of-the-week-survey-suggests.html", sponsorLogo: "", sponsorURL: "")
 
 // 0
 var weekdayNow11to14TipArray0 = [weekdayNow11to14Tip0, weekdayNow11to14Tip1, weekdayNow11to14Tip2, weekdayNow11to14Tip3]
