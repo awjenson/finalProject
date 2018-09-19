@@ -460,13 +460,17 @@ let cafePMTip2 = Tip(header: health, title: "For best results, try to time your 
 
 let cafePMTip3 = Tip(header: health, title: "The Mayo Clinic advises adults to limit their caffeine intake to 400 mg per day, or the equivalent of about two to three coffees", body: "Caffeine levels can differ based on the type of coffee. For example, 1.5 cups of Starbucks gives you 400 mg of caffeine. Too much caffeine comes with risks, including migraine headaches, irritability, upset stomach, and insomnia." , sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/healthy-daily-routine-habits-according-to-science.html", sponsorLogo: "GM_logo", sponsorURL: "https://gm.com")
 
-let cafePMTip4 = Tip(header: health, title: "USDA regulations require decaf coffee to be 97% caffeine-free", body: "While a 3% dose of caffeine may seem relatively small, it might be enough to keep you awake at night. If you’re drinking decaf coffee to avoid caffeine then you might be better off playing it safe with green tea, instead." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/food/fun/how-much-caffeine-is-in-decaf-coffee/", sponsorLogo: "", sponsorURL: "")
+let cafePMTip4 = Tip(header: health, title: "Decaf coffee has a little caffeine. USDA regulations require decaf coffee to be 97% caffeine-free", body: "While a 3% dose of caffeine may seem relatively small, it might be enough to keep you awake at night. If you’re drinking decaf coffee to avoid caffeine then you might be better off playing it safe with green tea, instead." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/food/fun/how-much-caffeine-is-in-decaf-coffee/", sponsorLogo: "", sponsorURL: "")
+
+/////// NOT USED
+let cafePMTip5 = Tip(header: health, title: "Avoid caffeine use past noon each day to sleep well tonight", body: "Caffeine has a 12-hour half-life, which means it can impact your ability to fall asleep or maintain sleep after use. Our sleep is closely tied to our body's natural circadian rhythm. Caffeine can throw off your circadian rhythm by delaying the release of melatonin, a hormone in your body that plays a role in sleep, by approximately 40 minutes." , sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/145170-7-tips-for-maintaining-a-regular-sleep-schedule-because-consistency-is-important", sponsorLogo: "", sponsorURL: "")
+
 
 let cafePMTipArray0 = [cafePMTip1, cafePMTip2, cafePMTip3, cafePMTip4]
 
 let cafePMTopic0 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray0)
 
-// MARK: - Quick Break
+// MARK: - Breaks
 
 let breakTitle = "Break"
 let breakIcon = "Bre"
@@ -479,9 +483,17 @@ let breakTip3 = Tip(header: breakTitle, title: "Research: Increase meditative st
 
 let breakTip4 = Tip(header: breakTitle, title: "Take vision breaks from looking at digital devices because your eyes will strain in as little as two hours", body: "The 20-20-20 exercise to reduce your eye fatigue: Every 20 minutes look away from your computer screen and focus on an item at least 20 feet away for at least 20 seconds." , sourceName: "Medium", sourceURL: "https://medium.com/the-mission/digital-eye-strain-is-destroying-your-eyes-4ac7f8e87b24", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-var breakTipArray0 = [breakTip1, breakTip2, breakTip3, breakTip4]
+/////////
+let breakTip5 = Tip(header: breakTitle, title: "Research clearly shows that a brief nap can speed up cognitive processing, decrease errors, and increase stamina for sustained attention to difficult tasks later in the day", body: "One study found that as little as eight minutes of sleep during the day was enough to significantly improve memory. Organizations such as Google and PriceWaterhouseCoopers have nap pods for employees, understanding that 20 minutes of naptime can make people more effective and productive for many more hours that day." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/sleep-well-lead-better", sponsorLogo: "", sponsorURL: "")
+let breakTip6 = Tip(header: breakTitle, title: "Longer breaks are good, but it’s beneficial to take frequent short breaks", body: "Researcher found that more short breaks were associated with higher levels of energy, concentration and motivation, suggesting that employees should be encouraged to take more frequent short breaks to facilitate recovery." , sourceName: "Baylor University", sourceURL: "https://www.baylor.edu/mediacommunications/news.php?action=story&story=159785", sponsorLogo: "", sponsorURL: "")
+let breakTip7 = Tip(header: breakTitle, title: "Take breaks by doing things you choose to do and things you like to do", body: "A common belief exists that doing things that are non-work-related are more beneficial. Based on one study, there was no evidence to prove that non-work-related activities were more beneficial. Finding something on your break that you prefer to do – something that’s not given to you or assigned to you – are the kinds of activities that are going to make your breaks much more restful and help you come back to work stronger." , sourceName: "Baylor University", sourceURL: "https://www.baylor.edu/mediacommunications/news.php?action=story&story=159785", sponsorLogo: "", sponsorURL: "")
 
+var breakTipArray0 = [breakTip1, breakTip2, breakTip3, breakTip4]
 let breakTopic0 = Topic(title: breakTitle, icon: breakIcon, tip: breakTipArray0)
+
+var breakTipArray1 = [breakTip5, breakTip6, breakTip7, breakTip4]
+let breakTopic1 = Topic(title: breakTitle, icon: breakIcon, tip: breakTipArray1)
+
 
 
 // MARK: - Date
@@ -501,18 +513,6 @@ let dateTip4 = Tip(header: dateTitle, title: "Eat these aphrodisiac foods to inc
 let dateTip5 = Tip(header: dateTitle, title: "Research: People who had asked a lot of questions on their first dates, were much more likely to get asked out on second dates", body: "Self-disclosure feels good. By asking your date questions, they attribute that enjoyment to you, the question asker, which causes your date to like you more. So asking more questions during a date makes you more likeable and more likely to get a second date.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/ideacast/2016/06/asking-for-advice-makes-people-think-youre-smarter.html", sponsorLogo: "", sponsorURL: "")
 
 let dateTip6 = Tip(header: "Date", title: "On dates, both genders reported feeling a spark when the conversations were mainly about the women, and when men demonstrated alignment with the women", body: "Women are typically more selective about who they are willing to go out with. So talking about the woman is a good strategy toward building a connection. Women reported a sense of connection to men who used appreciative language (\"That's awesome\" or \"Good for you\") and sympathy (\"That must be tough on you\").", sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/news/2013/may/jurafsky-mcfarland-dating-050613.html", sponsorLogo: "", sponsorURL: "")
-
-
-
-
-
-
-
-
-
-
-
-
 
 var dateTipArray0 = [dateTip1, dateTip2, dateTip3, dateTip4]
 let dateTopic0 = Topic(title: dateTitle, icon: dateIcon, tip: dateTipArray0)
@@ -611,22 +611,8 @@ var shoppingClothesTipArray0 = [shoppingClothesTip1, shoppingClothesTip2, shoppi
 
 let shoppingClothesTopic0 = Topic(title: shoppingClothesTitle, icon: shoppingClothesIcon, tip: shoppingClothesTipArray0)
 
-// MARK: - Going Out (Nightlife)
 
-let goingOutTitle = "Going Out"
-let goingOutIcon = "Goi"
 
-let goingOutTip1 = Tip(header: goingOutTitle, title: "Grocery Store 1 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-let goingOutTip2 = Tip(header: goingOutTitle, title: "Grocery Store 2 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-let goingOutTip3 = Tip(header: goingOutTitle, title: "Grocery Store 3 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-let goingOutTip4 = Tip(header: goingOutTitle, title: "Grocery Store 4 Title", body: "body text, yada, yada, yada." , sourceName: "SourceName", sourceURL: "www.test.com", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-var goingOutTipArray0 = [goingOutTip1, goingOutTip2, goingOutTip3, goingOutTip4]
-
-let goingOutTopic0 = Topic(title: goingOutTitle, icon: goingOutIcon, tip: goingOutTipArray0)
 
 // MARK: - Commute, AM
 
@@ -634,36 +620,46 @@ let commuteAMTitle = "Commute"
 let commuteAMIcon = "Com"
 
 let commuteAMTip1 = Tip(header: getSmarter, title: "Maximize your commute", body: "Read a book, listen to a podcast or audio book, use a meditation app, or perhaps even learn a new language. Consider it breakfast for your brain." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-to-do-on-your-commute-2015-12#5-listen-to-music-or-audio-books-5", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let commuteAMTip2 = Tip(header: health, title: "Long commutes are bad for your health and productivity", body: "Research: Longer-commuting workers more likely to suffer from depression, have financial worries, and report multiple aspects of work-related stress. They were also more likely to get less than the recommended seven hours of sleep each night and more likely to be obese." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/long-commutes-have-an-impact-on-health-and-productivity-2017-5", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let commuteAMTip3 = Tip(header: relax, title: "Practice calming your mind or enjoy the environment around you", body: "If you spend a majority of your commute doing some deep breathing through your nose and being mindful, it can be an excellent way to relax before you start the work day." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-to-do-on-your-commute-2015-12#8-relax-8", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let commuteAMTip4 = Tip(header: improvePerformance, title: "Use this time to check in on your goals", body: "Think about what makes you happy and what areas of your life could be improved. It's a great way to stay on track and make adjustments with your goals." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-to-do-on-your-commute-2015-12#3-reflect-3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //////////////
 let commuteAMTip5 = Tip(header: improvePerformance, title: "Reclaim your commute time by repeating a mantra", body: "The more you repeat a phrase, the more it becomes a part of you. Repeat a phrase internally or out loud for 5-20 minutes a day. Try: \"I have everything I need,\" \"I choose to be happy\", or \"I am a voice for peace\"." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/rachael-yahne/mantras_b_6919316.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let commuteAMTip6 = Tip(header: improvePerformance, title: "Spend five to ten minutes thinking and planing out your day", body: "Think hour by hour. What will make this day a success? With whom are you meeting? What are you trying to accomplish? What might throw you off? How will you handle it? Do you expect to have any difficult conversations? How will you approach them? Any risks you want to take? How will you initiate them? ", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "Sponsor", sponsorURL: "sponsorURL")
-
 let commuteAMTip7 = Tip(header: improvePerformance, title: "Every 10 minutes of commuting results in 10% fewer social connections", body: "Over the past twenty-five years, Americans have experienced a 58% attendance drop in club meetings, a 43% decrease in family dinners, and a 35% decline in having friends over. Commuting reduces social connections, which causes unhappiness.", sourceName: "Personal Capital", sourceURL: "https://www.personalcapital.com/blog/financial-planning-2/surprising-costs-commute/", sponsorLogo: "Sponsor", sponsorURL: "sponsorURL")
-
 let commuteAMTip8 = Tip(header: improvePerformance, title: "Economists found that for every hour you spend commuting, one way, you will have to make 40% more in salary to have the same level of well-being in life as non-commuters", body: "People overestimate the value of the things they'll obtain by commuting -- more money, more material goods, more prestige -- and underestimate the benefit of what they are losing: social connections, hobbies, sleep, and health.", sourceName: "The New Yorker", sourceURL: "https://www.newyorker.com/magazine/2007/04/16/there-and-back-again", sponsorLogo: "Sponsor", sponsorURL: "sponsorURL")
 //////////
 let commuteAMTip9 = Tip(header: improvePerformance, title: "Every 20 minute increase in commute time has the same effect as a 19% pay cut for job satisfaction", body: "Long journeys by bus were associated with the biggest reduction in job satisfaction. Job satisfaction can be improved if workers have opportunities to reduce the time spent commuting, to work from home, and/or to walk or cycle to work.", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/2017/10/23/20-minute-increase-commute-time-bad-taking-pay-cut-study-finds/", sponsorLogo: "Sponsor", sponsorURL: "sponsorURL")
 let commuteAMTip10 = Tip(header: improvePerformance, title: "Use this time to do something that improves your life", body: "If you drive you can use the time to think, listen to music, or listen to a book on CD. If you take the bus or train, you could use the time to read, write, or meditate. By walking or biking to work, you can use the commute as a way to get in your daily exercise. Or carpool and use the time to socialize and network.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3028274/two-surprising-ways-to-improve-your-commute", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip11 = Tip(header: improvePerformance, title: "The more time we spend commuting, the less time we spend exercising or preparing meals at home", body: "Each minute you commute is associated with a 0.0257 minute exercise time reduction, a 0.0387 minute food preparation time reduction, and a 0.2205 minute sleep time reduction. These amounts add up over time. Long commutes make us more likely to spend more money eating out, forego exercise, sleep less, experience body aches, and gain weight.", sourceName: "Personal Capital", sourceURL: "https://www.personalcapital.com/blog/financial-planning-2/surprising-costs-commute/", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip12 = Tip(header: improvePerformance, title: "Couples in which one partner commutes for longer than 45 minutes are 40% likelier to divorce", body: "If you are commuting, you are not spending quality time with your loved ones. However, not all commuter relationships were doomed; the study found that people who had a lengthy commute for more than 5 years were only 1% more likely to divorce than non-commuter couples. And breakups were less common for those who had already been commuting long distances before the relationship began.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/08/13/divorce-study_n_3751641.html", sponsorLogo: "", sponsorURL: "")
-/////////
 
-var commuteAMTipArray0 = [commuteAMTip1, commuteAMTip2, commuteAMTip3, commuteAMTip4]
+/////////
+let commuteAMTip13 = Tip(header: "Mood", title: "Improve daily job performance by 10% by getting into a good mood now, study says", body: "Employees who were in a positive mood provided higher-quality service: they were more articulate on the phone with fewer \"ums\" and verbal tics, and used more proper grammar. Employees who were in a negative mood tended to take more frequent breaks from their duties to cope with the stress and get themselves through the day. These small breaks piled up, leading to a greater than 10% loss of productivity.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/07/how-your-morning-mood-affects-your-whole-workday", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip14 = Tip(header: "", title: "The best way to breathe cleaner air is to drive with the windows up and the air conditioning on", body: "In cases where the A/C was used, the indoor cabin air had 20% to 34% fewer pollutants. And keeping the windows closed offered a protective boost between 8% to 44%. It’s important to note that the fan doesn’t offer the same protection as the air conditioning. When the A/C is operating, you have a cold evaporator that is cooling the air as it passes. This cold surface attracts the pollutant particles, and they deposit there, as opposed to being diffused into the air you’re breathing.", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/wellness/banish-pollution-during-commute/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip15 = Tip(header: "", title: "Decrease your risk of getting sick during your commute", body: "Carry these items with with you: \n\n• antibacterial hand sanitizer or wipes \n\n• sunscreen \n\n• a relaxing playlist, podcast, or book to calm any stress (plus, podcasts can help your commute go by faster) \n\n• a helmet, and other protective gear, if you bike or ride a scooter", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip16 = Tip(header: "", title: "If you are sitting in a car, train, or bus for long periods of time every workday, you are putting yourself at risk for heart disease, diabetes, and premature death", body: "Sitting for long periods can increase the risk of blood clots. Get off of the bus or train a stop or two early to get blood flowing, park your car farther away from the office, or remind yourself to take a walk at lunch.", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
+
+///////
+let commuteAMTip17 = Tip(header: "", title: "Reduce your chances of getting sick - Avoid touching your face, use hand sanitizer after touching a public service, and wash your hands as soon as you get to work", body: "Just touching something does nothing. You get sick when you introduce germs to your mouth, eyes, or nose. It’s OK to get germs on your hands if you wash them or use antibacterial gel and don’t touch your face.", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip18 = Tip(header: "", title: "Commuting long distances is associated with decreased cardio fitness, increased weight and high blood pressure", body: "The more time spent commutting means less time to exercise. Park away from your office to rack up extra steps, take the stairs instead of the elevator, and try to move as much as possible. Second, try to wake up 20 minutes earlier to talk a walk or do some exercise before you get in the car or on the bus, train or plane.", sourceName: "Shape", sourceURL: "https://www.shape.com/blogs/shape-your-life/your-long-commute-causing-you-gain-weight", sponsorLogo: "", sponsorURL: "")
+
+
+let commuteAMTipArray0 = [commuteAMTip1, commuteAMTip2, commuteAMTip3, commuteAMTip4]
 let commuteAMTopic0 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray0)
 
-var commuteAMTipArray1 = [commuteAMTip5, commuteAMTip6, commuteAMTip7, commuteAMTip8]
+let commuteAMTipArray1 = [commuteAMTip5, commuteAMTip6, commuteAMTip7, commuteAMTip8]
 let commuteAMTopic1 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray1)
 
-var commuteAMTipArray2 = [commuteAMTip9, commuteAMTip10, commuteAMTip11, commuteAMTip12]
+let commuteAMTipArray2 = [commuteAMTip9, commuteAMTip10, commuteAMTip11, commuteAMTip12]
 let commuteAMTopic2 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray2)
+
+let commuteAMTipArray3 = [commuteAMTip13, commuteAMTip14, commuteAMTip15, commuteAMTip16]
+let commuteAMTopic3 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray3)
+
+let commuteAMTipArray4 = [commuteAMTip17, commuteAMTip18, commuteAMTip11, commuteAMTip16]
+let commuteAMTopic4 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray4)
 
 // MARK: - Commute, PM
 
@@ -725,8 +721,7 @@ let workAMTip10 = Tip(header: improvePerformance, title: "People are most likely
 
 let workAMTip12 = Tip(header: improvePerformance, title: "Mentor in hindsight. Employees learn much less when advice is given on the front end than they do when they have the opportunity to experience their own successes and failures and discuss them with their boss later.", body: "Mentoring helps to groom employees to advance within the organization. Ask your staff, \"What problems or challenges did you face this week, and how did you deal with them? And how well did that work out for you?\"", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/07/4-ways-leaders-can-protect-their-time-and-empower-their-teams", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-/////
-
+///////
 let workAMTip13 = Tip(header: improvePerformance, title: "Lowering the pitch of your voice can make you think and act more confident", body: "Research results showed that people who spoke in a lower voice were more likely to be described as choose the more powerful traits than students in the other two groups." , sourceName: "The Wall Street Journal", sourceURL: "https://www.wsj.com/articles/SB10001424127887323735604578440851083674898", sponsorLogo: "GM_logo", sponsorURL: "https://www.gm.com/")
 let workAMTip14 = Tip(header: improvePerformance, title: "Sitting all day causes sore muscles, strained eyes, poor circulation, and weight gain", body: "For proper posture, sit at the end of your chair and let yourself slouch. Now, try to sit up straight, accentuating the curve of your back as much as possible. Hold this position for a few seconds. Next, release the position a little bit — no more than about 10 degrees. This is your proper sitting position." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/daily-routine-according-to-science-2017-12", sponsorLogo: "GM_logo", sponsorURL: "https://www.gm.com/")
 let workAMTip15 = Tip(header: improvePerformance, title: "Low self-esteem at work results in thousands of dollars of lost income", body: "Individuals who are from blue-collar families and possess self-confidence earn roughly $7,000 more per year than their peers who have low self-esteem. Individuals who are from white-collar families, the gap is even larger. Those with high self-esteem earn approximately $28,000 more annually than those who lack confidence. Over a 40-year career, that adds up to $280,000 to $1.12 million in lost earnings." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/why-low-self-esteem-may-be-hurting-your-career-ncna814156", sponsorLogo: "", sponsorURL: "")
@@ -735,9 +730,7 @@ let workAMTip16 = Tip(header: improvePerformance, title: "Job switchers are earn
 /////////////
 let workAMTip17 = Tip(header: improvePerformance, title: "Poor posture can lead to neck pain, back problems, and slowed digestion", body: "To attain a neutral, upright spine position, put your shoulders down and back, pull your head back, and engage your core muscles. Bring your belly button in toward your spine, as if you're zipping up a snug pair of jeans. This will help to engage the transverse abdominis muscle, which acts like a corset around the spine." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/3-surprising-risks-of-poor-posture", sponsorLogo: "", sponsorURL: "")
 let workAMTip18 = Tip(header: improvePerformance, title: "Ask youself these questions to determine if you should stay at your current job", body: "Is this work meaningful to me? Will I have an opportunity for recognition and achievement? Am I going to learn new things? These motivators are stable across professions and over time-giving us a sense of \"true north\" against which we can recalibrate the trajectories of our careers. \n\nWe should always remember that beyond a certain point, money, status, compensation, and job security are much more a by-product of being happy with a job rather than the cause of it. Realizing this frees us to focus on the things that really matter." , sourceName: "How Will You Measure Your Life?", sourceURL: "https://www.amazon.com/dp/B006ID0CH4/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
-
 let workAMTip19 = Tip(header: "Career", title: "Increase your influence at work by speaking in a lower tone than you normally do", body: "People relate a low tone voice to both leadership and dominance. Speaking in a lower tone counteracts the effect of nervousness, which tends to push your tone higher.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work?utm_medium=email&utm_source=newsletter_daily&utm_campaign=mtod&referral=00203", sponsorLogo: "", sponsorURL: "")
-
 let workAMTip20 = Tip(header: reduceStress, title: "Reduce stress and increase motivation by surrounding yourself with plants, water, or animals", body: "Researchers noted that simply staring at an image of natural scenery for 40 seconds was enough to trigger the brain into a more relaxed state. People looking at plants also made fewer mistakes and were less distracted all around." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/why-natural-scenery-improves-your-mood-makes-you-more-productive-ncna860806", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 ////////// * NOT USED YET
@@ -825,6 +818,7 @@ let workPMTip24 = Tip(header: "", title: "To be a good leader, start out as a fo
 
 //////// NOT USED
 let workPMTip25 = Tip(header: "", title: "Prevent burnout by focusing on learning, study finds", body: "Worker who engaged in more learning activities (e.g. picking up a new skill, gathering new information, or seeking out intellectual challenges) reported significantly lower levels of negative emotions, unethical behavior, and burnout. Learning reduces stress because knowledge can be useful for solving near-term stressful problems and helps us see ourselves as constantly improving, rather than being stuck with fixed capabilities." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/to-cope-with-stress-try-learning-something-new", sponsorLogo: "", sponsorURL: "")
+let workPMTip26 = Tip(header: "", title: "If you take 11 or more of your vacation days, you are more than 30% more likely to receive a raise", body: "People who took fewer than 10 of their vacation days per year had a 35% likelihood of receiving a raise or bonus in a three-year period of time. People who took more than 10 of their vacation days had a 65% chance of receiving a raise or bonus." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/07/the-data-driven-case-for-vacation", sponsorLogo: "", sponsorURL: "")
 
 // Male CEOs with lower-pitched voices tended to manage large companies, make $187,000 a year more than their higher-pitched peers, and last in political office on average five months longer.
 
@@ -872,6 +866,7 @@ let workLateTip4 = Tip(header: health, title: "Working more than 45 hours a week
 
 /////////
 let workLateTip5 = Tip(header: improvePerformance, title: "Your output falls sharply after working 50 hours in a week", body: "Employee output falls sharply after a 50-hour work-week, and falls off a cliff after 55 hours—so much so that someone who puts in 70 hours produces nothing more with those extra 15 hours. \n\nWork, both mental and physical, results in fatigue that limits the cognitive and bodily resources people have to put towards their work. When you're not thinking clearly or moving as quickly or precisely you must work more slowly to maintain quality and safety requirements." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2015/01/26/working-more-than-50-hours-makes-you-less-productive.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
 
 let workLateTipArray0 = [workLateTip1, workLateTip2, workLateTip3, workLateTip4]
 let workLateTopic0 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLateTipArray0)
@@ -1004,18 +999,17 @@ let bedtimeTip3 = Tip(header: sleepBetter, title: "A nighttime ritual will help 
 let bedtimeTip4 = Tip(header: planAhead, title: "Reduce decision fatigure tomorrow by making a plan tonight", body: "List the major tasks you want to accomplish the next day — and how you want to spend the first few hours of the day. Lay out the clothes you’ll wear and have ingredients ready to make a healthy breakfast. Making less decisions in the morning helps you have more willpower later in the day." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 /////////
-let bedtimeTip5 = Tip(header: "Bedtime", title: "Most tend to sleep best between 60 and 70 degrees fahrenheit (16 to 21 degrees celsius)", body: "Your body's temperature drops during the night and a lower temperature allows for people to cover up with blankets without getting too hot.", sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#alter-your-routine", sponsorLogo: "", sponsorURL: "")
-
+let bedtimeTip5 = Tip(header: "Bedtime", title: "Set your room temperature between 60 and 70 degrees fahrenheit (16 to 21 degrees celsius)", body: "Your core body temperature drops during the night to help you fall asleep and maintain sleep. A lower room temperature allows for people to cover up with blankets without getting too hot.", sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#alter-your-routine", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip6 = Tip(header: "Bedtime", title: "Drink a glass of warm milk before bed to reduce insomnia and fidgetiness", body: "Milk is high in antioxidants, vitamin B2 and B12, as well as protein and calcium. The protein lactium has a calming effect by lowering blood pressure, which the potassium in milk can help relieve muscle spasms triggered by feeling tense.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/4-milk/", sponsorLogo: "", sponsorURL: "")
-
 let bedtimeTip7 = Tip(header: "Bedtime", title: "Having a bedtime routine sends a signal to your brain that it's time for bed—especially if you do them in the same order, at the same time every night", body: "Without a consistent bedtime routine, your brain doesn't go into sleep mode until you crawl into bed and turn out the light. Try brushing your teeth, washing your face, and laying out your clothes for the morning in the same order each night.", sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#alter-your-routine", sponsorLogo: "", sponsorURL: "")
-
 let bedtimeTip8 = Tip(header: increaseConfidence, title: "Increase your confidence. Before you even get out of bed tomorrow, stretch your body as wide as possible in an 'X' or 'Y' position.", body: "Sleeping in the fetal position sends a subtle signal to your brain that your body is under attack. But if you do a power pose when you wake up, you’ll see an improvement in your daily confidence levels and happiness.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 
 ////////////
 let bedtimeTip9 = Tip(header: increaseConfidence, title: "Use mouthwash before bed to give your mouth an extra layer of protection from cavity-causing acids", body: "Saliva prevents cavity-causing acids from building up. But we produce less saliva when we sleep. That can dry out your mouth, leaving teeth and gums vulnerable to things like tooth decay and gingivitis.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 let bedtimeTip10 = Tip(header: "Phone", title: "Put your phone in another room or somewhere across the bedroom, far away from your arms' reach, so you're not tempted to check it first thing in the morning", body: "Immediately checking your phone when you wake up is more likely to increase stress and leave you feeling overwhelmed. The information overload that hits you before you're fully awake also interferes with your ability to priority tasks during the day.", sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/p/is-it-bad-to-look-at-your-phone-right-when-you-wake-up-it-might-be-sabotaging-your-day-8437383", sponsorLogo: "", sponsorURL: "")
-let bedtimeTip11 = Tip(header: "Health", title: "", body: "Sleep 7 to 9 hours per night is considered the amount that's optimal for good cognitive performance, safety, and brain health, and for lower risk of cancer and death", sourceName: "Business Insider", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip11 = Tip(header: "", title: "Sleep more - you’ll be less sensitive to negative emotions", body: "In one experiment, sleep-deprived college students tried to memorize a list of words. They could remember 81% of the words with a negative connotation, like \"cancer.\" But they could remember only 31% of the words with a positive or neutral connotation, like \"sunshine\" or \"basket.\"", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/belle-beth-cooper/10-simple-things-to-be-happy_b_4241824.html", sponsorLogo: "", sponsorURL: "")
+
+
 
 
 var bedtimeTipArray0 = [ bedtimeTip1,  bedtimeTip2,  bedtimeTip3,  bedtimeTip4]
@@ -1024,7 +1018,7 @@ let bedtimeTopic0 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTi
 var bedtimeTipArray1 = [ bedtimeTip5,  bedtimeTip6,  bedtimeTip7,  bedtimeTip8]
 let bedtimeTopic1 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray1)
 
-var bedtimeTipArray2 = [ bedtimeTip9,  bedtimeTip10,  bedtimeTip8,  bedtimeTip7]
+var bedtimeTipArray2 = [ bedtimeTip9,  bedtimeTip10,  bedtimeTip11,  bedtimeTip7]
 let bedtimeTopic2 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray2)
 
 // MARK: - Leadership, AM
@@ -1098,6 +1092,10 @@ let getReadyAM0 = Tip(header: "Get Ready", title: "Reduce decision fatigue weari
 // MARK: - Getting Ready PM
 let getReadyPM0 = Tip(header: "Get Ready", title: "Wearing the color red can actually make you feel more attractive", body: "In one experiment, a group of individuals who were wearing red were rated as more attractive by another group of individuals — despite the fact that the first groups’ clothing wasn’t visible to the group do the rating." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/can-wearing-work-uniform-help-you-get-ahead-ncna788136?cid=eml_better_20180716", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
+// MARK: - Going Out (Nightlife)
+
+let goingOutTitle = "Going Out"
+let goingOutIcon = "Goi"
 
 // MARK: - Sex
 
@@ -1109,8 +1107,7 @@ let relationship0 = Tip(header: "Gratitude", title: "Expressing gratitude can im
 
 let relationship1 = Tip(header: "Cheating", title: "People who have cheated before are 350% more likely to cheat again", body: "People who’ve been cheated on in the past are more likely to date a cheater again down the line. In addition, cheaters are significantly more prone to dating other cheaters.", sourceName: "Women's Health", sourceURL: "https://www.womenshealthmag.com/relationships/a19932020/will-they-cheat-again/", sponsorLogo: "", sponsorURL: "")
 
-// MARK: - Breakup
-
+// MARK: - Breakups
 
 let breakup1 = Tip(header: "Breakup", title: "The most humane and fair thing to do is to break the bad news to them as quickly as possible", body: "That means that if you want to break up with someone, you shouldn't sit through an awkward dinner beforehand or tell them there's something on your mind three days before you see them. You also shouldn't try and sugarcoat it so much that they get confused as to what you're talking about. But all you need is a 'we need to talk' buffer — just a couple of seconds for the other person to process that bad news is coming. Think about it like a band-aid— the faster you rip it off, the better you feel.", sourceName: "Insider", sourceURL: "https://www.thisisinsider.com/best-way-you-can-break-up-with-someone-2017-10", sponsorLogo: "", sponsorURL: "")
 
@@ -1142,10 +1139,23 @@ let marriage3 = Tip(header: "Marriage", title: "People with a college degree are
 
 let marriage4 = Tip(header: "Marriage", title: "Couples are less likely to get divorced if they have children", body: "Ratings of happiness and life satisfaction in that same study tended to decrease after couples had children.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
 
-// TRAVEL
+// MARK: - TRAVEL
 
 let travel0 = Tip(header: "Jet Lag", title: "Reduce jet lag by changing your bedtime to better match the local time of your destination", body: "Jet lag occurs when we cross three or more time zone changes, because it throws off our circadian rhythm -- the biological clock that helps control when we wake and fall asleep. Try to sleep on the plane if it’s nighttime where you’re going or stay awake if it’s daytime -- but don’t force it.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/travel/want-to-minimize-jet-lag-heres-what-the-doctors-order/2018/08/29/23c14836-a7d8-11e8-97ce-cc9042272f07_story.html?noredirect=on&utm_term=.cb43c744e8ee", sponsorLogo: "", sponsorURL: "")
-let travel1 = Tip(header: "Health", title: "Vacations can be a good way to relieve stress", body: "Shorter vacations were associated with excess deaths in the intervention group. In the intervention group, men who took three weeks or less annual vacation had a 37% greater chance of dying in 1974 to 2004 than those who took more than three weeks.", sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+
+let travel1 = Tip(header: "Stress", title: "Poorly planned and stressful vacations eliminate the benefits of time away, study finds", body: "If you plan ahead, create social connections on the trip, go far from your work, and feel safe, 94% of vacations have a good ROI in terms of your energy and outlook upon returning to work. Just make sure you plan the trip at least a month in advance, as one of the key predictors of vacation ROI is the amount of stress caused by not planning ahead.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/07/the-data-driven-case-for-vacation", sponsorLogo: "", sponsorURL: "")
+
+let travel2 = Tip(header: "Health", title: "Make sure to end the trip on a high note because our brains place more weight on things that happened last in a series", body: "This so-called \"recency effect\" means the end of a vacation is more easily recalled than the beginning. If you’re only going to upgrade once, splurge on the business class seat on the way home, not the way there. Plan your big dinner at the Michelin-starred restaurant for your final night, not your first.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3048975/the-scientifically-proven-way-to-have-the-best-vacation-ever", sponsorLogo: "", sponsorURL: "")
+
+let travel3 = Tip(header: "Health", title: "Vacations further away from home leads to greater levels of happiness, study finds", body: "An average vacation (or \"staycation\") was found to create no positive effect on happiness. But 84% of the best trips recorded by participants were to locations outside of country.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/02/when-a-vacation-reduces-stress-and-when-it-doesnt", sponsorLogo: "", sponsorURL: "")
+
+/////////////
+let travel4 = Tip(header: "Stress", title: "Vacations with medium to high levels of stress showed no increase in happiness after a vacation", body: "• Plan ahead. 74% find the most stressful part of travel to be figuring out the details: transportation, wasting time figure things out on the trip, and being unfamiliar with the location. \n\n• Meet with someone knowledgeable at the location. On the best trips, 77% met with a local host or had a knowledgeable friend.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/02/when-a-vacation-reduces-stress-and-when-it-doesnt", sponsorLogo: "", sponsorURL: "")
+let travel5 = Tip(header: "Health", title: "Study: The health and wellness benefits of a vacation peaked at about 8 days in", body: "Research finds that we return to previous happiness levels fairly quickly after a vacation, and so shorter vacations experienced frequently contribute more to overall well-being than longer but less infrequent multi-week vacations.", sourceName: "", sourceURL: "https://www.fastcompany.com/3048975/the-scientifically-proven-way-to-have-the-best-vacation-ever", sponsorLogo: "", sponsorURL: "")
+
+// MARK: - HAIR
+
+let hair1 = Tip(header: "Health", title: "Research: People view bald men as more dominate than men with hair", body: "A study found that men with shaved heads were rated as more dominant than similar men with full heads of hair, and that men whose hair was digitally removed were perceived as more dominant, taller, and stronger than their authentic selves. So if it’s starting to go, shave it off.", sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 
 

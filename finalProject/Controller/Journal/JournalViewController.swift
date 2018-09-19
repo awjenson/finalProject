@@ -156,6 +156,7 @@ class JournalViewController: UIViewController {
         journalTableView.rowHeight = UITableViewAutomaticDimension
         journalTableView.estimatedRowHeight = 44
         journalTableView.separatorStyle = .none
+        self.setupRefreshControl()
     }
 
     func configureCardViews() {
@@ -225,18 +226,18 @@ class JournalViewController: UIViewController {
 
     func setupRefreshControl() {
         // add pull to refresh
-        refreshControl.addTarget(self, action: #selector(reloadMessages), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(reloadQuote), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         journalTableView.addSubview(refreshControl)
     }
 
-    @objc func reloadMessages() {
+    @objc func reloadQuote() {
 
         // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
         if self.refreshControl.isRefreshing {
-
-            // TODO: - Fix
-//            loadMessagesAll()
+            self.setupUI()
+            self.updateAdvice([])
+            self.increaseHideButton()
             self.refreshControl.endRefreshing()
         }
     }
@@ -547,7 +548,7 @@ class JournalViewController: UIViewController {
             topicColor = NowConstants.HeaderTeal.color900
 
         case 17...20:
-            topicColor = NowConstants.HeaderOrange.color900
+            topicColor = NowConstants.HeaderRed.color900
 
         case 21..<24:
             topicColor = NowConstants.HeaderBlue.color900
@@ -684,15 +685,32 @@ class JournalViewController: UIViewController {
     }
 
 
+    func decreaseHideButton() {
+        displayMoodButtonView = !displayMoodButtonView
+        moodButtonViewHeight.constant = 0
+        hideButton.setTitle("Unhide", for: .normal)
+    }
+
+    func increaseHideButton() {
+        displayMoodButtonView = !displayMoodButtonView
+        moodButtonViewHeight.constant = 130
+        hideButton.setTitle("Hide", for: .normal)
+    }
+
+
+
+
     @IBAction func hideButtonTapped(_ sender: Any) {
         displayMoodButtonView = !displayMoodButtonView
 
         if displayMoodButtonView == false {
             moodButtonViewHeight.constant = 0
             hideButton.setTitle("Unhide", for: .normal)
+
         } else {
             moodButtonViewHeight.constant = 130
             hideButton.setTitle("Hide", for: .normal)
+
         }
     }
 
@@ -705,6 +723,7 @@ class JournalViewController: UIViewController {
     @IBAction func moodButtonTapped(_ sender: UIButton) {
 
         // Plan to add response in next version of app
+        decreaseHideButton()
 
         switch sender {
         case mood0Button:
@@ -872,13 +891,12 @@ extension JournalViewController: UITableViewDataSource {
         cell.configureCell(tip: tip)
 
         cell.boarderColorView.layer.borderWidth = 0.5
-        cell.boarderColorView.layer.cornerRadius = 4
+        cell.boarderColorView.layer.cornerRadius = 5
         cell.boarderColorView.layer.borderColor = topicColor?.cgColor
         cell.boarderColorView.layer.shadowColor = topicColor?.cgColor
-        cell.boarderColorView.layer.shadowOpacity = 0.9
-        cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.6, height: 1.2)
-        cell.boarderColorView.layer.shadowRadius = 1
-
+        cell.boarderColorView.layer.shadowOpacity = 0.7
+        cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.4, height: 1.5)
+        cell.boarderColorView.layer.shadowRadius = 2.5
 
         return cell
     }

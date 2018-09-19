@@ -169,14 +169,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                                NowConstants.HeaderTeal.color300,
                                NowConstants.HeaderTeal.color200,]
         case 17...20:
-            topicColor = NowConstants.HeaderOrange.color900
-            cellHeaderColor = [NowConstants.HeaderOrange.color800,
-                               NowConstants.HeaderOrange.color700,
-                               NowConstants.HeaderOrange.color600,
-                               NowConstants.HeaderOrange.color500,
-                               NowConstants.HeaderOrange.color400,
-                               NowConstants.HeaderOrange.color300,
-                               NowConstants.HeaderOrange.color200,]
+            topicColor = NowConstants.HeaderRed.color900
+            cellHeaderColor = [NowConstants.HeaderRed.color800,
+                               NowConstants.HeaderRed.color700,
+                               NowConstants.HeaderRed.color600,
+                               NowConstants.HeaderRed.color500,
+                               NowConstants.HeaderRed.color400,
+                               NowConstants.HeaderRed.color300,
+                               NowConstants.HeaderRed.color200,]
         case 21..<24:
             topicColor = NowConstants.HeaderBlue.color900
             cellHeaderColor = [NowConstants.HeaderBlue.color800,

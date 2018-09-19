@@ -77,15 +77,15 @@ struct NowConstants {
         static let color200 = UIColor(red:1.00, green:0.88, blue:0.51, alpha:1.0)
     }
 
-    struct HeaderOrange {
-        static let color900 = UIColor(red:0.90, green:0.32, blue:0.00, alpha:1.0)
-        static let color800 = UIColor(red:0.94, green:0.42, blue:0.00, alpha:1.0)
-        static let color700 = UIColor(red:0.96, green:0.49, blue:0.00, alpha:1.0)
-        static let color600 = UIColor(red:0.98, green:0.55, blue:0.00, alpha:1.0)
-        static let color500 = UIColor(red:1.00, green:0.60, blue:0.00, alpha:1.0)
-        static let color400 = UIColor(red:1.00, green:0.65, blue:0.15, alpha:1.0)
-        static let color300 = UIColor(red:1.00, green:0.72, blue:0.30, alpha:1.0)
-        static let color200 = UIColor(red:1.00, green:0.80, blue:0.50, alpha:1.0)
+    struct HeaderRed {
+        static let color900 = UIColor(red:0.72, green:0.11, blue:0.11, alpha:1.0)
+        static let color800 = UIColor(red:0.78, green:0.16, blue:0.16, alpha:1.0)
+        static let color700 = UIColor(red:0.83, green:0.18, blue:0.18, alpha:1.0)
+        static let color600 = UIColor(red:0.90, green:0.22, blue:0.21, alpha:1.0)
+        static let color500 = UIColor(red:0.96, green:0.26, blue:0.21, alpha:1.0)
+        static let color400 = UIColor(red:0.94, green:0.33, blue:0.31, alpha:1.0)
+        static let color300 = UIColor(red:0.90, green:0.45, blue:0.45, alpha:1.0)
+        static let color200 = UIColor(red:0.94, green:0.60, blue:0.60, alpha:1.0)
     }
 
 }
