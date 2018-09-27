@@ -18,6 +18,7 @@ extension UIStoryboard {
         case main
         case login
 
+        // computed property returns the corresponding filename for each storyboard
         var filename: String {
             return rawValue.capitalized
         }

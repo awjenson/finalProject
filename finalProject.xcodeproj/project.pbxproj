@@ -33,7 +33,7 @@
 		DA361D2320818BDF007ACE59 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D2220818BDF007ACE59 /* Constants.swift */; };
 		DA361D2D20840DD3007ACE59 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA361D2C20840DD3007ACE59 /* Login.storyboard */; };
 		DA361D2F2084273E007ACE59 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D2E2084273E007ACE59 /* User.swift */; };
-		DA361D3120844F41007ACE59 /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3020844F41007ACE59 /* NewLoginViewController.swift */; };
+		DA361D3120844F41007ACE59 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3020844F41007ACE59 /* LoginViewController.swift */; };
 		DA361D332084566E007ACE59 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D322084566E007ACE59 /* UserService.swift */; };
 		DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3420858297007ACE59 /* Storyboard+Utility.swift */; };
 		DA361D3720882A7A007ACE59 /* HomeFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3620882A7A007ACE59 /* HomeFooterCell.swift */; };
@@ -72,6 +72,7 @@
 		DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */; };
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
 		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
+		DAB060CA21547EAC001DB425 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB060C921547EAC001DB425 /* NewUserViewController.swift */; };
 		DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */; };
 		DABCD8F820CC49210091AD0B /* NowConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD8F720CC49210091AD0B /* NowConstants.swift */; };
 		DAC6384A20B1CE310004891D /* GoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6384920B1CE310004891D /* GoalItem.swift */; };
@@ -121,7 +122,7 @@
 		DA361D2220818BDF007ACE59 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DA361D2C20840DD3007ACE59 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		DA361D2E2084273E007ACE59 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		DA361D3020844F41007ACE59 /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
+		DA361D3020844F41007ACE59 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA361D322084566E007ACE59 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DA361D3420858297007ACE59 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		DA361D3620882A7A007ACE59 /* HomeFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterCell.swift; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 		DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
 		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
+		DAB060C921547EAC001DB425 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Conveinence.swift"; sourceTree = "<group>"; };
 		DABCD8F720CC49210091AD0B /* NowConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowConstants.swift; sourceTree = "<group>"; };
 		DAC6384920B1CE310004891D /* GoalItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalItem.swift; sourceTree = "<group>"; };
@@ -400,7 +402,8 @@
 		DA5AEDA120769C190094AA57 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DA361D3020844F41007ACE59 /* NewLoginViewController.swift */,
+				DA361D3020844F41007ACE59 /* LoginViewController.swift */,
+				DAB060C921547EAC001DB425 /* NewUserViewController.swift */,
 				DA5AEDA620769D0E0094AA57 /* WelcomeViewController.swift */,
 			);
 			path = Login;
@@ -689,7 +692,7 @@
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
 				DA8C088B20FC31EC000E050E /* JournalImages.swift in Sources */,
 				DA606B512064969100DD14C0 /* Topic.swift in Sources */,
-				DA361D3120844F41007ACE59 /* NewLoginViewController.swift in Sources */,
+				DA361D3120844F41007ACE59 /* LoginViewController.swift in Sources */,
 				DA5EE4B62090EF7300B54438 /* PostHeaderCell.swift in Sources */,
 				DA78988F2053102E005046D8 /* NowTableViewCell.swift in Sources */,
 				DAC6384A20B1CE310004891D /* GoalItem.swift in Sources */,
@@ -740,6 +743,7 @@
 				DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */,
 				DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */,
 				DA9CC27720FD3B58001A89B7 /* RoundedSquareButton.swift in Sources */,
+				DAB060CA21547EAC001DB425 /* NewUserViewController.swift in Sources */,
 				DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
 				DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */,

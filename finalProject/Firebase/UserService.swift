@@ -101,7 +101,7 @@ struct UserService {
                 return completion(nil)
             }
 
-            // read the user we just wrote to the database and create a user from the snapshot
+            // read the user data we just wrote to the database and create a user from the snapshot
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
                 let user = User(snapshot: snapshot)
                 completion(user)

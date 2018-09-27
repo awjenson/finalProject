@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
         // MARK: - UIStoryboard and UserDefaults
+
         // Determine which Storyboard to display at launch by checking if the user is already logged in.  See AppDelegate extension (related to UserDefaults and keeping users logged in on launch)
         // This calls "Refresh NOW table view" and calls the timeAndDay function in the NowViewController before we leave didFinishLaunchingWithOptions.
         configureInitialRootViewController(for: window)

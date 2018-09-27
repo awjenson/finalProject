@@ -75,7 +75,7 @@
                                                                                         <constraint firstAttribute="height" constant="70" id="VVZ-Sz-q7j"/>
                                                                                         <constraint firstAttribute="width" constant="70" id="ogh-RC-MbT"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                                                     <state key="normal" title="Fir">
                                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
@@ -112,7 +112,7 @@
                                                                                         <constraint firstAttribute="height" constant="70" id="Tii-IK-aeL"/>
                                                                                         <constraint firstAttribute="width" constant="70" id="fO6-hk-Zi8"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                                                     <state key="normal" title="Sec">
                                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
@@ -149,7 +149,7 @@
                                                                                         <constraint firstAttribute="height" constant="70" id="MhR-T2-6L1"/>
                                                                                         <constraint firstAttribute="width" constant="70" id="jOY-uN-OD9"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                                                     <state key="normal" title="Thi">
                                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
@@ -191,7 +191,7 @@
                                                                                         <constraint firstAttribute="width" constant="70" id="EaN-tE-PMw"/>
                                                                                         <constraint firstAttribute="height" constant="70" id="TOB-Vr-2Oa"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                                                     <state key="normal" title="Fou">
                                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
@@ -228,7 +228,7 @@
                                                                                         <constraint firstAttribute="width" constant="70" id="FtK-6a-cB6"/>
                                                                                         <constraint firstAttribute="height" constant="70" id="nTY-pV-UjV"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                                                     <state key="normal" title="Fif">
                                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
@@ -265,7 +265,7 @@
                                                                                         <constraint firstAttribute="width" constant="70" id="Huz-9O-6pK"/>
                                                                                         <constraint firstAttribute="height" constant="70" id="uIy-FH-Fxn"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                                                                     <state key="normal" title="Six">
                                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
@@ -341,20 +341,20 @@
                                                     <rect key="frame" x="20" y="20" width="335" height="68.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuk-go-VOv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="17.666666666666668"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="19.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Body Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-B2-E2H" userLabel="BodyLabel">
-                                                            <rect key="frame" x="0.0" y="33.666666666666664" width="335" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="35.666666666666664" width="335" height="0.0"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Source Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jd-by-sb2">
-                                                            <rect key="frame" x="0.0" y="49.666666666666671" width="335" height="19"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="16"/>
+                                                            <rect key="frame" x="0.0" y="51.666666666666671" width="335" height="17"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                                             <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>

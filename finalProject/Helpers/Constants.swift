@@ -15,7 +15,7 @@ struct Constants {
     }
 
     struct Segue {
-        static let subscribeSegue = "subscribeSegue"
+        static let newUserSegue = "toNewUserVC"
     }
 
     // MARK: UserDefaults

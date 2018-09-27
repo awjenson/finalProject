@@ -97,11 +97,17 @@ let lunchTip2 = Tip(header: "Lunch", title: "Eat lean protein because it takes l
 
 let lunchTip3 = Tip(header: "Lunch", title: "Eat Fiber: It helps you lose weight by making you feel full for a longer period of time" , body: "Research: people who ate 30 grams of fiber a day lost roughly the same weight as people who followed a complex diet published by the American Heart Association. Eat vegetables, fruit, and whole grain bread and pasta.", sourceName: "Very Well Fit", sourceURL: "https://www.verywellfit.com/how-to-eat-fiber-to-lose-weight-3495368", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let lunchTip4 = Tip(header: "Lunch", title: "Walking 15 minutes after lunch speeds up digestion, prevents stomach problems, and increases metabolism which burns belly fat", body: "Walking after a meal, as short as 15 minutes, increases metabolism, which in turn helps in burning calories. The faster your metabolism, the faster you’ll burn calories, and thus, the better your weight will be controlled." , sourceName: "NYTimes", sourceURL: "https://food.ndtv.com/health/how-30-minutes-of-walking-after-meals-can-help-you-stay-fit-1662358", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let lunchTip4 = Tip(header: "Lunch", title: "Walking 15 minutes after lunch speeds up digestion, prevents stomach problems, and increases metabolism which burns belly fat", body: "Walking after a meal, as short as 15 minutes, increases metabolism, which in turn helps in burning calories. The faster your metabolism, the faster you’ll burn calories, and thus, the better your weight will be controlled." , sourceName: "The New York Times", sourceURL: "https://well.blogs.nytimes.com/2013/06/24/really-the-claim-taking-a-walk-after-a-meal-aids-digestion", sponsorLogo: "", sponsorURL: "")
+///////////
+let lunchTip5 = Tip(header: "Lunch", title: "Jerry Seinfeld—maintained his sanity during his hit show \"Seinfeld\" by meditating during his lunch hour", body: "\"I was doing the TV series in which I was the star of the show, the executive producer of the show, the head writer, in charge of casting and editing, for 24 episodes on network television for 9 years!\" he said. \"And I'm just a normal guy. And that was not a normal situation to be in. So I meditated every day. And that's how I survived the 9 years.\"" , sourceName: "The Wall Street Journal", sourceURL: "https://www.wsj.com/articles/ohm-for-all-1386299691", sponsorLogo: "", sponsorURL: "")
+
+let lunchTip6 = Tip(header: "Lunch", title: "Taking a light walk after lunch helps balance your blood sugar and makes you feel lighter", body: "Stand up after you eat or take a light walk. This will get your metabolism moving, as the metabolism slows substantially when sitting down." , sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/169443-11-things-to-do-before-after-eating-to-help-your-metabolism-work-as-efficiently-as", sponsorLogo: "", sponsorURL: "")
 
 var lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
-
 let lunchTopic0 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray0)
+
+var lunchTipArray1 = [lunchTip5, lunchTip6, lunchTip3, lunchTip4]
+let lunchTopic1 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray1)
 
 // MARK: - Dinner
 
@@ -118,9 +124,15 @@ let dinnerTip4 = Tip(header: "Dinner", title: "Walking after dinner helps you sl
 
 //////////
 let dinnerTip5 = Tip(header: "Health", title: "Don't eat a heavy dinner (greasy or high-fat) because you're body shuts down while you sleep and the food will be stored as fat", body: "Greasy or high-fat dinners take longer to digest which causes the food to be stored as fat while you sleep. Also, it can cause issues with reflux or heartburn." , sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let dinnerTip6 = Tip(header: "Dinner", title: "Slouched posture after a meal can trigger heartburn caused by acid reflux (when stomach acid squirts back up into the esophagus)", body: "Slouching puts pressure on the abdomen, which can force stomach acid in the wrong direction. And some evidence suggests that transit in the intestines slows down when you slouch." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/3-surprising-risks-of-poor-posture", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip7 = Tip(header: "", title: "People who eat in well-lit spaces consume about 39% fewer calories—and make healthier food choices—than those who dine under dim lighting", body: "Bright spaces make us feel more alert, so we nosh more mindfully. In fact, study participants who skipped the candles at mealtime ate more slowly, enjoyed their food more and, yes, ate 373 fewer calories." , sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
+var dinnerTipArray0 = [dinnerTip1, dinnerTip2, dinnerTip3, dinnerTip4]
+let dinnerTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
+
+/// Work in progress
+var dinnerTipArray1 = [dinnerTip5, dinnerTip6, dinnerTip7, dinnerTip6]
+let dinnerTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray1)
 
 ////////////
 let dinnerAfter9PM1 = Tip(header: "Dinner", title: "Late Dinner: avoid large portions, greasy, fatty, spicy, and fried foods, and high-sugar, high-carbohydrate treats like cookies or ice cream", body: "These foods can cause indigestion (feeling bloated and gassy), heartburn, and even acid reflux before bedtime. The result is poor sleep and poor health.", sourceName: "Life Hacker", sourceURL: "https://lifehacker.com/the-late-night-snacks-that-wont-upset-your-stomach-and-1717594825", sponsorLogo: "text", sponsorURL: "text")
@@ -131,17 +143,7 @@ let dinnerAfter9PM3 = Tip(header: "Health", title: "Don't have large amounts of 
 
 let dinnerAfter9PM4 = Tip(header: "Health", title: "Eat protein for dinner so your body can build muscle while you sleep.", body: "The body rebuilds muscle through a process called protein synthesis. If you go to bed without eating enough protein your body can’t produce enough protein synthesis to rebuild the muscle. \n\nProtein-based snacks like string cheese a handful of almonds, whole grain crackers with a bit of guacamole, greek yogurt, and almond butter with an apple can stabilize your blood sugar when you sleep. Make sure to allow an hour for staying upright before going to sleep for good digestion.", sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "test", sponsorURL: "test")
 
-/////////
-
-
-var dinnerTipArray0 = [dinnerTip1, dinnerTip2, dinnerTip3, dinnerTip4]
-let dinnerTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
-
-/// Work in progress
-var dinnerTipArray1 = [dinnerTip5, dinnerTip2, dinnerTip3, dinnerTip6]
-let dinnerTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray1)
-
-var dinnerAfter9PMTipArray0 = [dinnerAfter9PM1, dinnerAfter9PM2, dinnerAfter9PM3, dinnerAfter9PM4]
+let dinnerAfter9PMTipArray0 = [dinnerAfter9PM1, dinnerAfter9PM2, dinnerAfter9PM3, dinnerAfter9PM4]
 let dinnerAfter9PMTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
 
 // MARK: - AfternoonSnack
@@ -218,7 +220,7 @@ let journalTip2 = Tip(header: journalTitle, title: "Gratitude journaling has a s
 
 let journalTip3 = Tip(header: journalTitle, title: "To create a new journaling habit, write less than you feel like writing", body: "When people start journaling they write pages the first day. Then by the second day the thought of writing a page is daunting, and they procrastinate or abandon the exercise. So even if you feel like writing more, force yourself to write no more than one sentence a day." , sourceName: "Essentialism: The Disciplined Pursuit of Less", sourceURL: "https://gregmckeown.com/blog/one-thing-productive-people-reaching-phones/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let journalTip4 = Tip(header: journalTitle, title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for. Participants of a two week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let journalTip4 = Tip(header: journalTitle, title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for. Participants of a 2 week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 ////////////
 let journalTip5 = Tip(header: success, title: "Journaling helps you know yourself better", body: "By writing routinely you will get to know what makes you feel happy and confident. You will also become clear about situations and people who are toxic for you — important information for your emotional well-being." , sourceName: "Psych Central", sourceURL: "https://psychcentral.com/lib/the-health-benefits-of-journaling/", sponsorLogo: "", sponsorURL: "")
@@ -272,7 +274,7 @@ let mindfulnessTip3 = Tip(header: navySealAdvice, title: "\"Box breathing\" redu
 let mindfulnessTip4 = Tip(header: mood, title: "Research shows that practicing gratitude immediately boosts your mood", body: "Quickly think of one to three things you're thankful for, whether its for your family and friends, your health, or the nice weather. Science shows that this exercise is an immediate mood booster." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 /////////////
-let mindfulnessTip5 = Tip(header: improvePerformance, title: "Research show that practicing visualization helps you perform better in real life", body: "Whatever you're stressing about or want to accomplish today, close your eyes and quickly run through it in your head beforehand. \n\nScientists found that weight lifters who simply visualized their workouts were nearly two times stronger than those who did nothing at all. Basically, you're helping your brain establish patterns for success.", sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "LOGO", sponsorURL: "URL")
+let mindfulnessTip5 = Tip(header: improvePerformance, title: "Research show that practicing visualization helps you perform better in real life", body: "Whatever you're stressing about or want to accomplish today, close your eyes and quickly run through it in your head beforehand. \n\nScientists found that weight lifters who simply visualized their workouts were nearly 2 times stronger than those who did nothing at all. Basically, you're helping your brain establish patterns for success.", sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "LOGO", sponsorURL: "URL")
 
 let mindfulnessTip6 = Tip(header: improvePerformance, title: "Journaling helps to reduce stress and be more present", body: "Writing about anger, sadness and other painful emotions helps to release the intensity of these feelings. By doing so you will feel calmer and better able to stay in the present.", sourceName: "Psych Central", sourceURL: "https://psychcentral.com/lib/the-health-benefits-of-journaling/", sponsorLogo: "", sponsorURL: "")
 
@@ -287,7 +289,7 @@ let mindfulnessTopic1 = Topic(title: mindfulnessTitle, icon: mindfulnessIcon, ti
 let gymTitle = "Gym"
 let gymIcon = "Gym"
 
-let gymTip1 = Tip(header: improvePerformance, title: "Improve performance by drinking 20 ounces of water two hours before exercise and drink throughout your workout", body: "During exercise, drink fluids early, and drink at regular intervals to prevent muscle fatigue by replacing fluids lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let gymTip1 = Tip(header: improvePerformance, title: "Improve performance by drinking 20 ounces of water 2 hours before exercise and drink throughout your workout", body: "During exercise, drink fluids early, and drink at regular intervals to prevent muscle fatigue by replacing fluids lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let gymTip2 = Tip(header: improvePerformance, title: "Research: People who practiced positive self-talk were able to push harder for longer", body: "You can go a lot harder than you think you can. When you're tired, tell yourself positive, empowering phrases like \"I got this\" or \"I am strong\"." , sourceName: "Time", sourceURL: "https://time.com/4606637/exercise-motivational-skills-training/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -338,7 +340,7 @@ let gymTopic3 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray3)
 let runningTitle = "Running"
 let runningIcon = "Run"
 
-let runningTip1 = Tip(header: improvePerformance, title: "The American College of Sports Medicine recommends that people drink 17 ounces of fluid two hours before exercise", body: "During exercise, they recommend that people start drinking fluids early, and drink them at regular intervals to prevent muscle fatigue and replace fluids lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let runningTip1 = Tip(header: improvePerformance, title: "The American College of Sports Medicine recommends that people drink 17 ounces of fluid 2 hours before exercise", body: "During exercise, they recommend that people start drinking fluids early, and drink them at regular intervals to prevent muscle fatigue and replace fluids lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let runningTip2 = Tip(header: runningTitle, title: "Run faster by adding short sprints into your endurance training on a regular basis", body: "You won’t make performance gains if you always run at the same speed. Work short speedwork into one of your long-distance runs to vary the pace. \n\nDuring an acceleration, you slowly, but steadily increase your running speed from a recovery pace to a sprint over a distance of 80-100 m.! A deceleration begins with a sprint and gradually slows down to a jog." , sourceName: "Runtastic", sourceURL: "https://www.runtastic.com/blog/en/5-effective-tips-for-improving-your-running-performance/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let runningTip3 = Tip(header: runningTitle, title: "Land on the midsole of your foot, body", body: "Landing on your forefoot (instead of your heels) allows your muscles to catch the weight of your body in flight, reducing the effects of impact on the joints and bones. \n\nAvoid running with a heel landing first because it can contribute to back and knee pain.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/cardio/10-ways-improve-your-running-technique", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -379,7 +381,7 @@ let barTip2 = Tip(header: qualityOfSleep, title: "Alcohol will help you fall asl
 
 let barTip3 = Tip(header: health, title: "Drinking once a day or 5 to 10 alcoholic drinks a week is likely to shortern your life by up to 6 months", body: "While non-fatal heart attacks are less likely in people who drink alcohol, scientists say this benefit is swamped by the increase of other forms of heart disease including fatal heart attacks and stroke. \n\nIf you already drink, drinking less may help you live longer and lower your risk of several cardiovascular conditions." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/health-43738644", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let barTip4 = Tip(header: health, title: "After a night of drinking, drink coffee in the morning because it can protect your liver from damage casused by too much alcohol", body: "Studies show that drinking two to three cups a day can protect your liver from damage caused by too much alcohol or an unhealthy diet. Some research suggests it may lower your risk of liver cancer." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let barTip4 = Tip(header: health, title: "After a night of drinking, drink coffee in the morning because it can protect your liver from damage casused by too much alcohol", body: "Studies show that drinking 2 to 3 cups a day can protect your liver from damage caused by too much alcohol or an unhealthy diet. Some research suggests it may lower your risk of liver cancer." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 /////////////
 let barTip5 = Tip(header: "Bar", title: "Avoid lemon and lime slices and other garnishes added to your drink", body: "A study of 76 lemons at 21 different restaurants in The Journal of Environmental Health found that 70% of them contained microbial growth. Of the positive culture results, 13% were E. coli.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/menu-items-never-order/", sponsorLogo: "", sponsorURL: "")
@@ -458,7 +460,7 @@ let cafePMTip1 = Tip(header: health, title: "Avoid caffeine after 2 p.m. to prev
 
 let cafePMTip2 = Tip(header: health, title: "For best results, try to time your \"afternoon coffee break\" between 1:30 pm and 5:00 pm", body: "You body releases cortisol, a hormone which makes us feel alert and awake. The time of peak cortisol levels in the afternoon for most people are between 12-1 pm and 5:30-6:30 pm. Therefore, time your \"afternoon coffee break\" between 1:30 pm and 5:00 pm to take advantage of the dips in your cortisol levels when you need a boost the most." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/sleep-newzzz/201312/new-details-caffeine-s-sleep-disrupting-effects", sponsorLogo: "GM_logo", sponsorURL: "https://gm.com")
 
-let cafePMTip3 = Tip(header: health, title: "The Mayo Clinic advises adults to limit their caffeine intake to 400 mg per day, or the equivalent of about two to three coffees", body: "Caffeine levels can differ based on the type of coffee. For example, 1.5 cups of Starbucks gives you 400 mg of caffeine. Too much caffeine comes with risks, including migraine headaches, irritability, upset stomach, and insomnia." , sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/healthy-daily-routine-habits-according-to-science.html", sponsorLogo: "GM_logo", sponsorURL: "https://gm.com")
+let cafePMTip3 = Tip(header: health, title: "The Mayo Clinic advises adults to limit their caffeine intake to 400 mg per day, or the equivalent of about 2 to 3 coffees", body: "Caffeine levels can differ based on the type of coffee. For example, 1.5 cups of Starbucks gives you 400 mg of caffeine. Too much caffeine comes with risks, including migraine headaches, irritability, upset stomach, and insomnia." , sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/healthy-daily-routine-habits-according-to-science.html", sponsorLogo: "GM_logo", sponsorURL: "https://gm.com")
 
 let cafePMTip4 = Tip(header: health, title: "Decaf coffee has a little caffeine. USDA regulations require decaf coffee to be 97% caffeine-free", body: "While a 3% dose of caffeine may seem relatively small, it might be enough to keep you awake at night. If you’re drinking decaf coffee to avoid caffeine then you might be better off playing it safe with green tea, instead." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/food/fun/how-much-caffeine-is-in-decaf-coffee/", sponsorLogo: "", sponsorURL: "")
 
@@ -481,7 +483,7 @@ let breakTip2 = Tip(header: breakTitle, title: "High efficiency breaks = walking
 
 let breakTip3 = Tip(header: breakTitle, title: "Research: Increase meditative state by walking in green spaces, not in busy streets", body: "Compared to city shopping streets and busy business areas, feelings of a meditative state were the highest when the participants walked through green spaces, as well as less frustration. \n\nThe findings don’t mean the green space triggered a meditative state — rather, the energy required to walk through a green space is more \"effortless.\"" , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/29/green-space-meditation-brain-walk-park_n_2964199.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let breakTip4 = Tip(header: breakTitle, title: "Take vision breaks from looking at digital devices because your eyes will strain in as little as two hours", body: "The 20-20-20 exercise to reduce your eye fatigue: Every 20 minutes look away from your computer screen and focus on an item at least 20 feet away for at least 20 seconds." , sourceName: "Medium", sourceURL: "https://medium.com/the-mission/digital-eye-strain-is-destroying-your-eyes-4ac7f8e87b24", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakTip4 = Tip(header: breakTitle, title: "Take vision breaks from looking at digital devices because your eyes will strain in as little as 2 hours", body: "The 20-20-20 exercise to reduce your eye fatigue: Every 20 minutes look away from your computer screen and focus on an item at least 20 feet away for at least 20 seconds." , sourceName: "Medium", sourceURL: "https://medium.com/the-mission/digital-eye-strain-is-destroying-your-eyes-4ac7f8e87b24", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 /////////
 let breakTip5 = Tip(header: breakTitle, title: "Research clearly shows that a brief nap can speed up cognitive processing, decrease errors, and increase stamina for sustained attention to difficult tasks later in the day", body: "One study found that as little as eight minutes of sleep during the day was enough to significantly improve memory. Organizations such as Google and PriceWaterhouseCoopers have nap pods for employees, understanding that 20 minutes of naptime can make people more effective and productive for many more hours that day." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/sleep-well-lead-better", sponsorLogo: "", sponsorURL: "")
@@ -576,6 +578,11 @@ let groceryStoreTip20 = Tip(header: "Grocery Store", title: "The most crowded ti
 // Cereal
 let groceryStoreTip21 = Tip(header: "Cereal", title: "Tips for buying healthy cereal", body: "\n\n• Look for whole-grain cereals such as those made with corn, whole wheat, oats, or brown rice. \n\n• Choose a cereal that has at least 5 grams of fiber per serving. \n\n• Avoid cereals that contain more than 5 grams of sugar per serving. \n\n• Many cereals are high in sodium. Aim for no more than 200 mg per serving. \n\n• Choose cereals that have less than 150 calories per serving.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/nutrition/breakfast-and-beyond-the-case-for-a-healthy-morning-meal", sponsorLogo: "", sponsorURL: "")
 
+let groceryStoreTip22 = Tip(header: "", title: "Supermarkets play music with a slower beat so you move through the aisles more slowly, increasing the likelihood you'll stop to pick up items", body: "In one study, participants said pleasurable music in the background increased the likelihood they'd spend more time and money in the store — and thwarted their negative emotions.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/yes-grocery-stores-are-tricking-you-into-spending-more-money-2017-2", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip23 = Tip(header: "", title: "Reduce impulse purchases by shopping for less than 23 minutes", body: "Brains scans examined by researchers reveal that consumers only respond rationally for the first 23 minutes of their shop, after which they begin to think with the emotional part of their brain which can only guess at value for money. They also indicate that after 40 minutes - the time taken for a typical weekly shop - the brain becomes tired and effectively shuts down, leading to impulse buys.", sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/uk-wales-north-west-wales-24995031", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip24 = Tip(header: "", title: "The point of those bite-sized free samples of food are not to get you to buy a particular product. It’s to trick your body into thinking it’s hungry", body: "If they can tantalize your taste buds but not satisfy your hunger, you become a less disciplined shopper and buy more. As much as 50% of purchases are unplanned.", sourceName: "Bon Appétit", sourceURL: "https://www.bonappetit.com/test-kitchen/how-to/article/supermarket-psychology", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip25 = Tip(header: "", title: "A supermarket's most profitable section of the store tends to be checkout", body: "And the person who in general does the most shopping at checkout is the third person in line. That’s the person who isn’t paying for groceries, or placing items on the conveyer belt, but who has nothing to do but wait and consider adding just one or two more items to his or her bill. Avoid the temptation.", sourceName: "Bon Appétit", sourceURL: "https://www.bonappetit.com/test-kitchen/how-to/article/supermarket-101", sponsorLogo: "", sponsorURL: "")
+
 let groceryStoreTipArray0 = [groceryStoreTip1, groceryStoreTip2, groceryStoreTip3, groceryStoreTip4]
 let groceryStoreTipArray1 = [groceryStoreTip5, groceryStoreTip6, groceryStoreTip7, groceryStoreTip8]
 let groceryStoreTipArray2 = [groceryStoreTip9, groceryStoreTip10, groceryStoreTip11, groceryStoreTip12]
@@ -587,10 +594,10 @@ let groceryStoreTopic2 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon,
 let groceryStoreTopic3 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray3)
 
 // Weekend (18)
-let groceryStoreTipArrayWEND = [groceryStoreTip19, groceryStoreTip3, groceryStoreTip4, groceryStoreTip8]
+let groceryStoreTipArrayWEND = [groceryStoreTip19, groceryStoreTip21, groceryStoreTip22, groceryStoreTip23]
 let groceryStoreTopicWEND = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrayWEND)
 // Weekday (19)
-let groceryStoreTipArrayWDAY = [groceryStoreTip20, groceryStoreTip12, groceryStoreTip13, groceryStoreTip16]
+let groceryStoreTipArrayWDAY = [groceryStoreTip20, groceryStoreTip24, groceryStoreTip16, groceryStoreTip25] // Partial; replace Tip16.
 let groceryStoreTopicWDAY = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrayWDAY)
 
 
@@ -782,7 +789,7 @@ let workPMTip5 = Tip(header: strategy, title: "A study found that 3 p.m. on a Tu
 
 let workPMTip6 = Tip(header: "Health", title: "Your brain can only focus for 90 to 120 minutes before it needs a break", body: "You’re an organism. And organisms run in cycles. During the day, we move from higher to lower alertness–the ultradian rhythm. Studies of top performers found that they follow the same pattern: focus then rest, focus then rest.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3013188/why-you-need-to-unplug-every-90-minutes", sponsorLogo: "", sponsorURL: "")
 
-let workPMTip7 = Tip(header: "Health", title: "People perform best when they’re feeling positive energy and perform worst when they're feeling negative energy. Take breaks during the day", body: "We’re not physiologically capable of sustaining highly positive emotions for long periods. Confronted with the daily demands and challenges, people slip into negative emotions—the fight-or-flight mode, making it impossible to think clearly or logically. Take walking breaks, do deep breathing (exhaling slowly for six seconds), and express appreciation to others.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2007/10/manage-your-energy-not-your-time", sponsorLogo: "", sponsorURL: "")
+let workPMTip7 = Tip(header: "Health", title: "People perform best when they’re feeling positive energy and perform worst when they're feeling negative energy. Take breaks during the day", body: "We’re not physiologically capable of sustaining highly positive emotions for long periods. Confronted with the daily demands and challenges, people slip into negative emotions—the fight-or-flight mode, making it impossible to think clearly or logically. Take walking breaks, do deep breathing (exhaling slowly for 6 seconds), and express appreciation to others.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2007/10/manage-your-energy-not-your-time", sponsorLogo: "", sponsorURL: "")
 
 let workPMTip8 = Tip(header: "Productivity", title: "Distraction are costly: A temporary shift in attention from one task to another—stopping to answer an e-mail or take a phone call, for instance—increases the amount of time necessary to finish the primary task by as much as 25%", body: "It’s far more efficient to fully focus for 90 to 120 minutes, take a true break, and then fully focus on the next activity. ", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2007/10/manage-your-energy-not-your-time", sponsorLogo: "", sponsorURL: "")
 
@@ -955,7 +962,7 @@ let bathroomTip2 = Tip(header: health, title: "Drinking water reduces your chanc
 
 let bathroomTip3 = Tip(header: reduceGerms, title: "Scientist recommend cleaning your bathroom door knobs once a week.", body: "Disinfect bathroom door knobs at least once a week, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bathroomTip4 = Tip(header: reduceGerms, title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within six feet of the toilet and in the sink. To keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every two weeks — more if you shower often. Your shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomTip4 = Tip(header: reduceGerms, title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. To keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks — more if you shower often. Your shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var bathroomTipArray0 = [bathroomTip1, bathroomTip2, bathroomTip3, bathroomTip4]
 
@@ -972,7 +979,7 @@ let bathroomPMTip2 = Tip(header: reduceGerms, title: "Scientist recommend changi
 
 let bathroomPMTip3 = Tip(header: sleepBetter, title: "Trade your shower for a bath to reduce stress, sleep better, and lose weight", body: "When you take a hot bath your body temperature rises, and then quickly cools down, which relaxes your body, burns calories, and primes it for sleep." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/5-science-backed-ways-have-healthier-weekend-ncna782761", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bathroomPMTip4 = Tip(header: reduceGerms, title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within six feet of the toilet and in the sink. To keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every two weeks." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomPMTip4 = Tip(header: reduceGerms, title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. To keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //////////
 let bathroomPMTip5 = Tip(header: reduceGerms, title: "While a hot bath may even help relax and prime your body for sleep, showers often wake people up, so it might not be the best thing to do before bed", body: "Also, people with long hair should be careful not to go to bed with wet hair because it can also make sheets and pillows damp, which could cause mold to grow." , sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#take-a-shower", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -1058,14 +1065,14 @@ let leadershipPMTopic0 = Topic(title: leadershipPMTitle, icon: leadershipPMIcon,
 let restaurantTitle = "Restaurant"
 let restaurantIcon = "Res"
 
-let restaurantTip1 = Tip(header: "Restaurant", title: "Pay attention to the music being played", body: "Eateries with loud, energic music—create a hectic atmosphere that makes people overeat. Opt for establishments with softer sounds like jazz. Researchers found that people who dined in restaurants with lighter music ate less food." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let restaurantTip1 = Tip(header: "Restaurant", title: "Mindful eating: Pay attention to the music being played", body: "Eateries with loud, energic music—create a hectic atmosphere that makes people overeat. Opt for establishments with softer sounds like jazz. Researchers found that people who dined in restaurants with lighter music ate less food." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let restaurantTip2 = Tip(header: "Restaurant", title: "Look at the colors on the walls", body: "Restaurants with bold, bright colors—think reds and oranges—are stimulating, so you’re more likely to order more. However, softer colors like blues, peaches, grays and pinks encourage a more relaxed, eat-slowly atmosphere." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let restaurantTip2 = Tip(header: "Restaurant", title: "Mindful eating: Look at the colors on the walls", body: "Restaurants with bold, bright colors—think reds and oranges—are stimulating, so you’re more likely to order more. However, softer colors like blues, peaches, grays and pinks encourage a more relaxed, eat-slowly atmosphere." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let restaurantTip3 = Tip(header: "Restaurant", title: "Avoid empty calorie alcoholic drinks", body: "Stay away from sugary margaritas and pina coladas because they’ll just add hundreds—or even thousands—of extra calories. Instead, get a glass of red wine (for the antioxidant benefits) or a vodka with a splash of club soda and a lime." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/healthy-eating-weight-loss-tips-not-calories-2018-7#if-you-go-out-to-eat-take-half-of-your-meal-home-in-a-to-go-box-15", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let restaurantTip4 = Tip(header: "Restaurant", title: "Reduce weight gain by putting half of your meal home in a to-go box", body: "A study found that many restaurants serve portions that are triple (or even quadruple!) that of a recommended portion size." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
+/////////
 let restaurantTip5 = Tip(header: "Restaurant", title: "Scientists found that people who ate a large vegetable salad before their main dish ate fewer calories than those who didn’t", body: "Keep it simple by foregoing creamy (read: fattening) dressings for simple oil and vinegar. And skip the cheese and croutons, too." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let restaurantTip6 = Tip(header: "Restaurant", title: "Fat and calories hide in these buzzwords", body: "Anything that’s described as creamy, buttery, breaded, fried, stuffed or smothered is likely loaded with fat and calories. Fancy-sounding terms like au gratin, parmesan, cheese-filed scalloped or sauteed is a giveaway that there are plenty of calories stuffed inside the meal." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -1073,16 +1080,14 @@ let restaurantTip6 = Tip(header: "Restaurant", title: "Fat and calories hide in 
 let restaurantTip7 = Tip(header: "Restaurant", title: "Look for these healthy buzzwords", body: "Roasted, baked, braised, broiled, poached, rubbed, seared, grilled, steamed, sautéed, spiced, seasoned indicate that the food was cooked in the healthiest way possible." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let restaurantTip8 = Tip(header: "Restaurant", title: "Plan to do some light exercise after dinner", body: "A nice stroll after dinner will not only help you digest, it’ll keep you from ordering something heavy while out. Why? You simply won’t want to feel weighed down and sluggish for a walk." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
-let restaurantTip9 = Tip(header: "Restaurant", title: "Diners leave 17% of their meals uneaten and 55% of edible leftovers are left at the restaurant.", body: "Portion sizes have increased significantly over the past 30 years. The average pizza slice has grown 70% in calories, the average chicken caesar salad doubled in calories, and the average chocolate chip cookie has quadrupled. Today, portion sizes can be two to eight times larger than USDA or FDA standard serving sizes." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2015/04/22/americas-165-billion-food-waste-problem.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+//////////
+let restaurantTip9 = Tip(header: "Restaurant", title: "Diners leave 17% of their meals uneaten and 55% of edible leftovers are left at the restaurant", body: "Portion sizes have increased significantly over the past 30 years. The average pizza slice has grown 70% in calories, the average chicken caesar salad doubled in calories, and the average chocolate chip cookie has quadrupled. Today, portion sizes can be 2 to 8 times larger than USDA or FDA standard serving sizes." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2015/04/22/americas-165-billion-food-waste-problem.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 // TODO
 var restaurantTipArray0 = [restaurantTip1, restaurantTip2, restaurantTip3, restaurantTip4]
-
 let restaurantTopic0 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray0)
 
 var restaurantTipArray1 = [restaurantTip5, restaurantTip6, restaurantTip7, restaurantTip8]
-
 let restaurantTopic1 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray1)
 
 
