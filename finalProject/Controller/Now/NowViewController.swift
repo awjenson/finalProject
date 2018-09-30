@@ -379,7 +379,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(barTopic0, dinnerAfter9PMTopic0, homePMTopic0, lateNightSnackTopic0, bathroomPMTopic0, bedtimeTopic0, weekdayNow21to24Topic1)
+            appendSevenTopics(barTopic0, dinnerAfter9PMTopic0, homePMTopic0, lateNightSnackTopic0, bathroomPMTopic0, bedtimeTopic3, weekdayNow21to24Topic1)
         default:
             print("Weekday,INVALID HOUR!")
         }
@@ -433,7 +433,7 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekdayTF, Very Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(bedtimeTopic1, lateNightSnackTopic0, homePMTopic0, meditationTopic0, barTopic2, dateTopic1, weekdayNow0to4Topic1)
+            appendSevenTopics(bedtimeTopic2, lateNightSnackTopic0, homePMTopic0, meditationTopic0, barTopic2, dateTopic1, weekdayNow0to4Topic1)
         case 5...8:
             print("weekdayTF, Early Morning")
             // call function to display 9 time-based topics
@@ -460,7 +460,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerAfter9PMTopic0, barTopic2, dateTopic0, homePMTopic0, bedtimeTopic1, lateNightSnackTopic0, weekdayNow21to24Topic3)
+            appendSevenTopics(dinnerAfter9PMTopic0, barTopic2, dateTopic0, homePMTopic0, bedtimeTopic3, lateNightSnackTopic0, weekdayNow21to24Topic3)
         default:
             print("weekdayTF,INVALID HOUR!")
         }
@@ -471,7 +471,7 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekday Fri, Very Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(bedtimeTopic2, lateNightSnackTopic0, homePMTopic0, meditationTopic0, barTopic2, dateTopic0, weekdayNow0to4Topic0)
+            appendSevenTopics(bedtimeTopic0, lateNightSnackTopic0, homePMTopic0, meditationTopic0, barTopic2, dateTopic0, weekdayNow0to4Topic0)
         case 5...8:
             print("weekday Fri, Early Morning")
             // call function to display 9 time-based topics
@@ -498,7 +498,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerAfter9PMTopic0, barTopic0, dateTopic0, homePMTopic0, lateNightSnackTopic0, bedtimeTopic2, weekdayNow21to24Topic4) // Update Now to Friday
+            appendSevenTopics(dinnerAfter9PMTopic0, barTopic0, dateTopic0, homePMTopic0, lateNightSnackTopic0, bedtimeTopic1, weekdayNow21to24Topic4) // Update Now to Friday
         default:
             print("weekdayTF,INVALID HOUR!")
         }
@@ -509,7 +509,7 @@ class NowViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(lateNightSnackTopic0, meditationTopic0, barTopic0, homeAMTopic0, bedtimeTopic0, journalTopic0, weekendNow0to4Topic0)
+            appendSevenTopics(lateNightSnackTopic0, meditationTopic0, barTopic0, homeAMTopic0, bedtimeTopic2, journalTopic0, weekendNow0to4Topic0)
 
         case 5...8:
             print("Weekend, Early Morning")
@@ -536,7 +536,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(barTopic2, dateTopic1, homePMTopic0, bathroomPMTopic0, lateNightSnackTopic0, bedtimeTopic0, weekendNow21to24Topic0)
+            appendSevenTopics(barTopic2, dateTopic1, homePMTopic0, bathroomPMTopic0, lateNightSnackTopic0, bedtimeTopic3, weekendNow21to24Topic0)
         default:
             print("Weekend,INVALID HOUR!")
         }
