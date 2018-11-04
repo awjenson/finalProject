@@ -49,9 +49,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="aoE-D3-JO4"/>
                                         </constraints>
-                                        <string key="text">You average 10,000 decisions each day.
+                                        <string key="text">You average 10,000 decisions each day
 
-Self- provides time-based tips to help you make smarter decisions throughout your day. </string>
+Self- provides time-based tips to help you make smarter decisions throughout your day</string>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -106,7 +106,7 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                         <rect key="frame" x="5" y="5" width="290" height="366"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7gg-PF-Uv4">
-                                                <rect key="frame" x="0.0" y="0.0" width="290" height="69"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="88.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rr4-dM-iky">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="1"/>
@@ -121,43 +121,49 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self- finds the best advice and research on the Internet 👍 and summarizes them into tips 🙌" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9jU-t8-oSO">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self- finds the best research on the Internet 👍 and summarizes them into tips 🙌" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9jU-t8-oSO">
                                                         <rect key="frame" x="0.0" y="40" width="290" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Tabs:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-KG-rXX">
+                                                        <rect key="frame" x="0.0" y="74" width="290" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kRG-O9-miZ">
-                                                <rect key="frame" x="0.0" y="81" width="290" height="107.5"/>
+                                                <rect key="frame" x="0.0" y="100.5" width="290" height="88"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-mt-woN">
-                                                        <rect key="frame" x="113" y="0.0" width="64.5" height="41"/>
+                                                        <rect key="frame" x="113" y="0.0" width="64.5" height="35.5"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="clock_icon" translatesAutoresizingMaskIntoConstraints="NO" id="56p-Vo-Pop">
-                                                                <rect key="frame" x="0.0" y="8" width="25" height="25"/>
+                                                                <rect key="frame" x="0.0" y="5.5" width="25" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="ZsR-aV-y9r"/>
                                                                     <constraint firstAttribute="width" constant="25" id="uHB-59-giE"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIG-dq-uzY">
-                                                                <rect key="frame" x="29" y="10.5" width="35.5" height="20.5"/>
+                                                                <rect key="frame" x="29" y="7.5" width="35.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="'Now' tips change as you move throughout your day ☀️ so that you only see tips that are relevant to you 😎" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GY2-FS-iie">
-                                                        <rect key="frame" x="4.5" y="46" width="281" height="43"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The tips are displayed based on the time of day ☀️ so you only see tips that you can use right now 😎" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GY2-FS-iie">
+                                                        <rect key="frame" x="0.0" y="40.5" width="290" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tap a tip to go to the original source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-zj-bXO">
-                                                        <rect key="frame" x="50.5" y="94" width="189.5" height="13.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👉 Tap a tip to go to the original source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-zj-bXO">
+                                                        <rect key="frame" x="40.5" y="74.5" width="209" height="13.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -191,8 +197,8 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tap a tip to go to the origial source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-Tx-yqt">
-                                                        <rect key="frame" x="53.5" y="64" width="183" height="13.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👉 Tap a tip to go to the origial source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-Tx-yqt">
+                                                        <rect key="frame" x="44" y="64" width="202.5" height="13.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -226,8 +232,8 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap a cell to increase a habit's count. Swipe left on a cell to delete a habit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="veW-qA-8ks">
-                                                        <rect key="frame" x="6" y="49.5" width="278.5" height="26.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👉 Tap a cell to increase a habit's count. Swipe left on a cell to delete a habit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="veW-qA-8ks">
+                                                        <rect key="frame" x="0.0" y="49.5" width="290" height="26.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
