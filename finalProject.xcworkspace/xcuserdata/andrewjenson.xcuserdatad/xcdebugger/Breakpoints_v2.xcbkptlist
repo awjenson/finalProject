@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "finalProject/Model/Now/NowData.swift"
+            timestampString = "565146719.6052541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_A2F16721E8714A295564413C8656E376_func105"
+                  moduleName = "finalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrewjenson/Desktop/iOS%20Developer%20Nanodegree/Udacity-FINAL-Project/finalProject/finalProject/Model/Now/NowData.swift"
+                  timestampString = "565146719.638806"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "finalProject.weekdayNow0to4Tip6.unsafeMutableAddressor : finalProject.Tip"
+                  moduleName = "finalProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrewjenson/Desktop/iOS%20Developer%20Nanodegree/Udacity-FINAL-Project/finalProject/finalProject/Model/Now/NowData.swift"
+                  timestampString = "565146719.641999"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

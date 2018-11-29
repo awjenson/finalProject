@@ -308,12 +308,12 @@ class NowViewController: UIViewController {
         case 5...8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, cafeTopic1, commuteAMTopic0, weekdayNow5to8Topic0) //*
+            appendSevenTopics(meditationTopic0, gymTopic4, journalTopic0, breakfastTopic0, cafeTopic1, commuteAMTopic0, weekdayNow5to8Topic0) //*
         case 9..<11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
             appendSevenTopics(breakfastTopic0, cafeTopic1, commuteAMTopic0, workAMTopic0, mindfulnessTopic0, breakTopic0, weekdayNow9to11Topic0)
-        case 11..<14:
+        case 11...13:
             print("weekdayMTW, Midday")
             appendSevenTopics(workAMTopic1, lunchTopic0, afternoonSnackTopic0, breakTopic0, mindfulnessTopic1, cafePMTopic0, weekdayNow11to14Topic0)
         case 14...15:
@@ -326,7 +326,7 @@ class NowViewController: UIViewController {
             appendSevenTopics(workPMTopic1, afternoonSnackTopic0, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, weekdayNow14to16Topic0)
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic1, groceryStoreTopic3, dinnerTopic1, dateTopic0, weekdayNow17to20Topic0)
+            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic0, groceryStoreTopic3, dinnerTopic1, dateTopic0, weekdayNow17to20Topic0)
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
@@ -351,12 +351,12 @@ class NowViewController: UIViewController {
         case 5...8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(meditationTopic0, journalTopic1, gymTopic3, breakfastTopic0, cafeTopic0, commuteAMTopic1, weekdayNow5to8Topic1) //*
+            appendSevenTopics(meditationTopic0, journalTopic1, gymTopic2, breakfastTopic0, cafeTopic0, commuteAMTopic1, weekdayNow5to8Topic1) //*
         case 9..<11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
             appendSevenTopics(breakfastTopic0, cafeTopic1, commuteAMTopic1, workAMTopic2, mindfulnessTopic1, breakTopic1, weekdayNow9to11Topic1)
-        case 11..<14:
+        case 11...13:
             print("weekdayMTW, Midday")
             appendSevenTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic1, breakTopic1, mindfulnessTopic0, cafeTopic0, tuesdayNow11to14Topic0) // Tues specific tips
         case 14...15:
@@ -370,11 +370,12 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendSevenTopics(workLateTopic1, commutePMTopic1, gymTopic0, groceryStoreTopic3, dinnerTopic1, dateTopic0, weekdayNow17to20Topic1)
+            appendSevenTopics(workLateTopic1, commutePMTopic1, gymTopic3, groceryStoreTopic3, dinnerTopic1, dateTopic0, weekdayNow17to20Topic1)
+
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(gymTopic1, restaurantTopic1, dinnerTopic0, dateTopic1, barTopic2, homePMTopic0, weekdayNow17to20Topic1)
+            appendSevenTopics(gymTopic4, restaurantTopic1, dinnerTopic0, dateTopic1, barTopic2, homePMTopic0, weekdayNow17to20Topic1)
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
@@ -395,12 +396,12 @@ class NowViewController: UIViewController {
         case 5...8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(meditationTopic0, gymTopic2, journalTopic0, breakfastTopic0, cafeTopic1, commuteAMTopic2, weekdayNow5to8Topic2) //*
+            appendSevenTopics(meditationTopic0, gymTopic0, journalTopic0, breakfastTopic0, cafeTopic1, commuteAMTopic2, weekdayNow5to8Topic2) //*
         case 9..<11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
             appendSevenTopics(breakfastTopic0, cafeTopic0, commuteAMTopic2, workAMTopic4, mindfulnessTopic1, breakTopic0, weekdayNow9to11Topic2)
-        case 11..<14:
+        case 11...13:
             print("weekdayMTW, Midday")
             appendSevenTopics(workAMTopic5, lunchTopic2, afternoonSnackTopic0, breakTopic0, mindfulnessTopic0, cafeTopic1, weekdayNow11to14Topic1)
         case 14...15:
@@ -413,11 +414,11 @@ class NowViewController: UIViewController {
             appendSevenTopics(workPMTopic5, afternoonSnackTopic0, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, weekdayNow14to16Topic0)
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic3, groceryStoreTopic3, dinnerTopic0, dateTopic0, weekdayNow17to20Topic2)
+            appendSevenTopics(workLateTopic0, commutePMTopic0, gymTopic1, groceryStoreTopic3, dinnerTopic0, dateTopic0, weekdayNow17to20Topic2)
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(gymTopic0, restaurantTopic1, dinnerTopic1, dateTopic0, barTopic0, homePMTopic0, weekdayNow17to20Topic2)
+            appendSevenTopics(gymTopic2, restaurantTopic1, dinnerTopic1, dateTopic0, barTopic0, homePMTopic0, weekdayNow17to20Topic2)
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
@@ -436,7 +437,7 @@ class NowViewController: UIViewController {
         case 5...8:
             print("weekdayTF, Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(homeAMTopic0, meditationTopic0, gymTopic1, journalTopic0, breakfastTopic0, commuteAMTopic3, weekdayNow5to8Topic3) //*
+            appendSevenTopics(homeAMTopic0, meditationTopic0, gymTopic3, journalTopic0, breakfastTopic0, commuteAMTopic3, weekdayNow5to8Topic3) //*
         case 9..<11:
             print("weekdayTF, Late Morning")
             // call function to display 9 time-based topics
@@ -451,11 +452,11 @@ class NowViewController: UIViewController {
         case 17...18:
             print("weekdayTF, Evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(workLateTopic1, commutePMTopic1, gymTopic2, dinnerTopic0, barTopic0, dateTopic0, weekdayNow17to20Topic1)
+            appendSevenTopics(workLateTopic1, commutePMTopic1, gymTopic4, dinnerTopic0, barTopic0, dateTopic0, weekdayNow17to20Topic1)
         case 19...20:
             print("weekdayTF, Evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(workLateTopic0, gymTopic3, dinnerTopic1, barTopic1, restaurantTopic0, dateTopic1, weekdayNow17to20Topic1)
+            appendSevenTopics(workLateTopic0, gymTopic0, dinnerTopic1, barTopic1, restaurantTopic0, dateTopic1, weekdayNow17to20Topic1)
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
@@ -474,7 +475,7 @@ class NowViewController: UIViewController {
         case 5...8:
             print("weekday Fri, Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(homeAMTopic0, meditationTopic0, gymTopic3, journalTopic1, breakfastTopic0, commuteAMTopic4, weekdayNow5to8Topic4) //*
+            appendSevenTopics(homeAMTopic0, meditationTopic0, gymTopic1, journalTopic1, breakfastTopic0, commuteAMTopic4, weekdayNow5to8Topic4) //*
         case 9..<11:
             print("weekday Fri, Late Morning")
             // call function to display 9 time-based topics
@@ -493,7 +494,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendSevenTopics(gymTopic1, dinnerTopic1, restaurantTopic1, barTopic1, dateTopic1, homePMTopic0, weekdayNow17to20Topic0)
+            appendSevenTopics(gymTopic3, dinnerTopic1, restaurantTopic1, barTopic1, dateTopic1, homePMTopic0, weekdayNow17to20Topic0)
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
