@@ -448,7 +448,7 @@ class NowViewController: UIViewController {
         case 14...16: // 2PM-4PM
             print("weekdayTF, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic1, afternoonSnackTopic0, cafeTopic1, breakPMTopic0, mindfulnessTopic0, commutePMTopic1, weekdayNow14to16Topic0)
+            appendSevenTopics(workPMTopic1, afternoonSnackTopic0, cafeTopic1, breakPMTopic0, happyHourTopic0, commutePMTopic1, weekdayNow14to16Topic0)
         case 17...18:
             print("weekdayTF, Evening")
             // call function to display 9 time-based topics
@@ -486,15 +486,15 @@ class NowViewController: UIViewController {
         case 14...16:
             print("weekday Fri, Afternoon")
             // call function to display 9 time-based topics
-            appendSevenTopics(workPMTopic2, afternoonSnackTopic1, cafeTopic0, breakTopic1, mindfulnessTopic1, commutePMTopic2, weekdayNow11to14Topic1)
+            appendSevenTopics(workPMTopic2, afternoonSnackTopic1, cafeTopic0, breakTopic1, happyHourTopic0, commutePMTopic2, weekdayNow11to14Topic1)
         case 17...18:
             print("weekday Fri, Evening 5-6PM")
             // call function to display 9 time-based topics
-            appendSevenTopics(commutePMTopic2, gymTopic2, happyHourTopic0, restaurantTopic1, dinnerTopic0, homePMTopic0, weekdayNow17to20Topic1)
+            appendSevenTopics(commutePMTopic2, gymTopic2, happyHourTopic0, restaurantTopic1, dinnerTopic0, homePMTopic0, weekdayNow17to20Topic2)
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendSevenTopics(gymTopic3, dinnerTopic1, restaurantTopic1, barTopic1, dateTopic1, homePMTopic0, weekdayNow17to20Topic0)
+            appendSevenTopics(gymTopic3, dinnerTopic1, restaurantTopic1, barTopic1, dateTopic1, homePMTopic0, weekdayNow17to20Topic2)
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
