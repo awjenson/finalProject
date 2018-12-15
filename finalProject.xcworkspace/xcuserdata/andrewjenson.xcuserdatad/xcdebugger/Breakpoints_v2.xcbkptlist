@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "finalProject/Model/Now/NowData.swift"
-            timestampString = "566410883.1365319"
+            timestampString = "566595416.64537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>
@@ -22,15 +22,15 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "globalinit_33_A2F16721E8714A295564413C8656E376_func105"
+                  symbolName = "globalinit_33_A2F16721E8714A295564413C8656E376_func109"
                   moduleName = "finalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewjenson/Desktop/iOS%20Developer%20Nanodegree/Udacity-FINAL-Project/finalProject/finalProject/Model/Now/NowData.swift"
-                  timestampString = "566410883.31646"
+                  timestampString = "566595416.816304"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
@@ -41,11 +41,11 @@
                   moduleName = "finalProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andrewjenson/Desktop/iOS%20Developer%20Nanodegree/Udacity-FINAL-Project/finalProject/finalProject/Model/Now/NowData.swift"
-                  timestampString = "566410883.31885"
+                  timestampString = "566595416.822042"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "234"
-                  endingLineNumber = "234"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>

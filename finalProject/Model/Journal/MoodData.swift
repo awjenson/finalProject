@@ -49,9 +49,15 @@ struct MoodData {
     static let depressedPMTip10 = JournalTip(title: "Teens who spent 5+ hours a day online were twice as likely to be unhappy as those who spent less than an hour a day", body: "In one experiment, people who were randomly assigned to give up Facebook for a week ended that time happier, less lonely and less depressed than those who continued to use Facebook.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/")
     static let depressedPMTip11 = JournalTip(title: "Teen's happiness levels have been decreasing since 2012 (the year when the majority of Americans owned smartphones)", body: "These declines in well-being mirror other studies finding sharp increases in mental health issues among iGen, including in depressive symptoms, major depression, self-harm and suicide. A study found the happiest teens were those who used digital media, but for a limited amount of time.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/")
 
+    // During the day
+    static let depressedDayTip1 = JournalTip(title: "Taking walks in nature lowers depression while boosting mood and well-being", body: "", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/06/why-you-should-tell-your-team-to-take-a-break-and-go-outside")
 
+    static let depressedDayTip2 = JournalTip(title: "Exposure to sunlight boosts Vitamin D levels that are known to increase mood", body: "Moderate sunlight exposure helps improve your mood by boosting the serotonin levels in your body. Also known as the 'happiness hormone', it put you in a calm mood. Also, sunlight decreases the risk of depression in those at risk of seasonal affective disorder (SAD) during the winter months.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/nomanazish/2018/02/28/why-sunlight-is-actually-good-for-you/#5944743c5cd9")
 
     static let depressed0Tips1 = [depressedTip1, depressedTip2, depressedTip3]
+
+
+
 
     // Button2 = "Bored"
     static let boredQuote0 = JournalQuote(quote: "\"Bored with life? Throw yourself into some work you believe in with all your heart, live for it, die for it, and you will find happiness that you had thought could never be yours.\"", source: "Dale Carnegie")
@@ -132,6 +138,7 @@ struct MoodData {
     // AM
 
     // Day
+    static let anxietyDayTip1 = JournalTip(title: "Taking walks in nature lowers anxiety while boosting mood and well-being", body: "Unlike city environments, exposure to forest environments lowers stress and helps to lower concentrations of the “stress hormone” cortisol, lower heart rate, and lower blood pressure. Even just the sounds of nature trigger a relaxation response in the brain.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/06/why-you-should-tell-your-team-to-take-a-break-and-go-outside")
 
     // PM
     static let anxietyTipPM1 = JournalTip(title: "Mastering anxiety is about recognizing your inner dialogue and using positive self-talk to change the conversation in your head", body: "Far too often, we focus on our fears, and by focusing on it, we magnify it in our heads. \n\nRedirect your thoughts by focusing on what you can do right and take positive steps forward instead of becoming overwhelmed by what might go wrong.", sourceName: "Medium", sourceURL: "https://medium.com/s/story/how-to-master-your-fear-like-a-navy-seal-ffde5fe8d11")

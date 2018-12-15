@@ -24,8 +24,6 @@
                     <connections>
                         <segue destination="aQ2-jV-H5y" kind="relationship" relationship="viewControllers" id="422-h5-GX0"/>
                         <segue destination="ErU-2B-DrK" kind="relationship" relationship="viewControllers" id="vPk-U4-Dup"/>
-                        <segue destination="egr-Vc-3Tn" kind="relationship" relationship="viewControllers" id="PCE-rS-ucj"/>
-                        <segue destination="dI1-zL-jwA" kind="relationship" relationship="viewControllers" id="rQ9-ci-PAQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eD-1M-HQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1011,7 +1009,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gSN-Oy-DZl">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="lNi-wa-MgB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
