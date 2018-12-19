@@ -1,169 +1,80 @@
 //
-//  AdviceData.swift
+//  FamousPersonData.swift
 //  finalProject
 //
-//  Created by Andrew Jenson on 7/1/18.
+//  Created by Andrew Jenson on 5/28/18.
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
+// Sugar Ray Lenard, Robin Willians, George Carlin, Evander Holyfield, and Tony Robbins
+// * Helen doesn't like the word "Vision"
+// * Helen likes "Fears" instead of "Vision"
 
 import Foundation
 
 struct AdviceData {
 
-    // MARK: - BASED ON TIME
+    // Headers
 
-    //
-    static let am1a = JournalQuote(quote: "\"Those who are unaware they are walking in darkness will never seek the light.\"", source: "Bruce Lee")
-    static let am1b = JournalQuote(quote: "\"All our dreams can come true, if we have the courage to pursue them.\"", source: "Walt Disney")
-    static let am1c = JournalQuote(quote: "\"It does not matter how slowly you go as long as you do not stop.\"", source: "Confucius")
+    static let bruceLee = ProfileSelectedPerson(name: "Bruce Lee", bio: "Actor, martial artist, philosopher, and founder of the martial art Jeet Kune Do", advice: "\"Do not pray for an easy life, pray for the strength to endure a difficult one.\"", description: "Bruce Lee's Top 10 Rules For Success", time: "9 min", url: "https://www.youtube.com/watch?v=u7tL8fK6tjA")
 
+    static let markDivine = ProfileSelectedPerson(name: "Mark Devine", bio: "Former Navy SEAL, and founder of SEALFIT and Unbeatable Mind podcast", advice: "\"To live an uncommon life, one needs learn uncommon disciplines.\"", description: "Win Before Battle - Mark Divine | Inside Quest #38", time: "52 min", url: "https://www.youtube.com/watch?v=rvDO_1GUnAo")
 
-    static let am1Tip1 = JournalTip(title: "\"Those who are unaware they are walking in darkness will never seek the light.\"", body: "Bruce Lee", sourceName: "", sourceURL: "")
-    static let am1Tip2 = JournalTip(title: Constants.Header.watch, body: "MORNING MOTIVATION - How Successful People Start Their Day", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=iLNyiaAscQ0")
+    static let oprahWinfrey = ProfileSelectedPerson(name: "Oprah Winfrey", bio: "American television personality, actress, and entrepreneur", advice: "\"Turn your wounds into wisdom.\"", description: "\"You BECOME What You #BELIEVE!\" - Oprah Winfrey (@Oprah) - Top 10 Rules", time: "29 min", url: "https://www.youtube.com/watch?v=xe99QWlM_9A")
 
-    static let am1Tips1 = [am1Tip1, am1Tip2]
+    static let martinLutherKingJr = ProfileSelectedPerson(name: "Martin Luther King Jr.", bio: "an American minister and civil rights activist", advice: "\"What are you doing for others?\"", description: "\"#BELIEVE In Your WORTHINESS!\" - Martin Luther King Jr. - Top 10 Rules", time: "24 min", url: "https://www.youtube.com/watch?v=t6lH7Z3_46A")
 
-    //
-    static let pm1a = JournalQuote(quote: "\"Without reflection we go blindly on our way, creating more unintended consequences, and failing to achieve anything useful.\"", source: "Margaret J. Wheatley")
-    static let pm1b = JournalQuote(quote: "\"Everything you’ve ever wanted is on the other side of fear.\"", source: "George Addair")
-    static let pm1c = JournalQuote(quote: "\"Success is not final, failure is not fatal: it is the courage to continue that counts.\"", source: "Winston Churchill")
+    static let sophiaAmoruso = ProfileSelectedPerson(name: "Sophia Amoruso", bio: "founder of Nasty Gal and Girlboss", advice: "\"There are secret opportunities hidden inside every failure.\"", description: "Sophia Amoruso's Top 10 Rules For Success (@sophiaamoruso)", time: "13 min", url: "https://www.youtube.com/watch?v=eWEqrEr0J68")
 
-    static let pm1Tip1 = JournalTip(title: "\"Without reflection we go blindly on our way, creating more unintended consequences, and failing to achieve anything useful.\"", body: "Margaret J. Wheatley", sourceName: "", sourceURL: "")
-    static let pm1Tip2 = JournalTip(title: Constants.Header.watch, body: "Top 10 - Most Epic Motivational Speeches", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=imB8rVYjMXA")
+    // Cells
 
-    static let pm1Tips1 = [pm1Tip1, pm1Tip2]
+    // Bruce Lee
 
-    //
-    static let am2a = JournalQuote(quote: "\"The key to growth is the introduction of higher dimensions of consciousness into our awareness.\"", source: "Lao Tzu")
-    static let am2b = JournalQuote(quote: "\"It’s not whether you get knocked down. It’s whether you get up.\"", source: "Vince Lombardi")
-    static let am2c = JournalQuote(quote: "\"Hardships often prepare ordinary people for an extraordinary destiny.\"", source: "C.S. Lewis")
+    static let bruceLeePassion = ProfileDataModel(category: "PASSION", title: "Real living is living for others...", body: "Bruce Lee became a cultural icon because he actively lived his philosophy of self-actualization. His energy captivated audiences and motivated people to lead their best lives.", url: "https://www.fastcompany.com/3065979/my-dad-was-bruce-lee-heres-how-he-still-inspires-me-and-others-to-innovate", headerUserTextLabel: "Your passion:")
 
-    static let am2Tip1 = JournalTip(title: "\"The key to growth is the introduction of higher dimensions of consciousness into our awareness.\"", body: "Lao Tzu", sourceName: "", sourceURL: "")
-    static let am2Tip2 = JournalTip(title: Constants.Header.watch, body: "Wake Up Early|End Laziness|Motivational Speech Compilation", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=2CYDgcE13PY")
+    static let bruceLeePurpose = ProfileDataModel(category: "PURPOSE", title: "Your main purpose is to become your true self...", body: "\"Always be yourself; express yourself; have faith in yourself. Do not go out and look for a successful personality and duplicate it. Start from the very root of your being, which is \"how can I be me?\"", url: "https://www.brucelee.com/philosophies/", headerUserTextLabel: "Your purpose:")
 
-    static let am2Tips1 = [am2Tip1, am2Tip2]
+    static let bruceLeeTop5Goals = ProfileDataModel(category: "GOALS", title: "He believed in setting big goals...", body: "\"A goal is not always meant to be reached, it often serves simply as something to aim at.\"", url: "https://www.brucelee.com/podcast", headerUserTextLabel: "Your top 5 goals:")
 
-    //
-    static let pm2a = JournalQuote(quote: "\"As we grow in our consciousness, there will be more compassion and more love, and then the barriers between people, between religions, between nations will begin to fall.\"", source: "Ram Dass")
-    static let pm2b = JournalQuote(quote: "\"Your true success in life begins only when you make the commitment to become excellent at what you do.\"", source: "Brian Tracy")
-    static let pm2c = JournalQuote(quote: "\"Definiteness of purpose is the starting point of all achievement.\"", source: "W. Clement Stone")
+    static let bruceLeeVision = ProfileDataModel(category: "VISION", title: "At age 29, he wrote...", body: "\"My Definite Chief Aim: I, Bruce Lee, will be the first highest-paid oriental superstar in the United States. In return I will give the most exciting performances and render the best quality in the capacity of an actor. Starting 1970 I will achieve for fame and from then onward till the end of 1980 I will have in my possession $10,000,000. I will live the way I please and achieve inner harmony and happiness.\"", url: "https://qz.com/932799/bruce-lee-achieved-all-his-life-goals-by-32-by-committing-to-one-personality-trait/", headerUserTextLabel: "Your vision statement:")
 
-    static let pm2Tip1 = JournalTip(title: "\"As we grow in our consciousness, there will be more compassion and more love, and then the barriers between people, between religions, between nations will begin to fall.\"", body: "Ram Dass", sourceName: "", sourceURL: "")
-    static let pm2Tip2 = JournalTip(title: Constants.Header.watch, body: "DREAM BIG - Best Motivational Video Speeches Compilation", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5n_OBOdDdtY")
+    // Mark Divine
 
-    static let pm2Tips1 = [pm2Tip1, pm2Tip2]
+    static let markDivinePassion = ProfileDataModel(category: "PASSION", title: "Drive provides a lifelong source of energy if focused on a passionate and worthy end.", body: "We can grow even stronger by driving passionately toward our targets and facing hard challenges, never quitting when the going gets unfathomable. \n\nWhat makes you feel as if your hair is on fire? This informs your purpose when intersected with your skills and talents.", url: "https://sealfit.com/", headerUserTextLabel: "Your passion:")
 
-    static let am3a = JournalQuote(quote: "\"Self awareness is the ability to take an honest look at your life without any attachment to it being right or wrong, good or bad.\"", source: "Debbie Ford")
-    static let am3b = JournalQuote(quote: "\"Too many of us are not living our dreams because we are living our fears.\"", source: "Les Brown")
-    static let am3c = JournalQuote(quote: "\"If you believe it will work out, you’ll see opportunities. If you believe it won’t, you will see obstacles.\"", source: "Wayne Dyer")
+    static let markDivinePurpose = ProfileDataModel(category: "PURPOSE", title: "\"As a young man I felt lost...\"", body: "\"I had an MBA, a good job at a top-tier accounting firm, but was unhappy in spite of it. I stumbled into a matrial arts dojo, thinking it might help. Grinding my character down on the training floor was followed by polishing it in the meditation hall. \n\nSlowly and methodically I turned my body, mind, emotions, and intutition to a new vibration - one that allowed me to hear my inner voice. That voice told me I wasn't living my purpose, that my misery would endur until I could align with my purpose. \n\nWhat is it that you are really supposed to do with your life? What one thing would you focus on if you had nothing holding you back?\"", url: "https://sealfit.com/", headerUserTextLabel: "Your purpose:")
 
-    static let am3Tip1 = JournalTip(title: "\"Self awareness is the ability to take an honest look at your life without any attachment to it being right or wrong, good or bad.\"", body: "Debbie Ford", sourceName: "", sourceURL: "")
-    static let am3Tip2 = JournalTip(title: Constants.Header.watch, body: "MORNING MOTIVATION - Start Your Day Positively!", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=vPMQdVdR0gw")
+    static let markDivineTop5Goals = ProfileDataModel(category: "GOALS", title: "Set SMART Goals: Specific, Measurable, Achievable, Realistic (but Challenging, and Time-bound", body: "When facing a monster challenge like Navy SEAL's Hell Week, reduce it to micro-goals. You can bite-chuncks of of an elephant long before swallowing the whole thing at once.", url: "https://sealfit.com/", headerUserTextLabel: "Your top 5 goals:")
 
-    static let am3Tips1 = [am3Tip1, am3Tip2]
+    static let markDivineVision = ProfileDataModel(category: "VISION", title: "A deeper awareness of what drives your behavior allow us to create a new vision and path that becomes our authentic destiny.", body: "Mark left behind the corporate world to pursue his vision to become an elite Navy SEAL officer. At 26 he graduated as honor-man (#1 ranked trainee) of his SEAL BUD/s class number 170. \n\n\"Hold a powerful vision of who you want to be at some time-certain future.  If you back the mental vision with massive action, do the work to root out negative blocks, and propel your vision with desire, belief and expectation, then surely you will become that person.\"", url: "https://sealfit.com/", headerUserTextLabel: "Your vision statement:")
 
+    // Oprah Winfrey
 
-    //
-    static let pm3a = JournalQuote(quote: "\"I think self-awareness is probably the most important thing towards being a champion.\"", source: "Billie Jean King")
-    static let pm3b = JournalQuote(quote: "\"If you set goals and go after them with all the determination you can muster, your gifts will take you places that will amaze you.\"", source: "Les Brown")
-    static let pm3c = JournalQuote(quote: "\"Hard times don’t create heroes. It is during the hard times when the ‘hero’ within us is revealed.\"", source: "Bob Riley")
+    static let oprahWinfreyPassion = ProfileDataModel(category: "PASSION", title: "\"If you don't know what your passion is, realize that one reason for your existence on earth is to find it.\"", body: "The opportunities for a girl born black in Mississippi in 1954 were limited. I wanted to be a teacher. And to be known for inspiring my students to be more than they thought they could be. I never imagined it would be on TV.", url: "https://www.youtube.com/results?search_query=oprah+winfrey", headerUserTextLabel: "Your passion:")
 
-    static let pm3Tip1 = JournalTip(title: "", body: "\"I think self-awareness is probably the most important thing towards being a champion.\"", sourceName: "Billie Jean King", sourceURL: "")
-    static let pm3Tip2 = JournalTip(title: Constants.Header.watch, body: "Top 10 - Most Epic Motivational Speeches", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=imB8rVYjMXA")
+    static let oprahWinfreyPurpose = ProfileDataModel(category: "PURPOSE", title: "Everyone has a purpose...", body: "\"I believe there's a calling for all of us. I know that every human being has value and purpose. The real work of our lives is to become aware. And awakened. To answer the call.\"", url: "https://www.youtube.com/results?search_query=oprah+winfrey", headerUserTextLabel: "Your purpose:")
 
-    static let pm3Tips1 = [pm3Tip1]
+    static let oprahWinfreyTop5Goals = ProfileDataModel(category: "GOALS", title: "Oprah established goals by defining what she didn’t want...", body: "\"If you are stuck on establishing your next goal, take a look at your current situation–what are some things you want out of your life?\"", url: "https://www.youtube.com/results?search_query=oprah+winfrey", headerUserTextLabel: "Your top 5 goals:")
 
-    //
-    static let am4a = JournalQuote(quote: "\"Whenever you are angry, be assured that it is not only a present evil, but that you have increased a habit.\"", source: "Epictetus")
-    static let am4b = JournalQuote(quote: "\"Believe you can and you’re halfway there.\"", source: "Theodore Roosevelt")
-    static let am4c = JournalQuote(quote: "\"Whatever you hold in your mind on a consistent basis is exactly what you will experience in your life.\"", source: "Tony Robbins")
+    static let oprahWinfreyVision = ProfileDataModel(category: "VISION", title: "I had a vision of what living your best life could look like.", body: "\"Create the highest, grandest vision possible for your life, because you become what you believe.\"", url: "https://www.youtube.com/results?search_query=oprah+winfrey", headerUserTextLabel: "Your vision statement:")
 
-    static let am4Tip1 = JournalTip(title: "\"Whenever you are angry, be assured that it is not only a present evil, but that you have increased a habit.\"", body: "Epictetus", sourceName: "", sourceURL: "")
-    static let am4Tip2 = JournalTip(title: Constants.Header.watch, body: "MORNING MOTIVATION - What Successful People Do In the First 8 Minutes of Their Morning", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=5diEq1gTE4Y")
+    // Martin Luther King, Jr
 
-    static let am4Tips1 = [am4Tip1, am4Tip2]
+    static let martinLutherKingJrPassion = ProfileDataModel(category: "PASSION", title: "Put your passion to work...", body: "Through his activism and inspirational speeches King played a pivotal role in ending the legal segregation of African-American citizens in the United States. \n\n\"Know your own passion. What ideas and what kinds of activism fill you with strong, energetic emotions? These emotions may be pointing you toward your life’s work.\"", url: "https://www.youtube.com/watch?v=Q9spMeeBPPY", headerUserTextLabel: "Your passion:")
 
-    //
-    static let pm4a = JournalQuote(quote: "\"Be mindful of your self talk. It's a conversation with the universe.\"", source: "David James Lees")
-    static let pm4b = JournalQuote(quote: "\"The future belongs to those who believe in the beauty of their dreams.\"", source: "Franklin D. Roosevelt")
-    static let pm4c = JournalQuote(quote: "\"Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and success achieved.\"", source: "Helen Keller")
+    static let martinLutherKingJrPurpose = ProfileDataModel(category: "PURPOSE", title: "Everyone has a purpose...", body: "\"I believe there's a calling for all of us. I know that every human being has value and purpose. The real work of our lives is to become aware. And awakened. To answer the call.\"", url: "https://www.youtube.com/watch?v=Q9spMeeBPPY", headerUserTextLabel: "Your purpose:")
 
-    static let pm4Tip1 = JournalTip(title: "\"Be mindful of your self talk. It's a conversation with the universe.\"", body: "David James Lees", sourceName: "", sourceURL: "")
-    static let pm4Tip2 = JournalTip(title: Constants.Header.watch, body: "WINNING PSYCHOLOGY - New Motivational Videos Compilation", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ZNmdEau_JNM")
+    static let martinLutherKingJrTop5Goals = ProfileDataModel(category: "GOALS", title: "One of King's last speeches...", body: "\"I want to ask you a question, and that is: What is your life’s blueprint? \n\nNumber one in your life’s blueprint, should be a deep belief in your own dignity, your worth and your own somebodiness. Don’t allow anybody to make you fell that you’re nobody. Always feel that you count. \n\nSecondly, you must have the determination to achieve excellence. When you discover what you will be in your life, set out to do it as if God Almighty called you at this particular moment in history to do it. Don’t just set out to do a good job.\"", url: "https://www.youtube.com/watch?v=Q9spMeeBPPY", headerUserTextLabel: "Your top 5 goals:")
 
-    static let pm4Tips1 = [pm4Tip1, pm4Tip2]
+    static let martinLutherKingJrVision = ProfileDataModel(category: "VISION", title: "I Have a Dream...", body: "In 1968 King shared what very well may be the most powerful and transformative Vision Statement ever made. The vision of \"I Have a Dream\" goes beyond the scope of the Civil Rights Movement—this speech can be applied toward many fights to end racism and inequality. \n\nWith a clear vision you too can transform your life, your community and even the world.", url: "https://www.youtube.com/watch?v=Q9spMeeBPPY", headerUserTextLabel: "Your vision statement:")
 
-    //
-    static let am5a = JournalQuote(quote: "\"You are the average of the five people you spend the most time with.\"", source: "Jim Rohn")
-    static let am5b = JournalQuote(quote: "\"Don’t wish it were easier. Wish you were better.\"", source: "Jim Rohn")
-    static let am5c = JournalQuote(quote: "\"Strength doesn’t come from what you can do. It comes from overcoming the things you once thought you couldn’t.\"", source: "Rikki Rogers")
+    // Sophia Amoruso
 
-    static let am5Tip1 = JournalTip(title: "\"You are the average of the five people you spend the most time with.\"", body: "Jim Rohn", sourceName: "", sourceURL: "")
-    static let am5Tip2 = JournalTip(title: Constants.Header.watch, body: "MORNING MOTIVATION: 5 Min in The Morning Can Change Your Entire Day!", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=yPq5IAf_97w")
+    static let sophiaAmorusoPassion = ProfileDataModel(category: "PASSION", title: "Passion project...", body: "While she struggled with formal education, she had a passion for vintage clothing. At age 22 while working as a security guard, Amoruso opened an online eBay store, which she called Nasty Gal Vintage. \n\nIt quickly grew to be named one of \"the fastest growing companies\" by Inc. Magazine. However, Nasty Gal later filed for bankruptcy, decimating her fortune. In 2017, Amoruso founded Girlboss.", url: "https://www.girlboss.com/", headerUserTextLabel: "Your passion:")
 
-    static let am5Tips1 = [am5Tip1, am5Tip2]
+    static let sophiaAmorusoPurpose = ProfileDataModel(category: "PURPOSE", title: "Be more purposeful...", body: "Amoruso says starting Girlboss was the first time in her life where she felt her opportunity in business and her purpose have been aligned. \"It's a really exciting thing, waking up every day to do that.\"", url: "https://www.girlboss.com/", headerUserTextLabel: "Your purpose:")
 
-    //
-    static let pm5a = JournalQuote(quote: "\"When you think everything is someone else's fault, you will suffer a lot. When you realize that everything springs only from yourself, you will learn both peace and joy.\"", source: "The 14th Dalai Lam")
-    static let pm5b = JournalQuote(quote: "\"We don’t develop courage by being happy every day. We develop it by surviving difficult times and challenging adversity. \"", source: "Barbara De Angelis")
-    static let pm5c = JournalQuote(quote: "\"It is during our darkest moments that we must focus to see the light.\"", source: "Aristotle Onassis")
+    static let sophiaAmorusoTop5Goals = ProfileDataModel(category: "GOALS", title: "Do things that terrify you...", body: "Continuing to move into the places that make us uncomfortable is what expands us and our capabilities. I've taken some really big risks in my life and I've seen great loss, but I have also seen great, great reward. Without saying yes to the things that we're terrified of and continuing to step into what life asks of us or create those big opportunities for ourselves, I think we're asleep at the wheel.", url: "https://www.girlboss.com/", headerUserTextLabel: "Your top 5 goals:")
 
-    static let pm5Tip1 = JournalTip(title: "\"When you think everything is someone else's fault, you will suffer a lot. When you realize that everything springs only from yourself, you will learn both peace and joy.\"", body: "The 14th Dalai Lama", sourceName: "", sourceURL: "")
-    static let pm5Tip2 = JournalTip(title: Constants.Header.watch, body: "Best Motivational Speech Compilation EVER #12 - DECIDE TO WIN", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=3jyAUQHd6IM")
-
-    static let pm5Tips1 = [pm5Tip1, pm5Tip2]
-
-    //
-    static let am6a = JournalQuote(quote: "\"Wisdom tends to grow in proportion to one’s awareness of one’s ignorance.\"", source: "Anthony de Mello")
-    static let am6b = JournalQuote(quote: "\"Go confidently in the direction of your dreams. Live the life you have imagined.\"", source: "Henry David Thoreau")
-    static let am6c = JournalQuote(quote: "\"The only person you are destined to become is the person you decide to be.\"", source: "Ralph Waldo Emerson")
-
-
-    static let am6Tip1 = JournalTip(title: "\"Wisdom tends to grow in proportion to one’s awareness of one’s ignorance.\"", body: "Anthony de Mello", sourceName: "", sourceURL: "")
-    static let am6Tip2 = JournalTip(title: Constants.Header.watch, body: "START YOUR DAY POSITIVELY - Listen To This Every Morning for Positive Energy", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=UHnwpf8iYaI")
-
-    static let am6Tips1 = [am6Tip1, am6Tip2]
-
-    //
-    static let pm6a = JournalQuote(quote: "\"Awareness is a key ingredient in success. If you have it, teach it, if you lack it, seek it.\"", source: "Michael B. Kitson")
-    static let pm6b = JournalQuote(quote: "\"Inaction breeds doubt and fear. Action breeds confidence and courage. If you want to conquer fear, do not sit home and think about it. Go out and get busy.\"", source: "Dale Carnegie")
-    static let pm6c = JournalQuote(quote: "\"Awareness is a key ingredient in success. If you have it, teach it, if you lack it, seek it.\"", source: "Michael B. Kitson")
-
-    static let pm6Tip1 = JournalTip(title: "\"Awareness is a key ingredient in success. If you have it, teach it, if you lack it, seek it.\"", body: "Michael B. Kitson", sourceName: "", sourceURL: "")
-    static let pm6Tip2 = JournalTip(title: Constants.Header.watch, body: "The Best Motivational Speech Compilation For Success In Life", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=pH-9j4MtuIQ")
-
-    static let pm6Tips1 = [pm6Tip1, pm6Tip2]
-
-    //
-    static let am7a = JournalQuote(quote: "\"Refuse to be average. Let your heart soar as high as it will.\"", source: "A. W. Tozer")
-    static let am7b = JournalQuote(quote: "\"Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless.\"", source: "Jamie Paolinetti")
-    static let am7c = JournalQuote(quote: "\"Setting goals is the first step into turning the invisible into the visible.\"", source: "Tony Robbins")
-
-    static let am7Tip1 = JournalTip(title: "\"Refuse to be average. Let your heart soar as high as it will.\"", body: "A. W. Tozer", sourceName: "", sourceURL: "")
-    static let am7Tip2 = JournalTip(title: Constants.Header.watch, body: "Build The Person You Want to Be - Best Motivational Videos Compilation for 2018", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=PwGXhJAYdDQ")
-
-    static let am7Tips1 = [am7Tip1, am7Tip2]
-
-    //
-    static let pm7a = JournalQuote(quote: "\"The awakening of consciousness is the next evolutionary step for mankind.\"", source: "Eckhart Tolle")
-    static let pm7b = JournalQuote(quote: "\"Only those who dare to fail greatly can ever achieve greatly.\"", source: "Robert F. Kennedy")
-    static let pm7c = JournalQuote(quote: "\"Your time is limited, so don’t waste it living someone else’s life. \"", source: "Steve Jobs")
-
-    static let pm7Tip1 = JournalTip(title: "\"The awakening of consciousness is the next evolutionary step for mankind.\"", body: "Eckhart Tolle", sourceName: "", sourceURL: "")
-    static let pm7Tip2 = JournalTip(title: Constants.Header.watch, body: "WATCH THIS EVERY NIGHT - Most Motivational Speeches For Study & Success", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=FfrcrrGLysU")
-
-    static let pm7Tips1 = [pm7Tip1, pm7Tip2]
-
-    // MARK: - More Quotes
-        static let quote1 = JournalQuote(quote: "\"Great minds discuss ideas; average minds discuss events; small minds discuss people.\"", source: "Eleanor Roosevelt")
-    static let quote2 = JournalQuote(quote: "\"You pile up enough tomorrows, and you’ll find you are left with nothing but a lot of empty yesterdays.\"", source: "Harold Hill")
-    static let quote3 = JournalQuote(quote: "\"Pessimism leads to weakness, optimism to power.\"", source: "William James")
-
-
-
-
-
-
-
+    static let sophiaAmorusoVision = ProfileDataModel(category: "VISION", title: "Girlboss' vision...", body: "I want to entertain, educate and inform women to have conversations with us and with one another about redefining success. \n\nYes, that means work, money and productivity, but it also means health, personal care, mental health, relationships, sex and other topics that maybe historically weren’t what the dudes who built the paradigm of success that we all live in talk about.", url: "https://www.girlboss.com/", headerUserTextLabel: "Your vision statement:")
 
 }

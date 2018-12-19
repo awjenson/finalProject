@@ -8,7 +8,7 @@
 
 import Foundation
 
-class JournalQuote {
+class Quote {
 
     // MARK: - Properties
 

@@ -1,5 +1,5 @@
 //
-//  JournalTip.swift
+//  Hint.swift
 //  finalProject
 //
 //  Created by Andrew Jenson on 7/22/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class JournalTip {
+class Hint {
 
     // MARK: Properties
     let title: String

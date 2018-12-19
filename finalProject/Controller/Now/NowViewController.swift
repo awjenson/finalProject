@@ -25,24 +25,20 @@ class NowViewController: UIViewController {
 
     @IBOutlet weak var nowTableView: UITableView!
     @IBOutlet weak var topicView: UIView!
+    @IBOutlet weak var topView: UIView! //Table View Header View
+
 
     // topicButtion OutletCollection only used for flipping UI when buttons tapped
-    @IBOutlet var topicButtons: [RoundButton]!
+    @IBOutlet var topicButtons: [RoundCorneredButton]!
 
     // individual outlets used to maintain order with buttons and labels in UI
-    @IBOutlet weak var topic0Button: RoundButton!
-    @IBOutlet weak var topic1Button: RoundButton!
-    @IBOutlet weak var topic2Button: RoundButton!
-    @IBOutlet weak var topic3Button: RoundButton!
-    @IBOutlet weak var topic4Button: RoundButton!
-    @IBOutlet weak var topic5Button: RoundButton!
+    @IBOutlet weak var topic0Button: RoundCorneredButton!
+    @IBOutlet weak var topic1Button: RoundCorneredButton!
+    @IBOutlet weak var topic2Button: RoundCorneredButton!
+    @IBOutlet weak var topic3Button: RoundCorneredButton!
+    @IBOutlet weak var topic4Button: RoundCorneredButton!
+    @IBOutlet weak var topic5Button: RoundCorneredButton!
 
-    @IBOutlet weak var topic0Label: UILabel!
-    @IBOutlet weak var topic1Label: UILabel!
-    @IBOutlet weak var topic2Label: UILabel!
-    @IBOutlet weak var topic3Label: UILabel!
-    @IBOutlet weak var topic4Label: UILabel!
-    @IBOutlet weak var topic5Label: UILabel!
 
     // Return button
     @IBOutlet weak var returnToTopButton: UIButton!
@@ -63,21 +59,23 @@ class NowViewController: UIViewController {
     var topics: [Topic] = [] // array of topics
     var tips: [Tip] = []
 
-    var tipArray0 = [Tip]()
-    var tipArray1 = [Tip]()
-    var tipArray2 = [Tip]()
-    var tipArray3 = [Tip]()
-    var tipArray4 = [Tip]()
-    var tipArray5 = [Tip]()
-    var tipArray6 = [Tip]()
-    var tipArray7 = [Tip]()
-    var tipArray8 = [Tip]() // Now tip array
+//    var tipArray0 = [Tip]()
+//    var tipArray1 = [Tip]()
+//    var tipArray2 = [Tip]()
+//    var tipArray3 = [Tip]()
+//    var tipArray4 = [Tip]()
+//    var tipArray5 = [Tip]()
+//    var tipArray6 = [Tip]()
+//    var tipArray7 = [Tip]()
+//    var tipArray8 = [Tip]() // Now tip array
 
     var cellHeaderColor: [UIColor] = []
     var topicColor: UIColor?
 
 
     // MARK: - Lifecycle Methods
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,9 +90,19 @@ class NowViewController: UIViewController {
         }
     }
 
+    override func viewDidLayoutSubviews() {
+
+    }
+
+
+
+
     // MARK: - Methods
 
     func setupUI() {
+
+        // place buttons in desired order
+        topicButtons = [topic0Button, topic1Button, topic2Button, topic3Button, topic4Button, topic5Button]
 
         dayOfWeekAndHour()
 
@@ -105,7 +113,11 @@ class NowViewController: UIViewController {
         nowTableView.delegate = self
         nowTableView.separatorStyle = .none
 
-        // Shadow and Radius
+        // Positioning of the buttons
+        topicView.frame.size.height = self.view.frame.size.height * 0.7
+
+
+        // Shadow and Radius of returnToTopButton
         returnToTopButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
         returnToTopButton.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
         returnToTopButton.layer.shadowOpacity = 0.9
@@ -153,7 +165,7 @@ class NowViewController: UIViewController {
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 
-        colorOfUI(hour)
+//        colorOfUI(hour)
 
         switch dayOfWeek {
         case 1: // Sunday
@@ -187,75 +199,7 @@ class NowViewController: UIViewController {
         }
     }
 
-    func colorOfUI(_ hour: Int) {
-        switch hour {
-        case 0...4:
-            topicColor = NowConstants.HeaderIndigo.color900
-            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
-                               NowConstants.HeaderIndigo.color700,
-                                NowConstants.HeaderIndigo.color600,
-                                NowConstants.HeaderIndigo.color500,
-                                NowConstants.HeaderIndigo.color400,
-                                NowConstants.HeaderIndigo.color300,
-                                NowConstants.HeaderIndigo.color200,]
-        case 5...8:
-            topicColor = NowConstants.HeaderAmber.color900
-            cellHeaderColor = [NowConstants.HeaderAmber.color800,
-                               NowConstants.HeaderAmber.color700,
-                               NowConstants.HeaderAmber.color600,
-                               NowConstants.HeaderAmber.color500,
-                               NowConstants.HeaderAmber.color400,
-                               NowConstants.HeaderAmber.color300,
-                               NowConstants.HeaderAmber.color200,]
-        case 9..<11:
-            topicColor = NowConstants.HeaderGreen.color900
-            cellHeaderColor = [NowConstants.HeaderGreen.color800,
-                               NowConstants.HeaderGreen.color700,
-                               NowConstants.HeaderGreen.color600,
-                               NowConstants.HeaderGreen.color500,
-                               NowConstants.HeaderGreen.color400,
-                               NowConstants.HeaderGreen.color300,
-                               NowConstants.HeaderGreen.color200,]
-        case 11..<14:
-            topicColor = NowConstants.HeaderCyan.color900
-            cellHeaderColor = [NowConstants.HeaderCyan.color800,
-                               NowConstants.HeaderCyan.color700,
-                               NowConstants.HeaderCyan.color600,
-                               NowConstants.HeaderCyan.color500,
-                               NowConstants.HeaderCyan.color400,
-                               NowConstants.HeaderCyan.color300,
-                               NowConstants.HeaderCyan.color200,]
-        case 14...16:
-            topicColor = NowConstants.HeaderTeal.color900
-            cellHeaderColor = [NowConstants.HeaderTeal.color800,
-                               NowConstants.HeaderTeal.color700,
-                               NowConstants.HeaderTeal.color600,
-                               NowConstants.HeaderTeal.color500,
-                               NowConstants.HeaderTeal.color400,
-                               NowConstants.HeaderTeal.color300,
-                               NowConstants.HeaderTeal.color200,]
-        case 17...20:
-            topicColor = NowConstants.HeaderRed.color900
-            cellHeaderColor = [NowConstants.HeaderRed.color800,
-                               NowConstants.HeaderRed.color700,
-                               NowConstants.HeaderRed.color600,
-                               NowConstants.HeaderRed.color500,
-                               NowConstants.HeaderRed.color400,
-                               NowConstants.HeaderRed.color300,
-                               NowConstants.HeaderRed.color200,]
-        case 21..<24:
-            topicColor = NowConstants.HeaderBlue.color900
-            cellHeaderColor = [NowConstants.HeaderBlue.color800,
-                               NowConstants.HeaderBlue.color700,
-                               NowConstants.HeaderBlue.color600,
-                               NowConstants.HeaderBlue.color500,
-                               NowConstants.HeaderBlue.color400,
-                               NowConstants.HeaderBlue.color300,
-                               NowConstants.HeaderBlue.color200,]
-        default:
-            print("ERROR with TopicColor and cellHeaderColor")
-        }
-    }
+
 
     func sunday(_ hour: Int) {
         switch hour {
@@ -541,28 +485,19 @@ class NowViewController: UIViewController {
         }
     }
 
-
-    func setupTopicLabels() {
-        styleTopicLabel(label: topic0Label, labelTitle: topics[0].title)
-        styleTopicLabel(label: topic1Label, labelTitle: topics[1].title)
-        styleTopicLabel(label: topic2Label, labelTitle: topics[2].title)
-        styleTopicLabel(label: topic3Label, labelTitle: topics[3].title)
-        styleTopicLabel(label: topic4Label, labelTitle: topics[4].title)
-        styleTopicLabel(label: topic5Label, labelTitle: topics[5].title)
+    func resetTopicButtonsSetup() {
+        resetTopicButtonOriginalStyle(button: topic0Button, buttonTitle: topics[0].title)
+        resetTopicButtonOriginalStyle(button: topic1Button, buttonTitle: topics[1].title)
+        resetTopicButtonOriginalStyle(button: topic2Button, buttonTitle: topics[2].title)
+        resetTopicButtonOriginalStyle(button: topic3Button, buttonTitle: topics[3].title)
+        resetTopicButtonOriginalStyle(button: topic4Button, buttonTitle: topics[4].title)
+        resetTopicButtonOriginalStyle(button: topic5Button, buttonTitle: topics[5].title)
     }
 
-    func setupTopicButtons() {
-        styleTopicButton(button: topic0Button, buttonTitle: topics[0].icon)
-        styleTopicButton(button: topic1Button, buttonTitle: topics[1].icon)
-        styleTopicButton(button: topic2Button, buttonTitle: topics[2].icon)
-        styleTopicButton(button: topic3Button, buttonTitle: topics[3].icon)
-        styleTopicButton(button: topic4Button, buttonTitle: topics[4].icon)
-        styleTopicButton(button: topic5Button, buttonTitle: topics[5].icon)
-    }
-
-    private func styleTopicButton(button: RoundButton, buttonTitle: String) {
+    private func resetTopicButtonOriginalStyle(button: RoundCorneredButton, buttonTitle: String) {
         button.setTitle(buttonTitle, for: .normal)
-        button.backgroundColor = topicColor
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
     }
 
     private func styleTopicLabel(label: UILabel, labelTitle: String) {
@@ -580,8 +515,7 @@ class NowViewController: UIViewController {
                 topics[6].tip[2],
                 topics[6].tip[3]]
 
-        setupTopicLabels()
-        setupTopicButtons()
+        resetTopicButtonsSetup()
     }
 
 
@@ -592,30 +526,36 @@ class NowViewController: UIViewController {
     }
 
 
-    @IBAction func topicButtonTapped(_ sender: RoundButton) {
+    @IBAction func topicButtonTapped(_ sender: RoundCorneredButton) {
         if let topicNumber = topicButtons.index(of: sender) {
-            flipButton(at: topicNumber, withText: topics[topicNumber].icon, on: sender)
+
+            print("ANDREW: topicButtonTapped", topicNumber)
+
+            flipButton(at: topicNumber, withText: topics[topicNumber].title, on: sender)
             nowTableView.reloadData()
         } else {
             createAlert(title: "ERROR", message: "Could not laod buttons.")
         }
     }
 
-    func flipButton(at indexNumber: Int, withText text: String, on button: RoundButton) {
+    func flipButton(at indexNumber: Int, withText text: String, on button: RoundCorneredButton) {
 
-        let selectedButtonIcon = Constants.Now.selectedIconDisplay
+        print("ANDREW: indexNumber \(indexNumber, text)")
 
         if button.currentTitle == text {
-            print("Tapped a topic button button")
-            setupTopicButtons()
+            print("Tapped an unselected topic button, display X")
+            resetTopicButtonsSetup()
+            let selectedButtonIcon = Constants.Now.selectedIconDisplay
             button.setTitle("\(selectedButtonIcon)", for: .normal)
-            button.backgroundColor = UIColor.darkGray
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = UIColor.gray
             topicSelected(indexNumber)
         } else {
-            print("Tapped 'X' button, reset")
+            print("Tapped 'X' button, reset to Now Tips and remove X")
             button.setTitle(text, for: .normal)
-            button.backgroundColor = topicColor
-            setupTopicButtons()
+            button.backgroundColor = .white
+            button.setTitleColor(.black, for: .normal)
+            resetTopicButtonsSetup()
             topicSelected(topicButtons.count)
         }
     }
@@ -655,24 +595,11 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
 
-        // extend the bottom line
+        // cell's bottom line UI
         cell.layoutMargins = UIEdgeInsets.zero
 
         // configure cell in UITableViewCell file
         cell.configureCell(tip: tip)
-
-//        cell.boardNoColorView.layer.cornerRadius = 3
-//        cell.boarderColorView.layer.cornerRadius = 3
-        cell.boarderColorView.layer.borderWidth = 0.5
-        cell.boarderColorView.layer.cornerRadius = 5
-        cell.boarderColorView.layer.borderColor = cellHeaderColor[indexPath.row].cgColor
-        cell.boarderColorView.layer.shadowColor = cellHeaderColor[indexPath.row].cgColor
-        cell.boarderColorView.layer.shadowOpacity = 0.7
-        cell.boarderColorView.layer.shadowOffset = CGSize(width: -0.4, height: 1.5)
-        cell.boarderColorView.layer.shadowRadius = 2.5
-        cell.boarderColorView.backgroundColor = UIColor.white
-
-//        cell.headerLabel.textColor = cellHeaderColor[indexPath.row]
 
         // Line seperator (extend to left)
         cell.preservesSuperviewLayoutMargins = false

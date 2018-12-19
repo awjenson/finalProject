@@ -17,37 +17,35 @@ class JournalViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var journalTableView: UITableView!
 
+    // Table View Header View
+    @IBOutlet weak var topView: UIView!
+
     // Quote
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
     // Nature Pic
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var moodButtonViewHeight: NSLayoutConstraint!
 
-    @IBOutlet weak var hideButton: UIButton!
-
-    @IBOutlet weak var selectedMoodLabel: UILabel!
-
-
-
+    // moodButtions OutletCollection only used for flipping UI when buttons tapped
+    @IBOutlet var moodButtons: [RoundCorneredButton]!
 
     // Created individual buttons because Outlet Collection did not work
-    @IBOutlet weak var mood0Button: UIButton!
-    @IBOutlet weak var mood1Button: UIButton!
-    @IBOutlet weak var mood2Button: UIButton!
-    @IBOutlet weak var mood3Button: UIButton!
-    @IBOutlet weak var mood4Button: UIButton!
-    @IBOutlet weak var mood5Button: UIButton!
-    @IBOutlet weak var mood6Button: UIButton!
-    @IBOutlet weak var mood7Button: UIButton!
-    @IBOutlet weak var mood8Button: UIButton!
-    @IBOutlet weak var mood9Button: UIButton!
-    @IBOutlet weak var mood10Button: UIButton!
-    @IBOutlet weak var mood11Button: UIButton!
-    @IBOutlet weak var mood12Button: UIButton!
-    @IBOutlet weak var mood13Button: UIButton!
-    @IBOutlet weak var mood14Button: UIButton!
+    @IBOutlet weak var mood0Button: RoundCorneredButton!
+    @IBOutlet weak var mood1Button: RoundCorneredButton!
+    @IBOutlet weak var mood2Button: RoundCorneredButton!
+    @IBOutlet weak var mood3Button: RoundCorneredButton!
+    @IBOutlet weak var mood4Button: RoundCorneredButton!
+    @IBOutlet weak var mood5Button: RoundCorneredButton!
+    @IBOutlet weak var mood6Button: RoundCorneredButton!
+    @IBOutlet weak var mood7Button: RoundCorneredButton!
+    @IBOutlet weak var mood8Button: RoundCorneredButton!
+    @IBOutlet weak var mood9Button: RoundCorneredButton!
+    @IBOutlet weak var mood10Button: RoundCorneredButton!
+    @IBOutlet weak var mood11Button: RoundCorneredButton!
+    @IBOutlet weak var mood12Button: RoundCorneredButton!
+    @IBOutlet weak var mood13Button: RoundCorneredButton!
+    @IBOutlet weak var mood14Button: RoundCorneredButton!
 
 
     // MARK: - Properties
@@ -55,9 +53,17 @@ class JournalViewController: UIViewController {
     // pull to refresh tableView
     let refreshControl = UIRefreshControl()
 
-    var advice = JournalQuote(quote: "", source: "")
+    //NEW
+
+    var headers: [Header] = [] // array of headers
+    var hints: [Hint] = []
+
+    
+
+
+    var advice = Quote(quote: "", source: "")
     var selectedImage: String?
-    var tipItems: [JournalTip] = []
+    var tipItems: [Hint] = []
 
 
     // initial setup
@@ -82,26 +88,23 @@ class JournalViewController: UIViewController {
 
     // MARK: - Lifecycle Methods
 
-    override func viewDidLayoutSubviews() {
-        // Code to adjust size of tableviewHeader
-        // Source: https://useyourloaf.com/blog/variable-height-table-view-header/
-        super.viewDidLayoutSubviews()
-        guard let headerView = journalTableView.tableHeaderView else {
-            return
-        }
-        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
-        if headerView.frame.size.height != size.height {
-            headerView.frame.size.height = size.height
-            journalTableView.tableHeaderView = headerView
-            journalTableView.layoutIfNeeded()
-        }
-    }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+//    override func viewDidLayoutSubviews() {
+//        // Code to adjust size of tableviewHeader
+//        // Source: https://useyourloaf.com/blog/variable-height-table-view-header/
+//        super.viewDidLayoutSubviews()
+//        guard let headerView = journalTableView.tableHeaderView else {
+//            return
+//        }
+//        let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
+//        if headerView.frame.size.height != size.height {
+//            headerView.frame.size.height = size.height
+//            journalTableView.tableHeaderView = headerView
+//            journalTableView.layoutIfNeeded()
+//        }
+//    }
 
-        print("Journal View Controller Will Appear")
-    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,11 +129,14 @@ class JournalViewController: UIViewController {
 
     func setupUI() {
 
+        // Positioning of the buttons
+        topView.frame.size.height = self.view.frame.size.height * 0.8
+
         dayOfWeekAndHour()
 
         configureDatabase()
 
-        setupButtonsLabelsTextViews()
+        setupButtonsQuoteImage()
 
         journalTableViewSetup()
 
@@ -164,7 +170,7 @@ class JournalViewController: UIViewController {
     }
 
 
-    func setupButtonsLabelsTextViews() {
+    func setupButtonsQuoteImage() {
 
         if let imageToLoad = selectedImage {
             imageView.image  = UIImage(named: imageToLoad)
@@ -173,17 +179,6 @@ class JournalViewController: UIViewController {
         // Set initial quote
         quoteLabel.text = advice.quote
         authorLabel.text = advice.source
-
-        selectedMoodLabel.text = "Increase Self-Awareness, \nSelect Your Mood:"
-
-        hideButton.setTitle("Hide", for: .normal)
-        // Shadow and Radius
-        hideButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
-        hideButton.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
-        hideButton.layer.shadowOpacity = 0.9
-        hideButton.layer.shadowRadius = 0.0
-        hideButton.layer.masksToBounds = false
-        hideButton.layer.cornerRadius = 5.0
 
 
         // Quote
@@ -237,7 +232,6 @@ class JournalViewController: UIViewController {
         if self.refreshControl.isRefreshing {
             self.setupUI()
             self.updateAdvice([])
-            self.increaseHideButton()
             self.refreshControl.endRefreshing()
         }
     }
@@ -280,14 +274,22 @@ class JournalViewController: UIViewController {
 
     // NEW
 
-
+    // initial setup
+    var selectedPersonProfile = ProfileSelectedPerson(name: "", bio: "", advice: "", description: "", time: "", url: "")
 
     func dayOfWeekAndHour() {
         print("Refresh JOURNAL table view")
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 
-        colorOfUI(hour)
+
+
+
+        // TODO
+        updateAdvice(MoodData.great0Tips1)
+
+
+//        colorOfUI(hour)
 
         switch dayOfWeek {
         case 1: // Sun
@@ -315,27 +317,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am1a
+            advice = QuoteData.am1a
             selectedImage = Constants.JournalImages.night1
         case 5...9:
             // morning
-            advice = AdviceData.am1b
+            advice = QuoteData.am1b
             selectedImage = Constants.JournalImages.morning1
         case 10...13:
             // day
-            advice = AdviceData.am1c
+            advice = QuoteData.am1c
             selectedImage = Constants.JournalImages.day1
         case 14...17:
             // afternoon
-            advice = AdviceData.pm1a
+            advice = QuoteData.pm1a
             selectedImage = Constants.JournalImages.afternoon1
         case 18...21:
             // sunset
-            advice = AdviceData.pm1b
+            advice = QuoteData.pm1b
             selectedImage = Constants.JournalImages.sunset1
         case 22...24:
             // night
-            advice = AdviceData.pm1c
+            advice = QuoteData.pm1c
             selectedImage = Constants.JournalImages.night1
         default:
             print("ERROR: INVALID HOUR!")
@@ -346,27 +348,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am2a
+            advice = QuoteData.am2a
             selectedImage = Constants.JournalImages.night2
         case 5...9:
             // morning
-            advice = AdviceData.am2b
+            advice = QuoteData.am2b
             selectedImage = Constants.JournalImages.morning2
         case 10...13:
             // day
-            advice = AdviceData.am2c
+            advice = QuoteData.am2c
             selectedImage = Constants.JournalImages.day2
         case 14...17:
             // afternoon
-            advice = AdviceData.pm2a
+            advice = QuoteData.pm2a
             selectedImage = Constants.JournalImages.afternoon2
         case 18...21:
             // sunset
-            advice = AdviceData.pm2b
+            advice = QuoteData.pm2b
             selectedImage = Constants.JournalImages.sunset2
         case 22...24:
             // night
-            advice = AdviceData.pm2c
+            advice = QuoteData.pm2c
             selectedImage = Constants.JournalImages.night2
         default:
             print("ERROR: INVALID HOUR!")
@@ -377,27 +379,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am3a
+            advice = QuoteData.am3a
             selectedImage = Constants.JournalImages.night3
         case 5...9:
             // morning
-            advice = AdviceData.am3b
+            advice = QuoteData.am3b
             selectedImage = Constants.JournalImages.morning3
         case 10...13:
             // day
-            advice = AdviceData.am3c
+            advice = QuoteData.am3c
             selectedImage = Constants.JournalImages.day3
         case 14...17:
             // afternoon
-            advice = AdviceData.pm3a
+            advice = QuoteData.pm3a
             selectedImage = Constants.JournalImages.afternoon3
         case 18...21:
             // sunset
-            advice = AdviceData.pm3b
+            advice = QuoteData.pm3b
             selectedImage = Constants.JournalImages.sunset3
         case 22...24:
             // night
-            advice = AdviceData.pm3c
+            advice = QuoteData.pm3c
             selectedImage = Constants.JournalImages.night3
         default:
             print("ERROR: INVALID HOUR!")
@@ -408,27 +410,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am4a
+            advice = QuoteData.am4a
             selectedImage = Constants.JournalImages.night4
         case 5...9:
             // morning
-            advice = AdviceData.am4b
+            advice = QuoteData.am4b
             selectedImage = Constants.JournalImages.morning4
         case 10...13:
             // day
-            advice = AdviceData.am4c
+            advice = QuoteData.am4c
             selectedImage = Constants.JournalImages.day4
         case 14...17:
             // afternoon
-            advice = AdviceData.pm4a
+            advice = QuoteData.pm4a
             selectedImage = Constants.JournalImages.afternoon4
         case 18...21:
             // sunset
-            advice = AdviceData.pm4b
+            advice = QuoteData.pm4b
             selectedImage = Constants.JournalImages.sunset4
         case 22...24:
             // night
-            advice = AdviceData.pm4c
+            advice = QuoteData.pm4c
             selectedImage = Constants.JournalImages.night4
         default:
             print("ERROR: INVALID HOUR!")
@@ -439,27 +441,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am5a
+            advice = QuoteData.am5a
             selectedImage = Constants.JournalImages.night5
         case 5...9:
             // morning
-            advice = AdviceData.am5b
+            advice = QuoteData.am5b
             selectedImage = Constants.JournalImages.morning5
         case 10...13:
             // day
-            advice = AdviceData.am5c
+            advice = QuoteData.am5c
             selectedImage = Constants.JournalImages.day5
         case 14...17:
             // afternoon
-            advice = AdviceData.pm5a
+            advice = QuoteData.pm5a
             selectedImage = Constants.JournalImages.afternoon5
         case 18...21:
             // sunset
-            advice = AdviceData.pm5b
+            advice = QuoteData.pm5b
             selectedImage = Constants.JournalImages.sunset5
         case 22...24:
             // night
-            advice = AdviceData.pm5c
+            advice = QuoteData.pm5c
             selectedImage = Constants.JournalImages.night5
         default:
             print("ERROR: INVALID HOUR!")
@@ -470,27 +472,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am6a
+            advice = QuoteData.am6a
             selectedImage = Constants.JournalImages.night6
         case 5...9:
             // morning
-            advice = AdviceData.am6b
+            advice = QuoteData.am6b
             selectedImage = Constants.JournalImages.morning6
         case 10...13:
             // day
-            advice = AdviceData.am6c
+            advice = QuoteData.am6c
             selectedImage = Constants.JournalImages.day6
         case 14...17:
             // afternoon
-            advice = AdviceData.pm6a
+            advice = QuoteData.pm6a
             selectedImage = Constants.JournalImages.afternoon6
         case 18...21:
             // sunset
-            advice = AdviceData.pm6b
+            advice = QuoteData.pm6b
             selectedImage = Constants.JournalImages.sunset6
         case 22...24:
             // night
-            advice = AdviceData.pm6c
+            advice = QuoteData.pm6c
             selectedImage = Constants.JournalImages.night6
         default:
             print("ERROR: INVALID HOUR!")
@@ -501,27 +503,27 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...4:
             // night
-            advice = AdviceData.am7a
+            advice = QuoteData.am7a
             selectedImage = Constants.JournalImages.night7
         case 5...9:
             // morning
-            advice = AdviceData.am7b
+            advice = QuoteData.am7b
             selectedImage = Constants.JournalImages.morning7
         case 10...13:
             // day
-            advice = AdviceData.am7c
+            advice = QuoteData.am7c
             selectedImage = Constants.JournalImages.day7
         case 14...17:
             // afternoon
-            advice = AdviceData.pm7a
+            advice = QuoteData.pm7a
             selectedImage = Constants.JournalImages.afternoon7
         case 18...21:
             // sunset
-            advice = AdviceData.pm7b
+            advice = QuoteData.pm7b
             selectedImage = Constants.JournalImages.sunset7
         case 22...24:
             // night
-            advice = AdviceData.pm7c
+            advice = QuoteData.pm7c
             selectedImage = Constants.JournalImages.night7
         default:
             print("ERROR: INVALID HOUR!")
@@ -666,14 +668,50 @@ class JournalViewController: UIViewController {
     // Loving
     // Good or OK
 
+    func appendFifthteenHeaders(_ header0: Header, _ header1: Header, _ header2: Header, _ header3: Header,_ header4: Header, _ header5: Header, _ header6: Header, _ header7: Header, _ header8: Header, _ header9: Header, _ header10: Header,_ header11: Header, _ header12: Header,_ header13: Header,_ header14: Header, _ header15Person: Header) {
+
+        headers = [header0, header1, header2, header3, header4, header5, header6, header7, header8, header9, header10, header11, header12, header13, header14, header15Person]
+
+        // set 4 'Now' tips to be displayed in initial table view
+        hints = [headers[15].hints[0],
+                headers[15].hints[1],
+                headers[15].hints[2],
+                headers[15].hints[3]]
+
+        resetHeaderButtonsSetup()
+    }
+
+    func resetHeaderButtonsSetup() {
+        resetHeaderButtonOriginalStyle(button: mood0Button, buttonTitle: headers[0].title)
+        resetHeaderButtonOriginalStyle(button: mood1Button, buttonTitle: headers[1].title)
+        resetHeaderButtonOriginalStyle(button: mood2Button, buttonTitle: headers[2].title)
+        resetHeaderButtonOriginalStyle(button: mood3Button, buttonTitle: headers[3].title)
+        resetHeaderButtonOriginalStyle(button: mood4Button, buttonTitle: headers[4].title)
+        resetHeaderButtonOriginalStyle(button: mood5Button, buttonTitle: headers[5].title)
+        resetHeaderButtonOriginalStyle(button: mood6Button, buttonTitle: headers[6].title)
+        resetHeaderButtonOriginalStyle(button: mood7Button, buttonTitle: headers[7].title)
+        resetHeaderButtonOriginalStyle(button: mood8Button, buttonTitle: headers[8].title)
+        resetHeaderButtonOriginalStyle(button: mood9Button, buttonTitle: headers[9].title)
+        resetHeaderButtonOriginalStyle(button: mood10Button, buttonTitle: headers[10].title)
+        resetHeaderButtonOriginalStyle(button: mood11Button, buttonTitle: headers[11].title)
+        resetHeaderButtonOriginalStyle(button: mood12Button, buttonTitle: headers[12].title)
+        resetHeaderButtonOriginalStyle(button: mood13Button, buttonTitle: headers[13].title)
+        resetHeaderButtonOriginalStyle(button: mood14Button, buttonTitle: headers[14].title)
+    }
+
+    private func resetHeaderButtonOriginalStyle(button: RoundCorneredButton, buttonTitle: String) {
+        button.setTitle(buttonTitle, for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
+    }
+
     // MARK: TODO
-    func updateAdvice(_ newTips: [JournalTip]) {
+    func updateAdvice(_ newTips: [Hint]) {
 
         // update model object
 
         UIView.animate(withDuration: 0.5) {
 
-            self.selectedMoodLabel.text = "Selected: \(self.selectedMood)"
             // update tableview
             self.tipItems = newTips
             self.configureTableView()
@@ -685,45 +723,18 @@ class JournalViewController: UIViewController {
     }
 
 
-    func decreaseHideButton() {
-        displayMoodButtonView = !displayMoodButtonView
-        moodButtonViewHeight.constant = 0
-        hideButton.setTitle("Unhide", for: .normal)
-    }
-
-    func increaseHideButton() {
-        displayMoodButtonView = !displayMoodButtonView
-        moodButtonViewHeight.constant = 130
-        hideButton.setTitle("Hide", for: .normal)
-    }
 
 
 
-
-    @IBAction func hideButtonTapped(_ sender: Any) {
-        displayMoodButtonView = !displayMoodButtonView
-
-        if displayMoodButtonView == false {
-            moodButtonViewHeight.constant = 0
-            hideButton.setTitle("Unhide", for: .normal)
-
-        } else {
-            moodButtonViewHeight.constant = 130
-            hideButton.setTitle("Hide", for: .normal)
-
-        }
-    }
-
-    func updateQuote(_ item:JournalQuote) {
+    func updateQuote(_ item:Quote) {
         quoteLabel.text = item.quote
         authorLabel.text = item.source
     }
 
 
-    @IBAction func moodButtonTapped(_ sender: UIButton) {
+    @IBAction func moodButtonTapped(_ sender: RoundCorneredButton) {
 
         // Plan to add response in next version of app
-        decreaseHideButton()
 
         switch sender {
         case mood0Button:
@@ -814,8 +825,6 @@ class JournalViewController: UIViewController {
                 print("SUCCESS WRITING BUTTON MOOD: \(success)")
             }
         })
-
-
     }
 
     func sendMood(_ moodDictionary: [String:String?]) {
