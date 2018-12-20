@@ -57,6 +57,7 @@
 		DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */; };
 		DA6EBB3321C9C149006F7259 /* PersonAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EBB3221C9C149006F7259 /* PersonAdvice.swift */; };
 		DA6EBB3521C9CDEE006F7259 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EBB3421C9CDEE006F7259 /* Header.swift */; };
+		DA6EBB3721CACF2C006F7259 /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EBB3621CACF2C006F7259 /* HeaderData.swift */; };
 		DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78986D204F5F69005046D8 /* ViewModelItemType.swift */; };
 		DA78987620507C86005046D8 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78987520507C86005046D8 /* ProfileTableViewCell.swift */; };
 		DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898822051E39E005046D8 /* ProfileViewController.swift */; };
@@ -148,6 +149,7 @@
 		DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
 		DA6EBB3221C9C149006F7259 /* PersonAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAdvice.swift; sourceTree = "<group>"; };
 		DA6EBB3421C9CDEE006F7259 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		DA6EBB3621CACF2C006F7259 /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
 		DA78986D204F5F69005046D8 /* ViewModelItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelItemType.swift; sourceTree = "<group>"; };
 		DA78987520507C86005046D8 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		DA7898822051E39E005046D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -254,7 +256,7 @@
 				DA6EBB3421C9CDEE006F7259 /* Header.swift */,
 				DA0EDE0D2104EF6D00B9363F /* Hint.swift */,
 				DA0EDE0B2104EEB300B9363F /* Quote.swift */,
-				DADE4C7920E9A5D300E19393 /* QuoteData.swift */,
+				DA6EBB3621CACF2C006F7259 /* HeaderData.swift */,
 				DA272D0A20BCE62200137039 /* AdviceData.swift */,
 				DA511DE2213F171B0056949B /* MoodData.swift */,
 				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
@@ -262,6 +264,7 @@
 				DA2B85F620B8D59E005B7DD6 /* MessageItem.swift */,
 				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
 				DA8C088A20FC31EC000E050E /* JournalImages.swift */,
+				DADE4C7920E9A5D300E19393 /* QuoteData.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 				DAC6384A20B1CE310004891D /* GoalItem.swift in Sources */,
 				DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */,
 				DA2B85F920B8E174005B7DD6 /* DatabaseReference+Location.swift in Sources */,
+				DA6EBB3721CACF2C006F7259 /* HeaderData.swift in Sources */,
 				DA15AE1520B84C2900EFC4C2 /* FirebaseConstants.swift in Sources */,
 				DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */,
 				DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */,

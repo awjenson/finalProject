@@ -926,7 +926,7 @@ let workPMTip39 = Tip(header: "", title: "Sadly, research found that CEO candida
 let workPMTip40 = Tip(header: "", title: "Afternoon Slump Tip: We’re actually better at being creative when we’re fatigued", body: "Your fatigued brain isn’t very good at filtering out weird ideas, something that can lead to creative insights. So scheduling a creative task for the time in your day when you know you’re a little bit tired can actually be beneficial." , sourceName: "The Cut", sourceURL: "https://www.thecut.com/2015/03/sometimes-tired-people-are-creative-people.html", sponsorLogo: "", sponsorURL: "")
 ///////
 // WEEK 3
-
+let workPMTip41 = Tip(header: "", title: "People who initiate office friendships, pick up slack for their co-workers, and organize workplace social activities are 40% more likely to get a promotion in the next 2 years", body: "" , sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1070,7 +1070,13 @@ let workLateTopic0 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLa
 let workLateTipArray1 = [workLateTip5, workLateTip6, workLateTip7, workLateTip2] // WIP
 let workLateTopic1 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLateTipArray1)
 
-// MARK: - Work by Quarter
+
+// MARK: - Work: Late Shift
+
+
+
+
+// MARK: - Work by Quarter (WIP)
 // Display in Q4
 let workQ41 = Tip(header: "", title: "Make sure to take all of your vacation days before they expire", body: "Around half of all US workers do not take their full allotment of days off. In effect, many Americans spend part of the year working for nothing, donating the equivalent of $561 on average to their firms. A study by the Harvard Business Review in 2016 found that those who took 11 or more days off a year were almost twice as likely to get a raise or a bonus as those who took ten days off or fewer (although the causation could be the other way around; star workers may feel they can afford to take a break)." , sourceName: "The Econmist", sourceURL: "https://www.economist.com/business/2018/11/24/americans-need-to-take-a-break", sponsorLogo: "", sponsorURL: "")
 

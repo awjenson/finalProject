@@ -31,7 +31,8 @@ class NowTableViewCell: UITableViewCell {
     var tipItem: Tip!
 
     func configureCell(tip: Tip) {
-        // Display UI of Cell Boarder
+        
+        // Display UI of CELL Boarder
         boarderColorView.layer.borderWidth = 0.5
         boarderColorView.layer.borderColor = UIColor.lightGray.cgColor
         boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7).cgColor
@@ -40,7 +41,6 @@ class NowTableViewCell: UITableViewCell {
         boarderColorView.layer.shadowRadius = 4
         boarderColorView.layer.cornerRadius = 6
         boarderColorView.layer.borderWidth = 1
-
 
         // Display summarized text in
         tipItem = tip

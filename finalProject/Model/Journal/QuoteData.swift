@@ -8,6 +8,8 @@
 
 import Foundation
 
+/*
+
 struct QuoteData {
 
     // MARK: - BASED ON TIME
@@ -159,11 +161,6 @@ struct QuoteData {
     static let quote2 = Quote(quote: "\"You pile up enough tomorrows, and you’ll find you are left with nothing but a lot of empty yesterdays.\"", source: "Harold Hill")
     static let quote3 = Quote(quote: "\"Pessimism leads to weakness, optimism to power.\"", source: "William James")
 
-
-
-
-
-
-
-
 }
+
+ */

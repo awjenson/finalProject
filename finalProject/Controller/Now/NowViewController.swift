@@ -59,16 +59,6 @@ class NowViewController: UIViewController {
     var topics: [Topic] = [] // array of topics
     var tips: [Tip] = []
 
-//    var tipArray0 = [Tip]()
-//    var tipArray1 = [Tip]()
-//    var tipArray2 = [Tip]()
-//    var tipArray3 = [Tip]()
-//    var tipArray4 = [Tip]()
-//    var tipArray5 = [Tip]()
-//    var tipArray6 = [Tip]()
-//    var tipArray7 = [Tip]()
-//    var tipArray8 = [Tip]() // Now tip array
-
     var cellHeaderColor: [UIColor] = []
     var topicColor: UIColor?
 
@@ -90,8 +80,10 @@ class NowViewController: UIViewController {
         }
     }
 
-    override func viewDidLayoutSubviews() {
-
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Important: Need this when working with Observers to avoid memory leak!
+        NotificationCenter.default.removeObserver(self)
     }
 
 
@@ -101,20 +93,11 @@ class NowViewController: UIViewController {
 
     func setupUI() {
 
-        // place buttons in desired order
-        topicButtons = [topic0Button, topic1Button, topic2Button, topic3Button, topic4Button, topic5Button]
+        // place buttons in desired order (excludes Now tips)
+        topicButtons = [topic0Button, topic1Button, topic2Button,
+                        topic3Button, topic4Button, topic5Button]
 
         dayOfWeekAndHour()
-
-        // set estimated row height (needed for auto row height size)
-        nowTableView.rowHeight = UITableViewAutomaticDimension
-        nowTableView.estimatedRowHeight = 44
-        nowTableView.dataSource = self
-        nowTableView.delegate = self
-        nowTableView.separatorStyle = .none
-
-        // Positioning of the buttons
-        topicView.frame.size.height = self.view.frame.size.height * 0.7
 
 
         // Shadow and Radius of returnToTopButton
@@ -126,15 +109,22 @@ class NowViewController: UIViewController {
         returnToTopButton.layer.cornerRadius = 5.0
 
         footerView.frame.size.height = 60
+
+        nowTableViewSetup()
+
+        // Positioning of the buttons
+        topicView.frame.size.height = self.view.frame.size.height * 0.7
+
         self.setupRefreshControl()
     }
 
-    // Call this inside UIButton to scroll to top
-    func scrollToTop(){
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(row: self.tips.count-1, section: 0)
-            self.nowTableView.scrollToRow(at: indexPath, at: .top, animated: true)
-        }
+    func nowTableViewSetup() {
+        // set estimated row height (needed for auto row height size)
+        nowTableView.rowHeight = UITableViewAutomaticDimension
+        nowTableView.estimatedRowHeight = 44
+        nowTableView.dataSource = self
+        nowTableView.delegate = self
+        nowTableView.separatorStyle = .none
     }
 
     // MARK: - Refresh Control
@@ -146,6 +136,16 @@ class NowViewController: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         nowTableView.addSubview(refreshControl)
     }
+
+    // Call this inside UIButton to scroll to top
+    func scrollToTop(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.tips.count-1, section: 0)
+            self.nowTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
+
+
 
     @objc func reloadTimeline() {
 
@@ -165,7 +165,6 @@ class NowViewController: UIViewController {
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 
-//        colorOfUI(hour)
 
         switch dayOfWeek {
         case 1: // Sunday
@@ -174,15 +173,12 @@ class NowViewController: UIViewController {
         case 2: // Monday
             print("today is a Monday")
             monday(hour)
-
         case 3: // Tuesday
             print("today is a Tuesday")
             tuesday(hour)
-
         case 4: // Wednesday
             print("today is a Wednesday")
             wednesday(hour)
-
         case 5: // Thursday
             print("today is Thursday")
             thursday(hour)
@@ -193,9 +189,7 @@ class NowViewController: UIViewController {
             print("today is Saturday")
             saturday(hour)
         default:
-            print("error with dayAndHour")
-            print(dayOfWeek)
-            print("^")
+            print("ERROR: error with dayAndHour")
         }
     }
 
@@ -496,13 +490,9 @@ class NowViewController: UIViewController {
 
     private func resetTopicButtonOriginalStyle(button: RoundCorneredButton, buttonTitle: String) {
         button.setTitle(buttonTitle, for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
-    }
 
-    private func styleTopicLabel(label: UILabel, labelTitle: String) {
-        label.text = labelTitle
-        label.textColor = UIColor.darkGray
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = UIColor(white: 1, alpha: 0.975)
     }
 
     func appendSevenTopics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic,_ topic4: Topic,_ topic5: Topic, _ topic6Now: Topic) {

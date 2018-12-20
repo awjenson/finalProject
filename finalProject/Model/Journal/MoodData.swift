@@ -8,6 +8,8 @@
 
 import Foundation
 
+/*
+
 struct MoodData {
 
 
@@ -95,7 +97,7 @@ struct MoodData {
     static let mad0Tips1 = [madTip0, madTip1, madTip2]
 
     // Button6 = "Stressed"
-    static let stressedQuote0 = Quote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew J. Berstein")
+    static let stressedQuote0 = Quote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew Bernstein", bio: "Philosopher")
 
     static let stressedTip1 = Hint(title: "Reduce stress right now", body: "• Breathe deeply, \n\n • Go for a walk, \n\n • Visualize a peaceful forest or beach, \n\n • List to classical music, \n\n • watch a funny video, \n\n • call a friend, \n\n • turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
 
@@ -179,7 +181,7 @@ struct MoodData {
     static let lonely0Tips1 = [lonelyTip1, lonelyTip2]
 
     // Button11 = "Envy"
-    static let envyQuote0 = Quote(quote: "\"Envy blinds men and makes it impossible for them to think clearly\"", source: "Malcolm X")
+    static let envyQuote1 = Quote(quote: "\"Envy blinds men and makes it impossible for them to think clearly\"", source: "Malcolm X", bio: "Minister and human rights activist")
 
     static let envyTip0 = Hint(title: "Too much social media increases envy", body: "Research found that when Facebook evoked envy, it increased symptoms of depression. If you tend to compare yourself with others or get envious easily, you might consider limiting your time spent on social networking sites or make a conscious effort to use them in active ways (commenting and posting) rather than passive ways (browsing news feeds).", sourceName: "Scientific American", sourceURL: "https://www.scientificamerican.com/article/green-with-facebook-envy-red-with-twitter-rage/")
     static let envyTip1 = Hint(title: "Daily Stoic: Envy", body: "If we’re not careful, we can waste enormous chunks of today being miserable over the fact that so-and-so is doing well or how badly we feel we deserve what so-and-so is enjoying? Because jealousy is a blinding passion. \n\nSo if you want to know what envy is, here’s your answer: It’s insanity. It’s death. It’s a thing to be avoided at all costs.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/do-you-know-what-envy-is/")
@@ -215,3 +217,5 @@ struct MoodData {
     static let calm0Tips1 = [calmTip1, calmTip2]
     
 }
+
+ */

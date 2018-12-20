@@ -12,12 +12,15 @@ class Quote {
 
     // MARK: - Properties
 
-    var quote: String
-    var source: String
+    let quote: String
+    let source: String
+    let bio: String
 
-    init(quote: String, source: String) {
+
+    init(quote: String, source: String, bio: String) {
 
         self.quote = quote
         self.source = source
+        self.bio = bio
     }
 }

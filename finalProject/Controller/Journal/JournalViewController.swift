@@ -28,24 +28,19 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
 
     // moodButtions OutletCollection only used for flipping UI when buttons tapped
-    @IBOutlet var moodButtons: [RoundCorneredButton]!
+    @IBOutlet var headerButtons: [RoundCorneredButton]!
 
     // Created individual buttons because Outlet Collection did not work
-    @IBOutlet weak var mood0Button: RoundCorneredButton!
-    @IBOutlet weak var mood1Button: RoundCorneredButton!
-    @IBOutlet weak var mood2Button: RoundCorneredButton!
-    @IBOutlet weak var mood3Button: RoundCorneredButton!
-    @IBOutlet weak var mood4Button: RoundCorneredButton!
-    @IBOutlet weak var mood5Button: RoundCorneredButton!
-    @IBOutlet weak var mood6Button: RoundCorneredButton!
-    @IBOutlet weak var mood7Button: RoundCorneredButton!
-    @IBOutlet weak var mood8Button: RoundCorneredButton!
-    @IBOutlet weak var mood9Button: RoundCorneredButton!
-    @IBOutlet weak var mood10Button: RoundCorneredButton!
-    @IBOutlet weak var mood11Button: RoundCorneredButton!
-    @IBOutlet weak var mood12Button: RoundCorneredButton!
-    @IBOutlet weak var mood13Button: RoundCorneredButton!
-    @IBOutlet weak var mood14Button: RoundCorneredButton!
+    @IBOutlet weak var header0Button: RoundCorneredButton!
+    @IBOutlet weak var header1Button: RoundCorneredButton!
+    @IBOutlet weak var header2Button: RoundCorneredButton!
+    @IBOutlet weak var header3Button: RoundCorneredButton!
+    @IBOutlet weak var header4Button: RoundCorneredButton!
+    @IBOutlet weak var header5Button: RoundCorneredButton!
+    @IBOutlet weak var header6Button: RoundCorneredButton!
+    @IBOutlet weak var header7Button: RoundCorneredButton!
+
+
 
 
     // MARK: - Properties
@@ -58,12 +53,12 @@ class JournalViewController: UIViewController {
     var headers: [Header] = [] // array of headers
     var hints: [Hint] = []
 
-    
 
 
-    var advice = Quote(quote: "", source: "")
+
+
     var selectedImage: String?
-    var tipItems: [Hint] = []
+
 
 
     // initial setup
@@ -129,9 +124,14 @@ class JournalViewController: UIViewController {
 
     func setupUI() {
 
+        // place buttons in desired order (excludes FamousPerson hints)
+        headerButtons = [header0Button, header1Button, header2Button, header3Button,
+                         header4Button, header5Button, header6Button, header7Button]
+
         // Positioning of the buttons
         topView.frame.size.height = self.view.frame.size.height * 0.8
 
+        // determines which buttons headers and hints are displayed
         dayOfWeekAndHour()
 
         configureDatabase()
@@ -140,21 +140,10 @@ class JournalViewController: UIViewController {
 
         journalTableViewSetup()
 
+
+
+
     }
-
-
-
-    // REMVOED because no longer using textView
-//    func setupGestureRecognizers() {
-//
-//        // Enable Gesture Recognizers
-//        let tapGestureTableView = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
-//
-//        let tapGestureHeaderView = UITapGestureRecognizer(target: self, action: #selector(headerViewTapped))
-//        // TODO: could add this for the quote view too
-//        journalTableView.addGestureRecognizer(tapGestureTableView)
-//        quoteView.addGestureRecognizer(tapGestureHeaderView)
-//    }
 
     func journalTableViewSetup() {
         journalTableView.dataSource = self
@@ -165,9 +154,24 @@ class JournalViewController: UIViewController {
         self.setupRefreshControl()
     }
 
-    func configureCardViews() {
-        // TODO: Add boarder colors
+    // MARK: - Refresh Control Methods
+
+    func setupRefreshControl() {
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadQuote), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        journalTableView.addSubview(refreshControl)
     }
+
+    // Call this inside UIButton to scroll to top
+    func scrollToTop(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.hints.count-1, section: 0)
+            self.journalTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
+
+
 
 
     func setupButtonsQuoteImage() {
@@ -177,8 +181,8 @@ class JournalViewController: UIViewController {
         }
 
         // Set initial quote
-        quoteLabel.text = advice.quote
-        authorLabel.text = advice.source
+        quoteLabel.text = headers[8].quote.quote
+        authorLabel.text = headers[8].quote.source
 
 
         // Quote
@@ -197,74 +201,31 @@ class JournalViewController: UIViewController {
 //        messageTextView.layer.cornerRadius = 4.0
 
         // Buttons
-        // Row 1
-        mood0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
-        mood1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
-        mood2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
-        mood3Button.setTitle(Constants.SelectedMood.Button3,for: .normal)
-        mood4Button.setTitle(Constants.SelectedMood.Button4,for: .normal)
-        // Row 2
-        mood5Button.setTitle(Constants.SelectedMood.Button5,for: .normal)
-        mood6Button.setTitle(Constants.SelectedMood.Button6,for: .normal)
-        mood7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
-        mood8Button.setTitle(Constants.SelectedMood.Button8,for: .normal)
-        mood9Button.setTitle(Constants.SelectedMood.Button9,for: .normal)
-        // Row 3
-        mood10Button.setTitle(Constants.SelectedMood.Button10,for: .normal)
-        mood11Button.setTitle(Constants.SelectedMood.Button11,for: .normal)
-        mood12Button.setTitle(Constants.SelectedMood.Button12,for: .normal)
-        mood13Button.setTitle(Constants.SelectedMood.Button13,for: .normal)
-        mood14Button.setTitle(Constants.SelectedMood.Button14,for: .normal)
+//        // Row 1
+//        header0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
+//        header1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
+//        header2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
+//        header3Button.setTitle(Constants.SelectedMood.Button3,for: .normal)
+//        header4Button.setTitle(Constants.SelectedMood.Button4,for: .normal)
+//        // Row 2
+//        header5Button.setTitle(Constants.SelectedMood.Button5,for: .normal)
+//        header6Button.setTitle(Constants.SelectedMood.Button6,for: .normal)
+//        header7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
+
     }
 
-    // MARK: - Refresh Control Methods
-
-    func setupRefreshControl() {
-        // add pull to refresh
-        refreshControl.addTarget(self, action: #selector(reloadQuote), for: .valueChanged)
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        journalTableView.addSubview(refreshControl)
-    }
 
     @objc func reloadQuote() {
 
         // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
         if self.refreshControl.isRefreshing {
+            // Reload time based array
             self.setupUI()
-            self.updateAdvice([])
             self.refreshControl.endRefreshing()
         }
+        self.journalTableView.reloadData()
     }
 
-    // MARK: - Database Methods
-
-//    func loadMessagesAll() {
-//
-//        MessageItemService.readMessagesAll(for: User.current) { (retrieveAllMessages) in
-//
-//            if retrieveAllMessages.isEmpty {
-//                print("retrievedMessages count: \(retrieveAllMessages.count)")
-//                return
-//            }
-//            self.messageItems = retrieveAllMessages
-//
-//            var number = 0
-//            print("THREAD: \(Thread.current) + \(number)")
-//            number += 1
-//            self.configureTableView()
-//            self.scrollToBottom()
-//            self.journalTableView.reloadData()
-//        }
-//    }
-
-//    func setupKeyboardObservers() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//    }
-//
-//    @objc func handleKeyboardWillShow(notification: NSNotification) {
-//        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-//        let keyboardDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
-//    }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -275,21 +236,13 @@ class JournalViewController: UIViewController {
     // NEW
 
     // initial setup
-    var selectedPersonProfile = ProfileSelectedPerson(name: "", bio: "", advice: "", description: "", time: "", url: "")
+
 
     func dayOfWeekAndHour() {
         print("Refresh JOURNAL table view")
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 
-
-
-
-        // TODO
-        updateAdvice(MoodData.great0Tips1)
-
-
-//        colorOfUI(hour)
 
         switch dayOfWeek {
         case 1: // Sun
@@ -308,37 +261,15 @@ class JournalViewController: UIViewController {
             saturday(hour)
         default:
             print("ERROR: error with dayAndHour")
-            print(dayOfWeek)
         }
     }
 
     func sunday(_ hour: Int) {
         
         switch hour {
-        case 0...4:
-            // night
-            advice = QuoteData.am1a
-            selectedImage = Constants.JournalImages.night1
-        case 5...9:
-            // morning
-            advice = QuoteData.am1b
-            selectedImage = Constants.JournalImages.morning1
-        case 10...13:
-            // day
-            advice = QuoteData.am1c
-            selectedImage = Constants.JournalImages.day1
-        case 14...17:
-            // afternoon
-            advice = QuoteData.pm1a
-            selectedImage = Constants.JournalImages.afternoon1
-        case 18...21:
-            // sunset
-            advice = QuoteData.pm1b
-            selectedImage = Constants.JournalImages.sunset1
-        case 22...24:
-            // night
-            advice = QuoteData.pm1c
-            selectedImage = Constants.JournalImages.night1
+        case 0...24:
+            print("Hello")
+            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -346,30 +277,9 @@ class JournalViewController: UIViewController {
 
     func monday(_ hour: Int) {
         switch hour {
-        case 0...4:
-            // night
-            advice = QuoteData.am2a
-            selectedImage = Constants.JournalImages.night2
-        case 5...9:
-            // morning
-            advice = QuoteData.am2b
-            selectedImage = Constants.JournalImages.morning2
-        case 10...13:
-            // day
-            advice = QuoteData.am2c
-            selectedImage = Constants.JournalImages.day2
-        case 14...17:
-            // afternoon
-            advice = QuoteData.pm2a
-            selectedImage = Constants.JournalImages.afternoon2
-        case 18...21:
-            // sunset
-            advice = QuoteData.pm2b
-            selectedImage = Constants.JournalImages.sunset2
-        case 22...24:
-            // night
-            advice = QuoteData.pm2c
-            selectedImage = Constants.JournalImages.night2
+        case 0...24:
+            print("Hello")
+            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -377,30 +287,9 @@ class JournalViewController: UIViewController {
 
     func tuesday(_ hour: Int) {
         switch hour {
-        case 0...4:
-            // night
-            advice = QuoteData.am3a
-            selectedImage = Constants.JournalImages.night3
-        case 5...9:
-            // morning
-            advice = QuoteData.am3b
-            selectedImage = Constants.JournalImages.morning3
-        case 10...13:
-            // day
-            advice = QuoteData.am3c
-            selectedImage = Constants.JournalImages.day3
-        case 14...17:
-            // afternoon
-            advice = QuoteData.pm3a
-            selectedImage = Constants.JournalImages.afternoon3
-        case 18...21:
-            // sunset
-            advice = QuoteData.pm3b
-            selectedImage = Constants.JournalImages.sunset3
-        case 22...24:
-            // night
-            advice = QuoteData.pm3c
-            selectedImage = Constants.JournalImages.night3
+        case 0...24:
+            print("Hello")
+            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -408,30 +297,9 @@ class JournalViewController: UIViewController {
 
     func wednesday(_ hour: Int) {
         switch hour {
-        case 0...4:
-            // night
-            advice = QuoteData.am4a
-            selectedImage = Constants.JournalImages.night4
-        case 5...9:
-            // morning
-            advice = QuoteData.am4b
-            selectedImage = Constants.JournalImages.morning4
-        case 10...13:
-            // day
-            advice = QuoteData.am4c
-            selectedImage = Constants.JournalImages.day4
-        case 14...17:
-            // afternoon
-            advice = QuoteData.pm4a
-            selectedImage = Constants.JournalImages.afternoon4
-        case 18...21:
-            // sunset
-            advice = QuoteData.pm4b
-            selectedImage = Constants.JournalImages.sunset4
-        case 22...24:
-            // night
-            advice = QuoteData.pm4c
-            selectedImage = Constants.JournalImages.night4
+        case 0...24:
+            print("Hello")
+            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -439,30 +307,9 @@ class JournalViewController: UIViewController {
 
     func thursday(_ hour: Int) {
         switch hour {
-        case 0...4:
-            // night
-            advice = QuoteData.am5a
-            selectedImage = Constants.JournalImages.night5
-        case 5...9:
-            // morning
-            advice = QuoteData.am5b
-            selectedImage = Constants.JournalImages.morning5
-        case 10...13:
-            // day
-            advice = QuoteData.am5c
-            selectedImage = Constants.JournalImages.day5
-        case 14...17:
-            // afternoon
-            advice = QuoteData.pm5a
-            selectedImage = Constants.JournalImages.afternoon5
-        case 18...21:
-            // sunset
-            advice = QuoteData.pm5b
-            selectedImage = Constants.JournalImages.sunset5
-        case 22...24:
-            // night
-            advice = QuoteData.pm5c
-            selectedImage = Constants.JournalImages.night5
+        case 0...24:
+            print("Hello")
+            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -470,30 +317,9 @@ class JournalViewController: UIViewController {
 
     func friday(_ hour: Int) {
         switch hour {
-        case 0...4:
-            // night
-            advice = QuoteData.am6a
-            selectedImage = Constants.JournalImages.night6
-        case 5...9:
-            // morning
-            advice = QuoteData.am6b
-            selectedImage = Constants.JournalImages.morning6
-        case 10...13:
-            // day
-            advice = QuoteData.am6c
-            selectedImage = Constants.JournalImages.day6
-        case 14...17:
-            // afternoon
-            advice = QuoteData.pm6a
-            selectedImage = Constants.JournalImages.afternoon6
-        case 18...21:
-            // sunset
-            advice = QuoteData.pm6b
-            selectedImage = Constants.JournalImages.sunset6
-        case 22...24:
-            // night
-            advice = QuoteData.pm6c
-            selectedImage = Constants.JournalImages.night6
+        case 0...24:
+            print("Hello")
+            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -501,64 +327,15 @@ class JournalViewController: UIViewController {
 
     func saturday(_ hour: Int) {
         switch hour {
-        case 0...4:
-            // night
-            advice = QuoteData.am7a
-            selectedImage = Constants.JournalImages.night7
-        case 5...9:
-            // morning
-            advice = QuoteData.am7b
-            selectedImage = Constants.JournalImages.morning7
-        case 10...13:
-            // day
-            advice = QuoteData.am7c
-            selectedImage = Constants.JournalImages.day7
-        case 14...17:
-            // afternoon
-            advice = QuoteData.pm7a
-            selectedImage = Constants.JournalImages.afternoon7
-        case 18...21:
-            // sunset
-            advice = QuoteData.pm7b
-            selectedImage = Constants.JournalImages.sunset7
-        case 22...24:
-            // night
-            advice = QuoteData.pm7c
-            selectedImage = Constants.JournalImages.night7
+        case 0...24:
+            print("Hello")
+            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
     }
 
 
-    func colorOfUI(_ hour: Int) {
-
-        switch hour {
-        case 0...4:
-            topicColor = NowConstants.HeaderIndigo.color900
-
-        case 5...8:
-            topicColor = NowConstants.HeaderAmber.color900
-
-        case 9..<11:
-            topicColor = NowConstants.HeaderGreen.color900
-
-        case 11..<14:
-            topicColor = NowConstants.HeaderCyan.color900
-
-        case 14...16:
-            topicColor = NowConstants.HeaderTeal.color900
-
-        case 17...20:
-            topicColor = NowConstants.HeaderRed.color900
-
-        case 21..<24:
-            topicColor = NowConstants.HeaderBlue.color900
-
-        default:
-            print("ERROR with TopicColor and cellHeaderColor")
-        }
-    }
 
 
 
@@ -568,14 +345,8 @@ class JournalViewController: UIViewController {
 
 
 
-    // REMOVED
-//    @objc func tableViewTapped() {
-//        messageTextView.endEditing(true)
-//    }
-//
-//    @objc func headerViewTapped() {
-//        messageTextView.endEditing(true)
-//    }
+
+
 
     func configureDatabase() {
         ref = Database.database().reference().child(FirebaseConstants.DbChild.Messages).child(User.current.uid)
@@ -586,117 +357,37 @@ class JournalViewController: UIViewController {
         journalTableView.estimatedRowHeight = 100.0
     }
 
-    // Create the retrieveMessages method
-//    func retrieveMessages() {
-//
-//        SVProgressHUD.show()
-//
-//        // listen for new messages in the firebase database with 'observe'
-//        // Configure database to sync messages
-//        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
-//        // ask Firebase to 'observe' for any new child's events ('childAdded')
-//
-//        MessageItemService.readMessagesLastTen(for: User.current) { (retrievedMessages) in
-//
-//            if retrievedMessages.isEmpty {
-//                print("retrievedMessages count: \(retrievedMessages.count)")
-//                self.configureTableView()
-//                self.journalTableView.reloadData()
-//                SVProgressHUD.dismiss()
-//                return
-//            }
-//
-//            self.messageItems = retrievedMessages
-//
-//            var number = 0
-//            print("THREAD: \(Thread.current) + \(number)")
-//            number += 1
-//            self.configureTableView()
-//            self.journalTableView.reloadData()
-//            self.scrollToBottom()
-//            SVProgressHUD.dismiss()
-//        }
-//    }
-
-//    func scrollToBottom(){
-//        DispatchQueue.main.async {
-//            let indexPath = IndexPath(row: self.messageItems.count-1, section: 0)
-//            self.journalTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-//        }
-//    }
-
-
-    // MARK: - IBActions
-
-//    @IBAction func sendButtonPressed(_ sender: UIButton) {
-//
-//        messageTextView.endEditing(true)
-//        messageTextView.isEditable = false
-//        sendButton.isEnabled = false
-//
-//        let now = Date()
-//        let formatter = DateFormatter()
-//        // initially set the format based on your datepicker date
-//        formatter.dateFormat = "MMMM d, yyyy h:mm a"
-//        let currentDate = formatter.string(from: now)
-//
-//        // data we want to save in our database
-//        if !messageTextView.text!.isEmpty {
-//
-//            let messageItem = MessageItem(message: messageTextView.text, timestamp: currentDate)
-//
-//            MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
-//                if success == true {
-//                    print("SUCCESS WRITING MESSAGE: \(success)")
-//                    self.messageTextView.text = ""
-//                    self.messageTextView.isEditable = true
-//                    self.sendButton.isEnabled = true
-//                    return
-//                } else if success == false {
-//                    print("ERROR: NOT ABLE TO SEND MESSAGE")
-//                    self.createAlert(title: "ERROR", message: "Unable to write to database. Check your Internet connection and try again.")
-//                    self.sendButton.isEnabled = true
-//                    return
-//                }
-//            })
-//        }
-//    }
-
     // User Notes:
+    // 4 positive: Confidence, gratitude, character/itegrity,
+    // 4 negative: Depressed, anxious, stressed, angry, bored, envy, sad, lonely
     // Replace anxious over Stressed
     // Optimistic
     // Loving
     // Good or OK
 
-    func appendFifthteenHeaders(_ header0: Header, _ header1: Header, _ header2: Header, _ header3: Header,_ header4: Header, _ header5: Header, _ header6: Header, _ header7: Header, _ header8: Header, _ header9: Header, _ header10: Header,_ header11: Header, _ header12: Header,_ header13: Header,_ header14: Header, _ header15Person: Header) {
+    func appendEightHeaders(_ header0: Header, _ header1: Header, _ header2: Header, _ header3: Header,_ header4: Header, _ header5: Header, _ header6: Header, _ header7: Header, _ header8Person: Header) {
 
-        headers = [header0, header1, header2, header3, header4, header5, header6, header7, header8, header9, header10, header11, header12, header13, header14, header15Person]
+        headers = [header0, header1, header2, header3, header4, header5, header6, header7, header8Person]
 
-        // set 4 'Now' tips to be displayed in initial table view
-        hints = [headers[15].hints[0],
-                headers[15].hints[1],
-                headers[15].hints[2],
-                headers[15].hints[3]]
+        // set 4 'Famous Person' tips to be displayed in initial table view
+        hints = [headers[8].hints[0],
+                headers[8].hints[1],
+                headers[8].hints[2],
+                headers[8].hints[3]]
 
         resetHeaderButtonsSetup()
     }
 
     func resetHeaderButtonsSetup() {
-        resetHeaderButtonOriginalStyle(button: mood0Button, buttonTitle: headers[0].title)
-        resetHeaderButtonOriginalStyle(button: mood1Button, buttonTitle: headers[1].title)
-        resetHeaderButtonOriginalStyle(button: mood2Button, buttonTitle: headers[2].title)
-        resetHeaderButtonOriginalStyle(button: mood3Button, buttonTitle: headers[3].title)
-        resetHeaderButtonOriginalStyle(button: mood4Button, buttonTitle: headers[4].title)
-        resetHeaderButtonOriginalStyle(button: mood5Button, buttonTitle: headers[5].title)
-        resetHeaderButtonOriginalStyle(button: mood6Button, buttonTitle: headers[6].title)
-        resetHeaderButtonOriginalStyle(button: mood7Button, buttonTitle: headers[7].title)
-        resetHeaderButtonOriginalStyle(button: mood8Button, buttonTitle: headers[8].title)
-        resetHeaderButtonOriginalStyle(button: mood9Button, buttonTitle: headers[9].title)
-        resetHeaderButtonOriginalStyle(button: mood10Button, buttonTitle: headers[10].title)
-        resetHeaderButtonOriginalStyle(button: mood11Button, buttonTitle: headers[11].title)
-        resetHeaderButtonOriginalStyle(button: mood12Button, buttonTitle: headers[12].title)
-        resetHeaderButtonOriginalStyle(button: mood13Button, buttonTitle: headers[13].title)
-        resetHeaderButtonOriginalStyle(button: mood14Button, buttonTitle: headers[14].title)
+        resetHeaderButtonOriginalStyle(button: header0Button, buttonTitle: headers[0].title)
+        resetHeaderButtonOriginalStyle(button: header1Button, buttonTitle: headers[1].title)
+        resetHeaderButtonOriginalStyle(button: header2Button, buttonTitle: headers[2].title)
+        resetHeaderButtonOriginalStyle(button: header3Button, buttonTitle: headers[3].title)
+        resetHeaderButtonOriginalStyle(button: header4Button, buttonTitle: headers[4].title)
+        resetHeaderButtonOriginalStyle(button: header5Button, buttonTitle: headers[5].title)
+        resetHeaderButtonOriginalStyle(button: header6Button, buttonTitle: headers[6].title)
+        resetHeaderButtonOriginalStyle(button: header7Button, buttonTitle: headers[7].title)
+
     }
 
     private func resetHeaderButtonOriginalStyle(button: RoundCorneredButton, buttonTitle: String) {
@@ -706,21 +397,23 @@ class JournalViewController: UIViewController {
     }
 
     // MARK: TODO
-    func updateAdvice(_ newTips: [Hint]) {
-
-        // update model object
-
-        UIView.animate(withDuration: 0.5) {
-
-            // update tableview
-            self.tipItems = newTips
-            self.configureTableView()
-            self.journalTableView.reloadData()
-            // Scroll to top
-            self.journalTableView.layoutIfNeeded()
-            self.journalTableView.contentOffset = CGPoint(x: 0, y: -self.journalTableView.contentInset.top)
-        }
-    }
+//    func updateAdvice(_ newTips: [Hint]) {
+//
+//        // update model object
+//
+//        UIView.animate(withDuration: 0.5) {
+//
+//            // Scroll to top
+//            self.journalTableView.layoutIfNeeded()
+//            self.journalTableView.contentOffset = CGPoint(x: 0, y: -self.journalTableView.contentInset.top)
+//
+//            // update tableview
+//            self.tipItems = newTips
+//            self.configureTableView()
+//            self.journalTableView.reloadData()
+//
+//        }
+//    }
 
 
 
@@ -732,144 +425,94 @@ class JournalViewController: UIViewController {
     }
 
 
-    @IBAction func moodButtonTapped(_ sender: RoundCorneredButton) {
 
-        // Plan to add response in next version of app
+    @IBAction func headerButtonTapped(_ sender: RoundCorneredButton) {
 
-        switch sender {
-        case mood0Button:
-            selectedMood = Constants.SelectedMood.Button0
-            updateQuote(MoodData.greatQuote0)
-            updateAdvice(MoodData.great0Tips1) //*
-        case mood1Button:
-            selectedMood = Constants.SelectedMood.Button1
-            updateQuote(MoodData.goodQuote0)
-            updateAdvice(MoodData.good0Tips1) //*
-        case mood2Button:
-            selectedMood = Constants.SelectedMood.Button2
-            updateQuote(MoodData.boredQuote0)
-            updateAdvice(MoodData.bored0Tips1) //
-        case mood3Button:
-            selectedMood = Constants.SelectedMood.Button3
-            updateQuote(MoodData.depressedQuote0)
-            updateAdvice(MoodData.depressed0Tips1) //*
-        case mood4Button:
-            selectedMood = Constants.SelectedMood.Button4
-            updateQuote(MoodData.sadQuote0)
-            updateAdvice(MoodData.sad0Tips1) //*
-        case mood5Button:
-            selectedMood = Constants.SelectedMood.Button5
-            updateQuote(MoodData.proudQuote0)
-            updateAdvice(MoodData.proud0Tips1) //*
-        case mood6Button:
-            selectedMood = Constants.SelectedMood.Button6
-            updateQuote(MoodData.hopefulQuote0)
-            updateAdvice(MoodData.hopeful0Tips1) //*
-        case mood7Button:
-            selectedMood = Constants.SelectedMood.Button7
-            updateQuote(MoodData.anxietyQuote0)
-            updateAdvice(MoodData.anxiety0Tips1) //
-        case mood8Button:
-            selectedMood = Constants.SelectedMood.Button8
-            updateQuote(MoodData.stressedQuote0)
-            updateAdvice(MoodData.stressed0Tips1) //*
-        case mood9Button:
-            selectedMood = Constants.SelectedMood.Button9
-            updateQuote(MoodData.madQuote0)
-            updateAdvice(MoodData.mad0Tips1) //*
-        case mood10Button:
-            selectedMood = Constants.SelectedMood.Button10
-            updateQuote(MoodData.calmQuote0)
-            updateAdvice(MoodData.calm0Tips1) //*
-        case mood11Button:
-            selectedMood = Constants.SelectedMood.Button11
-            updateQuote(MoodData.restlessQuote0)
-            updateAdvice(MoodData.restless0Tips1) //*
-        case mood12Button:
-            selectedMood = Constants.SelectedMood.Button12
-            updateQuote(MoodData.insecureQuote0)
-            updateAdvice(MoodData.insecure0Tips1) //
-        case mood13Button:
-            selectedMood = Constants.SelectedMood.Button13
-            updateQuote(MoodData.envyQuote0)
-            updateAdvice(MoodData.envy0Tips1) //*
-        case mood14Button:
-            selectedMood = Constants.SelectedMood.Button14
-            updateQuote(MoodData.lonelyQuote0)
-            updateAdvice(MoodData.lonely0Tips1) //*
-        default:
-            print("ERROR: No button exists")
-            break
+        if let headerNumber = headerButtons.index(of: sender) {
+
+            print("ANDREW: headerButtonTapped", headerNumber)
+
+            flipButton(at: headerNumber, withText: headers[headerNumber].title, on: sender)
+            journalTableView.reloadData()
+        } else {
+            createAlert(title: "ERROR", message: "Could not laod buttons.")
         }
-
-        // MARK: No longer sending mood to DB
-//        sendMoodToFirebase(selectedMood: selectedMood)
-
     }
 
-    func sendMoodToFirebase(selectedMood: String) {
-        let now = Date()
-        let formatter = DateFormatter()
-        // initially set the format based on your datepicker date
-        formatter.dateFormat = "MMMM d, yyyy h:mm a"
-        let currentDate = formatter.string(from: now)
+    func flipButton(at indexNumber: Int, withText text: String, on button: RoundCorneredButton) {
 
-        // ****
-        let selectedButtonText = "Mood: \(selectedMood)"
+        print("ANDREW: indexNumber \(indexNumber, text)")
 
-
-        let messageItem = MessageItem(message: selectedButtonText, timestamp: currentDate)
-
-        MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
-            if success == true {
-                print("SUCCESS WRITING BUTTON MOOD: \(success)")
-            }
-        })
+        if button.currentTitle == text {
+            print("Tapped an unselected topic button, display X")
+            resetHeaderButtonsSetup()
+            let selectedButtonIcon = Constants.Now.selectedIconDisplay
+            button.setTitle("\(selectedButtonIcon)", for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = UIColor.gray
+            headerSelected(indexNumber)
+        } else {
+            print("Tapped 'X' button, reset to Now Tips and remove X")
+            button.setTitle(text, for: .normal)
+            button.backgroundColor = .white
+            button.setTitleColor(.black, for: .normal)
+            resetHeaderButtonsSetup()
+            headerSelected(headerButtons.count)
+        }
     }
 
-    func sendMood(_ moodDictionary: [String:String?]) {
+    func headerSelected(_ index: Int) {
+        hints = []
 
-        let currentUID = User.current.uid
-        print("CurrentUID: \(currentUID)")
+        // Take selected index in topics array and subtract 1 because we start with zero
+        let counter = (headers[index].hints.count - 1)
 
-        let messagesDB = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID)
-        // like specifying "/Messages/[some_auto_id]"
-        // Then, .setValue, sets a value to the key (key value pair)
-        messagesDB.childByAutoId().setValue(moodDictionary) {
-            (error, reference) in
-            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
-            if error != nil {
-                print(error!)
-            } else {
-                print("Mood saved successfully")
-            }
+        for item in 0...counter {
+            hints.append(headers[index].hints[item])
         }
     }
 
 
-    @IBAction func mediaButtonTapped(_ sender: UIButton) {
 
-//        print("Learn more button tapped")
+
+//    func sendMoodToFirebase(selectedMood: String) {
+//        let now = Date()
+//        let formatter = DateFormatter()
+//        // initially set the format based on your datepicker date
+//        formatter.dateFormat = "MMMM d, yyyy h:mm a"
+//        let currentDate = formatter.string(from: now)
 //
-//        let app = UIApplication.shared
+//        // ****
+//        let selectedButtonText = "Mood: \(selectedMood)"
 //
-//        if let url = advice.url {
 //
-//            // print: true or false
-//            print("verifyURL: \(verifyUrl(urlString: url))")
+//        let messageItem = MessageItem(message: selectedButtonText, timestamp: currentDate)
 //
-//            if verifyUrl(urlString: url) == true {
-//                performUIUpdatesOnMain {
-//                    app.open(URL(string:url)!)
-//                }
+//        MessageItemService.writeMessage(for: User.current, message: messageItem, success: { (success) in
+//            if success == true {
+//                print("SUCCESS WRITING BUTTON MOOD: \(success)")
+//            }
+//        })
+//    }
+//
+//    func sendMood(_ moodDictionary: [String:String?]) {
+//
+//        let currentUID = User.current.uid
+//        print("CurrentUID: \(currentUID)")
+//
+//        let messagesDB = ref.child(FirebaseConstants.DbChild.Messages).child(currentUID)
+//        // like specifying "/Messages/[some_auto_id]"
+//        // Then, .setValue, sets a value to the key (key value pair)
+//        messagesDB.childByAutoId().setValue(moodDictionary) {
+//            (error, reference) in
+//            // save our messageDictionary inside our messageDB under a random unique identifier. Add a trailing closure
+//            if error != nil {
+//                print(error!)
 //            } else {
-//                performUIUpdatesOnMain {
-//                    self.createAlert(title: "Could not open URL", message: "Check Internet connection and try again.")
-//                }
+//                print("Mood saved successfully")
 //            }
 //        }
-    }
-
+//    }
 
 
 
@@ -881,9 +524,12 @@ class JournalViewController: UIViewController {
 extension JournalViewController: UITableViewDataSource {
 
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tipItems.count
+        return hints.count
     }
 
     /* Configuring the Timestamp with DateFormatter:
@@ -894,10 +540,10 @@ extension JournalViewController: UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath) as! JournalTableViewCell
 
-        let tip = tipItems[indexPath.row]
+        let hint = hints[indexPath.row]
 
         // To change UI of cell, see JournalTableViewCell.
-        cell.configureCell(tip: tip)
+        cell.configureCell(tip: hint)
 
         cell.boarderColorView.layer.borderWidth = 0.5
         cell.boarderColorView.layer.cornerRadius = 5
@@ -930,11 +576,11 @@ extension JournalViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         journalTableView.deselectRow(at: indexPath, animated: true)
-        let tip = tipItems[indexPath.row]
+        let hint = hints[indexPath.row]
 
         let app = UIApplication.shared
         let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell", for: indexPath) as! JournalTableViewCell
-        if let url = tip.sourceURL {
+        if let url = hint.sourceURL {
 
             // print: true or false
             print("verifyURL: \(verifyUrl(urlString: url))")
