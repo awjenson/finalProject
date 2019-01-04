@@ -27,6 +27,7 @@
 		DA2B860120B9EB52005B7DD6 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */; };
 		DA2B860320BB3A30005B7DD6 /* InternetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B860220BB3A30005B7DD6 /* InternetService.swift */; };
 		DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */; };
+		DA346D4321DD9A980093FF5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA346D4221DD9A980093FF5C /* Assets.xcassets */; };
 		DA359C642043324F000190AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C632043324F000190AD /* AppDelegate.swift */; };
 		DA359C692043324F000190AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C672043324F000190AD /* Main.storyboard */; };
 		DA359C6E2043324F000190AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C6C2043324F000190AD /* LaunchScreen.storyboard */; };
@@ -65,7 +66,6 @@
 		DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898882051E8EC005046D8 /* ProfileDataResults.swift */; };
 		DA78988D2052EFA1005046D8 /* NowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988C2052EFA1005046D8 /* NowViewController.swift */; };
 		DA78988F2053102E005046D8 /* NowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988E2053102E005046D8 /* NowTableViewCell.swift */; };
-		DA8C088920FC2BD0000E050E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8C088820FC2BD0000E050E /* Assets.xcassets */; };
 		DA8C088B20FC31EC000E050E /* JournalImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C088A20FC31EC000E050E /* JournalImages.swift */; };
 		DA9CC27720FD3B58001A89B7 /* RoundedSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CC27620FD3B58001A89B7 /* RoundedSquareButton.swift */; };
 		DA9CC27920FD5413001A89B7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CC27820FD5413001A89B7 /* UIView+Extension.swift */; };
@@ -117,6 +117,7 @@
 		DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		DA2B860220BB3A30005B7DD6 /* InternetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetService.swift; sourceTree = "<group>"; };
 		DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectedPerson.swift; sourceTree = "<group>"; };
+		DA346D4221DD9A980093FF5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../Downloads/finalProject-master/finalProject/Assets.xcassets"; sourceTree = "<group>"; };
 		DA359C602043324F000190AD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA359C632043324F000190AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA359C682043324F000190AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,7 +158,6 @@
 		DA7898882051E8EC005046D8 /* ProfileDataResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataResults.swift; sourceTree = "<group>"; };
 		DA78988C2052EFA1005046D8 /* NowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowViewController.swift; sourceTree = "<group>"; };
 		DA78988E2053102E005046D8 /* NowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowTableViewCell.swift; sourceTree = "<group>"; };
-		DA8C088820FC2BD0000E050E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8C088A20FC31EC000E050E /* JournalImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalImages.swift; sourceTree = "<group>"; };
 		DA9CC27620FD3B58001A89B7 /* RoundedSquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSquareButton.swift; sourceTree = "<group>"; };
 		DA9CC27820FD5413001A89B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -306,7 +306,7 @@
 		DA359C622043324F000190AD /* finalProject */ = {
 			isa = PBXGroup;
 			children = (
-				DA8C088820FC2BD0000E050E /* Assets.xcassets */,
+				DA346D4221DD9A980093FF5C /* Assets.xcassets */,
 				DA359C632043324F000190AD /* AppDelegate.swift */,
 				DA361D2B20840A25007ACE59 /* Storyboards */,
 				DA361D2A208409A8007ACE59 /* Firebase */,
@@ -597,7 +597,7 @@
 				DA5AED9F207683120094AA57 /* GoogleService-Info.plist in Resources */,
 				DA361D2D20840DD3007ACE59 /* Login.storyboard in Resources */,
 				DA359C692043324F000190AD /* Main.storyboard in Resources */,
-				DA8C088920FC2BD0000E050E /* Assets.xcassets in Resources */,
+				DA346D4321DD9A980093FF5C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
