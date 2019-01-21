@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Firebase
-import GrowingTextView
-import SVProgressHUD
+//import Firebase
+//import GrowingTextView
+//import SVProgressHUD
 import SafariServices // to display webview
 
 class JournalViewController: UIViewController {
@@ -64,7 +64,7 @@ class JournalViewController: UIViewController {
     // initial setup
     var messageSentToday = false
 
-    var ref: DatabaseReference!
+//    var ref: DatabaseReference!
 
     // Time and Date
     let formatter = DateFormatter()
@@ -134,7 +134,7 @@ class JournalViewController: UIViewController {
         // determines which buttons headers and hints are displayed
         dayOfWeekAndHour()
 
-        configureDatabase()
+//        configureDatabase()
 
         setupButtonsQuoteImage()
 
@@ -148,7 +148,7 @@ class JournalViewController: UIViewController {
     func journalTableViewSetup() {
         journalTableView.dataSource = self
         journalTableView.delegate = self
-        journalTableView.rowHeight = UITableViewAutomaticDimension
+        journalTableView.rowHeight = UITableView.automaticDimension
         journalTableView.estimatedRowHeight = 44
         journalTableView.separatorStyle = .none
         self.setupRefreshControl()
@@ -348,12 +348,12 @@ class JournalViewController: UIViewController {
 
 
 
-    func configureDatabase() {
-        ref = Database.database().reference().child(FirebaseConstants.DbChild.Messages).child(User.current.uid)
-    }
+//    func configureDatabase() {
+//        ref = Database.database().reference().child(FirebaseConstants.DbChild.Messages).child(User.current.uid)
+//    }
 
     func configureTableView() {
-        journalTableView.rowHeight = UITableViewAutomaticDimension
+        journalTableView.rowHeight = UITableView.automaticDimension
         journalTableView.estimatedRowHeight = 100.0
     }
 
@@ -525,7 +525,7 @@ extension JournalViewController: UITableViewDataSource {
 
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

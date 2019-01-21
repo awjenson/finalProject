@@ -11,7 +11,7 @@ import UIKit
 class Tip {
 
     // MARK: Properties
-    let id: String
+
     let header: String
     let title: String
     let body: String
@@ -24,7 +24,6 @@ class Tip {
 
     init(header: String, title: String, body: String, sourceName: String, sourceURL: String?, sponsorLogo: String, sponsorURL: String?) {
 
-        self.id = UUID().uuidString
         self.header = header
         self.title = title
         self.body = body

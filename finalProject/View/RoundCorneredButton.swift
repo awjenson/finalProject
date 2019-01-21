@@ -38,8 +38,15 @@ class RoundCorneredButton: UIButton {
         layer.borderColor = UIColor.lightGray.cgColor
         setTitleColor(UIColor.black, for: .normal)
         backgroundColor = UIColor(white: 1, alpha: 0.975)
+    }
 
+    func setTitleWithOutAnimation(title: String?) {
+        UIView.setAnimationsEnabled(false)
 
+        setTitle(title, for: .normal)
+
+        layoutIfNeeded()
+        UIView.setAnimationsEnabled(true)
     }
 
 }

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+//import Firebase
 
 // Unsure why this was displaying both "Not connected" and "Connected"
 

@@ -19,10 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-0X-b0r">
-                                <rect key="frame" x="20" y="80" width="280" height="413"/>
+                                <rect key="frame" x="20" y="40" width="280" height="409.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6F-oR-mh8">
+                                        <rect key="frame" x="92.5" y="0.0" width="95" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-Dl-ZAh">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="280" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="1oF-qi-li7"/>
                                         </constraints>
@@ -31,14 +37,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024@1" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-Fe-fca">
-                                        <rect key="frame" x="90" y="59" width="100" height="100"/>
+                                        <rect key="frame" x="110" y="95.5" width="60" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="dEA-Cx-ktV"/>
-                                            <constraint firstAttribute="width" constant="100" id="qq0-e5-wlk"/>
+                                            <constraint firstAttribute="height" constant="60" id="dEA-Cx-ktV"/>
+                                            <constraint firstAttribute="width" constant="60" id="qq0-e5-wlk"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-Jt-22R" customClass="RoundCorneredButton" customModule="finalProject" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="174" width="200" height="44"/>
+                                        <rect key="frame" x="40" y="170.5" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="MCK-Ep-i3Q"/>
@@ -52,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgH-VH-C6l">
-                                        <rect key="frame" x="0.0" y="233" width="280" height="180"/>
+                                        <rect key="frame" x="0.0" y="229.5" width="280" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="aoE-D3-JO4"/>
                                         </constraints>
@@ -81,7 +87,7 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OTh-0X-b0r" firstAttribute="leading" secondItem="dTo-Ez-xme" secondAttribute="leading" constant="20" id="EcM-LW-vcV"/>
-                            <constraint firstItem="OTh-0X-b0r" firstAttribute="top" secondItem="dTo-Ez-xme" secondAttribute="top" constant="60" id="SA5-ep-G8u"/>
+                            <constraint firstItem="OTh-0X-b0r" firstAttribute="top" secondItem="dTo-Ez-xme" secondAttribute="top" constant="20" id="SA5-ep-G8u"/>
                             <constraint firstItem="dTo-Ez-xme" firstAttribute="bottom" secondItem="rDb-vY-Ifw" secondAttribute="bottom" constant="20" id="Tg7-Ux-fG5"/>
                             <constraint firstAttribute="trailing" secondItem="OTh-0X-b0r" secondAttribute="trailing" constant="20" id="dpj-di-pfc"/>
                             <constraint firstItem="rDb-vY-Ifw" firstAttribute="centerX" secondItem="1S7-hN-0zR" secondAttribute="centerX" id="fPw-YA-rkr"/>
@@ -134,7 +140,7 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Tabs:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-KG-rXX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Tabs:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-KG-rXX">
                                                         <rect key="frame" x="0.0" y="74" width="290" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                         <nil key="textColor"/>
@@ -143,34 +149,34 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kRG-O9-miZ">
-                                                <rect key="frame" x="0.0" y="100.5" width="290" height="88"/>
+                                                <rect key="frame" x="0.0" y="100.5" width="290" height="190.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-mt-woN">
-                                                        <rect key="frame" x="113" y="0.0" width="64.5" height="35.5"/>
+                                                        <rect key="frame" x="113" y="0.0" width="64.5" height="138"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="clock_icon" translatesAutoresizingMaskIntoConstraints="NO" id="56p-Vo-Pop">
-                                                                <rect key="frame" x="0.0" y="5.5" width="25" height="25"/>
+                                                                <rect key="frame" x="0.0" y="56.5" width="25" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="ZsR-aV-y9r"/>
                                                                     <constraint firstAttribute="width" constant="25" id="uHB-59-giE"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIG-dq-uzY">
-                                                                <rect key="frame" x="29" y="7.5" width="35.5" height="20.5"/>
+                                                                <rect key="frame" x="29" y="59" width="35.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The tips are displayed based on the time of day ☀️ so you only see tips that you can use right now 😎" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GY2-FS-iie">
-                                                        <rect key="frame" x="0.0" y="40.5" width="290" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Get tips based on the time of day ☀️ and your location 🏡" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GY2-FS-iie">
+                                                        <rect key="frame" x="12.5" y="143" width="265" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👉 Tap a tip to go to the original source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="wkx-zj-bXO">
-                                                        <rect key="frame" x="40.5" y="74.5" width="209" height="13.5"/>
+                                                        <rect key="frame" x="40.5" y="177" width="209" height="13.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -178,7 +184,7 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7SP-A2-kJD">
-                                                <rect key="frame" x="0.0" y="200.5" width="290" height="77.5"/>
+                                                <rect key="frame" x="0.0" y="303" width="290" height="63"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bvz-8P-03y">
                                                         <rect key="frame" x="108" y="0.0" width="74" height="25"/>
@@ -198,49 +204,14 @@ Self- provides time-based tips to help you make smarter decisions throughout you
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Relax by reading an inspirational quote or get tips based on your current mood 🙁😊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="18K-1D-mRK">
-                                                        <rect key="frame" x="3.5" y="30" width="283.5" height="29"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Get tips based on your current mood 🙁😊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="18K-1D-mRK">
+                                                        <rect key="frame" x="22.5" y="30" width="245.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👉 Tap a tip to go to the origial source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-Tx-yqt">
-                                                        <rect key="frame" x="44" y="64" width="202.5" height="13.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aMx-Dp-EWO">
-                                                <rect key="frame" x="0.0" y="290" width="290" height="76"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-hI-czr">
-                                                        <rect key="frame" x="105" y="0.0" width="80" height="25"/>
-                                                        <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="stories_deselected_icon" translatesAutoresizingMaskIntoConstraints="NO" id="pfn-X0-lmf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="gbS-Wi-8g7"/>
-                                                                    <constraint firstAttribute="width" constant="25" id="kfc-GO-RDj"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Habits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ce6-Zi-zga">
-                                                                <rect key="frame" x="29" y="2.5" width="51" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                                <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Track your daily habits 🏋️‍♂️✅ 🥗✅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="QBa-Mx-Ddk">
-                                                        <rect key="frame" x="44" y="30" width="202.5" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👉 Tap a cell to increase a habit's count. Swipe left on a cell to delete a habit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="veW-qA-8ks">
-                                                        <rect key="frame" x="1" y="49.5" width="288.5" height="26.5"/>
+                                                        <rect key="frame" x="44" y="49.5" width="202.5" height="13.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -314,6 +285,5 @@ Self- provides time-based tips to help you make smarter decisions throughout you
         <image name="1024@1" width="1024" height="1024"/>
         <image name="check_in_icon" width="20" height="20"/>
         <image name="clock_icon" width="30" height="30"/>
-        <image name="stories_deselected_icon" width="16" height="20"/>
     </resources>
 </document>

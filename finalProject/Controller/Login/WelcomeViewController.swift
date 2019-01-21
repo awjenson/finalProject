@@ -12,10 +12,10 @@
 // https://classroom.udacity.com/nanodegrees/nd003/parts/678d613a-7f60-4330-9aa3-8fc2e2be2b89/modules/0a581284-b899-4196-84bd-8c61184c8006/lessons/fce29016-a52a-4740-95fe-ccf0ab16710c/concepts/60c2664c-3419-4b96-a2cb-42865f29e89f
 
 import UIKit
-import Firebase
-import FirebaseUI
+//import Firebase
+//import FirebaseUI
 //import FirebaseGoogleAuthUI
-import SVProgressHUD
+//import SVProgressHUD
 
 //class WelcomeViewController: UIViewController {
 //
