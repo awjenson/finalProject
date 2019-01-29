@@ -25,6 +25,10 @@ class NowViewController: UIViewController {
 
     @IBOutlet weak var natureImageView: UIImageView!
 
+
+    @IBOutlet weak var clearBufferView: UIView!
+
+
     @IBOutlet weak var greetingLabel: ShadowLabel!
 
     @IBOutlet weak var questionLabel: ShadowLabel!
@@ -59,8 +63,16 @@ class NowViewController: UIViewController {
     let date = Date()
     let calendar = Calendar.current
 
+    var currentIndex:Int = -1 //initial integer since UIButton.indexe start at 0
+
     // pull to refresh tableView
-    let refreshControl = UIRefreshControl()
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControl.Event.valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+
+        return refreshControl
+    }()
 
     // Tips and Topics
 
@@ -72,6 +84,10 @@ class NowViewController: UIViewController {
 
 
     // MARK: - Lifecycle Methods
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,30 +112,39 @@ class NowViewController: UIViewController {
 
         dayOfWeekAndHour()
 
-
-        // Shadow and Radius of returnToTopButton
-        returnToTopButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
-        returnToTopButton.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
-        returnToTopButton.layer.shadowOpacity = 0.9
-        returnToTopButton.layer.shadowRadius = 0.0
-        returnToTopButton.layer.masksToBounds = false
-        returnToTopButton.layer.cornerRadius = 5.0
-
         // Positioning of the buttons
-        topicView.frame.size.height = self.view.frame.size.height * 0.7
+        natureImageView.frame.size.width = self.view.frame.width
+        natureImageView.frame.size.height = natureImageView.frame.size.width
+        topicView.frame.size.height = natureImageView.frame.size.height + 100 + 130 + 30
+
+//        topicView.frame.size.height = (self.view.frame.size.height + natureImageView.frame.size.height)
 
         // set footer
-        footerView.frame.size.height = self.view.frame.size.height * 0.4
-
-
+//        footerView.frame.size.height = self.view.frame.size.height * 0.4
+        sizeFooterToFit()
 
         nowTableViewSetup()
-
-        self.setupRefreshControl()
 
     }
 
 
+
+    func sizeFooterToFit() {
+        if let footerView = nowTableView.tableFooterView {
+            footerView.setNeedsLayout()
+            footerView.layoutIfNeeded()
+
+            let height = footerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+            var frame = footerView.frame
+            frame.size.height = height
+            footerView.frame = frame
+
+            nowTableView.tableFooterView = footerView
+        }
+    }
+
+     // MARK: - Refresh Control
+    // https://medium.com/anantha-krishnan-k-g/pull-to-refresh-how-to-implement-f915743703f8
 
     func nowTableViewSetup() {
         // set estimated row height (needed for auto row height size)
@@ -128,42 +153,26 @@ class NowViewController: UIViewController {
         nowTableView.dataSource = self
         nowTableView.delegate = self
         nowTableView.separatorStyle = .none
+
+        self.nowTableView.addSubview(self.refreshControl)
     }
 
-    // MARK: - Refresh Control
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
 
-    func setupRefreshControl() {
-
-        // add pull to refresh
-        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        nowTableView.addSubview(refreshControl)
-    }
-
-    // Call this inside UIButton to scroll to top
-    func scrollToTop(){
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(row: self.tips.count-1, section: 0)
-            self.nowTableView.scrollToRow(at: indexPath, at: .top, animated: true)
-        }
-    }
-
-
-
-    @objc func reloadTimeline() {
-
-        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
-        if self.refreshControl.isRefreshing {
-            // Reload time based array
-            setupUI()
-            self.refreshControl.endRefreshing()
-        }
+        // Simply adding an object to the data source for this example
+        // Reload time based array
+        print("REFRESHING!!!")
+        setupUI()
 
         performUIUpdatesOnMain {
             self.nowTableView.reloadData()
         }
-
+        refreshControl.endRefreshing()
     }
+
+
 
     // MARK: - Time-based Functions
 
@@ -486,7 +495,7 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekdayTF, Very Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(homePMTopic0, lateNightSnackTopic0, bedtimeTopic3,   meditationTopic0, barTopic1, dateTopic2, weekdayNow0to4Topic0)
+            appendSevenTopics(homePMTopic4, lateNightSnackTopic0, bedtimeTopic3,   meditationTopic0, barTopic1, dateTopic2, weekdayNow0to4Topic0)
 
             setNatureImage(to: "night5")
         case 5...8:
@@ -528,7 +537,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerAfter9PMTopic0, barTopic0, dateTopic2, homePMTopic0, bedtimeTopic3, lateNightSnackTopic0, weekdayNow21to24Topic3)
+            appendSevenTopics(dinnerAfter9PMTopic0, barTopic0, dateTopic2, homePMTopic4, bedtimeTopic3, lateNightSnackTopic0, weekdayNow21to24Topic3)
 
             setNatureImage(to: "night5")
         default:
@@ -543,7 +552,7 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekday Fri, Very Early Morning")
             // call function to display 9 time-based topics
-            appendSevenTopics(bedtimeTopic4, lateNightSnackTopic0, homePMTopic1, meditationTopic0, barTopic1, dateTopic0, weekdayNow0to4Topic1)
+            appendSevenTopics(bedtimeTopic4, lateNightSnackTopic0, homePMTopic0, meditationTopic0, barTopic1, dateTopic0, weekdayNow0to4Topic1)
 
             setNatureImage(to: "night6")
 
@@ -586,7 +595,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerAfter9PMTopic1, barTopic3, dateTopic2, homePMTopic2, lateNightSnackTopic0, bedtimeTopic4, weekdayNow21to24Topic4) // Update Now to Friday
+            appendSevenTopics(dinnerAfter9PMTopic1, barTopic3, dateTopic2, homePMTopic3, lateNightSnackTopic0, bedtimeTopic4, weekdayNow21to24Topic4) // Update Now to Friday
 
             setNatureImage(to: "night6")
         default:
@@ -642,7 +651,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendSevenTopics(dinnerAfter9PMTopic1, barTopic3, dateTopic2, homePMTopic3, lateNightSnackTopic0, bedtimeTopic3, weekendNow21to24Topic0)
+            appendSevenTopics(dinnerAfter9PMTopic1, barTopic3, dateTopic2, homePMTopic4, lateNightSnackTopic0, bedtimeTopic3, weekendNow21to24Topic0)
 
             setNatureImage(to: "night7")
 
@@ -657,19 +666,11 @@ class NowViewController: UIViewController {
         }
     }
 
-    func resetTopicButtonsSetup() {
-        resetTopicButtonOriginalStyle(button: topic0Button, buttonTitle: topics[0].title)
-        resetTopicButtonOriginalStyle(button: topic1Button, buttonTitle: topics[1].title)
-        resetTopicButtonOriginalStyle(button: topic2Button, buttonTitle: topics[2].title)
-        resetTopicButtonOriginalStyle(button: topic3Button, buttonTitle: topics[3].title)
-        resetTopicButtonOriginalStyle(button: topic4Button, buttonTitle: topics[4].title)
-        resetTopicButtonOriginalStyle(button: topic5Button, buttonTitle: topics[5].title)
-    }
 
-    private func resetTopicButtonOriginalStyle(button: RoundCorneredButton, buttonTitle: String) {
+    private func resetTopicButtonOriginalStyle(button: RoundCorneredButton) {
 
         performUIUpdatesOnMain {
-            button.setTitle(buttonTitle, for: .normal)
+
             button.setTitleColor(UIColor.black, for: .normal)
             button.backgroundColor = UIColor(white: 1, alpha: 0.975)
         }
@@ -688,24 +689,37 @@ class NowViewController: UIViewController {
 
 
         // set 4 'Now' tips to be displayed in initial table view
+        appendNowTips()
+
+//        resetTopicButtonsSetup()
+    }
+
+    func appendNowTips() {
         tips = [topics[6].tip[0],
                 topics[6].tip[1],
                 topics[6].tip[2],
                 topics[6].tip[3]]
 
-//        resetTopicButtonsSetup()
+        print("tips array count: \(tips.count)")
     }
-
 
     // MARK: - IBActions
 
     @IBAction func returnToTopTapped(_ sender: Any) {
 
         performUIUpdatesOnMain {
-            self.nowTableView.setContentOffset(.zero, animated: true)
+            // removed animation because it was too slow
+            self.nowTableView.setContentOffset(.zero, animated: false)
         }
-
     }
+
+//    // Call this inside UIButton to scroll to top
+//    func scrollToTop(){
+//        DispatchQueue.main.async {
+//            let indexPath = IndexPath(row: self.tips.count-1, section: 0)
+//            self.nowTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+//        }
+//    }
 
 
     @IBAction func topicButtonTapped(_ sender: RoundCorneredButton) {
@@ -713,52 +727,61 @@ class NowViewController: UIViewController {
 
             print("ANDREW: topicButtonTapped", topicNumber)
 
-            flipButton(at: topicNumber, withText: topics[topicNumber].title, on: sender)
+            flipButton(at: topicNumber, on: sender)
         } else {
             performUIUpdatesOnMain {
-                self.createAlert(title: "ERROR", message: "Could not load buttons.")
+                self.createAlert(title: "ERROR", message: "Could not load selected tips.")
             }
         }
     }
 
-    func flipButton(at indexNumber: Int, withText text: String, on button: RoundCorneredButton) {
 
-        print("ANDREW: indexNumber \(indexNumber, text)")
 
-        if button.currentTitle == text {
-            print("Tapped an unselected topic button, display 'X'")
+    func flipButton(at indexNumber: Int, on button: RoundCorneredButton) {
 
-            resetTopicButtonsSetup()
+        // reset buttons to original UI display
+        resetTopicButtonOriginalStyle(button: topic0Button)
+        resetTopicButtonOriginalStyle(button: topic1Button)
+        resetTopicButtonOriginalStyle(button: topic2Button)
+        resetTopicButtonOriginalStyle(button: topic3Button)
+        resetTopicButtonOriginalStyle(button: topic4Button)
+        resetTopicButtonOriginalStyle(button: topic5Button)
 
-            let selectedButtonIcon = Constants.Now.selectedIconDisplay
+        // Identify what button was tapped
+
+        // select button previously tapped
+        // Check if this button has been tapped just prior
+        if currentIndex == indexNumber {
+
+            appendNowTips()
 
             performUIUpdatesOnMain {
-                button.setTitle("\(selectedButtonIcon)", for: .normal)
-                button.setTitleColor(.white, for: .normal)
-                button.backgroundColor = UIColor.gray
-            }
-
-            topicSelected(indexNumber)
-        } else {
-            print("Tapped 'X' button, reset to Now Tips and remove X")
-
-            performUIUpdatesOnMain {
-                button.setTitle(text, for: .normal)
                 button.backgroundColor = .white
                 button.setTitleColor(.black, for: .normal)
             }
 
-            resetTopicButtonsSetup()
-            topicSelected(topicButtons.count)
-        }
+            currentIndex = -1
+        } else {
+            // select button NOT previously tapped
+            // gray out selected button
+            // display selected topic tips
+
+            appendTipsArrayBasedOnTopicSelected(indexNumber)
+
+            performUIUpdatesOnMain {
+                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = UIColor.gray
+            }
+
+            currentIndex = indexNumber
+        }// end of else
 
         performUIUpdatesOnMain {
             self.nowTableView.reloadData()
         }
-
     }
 
-    func topicSelected(_ index: Int) {
+    func appendTipsArrayBasedOnTopicSelected(_ index: Int) {
         tips = []
 
         // Take selected index in topics array and subtract 1 because we start with zero
@@ -799,10 +822,35 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         // configure cell in UITableViewCell file
         cell.configureCell(tip: tip)
 
-        // Line seperator (extend to left)
-        cell.preservesSuperviewLayoutMargins = false
-        cell.separatorInset = UIEdgeInsets.zero
-        cell.layoutMargins = UIEdgeInsets.zero
+        // Increase-line-spacing-in-uilabel
+        // https://stackoverflow.com/questions/39158604/how-to-increase-line-spacing-in-uilabel-in-swift
+        // *** Create attributedString constants
+        let attributedStringTitle = NSMutableAttributedString(string: tip.title)
+        let attributedStringBody = NSMutableAttributedString(string: tip.body)
+
+
+        // *** Create instance of `NSMutableParagraphStyle`
+        let paragraphStyleTitle = NSMutableParagraphStyle()
+        let paragraphStyleBody = NSMutableParagraphStyle()
+
+        // *** set LineSpacing property in points ***
+        paragraphStyleTitle.lineSpacing = 2 // Whatever line spacing you want in points
+        paragraphStyleBody.lineSpacing = 5
+
+        // *** Apply attribute to strings ***
+        attributedStringTitle.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyleTitle, range:NSMakeRange(0, attributedStringTitle.length))
+
+        attributedStringBody.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyleBody, range:NSMakeRange(0, attributedStringBody.length))
+
+        // *** Set Attributed String to your label ***
+        cell.titleLabel.attributedText = attributedStringTitle
+        cell.bodyLabel.attributedText = attributedStringBody
+
+        // P.S. I may want to do this later (create extension)
+        // https://medium.com/@nimjea/custom-label-effects-in-swift-4-69ec12ba2178
+
+
+
 
         return cell
     }
