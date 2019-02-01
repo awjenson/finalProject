@@ -8,7 +8,6 @@
 
 import Foundation
 
-/*
 
 struct MoodData {
 
@@ -21,7 +20,7 @@ struct MoodData {
 
     // Button0 = " Sad "
     // Tip:
-    static let sadQuote0 = Quote(quote: "\"Things that I feel really sad about, I talk about. That way, if it's funny, it doesn't hurt anymore.\"", source: "Pete Davidson")
+    static let sadQuote0 = Quote(quote: "\"Things that I feel really sad about, I talk about. That way, if it's funny, it doesn't hurt anymore.\"", source: "Pete Davidson", bio: "")
     static let sadTip1 = Hint(title: "Advice to reduce sadness", body: "Remember, it will get better. Talk to someone. Get out in nature. Listen to upbeat music. Watch a funny TV show. Cry. Focus on the good and move on.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/maria-rodale/21-ways-to-deal-with-sadn_b_5803672.html")
     static let sadTip2 = Hint(title: Constants.Header.watch, body: "PROBLEMS - Watch This When You Feel Down (Powerful Motivation!)", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=p4F5UXN_AVk")
 
@@ -34,7 +33,7 @@ struct MoodData {
 
     // Button1 = "Depressed"
     //
-    static let depressedQuote0 = Quote(quote: "\"I found that with depression, one of the most important things you could realize is that you're not alone.\"", source: "Dwayne Johnson")
+    static let depressedQuote0 = Quote(quote: "\"I found that with depression, one of the most important things you could realize is that you're not alone.\"", source: "Dwayne Johnson", bio: "")
 
     static let depressedTip1 = Hint(title: "Advice to reduce depression", body: "Follow a daily routine to get back on track. Exercise will release feel-good chemicals. Challenge your negative thoughts with logical questioning. Help others. Eat healthy foods. Do something that you enjoy (watch a movie, walk in nature, or spend time with friends). Go to bed and get up at the same time every day.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/depression/features/natural-treatments")
     static let depressedTip2 = Hint(title: Constants.Header.watch, body: "Depression Motivation - Broken heart, Anxiety and Hard Times", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=VFX2Nqwwm44")
@@ -50,6 +49,7 @@ struct MoodData {
     static let depressedPMTip9 = Hint(title: "Screen time leads to unhappiness, several studies conclude", body: "Teens who spent more time on the internet, playing computer games, on social media, texting, using video chat or watching TV were less happy. However, teens who spent more time seeing their friends in person, exercising, playing sports, attending religious services, reading or even doing homework were happier.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/")
     static let depressedPMTip10 = Hint(title: "Teens who spent 5+ hours a day online were twice as likely to be unhappy as those who spent less than an hour a day", body: "In one experiment, people who were randomly assigned to give up Facebook for a week ended that time happier, less lonely and less depressed than those who continued to use Facebook.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/")
     static let depressedPMTip11 = Hint(title: "Teen's happiness levels have been decreasing since 2012 (the year when the majority of Americans owned smartphones)", body: "These declines in well-being mirror other studies finding sharp increases in mental health issues among iGen, including in depressive symptoms, major depression, self-harm and suicide. A study found the happiest teens were those who used digital media, but for a limited amount of time.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/")
+    static let depressedPMTip12 = Hint(title: "Lower depression by donating 10% of your income", body: "Researchers have found lower depression rates among Americans who donate more than 10% of their incomes (41% say they rarely or never experience depression versus 32% for everyone else.)", sourceName: "The New Republic", sourceURL: "https://newrepublic.com/article/119477/science-generosity-why-giving-makes-you-happy")
 
     // During the day
     static let depressedDayTip1 = Hint(title: "Taking walks in nature lowers depression while boosting mood and well-being", body: "", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/06/why-you-should-tell-your-team-to-take-a-break-and-go-outside")
@@ -62,7 +62,7 @@ struct MoodData {
 
 
     // Button2 = "Bored"
-    static let boredQuote0 = Quote(quote: "\"Bored with life? Throw yourself into some work you believe in with all your heart, live for it, die for it, and you will find happiness that you had thought could never be yours.\"", source: "Dale Carnegie")
+    static let boredQuote0 = Quote(quote: "\"Bored with life? Throw yourself into some work you believe in with all your heart, live for it, die for it, and you will find happiness that you had thought could never be yours.\"", source: "Dale Carnegie", bio: "")
 
     static let boredTip1 = Hint(title: "Advice to reduce boredom", body: "Chances are you feel trapped and imprisoned by your inability to grab onto anything that interests you. Tasks that are too easy are boring. See boredom as a \"call to action\". Enter a state of flow by doing activities that are both challenging and enjoyable.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/making-change/201507/how-beat-boredom")
     static let boredTip2 = Hint(title: Constants.Header.watch, body: "WHEN YOU FEEL STUCK IN LIFE - NEW Motivational Video", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=u6I-5B-80f4")
@@ -71,7 +71,7 @@ struct MoodData {
 
     // Button3 = "Good"
     //
-    static let goodQuote0 = Quote(quote: "\"The more you praise and celebrate your life, the more there is in life to celebrate.\"", source: "Oprah Winfrey")
+    static let goodQuote0 = Quote(quote: "\"The more you praise and celebrate your life, the more there is in life to celebrate.\"", source: "Oprah Winfrey", bio: "")
 
     static let goodTip1 = Hint(title: "Advice to improve wellbeing", body: "Practice gratitude because it's strongly associated with greater happiness and health. Thank someone, count your blessings, pray, keep a gratitude journal. One study found that people who wrote about gratitude were more optimistic and felt better about their lives.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier")
     static let goodTip2 = Hint(title: Constants.Header.watch, body: "WINNING PSYCHOLOGY - New Motivational Videos Compilation", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ZNmdEau_JNM&t=1s")
@@ -80,7 +80,7 @@ struct MoodData {
 
     // Button4 = "Great"
     //
-    static let greatQuote0 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams")
+    static let greatQuote0 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams", bio: "")
 
     static let greatTip1 = Hint(title: "Advice to improve wellbeing", body: "Research finds that practicing gratitude has many benefits: leads to more relationships, improves physical and psychological health, increases empathy and self-esteem, and reduces aggression and stress. What are you thankful for?", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/amymorin/2014/11/23/7-scientifically-proven-benefits-of-gratitude-that-will-motivate-you-to-give-thanks-year-round/#16c4850f183c")
     static let greatTip2 = Hint(title: Constants.Header.watch, body: "BEST MOTIVATIONAL VIDEO EVER - BE PHENOMENAL", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=wzhzkKccBi8")
@@ -89,7 +89,7 @@ struct MoodData {
 
     // Button5 = " Mad "
     // •
-    static let madQuote0 = Quote(quote: "\"Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.\"", source: "Buddha")
+    static let madQuote0 = Quote(quote: "\"Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.\"", source: "Buddha", bio: "")
     static let madTip0 = Hint(title: "Advice to reduce anger", body: "Anger can be simple to manage, once you know the basics of how and why the brain reacts to triggers. Scientific ways to calm down: \n\n• Take deep breaths \n\n• take a walk and get some fresh air \n\n• Write down why you're mad \n\n• Play loud or heavy music \n\n• Even doing nothing for two minutes was found to diminish feeling of anger", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/134593-6-ways-to-calm-down-when-youre-angry")
     static let madTip1 = Hint(title: "Daily Stoic: How To Not Be Angry", body: "Let every thought be the thought of a dying man, the Stoics say, over and over again. A dying man doesn’t have twenty four hours to be angry. A person who realizes how fragile life is doesn’t take chances in saying things they’ll have to apologize for—because they know they might not get to. Don’t hang onto anger you know you’re going to let go of later—let go of it right this second.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/how-to-not-be-angry/")
     static let madTip2 = Hint(title: Constants.Header.watch, body: "WHEN IT HURTS - 2016 MOTIVATION", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=XNj_KDPp_iM")
@@ -126,7 +126,7 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
 
     // Button7 = "Anxious"
     //
-    static let anxietyQuote0 = Quote(quote: "\"Nothing diminishes anxiety faster than action.\"", source: "Walter Anderson")
+    static let anxietyQuote0 = Quote(quote: "\"Nothing diminishes anxiety faster than action.\"", source: "Walter Anderson", bio: "")
 
     static let anxietyTip0 = Hint(title: "Common anxiety signs include", body: "• Feeling nervous, restless or tense \n\n• Having a sense of impending danger, panic or doom \n\n• Increased heart rate, breathing rapidly (hyperventilation), and sweating \n\n• Trouble concentrating or thinking about anything other than the present worry", sourceName: "Mayo Clinic", sourceURL: "https://www.mayoclinic.org/diseases-conditions/anxiety/symptoms-causes/syc-20350961")
     static let anxietyTip1 = Hint(title: "Taking action reduces anxiety", body: "• Breathe deeply and exhale slowly: Slow breathing helps slow your heart rate, and naturally calms all of the body systems involved in your body's fight-or-flight response \n\n• Think of one thing you're grateful: Research shows that it reduces stress and increases your well-being \n\n• Know that your feelings are not facts and challenge negative beliefs", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201405/22-quick-tips-change-your-anxiety-forever")
@@ -154,7 +154,7 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
 
     // Button8 = "Hopeful"
     //
-    static let hopefulQuote0 = Quote(quote: "\"May your choices reflect your hopes, not your fears.\"", source: "Nelson Mandela")
+    static let hopefulQuote0 = Quote(quote: "\"May your choices reflect your hopes, not your fears.\"", source: "Nelson Mandela", bio: "")
 
     static let hopefulTip1 = Hint(title: "Advice to become more optimistic", body: "Stop using negative phrases like \"I can't\" or \"It's impossible\" as these statement program your mind to look for negative results, stop complaining because it depresses you and everyone else, stop using profanity, and when asked \"How are you\" replace \"Ok\" and \"Good\" with \"Great\" or \"Terrific\".", sourceName: "Inc.", sourceURL: "https://www.inc.com/geoffrey-james/become-more-optimistic-6-tricks.html")
     static let hopefulTip2 = Hint(title: Constants.Header.watch, body: "HOPE - Motivational Video For 2018", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=UBk0MllCsDY")
@@ -163,7 +163,7 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
 
     // Button9 = "Proud" // cookie jar
     //
-    static let proudQuote0 = Quote(quote: "\"Whether you're tall or short, or a little bigger, more curves, skinny - you just have to be proud of what you have, and everyone is beautiful.\"", source: "Caroline Wozniacki")
+    static let proudQuote0 = Quote(quote: "\"Whether you're tall or short, or a little bigger, more curves, skinny - you just have to be proud of what you have, and everyone is beautiful.\"", source: "Caroline Wozniacki", bio: "")
     static let proudTip1 = Hint(title: "Try a practice used by a former Navy SEAL, David Goggins, called the \"cookie jar\" when you're feeling proud", body: "Your cookie jar contains all your proudest moments and failures in your life that you came back from. Then, whenever you face a challenge, you pull out a cookie — a memory that reminds you of a time that you did make it through that tough situation.", sourceName: "Big Think", sourceURL: "https://bigthink.com/videos/david-goggins-to-win-in-life-win-the-war-in-your-mind-navy-seal")
     static let proudTip2 = Hint(title: Constants.Header.watch, body: "The art of being yourself | Caroline McHugh | TEDxMiltonKeynesWomen", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=veEQQ-N9xWU")
 
@@ -171,7 +171,7 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
 
     // Button10 = "Lonely"
     //
-    static let lonelyQuote0 = Quote(quote: "\"It’s important to remember that loneliness is an epidemic shaped by many forces; the proliferation of social media, the scattered nature of American life, the transience of jobs, divorce, rise in single-parent homes, and the popularity of living alone. Acknowledging these forces takes some of the burdens off yourself.", source: "Gina Ryder")
+    static let lonelyQuote0 = Quote(quote: "\"It’s important to remember that loneliness is an epidemic shaped by many forces; the proliferation of social media, the scattered nature of American life, the transience of jobs, divorce, rise in single-parent homes, and the popularity of living alone. Acknowledging these forces takes some of the burdens off yourself.", source: "Gina Ryder", bio: "")
 
     static let lonelyTip1 = Hint(title: "Remember we all feel lonely sometimes (1 in 5 Americans suffer from loneliness)", body: "Accept your need for social connection (humans are social beings), listen to music, do something creative, work in a social setting (cafe or co-working space), call, text, or meetup with a friend, avoid using social media (scrolling mindlessly makes us lonelier), make eye contact with people, and be kind to strangers.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/conditions/how-to-not-feel-lonely/")
     static let lonelyTip2 = Hint(title: Constants.Header.watch, body: "The Simple Cure for Loneliness | Baya Voce | TEDxSaltLakeCity", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=KSXh1YfNyVA")
@@ -195,7 +195,7 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
 
     // Button12 = "Insecure"
     //
-    static let insecureQuote0 = Quote(quote: "\"Because one believes in oneself, one doesn't try to convince others. Because one is content with oneself, one doesn't need others' approval. Because one accepts oneself, the whole world accepts him or her.\"", source: "Lao Tzu")
+    static let insecureQuote0 = Quote(quote: "\"Because one believes in oneself, one doesn't try to convince others. Because one is content with oneself, one doesn't need others' approval. Because one accepts oneself, the whole world accepts him or her.\"", source: "Lao Tzu", bio: "")
 
     static let insecureTip1 = Hint(title: "Boost confidence right now", body: "• Sit up straight \n\n• Smile (the movement of the muscles in your face causes your brain to release endorphins which causess you to feel happy) \n\n• Nod your head up-and-down (the movement signals positive thoughts in your brain) \n\n• Visualize yourself scoring the winning goal or going through a tough workout (you first need to win in your head; only then can you win in the battleground) \n\n• Stand for two minutes in a wide stance with your hands in the air \n\n• Listen to heavy-bass songs \n\n• Exercise regularly \n\n• Spray on our favorite fragrance (a study found that it will make you feel more confident)", sourceName: "Greatist", sourceURL: "https://greatist.com/grow/easy-confidence-boosters")
     static let insecureTip2 = Hint(title: Constants.Header.watch, body: "Tony Robbins - How to Be More Confident and overcome shyness", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=ikpvdDQWmXI")
@@ -205,7 +205,7 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
     // Button13 = "Restless"
     // TODO: add tip for when you're feeling restless at night
     //
-    static let restlessQuote0 = Quote(quote: "\"If you don't like something, change it. If you can't change it, change your attitude.\"", source: "Maya Angelou")
+    static let restlessQuote0 = Quote(quote: "\"If you don't like something, change it. If you can't change it, change your attitude.\"", source: "Maya Angelou", bio: "")
 
     static let restlessTip1 = Hint(title: "Advice when you feel restless", body: "Talk to your family, friends, and work colleagues (don't bottle up your emotions), cry if you need to, eat a balance diet and get enough sleep, practice mindfullness by listing what is causing you to feel restless, exercise, and do something you enjoy.", sourceName: "Healthdirect Australia", sourceURL: "https://www.healthdirect.gov.au/feeling-restless")
     static let restlessTip2 = Hint(title: Constants.Header.watch, body: "Learning to embrace restlessness | Simon Parker | TEDxLeamingtonSpa", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=u315ygbixkM")
@@ -213,7 +213,7 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
     static let restless0Tips1 = [restlessTip1, restlessTip2]
 
     // Button14 = "Calm"
-    static let calmQuote0 = Quote(quote: "\"Let us always meet each other with smile, for the smile is the beginning of love.\"", source: "Mother Teresa")
+    static let calmQuote0 = Quote(quote: "\"Let us always meet each other with smile, for the smile is the beginning of love.\"", source: "Mother Teresa", bio: "")
 
     static let calmTip1 = Hint(title: "Advice to stay calm in any situation", body: "Navy SEALs face some of the most difficult situations any human could encounter. To stay calm they practice box-breathing: Breathe in for four seconds. Hold air in your lungs for four seconds. Exhale for four seconds. Hold your breath, lungs emptied, for four seconds.", sourceName: "Inc.", sourceURL: "https://www.inc.com/melody-wilding/beat-stress-like-a-navy-seal-with-this-ridiculousl.html")
     static let calmTip2 = Hint(title: Constants.Header.watch, body: "How to love and be loved | Billy Ward | TEDxFoggyBottom", sourceName: "YouTube", sourceURL: "https://www.youtube.com/watch?v=vMeEKBaiPbg")
@@ -222,4 +222,4 @@ static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve y
     
 }
 
- */
+

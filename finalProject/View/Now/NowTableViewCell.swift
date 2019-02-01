@@ -45,7 +45,7 @@ class NowTableViewCell: UITableViewCell {
         // Display summarized text in
         tipItem = tip
         headerLabel.text = tip.header
-        headerLabel.layer.opacity = 0.75
+        headerLabel.layer.opacity = 0.7
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
         sourceLabel.text = tip.sourceName

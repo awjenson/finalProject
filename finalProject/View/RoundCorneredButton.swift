@@ -29,7 +29,7 @@ class RoundCorneredButton: UIButton {
 
         // UI
 
-        layer.cornerRadius = 6
+        layer.cornerRadius = 12
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
 

@@ -56,6 +56,7 @@ class NowViewController: UIViewController {
     @IBOutlet weak var returnToTopButton: RoundCorneredButton!
     @IBOutlet weak var footerView: UIView!
 
+    let averageColor: UIColor? = .blue
 
     // MARK: - Properties
 
@@ -197,6 +198,22 @@ class NowViewController: UIViewController {
             greetingLabel.text = "Good Afternoon"
         case 18...24:
             greetingLabel.text = "Good Evening"
+
+
+
+            topic0Button.backgroundColor = NowConstants.HeaderBlue.color700
+            topic0Button.setTitleColor(.white, for: .normal)
+            topic1Button.backgroundColor = NowConstants.HeaderBlue.color700
+            topic1Button.setTitleColor(.white, for: .normal)
+            topic2Button.backgroundColor = NowConstants.HeaderBlue.color700
+            topic2Button.setTitleColor(.white, for: .normal)
+
+            topic3Button.backgroundColor = NowConstants.HeaderBlue.color700
+            topic3Button.setTitleColor(.white, for: .normal)
+            topic4Button.backgroundColor = NowConstants.HeaderBlue.color700
+            topic4Button.setTitleColor(.white, for: .normal)
+            topic5Button.backgroundColor = NowConstants.HeaderBlue.color700
+            topic5Button.setTitleColor(.white, for: .normal)
 
         default:
             greetingLabel.text = "Hello"
@@ -671,8 +688,8 @@ class NowViewController: UIViewController {
 
         performUIUpdatesOnMain {
 
-            button.setTitleColor(UIColor.black, for: .normal)
-            button.backgroundColor = UIColor(white: 1, alpha: 0.975)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = NowConstants.HeaderBlue.color700
         }
     }
 
@@ -755,9 +772,10 @@ class NowViewController: UIViewController {
 
             appendNowTips()
 
+            // Unselected
             performUIUpdatesOnMain {
-                button.backgroundColor = .white
-                button.setTitleColor(.black, for: .normal)
+                button.backgroundColor = NowConstants.HeaderBlue.color700
+                button.setTitleColor(.white, for: .normal)
             }
 
             currentIndex = -1
@@ -768,6 +786,7 @@ class NowViewController: UIViewController {
 
             appendTipsArrayBasedOnTopicSelected(indexNumber)
 
+            // Selected
             performUIUpdatesOnMain {
                 button.setTitleColor(.white, for: .normal)
                 button.backgroundColor = UIColor.gray
