@@ -116,7 +116,7 @@ class NowViewController: UIViewController {
         // Positioning of the buttons
         natureImageView.frame.size.width = self.view.frame.width
         natureImageView.frame.size.height = natureImageView.frame.size.width
-        topicView.frame.size.height = natureImageView.frame.size.height + 100 + 130 + 30
+        topicView.frame.size.height = natureImageView.frame.size.height + 100 + 130 + 10
 
 //        topicView.frame.size.height = (self.view.frame.size.height + natureImageView.frame.size.height)
 
@@ -201,19 +201,19 @@ class NowViewController: UIViewController {
 
 
 
-            topic0Button.backgroundColor = NowConstants.HeaderBlue.color700
-            topic0Button.setTitleColor(.white, for: .normal)
-            topic1Button.backgroundColor = NowConstants.HeaderBlue.color700
-            topic1Button.setTitleColor(.white, for: .normal)
-            topic2Button.backgroundColor = NowConstants.HeaderBlue.color700
-            topic2Button.setTitleColor(.white, for: .normal)
+            topic0Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+            topic0Button.setTitleColor(.black, for: .normal)
+            topic1Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+            topic1Button.setTitleColor(.black, for: .normal)
+            topic2Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+            topic2Button.setTitleColor(.black, for: .normal)
 
-            topic3Button.backgroundColor = NowConstants.HeaderBlue.color700
-            topic3Button.setTitleColor(.white, for: .normal)
-            topic4Button.backgroundColor = NowConstants.HeaderBlue.color700
-            topic4Button.setTitleColor(.white, for: .normal)
-            topic5Button.backgroundColor = NowConstants.HeaderBlue.color700
-            topic5Button.setTitleColor(.white, for: .normal)
+            topic3Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+            topic3Button.setTitleColor(.black, for: .normal)
+            topic4Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+            topic4Button.setTitleColor(.black, for: .normal)
+            topic5Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+            topic5Button.setTitleColor(.black, for: .normal)
 
         default:
             greetingLabel.text = "Hello"
@@ -688,8 +688,8 @@ class NowViewController: UIViewController {
 
         performUIUpdatesOnMain {
 
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = NowConstants.HeaderBlue.color700
+            button.setTitleColor(.black, for: .normal)
+            button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
         }
     }
 
@@ -774,8 +774,8 @@ class NowViewController: UIViewController {
 
             // Unselected
             performUIUpdatesOnMain {
-                button.backgroundColor = NowConstants.HeaderBlue.color700
-                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+                button.setTitleColor(.black, for: .normal)
             }
 
             currentIndex = -1
@@ -788,8 +788,8 @@ class NowViewController: UIViewController {
 
             // Selected
             performUIUpdatesOnMain {
-                button.setTitleColor(.white, for: .normal)
-                button.backgroundColor = UIColor.gray
+                button.setTitleColor(.black, for: .normal)
+                button.backgroundColor = NowConstants.YvonneColor.silver
             }
 
             currentIndex = indexNumber

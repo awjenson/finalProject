@@ -11,6 +11,12 @@ import UIKit
 
 struct NowConstants {
 
+    struct YvonneColor {
+
+        static let whiteSmoke = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.0)
+        static let silver = UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)
+    }
+
     struct HeaderIndigo {
         static let color900 = UIColor(red:0.10, green:0.14, blue:0.49, alpha:1.0)
         static let color800 = UIColor(red:0.16, green:0.21, blue:0.58, alpha:1.0)
