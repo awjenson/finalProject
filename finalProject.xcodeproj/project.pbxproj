@@ -63,6 +63,7 @@
 		DAA1022520537A2400A25EFC /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022420537A2400A25EFC /* JournalViewController.swift */; };
 		DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */; };
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
+		DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */; };
 		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
 		DAB060CA21547EAC001DB425 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB060C921547EAC001DB425 /* NewUserViewController.swift */; };
 		DAB647E921F03FBB00CBB6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB647E821F03FBB00CBB6AE /* Assets.xcassets */; };
@@ -146,6 +147,7 @@
 		DAA1022420537A2400A25EFC /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
+		DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
 		DAB060C921547EAC001DB425 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		DAB647E821F03FBB00CBB6AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 				DAE95B3221E30B6300F01848 /* Thread+Extension.swift */,
 				DA20FEDC21F03643000F0C53 /* UIImage+Extension.swift */,
 				DAB931042204129800808018 /* UIImageView+Extension.swift */,
+				DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */,
 				DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */,
 				DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */,
+				DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */,
 				DA20FEDD21F03643000F0C53 /* UIImage+Extension.swift in Sources */,
 				DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */,
 				DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */,

@@ -33,16 +33,14 @@ class RoundCorneredButton: UIButton {
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
 
+
         layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         layer.shadowOffset = CGSize(width: 0, height: 2)
-        layer.shadowOpacity = 0.9
-        layer.shadowRadius = 0.5
-
-
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 0.6
 
         layer.masksToBounds = false
 
-        setTitleColor(UIColor.black, for: .normal)
         backgroundColor = UIColor(white: 1, alpha: 0.975)
     }
 

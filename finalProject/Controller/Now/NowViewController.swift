@@ -56,7 +56,7 @@ class NowViewController: UIViewController {
     @IBOutlet weak var returnToTopButton: RoundCorneredButton!
     @IBOutlet weak var footerView: UIView!
 
-    let averageColor: UIColor? = .blue
+    let averageColor: UIColor? = UIColor(red: 0.196, green: 0.3098, blue: 0.52, alpha: 1.0)
 
     // MARK: - Properties
 
@@ -201,19 +201,19 @@ class NowViewController: UIViewController {
 
 
 
-            topic0Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
-            topic0Button.setTitleColor(.black, for: .normal)
-            topic1Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
-            topic1Button.setTitleColor(.black, for: .normal)
-            topic2Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
-            topic2Button.setTitleColor(.black, for: .normal)
-
-            topic3Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
-            topic3Button.setTitleColor(.black, for: .normal)
-            topic4Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
-            topic4Button.setTitleColor(.black, for: .normal)
-            topic5Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
-            topic5Button.setTitleColor(.black, for: .normal)
+//            topic0Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+//            topic0Button.setTitleColor(averageColor, for: .normal)
+//            topic1Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+//            topic1Button.setTitleColor(averageColor, for: .normal)
+//            topic2Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+//            topic2Button.setTitleColor(averageColor, for: .normal)
+//
+//            topic3Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+//            topic3Button.setTitleColor(averageColor, for: .normal)
+//            topic4Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+//            topic4Button.setTitleColor(averageColor, for: .normal)
+//            topic5Button.backgroundColor = NowConstants.YvonneColor.whiteSmoke
+//            topic5Button.setTitleColor(averageColor, for: .normal)
 
         default:
             greetingLabel.text = "Hello"
