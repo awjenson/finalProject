@@ -18,7 +18,6 @@ class Quote {
 
 
     init(quote: String, source: String, bio: String) {
-
         self.quote = quote
         self.source = source
         self.bio = bio

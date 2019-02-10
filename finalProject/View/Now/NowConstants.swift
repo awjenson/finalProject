@@ -15,6 +15,9 @@ struct NowConstants {
 
         static let whiteSmoke = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.0)
         static let silver = UIColor(red:0.74, green:0.74, blue:0.74, alpha:1.0)
+
+        // iOS colors: http://irekasoft.com/blog/ios-design
+        static let defaultBlue = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
     }
 
     struct HeaderIndigo {
