@@ -213,8 +213,10 @@
 			children = (
 				DAC8DFF5206ED93B005D627B /* TopicData.swift */,
 				DAC8DFF7206EFB13005D627B /* NowData.swift */,
+				DADE4C7920E9A5D300E19393 /* QuoteData.swift */,
 				DA606B502064969100DD14C0 /* Topic.swift */,
 				DA3F77C42055BE4800F7361A /* Tip.swift */,
+				DA0EDE0B2104EEB300B9363F /* Quote.swift */,
 			);
 			path = Now;
 			sourceTree = "<group>";
@@ -239,7 +241,6 @@
 			children = (
 				DA6EBB3421C9CDEE006F7259 /* Header.swift */,
 				DA0EDE0D2104EF6D00B9363F /* Hint.swift */,
-				DA0EDE0B2104EEB300B9363F /* Quote.swift */,
 				DA6EBB3621CACF2C006F7259 /* HeaderData.swift */,
 				DA272D0A20BCE62200137039 /* AdviceData.swift */,
 				DA511DE2213F171B0056949B /* MoodData.swift */,
@@ -247,7 +248,6 @@
 				DAC6384920B1CE310004891D /* GoalItem.swift */,
 				DA2B85F620B8D59E005B7DD6 /* MessageItem.swift */,
 				DA5AEDAD2077000F0094AA57 /* JournalMessage.swift */,
-				DADE4C7920E9A5D300E19393 /* QuoteData.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";

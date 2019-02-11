@@ -11,6 +11,8 @@ import Foundation
 // MARK: - AllTipsTopics
 
 // Adria wants the app to tell here where to eat based on her location
+// Good source of activity data: https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/
+
 
 // MARK: - Breakfast
 
@@ -418,17 +420,23 @@ let goingOutTip5 = Tip(header: "👠", title: "Wearing heels? Be safe by packing
 let goingOutTip6 = Tip(header: "👫", title: "Before you leave home, let someone know where you are going and when you expect to be back", body: "ou might also want to send them a quick text when you arrive at your destination. If they don’t receive your text, or you don’t arrive home when expected, they can check to make sure everything is OK." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
 let goingOutTip7 = Tip(header: "🔦", title: "Before you leave home, carry a whistle and a small flashlight", body: "A whistle is often the easiest way to scare off troublemakers. Keep a small flashlight on your keychain to provide light in dark areas and give you more confidence. Or use the built-in light on your phone." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
 let goingOutTip9 = Tip(header: "", title: "The best foods to eat before going out: protein, healthy fats, fruits, and vegetables", body: "Meals with protein and healthy fat are even more effective at slowing alcohol absorption. Fruits and vegetables provide antioxidants and vitamins you need to stay healthy, while providing a large dose of water as well. \n\nEat: salmon, avacado, nuts, cucumbers, celery, and watermelon \n\nDon't eat: chocolate, tomatoes, and spices \n\nDon't drink: caffeine" , sourceName: "Health.com", sourceURL: "https://www.health.com/nutrition/what-to-eat-before-drinking?", sponsorLogo: "", sponsorURL: "")
-
-// MARK: - Getting Ready PM
+//3
 let goingOutTip10 = Tip(header: "🔴", title: "Wearing the color red can actually make you feel more attractive", body: "In one experiment, a group of individuals who wore red were rated as more attractive by another group of individuals — despite the fact that the clothing of the individuals were not visible to the group do the rating." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/can-wearing-work-uniform-help-you-get-ahead-ncna788136?cid=eml_better_20180716", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let goingOutTip12 = Tip(header: "🚘", title: "Stay safe in parking lots tonight", body: "Don’t just pull into the first available spot you see. Choose to park in a spot that’s well lit, highly visible (where there are no structures such as dumpsters hiding you from view) and that has a clear path to the exit. When leaving and returning to your car, be alert and walk with keys in hand." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/2012/07/16/street-smart-safety_n_1669136.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+
+
 //MEN
-let goingOutTip11 = Tip(header: "🔴", title: "Simply wearing the color red makes a man more attractive and sexually desirable to women", body: "Researchers found that women view men in red as higher in status, more likely to make money and more likely to climb the social ladder. And it's this high-status judgment that leads to the attraction." , sourceName: "University of Rochester", sourceURL: "http://www.rochester.edu/news/show.php?id=3663", sponsorLogo: "", sponsorURL: "")//Men
+let goingOutMenTip1 = Tip(header: "🔴", title: "Simply wearing the color red makes a man more attractive and sexually desirable to women", body: "Researchers found that women view men in red as higher in status, more likely to make money and more likely to climb the social ladder. And it's this high-status judgment that leads to the attraction." , sourceName: "University of Rochester", sourceURL: "http://www.rochester.edu/news/show.php?id=3663", sponsorLogo: "", sponsorURL: "")//Men
 //WOMEN
-let goingOutTip12 = Tip(header: "🔴", title: "Simply wearing the color red makes a woman more attractive and sexually desirable to men", body: "Researchers found that women shown framed by or wearing red were rated significantly more attractive and sexually desirable by men than the exact same women shown with other colors. When wearing red, the woman was also more likely to be treated to a more expensive outing." , sourceName: "University of Rochester", sourceURL: "http://www.rochester.edu/news/show.php?id=3663", sponsorLogo: "", sponsorURL: "")//Women
+let goingOutWomenTip12 = Tip(header: "🔴", title: "Simply wearing the color red makes a woman more attractive and sexually desirable to men", body: "Researchers found that women shown framed by or wearing red were rated significantly more attractive and sexually desirable by men than the exact same women shown with other colors. When wearing red, the woman was also more likely to be treated to a more expensive outing." , sourceName: "University of Rochester", sourceURL: "http://www.rochester.edu/news/show.php?id=3663", sponsorLogo: "", sponsorURL: "")//Women
 
 
 
 // MARK: - Safety
+let safetyTitle = "Safety"
+let safetyIcon = "Saf"
+
 //1
 let safetyTip1 = Tip(header: "🚶‍♂️", title: "Carry yourself with confidence. Attackers target those that appear weak", body: "Plan your travel route ahead of time before you leave. By knowing exactly where you are going you will reduce your travel time and will appear more confident which ultimately lowers your chances of becoming a crime victim." , sourceName: "Protection One, a division of ADT", sourceURL: "https://www.protection1.com/campus-safety/night-safety-tips/", sponsorLogo: "", sponsorURL: "")
 let safetyTip2 = Tip(header: "👫", title: "Walking - always have someone, or a group of people you trust", body: "Criminals are less likely to attack a group than an individual. Always walk in well-lit, highly visible areas. Stay in familiar areas and avoid shortcuts when possible." , sourceName: "Protection One, a division of ADT", sourceURL: "https://www.protection1.com/campus-safety/night-safety-tips/", sponsorLogo: "", sponsorURL: "")
@@ -437,13 +445,38 @@ let safetyTip4 = Tip(header: "📱", title: "Cell Phones - always be aware of yo
 
 //2
 let safetyTip5 = Tip(header: "🎧", title: "Avoid wearing headphones", body: "Sure, listening to music on your way to the bar may get you in the mood, but it will also keep you from hearing an incoming car — or someone approaching you from behind. If still desire to walk with headphones, then only put in one earbud and keep the volume low enough to hear any off-putting sounds." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
-let safetyTip6 = Tip(header: "🚶‍♂️", title: "Always walk like you're on a mission with confidence", body: "Have good posture, walk with your feet planted firmly to the ground and look straight ahead." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")// This could be better
+let safetyTip6 = Tip(header: "🚶‍♂️", title: "Always walk like you're on a mission with confidence", body: "Have good posture, walk with your feet planted firmly to the ground and look straight ahead. This notion can help deter possible attackers from targetting you." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
 let safetyTip7 = Tip(header: "🚕", title: "Uber/Lyft - Always double check the license plate before getting in", body: "Be careful of people posing as Uber/Lyft drivers." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
-let safetyTip8 = Tip(header: "🚶‍♂️", title: "Carry yourslef with confidence ", body: "Walk with your head up. Not only will it help you see what is happening around you, but it will give you an air of confidence that will prevent assailants from approaching you as a weak and easy target. Avoid showing off flashy jewelry, large purses, expensive clothing and attention-grabbing behavior that can make you a target." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
+let safetyTip8 = Tip(header: "🔑", title: "When walking near the car to your home or apartment, carry your house keys in your hand.", body: "Don’t stand in a doorway and fumble in your purse or pocket for your keys. Have them ready to use." , sourceName: "Security Today", sourceURL: "https://securitytoday.com/articles/2010/04/15/tips-street-smart.aspx?m=1", sponsorLogo: "", sponsorURL: "")
 
 //3
 let safetyTip9 = Tip(header: "🔑", title: "Keys - carry keys in your hand", body: "When walking home or going back to your car at the end of the night, have your keys in your hand to allow quick entry into your home or car." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
+let safetyTip10 = Tip(header: "🗺", title: "Know when you're going and project confidence as you walk", body: "If you are going somewhere in a city with which you aren't familiar, check a map, know where you are going. Looking lost increases vulnerability." , sourceName: "Security Today", sourceURL: "https://securitytoday.com/articles/2010/04/15/tips-street-smart.aspx?m=1", sponsorLogo: "", sponsorURL: "")
+let safetyTip11 = Tip(header: "🚋", title: "While waiting for public transportation, keep your back against a wall", body: "This position reduces a potential attacker from being able to suprise you from behind." , sourceName: "Security Today", sourceURL: "https://securitytoday.com/articles/2010/04/15/tips-street-smart.aspx?m=1", sponsorLogo: "", sponsorURL: "")
+let safetyTip12 = Tip(header: "🚶‍♂️", title: "Carry yourslef with confidence", body: "Walk with your head up. Not only will it help you see what is happening around you, but it will give you an air of confidence that will prevent assailants from approaching you as a weak and easy target. Avoid showing off flashy jewelry, large purses, expensive clothing and attention-grabbing behavior that can make you a target." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
+//4
+let safetyTip13 = Tip(header: "🚶‍♂️", title: "Avoid walking alone at night because it makes you more vulnerable", body: "If you are being followed or you see a person or group further down the street who makes you feel uncomfortable, cross the street, walk in another direction, or ask other people walking if you may walk a short distance with them." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
+let safetyTip14 = Tip(header: "🚋", title: "When on public transit scan the environment and sit near the back with a good view of the entire scene", body: "Keep your smartphone off until you are certain there is no threat. Each time the bus/train/whatever comes to a stop to pick up a passenger, you turn it off and repeat the process." , sourceName: "NavySEALs.com", sourceURL: "https://navyseals.com/3454/sealfit-rules-engagement-sheepdog/", sponsorLogo: "", sponsorURL: "")
+let safetyTip15 = Tip(header: "👀", title: "Walk with your head upright. Make eye contact.", body: "Thieves often target victims who are not paying attention to their surroundings or who are looking down. \n\n• Minimize the amount of time you talk on your cell phone in public places. \n\n•Don't walk and text." , sourceName: "Columbia University", sourceURL: "https://publicsafety.columbia.edu/content/crime-prevention-tips", sponsorLogo: "", sponsorURL: "")
+let safetyTip16 = Tip(header: "📱", title: "Keep your smartphone in your pocket, coat, or jacket, don't display when not in use especially while using mass transit", body: "Use a hands free device. Don't display electronics when not in use." , sourceName: "Columbia University", sourceURL: "https://publicsafety.columbia.edu/content/crime-prevention-tips", sponsorLogo: "", sponsorURL: "")
 
+//5
+let safetyTip17 = Tip(header: "🚈", title: "Common locations where thieves target victims - public transportation", body: "By the subway turnstiles – bumping into you from behind, removing your property (cell phone, wallet, etc). \n\nIn a crowded train – removing your wallet from your backpack front compartment. \n\nGoing up or down the stairs of the subway – removing your property from your backpack front compartment." , sourceName: "Columbia University", sourceURL: "https://publicsafety.columbia.edu/content/crime-prevention-tips", sponsorLogo: "", sponsorURL: "")
+let safetyTip18 = Tip(header: "🎒", title: "Always carry your wallet in your front pocket and carry your bag (purse, book bag) in front of you to avoid being a victim of a pickpocket", body: "Don't display your cash or any other inviting targets like cell phones, hand-held electronic games, or expensive jewelry and clothing." , sourceName: "Columbia University", sourceURL: "https://publicsafety.columbia.edu/content/crime-prevention-tips", sponsorLogo: "", sponsorURL: "")
+let safetyTip19 = Tip(header: "🚎", title: "Public transportation: Watch who gets off your stop with you", body: "If you feel uneasy, walk directly to a place where there are other people. Move quickly toward an open store or restaurant or well-lighted area. Don't be afraid to yell for help." , sourceName: "Columbia University", sourceURL: "https://publicsafety.columbia.edu/content/crime-prevention-tips", sponsorLogo: "", sponsorURL: "")
+let safetyTip20 = Tip(header: "🚉", title: "When you are on the subway platform, the safest place to wait is behind the yellow line, away from the platform edge", body: "When you are getting on a subway late at night, it's recommended to stay in the first or middle subway car where the conductor or the motor person has a radio to alert the police if necessary. Remain alert and avoid falling asleep; thefts from sleeping passengers make up one quarter of all major subway crime." , sourceName: "New York City Police Department", sourceURL: "https://www1.nyc.gov/site/nypd/bureaus/transit-housing/subway-crime-prevention-tips.page", sponsorLogo: "", sponsorURL: "")
+
+let safetyTipArray1 = [safetyTip1, safetyTip2, safetyTip3, safetyTip4]
+let safetyTipArray2 = [safetyTip5, safetyTip6, safetyTip7, safetyTip8]
+let safetyTipArray3 = [safetyTip9, safetyTip10, safetyTip11, safetyTip12]
+let safetyTipArray4 = [safetyTip13, safetyTip14, safetyTip15, safetyTip16]
+let safetyTipArray5 = [safetyTip17, safetyTip18, safetyTip19, safetyTip20]
+
+let safetyTopic1 = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArray1)
+let safetyTopic2 = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArray2)
+let safetyTopic3 = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArray3)
+let safetyTopic4 = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArray4)
+let safetyTopic5 = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArray5)
 
 // MARK: - Bar
 
@@ -733,6 +766,7 @@ let groceryStoreTip28 = Tip(header: "😀", title: "Practice kindness: If you're
 
 //7
 let groceryStoreTip29 = Tip(header: "😀", title: "Studies show that consumers who shop with a list are less likely to make impulse purchases", body: "The key to following this rule: Actually bring the list with you to the store and commit yourself to sticking to it." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/build-these-10-shopping-habits-to-save-big-2012-3", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip30 = Tip(header: "🛒", title: "Safety tip: Use a grocery cart when you have many grocery bags", body: "You make for an easy for an easy victim of robbery when when your arms are full." , sourceName: "Security Today", sourceURL: "https://securitytoday.com/articles/2010/04/15/tips-street-smart.aspx?m=1", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -754,7 +788,7 @@ let groceryStoreTipArray3 = [groceryStoreTip13, groceryStoreTip14, groceryStoreT
 let groceryStoreTipArray4 = [groceryStoreTip17, groceryStoreTip18, groceryStoreTip19, groceryStoreTip20]
 let groceryStoreTipArray5 = [groceryStoreTip21, groceryStoreTip22, groceryStoreTip23, groceryStoreTip24]
 let groceryStoreTipArray6 = [groceryStoreTip25, groceryStoreTip26, groceryStoreTip27, groceryStoreTip28]
-let groceryStoreTipArray7 = [groceryStoreTip29, groceryStoreTip12, groceryStoreTip16, groceryStoreTip20]//WIP(3)
+let groceryStoreTipArray7 = [groceryStoreTip29, groceryStoreTip30, groceryStoreTip16, groceryStoreTip20]//WIP(3)
 
 //
 let groceryStoreTopic0 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray0)
@@ -1584,14 +1618,17 @@ let restaurantTip10 = Tip(header: "🤔", title: "Be alert. Diners seated in dar
 let restaurantTip11 = Tip(header: "🥘", title: "Fat and calories hide in these buzzwords", body: "Anything that’s described as creamy, buttery, breaded, fried, stuffed or smothered is likely loaded with fat and calories. Fancy-sounding terms like sauteed, parmesan, or scalloped is a giveaway that there are plenty of calories stuffed inside the meal." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let restaurantTip12 = Tip(header: "🚪", title: "Make kindness a habit: Leave your server a very generous tip", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
 
-var restaurantTipArray0 = [restaurantTip1, restaurantTip2, restaurantTip3, restaurantTip4]
+//4
+
+
+let restaurantTipArray0 = [restaurantTip1, restaurantTip2, restaurantTip3, restaurantTip4]
 let restaurantTopic0 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray0)
 
-var restaurantTipArray1 = [restaurantTip5, restaurantTip6, restaurantTip7, restaurantTip8]
+let restaurantTipArray1 = [restaurantTip5, restaurantTip6, restaurantTip7, restaurantTip8]
 let restaurantTopic1 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray1)
 
 //
-var restaurantTipArray2 = [restaurantTip9, restaurantTip10, restaurantTip11, restaurantTip12]
+let restaurantTipArray2 = [restaurantTip9, restaurantTip10, restaurantTip11, restaurantTip12]
 let restaurantTopic2 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray2)
 
 
@@ -1692,21 +1729,63 @@ let parentingHighIncomeSons1 = Tip(header: "🙇‍♂️", title: "For suburban
 
 // MARK: - SCHOOL
 
+let schoolTitle = "School"
+let schoolIcon = "Sch"
+
 //AM
-let schoolAMTip0 = Tip(header: "☀️", title: "Students who get more sunlight before going to school perform better in tests", body: "Researchers followed students who moved to school districts with later start times and found that their standardized test scores improved. The results found that students going through puberty benefited the most from later start times. So, girls are negatively impacted by late start times starting around age 11, and boys at age 13.", sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/education/archive/2017/05/sunshine-boosts-test-scores/526503/", sponsorLogo: "", sponsorURL: "")
-let schoolAMTip1 = Tip(header: "🌅", title: "Improve your grades by taking tests in the morning", body: "Researchers found students scored higher in the mornings than in the afternoons. For every hour later in the day the tests were given, scores feel a little more.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
-let schoolAMTip2 = Tip(header: "🤔", title: "Sitting up straight in your chair isn't just good for your posture -- it also gives you more confidence in your own thoughts, study finds", body: "Researchers found that students who were told to sit up straight, in a confident position, were more confident with their own thoughts. However, students who were told to sit in a slouched, less confident posture, were less confident with their own thoughts. People don't realize their posture is affecting how much they believe in what they're thinking. So, sit up straight and think positive thoughts about yourself." , sourceName: "ScienceDaily", sourceURL: "https://www.sciencedaily.com/releases/2009/10/091005111627.htm", sponsorLogo: "", sponsorURL: "")
-let schoolAMTip3 = Tip(header: "🙏", title: "Students who practice religion on a regular basis do better in school than students who do not practice religion", body: "A study found that students who attend religious services, pray on a regular basis, feel close to God, and emphasize the role of faith in their daily lives had an average GPA of 3.22. However, students who believe that a God exists but avoid religious involvement and broader issues of the relevance of religion for their life had an average GPA of 2.93. Being religious helps adolescents in middle and high school because they are rewarded for being obedient and respectful and for having self-control. And religious communities socialize adolescents to cultivate two habits highly valued in public schools: conscientiousness and cooperation." , sourceName: "Stanford University", sourceURL: "https://ed.stanford.edu/news/religiously-engaged-adolescents-demonstrate-habits-help-them-get-better-grades-stanford-scholar", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip1 = Tip(header: "☀️", title: "Students who get more sunlight before going to school perform better in tests", body: "Researchers followed students who moved to school districts with later start times and found that their standardized test scores improved. The results found that students going through puberty benefited the most from later start times. So, girls are negatively impacted by late start times starting around age 11, and boys at age 13.", sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/education/archive/2017/05/sunshine-boosts-test-scores/526503/", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip2 = Tip(header: "🌅", title: "Improve your grades by taking tests in the morning", body: "Researchers found students scored higher in the mornings than in the afternoons. For every hour later in the day the tests were given, scores feel a little more.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip3 = Tip(header: "🚰", title: "Being even 1% dehydrated can cause deficits in visual and working memory", body: "The good news is that the adverse effects of mild dehydration can be reversed by drinking water to replenish your fluids. Symptoms of mild dehydration include feeling dizzy, lightheaded or tired, dry mouth, and having urine that is more yellow than is normal for you." , sourceName: "Bustle", sourceURL: "https://www.bustle.com/p/being-mildly-dehydrated-could-affect-your-concentration-according-to-a-new-study-9934705", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip4 = Tip(header: "👩‍🏫", title: "Getting to know your teachers will make school easier and increase your GPA", body: "You don’t have to be a teacher's pet, but do your best to be kind and friendly to everybody you take a class from. If possible, spend a few minutes before or after class talking with your teachers about things related to their subject. \n\nIt will make it easier to ask for things like: \n\n• Homework extensions \n\n• Extra credit opportunities \n\n• Letters of recommendation" , sourceName: "wikiHow", sourceURL: "https://www.sciencedaily.com/releases/2009/10/091005111627.htm", sponsorLogo: "", sponsorURL: "")
+//2
+let schoolAMTip5 = Tip(header: "🚰", title: "Drink water. Being even mildly dehydrated can reduce your mental performance", body: "Study: mild dehydration can impair cognitive performance, particularly when completing tasks involving attention and regulating emotions. To maintain your mood at optimal levels, you need to drink water throughout the day." , sourceName: "Bustle", sourceURL: "https://www.bustle.com/p/being-mildly-dehydrated-could-affect-your-concentration-according-to-a-new-study-9934705", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip6 = Tip(header: "🤔", title: "Sitting up straight in your chair isn't just good for your posture -- it also gives you more confidence", body: "Researchers found that students who were told to sit up straight, in a confident position, were more confident with their own thoughts. However, students who were told to sit in a slouched, less confident posture, were less confident with their own thoughts. \n\nPeople don't realize their posture is affecting how much they believe in what they're thinking. So, sit up straight and think positive thoughts about yourself." , sourceName: "ScienceDaily", sourceURL: "https://www.sciencedaily.com/releases/2009/10/091005111627.htm", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip7 = Tip(header: "🚶‍♂️", title: "Walking around for just 5 minutes every hour can help you be more productive", body: "Studies have found that movement-based activities during the school day can improve students' focus and standardized test scores. Moving your body improves learning because it stimulates more blood cells in the brain.", sourceName: "Inc.", sourceURL: "https://www.inc.com/betsy-mikel/science-says-kids-learn-better-when-their-teachers-do-this.html", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip8 = Tip(header: "⚽️", title: "Students who take recess often earn better grades than those with fewer recesses", body: "Students who have recess work harder, fidget less, and focus better. They even develop better social skills, show greater empathy, and eat healthier food.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+
+//3 (WIP)
+let schoolAMTip9 = Tip(header: "👫", title: "Improve your success by being kind and helpful towards other students", body: "Researchers have found that students who show this kind of behavior: 1) achieve greater academic success, 2) have more friends, and 3) develop better relationships with teachers.", sourceName: "University of California, Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/4_ways_to_encourage_kindness_in_students", sponsorLogo: "", sponsorURL: "")
+
+let schoolAMTipArray1 = [schoolAMTip1, schoolAMTip2, schoolAMTip3, schoolAMTip4]
+let schoolAMTipArray2 = [schoolAMTip5, schoolAMTip6, schoolAMTip7, schoolAMTip8]
+let schoolAMTipArray3 = [schoolAMTip9, schoolAMTip2, schoolAMTip7, schoolAMTip4]//WIP
+
+let schoolAMTopic1 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray1)
+let schoolAMTopic2 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray2)
+let schoolAMTopic3 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray3)//WIP
+
+
 
 //PM
-let schoolPMTip1 = Tip(header: "👨‍👩‍👧‍👦", title: "Teens who eat with their families 5 or more times a week are more likely to get better grades in school", body: "According to a Columbia University survey, found teens having family dinners 5 or more times a week were 40% more likely to get A's and B's. The survey suggests that family time may be more important to a student's academic success than many people realize." , sourceName: "ABC News", sourceURL: "https://abcnews.go.com/WNT/Health/story?id=1123055&page=1", sponsorLogo: "", sponsorURL: "")
+//1
+let schoolPMTip1 = Tip(header: "🤝", title: "When searching for friends, look for people who make you feel good about yourself and do their best to support you", body: "Even if it consists of only 1 or 2 people, having a group of friends you can trust and rely on will make your life far easier. If a friend starts making you feel worthless, don’t be afraid to cut them out of your life. It may be difficult, but it will make you far happier in the long-run." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Survive-High-School", sponsorLogo: "", sponsorURL: "")
+let schoolPMTip2 = Tip(header: "😐", title: "Talk to your school counselor if you’re dealing with mental health issues", body: "If you’re experiencing any emotions that you don’t know how to deal with, make an appointment with your school’s mental health counselor or a private therapist. These paid professionals can help you better understand how you’re feeling and will teach you a variety of techniques to help you cope with your emotions. \n\nSome issues many students suffer from include: \n• Anxiety \n• Depression \n• Low self esteem \n• Eating disorders like Anorexia and Bulimia" , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Survive-High-School", sponsorLogo: "", sponsorURL: "")
+let schoolPMTip3 = Tip(header: "👫", title: "Become friends with a variety of different people", body: "Everybody has something to contribute to your growth as a person, so try to interact with a lot of different people. Be nice to all the students you meet whether they are older or younger than you, that way you can slowly gain the respect of the entire school." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Survive-High-School", sponsorLogo: "", sponsorURL: "")
+let schoolPMTip4 = Tip(header: "👨‍👩‍👧‍👦", title: "Teens who eat with their families 5 or more times a week are more likely to get better grades in school", body: "According to a Columbia University survey, found teens having family dinners 5 or more times a week were 40% more likely to get A's and B's. The survey suggests that family time may be more important to a student's academic success than many people realize." , sourceName: "ABC News", sourceURL: "https://abcnews.go.com/WNT/Health/story?id=1123055&page=1", sponsorLogo: "", sponsorURL: "")
+//2
+let schoolPMTip5 = Tip(header: "🙏", title: "Students who practice religion on a regular basis do better in school than students who do not practice religion", body: "A study found that students who attend religious services, pray on a regular basis, feel close to God, and emphasize the role of faith in their daily lives had an average GPA of 3.22. However, students who believe that a God exists but avoid religious involvement and broader issues of the relevance of religion for their life had an average GPA of 2.93." , sourceName: "Stanford University", sourceURL: "https://ed.stanford.edu/news/religiously-engaged-adolescents-demonstrate-habits-help-them-get-better-grades-stanford-scholar", sponsorLogo: "", sponsorURL: "")
+let schoolPMTip6 = Tip(header: "⚽️", title: "Join a school club or sports team to meet people with similar interests and increase your chances of success going forward", body: "Extra-curricular activities are a great way to meet like-minded people and make long-lasting friendships. In addition to the social aspects, club involvement will make you a stronger candidate when it comes time to apply to the next level of schooling or a job." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Survive-High-School", sponsorLogo: "", sponsorURL: "")
+let schoolPMTip7 = Tip(header: "📚", title: "Start studying at least 1 week in advance for upcoming quizes and tests", body: "This will give you plenty of time to refresh yourself on the material and study up on things you don’t understand. If you find yourself struggling with any of the material, ask your teacher for help before or after class or create a study group with fellow classmates." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Survive-High-School", sponsorLogo: "", sponsorURL: "")
+let schoolPMTip8 = Tip(header: "😴", title: "Get 8 hours of sleep tonight", body: "Teenagers who get less sleep than they need are at a higher risk for depression, suicide, substance abuse, and car crashes. Evidence also links short sleep duration with obesity and a weakened immune system.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+//3
+let schoolPMTip9 = Tip(header: "💪", title: "Going to a gym / exercising after classes tonight can increase your GPA", body: "A study of college students found that students who belonged to the gym had higher GPAs than those who didn’t. The gym-going students' cumulative GPAs were 0.13 points higher.", sourceName: "Huffington Post", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+
+let schoolPMTipArray1 = [schoolPMTip1, schoolPMTip2, schoolPMTip3, schoolPMTip4]
+let schoolPMTipArray2 = [schoolPMTip5, schoolPMTip6, schoolPMTip7, schoolPMTip8]
+let schoolPMTipArray3 = [schoolPMTip9, schoolPMTip2, schoolPMTip7, schoolPMTip4]//WIP
+
+let schoolPMTopic1 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray1)
+let schoolPMTopic2 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray2)
+let schoolPMTopic3 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray3)//WIP
+
+
 
 // I've found conflicting studies with early start times and math test scores
 let school2 = Tip(header: "🌅", title: "Get better at math by scheduling your math class in the morning", body: "Researchers found that students are more productive earlier in the school day, especially in math. Having math in the first two periods of the school day instead of the last two periods increases the math GPA of students as well as their scores in statewide tests.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let school3 = Tip(header: "🍽", title: "Students test scores increased when they had a 20-30 minute break to eat, play, and chat before a test", body: "Students who take the tests in the afternoon score significantly worse than those who take th eexams earlier in the day. But when students had a 20-30 minute breat to eat, play, and chat before a test, their scores did not decline. In fact, they increased. A break causes an improvement that is larger than the hourly deterioration. That is, scores go down after noon. But scores go up by a higher amount after breaks. Taking a test in the afternoon without a break produces scores that are equivalent to spending less time in school each year and having parents with lower incomes and less education. But taking the same test after a 20-30 minute break leads to scores that are equivalent to students spending 3 additional weeks in the classroom and having somewhat wealthier and better-educated parents. And the benefits were the greatest for the lowest-performing students. If there were a break after every hour, test scores would actually improve over the course of the day.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "") // WIP
-let school4 = Tip(header: "⚽️", title: "Students who take recess often earn better grades than those with fewer recesses", body: "Students who have recess work harder, fidget less, and focus better. They even develop better social skills, show greater empathy, and eat healthier food.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+
 // 2
-let school5 = Tip(header: "😴", title: "Teenagers who get less sleep than they need are at a higher risk for depression, suicide, substance abuse, and car crashes", body: "Evidence also links short sleep duration with obesity and a weakened immune system.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+
 
 
 // MARK: - Recent Graduate
