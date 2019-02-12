@@ -7,5 +7,7 @@ target 'finalProject' do
 
   # Pods for finalProject
   pod 'SVProgressHUD'
+  pod 'ChameleonFramework/Swift'
+  
 
 end

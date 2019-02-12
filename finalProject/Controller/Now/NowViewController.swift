@@ -18,6 +18,7 @@ https://www.youtube.com/watch?v=k-GvIqh5Xcs
 
 import UIKit
 import SafariServices // to display webview
+import ChameleonFramework
 
 class NowViewController: UIViewController {
 
