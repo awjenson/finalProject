@@ -12,6 +12,7 @@
 		DA05883620EEF47F0065098D /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883520EEF47F0065098D /* KeyboardService.swift */; };
 		DA05883820EEFC970065098D /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883720EEFC970065098D /* UITextView+DoneButton.swift */; };
 		DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */; };
+		DA09E2FA22126E5A0050C1E8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA09E2F922126E5A0050C1E8 /* GradientView.swift */; };
 		DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0B2104EEB300B9363F /* Quote.swift */; };
 		DA0EDE0E2104EF6D00B9363F /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0D2104EF6D00B9363F /* Hint.swift */; };
 		DA15AE1220B649B400EFC4C2 /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */; };
@@ -94,6 +95,7 @@
 		DA05883520EEF47F0065098D /* KeyboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
 		DA05883720EEFC970065098D /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
 		DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
+		DA09E2F922126E5A0050C1E8 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DA0EDE0B2104EEB300B9363F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		DA0EDE0D2104EF6D00B9363F /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */,
 				DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */,
 				DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */,
+				DA09E2F922126E5A0050C1E8 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				DA2223A220E8672800103829 /* ResponseTableViewCell.swift in Sources */,
 				DA361D2320818BDF007ACE59 /* Constants.swift in Sources */,
 				DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */,
+				DA09E2FA22126E5A0050C1E8 /* GradientView.swift in Sources */,
 				DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */,
 				DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */,
 				DA5AEDA720769D0E0094AA57 /* WelcomeViewController.swift in Sources */,

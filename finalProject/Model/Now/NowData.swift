@@ -74,6 +74,8 @@ let weekendNow5to8Tip7 = Tip(header: "📵", title: "Don't check your phone firs
 ////////
 // TODO: Drink 30 grams of protein
 // WEEK 2
+//SAT
+let weekendNow5to8Tip8 = Tip(header: "🏋️‍♂️", title: "To promote better quality sleep, working out early in the morning appears to be better than working out later in the day", body: "Moderate-to-vigorous exercise in the morning could significantly improve the quality and quantity of your sleep. \n\nExercise can increase the duration and quality of sleep by boosting the production of serotonin in the brain and decreasing levels of cortisol, the stress hormone." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section10", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -105,6 +107,15 @@ let weekendNow9to11Tip5 = Tip(header: "🏞", title: "Being in nature increases 
 let weekendNow9to11Tip6 = Tip(header: "🙏", title: "Best way to reduce stress is to attend church or religious services, survey finds", body: "Most effective ways to reduce stress:\n•  Church or religious services (77%)\n•  Pray (73%)\n•  Play sports (73%)\n•  Massage or spa (71%)\n•  Meditage or yoga (70%)\n•  See mental health professional (68%)\n•  Exercise or walk (62%)\n\nLess effective ways to reduce stress:\n•  Watch TV or movie (33%)\n•  Surf the Internet (29%)", sourceName: "American Psychological Association", sourceURL: "https://www.apa.org/news/press/releases/stress/2013/snapshot.aspx", sponsorLogo: "", sponsorURL: "")
 let weekendNow9to11Tip7 = Tip(header: "💪", title: "Exercise today. Sitting 8+ hours a day with no physical activity leads to the same risk of dying posed by obesity and smoking", body: "One study found that sitting time contributed little to mortality for people who were most active. 60 to 75 minutes of moderately intense physical activity a day countered the effects of too much sitting." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
+//WEEK 2
+//SAT
+let saturdayNow9to11Tip1 = Tip(header: "🌲", title: "Getting some fresh air in nature increases happiness", body: "Researchers found that as air pollution goes up, happiness goes down. And the effect holds even if you're near a busy road. The link between mood and air quality was so strong that the researchers recommended clean air as an anti-depressant." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
+
+//SUN
+let sundayNow9to11Tip1 = Tip(header: "🙏", title: "Research suggests that regular meditation or other spiritual or religious practice may protect against major depression by thickening the brain cortex and counteracting the cortical thinning that would normally occur with major depression", body: "Brain MRIs showed thicker cortices in subjects who placed a high importance on religion or spirituality than those who did not. The relatively thicker cortex was found in precisely the same regions of the brain that had otherwise shown thinning in people at high risk for depression." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2014/01/140116084846.htm", sponsorLogo: "", sponsorURL: "")
+
+
+
 let weekendNow9to11TipArray0 = [weekendNow9to11Tip0, weekendNow9to11Tip1, weekendNow9to11Tip2, weekendNow9to11Tip3]
 let weekendNow9to11Topic0 = Topic(title: weekendNow9to11Title, icon: weekendNow9to11Icon, tip: weekendNow9to11TipArray0)
 
@@ -116,6 +127,7 @@ let weekendNow9to11Topic1 = Topic(title: weekendNow9to11Title, icon: weekendNow9
 let weekendNow11to14Title = "Now, Weekday, 11to14"
 let weekendNow11to14Icon = "Now"
 
+//WEEK 1
 //SAT
 let weekendNow11to14Tip0 = Tip(header: "☀️", title: "Prevent wrinkles and premature aging by wearing sunscreen everyday", body: "Research: people who used sunscreen daily were less likely to have wrinkles, sagging skin, and dark spots after 4.5 years than people who did not regularly use sunscreen." , sourceName: "The Skin Cancer Foundation", sourceURL: "https://www.skincancer.org/prevention/sun-protection/sunscreen/aging", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekendNow11to14Tip1 = Tip(header: "👫", title: "Disconnect from technology on the weekend and reconnect with yourself and people", body: "Take a ‘tech Sabbath.’ If we look back in history, \"a day of rest\" is an ancient tradition represented across cultures that is used for reflection and connection. Even a walk without the phone can feel liberating." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/every-week-i-unplug-from-technology-for-24-hours-and-im-convinced-it-makes-me-better-at-my-job-2016-9", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -129,12 +141,13 @@ let weekendNow11to14Tip6 = Tip(header: "🏃‍♂️", title: "Moderate to vigo
 let weekendNow11to14Tip7 = Tip(header: "🏞", title: "Spending time in nature helps reduce stress levels", body: "Our brains become easily fatigued. When we slow down, stop the busywork, and take in beautiful natural surroundings, not only do we feel restored, but our mental performance improves too." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "", sponsorURL: "")
 
 // WEEK 2
+//SAT
 let weekendNow11to14Tip8 = Tip(header: "🤔", title: "What is your favorite place to think big?", body: "Venture capitalist Peter Thiel said he thinks best \"somewhere beautiful in nature.\" And John Elkann, chairman of Fiat Chrysler, likes to think in nature. \"On one side, it really grounds you to see how incredibly extraordinary nature is. On the other, it really stimulates you to think big, to dream, and be ambitious.\"" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/mark-zuckerberg-bill-gates-best-place-to-think-2018-11#venture-capitalist-peter-thiel-said-he-thinks-best-somewhere-beautiful-in-nature-5", sponsorLogo: "", sponsorURL: "")
 let weekendNow11to14Tip9 = Tip(header: "🌲", title: "Taking walks in nature lowers anxiety and depression while boosting mood and well-being", body: "Exposure to more sunlight can boost Vitamin D levels that are known to increase mood, and even just the sounds of nature trigger a relaxation response in the brain. Exposure to natural environments lowers stress, including its physiological correlates the “stress hormone” cortisol, heart rate, and blood pressure." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/06/why-you-should-tell-your-team-to-take-a-break-and-go-outside", sponsorLogo: "", sponsorURL: "")
 let weekendNow11to14Tip10 = Tip(header: "💸", title: "Lower depression by donating 10% of your income", body: "Researchers have found lower depression rates among Americans who donate more than 10% of their incomes (41% say they rarely or never experience depression versus 32% for everyone else.)", sourceName: "The New Republic", sourceURL: "https://newrepublic.com/article/119477/science-generosity-why-giving-makes-you-happy", sponsorLogo: "", sponsorURL: "")
 let weekendNow11to14Tip11 = Tip(header: "👫", title: "The key to living a long, happy, and healthy life is to maintain good relationships with your family, friends, and community", body: "On the contrary, people who keep to themselves and experience loneliness are less happy, their health declines earlier in midlife, and they live shorter lives than people who are not lonely. Today, try: \n\n• Replacing screen time with people time \n• Livening up a stale relationship by doing something new together, such as long walks or date nights \n• Reaching out to that family member who you haven't spoken to in years", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/10/31/this-harvard-study-reveals-how-you-can-be-happier-and-more-successful.html", sponsorLogo: "", sponsorURL: "")
-//
-
+// SUN
+let weekendNow11to14Tip12 = Tip(header: "🌲", title: "Reduce stress by taking a walk through nature", body: "A study found that strolling through forest environments lowers stress hormones, slows your your heart rate, reduces blood pressure, and increases feelings of safety and well-being.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -254,6 +267,9 @@ let weekdayNow0to4Tip7 = Tip(header: "😰", title: "Getting more sleep is a gre
 //// WED (WIP)
 let weekdayNow0to4Tip8 = Tip(header: "😴", title: "A lack of sleep is linked to serious problems", body: "Over time, a lack of sleep increases the risk of depression and heart disease. It also causes excessive daytime sleepiness which is linked to weakened social and occupational function, memory problems, and risk of having a vehicle crash.", sourceName: "Very Well Mind", sourceURL: "https://www.verywellmind.com/alcohol-and-sleep-66571", sponsorLogo: "", sponsorURL: "")
 let weekdayNow0to4Tip9 = Tip(header: "💤", title: "People who don't get enough sleep during the work week and sleep in on the weekends are more likely to be overweight or obese", body: "\"Social jet lag\" is when you have different sleep patterns during the work week compared to the weekend. For every hour of social jet lag, the risk of being overweight or obese rises about 33%. And the more social jetlag you have, the higher probability it is that you suffer from depression, smoke, and drink unhealthy amounts of alcohol.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/sleep-disorders/news/20120510/do-you-have-social-jet-lag#1", sponsorLogo: "", sponsorURL: "")
+let weekdayNow0to4Tip10 = Tip(header: "😀", title: "Becoming a morning person will increase your happiness", body: "Study: Morning people are actually happier and more satisfied with life overall than night owls. Morning people also tended to say they felt healthier than did night owls. \n\nTo become a morning person: go to bed earlier and wake up earlier, wake up at the same time every day, and increase your natural light exposure early in the morning." , sourceName: "Live Science", sourceURL: "https://www.livescience.com/20880-morning-people-happier.html", sponsorLogo: "", sponsorURL: "")
+
+
 
 
 
@@ -265,7 +281,7 @@ let weekdayNow0to4Topic0 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0to
 let weekdayNow0to4TipArray1 = [weekdayNow0to4Tip4, weekdayNow0to4Tip5, weekdayNow0to4Tip6, weekdayNow0to4Tip7]
 let weekdayNow0to4Topic1 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0to4Icon, tip: weekdayNow0to4TipArray1)
 
-let weekdayNow0to4TipArray2 = [weekdayNow0to4Tip8, weekdayNow0to4Tip9, weekdayNow0to4Tip6, weekdayNow0to4Tip7] //WIP(2)
+let weekdayNow0to4TipArray2 = [weekdayNow0to4Tip8, weekdayNow0to4Tip9, weekdayNow0to4Tip10, weekdayNow0to4Tip7] //WIP(1)
 
 let weekdayNow0to4Topic2 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0to4Icon, tip: weekdayNow0to4TipArray2)
 
@@ -319,10 +335,18 @@ let weekdayNow5to8Tip25 = Tip(header: "🕒", title: "Avoid weight gain by eatin
 let weekdayNow5to8Tip26 = Tip(header: "🍳", title: "Eat breakfast, because skipping breakfast tricks your brain into thinking you want higher-calorie foods, which leads to weight gain", body: "A study found that when people skiped breakfast their brain's reward center became more active when the person saw a high-calorie food (pizza and cake) as opposed to a low-calorie food (vegetables and fish). However, when people ate breakfast their brain's reward center did not show any significantly greater activity when the person saw a high-calorie food." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/news/20090615/skip-breakfast-get-fat", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip27 = Tip(header: "📵", title: "Limiting your social media usage to 30 minutes a day leads to significant decreases in depression and loneliness", body: "The study was one of the first to show a cause-and-effect relationship between social media usage and mental health issues. Limiting social media usage can lead to significant improvements in your well-being." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/facebook-instagram-snapchat-social-media-well-being-2018-11", sponsorLogo: "", sponsorURL: "")
 
-// WED (WIP)
+// WED
 let weekdayNow5to8Tip28 = Tip(header: "🚰", title: "The sooner you can drink a big glass of water (with lemon), the better you'll feel", body: "Hydration reduces fatigue and improves brain performance and mood. Having a large glass of water with lemon in the morning helps stimulate digestion and decrease inflammation, which can improve your memory and focus this morning." , sourceName: "Bustle", sourceURL: "https://www.bustle.com/p/7-ways-to-change-your-morning-routine-that-can-drastically-boost-your-mood-8168589", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip29 = Tip(header: "🍳", title: "Skipping breakfast is strongly correlated with weight gain. Eating a high-protein breakfast reduces junk food cravings", body: "Participants in a study who had a lot of protein in the morning also had reductions in their \"cravings-related\" brain activity, and increased levels of a hormone associated with feeling full. They snacked less on fatty foods in the evening, as compared to those who ate cereal or nothing." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/health/archive/2013/03/study-eat-protein-in-the-morning/274417/", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip30 = Tip(header: "⌚️", title: "Arrive on time to work today. People who test high in conscientiousness, such as being on time, earn higher salaries", body: "Research suggests that conscientiousness is the personality trait most often correlated with job performance. Conscientious people tend to be super organized, responsible, and plan ahead. If someone shows up on time, that's a great clue toward conscientiousness, since a punctual person has to be organized enough to arrive on time." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/conscientiousness-predicts-job-performance-2014-12", sponsorLogo: "", sponsorURL: "")
+let weekdayNow5to8Tip31 = Tip(header: "💐", title: "Make someone happy tonight by suprising them with flowers", body: "In one study, participants who received flowers reported more positive moods 3 days later. Researchers suggest that flowers have evolved to rapidly induce positive emotion in humans, just as other plants have evolved to induce behavioral responses in a wide variety of species leading to the reproduction of the plants.", sourceName: "SAGE Journals", sourceURL: "https://journals.sagepub.com/doi/full/10.1177/147470490500300109", sponsorLogo: "", sponsorURL: "")
+
+//THUR
+let weekdayNow5to8Tip32 = Tip(header: "📞", title: "Increase happiness: Call a family member or an old friend", body: "The number one thing guaranteed to bring the most happiness isn’t actually a thing—it’s a person. According to a study, relationships with family, friends and lovers are necessary for our own personal happiness.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
+
+
+
+
 
 // MON
 let weekdayNow5to8TipArray0 = [weekdayNow5to8Tip0, weekdayNow5to8Tip1, weekdayNow5to8Tip2, weekdayNow5to8Tip3]
@@ -369,9 +393,9 @@ let weekdayNow9to11Tip10 = Tip(header: "🚶‍♂️", title: "Research: Those 
 let weekdayNow9to11Tip11 = Tip(header: "🗣", title: "Humans use voice pitch to communicate social status. Speak to people in a lower pitch in order to display high social status", body: "Both men and women tend to talk to high status individuals using a higher pitch. A deep, masculine voice sounds dominant, especially in men, while the opposite is true of a higher pitched voice. So, if someone perceives the person they are speaking with to be more dominant than them, they raise their pitch. This may be a signal of submissiveness, to show the listener that you are not a threat, and to avoid possible confrontations." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2017/06/170629101721.htm", sponsorLogo: "", sponsorURL: "")
 
 // THURS
-let weekdayNow9to11Tip12 = Tip(header: "💻", title: "Constantly checking your email makes you less productiveOnly check their email 2-3 times a day because .", body: "Researchers put participants into 2 groups, with one told to check email 3 times a day and another told to check it as often as they wanted. The group that checked email 3 times a day reduced the amount of time they spent answering messages by 20%. They also reported feeling less stressed than before." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3066982/why-the-most-productive-people-do-these-six-things-every-day", sponsorLogo: "", sponsorURL: "")
+let weekdayNow9to11Tip12 = Tip(header: "💻", title: "Constantly checking your email makes you more stressed and less productive. Only check email 2-3 times a day", body: "Researchers put participants into 2 groups, with one told to check email 3 times a day and another told to check it as often as they wanted. The group that checked email 3 times a day reduced the amount of time they spent answering messages by 20%." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3066982/why-the-most-productive-people-do-these-six-things-every-day", sponsorLogo: "", sponsorURL: "")
 let weekdayNow9to11Tip13 = Tip(header: "🍳", title: "Dieters are more successful at losing weight—and keeping it off—when they eat breakfast every day", body: "If you don't already eat breakfast, start. If you are already a breakfast eater, try eating the same breakfast multiple days each week. Repeating the same meals can help you shed pounds, according to research.", sourceName: "EatingWell", sourceURL: "http://www.eatingwell.com/article/280967/7-small-changes-with-big-results/", sponsorLogo: "", sponsorURL: "")
-let weekdayNow9to11Tip14 = Tip(header: "☀️", title: "If you feel tired, get as much sunlight as you can", body: "The sun, unlike most lightbulbs, emits light that covers a wide range of the color spectrum. When these extra wavelengths hit your eyes, they signal your brain to stop producing sleep hormones and start producing alertness hormones.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+let weekdayNow9to11Tip14 = Tip(header: "☀️", title: "Tired? Get as much sunlight as you can", body: "The sun, unlike most lightbulbs, emits light that covers a wide range of the color spectrum. When these extra wavelengths hit your eyes, they signal your brain to stop producing sleep hormones and start producing alertness hormones.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let weekdayNow9to11Tip15 = Tip(header: "🚶‍♂️", title: "Shorter, more frequent breaks, especially walking breaks, increases your productivity throughout the day", body: "One study showed that hourly 5-minute walking breaks boosted energy levels, sharpened focus, and improved mood throughout the day and reduced feelings of fatigue in the late afternoon. Shorter, more frequent breaks were more effective than a single 30 minute walking break.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
 // FRI
@@ -577,6 +601,8 @@ let friday17to20Week1Tip3 = Tip(header: "🙅‍♀️", title: "Tonight, say no
 let friday17to20Week1Tip4 = Tip(header: "🙏", title: "Best ways to reduce stress tonight", body: "• Play sports (73%)\n• Pray (73%)\n• Massage or spa (71%)\n• Meditage or yoga (70%)\n• Exercise or walk (62%)\n• Listen to music (56%)\n• Read (49%)\n\nLess effective ways to reduce stress:\n• Watch TV or movie (33%)\n• Surf the Internet (29%)" , sourceName: "American Psychological Association", sourceURL: "https://www.apa.org/news/press/releases/stress/2013/snapshot.aspx", sponsorLogo: "", sponsorURL: "")
 
 // WEEK 2
+// MON
+let monday17to20Week2Tip1 = Tip(header: "📵", title: "Take a social media break and spend more time in real life with cherished loved ones", body: "A study found that the more time you spend on social media, the less happy you are. The reason? Looking at pictures and reading updates from friends leads you to compare your worst self to their best selves, leaving you feeling sad and left out." , sourceName: "Reader's Digiest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 
 //let weekdayNow17to20Tip13 = Tip(header: success, title: "Apple CEO Tim Cook typically goes to sleep at 8:45 p.m. everyday", body: "This allows Cook to sleep for 7 hours and wake up around 4 a.m. He likes to go to the gym and workout, which he says helps reduce stress." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/apple-ceo-tim-cooks-daily-routine-2018-11", sponsorLogo: "", sponsorURL: "")
 
@@ -600,6 +626,7 @@ let weekdayNow17to20Topic3 = Topic(title: weekdayNow17to20Title, icon: weekdayNo
 //FRI
 let weekdayNow17to20TipArray4 = [friday17to20Week1Tip1, friday17to20Week1Tip2, friday17to20Week1Tip3, friday17to20Week1Tip4]
 let weekdayNow17to20Topic4 = Topic(title: weekdayNow17to20Title, icon: weekdayNow17to20Icon, tip: weekdayNow17to20TipArray4)
+
 
 // MARK: - Now, Weekday, 21to24
 
@@ -657,7 +684,7 @@ let weekdayNow21to24Tip30 = Tip(header: "😀", title: "Exercising in the mornin
 
 //THUR
 let tuesdayNow21to24Week2Tip1 = Tip(header: "😴", title: "Go to bed early tonight because people report Wednesday as the most tiring day of the week", body: "An analysis of Google searches found that people searched for the term \"fatigue\" the most on Wednesday. The most searches of \"fatigue\" occured on Monday through Thursday." , sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/news/wonk/wp/2014/12/03/the-google-misery-index-the-times-of-year-were-most-depressed-anxious-and-stressed/?utm_term=.ce96d202a3f3", sponsorLogo: "", sponsorURL: "")
-
+let tuesdayNow21to24Week2Tip2 = Tip(header: "😀", title: "Becoming a morning person will increase your happiness", body: "Study: Morning people are actually happier and more satisfied with life overall than night owls. Morning people also tended to say they felt healthier than did night owls. \n\nTo become a morning person: go to bed earlier and wake up earlier, wake up at the same time every day, and increase your natural light exposure early in the morning." , sourceName: "Live Science", sourceURL: "https://www.livescience.com/20880-morning-people-happier.html", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEK 1
