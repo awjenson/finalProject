@@ -151,11 +151,17 @@
                                                                                 <action selector="topicButtonTapped:" destination="aQ2-jV-H5y" eventType="touchUpInside" id="d3U-Wv-duh"/>
                                                                             </connections>
                                                                         </button>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-f6-0jk">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-f6-0jk" customClass="RoundCorneredButton" customModule="finalProject" customModuleProvider="target">
                                                                             <rect key="frame" x="201" y="0.0" width="92.5" height="71"/>
+                                                                            <connections>
+                                                                                <action selector="topicButtonTapped:" destination="aQ2-jV-H5y" eventType="touchUpInside" id="ARH-Ko-w39"/>
+                                                                            </connections>
                                                                         </button>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXu-6Q-NPW">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXu-6Q-NPW" customClass="RoundCorneredButton" customModule="finalProject" customModuleProvider="target">
                                                                             <rect key="frame" x="301.5" y="0.0" width="92.5" height="71"/>
+                                                                            <connections>
+                                                                                <action selector="topicButtonTapped:" destination="aQ2-jV-H5y" eventType="touchUpInside" id="6rZ-lB-xms"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>

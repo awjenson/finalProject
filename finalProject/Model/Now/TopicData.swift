@@ -13,6 +13,7 @@ import Foundation
 // Adria wants the app to tell here where to eat based on her location
 // Good source of activity data: https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/
 
+// Add mental traning, mindfulness, and philosophies to user's toolkit
 
 // MARK: - Breakfast
 
@@ -413,6 +414,12 @@ let yogaTip5 = Tip(header: "😁", title: "People who suffer from depression sho
 let yogaTipArray0 = [yogaTip1, yogaTip2, yogaTip3, yogaTip4]
 let yogaTopic0 = Topic(title: yogaTitle, icon: yogaIcon, tip: yogaTipArray0)
 
+// MARK: - Social Media
+
+//TODO: create a section that provides mental training/mindfulness for dealing with social media. Goal is to reduce anger and depression
+
+
+
 
 // MARK: - Morning Routine
 
@@ -443,8 +450,8 @@ let AMRoutineTopic1 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMR
 
 // MARK: - Getting Ready AM
 
-let AMGetReadyTitle = "AM Routine"
-let AMGetReadyIcon = "Rou"
+let AMGetReadyTitle = "Getting Ready"
+let AMGetReadyIcon = "Get"
 
 //1
 let getReadyAM0 = Tip(header: "🚰", title: "Drink a glass of water to rehydrate", body: "Every night, your body goes through a fast while you’re asleep, leaving you dehydrated when you wake up. Drink eight ounces of water as soon as you’re up to hydrate.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
@@ -467,6 +474,10 @@ let getReadyAMTopic1 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: 
 
 
 // MARK: - Going Out, PM
+
+let goingOutTitle = "Getting Ready"
+let goingOutIcon = "Get"
+
 //1
 let goingOutTip1 = Tip(header: "📱", title: "Cell phone - make sure it's fully-charged before you leave home - and bring a backup battery just in case", body: "Before travelling, always be sure that your phone is well charged so that you can easily contact family, friends, or 911 in case of an emergency." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
 let goingOutTip2 = Tip(header: "👗", title: "Clothing - dress for style and safety", body: "Try to wear reflective or bright clothing to not only make yourself more visible to drivers but to also help someone spot you faster in case of an assault." , sourceName: "Protection One, a division of ADT", sourceURL: "https://www.protection1.com/campus-safety/night-safety-tips/", sponsorLogo: "", sponsorURL: "")
@@ -477,14 +488,21 @@ let goingOutTip4 = Tip(header: "🔦", title: "Be Prepared - Carry pepper spray 
 let goingOutTip5 = Tip(header: "👠", title: "Wearing heels? Be safe by packing roll-up flats in your night-out clutch", body: "Wearing heels compromises your safety if you ever need to run from someone or something. Wear heels at the bar, but wear roll-up flats for your commute to and from the bar." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")//female only?
 let goingOutTip6 = Tip(header: "👫", title: "Before you leave home, let someone know where you are going and when you expect to be back", body: "ou might also want to send them a quick text when you arrive at your destination. If they don’t receive your text, or you don’t arrive home when expected, they can check to make sure everything is OK." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
 let goingOutTip7 = Tip(header: "🔦", title: "Before you leave home, carry a whistle and a small flashlight", body: "A whistle is often the easiest way to scare off troublemakers. Keep a small flashlight on your keychain to provide light in dark areas and give you more confidence. Or use the built-in light on your phone." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
-let goingOutTip9 = Tip(header: "🚘", title: "Safety tip: Park in well-lit areas", body: "If it is still light when you park, visualize what the area will look like in the dark when you return. Look for overhead lights and park there. Always take note of where you park so that you can easily find your car." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
+let goingOutTip8 = Tip(header: "🚘", title: "Safety tip: Park in well-lit areas", body: "If it is still light when you park, visualize what the area will look like in the dark when you return. Look for overhead lights and park there. Always take note of where you park so that you can easily find your car." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
 
 //3
-let goingOutTip10 = Tip(header: "🔴", title: "Wearing the color red can actually make you feel more attractive", body: "In one experiment, a group of individuals who wore red were rated as more attractive by another group of individuals — despite the fact that the clothing of the individuals were not visible to the group do the rating." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/can-wearing-work-uniform-help-you-get-ahead-ncna788136?cid=eml_better_20180716", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let goingOutTip12 = Tip(header: "🍽", title: "The best foods to eat before going out: protein, healthy fats, fruits, and vegetables", body: "Meals with protein and healthy fat are even more effective at slowing alcohol absorption. Fruits and vegetables provide antioxidants and vitamins you need to stay healthy, while providing a large dose of water as well. \n\nEat: salmon, avacado, nuts, cucumbers, celery, and watermelon \n\nDon't eat: chocolate, tomatoes, and spices \n\nDon't drink: caffeine" , sourceName: "Health.com", sourceURL: "https://www.health.com/nutrition/what-to-eat-before-drinking?", sponsorLogo: "", sponsorURL: "")
-let goingOutTip13 = Tip(header: "🚘", title: "Stay safe when parking in a parking lot tonight", body: "Don’t just pull into the first available spot you see. Choose to park in a spot that’s well lit, highly visible (where there are no structures such as dumpsters hiding you from view) and that has a clear path to the exit. When leaving and returning to your car, be alert and walk with keys in hand." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/2012/07/16/street-smart-safety_n_1669136.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let goingOutTip14 = Tip(header: "🚶‍♂️", title: "Walk in well-lit, highly visible areas", body: "Even if it takes you longer, stay on a well-lit route rather than taking shortcuts down dark roads or paths. Stick to streets populated with houses and shops rather than empty lots or vacant stores." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
+let goingOutTip9 = Tip(header: "🔴", title: "Wearing the color red can actually make you feel more attractive", body: "In one experiment, a group of individuals who wore red were rated as more attractive by another group of individuals — despite the fact that the clothing of the individuals were not visible to the group do the rating." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/business/can-wearing-work-uniform-help-you-get-ahead-ncna788136?cid=eml_better_20180716", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let goingOutTip10 = Tip(header: "🍽", title: "The best foods to eat before going out: protein, healthy fats, fruits, and vegetables", body: "Meals with protein and healthy fat are even more effective at slowing alcohol absorption. Fruits and vegetables provide antioxidants and vitamins you need to stay healthy, while providing a large dose of water as well. \n\nEat: salmon, avacado, nuts, cucumbers, celery, and watermelon \n\nDon't eat: chocolate, tomatoes, and spices \n\nDon't drink: caffeine" , sourceName: "Health.com", sourceURL: "https://www.health.com/nutrition/what-to-eat-before-drinking?", sponsorLogo: "", sponsorURL: "")
+let goingOutTip11 = Tip(header: "🚘", title: "Stay safe when parking in a parking lot tonight", body: "Don’t just pull into the first available spot you see. Choose to park in a spot that’s well lit, highly visible (where there are no structures such as dumpsters hiding you from view) and that has a clear path to the exit. When leaving and returning to your car, be alert and walk with keys in hand." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/2012/07/16/street-smart-safety_n_1669136.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let goingOutTip12 = Tip(header: "🚶‍♂️", title: "Walk in well-lit, highly visible areas", body: "Even if it takes you longer, stay on a well-lit route rather than taking shortcuts down dark roads or paths. Stick to streets populated with houses and shops rather than empty lots or vacant stores." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Stay-Safe-at-Night", sponsorLogo: "", sponsorURL: "")
 
+let goingOutTipArray0 = [goingOutTip1, goingOutTip2, goingOutTip3, goingOutTip4]
+let goingOutTipArray1 = [goingOutTip5, goingOutTip6, goingOutTip7, goingOutTip8]
+let goingOutTipArray2 = [goingOutTip9, goingOutTip10, goingOutTip11, goingOutTip12]
+
+let goingOutTopic0 = Topic(title: goingOutTitle, icon: goingOutIcon, tip: goingOutTipArray0)
+let goingOutTopic1 = Topic(title: goingOutTitle, icon: goingOutIcon, tip: goingOutTipArray1)
+let goingOutTopic2 = Topic(title: goingOutTitle, icon: goingOutIcon, tip: goingOutTipArray2)
 
 
 //MEN
@@ -1305,7 +1323,6 @@ A stunning 94% of the strong CEO candidates we analyzed scored high on consisten
 
  */
 
-
 // MARK: - Work Late
 
 let workLateTitle = "Work"
@@ -1425,8 +1442,21 @@ let networking8 = Tip(header: "👫", title: "Listen 60% of the time and speak t
 
 //3
 let networking9 = Tip(header: "🚪", title: "Make an entrance. First impressions do count. Think about your posture.", body: "Your body language should be confident, happy and approachable. Take a moment. Breathe in and scout the horizon to search for familiar faces or inviting eye contact from a group member looking for someone to connect with.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/julie-blais-comeau/cocktail-networking_b_7469156.html", sponsorLogo: "", sponsorURL: "")
-let networking10 = Tip(header: "🤓", title: "LinkedIn Co-founder, Reid Hoffman, believes networking is critical for success because when it comes to knowledge, who you know is often more valuable than what you've read", body: "The most valuable professional information is often in other people's heads. Hoffman said, \"There are more smart people in the world who do not work at your company than the total number of smart people who work at your company. So look beyond your office. If you do, your team becomes a whole lot bigger\"." , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/3-winning-habits-youll-find-in-most-successful-people-this-year.html", sponsorLogo: "", sponsorURL: "")
-let networking11 = Tip(header: "🙌", title: "Grit was found to be more important than IQ when you're trying to become successful", body: "Grit, or determination is the willingness to push through even when the odds are against you. Having grit means you that you still attend a networking event after a long day of work, even when you have no energy. Dig deep and go anyway because you never know who you'll meet.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/important-trait-of-success-2013-11", sponsorLogo: "", sponsorURL: "")
+let networking10 = Tip(header: "🚶‍♂️", title: "Project confidence: Stand up straight, pull your shoulders back, widen your stance, and hold your head high", body: "If you are upbeat and assured you tend to hold yourself erect and expand your chest. If you are feeling insecure or depressed, you tend to round your shoulders, slump, and look down. ", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/carolkinseygoman/2014/05/06/5-ways-to-project-confidence/#18b503744e34", sponsorLogo: "", sponsorURL: "")
+let networking11 = Tip(header: "🙌", title: "Having grit means you that you still attend a networking event after a long day of work, even when you have no energy", body: "Grit, or determination is the willingness to push through even when the odds are against you of you're tired. Grit was found to be more important than IQ when you're trying to become successful.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/important-trait-of-success-2013-11", sponsorLogo: "", sponsorURL: "")
+let networking12 = Tip(header: "🤓", title: "LinkedIn Co-founder, Reid Hoffman, believes networking is critical for success because when it comes to knowledge, who you know is often more valuable than what you've read", body: "The most valuable professional information is often in other people's heads. Hoffman said, \"There are more smart people in the world who do not work at your company than the total number of smart people who work at your company. So look beyond your office. If you do, your team becomes a whole lot bigger\"." , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/3-winning-habits-youll-find-in-most-successful-people-this-year.html", sponsorLogo: "", sponsorURL: "")
+
+
+let networkingTitle = "Event"
+let networkingIcon = "Eve"
+let networkingTipArray1 = [networking1, networking2, networking3, networking4]
+let networkingTopic1 = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArray1)
+
+let networkingTipArray2 = [networking5, networking6, networking7, networking8]
+let networkingTopic2 = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArray3)
+
+let networkingTipArray3 = [networking9, networking10, networking11, networking12]
+let networkingTopic3 = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArray3)
 
 // MARK: - Side Hustle
 //1
@@ -1814,7 +1844,7 @@ let parentingPMTip7 = Tip(header: "😴", title: "Sleep experts agree that teens
 
 // Avoid teens using smartphones in bedroom
 // TODO: - Finish Parting Advice
-let parentingPMTip7 = Tip(header: "📵", title: "Don't allow kids to keep smartphones in their room after bedtime. If they use their smartphones as alarm clocks, buy them inexpensive alarm clocks", body: "Unlike other electronic devices such as TVs and desktop computers, smartphones (and tablets) are easily carried into the bedroom and held by hand in bed. Most of the students I interviewed for my book “iGen” told me they kept their phones within reach as they slept, in part, because they all used it as their alarm clock. Many also told me that their smartphones were the last thing they looked at before they went to sleep at night. That’s a problem, because answering texts and scrolling through social media is mentally and emotionally stimulating, which leads to disturbed sleep. Others told me that they also regularly reached for their phones, often just out of habit, when they woke up in the middle of the night. The blue light emitted by smartphones and tablets simulates daylight, inhibiting the brain’s production of melatonin, the hormone that helps us fall asleep and stay asleep. A 2014 study found that 80 percent of teens admitted to using their phones when they were supposed to be sleeping." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/teens-are-sleeping-less-but-theres-a-surprisingly-easy-fix-85157", sponsorLogo: "", sponsorURL: "")
+let parentingPMTip8 = Tip(header: "📵", title: "Don't allow kids to keep smartphones in their room after bedtime. If they use their smartphones as alarm clocks, buy them inexpensive alarm clocks", body: "Unlike other electronic devices such as TVs and desktop computers, smartphones (and tablets) are easily carried into the bedroom and held by hand in bed. Most of the students I interviewed for my book “iGen” told me they kept their phones within reach as they slept, in part, because they all used it as their alarm clock. Many also told me that their smartphones were the last thing they looked at before they went to sleep at night. That’s a problem, because answering texts and scrolling through social media is mentally and emotionally stimulating, which leads to disturbed sleep. Others told me that they also regularly reached for their phones, often just out of habit, when they woke up in the middle of the night. The blue light emitted by smartphones and tablets simulates daylight, inhibiting the brain’s production of melatonin, the hormone that helps us fall asleep and stay asleep. A 2014 study found that 80 percent of teens admitted to using their phones when they were supposed to be sleeping." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/teens-are-sleeping-less-but-theres-a-surprisingly-easy-fix-85157", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEKEND
