@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 protocol NowTableViewCellDelegate {
     // Implement these functions in the NowViewController
@@ -31,7 +32,9 @@ class NowTableViewCell: UITableViewCell {
 
         // Display UI of CELL Boarder
 
-        boarderColorView.layer.borderColor = UIColor.lightGray.cgColor
+        let selectedGradientColor = UIColor(gradientStyle:UIGradientStyle.leftToRight, withFrame: boarderColorView.frame, andColors:[UIColor.flatSkyBlue(),UIColor.flatBlue()])
+
+        boarderColorView.layer.borderColor = UIColor.gray.cgColor
 
         boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         boarderColorView.layer.shadowOpacity = 0.4

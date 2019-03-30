@@ -96,6 +96,8 @@ struct MoodData {
 
     static let mad0Tips1 = [madTip0, madTip1, madTip2]
 
+
+
     // Button6 = "Stressed"
     static let stressedQuote0 = Quote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew Bernstein", bio: "Philosopher")
 

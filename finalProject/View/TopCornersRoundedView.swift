@@ -23,7 +23,7 @@ class TopCornersRoundedView: UIView {
     func initView() {
 
         clipsToBounds = true
-        layer.cornerRadius = 30
+        layer.cornerRadius = 20
         layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
 
         layer.shadowColor = UIColor.gray.cgColor

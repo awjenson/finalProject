@@ -12,7 +12,7 @@ import Foundation
 // + Confidence, Gratitude, Happiness
 
 // MARK: - SAD
-let sadTitle = "Sad"
+let sadTitle = "Funny"
 
 // Quotes
 let sadQuote1 = Quote(quote: "\"Things that I feel really sad about, I talk about. That way, if it's funny, it doesn't hurt anymore.\"", source: "Pete Davidson", bio: "Comedian")
@@ -25,7 +25,7 @@ let sadHintArray1 = [sadTip1, sadTip2]
 let sadHeader1 = Header(title: sadTitle, quote: sadQuote1, hints: sadHintArray1)
 
 // MARK: - DEPRESSED
-let depressedTitle = "Depressed"
+let depressedTitle = "Depression"
 
 // Quotes
 let depressedQuote1 = Quote(quote: "\"I found that with depression, one of the most important things you could realize is that you're not alone.\"", source: "Dwayne Johnson", bio: "Actor")
@@ -47,6 +47,9 @@ let depressedPMHint9 = Hint(title: "Teens who spent 5+ hours a day online were t
 let depressedPMHint10 = Hint(title: "Teen's happiness levels have been decreasing since 2012 (the year when the majority of Americans owned smartphones)", body: "These declines in well-being mirror other studies finding sharp increases in mental health issues among iGen, including in depressive symptoms, major depression, self-harm and suicide. A study found the happiest teens were those who used digital media, but for a limited amount of time.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/")
 let depressedPMHint11 = Hint(title: "Anxiety and depression symptoms are strongly linked to poor physical health", body: "A study of older adults found that people with high levels of anxiety and depression were found to face 65% increased odds for a heart condition, 64% for stroke, 50% for high blood pressure and 87% for arthritis, compared to those without anxiety and depression. These increased odds are similar to those of participants who are smokers or are obese. Anxiety and depression may be leading predictors of conditions ranging from heart disease and high blood pressure to arthritis, headaches, back pain and stomach upset.", sourceName: "University of California San Francisco", sourceURL: "https://www.ucsf.edu/news/2018/12/412676/depression-anxiety-may-take-same-toll-health-smoking-and-obesity")
 
+let depressedPMHint12 = Hint(title: "Listening to classical music reduces depressive symptoms when compared to listening to an audiobook", body: "Study: Depressive symptoms decreased statistically significantly in the relaxing classical music group, but not in the group listening to audiobooks.", sourceName: "National Center for Biotechnology Information, U.S. National Library of Medicine", sourceURL: "https://www.ncbi.nlm.nih.gov/pubmed/18426457")
+
+
 // During the day
 let depressedDayHint1 = Hint(title: "Taking walks in nature lowers depression while boosting mood and well-being", body: "", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/06/why-you-should-tell-your-team-to-take-a-break-and-go-outside")
 
@@ -56,7 +59,7 @@ let depressedHintArray1 = [depressedHint1, depressedHint2]
 let depressedHeader1 = Header(title: depressedTitle, quote: depressedQuote1, hints: depressedHintArray1)
 
 // MARK: - BORED
-let boredTitle = "Bored"
+let boredTitle = "Boredom"
 
 let boredQuote1 = Quote(quote: "\"Bored with life? Throw yourself into some work you believe in with all your heart, live for it, die for it, and you will find happiness that you had thought could never be yours.\"", source: "Dale Carnegie", bio: "American writer and lecturer")
 
@@ -67,7 +70,7 @@ let boredHeader1 = Header(title: boredTitle, quote: boredQuote1, hints: boredHin
 
 // MARK - MAD
 
-let madTitle = "Mad"
+let madTitle = "Anger"
 
 let madQuote1 = Quote(quote: "\"Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.\"", source: "Buddha", bio: "A monk whose teachings Buddhism was founded")
 let madHint1 = Hint(title: "Advice to reduce anger", body: "Anger can be simple to manage, once you know the basics of how and why the brain reacts to triggers. Scientific ways to calm down: \n\n• Take deep breaths \n\n• take a walk and get some fresh air \n\n• Write down why you're mad \n\n• Play loud or heavy music \n\n• Even doing nothing for two minutes was found to diminish feeling of anger", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/134593-6-ways-to-calm-down-when-youre-angry")
@@ -78,16 +81,18 @@ let madHeader1 = Header(title: madTitle, quote: madQuote1, hints: madHintArray1)
 
 // MARK: - STRESSED
 
-let stressedTitle = "Stressed"
+let stressedTitle = "Stress"
 
 let stressedQuote1 = Quote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew Bernstein", bio: "Philosopher")
 
 //1
 let stressedHint1 = Hint(title: "Reduce stress right now", body: "• Breathe deeply, \n\n • Go for a walk, \n\n • Visualize a peaceful forest or beach, \n\n • List to classical music, \n\n • watch a funny video, \n\n • call a friend, \n\n • turn off your phone.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html")
+
 let stressedHint2 = Hint(title: "Viewing stress as a helpful part of life, rather than as harmful, is associated with better health, emotional well-being and productivity at work – even during periods of high stress", body: "Three ways to best handle stress are: 1) to view your body's stress response as helpful, not debilitating – for example, to view stress as energy you can use; 2) to view yourself as able to handle, and even grow from, the stress in your life; and 3) to view stress as something that everyone deals with, and not something that proves how uniquely screwed up you or your life is.", sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/pr/2015/pr-stress-embrace-mcgonigal-050715.html")
 
 //2
 let stressedHint3 = Hint(title: "Reading for six minutes reduces stress by 68%", body: "Psychologists believe this is because the human mind has to concentrate on reading and the distraction of being taken into a literary world eases the tension in your body. \n\nAnd it works better and faster than other methods to calm frazzled nerves such as listening to music (61%), having a cup of coffee or tea (54%), or going for a walk (42%).", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/health/news/5070874/Reading-can-help-reduce-stress.html")
+
 let stressedHint4 = Hint(title: "Lower stress by breathing deeply through your nose", body: "Most of us simply don’t breathe deeply enough. Breathing using all four stages: inhaling, full pause, exhaling, and empty pause helps increase oxygen in the blood. The more oxygen in your blood, the less fatigued and more mentally alert you are. \n\nShallow breathing does not exercise the diaphragm and lungs enough and most people only use a small portion of their lung capacity. When inhaling fully, you should relax your belly so that it can move outward on the in-breath and your diaphragm can expand and move through more of its full range of motion. When exhaling fully, you should allow your belly to retract toward your spine, which supports the diaphragm’s upward movement to help empty the lungs.", sourceName: "Sealfit", sourceURL: "https://sealfit.com/breathing-lessons-2/")
 
 let stressedHint6 = Hint(title: "Focusing on learning helps to reduce stress", body: "Learning brings us new information and knowledge that can be useful for solving near-term stressful problems; it also equips us with new skills to address or even prevent future stressors. Psychologically, taking time to reflect on what we know and learn new things helps us develop feelings of competence and confidence. Learning also helps connect us to an underlying purpose of growth and development. This way, we can see ourselves as constantly improving and developing, rather than being stuck with fixed capabilities. These psychological resources enable us to build resilience in the face of stressors.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/to-cope-with-stress-try-learning-something-new")
@@ -99,12 +104,14 @@ let stressedHint9 = Hint(title: "People felt less stressed when they checked the
 
 let stressedHint10 = Hint(title: "Navy SEALs use box-breathing to slow down their breathing rate when their bodies are in fight-or-flight mode", body: "Breathe in for 4 seconds. Hold air in your lungs for 4 seconds. Exhale for 4 seconds. Hold your breath, lungs emptied, for 4 seconds.", sourceName: "Inc.", sourceURL: "https://www.inc.com/melody-wilding/beat-stress-like-a-navy-seal-with-this-ridiculousl.html")
 
-let stressedHintArray1 = [stressedHint1]
+let stressedHint11 = Hint(title: "Psychotherapy helps improve your mental health and future income, 13-year study finds", body: "Men who reported having had stress and mental problems, and consulting a psychotherapist, experienced a 13% income increase in the subsequent year. Women experienced an 8% income increase. The study found gender discrimination to partially explain the difference in income increase. However, consulting a psychotherapist helps women nearly twice as much as men in terms of mental health.", sourceName: "The Conversation", sourceURL: "https://theconversation.com/psychotherapy-can-make-you-richer-especially-if-you-are-a-man-107628")
+
+let stressedHintArray1 = [stressedHint1, stressedHint2]
 let stressedHeader1 = Header(title: stressedTitle, quote: stressedQuote1, hints: stressedHintArray1)
 
 // MARK: - ANXIOUS
 
-let anxiousTitle = "Anxious"
+let anxiousTitle = "Anxiety"
 
 let anxiousQuote1 = Quote(quote: "\"Nothing diminishes anxiety faster than action.\"", source: "Walter Anderson", bio: "Was an author, editor, and CEO")
 
@@ -144,11 +151,11 @@ let lonelyQuote1 = Quote(quote: "\"The best remedy for those who are afraid, lon
 
 let lonelyHint1 = Hint(title: "Remember we all feel lonely sometimes (1 in 5 Americans suffer from loneliness)", body: "Accept your need for social connection (humans are social beings), listen to music, do something creative, work in a social setting (cafe or co-working space), call, text, or meetup with a friend, avoid using social media (scrolling mindlessly makes us lonelier), make eye contact with people, and be kind to strangers.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/conditions/how-to-not-feel-lonely/")
 
-//
 let lonelyHint2 = Hint(title: "You're not alone. 40% of U.S. adults report feeling lonely", body: "As a society, we have used technology to build stronger online connections, but our offline connections have deteriorated. We evolved to be social creatures and thousands of years ago if you were connected to other people you were more likely to have a stable food supply and to be protected from predators. So when you're disconnected, you're in a stress state. Loneliness is associated with a reduction in your lifespan that is as severe as the lifespan you see with smoking 15 cigarettes a day.", sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/loneliness-epidemic-former-surgeon-general-dr-vivek-murthy/")
+
 let lonelyHint3 = Hint(title: "Reduce feelings of loneliness by spending less time on social media and more time with friends face-to-face", body: "Researchers found that people who reported spending the most time on social media had twice the odds of perceived social isolation than those who said they spent less on those sites. Replacing your real-world relationships with social media use is detrimental to your well-being. However, face-to-face social connectedness is strongly associated with well-being.", sourceName: "NPR", sourceURL: "https://www.npr.org/sections/health-shots/2017/03/06/518362255/feeling-lonely-too-much-time-on-social-media-may-be-why")
 
-let lonelyHintArray1 = [lonelyHint1]
+let lonelyHintArray1 = [lonelyHint1, lonelyHint2]
 let lonelyHeader1 = Header(title: lonelyTitle, quote: lonelyQuote1, hints: lonelyHintArray1)
 
 // MARK: - ENVIOUS
@@ -160,7 +167,7 @@ let enviousQuote1 = Quote(quote: "\"Envy blinds men and makes it impossible for 
 let enviousHint1 = Hint(title: "Too much social media increases envy", body: "Research found that when Facebook evoked envy, it increased symptoms of depression. If you tend to compare yourself with others or get envious easily, you might consider limiting your time spent on social networking sites or make a conscious effort to use them in active ways (commenting and posting) rather than passive ways (browsing news feeds).", sourceName: "Scientific American", sourceURL: "https://www.scientificamerican.com/article/green-with-facebook-envy-red-with-twitter-rage/")
 let enviousHint2 = Hint(title: "Daily Stoic: Envy", body: "If we’re not careful, we can waste enormous chunks of today being miserable over the fact that so-and-so is doing well or how badly we feel we deserve what so-and-so is enjoying? Because jealousy is a blinding passion. \n\nSo if you want to know what envy is, here’s your answer: It’s insanity. It’s death. It’s a thing to be avoided at all costs.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/do-you-know-what-envy-is/")
 
-let enviousHintArray1 = [enviousHint1]
+let enviousHintArray1 = [enviousHint1, enviousHint2]
 let enviousHeader1 = Header(title: enviousTitle, quote: enviousQuote1, hints: enviousHintArray1)
 
 // MARK: - CONFIDENCE
@@ -171,12 +178,12 @@ let confidenceQuote1 = Quote(quote: "\"You gain strength, courage, and confidenc
 
 let confidenceHint1 = Hint(title: "Boost confidence now", body: "• Sit up straight \n\n• Smile (the movement of the muscles in your face causes your brain to release endorphins which causess you to feel happy) \n\n• Nod your head up-and-down (the movement signals positive thoughts in your brain) \n\n• Visualize yourself scoring the winning goal or going through a tough workout (you first need to win in your head; only then can you win in the battleground) \n\n• Stand for two minutes in a wide stance with your hands in the air \n\n• Listen to heavy-bass songs \n\n• Exercise regularly \n\n• Spray on our favorite fragrance (a study found that it will make you feel more confident)", sourceName: "Greatist", sourceURL: "https://greatist.com/grow/easy-confidence-boosters")
 
-let confidenceHintArray1 = [confidenceHint1]
+let confidenceHintArray1 = [confidenceHint1, confidenceHint1]
 let confidenceHeader1 = Header(title: confidenceTitle, quote: confidenceQuote1, hints: confidenceHintArray1)
 
-// MARK: - Gratitude
+// MARK: - GRATITUDE
 
-let gratitudeTitle = "Gratitude"
+let creativityTitle = "Creativity"
 
 // Quote
 let gratitudeQuote1 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams", bio: "Rapper, singer, songwriter, record producer, entrepreneur, and fashion designer")
@@ -187,5 +194,48 @@ let gratitudeQuote2 = Quote(quote: "\"The more you praise and celebrate your lif
 let gratitudeHint1 = Hint(title: "Advice to improve wellbeing", body: "Practice gratitude because it's strongly associated with greater happiness and health. Thank someone, count your blessings, pray, keep a gratitude journal. One study found that people who wrote about gratitude were more optimistic and felt better about their lives.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier")
 let gratitudeHint2 = Hint(title: "Gratitude improves wellbeing", body: "Research finds that practicing gratitude has many benefits: leads to more relationships, improves physical and psychological health, increases empathy and self-esteem, and reduces aggression and stress. What are you thankful for?", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/amymorin/2014/11/23/7-scientifically-proven-benefits-of-gratitude-that-will-motivate-you-to-give-thanks-year-round/#16c4850f183c")
 
-let gratitudeHintArray1 = [gratitudeHint1]
-let gratitudeHeader1 = Header(title: gratitudeTitle, quote: gratitudeQuote1, hints: gratitudeHintArray1)
+let gratitudeHintArray1 = [gratitudeHint1, gratitudeHint2]
+let creativityHeader1 = Header(title: creativityTitle, quote: gratitudeQuote1, hints: gratitudeHintArray1)
+
+// MARK: - RELATIONSHIP PROBLEM
+let mentalToughnessTitle = "Mental Toughness"
+
+// Quote
+let relationshipProblemsQuote1 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams", bio: "Rapper, singer, songwriter, record producer, entrepreneur, and fashion designer")
+let relationshipProblemsHintArray1 = [gratitudeHint1]
+let mentalToughnessHeader1 = Header(title: mentalToughnessTitle, quote: relationshipProblemsQuote1, hints: relationshipProblemsHintArray1)
+
+// MARK: - LAZY
+let lazyTitle = "Lonliness"
+
+// Quote
+let lazyQuote1 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams", bio: "Rapper, singer, songwriter, record producer, entrepreneur, and fashion designer")
+let lazyHintArray1 = [gratitudeHint1]
+let lazyHeader1 = Header(title: lazyTitle, quote: lazyQuote1, hints: lazyHintArray1)
+
+
+
+// MARK: - TIRED
+let leadershipTitle = "Leadership Skills"
+
+// Quote
+let tiredQuote1 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams", bio: "Rapper, singer, songwriter, record producer, entrepreneur, and fashion designer")
+
+//AM
+let tiredAMHint1 = Hint(title: "During the day, exposing your body to bright light tells it to stay alert", body: "Get out and expose your body to sunlight or artificial bright light throughout the day. Light influences your body’s internal clock, which boosts feelings of wakefulness.", sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1")
+
+//Afternoon
+
+//PM
+
+let tiredHintArray1 = [tiredAMHint1]
+let leadershipHeader1 = Header(title: leadershipTitle, quote: tiredQuote1, hints: tiredHintArray1)
+
+
+// MARK: - Happiness
+let charismaTitle = "Charisma"
+
+// Quote
+let happinessQuote1 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams", bio: "Rapper, singer, songwriter, record producer, entrepreneur, and fashion designer")
+let happinessHintArray1 = [gratitudeHint1]
+let charismaHeader1 = Header(title: charismaTitle, quote: happinessQuote1, hints: happinessHintArray1)

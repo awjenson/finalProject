@@ -41,7 +41,9 @@ class RoundCorneredButton: UIButton {
 
         layer.masksToBounds = false
 
-        backgroundColor = UIColor(white: 1, alpha: 0.975)
+//        backgroundColor = UIColor(white: 1, alpha: 0.975)
+
+        backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
     }
 
     func setTitleWithOutAnimation(title: String?) {

@@ -6,41 +6,61 @@
 //  Copyright © 2018 Andrew Jenson. All rights reserved.
 //
 
+// Mind Gym
+// Goal is to inspire and help some become a better person for themselves, family, and community
+// Like a daily exercise class where your trainer tells you what to do
+
+// More: Confidence, Character, Integrity, Personality, Joy/Gratitude
+
+// Less:
+
+// Wants fun graphics/light hearted graphics
+
 import UIKit
 //import Firebase
 //import GrowingTextView
 //import SVProgressHUD
+import ChameleonFramework
 import SafariServices // to display webview
 
 class JournalViewController: UIViewController {
 
     // MARK: - IBOutlets
+
     @IBOutlet weak var journalTableView: UITableView!
 
     // Table View Header View
     @IBOutlet weak var topView: UIView!
 
     // Quote
+    @IBOutlet weak var quoteView: UIView!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
-    // Nature Pic
-    @IBOutlet weak var imageView: UIImageView!
-
     // moodButtions OutletCollection only used for flipping UI when buttons tapped
-    @IBOutlet var headerButtons: [RoundCorneredButton]!
+    @IBOutlet var headerButtons: [RoundedOvalButton]!
 
     // Created individual buttons because Outlet Collection did not work
-    @IBOutlet weak var header0Button: RoundCorneredButton!
-    @IBOutlet weak var header1Button: RoundCorneredButton!
-    @IBOutlet weak var header2Button: RoundCorneredButton!
-    @IBOutlet weak var header3Button: RoundCorneredButton!
-    @IBOutlet weak var header4Button: RoundCorneredButton!
-    @IBOutlet weak var header5Button: RoundCorneredButton!
-    @IBOutlet weak var header6Button: RoundCorneredButton!
-    @IBOutlet weak var header7Button: RoundCorneredButton!
+    @IBOutlet weak var header0Button: RoundedOvalButton!
+    @IBOutlet weak var header1Button: RoundedOvalButton!
+    @IBOutlet weak var header2Button: RoundedOvalButton!
+    @IBOutlet weak var header3Button: RoundedOvalButton!
+    // 2nd row
+    @IBOutlet weak var header4Button: RoundedOvalButton!
+    @IBOutlet weak var header5Button: RoundedOvalButton!
+    @IBOutlet weak var header6Button: RoundedOvalButton!
+    @IBOutlet weak var header7Button: RoundedOvalButton!
+
+    // 3rd row
+    @IBOutlet weak var header8Button: RoundedOvalButton!
+    @IBOutlet weak var header9Button: RoundedOvalButton!
+    @IBOutlet weak var header10Button: RoundedOvalButton!
+    @IBOutlet weak var header11Button: RoundedOvalButton!
 
 
+
+    @IBOutlet weak var returnToTopButton: RoundCorneredButton!
+    @IBOutlet weak var footerView: UIView!
 
 
     // MARK: - Properties
@@ -53,11 +73,13 @@ class JournalViewController: UIViewController {
     var headers: [Header] = [] // array of headers
     var hints: [Hint] = []
 
-
-
-
-
     var selectedImage: String?
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    var currentIndex:Int = -1 //initial integer since UIButton.index start at 0
 
 
 
@@ -99,49 +121,58 @@ class JournalViewController: UIViewController {
 //        }
 //    }
 
+    override func viewWillAppear(_ animated: Bool) {
+
+
+    }
+
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if internetConnected() {
-//            retrieveMessages()
-        } else {
-            performUIUpdatesOnMain {
-                self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
-            }
-        }
+//        if internetConnected() {
+////            retrieveMessages()
+//        } else {
+//            performUIUpdatesOnMain {
+//                self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
+//            }
+//        }
         setupUI()
+
+        footerView.isHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        print("Journal View Controller Will Disappear")
+        // Important: Need this when working with Observers to avoid memory leak!
+        NotificationCenter.default.removeObserver(self)
     }
+
+
 
     // MARK: - Methods
 
     func setupUI() {
 
+        let selectedGradientColor = UIColor(gradientStyle:UIGradientStyle.leftToRight, withFrame: view.frame, andColors:[UIColor.flatMint(), UIColor.flatMintColorDark(), UIColor.flatMintColorDark(), UIColor.flatMintColorDark(),UIColor.flatMintColorDark()])
+        self.view.backgroundColor = selectedGradientColor
+        self.footerView.backgroundColor = selectedGradientColor
+
         // place buttons in desired order (excludes FamousPerson hints)
         headerButtons = [header0Button, header1Button, header2Button, header3Button,
-                         header4Button, header5Button, header6Button, header7Button]
+                         header4Button, header5Button, header6Button, header7Button,
+                         header8Button, header9Button]
 
-        // Positioning of the buttons
-        topView.frame.size.height = self.view.frame.size.height * 0.8
 
         // determines which buttons headers and hints are displayed
         dayOfWeekAndHour()
 
-//        configureDatabase()
+        // set footer
 
-        setupButtonsQuoteImage()
 
         journalTableViewSetup()
-
-
-
 
     }
 
@@ -151,6 +182,7 @@ class JournalViewController: UIViewController {
         journalTableView.rowHeight = UITableView.automaticDimension
         journalTableView.estimatedRowHeight = 44
         journalTableView.separatorStyle = .none
+
         self.setupRefreshControl()
     }
 
@@ -173,45 +205,15 @@ class JournalViewController: UIViewController {
 
 
 
-
     func setupButtonsQuoteImage() {
 
-        if let imageToLoad = selectedImage {
-            imageView.image  = UIImage(named: imageToLoad)
-        }
+//        if let imageToLoad = selectedImage {
+//            imageView.image  = UIImage(named: imageToLoad)
+//        }
 
         // Set initial quote
-        quoteLabel.text = headers[8].quote.quote
-        authorLabel.text = headers[8].quote.source
-
-
-        // Quote
-//        quoteLabel.text = advice.quote
-//        authorLabel.text = advice.source
-
-        // Text Messages
-//        messageTextView.layer.borderColor = UIColor.gray.cgColor
-//        messageTextView.layer.borderWidth = 1.0
-//        // Set messageTextView delegate for UITextFieldDelegate
-//        messageTextView.delegate = self
-//        messageTextView.trimWhiteSpaceWhenEndEditing = false
-//        messageTextView.placeholder = "Text something..."
-//        messageTextView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
-//        messageTextView.backgroundColor = UIColor.white
-//        messageTextView.layer.cornerRadius = 4.0
-
-        // Buttons
-//        // Row 1
-//        header0Button.setTitle(Constants.SelectedMood.Button0,for: .normal)
-//        header1Button.setTitle(Constants.SelectedMood.Button1,for: .normal)
-//        header2Button.setTitle(Constants.SelectedMood.Button2,for: .normal)
-//        header3Button.setTitle(Constants.SelectedMood.Button3,for: .normal)
-//        header4Button.setTitle(Constants.SelectedMood.Button4,for: .normal)
-//        // Row 2
-//        header5Button.setTitle(Constants.SelectedMood.Button5,for: .normal)
-//        header6Button.setTitle(Constants.SelectedMood.Button6,for: .normal)
-//        header7Button.setTitle(Constants.SelectedMood.Button7,for: .normal)
-
+        quoteLabel.text = headers[12].quote.quote
+        authorLabel.text = headers[12].quote.source
     }
 
 
@@ -227,11 +229,7 @@ class JournalViewController: UIViewController {
     }
 
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        // Important: Need this when working with Observers to avoid memory leak!
-        NotificationCenter.default.removeObserver(self)
-    }
+
 
     // NEW
 
@@ -243,6 +241,9 @@ class JournalViewController: UIViewController {
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
 
+
+        setNatureImage(to: "night1")
+        updateQuote(quote: QuoteData.q1)
 
         switch dayOfWeek {
         case 1: // Sun
@@ -269,7 +270,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
+            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -279,7 +280,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
+            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -289,7 +290,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
+            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -299,7 +300,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
+            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -309,7 +310,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
+            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -319,7 +320,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
+            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -329,14 +330,39 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendEightHeaders(confidenceHeader1, gratitudeHeader1, anxiousHeader1, stressedHeader1, madHeader1, boredHeader1, depressedHeader1, sadHeader1, bruceLeeHeader1)
+            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
     }
 
 
+    func setNatureImage(to imageTitle: String) {
+        performUIUpdatesOnMain {
+//            self.natureImageView.image = UIImage(named: imageTitle)
+        }
+    }
 
+    func updateQuote(quote: Quote) {
+        performUIUpdatesOnMain {
+            self.quoteLabel.text = quote.quote
+            self.authorLabel.text = quote.source
+
+            //            self.sizeFooterToFit()// needs to be called after setting quote
+
+//            self.quoteView.frame.size.height = self.view.frame.size.width
+        }
+    }
+
+
+
+    @IBAction func returnToTopTapped(_ sender: Any) {
+
+        performUIUpdatesOnMain {
+            // removed animation because it was too slow
+            self.journalTableView.setContentOffset(.zero, animated: false)
+        }
+    }
 
 
 
@@ -365,35 +391,49 @@ class JournalViewController: UIViewController {
     // Loving
     // Good or OK
 
-    func appendEightHeaders(_ header0: Header, _ header1: Header, _ header2: Header, _ header3: Header,_ header4: Header, _ header5: Header, _ header6: Header, _ header7: Header, _ header8Person: Header) {
+    func appendHeaders(_ header0: Header, _ header1: Header, _ header2: Header, _ header3: Header,_ header4: Header, _ header5: Header, _ header6: Header, _ header7: Header, _ header8: Header, _ header9: Header, _ header10: Header, _ header11: Header) {
 
-        headers = [header0, header1, header2, header3, header4, header5, header6, header7, header8Person]
+        headers = [header0, header1, header2, header3, header4, header5, header6, header7, header8, header9, header10, header11]
 
-        // set 4 'Famous Person' tips to be displayed in initial table view
-        hints = [headers[8].hints[0],
-                headers[8].hints[1],
-                headers[8].hints[2],
-                headers[8].hints[3]]
+        // set UIButtons
+        self.header0Button.setTitle(header0.title, for: .normal)
+        self.header1Button.setTitle(header1.title, for: .normal)
+        self.header2Button.setTitle(header2.title, for: .normal)
+        self.header3Button.setTitle(header3.title, for: .normal)
 
-        resetHeaderButtonsSetup()
-    }
+        self.header4Button.setTitle(header4.title, for: .normal)
+        self.header5Button.setTitle(header5.title, for: .normal)
+        self.header6Button.setTitle(header6.title, for: .normal)
+        self.header7Button.setTitle(header7.title, for: .normal)
 
-    func resetHeaderButtonsSetup() {
-        resetHeaderButtonOriginalStyle(button: header0Button, buttonTitle: headers[0].title)
-        resetHeaderButtonOriginalStyle(button: header1Button, buttonTitle: headers[1].title)
-        resetHeaderButtonOriginalStyle(button: header2Button, buttonTitle: headers[2].title)
-        resetHeaderButtonOriginalStyle(button: header3Button, buttonTitle: headers[3].title)
-        resetHeaderButtonOriginalStyle(button: header4Button, buttonTitle: headers[4].title)
-        resetHeaderButtonOriginalStyle(button: header5Button, buttonTitle: headers[5].title)
-        resetHeaderButtonOriginalStyle(button: header6Button, buttonTitle: headers[6].title)
-        resetHeaderButtonOriginalStyle(button: header7Button, buttonTitle: headers[7].title)
+        self.header8Button.setTitle(header8.title, for: .normal)
+        self.header9Button.setTitle(header9.title, for: .normal)
+//        self.header10Button.setTitle(header10.title, for: .normal)
+//        self.header11Button.setTitle(header11.title, for: .normal)
+
 
     }
 
-    private func resetHeaderButtonOriginalStyle(button: RoundCorneredButton, buttonTitle: String) {
-        button.setTitle(buttonTitle, for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
+//    func resetHeaderButtonsSetup() {
+//        resetHeaderButtonOriginalStyle(button: header0Button, buttonTitle: headers[0].title)
+//        resetHeaderButtonOriginalStyle(button: header1Button, buttonTitle: headers[1].title)
+//        resetHeaderButtonOriginalStyle(button: header2Button, buttonTitle: headers[2].title)
+//        resetHeaderButtonOriginalStyle(button: header3Button, buttonTitle: headers[3].title)
+//        resetHeaderButtonOriginalStyle(button: header4Button, buttonTitle: headers[4].title)
+//        resetHeaderButtonOriginalStyle(button: header5Button, buttonTitle: headers[5].title)
+//        resetHeaderButtonOriginalStyle(button: header6Button, buttonTitle: headers[6].title)
+//        resetHeaderButtonOriginalStyle(button: header7Button, buttonTitle: headers[7].title)
+//
+//    }
+
+
+    private func resetHeaderButtonOriginalStyle(button: RoundedOvalButton) {
+
+        performUIUpdatesOnMain {
+            // reset to original color display
+            button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
+            button.backgroundColor = .white
+        }
     }
 
     // MARK: TODO
@@ -426,42 +466,82 @@ class JournalViewController: UIViewController {
 
 
 
-    @IBAction func headerButtonTapped(_ sender: RoundCorneredButton) {
+    @IBAction func headerButtonTapped(_ sender: RoundedOvalButton) {
 
         if let headerNumber = headerButtons.index(of: sender) {
 
             print("ANDREW: headerButtonTapped", headerNumber)
 
-            flipButton(at: headerNumber, withText: headers[headerNumber].title, on: sender)
-            journalTableView.reloadData()
+            flipButton(at: headerNumber, on: sender)
         } else {
             createAlert(title: "ERROR", message: "Could not laod buttons.")
         }
     }
 
-    func flipButton(at indexNumber: Int, withText text: String, on button: RoundCorneredButton) {
+    func flipButton(at indexNumber: Int, on button: RoundedOvalButton) {
 
-        print("ANDREW: indexNumber \(indexNumber, text)")
+        // reset buttons to original UI display
+        resetHeaderButtonOriginalStyle(button: header0Button)
+        resetHeaderButtonOriginalStyle(button: header1Button)
+        resetHeaderButtonOriginalStyle(button: header2Button)
+        resetHeaderButtonOriginalStyle(button: header3Button)
+        resetHeaderButtonOriginalStyle(button: header4Button)
+        resetHeaderButtonOriginalStyle(button: header5Button)
+        resetHeaderButtonOriginalStyle(button: header6Button)
+        resetHeaderButtonOriginalStyle(button: header7Button)
 
-        if button.currentTitle == text {
-            print("Tapped an unselected topic button, display X")
-            resetHeaderButtonsSetup()
-            let selectedButtonIcon = Constants.Now.selectedIconDisplay
-            button.setTitle("\(selectedButtonIcon)", for: .normal)
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = UIColor.gray
-            headerSelected(indexNumber)
+        resetHeaderButtonOriginalStyle(button: header7Button)
+        resetHeaderButtonOriginalStyle(button: header7Button)
+
+        // Identify what button was tapped
+
+        // selected button previously tapped
+        // Check if this button has been tapped just prior
+        if currentIndex == indexNumber {
+
+            footerView.isHidden = true
+
+            // reset hints
+            hints = []
+
+            // Unselected
+            performUIUpdatesOnMain {
+                button.backgroundColor = .white
+                button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
+
+
+            }
+
+            currentIndex = -1
         } else {
-            print("Tapped 'X' button, reset to Now Tips and remove X")
-            button.setTitle(text, for: .normal)
-            button.backgroundColor = .white
-            button.setTitleColor(.black, for: .normal)
-            resetHeaderButtonsSetup()
-            headerSelected(headerButtons.count)
+            // selected button NOT previously tapped
+            // gray out selected button
+            // display selected topic tips
+
+            // display return button
+            footerView.isHidden = false
+
+            appendHintsArrayBasedOnHeaderSelected(indexNumber)
+
+            // Selected
+            performUIUpdatesOnMain {
+                //                button.setTitleColor(.black, for: .normal)
+                //                button.backgroundColor = NowConstants.YvonneColor.silver
+
+                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = NowConstants.YvonneColor.defaultBlue
+
+            }
+
+            currentIndex = indexNumber
+        }// end of else
+
+        performUIUpdatesOnMain {
+            self.journalTableView.reloadData()
         }
     }
 
-    func headerSelected(_ index: Int) {
+    func appendHintsArrayBasedOnHeaderSelected(_ index: Int) {
         hints = []
 
         // Take selected index in topics array and subtract 1 because we start with zero
@@ -471,6 +551,54 @@ class JournalViewController: UIViewController {
             hints.append(headers[index].hints[item])
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//    func flipButton(at indexNumber: Int, withText text: String, on button: RoundCorneredButton) {
+//
+//        print("ANDREW: indexNumber \(indexNumber, text)")
+//
+//        if button.currentTitle == text {
+//            print("Tapped an unselected topic button, display X")
+//            resetHeaderButtonsSetup()
+//            let selectedButtonIcon = Constants.Now.selectedIconDisplay
+//            button.setTitle("\(selectedButtonIcon)", for: .normal)
+//            button.setTitleColor(.white, for: .normal)
+//            button.backgroundColor = UIColor.gray
+//            headerSelected(indexNumber)
+//        } else {
+//            print("Tapped 'X' button, reset to Now Tips and remove X")
+//            button.setTitle(text, for: .normal)
+//            button.backgroundColor = .white
+//            button.setTitleColor(.black, for: .normal)
+//            resetHeaderButtonsSetup()
+//            headerSelected(headerButtons.count)
+//        }
+//    }
+
+
+
+//    func headerSelected(_ index: Int) {
+//        hints = []
+//
+//        // Take selected index in topics array and subtract 1 because we start with zero
+//        let counter = (headers[index].hints.count - 1)
+//
+//        for item in 0...counter {
+//            hints.append(headers[index].hints[item])
+//        }
+//    }
 
 
 
@@ -556,16 +684,16 @@ extension JournalViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 48))
-        footerView.backgroundColor = UIColor.clear
-
-        return footerView
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 10
-    }
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 48))
+//        footerView.backgroundColor = UIColor.clear
+//
+//        return footerView
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 0
+//    }
 
 }
 
