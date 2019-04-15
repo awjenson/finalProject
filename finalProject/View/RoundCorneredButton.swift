@@ -27,11 +27,13 @@ class RoundCorneredButton: UIButton {
         titleLabel?.numberOfLines = 2 // if you want unlimited number of lines put 0
         titleLabel?.textAlignment = .center
 
+
         // UI
 
+
         layer.cornerRadius = 12
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.init(hexString: UIColor.lightGray.hexValue(), withAlpha: 0.8)?.cgColor
 
 
         layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
@@ -41,9 +43,11 @@ class RoundCorneredButton: UIButton {
 
         layer.masksToBounds = false
 
-//        backgroundColor = UIColor(white: 1, alpha: 0.975)
-
         backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+
+
+
+
     }
 
     func setTitleWithOutAnimation(title: String?) {

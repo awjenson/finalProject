@@ -12,6 +12,7 @@
 		DA05883620EEF47F0065098D /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883520EEF47F0065098D /* KeyboardService.swift */; };
 		DA05883820EEFC970065098D /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883720EEFC970065098D /* UITextView+DoneButton.swift */; };
 		DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */; };
+		DA061138225003AA008CABE5 /* MindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA061137225003AA008CABE5 /* MindViewController.swift */; };
 		DA09E2FA22126E5A0050C1E8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA09E2F922126E5A0050C1E8 /* GradientView.swift */; };
 		DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0B2104EEB300B9363F /* Quote.swift */; };
 		DA0EDE0E2104EF6D00B9363F /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0D2104EF6D00B9363F /* Hint.swift */; };
@@ -45,6 +46,8 @@
 		DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */; };
 		DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */; };
 		DA606B512064969100DD14C0 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA606B502064969100DD14C0 /* Topic.swift */; };
+		DA687C3622605EAC0037DD48 /* RoundProfileIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */; };
+		DA687C38226064F00037DD48 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA687C37226064F00037DD48 /* UserProfileViewController.swift */; };
 		DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */; };
 		DA6EBB3321C9C149006F7259 /* PersonAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EBB3221C9C149006F7259 /* PersonAdvice.swift */; };
 		DA6EBB3521C9CDEE006F7259 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EBB3421C9CDEE006F7259 /* Header.swift */; };
@@ -97,6 +100,7 @@
 		DA05883520EEF47F0065098D /* KeyboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
 		DA05883720EEFC970065098D /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
 		DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
+		DA061137225003AA008CABE5 /* MindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindViewController.swift; sourceTree = "<group>"; };
 		DA09E2F922126E5A0050C1E8 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DA0EDE0B2104EEB300B9363F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		DA0EDE0D2104EF6D00B9363F /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 		DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatement.swift; sourceTree = "<group>"; };
 		DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAdvice.swift; sourceTree = "<group>"; };
 		DA606B502064969100DD14C0 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundProfileIconButton.swift; sourceTree = "<group>"; };
+		DA687C37226064F00037DD48 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
 		DA6EBB3221C9C149006F7259 /* PersonAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAdvice.swift; sourceTree = "<group>"; };
 		DA6EBB3421C9CDEE006F7259 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -319,6 +325,7 @@
 				DAA1022620537D5200A25EFC /* Journal */,
 				DA78987D2050DBB6005046D8 /* Now */,
 				DA78987E2050DBBC005046D8 /* Profile */,
+				DA388FA520F2957000AC5EDC /* CardView.swift */,
 				DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */,
 				DA9CC27620FD3B58001A89B7 /* RoundedOvalButton.swift */,
 				DAA1021E2053448200A25EFC /* RoundImage.swift */,
@@ -326,12 +333,12 @@
 				DAA1021C2053444000A25EFC /* RoundButton.swift */,
 				DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */,
 				DA78986D204F5F69005046D8 /* ViewModelItemType.swift */,
-				DA388FA520F2957000AC5EDC /* CardView.swift */,
 				DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */,
 				DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */,
 				DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */,
 				DA09E2F922126E5A0050C1E8 /* GradientView.swift */,
 				DAEA7483222FBB0700AEDF95 /* RoundCornerView.swift */,
+				DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +399,7 @@
 				DAA1022420537A2400A25EFC /* JournalViewController.swift */,
 				DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */,
 				DA404BD420B103DC007220F4 /* CounterViewController.swift */,
+				DA061137225003AA008CABE5 /* MindViewController.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -452,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				DA78988C2052EFA1005046D8 /* NowViewController.swift */,
+				DA687C37226064F00037DD48 /* UserProfileViewController.swift */,
 			);
 			path = Now;
 			sourceTree = "<group>";
@@ -606,6 +615,7 @@
 				DA05883820EEFC970065098D /* UITextView+DoneButton.swift in Sources */,
 				DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */,
 				DA361D3920896E5D007ACE59 /* Date+convertToString.swift in Sources */,
+				DA061138225003AA008CABE5 /* MindViewController.swift in Sources */,
 				DA015BF42073E36300A0342F /* UIViewControllerExtension.swift in Sources */,
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
@@ -622,6 +632,7 @@
 				DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */,
 				DAEA7484222FBB0700AEDF95 /* RoundCornerView.swift in Sources */,
 				DA6EBB3721CACF2C006F7259 /* HeaderData.swift in Sources */,
+				DA687C38226064F00037DD48 /* UserProfileViewController.swift in Sources */,
 				DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */,
 				DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */,
 				DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */,
@@ -670,6 +681,7 @@
 				DA8DC6FB21F66F1B00663DB4 /* BottomCornersRoundedView.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
 				DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */,
+				DA687C3622605EAC0037DD48 /* RoundProfileIconButton.swift in Sources */,
 				DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */,
 				DA6EBB3321C9C149006F7259 /* PersonAdvice.swift in Sources */,
 				DA15AE1220B649B400EFC4C2 /* CounterTableViewCell.swift in Sources */,

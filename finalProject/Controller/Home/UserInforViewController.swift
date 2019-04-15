@@ -78,8 +78,11 @@ class UserInfoViewController: UIViewController {
 
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
+        let day = calendar.component(.day, from: date)
         let week = calendar.component(.weekOfYear, from: date)
         let weekOfMonth = calendar.component(.weekOfMonth, from: date)
+
+
 
 
         if week % 2 == 0 {
@@ -166,7 +169,7 @@ class UserInfoViewController: UIViewController {
         //greeting
         switch hour {
         case 0...4:
-            greetingLabel.text = "Good Evening"
+            greetingLabel.text = "Good Night"
         case 5...8:
             greetingLabel.text = "Rise and Shine"
             authorLabel.text = ""
@@ -174,60 +177,60 @@ class UserInfoViewController: UIViewController {
             greetingLabel.text = "Good Morning"
         case 12...17:
             greetingLabel.text = "Good Afternoon"
-        case 18...23:
+        case 18...21:
             greetingLabel.text = "Good Evening"
+        case 22...23:
+            greetingLabel.text = "Good Night"
         default:
             greetingLabel.text = "Hello"
         }
 
-        let number = Int.random(in: 1 ... 21)
-
         //breathing tip
         switch hour {
         case 0...4:
-            setNatureImage(to: "night\(number)")
+            setNatureImage(to: "night\(day)")
             authorLabel.text = "\(beginningStatement) helps you to fall asleep"
         case 5...7:
-            setNatureImage(to: "morning\(number)")
+            setNatureImage(to: "morning\(day)")
             authorLabel.text = "\(beginningStatement) makes you feel alert and energized"
         case 8:
-            setNatureImage(to: "morning\(number)")
+            setNatureImage(to: "morning\(day)")
             authorLabel.text = "\(beginningStatement) reduces stress, anxiety, and depresion"
         case 9:
-            setNatureImage(to: "midmorning\(number)")
+            setNatureImage(to: "midmorning\(day)")
             authorLabel.text = "\(beginningStatement) reduces stress, anxiety, and depresion"
         case 10...11:
-            setNatureImage(to: "midmorning\(number)")
+            setNatureImage(to: "midmorning\(day)")
             authorLabel.text = "\(beginningStatement) improves concentration, focus, memorization"
         case 12...13:
-            setNatureImage(to: "day\(number)")
+            setNatureImage(to: "day\(day)")
             authorLabel.text = "\(beginningStatement) improves posture"
         case 14:
-            setNatureImage(to: "afternoon\(number)")
+            setNatureImage(to: "afternoon\(day)")
             authorLabel.text = "\(beginningStatement) protects the body from bacteria and viruses"
         case 15:
-            setNatureImage(to: "afternoon\(number)")
+            setNatureImage(to: "afternoon\(day)")
             authorLabel.text = "\(beginningStatement) protects the body from bacteria and viruses"
         case 16:
-            setNatureImage(to: "afternoon\(number)")
+            setNatureImage(to: "afternoon\(day)")
             authorLabel.text = "\(beginningStatement) improves heart and organ function"
         case 17:
-            setNatureImage(to: "evening\(number)")
+            setNatureImage(to: "evening\(day)")
             authorLabel.text = "\(beginningStatement) improves heart and organ function"
         case 18:
-            setNatureImage(to: "evening\(number)")
+            setNatureImage(to: "evening\(day)")
             authorLabel.text = "\(beginningStatement) improves heart and organ function"
         case 19:
-            setNatureImage(to: "sunset\(number)")
+            setNatureImage(to: "sunset\(day)")
             authorLabel.text = "\(beginningStatement) improves athletic performance"
         case 20:
-            setNatureImage(to: "sunset\(number)")
+            setNatureImage(to: "sunset\(day)")
             authorLabel.text = "\(beginningStatement) slows the aging process"
         case 21:
-            setNatureImage(to: "night\(number)")
+            setNatureImage(to: "night\(day)")
             authorLabel.text = "\(beginningStatement) slows the aging process"
         case 22...23:
-            setNatureImage(to: "night\(number)")
+            setNatureImage(to: "night\(day)")
             authorLabel.text = "\(beginningStatement) makes you feel calm and relaxed"
 
         default:

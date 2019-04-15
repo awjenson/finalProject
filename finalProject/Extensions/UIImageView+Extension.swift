@@ -8,5 +8,39 @@
 
 import UIKit
 
-extension UIImageView {
+let imageCache = NSCache<NSString, UIImage>()
+
+class CustomImageView: UIImageView {
+
+    var imageString: String?
+
+    func loadImageUsingString(_ string: String) {
+
+        imageString = string
+
+        image = nil
+
+        if let imageFromCache = imageCache.object(forKey: string as NSString) {
+            self.image = imageFromCache
+            return
+        }
+
+        DispatchQueue.main.async(execute: {
+
+
+
+            //cache image
+            let imageToCache = UIImage(named: string)
+
+            if self.imageString == string {
+
+                self.image = imageToCache
+            }
+            print("***\(imageToCache)")
+
+            imageCache.setObject(imageToCache!, forKey: string as NSString)
+        })
+
+    }
+
 }

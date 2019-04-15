@@ -10,8 +10,18 @@ import Foundation
 
 struct Constants {
 
+    struct Image {
+        static let alcohol = "alcohol"
+        static let cereal = "cereal"
+        static let coffee = "coffee"
+        static let breakfast1 = "breakfast1"
+        static let breakfast2 = "breakfast2"
+        static let yogurt = "yogurt"
+        static let unhealthyBreakfast = "unhealthyBreakfast"
+    }
+
     struct Now {
-        static let selectedIconDisplay = "X"
+//        static let selectedIconDisplay = "X"
     }
 
     struct Segue {

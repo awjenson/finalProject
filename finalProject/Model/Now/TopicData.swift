@@ -20,13 +20,13 @@ import Foundation
 let breakfastTitle = "Breakfast"
 let breakfastIcon = "Bre"
 
-let breakfastTip1 = Tip(header: "💪", title: "Consume at least 30 grams of protein for breakfeat to keep you fuller for longer", body: "Protein keeps you full longer than other foods because it takes longer to digest and leave the stomach. Also, protein keeps blood-sugar levels steady, which prevent spikes in hunger." , sourceName: "Benjamin P. Hardy, author of Willpower Doesn't Work", sourceURL: "https://medium.com/personal-growth/this-morning-routine-will-save-you-20-hours-per-week-409f8acbde1", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let breakfastTip2 = Tip(header: "🍌", title: "Reduce your odds of having an afternoon slump today by eating a healthy breakfast", body: "Eating breakfast reduces your chances an unhealthy snack later in the day. We can also crave extra calories if we have not eaten enough during the day or if we have skipped lunch. \n\nWhen you don't eat regularly, your body starts to crave high calorie, comfort type food. We're less likely to have a slump and eat unhealthy if we've fuelled our bodies well beforehand." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let breakfastTip3 = Tip(header: "🥣", title: "Cereal: There should always be at least five grams of fiber, and there should always be more fiber than sugar", body: "The more sugar in your breakfast cereal, the faster it digests, and the hungrier you’ll be. Conversely, more fiber will keep you fuller longer. For extra fiber, add chia or flax seeds." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let breakfastTip4 = Tip(header: "🥜", title: "A breakfast with no fat can make you hungry again within an hour", body: "Let’s look at the supposed healthy breakfast of non-fat Greek yogurt, high-fiber cereal and berries. Where’s the fat? Switch to 2%-fat yogurt or to add some nuts. But you only need a little fat to keep you feeling full for longer." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip1 = Tip(header: Constants.Image.breakfast1, title: "Consume at least 30 grams of protein for breakfeat to keep you fuller for longer", body: "Protein keeps you full longer than other foods because it takes longer to digest and leave the stomach. Also, protein keeps blood-sugar levels steady, which prevent spikes in hunger." , sourceName: "Benjamin P. Hardy, author of Willpower Doesn't Work", sourceURL: "https://medium.com/personal-growth/this-morning-routine-will-save-you-20-hours-per-week-409f8acbde1", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip2 = Tip(header: Constants.Image.breakfast2, title: "Reduce your odds of having an afternoon slump today by eating a healthy breakfast", body: "Eating breakfast reduces your chances an unhealthy snack later in the day. We can also crave extra calories if we have not eaten enough during the day or if we have skipped lunch. \n\nWhen you don't eat regularly, your body starts to crave high calorie, comfort type food. We're less likely to have a slump and eat unhealthy if we've fuelled our bodies well beforehand." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip3 = Tip(header: Constants.Image.cereal, title: "Cereal: There should always be at least five grams of fiber, and there should always be more fiber than sugar", body: "The more sugar in your breakfast cereal, the faster it digests, and the hungrier you’ll be. Conversely, more fiber will keep you fuller longer. For extra fiber, add chia or flax seeds." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip4 = Tip(header: Constants.Image.yogurt, title: "Eating healthy fats keeps you feeling full for longer", body: "Let’s look at the supposed healthy breakfast of non-fat Greek yogurt, high-fiber cereal and berries. Switch to 2%-fat yogurt or to add some nuts." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 ///////////
-let breakfastTip5 = Tip(header: "🍳", title: "The Best Foods to Eat for Breakfast", body: "A healthy breakfast includes fiber, protein and healthy fat that gives you energy and makes you feel full. \n\n• Protein: Eggs, Greek Yogurt, Protein Shake, Cottage Cheese \n\n• Fiber: Oatmeal, Chia Seeds, Flaxseeds \n\n• Vitamins: Berries and Citrus Fruit \n\n• Healthy Fats: Nuts, Avocado, Peanut Butter \n\n• Caffeine: Coffee or Green Tea" , sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/12-best-foods-to-eat-in-morning#section4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let breakfastTip6 = Tip(header: "🥞", title: "The Worst Foods to Eat for Breakfast", body: "The list below contain little nutrients and high amounts of sugar, refined grains, and trans fats: \n\n• Fruit Juice and Smooties \n\n• Cereal, Bagels, Breads, Granola Bars, Muffins, Toaster Pastries, Pancakes, and Waffles \n\n• Butter, Flavored Yogurt, and Cream Cheese \n\n• Bacon and Sausage \n\n• Jelly, Syrup, Flavored Creamers, and Ketchup" , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/worst-breakfast-foods/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip5 = Tip(header: Constants.Image.breakfast2, title: "The Best Foods to Eat for Breakfast", body: "A healthy breakfast includes fiber, protein and healthy fat that gives you energy and makes you feel full. \n\n• Protein: Eggs, Greek Yogurt, Protein Shake, Cottage Cheese \n\n• Fiber: Oatmeal, Chia Seeds, Flaxseeds \n\n• Vitamins: Berries and Citrus Fruit \n\n• Healthy Fats: Nuts, Avocado, Peanut Butter \n\n• Caffeine: Coffee or Green Tea" , sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/12-best-foods-to-eat-in-morning#section4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip6 = Tip(header: Constants.Image.unhealthyBreakfast, title: "The Worst Foods to Eat for Breakfast", body: "The list below contain little nutrients and high amounts of sugar, refined grains, and trans fats: \n\n• Fruit Juice and Smooties \n\n• Cereal, Bagels, Breads, Granola Bars, Muffins, Toaster Pastries, Pancakes, and Waffles \n\n• Butter, Flavored Yogurt, and Cream Cheese \n\n• Bacon and Sausage \n\n• Jelly, Syrup, Flavored Creamers, and Ketchup" , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/worst-breakfast-foods/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip7 = Tip(header: "🍓", title: "A healthy breakfast includes lean protein, whole-grain carbohydrates, healthy fat, and fresh fruit", body: "Try low-fat Greek yogurt topped with fresh berries and a handful of nuts; a whole-wheat English muffin spread with a dollop of peanut butter; or an egg scrambled in extra-virgin olive oil along with some spinach, mushrooms, or other vegetables." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/nutrition/breakfast-and-beyond-the-case-for-a-healthy-morning-meal", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip8 = Tip(header: "🥜", title: "Eat a protein-rich breakfast to reduce food cravings, prevent overeating later today", body: "Compared to breakfast-skippers, brain scans of protein-rich breakfast-eaters showed less activity in the brain's regions controlling food motivation prior to lunch. Eating a healthy, protein-rich breakfast helps people be less prone to snacking between meals. Convenient snack foods are almost always high in sugar and fat and add a substantial amount of calories to the diet." , sourceName: "University of Missouri", sourceURL: "https://munews.missouri.edu/news-releases/2011/0518-eat-a-protein-rich-breakfast-to-reduce-food-cravings-prevent-overeating-later-mu-researcher-finds/", sponsorLogo: "", sponsorURL: "")
 
@@ -84,13 +84,16 @@ let lunchTip10 = Tip(header: "🍞", title: "Always include one serving of carbs
 let lunchTip11 = Tip(header: "🥜", title: "Eat lean protein at every meal to build muscle and satisfy hunger", body: "A good rule of thumb is to aim for 20 to 30 grams per meal of lean protein from sources that are low in saturated fats and processed carbohydrates. There are many plant foods that contain protein, including grains, beans, legumes, nuts, and vegetables." , sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45405356/image/45407390/You-Dont-Eat-Enough-Protein", sponsorLogo: "", sponsorURL: "")
 let lunchTip12 = Tip(header: "🥗", title: "Studies show that vegetarians (and even more so, vegans) routinely have lower body weights", body: "Plant-based foods are high in fiber, and research shows that people who followed a higher-fiber diet had a lower waist circumference. Try eating a more plant-based diet, focusing on veggies, whole grains, and plant proteins such as beans, nuts, seeds, and soy products." , sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45270438/image/45346172/Do-Eat-More-Plant-Based-Meals", sponsorLogo: "", sponsorURL: "")
 
-var lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
+//4
+let lunchTip13 = Tip(header: "🥗", title: "Reduce premature skin aging: Avoid eating highly processed or sugary foods. Eat more whole grains, fruits and vegetables", body: "Avoid eating highly processed or sugary foods because they cause inflammation at the cellular level which can speed up skin aging. \n\nEat more antioxidant-rich fruits and vegetables – such as berries, citrus fruits, kiwi, pineapple, broccoli and red and green peppers – because antioxidants can help reduce the signs of aging (sagging and wrinkling of the skin)." , sourceName: "U.S. News & World Report", sourceURL: "https://health.usnews.com/wellness/aging-well/articles/2017-01-09/6-surprising-factors-that-can-accelerate-the-aging-of-your-skin", sponsorLogo: "", sponsorURL: "")
+
+let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
 let lunchTopic0 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray0)
 
-var lunchTipArray1 = [lunchTip5, lunchTip6, lunchTip7, lunchTip8]
+let lunchTipArray1 = [lunchTip5, lunchTip6, lunchTip7, lunchTip8]
 let lunchTopic1 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray1)
 
-var lunchTipArray2 = [lunchTip9, lunchTip10, lunchTip11, lunchTip12]
+let lunchTipArray2 = [lunchTip9, lunchTip10, lunchTip11, lunchTip12]
 let lunchTopic2 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray2)
 
 // MARK: - Dinner
@@ -113,6 +116,7 @@ let dinnerTip8 = Tip(header: "🔥", title: "Slouched posture after a meal can t
 //2 (WIP)
 let dinnerTip9 = Tip(header: "🥜", title: "45% of all U.S. deaths from heart disease, stroke, and diabetes were based on eating too much or too little of 10 foods", body: "Eat More: \n• Nuts/seeds \n• Seafood omega-3 fat \n• Vegetables \n• Fruits \n• Whole grains \n• Polyunsaturated fat \n\nEat Less: \n• Sodium \n• Processed red meats \n• Sugar-sweetened beverages \n• Unprocessed red meat" , sourceName: "Tufts University", sourceURL: "https://www.nutritionletter.tufts.edu/issues/13_7/current-articles/Diet-Causing_2181-1.html", sponsorLogo: "", sponsorURL: "")
 let dinnerTip10 = Tip(header: "🍽", title: "Eating with smaller plates, bowls, and utensils reduces weight gain", body: "Researchers invited 85 nutrition experts to an ice cream social and randomly assigned them with large or small bowls and spoons. Participants with both a larger bowl and a larger spoon ate 50% more ice cream than participants with smaller bowl and spoon pairs. \n\nPeople base their portion size on how it looks relative to their plate, bowl, and utensils. And so the bigger the dinnerware, the bigger the portions." , sourceName: "Stanford University", sourceURL: "https://sparq.stanford.edu/solutions/use-smaller-plates-smaller-waist", sponsorLogo: "", sponsorURL: "")
+let dinnerTip11 = Tip(header: "", title: "Poor diets lead to 1 in 5 deaths, including high blood pressure and diabetes", body: "A good diet, according to the researchers, contains minimally processed, whole foods and grains, vegetables, fruits, nuts and any natural source of protein (i.e., fish and beans)." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/09/harvard-study-says-these-5-habits-may-help-you-live-10-years-longer.html", sponsorLogo: "", sponsorURL: "")
 
 
 let dinnerTipArray0 = [dinnerTip1, dinnerTip2, dinnerTip3, dinnerTip4]
@@ -121,7 +125,7 @@ let dinnerTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArr
 let dinnerTipArray1 = [dinnerTip5, dinnerTip6, dinnerTip7, dinnerTip8]
 let dinnerTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray1)
 
-let dinnerTipArray2 = [dinnerTip9, dinnerTip10, dinnerTip7, dinnerTip8]//WIP
+let dinnerTipArray2 = [dinnerTip9, dinnerTip10, dinnerTip11, dinnerTip8]//WIP
 let dinnerTopic2 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray2)
 
 
@@ -143,8 +147,9 @@ let dinnerAfter9PM9 = Tip(header: "🛌", title: "Reduce your nighttime heartbur
 let dinnerAfter9PM10 = Tip(header: "🍅", title: "Reduce your nighttime heartburn risk: Avoid tomatoes and tomatoe sauce", body: "While they might be chockfull of healthy nutrients, tomatoes are also highly acidic and likely to cause heartburn in those who are prone to it.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/heartburn-gerd/features/top-10-heartburn-foods#1", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM11 = Tip(header: "🌶", title: "Reduce your nighttime heartburn risk: Avoid spicy foods, onions, and garlic", body: "Pepper, Mexican food, chili, and any other food that is loaded with pepper or other spices can trigger heartburn. Some people with heartburn do not do well with garlic and onions.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/heartburn-gerd/features/top-10-heartburn-foods#1", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM12 = Tip(header: "🍕", title: "Reduce your nighttime heartburn risk: Avoid fried and fatty foods", body: "Fried and fatty foods can cause the lower esophageal sphincter to relax, allowing more stomach acid to back up into the esophagus. Avoid full-fat dairy products, such as butter, whole milk, and regular cheese, creamy sauces, fatty cuts of meat, and snacks or desserts such as french fries potato chips, and ice cream.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/health/gerd/diet-nutrition#research", sponsorLogo: "", sponsorURL: "")
-let dinnerAfter9PM13 = Tip(header: "🥦", title: "Foods that may help reduce stomach acid and heartburn", body: "• Vegetables, such as leafy greens, broccoli, aspargus, cauliflower, and potatoes. • Non-fried lean meats, such as chicken, turkey, fish, and seafood. • Noncitrus fruits, including apples, bananas, and melons. • Healthy fats, such as avocados, walnuts, and olive oil.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/health/gerd/diet-nutrition#helpful-foods", sponsorLogo: "", sponsorURL: "")
+
 //3
+let dinnerAfter9PM13 = Tip(header: "🥦", title: "Foods that may help reduce stomach acid and heartburn", body: "• Vegetables, such as leafy greens, broccoli, aspargus, cauliflower, and potatoes. • Non-fried lean meats, such as chicken, turkey, fish, and seafood. • Noncitrus fruits, including apples, bananas, and melons. • Healthy fats, such as avocados, walnuts, and olive oil.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/health/gerd/diet-nutrition#helpful-foods", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM14 = Tip(header: "🍣", title: "Sleep better tonight by eating a high-fat dinner and avoiding a high carb dinner", body: "Even though a high-carb diet can get you to fall asleep faster, it will not be restful sleep. Instead, high-fat meals could promote a deeper and more restful sleep. \n\nSeveral studies found that a high-carb/low-fat diet significantly decreased the quality of sleep compared to a low-carb/high-fat diet with the same amount of calories for both diets.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section8", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM15 = Tip(header: "🍽", title: "Stop eating 1.5 to 2 hours before going to bed to allow for digestion", body: "Eating, especially a large meal, late at night also increases your risk of heartburn. If you must eat, reach for a healthy protein-packed snack: almonds, low-fat cottage cheese, Greek yogurt, or vegetables dipped in hummus or guacamole.", sourceName: "U.S. News", sourceURL: "https://health.usnews.com/health-news/health-wellness/articles/2015/06/26/will-eating-at-night-really-make-you-gain-weight", sponsorLogo: "", sponsorURL: "")
 
@@ -158,6 +163,9 @@ let dinnerAfter9PMTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinn
 let dinnerAfter9PMTipArray2 = [dinnerAfter9PM9, dinnerAfter9PM10, dinnerAfter9PM11, dinnerAfter9PM12]
 let dinnerAfter9PMTopic2 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray2)
 
+let dinnerAfter9PMTipArray3 = [dinnerAfter9PM13, dinnerAfter9PM14, dinnerAfter9PM15, dinnerAfter9PM12]
+let dinnerAfter9PMTopic3 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray3)
+
 // MARK: - Morning Snack
 
 let morningSnackTitle = "Morning \nSnack"
@@ -170,13 +178,16 @@ let morningSnackTip3 = Tip(header: "🥜", title: "People who regularly ate almo
 let morningSnackTip4 = Tip(header: "💻", title: "Don't eat your snack while doing something else — like surfing the Internet, watching TV, or working at your desk", body: "Often times we find ourselves mindlessly snacking because of certain emotions or situations (boredom, loneliness, stress). Start to notice when your emotions are fueling your eating and try to find a different outlet for those emotions." , sourceName: "Eating Bird Food", sourceURL: "https://www.eatingbirdfood.com/how-to-stop-mindless-snacking/", sponsorLogo: "", sponsorURL: "")
 
 //2 WIP
-let morningSnackTip5 = Tip(header: "🤔", title: "Year-long study finds dieters who ate a snack between breakfast and lunch lost less weight (7%) compared to those those who did not eat a mid-morning snack (11%)", body: "Because there's usually a shorter interval between breakfast and lunch, researchers believe that mid-morning snacking may be a reflection of mindless eating habits rather than eating because of true hunger. They recommend that those looking to lose weight listen to their hunger and have a snack if they go a long time — like 5 hours — between meals." , sourceName: "Shape", sourceURL: "https://www.shape.com/blogs/shape-your-life/want-lose-weight-when-you-eat-your-snack-food-matters-study-finds", sponsorLogo: "", sponsorURL: "")
+let morningSnackTip5 = Tip(header: "🤔", title: "Year-long study finds dieters who ate a mid-morning snack lost less weight (7% of their body weight) compared to those those who did not eat a mid-morning snack (11% of their body weight)", body: "Because there's usually a shorter interval between breakfast and lunch, researchers believe that mid-morning snacking may be a reflection of mindless eating habits rather than eating because of true hunger. They recommend that those looking to lose weight listen to their hunger and have a snack if they go a long time — like 5 hours — between meals." , sourceName: "Shape", sourceURL: "https://www.shape.com/blogs/shape-your-life/want-lose-weight-when-you-eat-your-snack-food-matters-study-finds", sponsorLogo: "", sponsorURL: "")
+let morningSnackTip6 = Tip(header: "🥗", title: "Reduce premature skin aging: Avoid eating highly processed or sugary foods. Eat more whole grains, fruits and vegetables", body: "Avoid eating highly processed or sugary foods because they cause inflammation at the cellular level which can speed up skin aging. \n\nEat more antioxidant-rich fruits and vegetables – such as berries, citrus fruits, kiwi, pineapple, broccoli and red and green peppers – because antioxidants can help reduce the signs of aging (sagging and wrinkling of the skin)." , sourceName: "U.S. News & World Report", sourceURL: "https://health.usnews.com/wellness/aging-well/articles/2017-01-09/6-surprising-factors-that-can-accelerate-the-aging-of-your-skin", sponsorLogo: "", sponsorURL: "")
+
 
 
 let morningSnackTipArray0 = [morningSnackTip1, morningSnackTip2, morningSnackTip3, morningSnackTip4]
 let morningSnackTopic0 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray0)
 
-
+let morningSnackTipArray1 = [morningSnackTip5, morningSnackTip6, morningSnackTip3, morningSnackTip2]
+let morningSnackTopic1 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray1)
 
 // MARK: - AfternoonSnack
 
@@ -203,6 +214,9 @@ let afternoonSnackTopic0 = Topic(title: afternoonSnackTitle, icon: afternoonSnac
 let afternoonSnackTipArray1 = [afternoonSnackTip5, afternoonSnackTip6, afternoonSnackTip7, afternoonSnackTip8]
 let afternoonSnackTopic1 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray1)
 
+let afternoonSnackTipArray2 = [afternoonSnackTip9, afternoonSnackTip8, afternoonSnackTip7, afternoonSnackTip6]
+let afternoonSnackTopic2 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray2)
+
 // MARK: - LateNightSnack
 
 let lateNightSnackTitle = "Evening \nSnack"
@@ -220,9 +234,11 @@ let lateNightSnackTip4 = Tip(header: "🥑", title: "Eating healthy fats at nigh
 let lateNightSnackTip5 = Tip(header: "🍽", title: "Late-night eating is associated with a higher risk of diabetes", body: "Glucose tolerance is how well your body can take sugar from your bloodstream into your tissues. Researchers found that our glucose tolerance becomes relatively impaired in the evening compared to the morning. Impaired glucose tolerance is a risk factor for diabetes." , sourceName: "Vox", sourceURL: "https://www.vox.com/2016/2/17/11034546/eating-late-night-bad-diet", sponsorLogo: "", sponsorURL: "")
 let lateNightSnackTip6 = Tip(header: "🍽", title: "To prevent weight gain, try not to eat after 11 p.m.", body: "In one study, participants who ate between 11 p.m. and 5 a.m. gained more weight than those who did not eat during those hours. If you need to eat, reach for a healthy protein-packed snack: almonds, low-fat cottage cheese, Greek yogurt, or vegetables dipped in hummus or guacamole." , sourceName: "U.S. News", sourceURL: "https://health.usnews.com/health-news/health-wellness/articles/2015/06/26/will-eating-at-night-really-make-you-gain-weight", sponsorLogo: "", sponsorURL: "")
 
-var lateNightSnackTipArray0 = [lateNightSnackTip1, lateNightSnackTip2, lateNightSnackTip3, lateNightSnackTip4]
+let lateNightSnackTipArray0 = [lateNightSnackTip1, lateNightSnackTip2, lateNightSnackTip3, lateNightSnackTip4]
 let lateNightSnackTopic0 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray0)
 
+let lateNightSnackTipArray1 = [lateNightSnackTip5, lateNightSnackTip6, lateNightSnackTip4, lateNightSnackTip3]//WIP
+let lateNightSnackTopic1 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray1)
 
 // MARK: - Journaling
 
@@ -282,11 +298,11 @@ let meditationTip4 = Tip(header: "🤔", title: "Meditation helps you become awa
 let meditationTip5 = Tip(header: "🧠", title: "Meditation is associated with increased thickness of the cortex—the exact opposite of an effect found in tech addiction", body: "Meditation quiets the brain, reduces stress and stimulation, improves blood flow, and even balances our hormones." , sourceName: "Medium", sourceURL: "https://betterhumans.coach.me/better-than-meditation-12532d29f6cd", sponsorLogo: "", sponsorURL: "")
 
 
-var meditationTipArray0 = [meditationTip1, meditationTip2, meditationTip3, meditationTip4]
-
+let meditationTipArray0 = [meditationTip1, meditationTip2, meditationTip3, meditationTip4]
 let meditationTopic0 = Topic(title: meditationTitle, icon: meditationIcon, tip: meditationTipArray0)
 
-
+let meditationTipArray1 = [meditationTip5, meditationTip4, meditationTip3, meditationTip2]
+let meditationTopic1 = Topic(title: meditationTitle, icon: meditationIcon, tip: meditationTipArray1)
 
 // MARK: - Gym
 
@@ -325,10 +341,10 @@ let gymTip19 = Tip(header: "🏃‍♀️", title: "Enjoy cardio? Skip the hours
 let gymTip20 = Tip(header: "🥛", title: "Consuming 20 grams of protein after your workout is the best amount to maximize muscle growth", body: "Compared to the 0-gram and 10-gram doses, the 20-gram and 40-gram doses more effectively stimulated muscle protein synthesis—the process that helps promote the muscle repair and growth after exercise. However, the 40-gram dose didn’t produce any added benefit. \n\nGood post-workout options are: \n\n• Whey protien powder \n• Milk \n• Yogurt", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/fitness/a19520629/how-much-post-workout-protein-do-you-really-need/", sponsorLogo: "", sponsorURL: "")
 
 //5
-let gymTip21 = Tip(header: "🤕", title: "Prevent injuries by beginning your workout with a \"warm-up\" and/or exercising in the afternoon/early evening", body: "When our muscles are warm, they're more elastic and less prone to injury. Our body temperature is low when we first wake up, rises steadily throughout the day, and peaks in the late afternoon and early evening. That means that in later-in-the-day workouts our muscles are warmer and injuries are less common.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+let gymTip21 = Tip(header: "🤕", title: "Working out in the late afternoon and early evening helps to prevent injuries", body: "Our body temperature is low when we first wake up, rises steadily throughout the day, and peaks in the late afternoon. That means that in later-in-the-day workouts our muscles are warmer and injuries are less common.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let gymTip22 = Tip(header: "👇", title: "Decrease belly fat by strength training 3 times a week", body: "Many experts agree that cardio shouldn't be your main focus. Incorporate strength training to increase your muscle mass to burn more calories and speed up your metabolism.", sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45405356/image/45407154/You-Dont-Strength-Train", sponsorLogo: "", sponsorURL: "")
 let gymTip23 = Tip(header: "💪", title: "Train like Arnold Schwarzenegger", body: "\"There are no shortcuts—everything is reps, reps, reps. If you don’t find the time, if you don’t do the work, you don’t get the results.\"", sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/arnold-schwarzenegger-quotes/", sponsorLogo: "", sponsorURL: "")
-let gymTip24 = Tip(header: "👍", title: "Framing exercise as \"fun\" instead of \"exercise\" reduces the amount of calories consumed from unhealthy foods afterward", body: "A study found that when physical activity was perceived as fun, people subsequently consume less unhealthy foods and drinks. But when the same physical activity is perceived as a chore, we have a much harder time saying no to unhealthy snacks, desserts, and drinks, presumably because we’ve used up all of our willpower exercising.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/10/regular-exercise-is-part-of-your-job", sponsorLogo: "", sponsorURL: "")
+let gymTip24 = Tip(header: "👍", title: "Framing exercise as \"fun\" instead of \"exercise\" reduces the amount of unhealthy foods consumed afterwards", body: "Study: When we view exercise as something we do for fun, we’re better at resisting unhealthy foods afterwards. But when the same physical activity is perceived as a chore, we have a much harder time saying no to fattening foods, presumably because we’ve used up all of our willpower exercising.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/10/regular-exercise-is-part-of-your-job", sponsorLogo: "", sponsorURL: "")
 
 //6
 
@@ -357,19 +373,36 @@ let gymTip39 = Tip(header: "💪", title: "Train like Conor Mcgregor", body: "\"
 let gymTip40 = Tip(header: "😀", title: "One technique for embracing the suck of a difficult workout is to change your state of mind by focusing on something else that is positive... and then smiling or even laughing", body: "Former Navy SEAL, Mark Divine, explains, \"This worked wonders during SEAL training. Some of my funniest and fondeset memories are of the most difficult events. Becacuse I put on a happy face and found humor in some oddity of the moment, the pain disappeared, replaced by growing confidence and courgage.\"", sourceName: "The WAY OF THE SEAL", sourceURL: "https://www.amazon.com/dp/B00IUP7CC6", sponsorLogo: "", sponsorURL: "")
 
 //10
-let gymTip41 = Tip(header: "🧠", title: "90% of Olympic athletes use visualization, and 97% of them claim it helped their performance", body: "Visualize your personal victory. See yourself performing; sense your movement, emotions; hear the sounds of success; feel the actual air, water, handshake, etc.; and smell your environment. Include positive thoughts and emotions to burn the image into your subconscious. \n\nVisualized events, if vivid and empowered with emotion, stimulate and program your nervous and muscular system as if you are actually practicing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+let gymTip41 = Tip(header: "🔶", title: "What Color to Wear for a Work Out: Orange", body: "Orange is a color of stimulation and enthusiasm. Research finds that orange increases oxygen supply to the brain, produces an energizing effect, and stimulates brain activity.", sourceName: "Science of People", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+let gymTip42 = Tip(header: "🧠", title: "90% of Olympic athletes use visualization, and 97% of them claim it helped their performance", body: "Visualize your personal victory. See yourself performing; sense your movement, emotions; hear the sounds of success; feel the actual air, water, handshake, etc. \n\nVisualized events, if vivid and empowered with positive thoughts and emotion, stimulate and program your nervous and muscular system as if you are actually practicing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
 
+let gymTipArray0 = [gymTip1, gymTip2, gymTip3, gymTip4]
+let gymTipArray1 = [gymTip5, gymTip6, gymTip7, gymTip8]
+let gymTipArray2 = [gymTip9, gymTip10, gymTip11, gymTip12]
+let gymTipArray3 = [gymTip13, gymTip14, gymTip15, gymTip16]
+let gymTipArray4 = [gymTip17, gymTip18, gymTip19, gymTip20]
+let gymTipArray5 = [gymTip21, gymTip22, gymTip23, gymTip24]
+let gymTipArray6 = [gymTip25, gymTip26, gymTip27, gymTip28]
+let gymTipArray7 = [gymTip29, gymTip30, gymTip31, gymTip32]
+let gymTipArray8 = [gymTip33, gymTip34, gymTip35, gymTip36]
+let gymTipArray9 = [gymTip37, gymTip38, gymTip39, gymTip40]
+let gymTipArray10 = [gymTip41, gymTip42, gymTip7, gymTip20]//WIP
 
-
-// .
+let gymTopic0 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray0)
+let gymTopic1 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray1)
+let gymTopic2 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray2)
+let gymTopic3 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray3)
+let gymTopic4 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray4)
+let gymTopic5 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray5)
+let gymTopic6 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray6)
+let gymTopic7 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray7)
+let gymTopic8 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray8)
+let gymTopic9 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray9)
+let gymTopic10 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray10)
 
 // . \"Do today what others won’t so you can do tomorrow what others can’t.\" - Smoke Jumper Creed
 
-//Doubt is eliminated by action. So take the action.
 
-// In order to overcome those obstacles, you’ve gotta be able to control the things that you can control. And realize that everything else is out of your control. So what’s out of your control is everything outside of your body. You can’t control the weather, you can’t control the instructor. You can’t control whether someone else is going to let go of the log and its going to come crashing down… you can’t control any of that.
-
-//But what you can control is your physiology and your psychology. And so you begin to control your physiology through your breathing, and that’s why breath control or arousal control is the first of the Big 4 skills.
 
 //Morning
 let gymMorningTip1 = Tip(header: "☕️", title: "Complete your workout in the morning before you consume caffeine", body: "In an ideal circadian rhythm, cortisol rises in the morning and remains level throughout the day to support alertness and energy. Because cortisol is like caffeine and is ideally rising in the morning, you may not need both. In fact, caffeine could suppress cortisol, making it tough to feel awake without caffeine. Even if you still need or want caffeine later, you’ve given your body a natural chance at producing its own state of wakefulness.", sourceName: "American Council on Exercise", sourceURL: "http://www.aimspress.com/article/10.3934/publichealth.2017.2.189/fulltext.html", sponsorLogo: "", sponsorURL: "")
@@ -382,6 +415,8 @@ let gymAfternoonTip1 = Tip(header: "🌅", title: "Burn 20% more fat by exercisi
 let gymAfternoonTip2 = Tip(header: "☀️", title: "Some studies suggest that we're more likely to stick to our workout routine when we do it in the morning", body: "So if you find yourself struggling to stick with an exercise plan, morning exercise, especially if you enlist a regular partner, can help you form a habit.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let gymAfternoonTip3 = Tip(header: "🏃‍♀️", title: "Afternoon/early evening workouts help you sprint faster and lift more weight", body: "Lung function is highest this time of the day, so you're circulation system can distribute more oxygen and nutrients. This is also the time of day when strength peaks, reaction time quickens, hand-eye coordination sharpens, and heart rate and blood pressure drop. These factors make it a great time to put on your best athletic performance. \n\nIn fact, a disproportionate number of Olympic records, especially in running and swimming, are set in the late afternoon and early evening.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
+
+
 //MEN
 let gymMenTip1 = Tip(header: "💪", title: "Testosterone levels are typically highest in the morning and lowest in the afternoon", body: "Testosterone helps build muscle, so if you're doing weight training, schedule your workout for those early-morning hours.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let gymMenTip2 = Tip(header: "💪", title: "Men's bodies tend to be less flexible than women's, but this can be fixed", body: "This has less to do with the nature of men's bodies and more to do with the fact that men are less likely to include stretching in their workouts.", sourceName: "WedMD", sourceURL: "https://www.webmd.com/fitness-exercise/features/his-hers-fitness#1", sponsorLogo: "", sponsorURL: "")
@@ -393,27 +428,6 @@ let gymWomanTip1 = Tip(header: "🏋️‍♀️", title: "Squating: Women's pel
 
 
 
-let gymTipArray0 = [gymTip1, gymTip2, gymTip3, gymTip4]
-let gymTipArray1 = [gymTip5, gymTip6, gymTip7, gymTip8]
-let gymTipArray2 = [gymTip9, gymTip10, gymTip11, gymTip12]
-let gymTipArray3 = [gymTip13, gymTip14, gymTip15, gymTip16]
-let gymTipArray4 = [gymTip17, gymTip18, gymTip19, gymTip20]
-let gymTipArray5 = [gymTip21, gymTip22, gymTip23, gymTip24]
-
-let gymTipArray6 = [gymTip25, gymTip26, gymTip27, gymTip28]
-let gymTipArray7 = [gymTip29, gymTip30, gymTip31, gymTip32]
-let gymTipArray8 = [gymTip33, gymTip34, gymTip35, gymTip36]
-
-let gymTopic0 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray0)
-let gymTopic1 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray1)
-let gymTopic2 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray2)
-let gymTopic3 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray3)
-let gymTopic4 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray4)
-let gymTopic5 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray5)
-
-let gymTopic6 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray6)
-let gymTopic7 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray7)
-let gymTopic8 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray8)
 
 
 
@@ -496,22 +510,33 @@ let AMRoutine8 = Tip(header: "🏃‍♂️", title: "Jocko Willink then spends 
 
 
 
-let AMRoutine9 = Tip(header: "🚰", title: "Each morning, drink a large glass of water, and go to a calm place where you can be alone and settle into a space of sacred silence", body: "This space is ideally separate from your bedroom but can be any place where you have privacy. \n\nWith your journal, ask yourself these empowering questions: \n\n• What and whom am I grateful for today? \n\n• What is my purpose and do my plans for today connect me to it? \n\n• What can I do to make progress toward my purpose today? \n\n• Who can I serve or thank today?", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
+
 
 // Mark Devine
+let AMRoutine9 = Tip(header: "🚰", title: "Each morning, drink a large glass of water, and go to a calm place where you can be alone and settle into a space of sacred silence", body: "This space is ideally separate from your bedroom but can be any place where you have privacy. \n\nWith your journal, ask yourself these empowering questions: \n\n• What and whom am I grateful for today? \n\n• What is my purpose and do my plans for today connect me to it? \n\n• What can I do to make progress toward my purpose today? \n\n• Who can I serve or thank today?", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
 let AMRoutine10 = Tip(header: "🌬", title: "5 minutes of box breathing. It's used by yogis and martial artists to develop more power, presence, and mental control", body: "Start by exhaling all the air from your lungs, then breathing slowly into your belly to a count of 4. Hold your breath to a count of 4. Then ehale to a count of 4, expelling all the air at the end. Finally, hold your lungs empty for a count of 4. The 4-4-4-4 count is a box.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
-
 let AMRoutine11 = Tip(header: "🙆‍♀️", title: "5 minutes of mindfully moving your body", body: "Strech and bend your body with yoga poses, moving with deep, diaphragmatic breathing. Or do a light workout or take a brisk walk.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
 let AMRoutine12 = Tip(header: "💭", title: "5 minutes of visualization to prepare your mind for winning", body: "Review your plan for the day, make any final adjustments, and then visualize yourself going through all the major, important actions planned for the day and dominating each. Picture an ideal “future version” of yourself.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
 
+//Tim Ferriss
+let AMRoutine13 = Tip(header: "🛏", title: "Make your bed (1-3 minutes)", body: "From legendary Naval Admiral William McRaven's commencement speech: \"If you make your bed every morning, you will have accomplished the first task of the day. It will give you a small sense of pride, and it will encourage you to do another task and another and another. By the end of the day, that one task completed will have turned into many tasks completed. Making your bed will also reinforce the fact that little things in life matter.\"", sourceName: "The Tim Ferriss Show", sourceURL: "https://fhww.files.wordpress.com/2018/09/tim-ferriss-5-morning-rituals.pdf", sponsorLogo: "", sponsorURL: "")
+let AMRoutine14 = Tip(header: "🧘‍♀️", title: "Meditate (10-20 minutes)", body: "At least 80% of all guests profiled in Tim Ferriss' book Tools of Titans have a daily mindfulness practice of some type of meditation. You should too.", sourceName: "The Tim Ferriss Show", sourceURL: "https://fhww.files.wordpress.com/2018/09/tim-ferriss-5-morning-rituals.pdf", sponsorLogo: "", sponsorURL: "")
+let AMRoutine15 = Tip(header: "💪", title: "Do 5 to 10 reps of something (1 minute)", body: "The 5 to 10 reps here are not a workout. The goal is to help you wake up, boost your mood, and reduce any negative mental chatter.", sourceName: "The Tim Ferriss Show", sourceURL: "https://fhww.files.wordpress.com/2018/09/tim-ferriss-5-morning-rituals.pdf", sponsorLogo: "", sponsorURL: "")
+let AMRoutine16 = Tip(header: "📝", title: "Journaling (5-10 minutes)", body: "Answer these 3 questions: \n\nI am grateful for... 1.____ 2.____ 3.____ \n\n What would make today great? 1.____ 2.____ 3.____ \n\n Daily affirmations: I am... 1.____ 2.____ 3.____", sourceName: "The Tim Ferriss Show", sourceURL: "https://fhww.files.wordpress.com/2018/09/tim-ferriss-5-morning-rituals.pdf", sponsorLogo: "", sponsorURL: "")
 
-let AMRoutineTipArray0 = [AMRoutine1, AMRoutine2, AMRoutine3, AMRoutine4]
-let AMRoutineTipArray1 = [AMRoutine5, AMRoutine6, AMRoutine7, AMRoutine8]
-let AMRoutineTipArray2 = [AMRoutine9, AMRoutine10, AMRoutine11, AMRoutine12]
+//Science-Backed
+
+
+
+let AMRoutineTipArray0 = [AMRoutine1, AMRoutine2, AMRoutine3, AMRoutine4]//SUN, WEEK 1
+let AMRoutineTipArray1 = [AMRoutine5, AMRoutine6, AMRoutine7, AMRoutine8]//SAT, WEEK 1
+let AMRoutineTipArray2 = [AMRoutine9, AMRoutine10, AMRoutine11, AMRoutine12]//SUN, WEEK 2
+let AMRoutineTipArray3 = [AMRoutine13, AMRoutine14, AMRoutine15, AMRoutine16]//SAT, WEEK 2
 
 let AMRoutineTopic0 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray0)
 let AMRoutineTopic1 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray1)
 let AMRoutineTopic2 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray2)
+let AMRoutineTopic3 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray3)
 
 // MARK: - Getting Ready AM
 
@@ -521,7 +546,7 @@ let AMGetReadyIcon = "Get"
 //1
 let getReadyAM0 = Tip(header: "🚰", title: "Drink a glass of water to rehydrate", body: "Every night, your body goes through a fast while you’re asleep, leaving you dehydrated when you wake up. Drink eight ounces of water as soon as you’re up to hydrate.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
 let getReadyAM1 = Tip(header: "🚿", title: "Showering or bathing in water that’s too hot will dry out your skin and cause it to age prematurely", body: "Warm water is much better. Apply moisturiser while your skin is still damp – it’ll be absorbed more easily." , sourceName: "Health24", sourceURL: "https://www.health24.com/Medical/Flu/Health-tips/45-best-health-tips-ever-20120721", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let getReadyAM2 = Tip(header: "👕", title: "Reduce decision fatigue wearing the same type of clothes each day", body: "Steve Jobs, Mark Zuckerberg, and Barack Obama have all applied this idea to their lives. Wearing the same thing each day frees up the brainpower you would have put into picking out an outfit to make other, more important decisions." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/barack-obama-mark-zuckerberg-wear-the-same-outfit-2015-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let getReadyAM2 = Tip(header: "👔", title: "The colors of our clothes do affect our moods and productivity", body: "Wear these colors: \n\n• Blue = Stability \n\n• Red = Passion \n\n• Yellow = Happiness \n\n• Orange = Energy \n\n• Green = Success \n\n• Purple = Luxury \n\n• Black = Power \n\n• White = Cleanliness \n\nAvoid this color: \n\n• Grey = Quiet", sourceName: "Science of People", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 let getReadyAM3 = Tip(header: "👅", title: "Avoid morning breath. Brush your tongue", body: "More than 300 types of bacteria accumulate in your mouth while you sleep, and a speedy tooth-brushing job isn’t going to eliminate your morning breath fully. Take an extra minute to brush your tongue to enjoy a fresher feeling.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
 
 //2
@@ -532,14 +557,16 @@ let getReadyAM7 = Tip(header: "☀️", title: "Wear sunscreen every day (not ju
 
 //3
 let getReadyAM8 = Tip(header: "📰", title: "Don't consume negative news in the morning because it makes you less effective throughout the day. Instead, listen to uplifting, positive news (or audio) in morning", body: "Study: Individuals who watched just 3 minutes of negative news in the morning had a 27% greater likelihood of reporting their day as unhappy 6 to 8 hours later compared to the individuals who watched 3 minutes of solutions-focused news in the morning. The solution-focused news group watched stories of resilience to build the belief that our behavior matters.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/09/consuming-negative-news-can-make-you-less-effective-at-work", sponsorLogo: "", sponsorURL: "")
-
+let getReadyAM9 = Tip(header: "👕", title: "Free up your brainpower: Wear the same type of clothes each day", body: "Steve Jobs, Mark Zuckerberg, and Barack Obama have all applied this idea to their lives. Wearing the same thing each day frees up the brainpower you would have put into picking out an outfit to make other, more important decisions." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/barack-obama-mark-zuckerberg-wear-the-same-outfit-2015-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let getReadyAM10 = Tip(header: "👔", title: "Don't wear grey clothes to work", body: "Colors do affect our moods and productivity. Grey inspires people to be passive, uninvolved and have a lack of energy. \n\nIf you like wearing grey, pairing it with a brighter color will help offset the effect.", sourceName: "Science of People", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 let getReadyAMTipArray0 = [getReadyAM0, getReadyAM1, getReadyAM2, getReadyAM3]
 let getReadyAMTipArray1 = [getReadyAM4, getReadyAM5, getReadyAM6, getReadyAM7]
+let getReadyAMTipArray2 = [getReadyAM8, getReadyAM9, getReadyAM10, getReadyAM7]
 
 let getReadyAMTopic0 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray0)
 let getReadyAMTopic1 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray1)
-
+let getReadyAMTopic2 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray2)
 
 
 // MARK: - Going Out, PM
@@ -592,7 +619,7 @@ let safetyTip3 = Tip(header: "🚘", title: "Cars - park in well-lit areas", bod
 let safetyTip4 = Tip(header: "📱", title: "Cell Phones - always be aware of your surroundings and avoid using your cell phone", body: "Using your cell phone diminishes awareness, making you more vulnerable. They also attract thieves due to their popularity and valuable nature. If you must use a cell phone, try to keep it out of plain site and keep your hands as free as possible." , sourceName: "Protection One, a division of ADT", sourceURL: "https://www.protection1.com/campus-safety/night-safety-tips/", sponsorLogo: "", sponsorURL: "")
 
 //2
-let safetyTip5 = Tip(header: "🎧", title: "Avoid wearing headphones", body: "Sure, listening to music on your way to the bar may get you in the mood, but it will also keep you from hearing an incoming car — or someone approaching you from behind. If still desire to walk with headphones, then only put in one earbud and keep the volume low enough to hear any off-putting sounds." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
+let safetyTip5 = Tip(header: "🎧", title: "Avoid wearing headphones", body: "Sure, listening to music on your way to the bar may get you in the mood, but it will also keep you from hearing an incoming car — or someone approaching you from behind. \n\nIf still desire to walk with headphones, then only put in one earbud and keep the volume low enough to hear any off-putting sounds." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
 let safetyTip6 = Tip(header: "🚶‍♂️", title: "Always walk like you're on a mission with confidence", body: "Have good posture, walk with your feet planted firmly to the ground and look straight ahead. This notion can help deter possible attackers from targetting you." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
 let safetyTip7 = Tip(header: "🚕", title: "Uber/Lyft - Always double check the license plate before getting in", body: "Be careful of people posing as Uber/Lyft drivers." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
 let safetyTip8 = Tip(header: "🔑", title: "When walking near the car to your home or apartment, carry your house keys in your hand.", body: "Don’t stand in a doorway and fumble in your purse or pocket for your keys. Have them ready to use." , sourceName: "Security Today", sourceURL: "https://securitytoday.com/articles/2010/04/15/tips-street-smart.aspx?m=1", sponsorLogo: "", sponsorURL: "")
@@ -668,7 +695,7 @@ let barTip16 = Tip(header: "🍺", title: "Beer has more calories than wine and 
 let barTip17 = Tip(header: "🍸", title: "Never let a stranger or someone you are not entirely familiar with make your drink", body: "No matter how friendly someone may seem when offering you a drink, it’s just not worth the risk", sourceName: "Her Campus", sourceURL: "https://www.hercampus.com/school/wisconsin/7-helpful-tips-going-out", sponsorLogo: "", sponsorURL: "")
 let barTip18 = Tip(header: "🍺", title: "Be mindful of where you place your drinks", body: "If you leave your drink in a busy area for even a second, you should get a new one. You never know if anyone will drop something in your drink when you’re not looking.", sourceName: "Her Campus", sourceURL: "https://www.hercampus.com/school/wisconsin/7-helpful-tips-going-out", sponsorLogo: "", sponsorURL: "")
 let barTip19 = Tip(header: "😐", title: "Drinking too much may cause depression", body: "A study of 1,055 participants found that people who routinely drink too much become more depressed, showing that the alcohol is causing the mood shift. Participants who had alcohol problems were 1.9 times more likely to also suffer from major depression. Alcohol may affect genetic processes that increase the risk of depression.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2009/03/090302183002.htm", sponsorLogo: "", sponsorURL: "")
-
+let barTip20 = Tip(header: "🍺", title: "The U.S. government defines \"moderate drinking\" as one drink for women per day and two for men", body: "Drinking too much alcohol can add to your waistline and increase the risk of several cancers (i.e., breast, colon, esophagus).", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/09/harvard-study-says-these-5-habits-may-help-you-live-10-years-longer.html", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -694,6 +721,8 @@ let barTopic2 = Topic(title: barTitle, icon: barIcon, tip: barTipArray2)
 let barTipArray3 = [barTip13, barTip14, barTip15, barTip16]
 let barTopic3 = Topic(title: barTitle, icon: barIcon, tip: barTipArray3)
 
+let barTipArray4 = [barTip17, barTip18, barTip19, barTip20]
+let barTopic4 = Topic(title: barTitle, icon: barIcon, tip: barTipArray4)
 
 // MARK: - Happy Hour
 
@@ -701,8 +730,8 @@ let happyHourTitle = "Happy \nHour"
 let happyHourIcon = "Hap"
 
 //1
-let happyHourTip1 = Tip(header: "🍓", title: "Before happy hour, eat protein, fiber, and healthy fat to reduce your chances of a hangover and weight-gain", body: "Try greek yogurt with berries, almond butter with fruit, or a protein shake. These foods stabilize your blood-sugar levels and slow down the alcohol from being absorded into your bloodstream, reducing the diet-damaging effects." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2013/04/03/health/wine-waistline/index.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let happyHourTip2 = Tip(header: "🍺", title: "Alcohol reduces your ability to have self-control, which leads to overeating and weight gain", body: "Drinking lowers your inhibitions and sense of awareness, causing you to mindlessly eat when you have a buzz. It's harder to for your brain to read those fullness signals when you've had a few drinks." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let happyHourTip1 = Tip(header: Constants.Image.yogurt, title: "Before happy hour, eat protein, fiber, and healthy fat to reduce your chances of a hangover and weight-gain", body: "Try greek yogurt with berries, almond butter with fruit, or a protein shake. These foods stabilize your blood-sugar levels and slow down the alcohol from being absorded into your bloodstream, reducing the diet-damaging effects." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2013/04/03/health/wine-waistline/index.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let happyHourTip2 = Tip(header: Constants.Image.alcohol, title: "Alcohol reduces your ability to have self-control, which leads to overeating and weight gain", body: "Drinking lowers your inhibitions and sense of awareness, causing you to mindlessly eat when you have a buzz. It's harder to for your brain to read those fullness signals when you've had a few drinks." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let happyHourTip3 = Tip(header: "🍹", title: "Alcohol adds hundreds of calories to your diet and decreases fat burn in the belly", body: "Your body can't store calories from alcohol for later, the way it does with food calories. When you drink, your metabolism stops what it's doing (like, say, burning off food calories) to focus on the alcohol. The result, whatever you recently ate gets stored as fat." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2013/04/03/health/wine-waistline/index.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let happyHourTip4 = Tip(header: "🍺", title: "People who drink heavily when they’re younger have a higher risk of becoming overweight or obese when they’re older because of the calories in alcohol", body: "People who were heavy drinkers (having four or more drinks on any day or eight or more drinks per week for women) had a 41% higher risk of going from a normal weight BMI to an overweight BMI when compared with people who weren’t heavy drinkers, and a 36% higher risk of going from an overweight BMI to an obese BMI by the time they hit their mid-twenties." , sourceName: "Women's Health", sourceURL: "https://www.womenshealthmag.com/weight-loss/a19918843/will-drinking-make-me-gain-weight/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -793,8 +822,8 @@ let breakAMTip4 = Tip(header: "👀", title: "Take vision breaks from looking at
 
 ///////
 let breakAMTip5 = Tip(header: "🚶‍♂️", title: "Longer breaks are good, but it’s beneficial to take frequent short breaks", body: "Researcher found that more short breaks were associated with higher levels of energy, concentration and motivation, suggesting that employees should be encouraged to take more frequent short breaks to facilitate recovery." , sourceName: "Baylor University", sourceURL: "https://www.baylor.edu/mediacommunications/news.php?action=story&story=159785", sponsorLogo: "", sponsorURL: "")
-let breakAMTip6 = Tip(header: "🚶‍♀️", title: "Take breaks by doing things you choose to do and things you like to do", body: "A common belief exists that doing things that are non-work-related are more beneficial. One study found there was no evidence to prove that non-work-related activities were more beneficial. Finding something on your break that you prefer to do – something that’s not given to you or assigned to you – are the kinds of activities that are going to make your breaks much more restful and help you come back to work stronger." , sourceName: "Baylor University", sourceURL: "https://www.baylor.edu/mediacommunications/news.php?action=story&story=159785", sponsorLogo: "", sponsorURL: "")
-let breakAMTip7 = Tip(header: "👫", title: "In high-stress occupations, social breaks - talking with coworkers about something other than work-are more effective at reducing stress and improving mood than either cognitive breaks (checking the news) or nutrition breaks (getting a snack)", body: "Social breaks cut down on errors and reduce turnover; workers who take social breaks are more likely to stay at their jobs." , sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+let breakAMTip6 = Tip(header: "🚶‍♀️", title: "Take breaks by doing things you like to do", body: "A common belief exists that doing things that are non-work-related are more beneficial. One study found there was no evidence to prove that non-work-related activities were more beneficial. \n\nFinding something on your break that you prefer to do – something that’s not given to you or assigned to you – are the kinds of activities that are going to make your breaks much more restful and help you come back to work stronger." , sourceName: "Baylor University", sourceURL: "https://www.baylor.edu/mediacommunications/news.php?action=story&story=159785", sponsorLogo: "", sponsorURL: "")
+let breakAMTip7 = Tip(header: "👫", title: "Social breaks - talking with coworkers about something other than work-are more effective at reducing stress and improving mood than checking the news or getting a snack", body: "Social breaks cut down on errors and reduce turnover; workers who take social breaks are more likely to stay at their jobs." , sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let breakAMTip8 = Tip(header: "🌲", title: "Nature breaks are better for increasing happiniess than indoor breaks", body: "People who take short walks outdoors return with better moods than people who walk indoors. Looking out a window into nature is a better micro-break than looking at a wall. Even taking a break indoors surrounded by plants is better than an area with no plants." , sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
 // AM Break
@@ -835,7 +864,7 @@ let dateTip4 = Tip(header: "🌶", title: "Eat these aphrodisiac foods to increa
 let dateTip5 = Tip(header: "🚶‍♀️", title: "Easy ways to burn calories while on a date", body: "Instead of always opting for sedentary plans, like going to the movies, schedule more adventurous activities like walking dates, park dates, bike rides, or easy day-hikes.", sourceName: "The Active Times", sourceURL: "https://www.theactivetimes.com/20-easy-ways-build-exercise-your-daily-routine", sponsorLogo: "", sponsorURL: "")
 let dateTip6 = Tip(header: "❓", title: "Research: People who asked a lot of questions on their first dates, were much more likely to get asked out on second dates", body: "Self-disclosure feels good. By asking your date questions, they attribute that enjoyment to you, the question asker, which causes your date to like you more. So asking more questions during a date makes you more likeable and more likely to get a second date.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/ideacast/2016/06/asking-for-advice-makes-people-think-youre-smarter.html", sponsorLogo: "", sponsorURL: "")
 let dateTip7 = Tip(header: "👫", title: "Mimicking - occasionally copying the verbal and nonverbal behaviors of a date or partner - makes them more attracted to you", body: "Researchers found that when any individual mimics the behavior of another, they become more liked by that other person. So, copy your partner’s gestures on occasion. Repeat a word or phrase now and again. You may find it makes them like you more, increases their comfort around you, and improves your romance, too.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201706/mimicry-and-attraction-in-romantic-relationships", sponsorLogo: "", sponsorURL: "")
-let dateTip8 = Tip(header: "🔥", title: "On dates, both genders reported feeling a spark when the conversations were mainly about the women, and when men demonstrated alignment with the women", body: "Women are typically more selective about who they are willing to go out with. So talking about the woman is a good strategy toward building a connection. Women reported a sense of connection to men who used appreciative language (\"That's awesome\" or \"Good for you\") and sympathy (\"That must be tough on you\").", sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/news/2013/may/jurafsky-mcfarland-dating-050613.html", sponsorLogo: "", sponsorURL: "")
+let dateTip8 = Tip(header: "❓", title: "Increase your likability: Ask more questions, particularly follow-up questions", body: "A speed-dating study found that people who ask more questions, particularly follow-up questions, are better liked by their conversation partners. It even led to an increase in second dates among the speed-daters. \n\nAsking follow-up questions increases how much we are liked because they show that we are listening sincerely and trying to show we care.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/09/23/smarter-living/how-to-be-more-likeable.html", sponsorLogo: "", sponsorURL: "")
 
 //3
 let dateTip9 = Tip(header: "😀", title: "Build Trust: Smile and make eye contact more with your date or partner to let them know you are interested", body: "Make more frequent and longer eye contact to convey greater interest as well. Selectively copy your partner’s verbal and non-verbal behavior to increase their comfort and build more rapport too.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201806/behaviors-build-trust-and-attraction", sponsorLogo: "", sponsorURL: "")
@@ -843,6 +872,12 @@ let dateTip10 = Tip(header: "📵", title: "Build a stronger connection with you
 let dateTip11 = Tip(header: "😊", title: "When someone is attracted to you, blood will flow to their face, causing their cheeks to get red", body: "It is an evolutionary way the body tries to attract the opposite sex. This happens with lips and eyes. The redder the lips and the whiter the eyes, the more fertile and attractive someone is.", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/body-language-attraction/", sponsorLogo: "", sponsorURL: "")
 let dateTip12 = Tip(header: "👫", title: "Speed-dating study finds daters were more often chosen when they had expansive body language (open postures involving widespread limbs, a stretched torso, and/or enlargement of the occupied space)", body: "In fact, for every unit of increase in expansiveness noted by the researchers, the participant was 76% more likely to be chosen for a date. This effect was true for both men and women — and the increase in romantic attractiveness was partially due to increased perceptions of the individual’s dominance (and potential status and resources as a mate).", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201709/how-our-body-language-can-make-us-attractive", sponsorLogo: "", sponsorURL: "")
 
+//WOMEN
+let dateWomenTip1 = Tip(header: "🌹", title: "What Color to Wear on a Date (if you’re a woman): Red", body: "Red is the color of passion and gets blood pumping. Women can wear this to get their date’s heart racing.", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/color-psychology/", sponsorLogo: "", sponsorURL: "")
+
+//MEN
+let dateMenTip1 = Tip(header: "👕", title: "What Color to Wear on a Date (if you’re a man): Blue", body: "Blue is the most stable color. Women love seeing stable men. It is also calming and can help relax both you and your date’s nerves.", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/color-psychology/", sponsorLogo: "", sponsorURL: "")
+let dateMenTip2 = Tip(header: "🔥", title: "On dates, both genders reported feeling a spark when the conversations were mainly about the women, and when men demonstrated alignment with the women", body: "Women are typically more selective about who they are willing to go out with. So talking about the woman is a good strategy toward building a connection. Women reported a sense of connection to men who used appreciative language (\"That's awesome\" or \"Good for you\") and sympathy (\"That must be tough on you\").", sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/news/2013/may/jurafsky-mcfarland-dating-050613.html", sponsorLogo: "", sponsorURL: "")
 
 
 var dateTipArray0 = [dateTip1, dateTip2, dateTip3, dateTip4]
@@ -861,7 +896,7 @@ let onlineDateingTip2 = Tip(header: "👍", title: "Having expansive and open bo
 
 // MARK: - Grocery Store
 
-let groceryStoreTitle = "Grocery Store"
+let groceryStoreTitle = "Grocery \nStore"
 let groceryStoreIcon = "Gro"
 
 //0
@@ -979,7 +1014,7 @@ let groceryStoreTopicWDAY = Topic(title: groceryStoreTitle, icon: groceryStoreIc
 
 // MARK: - SHOPPING, Clothes
 
-let shoppingClothesTitle = "Shopping Mall"
+let shoppingClothesTitle = "Shopping \nMall"
 let shoppingClothesIcon = "Sho"
 
 let shoppingClothesTip1 = Tip(header: "🚶‍♂️", title: "Shop healthier by getting exercise", body: "Park far away from the entrance and build a few extra, calorie-burning steps into your day. Visit stores on different levels and take the stairs, not the escalator. " , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2012/08/11/healthy-weekend_n_1760981.html?slideshow=true#gallery/243861/2", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -1045,8 +1080,9 @@ let commuteAMTip19 = Tip(header: "🎧", title: "A 5 year study of rich and poor
 //WEEK 2
 // MON
 let commuteAMTip20 = Tip(header: "🌻", title: "Improve your mood by taking the scenic route for your morning commute", body: "Research finds that simply seeing beautiful flowers increases happiness. The happiness boost is greatest for night owls who have a hard time getting going in the morning, the researchers found." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip21 = Tip(header: "", title: "Long-distance commuters: Improve health, happiness, and relationships by communiting before or after rush-hour (and try to work from home at least one day a week)", body: "Commuting exacts considerable stress on the human mind and body and on family relationships. Each added travel minute correlates with an increase in health problems. \n\nPeople with longer commute experience more headaches, backaches, digestive problems, higher blood pressure, sleep disturbances, fatigue, and concentration problems compared to those with shorter commutes, studies show.", sourceName: "Thrive Global", sourceURL: "https://www.scientificamerican.com/article/commuting-takes-its-toll/", sponsorLogo: "", sponsorURL: "")
 
-
+//WEEK 1
 // MON
 let commuteAMTipArray0 = [commuteAMTip1, commuteAMTip2, commuteAMTip3, commuteAMTip4]
 let commuteAMTopic0 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray0)
@@ -1067,6 +1103,11 @@ let commuteAMTopic3 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: com
 let commuteAMTipArray4 = [commuteAMTip16, commuteAMTip17, commuteAMTip18, commuteAMTip19]
 let commuteAMTopic4 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray4)
 
+//WEEK 2
+//MON
+let commuteAMTipArray5 = [commuteAMTip20, commuteAMTip21, commuteAMTip15, commuteAMTip19]//WIP
+let commuteAMTopic5 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray5)
+
 // MARK: - Commute, PM
 
 let commutePMTitle = "Commute"
@@ -1076,7 +1117,7 @@ let commutePMIcon = "Com"
 let commutePMTip1 = Tip(header: "🚦", title: "Pollution at intersections is 29x higher than on the open road", body: "To reduce the amount of pollution exposure while waiting in traffic jams and at traffic lights, drivers should keep a distance from the car in front, close car windows, and switch off the fan. \n\nThis can reduce the chance of breathing in hazardous levels of air pollution by 76%. Also, set the fan so that the air circulates internally and prevents pollution from entering from outside." , sourceName: "Medical News Today", sourceURL: "https://www.medicalnewstoday.com/articles/312570.php", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let commutePMTip2 = Tip(header: "🚗", title: "Research links spending a single hour in traffic to higher odds of having a heart attack", body: "High noise levels -- like the kind you hear on a freeway -- are also linked to heart disease. If you can’t avoid traveling during rush hour, squash stress by listening to relaxing music. Or share the ride and chat with your fellow passenger." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/heart/ss/slideshow-surprising-hurt-heart?ecd=wnl_spr_091316_AM&ctr=wnl-spr-091316-AM_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let commutePMTip3 = Tip(header: "👍", title: "Use your commuting time to bring yourself closer to the life you want to live", body: "Think back through your day hour by hour and glean wisdom and connection from it. How did the day go? What worked? What didn’t? What do you want to do the same – or differently – tomorrow? With whom can you share feedback? Who should you thank? What happened today for which you can feel grateful? These questions will help you learn, grow, and connect." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let commutePMTip4 = Tip(header: "🤔", title: "Identify an area in your life that you want to improve and use your commute to fix it", body: "If it’s exercise you need, then bike or walk to work, even if it’s just partway. Or park far away from your office and walk an extra minute. \n\nIf it’s relaxation you’re missing, then do nothing, or read a fun book, or take a quick walk around your office before you leave for home. \n\nIf you want to learn something, then read about it or, if you have internet access, watch a video or participate in an online course. If you’re feeling lonely, call, text, or email people you cherish." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let commutePMTip4 = Tip(header: "🤔", title: "Identify an area in your life that you want to improve and use your commute to fix it", body: "EXERCISE: Bike or walk to work, even if it’s just partway. Or park far away from your office and walk an extra minute. \n\nRELAX: Do nothing, or read a fun book, or take a quick walk around your office before you leave for home. \n\nLEARN: Read about it or, if you have internet access, watch a video or participate in an online course. \n\nRELATIONSHIPS: Call, text, or email people you cherish." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //TUE
 let commutePMTip5 = Tip(header: "🙅‍♀️", title: "Don’t grocery shop right after work in order to reduce your chances of buying unhealthy foods", body: "After a long day of work, you're likely to be both hungry and tired. When you're hungry or tired, your brain craves fatty, sugary foods. During the week, the best time to go to grocery shopping is after dinner when you're well-fed and it's less crowded." , sourceName: "LifeHacker", sourceURL: "https://lifehacker.com/avoid-grocery-shopping-right-after-work-to-save-money-1616069034", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -1512,13 +1553,17 @@ let networking7 = Tip(header: "👔", title: "When you get to the event, place y
 let networking8 = Tip(header: "👫", title: "Listen 60% of the time and speak the other 40%", body: "Ask open-ended questions. Learn from the other; their daily routine, their ideal client and their needs. \"What do you do when you're not working?\" Is a great question to ask.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/julie-blais-comeau/cocktail-networking_b_7469156.html", sponsorLogo: "", sponsorURL: "")
 
 //3
-let networking9 = Tip(header: "🚪", title: "Make an entrance. First impressions do count. Think about your posture.", body: "Your body language should be confident, happy and approachable. Take a moment. Breathe in and scout the horizon to search for familiar faces or inviting eye contact from a group member looking for someone to connect with.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/julie-blais-comeau/cocktail-networking_b_7469156.html", sponsorLogo: "", sponsorURL: "")
+let networking9 = Tip(header: "🚪", title: "Make an entrance. First impressions count", body: "Your body language and posture should be confident, happy and approachable. Breathe in and scan the horizon of the event to search for familiar faces or inviting eye contact from a group member looking for someone to connect with.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/julie-blais-comeau/cocktail-networking_b_7469156.html", sponsorLogo: "", sponsorURL: "")
 let networking10 = Tip(header: "🚶‍♂️", title: "Project confidence: Stand up straight, pull your shoulders back, widen your stance, and hold your head high", body: "If you are upbeat and assured you tend to hold yourself erect and expand your chest. If you are feeling insecure or depressed, you tend to round your shoulders, slump, and look down. ", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/carolkinseygoman/2014/05/06/5-ways-to-project-confidence/#18b503744e34", sponsorLogo: "", sponsorURL: "")
-let networking11 = Tip(header: "🙌", title: "Having grit means you that you still attend a networking event after a long day of work, even when you have no energy", body: "Grit, or determination is the willingness to push through even when the odds are against you of you're tired. Grit was found to be more important than IQ when you're trying to become successful.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/important-trait-of-success-2013-11", sponsorLogo: "", sponsorURL: "")
-let networking12 = Tip(header: "🤓", title: "LinkedIn Co-founder, Reid Hoffman, believes networking is critical for success because when it comes to knowledge, who you know is often more valuable than what you've read", body: "The most valuable professional information is often in other people's heads. Hoffman said, \"There are more smart people in the world who do not work at your company than the total number of smart people who work at your company. So look beyond your office. If you do, your team becomes a whole lot bigger\"." , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/3-winning-habits-youll-find-in-most-successful-people-this-year.html", sponsorLogo: "", sponsorURL: "")
+let networking11 = Tip(header: "🙌", title: "Develop grit because it was found to be more important than IQ when you're trying to become successful", body: "Having grit means you that push yourself to attend a networking event after a long day of work, even when you have no energy.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/important-trait-of-success-2013-11", sponsorLogo: "", sponsorURL: "")
+let networking12 = Tip(header: "🤝", title: "LinkedIn Co-founder, Reid Hoffman, believes networking is critical for success because when it comes to knowledge, who you know is often more valuable than what you know", body: "The most valuable professional information is often in other people's heads. \"There are more smart people in the world who do not work at your company than the total number of smart people who work at your company. So look beyond your office. If you do, your team becomes a whole lot bigger,\" Hoffman said." , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/3-winning-habits-youll-find-in-most-successful-people-this-year.html", sponsorLogo: "", sponsorURL: "")
+
+//4
+let networking13 = Tip(header: "❓", title: "Increase your likability: Ask more questions, particularly follow-up questions", body: "A study found that people who ask more questions, particularly follow-up questions, are better liked by their conversation partners. Asking follow-up questions increases how much we are liked because they show that we are listening sincerely and trying to show we care.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/09/23/smarter-living/how-to-be-more-likeable.html", sponsorLogo: "", sponsorURL: "")
+let networking14 = Tip(header: "🗣", title: "Always try to use people's names in conversation", body: "Drop their names casually and regularly without overdoing it. This is a simple subconscious hack that will make others like you more.", sourceName: "Inc.", sourceURL: "https://www.inc.com/quora/10-simple-habits-that-will-make-you-more-likable-right-away.html", sponsorLogo: "", sponsorURL: "")
 
 
-let networkingTitle = "Social Activity"
+let networkingTitle = "Social \nActivity"
 let networkingIcon = "Eve"
 let networkingTipArray1 = [networking1, networking2, networking3, networking4]
 let networkingTopic1 = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArray1)
@@ -1528,6 +1573,9 @@ let networkingTopic2 = Topic(title: networkingTitle, icon: networkingIcon, tip: 
 
 let networkingTipArray3 = [networking9, networking10, networking11, networking12]
 let networkingTopic3 = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArray3)
+
+let networkingTipArray4 = [networking13, networking14, networking4, networking12]//WIP
+let networkingTopic4 = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArray4)
 
 // MARK: - Side Hustle
 //1
@@ -1588,7 +1636,7 @@ let homeAMIcon = "Hom"
 let homeAMTip1 = Tip(header: "🌅", title: "If you wake up energized, you’re going to carry that energy through the rest of the day", body: "The morning is a critical time that can set the tone for the entire day. Start your morning with little \"wins\" to prime your brain to work toward more \"wins\" and successes throughout the day. \n\nEat breakfast, say one thing you're grateful for, get outside, exercise, or talk with your family or friends." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homeAMTip2 = Tip(header: "🚰", title: "Drink a glass or two of water before breakfast to rehydrate your body and aid digestion and metabolism", body: "After being asleep all night, we wake up every day slightly dehydrated. Drinking a couple glasses of water allows the body to rehydrate for better digestion when you do eat. It also helps with moving the lower bowels for regularity in the mornings." , sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homeAMTip3 = Tip(header: "🍳", title: "Front-load your calories early in the day to jump-start your metabolism and prevent obesity, starting with a healthy breakfast and tapering off to a smaller lunch and light dinner", body: "Researchers also found that those who ate their largest meal early in the day were more likely to have less body fat than those who ate a large lunch or dinner." , sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2017/08/21/well/eat/the-case-for-a-breakfast-feast.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let homeAMTip4 = Tip(header: "🚶‍♂️", title: "Every time you walk through a doorway, remember to stand up, put your chin up, put your shoulders back, and smile", body: "This will create a first impression that causes other people to view you as confident, open, positive, and friendly. That will change the way that we think about ourselves." , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homeAMTip4 = Tip(header: "🚶‍♂️", title: "Display confidence: Every time you walk through a doorway, remember to stand up, put your chin up, put your shoulders back, and smile", body: "This will create a first impression that causes other people to view you as confident, open, positive, and friendly. That will change the way that we think about ourselves." , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let homeAMTipArray0 = [homeAMTip1, homeAMTip2, homeAMTip3, homeAMTip4]
 let homeAMTopic0 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray0)
@@ -1599,7 +1647,7 @@ let homePMTitle = "Home"
 let homePMIcon = "Hom"
 
 // 0
-let homePMTip1 = Tip(header: "😴", title: "Sleep better by only using your room for sleep", body: "You know how Pavlov trained his dogs to associate a ringing bell with eating? That’s what you want to do with your bedroom and feeling sleepy. Don't use your bedroom for anything but sleep (and sex) to create a mental association between the bed and feeling sleepy." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/12/14/bedtime-rituals_n_6309564.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homePMTip1 = Tip(header: "😴", title: "Sleep better by only using your room for sleep", body: "You know how Pavlov trained his dogs to associate a ringing bell with eating? That’s what you want to do with your bedroom and feeling sleepy. Don't use your bedroom for anything but sleep (and romance) to create a mental association between the bed and feeling sleepy." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/12/14/bedtime-rituals_n_6309564.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homePMTip2 = Tip(header: "🍽", title: "Sleep better by not eating 3 hours before bed", body: "Finish dinner no later than three hours before bedtime, so you give your stomach time to digest, and you won’t be kept awake by heartburn, gas or a sugar- or caffeine-fueled energy surge." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/12/14/bedtime-rituals_n_6309564.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homePMTip3 = Tip(header: "🤔", title: "Clean for 5+ minutes. Being in a clean room may promote healthy eating", body: "A study had participants fill out a questionnaire either in a clean or messy room. Afterward, the participants were allowed to take a snack of chocolate or an apple on their way out. Compared with participants in the messy room, the participants in the clean room were more likely to choose the apple over the candy bar." , sourceName: "Association for Psychological Science", sourceURL: "https://www.psychologicalscience.org/news/releases/tidy-desk-or-messy-desk-each-has-its-benefits.html", sponsorLogo: "", sponsorURL: "")
 let homePMTip4 = Tip(header: "🛏", title: "Scientists recommend changing your bed sheets once a week - or a minimum of every 2 weeks", body:  "Though most bacteria on sheets is mostly harmless, the bacteria and fungi, along with the dirt and oils sloughed off during sleep, can cling to sheets and your skin, contributing to acne and dandruff. Wash sheets in hot water." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -1668,17 +1716,20 @@ let homePMTopic5 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArr
 let bathroomTitle = "Bathroom"
 let bathroomIcon = "Bat"
 
+//0
 let bathroomTip1 = Tip(header: "🚽", title: "Check to see if you're hydrated when you go to the bathroom. Staying hydrated reduces your risk for kidney stones.", body: "When you're getting enough water, urine flows freely, is light in color and free of odor. When your body is not getting enough water, urine is dark yellow, has an oder, and is more concentrated which increases because the kidneys trap extra fluid for bodily functions. \n\nIf you chronically drink too little, you may be at higher risk for kidney stones, especially in warm climates." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#1", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let bathroomTip2 = Tip(header: "🚰", title: "Drinking water reduces your chances of getting constipation", body: "Proper hydration keeps things flowing along your gastrointestinal tract and prevents constipation. When you don't get enough liquid, the colon pulls water from stools to maintain hydration -- and the result is constipation. \n\nAdequate liquid and fiber is the perfect combination, because the liquid pumps up the fiber and acts like a broom to keep your bowel functioning properly." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let bathroomTip3 = Tip(header: "🏡", title: "Scientist recommend cleaning your bathroom door knobs once a week", body: "Disinfect bathroom door knobs at least once a week, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
 let bathroomTip4 = Tip(header: "🚽", title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. To keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks — more if you shower often. Your shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-var bathroomTipArray0 = [bathroomTip1, bathroomTip2, bathroomTip3, bathroomTip4]
+//1
+let bathroomTip5 = Tip(header: "", title: "Live longer by weighing yourself often — not in an obsessive way, of course. Weight control ", body: "One study found that those who monitored their weight less frequently were more likely to gain weight. Weight control significantly reduced the risk of diabetes, cardiovascular risk factors and cancer." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/09/harvard-study-says-these-5-habits-may-help-you-live-10-years-longer.html", sponsorLogo: "", sponsorURL: "")
 
+var bathroomTipArray0 = [bathroomTip1, bathroomTip2, bathroomTip3, bathroomTip4]
 let bathroomTopic0 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray0)
+
+var bathroomTipArray1 = [bathroomTip5, bathroomTip4, bathroomTip3, bathroomTip2]//WIP
+let bathroomTopic1 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray1)
 
 // MARK: - Bathroom PM
 
@@ -1709,64 +1760,71 @@ let bathroomPMTopic1 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: 
 let bedtimeTitle = "Bedtime"
 let bedtimeIcon = "Bed"
 
-// MON
+//WEEK 1
+// SUN
 let bedtimeTip1 = Tip(header: "😁", title: "Brush your teeth before bed because it's easier to get a cavity while you sleep", body: "While you sleep, your mouth salivates less, which can lead to cavities. This is why it is important to brush your teeth before bed. The American Dental Association recommends you brush twice a day for two minutes, although they don't specify what time of day these brushing should happen." , sourceName: "Greatist", sourceURL: "https://greatist.com/live/brushing-teeth-before-bed", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let bedtimeTip2 = Tip(header: "💪", title: "Wake up early tomorrow and exercise. Don't think. Just execute the plan.", body: "One of the most common ways to sabotage your morning is to get a slow start by gradually waking up and doing tasks that require thinking. Instead, wake up early, jump out of bed, and puts on the workout clothes you prepared the night before. By the time you've finished your workout, most people are just waking up." , sourceName: "Jocko Willink, retired Navy SEAL commander", sourceURL: "https://www.businessinsider.com/jocko-willink-how-to-wake-up-earlier-2017-11", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bedtimeTip3 = Tip(header: "💤", title: "A nighttime ritual will help to reduce stress and fall asleep faster", body: "Taking a hot bath, reading a book, journaling, going for an evening stroll or listening to calming music, is critical to priming the brain to sleep well." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/how-effectively-manage-stress-so-it-doesn-t-hurt-your-ncna815626", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bedtimeTip3 = Tip(header: "💤", title: "Nighttime rituals help you to reduce stress and fall asleep faster", body: "Taking a hot bath, reading a book, journaling, going for an evening stroll or listening to calming music, is critical to priming the brain to sleep well." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/how-effectively-manage-stress-so-it-doesn-t-hurt-your-ncna815626", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let bedtimeTip4 = Tip(header: "📝", title: "Reduce decision fatigure tomorrow by making a plan tonight", body: "List the major tasks you want to accomplish the next day — and how you want to spend the first few hours of the day. Lay out the clothes you’ll wear and have ingredients ready to make a healthy breakfast. Making less decisions in the morning helps you have more willpower later in the day." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-////// TUES
+//MON
 let bedtimeTip5 = Tip(header: "😴", title: "Set your room temperature between 60 and 70 degrees fahrenheit (16 to 21 degrees celsius)", body: "Your core body temperature drops during the night to help you fall asleep and maintain sleep. A lower room temperature allows for people to cover up with blankets without getting too hot.", sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#alter-your-routine", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip6 = Tip(header: "🥛", title: "Drink a glass of warm milk before bed to reduce insomnia and fidgetiness", body: "Milk is high in antioxidants, vitamin B2 and B12, as well as protein and calcium. The protein lactium has a calming effect by lowering blood pressure, which the potassium in milk can help relieve muscle spasms triggered by feeling tense.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/4-milk/", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip7 = Tip(header: "🛌", title: "Having a bedtime routine sends a signal to your brain that it's time for bed—especially if you do them in the same order, at the same time every night", body: "Without a consistent bedtime routine, your brain doesn't go into sleep mode until you crawl into bed and turn out the light. Try brushing your teeth, washing your face, and laying out your clothes for the morning in the same order each night.", sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#alter-your-routine", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip8 = Tip(header: "😁", title: "Increase your confidence. Before you even get out of bed tomorrow, stretch your body as wide as possible in an 'X' or 'Y' position.", body: "Sleeping in the fetal position sends a subtle signal to your brain that your body is under attack. But if you do a power pose when you wake up, you’ll see an improvement in your daily confidence levels and happiness.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 
-/////// WED
+// TUE
 let bedtimeTip9 = Tip(header: "😛", title: "Use mouthwash before bed to give your mouth an extra layer of protection from cavity-causing acids", body: "Saliva prevents cavity-causing acids from building up. But we produce less saliva when we sleep. That can dry out your mouth, leaving teeth and gums vulnerable to things like tooth decay and gingivitis.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 let bedtimeTip10 = Tip(header: "📵", title: "Put your phone in another room or somewhere across the bedroom, far away from your arms' reach, so you're not tempted to check it first thing in the morning", body: "Immediately checking your phone when you wake up is more likely to increase stress and leave you feeling overwhelmed. The information overload that hits you before you're fully awake also interferes with your ability to priority tasks during the day.", sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/p/is-it-bad-to-look-at-your-phone-right-when-you-wake-up-it-might-be-sabotaging-your-day-8437383", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip11 = Tip(header: "😴", title: "Sleep more - you’ll be less sensitive to negative emotions", body: "In one experiment, sleep-deprived college students tried to memorize a list of words. They could remember 81% of the words with a negative connotation, like \"cancer.\" But they could remember only 31% of the words with a positive or neutral connotation, like \"sunshine\" or \"basket.\"", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/belle-beth-cooper/10-simple-things-to-be-happy_b_4241824.html", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip12 = Tip(header: "🌅", title: "Serial entrepreneur Gary Vaynerchuk wakes up at 6AM every day and follows the same morning routine", body: "Consistency and routine are helpful for starting the day in a proactive mode. He reads the news, checks his social media, exercises for 45 minutes, spends times with his kids before they go to school, calls a friend or family member while he commutes to work, and then gets into the office at 9AM.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/gary-vaynerchuks-morning-routine-2015-3", sponsorLogo: "", sponsorURL: "")
 
-/////// THURS
+// WED
 let bedtimeTip13 = Tip(header: "🕔", title: "Virgin Group founder Richard Branson wakes up at 5 AM every day and exercises", body: "You can’t be productive if you’re not healthy. \"I definitely can achieve twice as much by keeping fit,\" Branson said. \"It keeps the brain functioning well.\"", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3066982/why-the-most-productive-people-do-these-six-things-every-day", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip14 = Tip(header: "😴", title: "Getting 7 to 8 hours of sleep each night is associated with the lowest risk of missing work because of sickness", body: "People sleeping 5 hours or less, or 10 hours or more, reported 5 to 9 more sick days each year, as compared to those who slept between 7 and 8 hours per night. \n\nSleep deficiency causes sickness, decline in cognitive functioning, and accidents while commuting.", sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-sleep-disturbance-workers-absence/sleeping-seven-to-eight-hours-a-night-linked-to-taking-fewer-sick-days-idUSKBN0H62BM20140911", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip15 = Tip(header: "📝", title: "Reflect on or write down one positive moment that happened today", body: "Celebrate the successes, even if they were few and far between, because the last thing you do before bed tends to impact your mood the next day. \n\nBenjamin Franklin famously asked himself the same question every night: \"What good have I done today?\"" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-before-bed-2016-6#7-they-reflect-on-the-good-things-from-the-day-7", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip16 = Tip(header: "☀️", title: "Loss weight by waking up earlier tomorrow and making time to get sunlight between 8am-noon", body: "Research: 20-30 minutes of early morning sun exposure is enough for you to lower your Body Mass Index (BMI) and lower your waistline. \n\nNot getting sufficient sunlight in the morning could de-synchronise your internal body clock, which can affect your metabolism and can lead to weight gain." , sourceName: "Pop Sugar", sourceURL: "https://www.popsugar.com.au/fitness/Sunlight-Helps-Weight-Loss-34543871?stream_view=1#photo-34543872", sponsorLogo: "", sponsorURL: "")
-//// FRI
+// THUR
 let bedtimeTip17 = Tip(header: "📵", title: "Fall asleep faster by not using electronics an hour before bed", body: "Cell phones, TVs, and tablets give off what’s known as blue light—a type that studies suggest can inhibit the production of the sleep-inducing hormone melatonin and disrupt your circadian rhythm. This may be because blue light emits wavelengths similar to daylight, which can make your body think it’s daytime while you're trying to fall asleep." , sourceName: "ABC News", sourceURL: "https://abcnews.go.com/Health/reasons-sleep-phone-bed/story?id=24839804", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip18 = Tip(header: "🎽", title: "Prepare your gym clothes tonight so that you can throw it on as soon as you slide out of bed", body: "Former Navy SEAL Jocko Willink says, \"Don't think in the morning. That's a big mistake that people make. They wake up in the morning and they start thinking. Don't think. Just execute the plan. The plan is the alarm clock goes off, you get up, you go work out." , sourceName: "Thrive Global", sourceURL: "https://medium.com/thrive-global/this-10-minute-night-routine-guarantees-success-your-next-morning-af47fa7a00d5", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip19 = Tip(header: "📝", title: "Tonight, decide what you’re going to do the next morning because design is stronger than willpower.", body: "Write down when you’re going to wake up and set the alarm for that time (but put your phone or alarm clock in a different room so you physically have to get out of bed to turn it off). \n\nWrite down the top 1–3 things you intend to accomplish with your morning." , sourceName: "Thrive Global", sourceURL: "https://medium.com/thrive-global/this-10-minute-night-routine-guarantees-success-your-next-morning-af47fa7a00d5", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip20 = Tip(header: "🛀", title: "Taking a bath or shower helps you fall asleep", body: "Taking a bath or shower artificially raises your body temperature, but when you climb out of the tub or shower, your body temperature abruptly drops and sends a signal to your body that you are ready for sleep." , sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/lifeandstyle/2016/jan/31/12-rules-good-nights-sleep", sponsorLogo: "", sponsorURL: "")
 
+//FRI
+let bedtimeFridayTip1 = Tip(header: "🛀", title: "Sleep better: take a warm bath or shower an hour before bed", body: "Our body temperature lowers around 4 a.m. to preserve our energy while we sleep. Taking a warm bath or shower and hour before bed lowers your body temperature, which helps you fall asleep." , sourceName: "Verywell", sourceURL: "https://www.verywellhealth.com/the-importance-of-your-sleep-environment-3014944", sponsorLogo: "", sponsorURL: "")
 
-//WEEK 2
-//MON
 let bedtimeTip21 = Tip(header: "📵", title: "Cellphone or computer use in bed before bedtime increases your risk of insomnia", body: "A study found that a mean usage of 46.6 minutes per night of cellphone and computer before bed were both positively associated with insomnia." , sourceName: "The Ohio State University", sourceURL: "https://u.osu.edu/emotionalfitness/2015/06/17/cell-phone-use-before-bedtime-might-impact-sleep-and-daytime-tiredness/", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip22 = Tip(header: "🍺", title: "Don’t drink alcohol 2 hours before bed", body: "Although a small amount of alcohol might help you get to sleep more quickly, it also gives you a more disturbed night, increases the chances of snoring and disrupts dreaming." , sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/lifeandstyle/2016/jan/31/12-rules-good-nights-sleep", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip23 = Tip(header: "🤫", title: "Sleep in a quiet place and reduce external noise", body: "When you hear a noise while sleeping, you may not become fully conscious, but you do come out of the deeper stages of sleep. To prevent external noises from waking you up, try using: \n\n• Fan \n\n• White noise machine \n\n• Earplugs \n\n• Or, keep a radio or television on low volume to drown out street noises" , sourceName: "Verywell", sourceURL: "https://www.verywellhealth.com/the-importance-of-your-sleep-environment-3014944", sponsorLogo: "", sponsorURL: "")
-let bedtimeTip24 = Tip(header: "🛀", title: "Sleep better: take a warm bath or shower an hour before bed", body: "Our body temperature lowers around 4 a.m. to preserve our energy while we sleep. Taking a warm bath or shower and hour before bed lowers your body temperature, which helps you fall asleep." , sourceName: "Verywell", sourceURL: "https://www.verywellhealth.com/the-importance-of-your-sleep-environment-3014944", sponsorLogo: "", sponsorURL: "")
 
-//TUE
+
+//SAT
 let bedtimeTip25 = Tip(header: "🌄", title: "Keep your blinds half-open to sync your biological clock to the sun", body: "When the natural light from the sunrise creeps into your room, it signals your brain to slow its melatonin production and boost your adrenaline, both of which tell your body to wake up." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip26 = Tip(header: "💪", title: "Set your alarm so that you can get 30 minutes of exercise tomorrow AM", body: "A 30-minute workout will flood you with mood-boosting endorphins that will last most of the day. Plus, scheduling your exercise for first thing in the morning will make you more likely to stick with your workout program, studies have shown, probably because your schedule won’t have the chance to clog up with excuses." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip27 = Tip(header: "⌚️", title: "Many people find that setting a sleep schedule helps them fall asleep easier", body: "Waking up and going to bed at the same times each day can help your internal clock keep a regular schedule. Once your body adjusts to this schedule, it will be easier to fall asleep and wake up around the same time every day." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section3", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip28 = Tip(header: "⏱", title: "Give yourself 30-60 minutes to wind down in the evening before getting in bed", body: "This allows your body and mind to relax and prepare for sleep. Dimming lights and turning off electronic screens increases melatonin, a hormone that regulates sleep-wake cycles, and promotes feelings of sleepiness." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section3", sponsorLogo: "", sponsorURL: "")
 
-//WED
+//WEEK
+//SUN
 let bedtimeTip29 = Tip(header: "🏋️‍♂️", title: "To promote better quality sleep, working out early in the morning appears to be better than working out later in the day", body: "Moderate-to-vigorous exercise in the morning could significantly improve the quality and quantity of your sleep. \n\nExercise can increase the duration and quality of sleep by boosting the production of serotonin in the brain and decreasing levels of cortisol, the stress hormone." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section10", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip30 = Tip(header: "🛌", title: "Having a comfortable mattress and bedding can have a remarkable effect on the quality of sleep", body: "A medium-firm mattress has been shown to positively affect sleep quality and prevent sleep disturbances and muscular discomfort. \n\nA study determined that orthopedic pillows may be better than feather or memory foam pillows. \n\nAdditionally, the use of an a weighted blanket could reduce body stress and help improve your sleep." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section11", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip31 = Tip(header: "", title: "Turn off all electronics", body: "Watching TV, playing video games, using a mobile phone and social networking can make it significantly harder for you to fall and stay asleep. \n\nIt is recommended that you disconnect all electronics and put away computers and mobile phones so you can ensure a quiet place, free of distractions." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section11", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip32 = Tip(header: "✍️", title: "Former Navy SEAL Mark Divine suggests finding a quiet place to perform a review of your day with a journal", body: "Were on and in the zone today or off and unbalanced. If you were \"off,\" then ask yourself: Why? \n\nList the top 3 positive things you accomplished or that happened to you today? \n\nAre there any unresolved issues or questions? \n\nAlso, review your major goals." , sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
 
-//THU
+//MON
 let bedtimeTip33 = Tip(header: "😴", title: "Get 7+ hours of sleep to reduce your chances of future weight gain and risk of obesity", body: "A 16-year study found that women sleeping 5 hours or less gained 2.5 pounds more than did those sleeping 7 hours over 16 years, and women sleeping 6 hours gained 1.5 pounds more than did those sleeping 7 hours over 16 years. Risk of obesity was also higher for those sleeping less than 7 hours over 16 years.", sourceName: "National Center for Biotechnology Information, U.S. National Library of Medicine", sourceURL: "https://www.ncbi.nlm.nih.gov/pubmed/16914506", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip34 = Tip(header: "🛌", title: "Going to bed and waking up at the same time every day improves performance", body: "Irregular patterns of sleep and wakefulness correlated with lower GPA, more difficulty falling asleep/waking up, and delayed release of the sleep-promoting hormone melatonin. The results indicate that going to sleep and waking up at approximately the same time each day is as important as the number of hours you sleep." , sourceName: "Harvard Medical School", sourceURL: "https://sleep.med.harvard.edu/news/584/Irregular+Sleeping+Patterns+Linked+to+Poorer+Academic+Performance+in+College+Stu", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip35 = Tip(header: "🛌", title: "Self-made millionaires sleep an average of 7.5 hours each night", body: "For a better night sleep: \n\n• Set a relaxing mood before bedtime by lowering the lights, taking a shower or listening to soft music. \n\n• Lay out your next day’s clothes to set your mind at ease. \n\n• Make your bedroom as dark as possible. \n\n• Ensure you have a quality mattress and pillow. \n\n• Stick to a constant sleep scheudule" , sourceName: "ThinkRichThinkPoor.com", sourceURL: "https://thinkrichthinkpoor.com/money-management/11-habits-self-made-millionaires/", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip36 = Tip(header: "😴", title: "Prevent unnecessary wrinkles by sleeping on your back or at least alternating sides", body: "If you constantly sleep on the same side of your face, your facial skin will age more rapidly. Constantly sleeping on the same side mechanically wrinkles the skin by deforming the skin's collagen and impeding circulation to the skin, which makes the creases permanent." , sourceName: "U.S. News & World Report", sourceURL: "https://health.usnews.com/wellness/aging-well/articles/2017-01-09/6-surprising-factors-that-can-accelerate-the-aging-of-your-skin", sponsorLogo: "", sponsorURL: "")
+
+//FRIDAY NIGHT ONLY (And SAT)
+let bedtimeTip24 = Tip(header: "🌅", title: "Successful people wake up early on the weekend too", body: "Former Navy SEAL Jocko Willink noticed the highest performers he served with were the ones who woke up earliest, beginning their days while others were sleeping. \"Don't sleep in on the weekends or else you'll ruin any progress you've made optimizing your schedule.\"" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/former-navy-seal-jocko-willink-daily-routines-to-change-your-life-2017-11", sponsorLogo: "", sponsorURL: "")
 
 
-//FRIDAY NIGHT ONLY
-let bedtimeFridayTip1 = Tip(header: "🌅", title: "Successful people wake up early on the weekend too", body: "Former Navy SEAL Jocko Willink noticed the highest performers he served with were the ones who woke up earliest, beginning their days while others were sleeping. \"Don't sleep in on the weekends or else you'll ruin any progress you've made optimizing your schedule.\"" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/former-navy-seal-jocko-willink-daily-routines-to-change-your-life-2017-11", sponsorLogo: "", sponsorURL: "")
+
 
 
 
@@ -1781,14 +1839,31 @@ let bedtimeTopic1 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTi
 var bedtimeTipArray2 = [ bedtimeTip9,  bedtimeTip10,  bedtimeTip11,  bedtimeTip12]
 let bedtimeTopic2 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray2)
 //THU
-var bedtimeTipArray3 = [ bedtimeTip3,  bedtimeTip14,  bedtimeTip15,  bedtimeTip16]
+var bedtimeTipArray3 = [ bedtimeTip13,  bedtimeTip14,  bedtimeTip15,  bedtimeTip16]
 let bedtimeTopic3 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray3)
 //FRI
 var bedtimeTipArray4 = [ bedtimeTip17,  bedtimeTip18,  bedtimeTip19,  bedtimeTip20]
 let bedtimeTopic4 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray4)
 
+//WEEK2
+var bedtimeTipArray5 = [ bedtimeTip21,  bedtimeTip22,  bedtimeTip23,  bedtimeTip24]
+let bedtimeTopic5 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray5)
+//TUE
+var bedtimeTipArray6 = [ bedtimeTip25,  bedtimeTip26,  bedtimeTip27,  bedtimeTip28]
+let bedtimeTopic6 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray6)
+//WED
+var bedtimeTipArray7 = [ bedtimeTip29,  bedtimeTip30,  bedtimeTip31,  bedtimeTip32]
+let bedtimeTopic7 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray7)
+//THU
+var bedtimeTipArray8 = [ bedtimeTip33,  bedtimeTip34,  bedtimeTip35,  bedtimeTip36]
+let bedtimeTopic8 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray8)
+//FRI
+var bedtimeFriTipArray1 = [ bedtimeFridayTip1,  bedtimeTip18,  bedtimeTip19,  bedtimeTip20]
+let bedtimeFriTopic1 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeFriTipArray1)
+
 
 // MARK: - Evening Ritual
+let PMRoutine1 = Tip(header: "📝", title: "Journaling (5-10 minutes)", body: "Answer these 2 questions: \n\n3 amazing things that happened today... 1.____ 2.____ 3.____ \n\n How could I have made today better? 1.____ 2.____ 3.____ ", sourceName: "The Tim Ferriss Show", sourceURL: "https://fhww.files.wordpress.com/2018/09/tim-ferriss-5-morning-rituals.pdf", sponsorLogo: "", sponsorURL: "")
 
 
 // MARK: - Can't Sleep
@@ -1801,7 +1876,7 @@ let cantSleepTip3 = Tip(header: "🚿", title: "Taking a warm bath or shower cou
 let cantSleepTip4 = Tip(header: "🌬", title: "The \"4-7-8\" breathing method relaxes you to help you fall asleep", body: "Here are the steps: \n\n1. Place the tip of your tongue behind your upper front teeth. \n\n2. Exhale completely through your mouth and make a whoosh sound. \n\n3. Close your mouth and inhale through your nose while mentally counting to 4. \n\n4. Hold your breath and mentally count to 7. \n\n5. Open your mouth and exhale completely, making a whoosh sound and mentally counting to 8. \n\n6. Repeat this cycle at least 3 more times." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", sponsorLogo: "", sponsorURL: "")
 
 //2
-let cantSleepTip5 = Tip(header: "🎶", title: "Listen to relaxing music promotes sleep", body: "Study: participants who were exposed to soothing music for 45 minutes at bedtime had a more restful and deeper sleep than those who did not listen to music." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section9", sponsorLogo: "", sponsorURL: "")
+let cantSleepTip5 = Tip(header: "🎶", title: "Listening to relaxing music promotes better sleep", body: "Study: participants who were exposed to soothing music for 45 minutes at bedtime had a more restful and deeper sleep than those who did not listen to music." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section9", sponsorLogo: "", sponsorURL: "")
 let cantSleepTip6 = Tip(header: "📓", title: "Journaling and focusing on positive thoughts can calm the mind and help you sleep better", body: "A study of college students found that journaling resulted in reduced bedtime worry and stress, increased sleep time and improved sleep quality. Writing down the positive events that happened during the day can create a state of gratitude and happiness, downgrade stressful events and promote more relaxation at bedtime." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section13", sponsorLogo: "", sponsorURL: "")
 let cantSleepTip7 = Tip(header: "🧘‍♀️", title: "Practice yoga, meditation and mindfulness", body: "When people are stressed, they tend to have difficulty falling asleep. Yoga, meditation and mindfulness are tools to calm the mind and relax the body. Moreover, they have been shown to improve sleep. \n\nYoga encourages the practice of breathing patterns and body movements that release stress and tension accumulated in your body. \n\nMeditation can enhance melatonin levels and assist the brain in achieving a specific state where sleep is easily achieved. \n\nMindfulness may help you maintain focus on the present and worry less while falling asleep." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", sponsorLogo: "", sponsorURL: "")
 let cantSleepTip8 = Tip(header: "😳", title: "If you’ve had trouble sleeping for 3+ nights a week, for 3+ months, you officially suffer from insomnia", body: "At this point, your insomnia may be a behavioral pattern (for example, your nighttime routines do not cue your body for sleep, or your sleep schedule is out of sync with your biological clock), or it could be linked to another medical or psychiatric issue that needs to be addressed. Talk to your doctor about treatment." , sourceName: "National Sleep Foundation", sourceURL: "https://www.sleepfoundation.org/insomnia/sleep-disorders-problems/insomnia/symptoms", sponsorLogo: "", sponsorURL: "")
@@ -1947,7 +2022,11 @@ let parenting6 = Tip(header: "🤝", title: "Teens who exhibited prosocial behav
 let parenting7 = Tip(header: "👩‍🍳", title: "Teaching your kids to cook strongly predicts their future nutritional well-being", body: "Study: Adolescents' confidence in cooking ability led to fewer fast food meals, more meals as a family, and more frequent preparation of meals with vegetables in adulthood, according to a new study." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2018/04/180417181125.htm", sponsorLogo: "", sponsorURL: "")//Night or weekend
 
 // Partening: Toddlers
-let parentingToddlers1 = Tip(header: "👶", title: "Excessive screen time linked to preschool learning delays / Reducing screentime with toddlers helps them improve their developmental skills", body: "A study found that preschool kids who get too much screen time, on video games, internet-connected devices, television screens, and other digital mediums are among those showing delays and deficits in learning by the time they enter school at the age of five.  The Canadian Pediatrics Society recommends that children aged 2-5 spend no more than one hour per day with high-quality programming, geared towards learning and development. \n\nThe study also showed an association between excessive screen time and negative physical, behavioral and cognitive outcomes for the children tested. Children who had excessive screen time were failing to meet developmental milestones in language and communication, problem-solving, and fine and gross motor skills. When a child's days are consumed with screen time, they aren’t getting enough physical activity, which means they aren’t developing the motor skills they need to run, ride a bike, or throw a ball. \n\nFurthermore, a lot of the positive stimulation that helps kids with their physical and cognitive development comes from interactions with caregivers. But, when kids are in front of their screens, these important parent-child interactions aren’t happening, and this can delay or derail children’s development. \n\nCreate a family media plan. This involves controlling the number of hours spent in front of screens but it can also include establishing device-free zones (such as the dinner table) and baskets where everybody puts their devices at certain points of the day, to make room for family connection. " , sourceName: "University of Calgary", sourceURL: "https://ucalgary.ca/utoday/issue/2019-01-28/excessive-screen-time-linked-preschool-learning-delays", sponsorLogo: "", sponsorURL: "")
+let parentingToddlers1 = Tip(header: "👶", title: "Excessive screen time linked to preschool learning delays / Reducing screentime with toddlers helps them improve their developmental skills", body: "A study found that preschool kids who get too much screen time, on video games, internet-connected devices, television screens, and other digital mediums are among those showing delays and deficits in learning by the time they enter school at the age of five.  The Canadian Pediatrics Society recommends that children aged 2-5 spend no more than one hour per day with high-quality programming, geared towards learning and development. \n\nThe study also showed an association between excessive screen time and negative physical, behavioral and cognitive outcomes for the children tested. Children who had excessive screen time were failing to meet developmental milestones in language and communication, problem-solving, and fine and gross motor skills. When a child's days are consumed with screen time, they aren’t getting enough physical activity, which means they aren’t developing the motor skills they need to run, ride a bike, or throw a ball. \n\nFurthermore, a lot of the positive stimulation that helps kids with their physical and cognitive development comes from interactions with caregivers. But, when kids are in front of their screens, these important parent-child interactions aren’t happening, and this can delay or derail children’s development. \n\nCreate a family media plan. This involves controlling the number of hours spent in front of screens but it can also include establishing device-free zones (such as the dinner table) and baskets where everybody puts their devices at certain points of the day, to make room for family connection." , sourceName: "University of Calgary", sourceURL: "https://ucalgary.ca/utoday/issue/2019-01-28/excessive-screen-time-linked-preschool-learning-delays", sponsorLogo: "", sponsorURL: "")
+
+let parentingInfantsHome1 = Tip(header: "🌊", title: "For children under age 5, drowning is a leading cause of accidental death", body: "Children under age one most often drown in bathtubs, buckets, and toilets. Always be within arm's reach because a child can drown in as little as 2 inches of water, and it happens quickly and silently. Keep the toilet lid down, and keep young children out of the bathroom when unsupervised." , sourceName: "Today", sourceURL: "https://www.today.com/health/tub-drownings-can-happen-minutes-when-it-safe-leave-child-t65606", sponsorLogo: "", sponsorURL: "")
+
+let parentingToddlers2 = Tip(header: "🌊", title: "For children under age 5, drowning is a leading cause of accidental death", body: "Swimming pools were the most common places where children under 5 drowned. Ways to prevent drowning include taking basic swimming lessons, isolating pools with fences, supervising children, wearing lifejackets while boating, and learning cardiopulmonary resuscitation (CPR)" , sourceName: "Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/healthcommunication/toolstemplates/entertainmented/tips/Drowning.html", sponsorLogo: "", sponsorURL: "")
 
 // Parenting: High Income Children
 
@@ -2069,12 +2148,17 @@ let travelTip6 = Tip(header: "📸", title: "Under some conditions taking a phot
 
 let travelTip7 = Tip(header: "😀", title: "Destinations that are compatable with your personality and also fascinate or inspire you are best for your mental health", body: "The destination should have enough variation of interest and activities for you to be engaged with. Travel to a place that makes you feel at ease so you don't waste energy on feeling anxious. Also, a place that lets you disconnect from everyday life (e.g. technoloogy) or is physically different from where you live will likely make you feel more rejuvenated when you return.", sourceName: "Travel + Leisure", sourceURL: "https://www.travelandleisure.com/travel-news/beach-vacation-not-good-for-mental-health-study", sponsorLogo: "", sponsorURL: "")
 
+//
+
+
 var travelTipArray0 = [travelTip0, travelTip1, travelTip2, travelTip3]
 let travelTopic0 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray0)
 
 var travelTipArray1 = [travelTip4, travelTip5, travelTip6, travelTip7]
 let travelTopic1 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray1)
 
+//MARK: - AIRPORT
+let airportTip1 = Tip(header: "", title: "Healthy skin while flying: Bring a moisturizer with SPF on the plane (look for a 3-ounce tube or smaller), avoid alcohol and salty foods, and drink lots of water during the flight, and if you're sitting next to the window, pull the shade down", body: "When you're flying, your skin has to contend with dehydration from the plane's dry air and sun damage because UV rays penetrate the plane's windows. \n\nThe more frequently you fly, the more UV exposure when you're on an airplane, which may explain why flight attendants have an increased risk of melanoma. ", sourceName: "U.S. News & World Report", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 
 
