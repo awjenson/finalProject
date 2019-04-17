@@ -33,7 +33,7 @@ class NowViewController: UIViewController {
 
     @IBOutlet weak var clearView: UIView!
 
-    @IBOutlet weak var greetingLabel: UILabel!
+//    @IBOutlet weak var greetingLabel: UILabel!
 
     @IBOutlet weak var profileIconButton: UIButton!
     @IBOutlet weak var buttonView: UIView!
@@ -211,29 +211,29 @@ class NowViewController: UIViewController {
         let weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
         //greeting
-        switch hour {
-        case 0...4:
-            greetingLabel.text = "Your Nighttime Tips"
-        case 5...8:
-            greetingLabel.text = "Your Early Morning Tips"
-        case 9...10:
-            greetingLabel.text = "Your Midmorning Tips"
-        case 11...13:
-            greetingLabel.text = "Your Midday Tips"
-        case 14...16:
-            greetingLabel.text = "Your Afternoon Tips"
-        case 17...19:
-            greetingLabel.text = "Your Early Evening Tips"
-        case 20...21:
-            greetingLabel.text = "Your Late Evening Tips"
-        case 22...23:
-            greetingLabel.text = "Your Nighttime Tips"
-        default:
-            greetingLabel.text = "Your Tips"
-        }
+//        switch hour {
+//        case 0...4:
+//            greetingLabel.text = "Your Nighttime Tips"
+//        case 5...8:
+//            greetingLabel.text = "Your Early Morning Tips"
+//        case 9...10:
+//            greetingLabel.text = "Your Midmorning Tips"
+//        case 11...13:
+//            greetingLabel.text = "Your Midday Tips"
+//        case 14...16:
+//            greetingLabel.text = "Your Afternoon Tips"
+//        case 17...19:
+//            greetingLabel.text = "Your Early Evening Tips"
+//        case 20...21:
+//            greetingLabel.text = "Your Late Evening Tips"
+//        case 22...23:
+//            greetingLabel.text = "Your Nighttime Tips"
+//        default:
+//            greetingLabel.text = "Your Tips"
+//        }
 
         //Display hour for topic title
-//        displayHourInTopicLabel()
+        displayHourInTopicLabel()
 
 
         if week % 2 == 0 {
@@ -425,7 +425,7 @@ class NowViewController: UIViewController {
         case 8...9:
             print("weekdayMTW, mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(getReadyAMTopic0, gymTopic7, runningTopic0, breakfastTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1, weekdayNow5to8Topic0)
+            appendNineTopics(getReadyAMTopic0, gymTopic7, runningTopic0, breakfastTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, weekdayNow5to8Topic0)
 
             setNatureImage(to: "morning2")
             updateQuote(quote: QuoteData.q4)
@@ -433,7 +433,7 @@ class NowViewController: UIViewController {
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1, morningSnackTopic0, breakTopic0, runningTopic0, gymTopic8, weekdayNow9to11Topic0)
+            appendNineTopics(cafeTopic1, commuteAMTopic0, workAMTopic0, morningSnackTopic0, breakTopic0, runningTopic0, gymTopic8, networkingTopic1, weekdayNow9to11Topic0)
 
             setNatureImage(to: "midmorning2")
             updateQuote(quote: QuoteData.q4)
@@ -441,14 +441,14 @@ class NowViewController: UIViewController {
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic1, workAMTopic0, schoolAMTopic1, morningSnackTopic0, breakTopic0, lunchTopic0, gymTopic9, runningTopic0, weekdayNow9to11Topic0)
+            appendNineTopics(cafeTopic1, workAMTopic0, morningSnackTopic0, breakTopic0, lunchTopic0, gymTopic9, runningTopic0, networkingTopic2, weekdayNow9to11Topic0)
 
             setNatureImage(to: "midmorning2")
             updateQuote(quote: QuoteData.q4)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(workAMTopic1, lunchTopic0, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic10, meditationTopic1, schoolPMTopic1, weekdayNow11to14Topic0)
+            appendNineTopics(workAMTopic1, lunchTopic0, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic10, meditationTopic1, networkingTopic2, weekdayNow11to14Topic0)
 
             setNatureImage(to: "day2")
             updateQuote(quote: QuoteData.q5)
@@ -456,7 +456,7 @@ class NowViewController: UIViewController {
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic1, breakTopic0, meditationTopic1, cafePMTopic0, commutePMTopic0, gymTopic0, schoolPMTopic1, weekdayNow14to16Topic0)
+            appendNineTopics(workPMTopic0, afternoonSnackTopic1, breakTopic0, meditationTopic1, cafePMTopic0, commutePMTopic0, gymTopic0, networkingTopic3, weekdayNow14to16Topic0)
 
             setNatureImage(to: "afternoon2")
             updateQuote(quote: QuoteData.q5)
@@ -464,7 +464,7 @@ class NowViewController: UIViewController {
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, gymTopic2, schoolPMTopic1, weekdayNow14to16Topic0)
+            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, gymTopic2, networkingTopic3, weekdayNow14to16Topic0)
 
             setNatureImage(to: "afternoon2")
             updateQuote(quote: QuoteData.q5)
@@ -518,7 +518,7 @@ class NowViewController: UIViewController {
         case 8...9:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(getReadyAMTopic1, breakfastTopic2, gymTopic7, runningTopic1, cafeTopic2, commuteTuesdayAMTopic0, workAMTopic2, schoolAMTopic2, weekdayNow5to8Topic1) //*
+            appendNineTopics(getReadyAMTopic1, breakfastTopic2, gymTopic7, runningTopic1, cafeTopic2, commuteTuesdayAMTopic0, workAMTopic2, networkingTopic4, weekdayNow5to8Topic1) //*
 
             setNatureImage(to: "morning3")
             updateQuote(quote: QuoteData.q7)
@@ -526,7 +526,7 @@ class NowViewController: UIViewController {
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic2, commuteTuesdayAMTopic0, gymTopic8, runningTopic1, morningSnackTopic1, breakTopic1, workAMTopic2, schoolAMTopic2, weekdayNow9to11Topic1)
+            appendNineTopics(cafeTopic2, commuteTuesdayAMTopic0, gymTopic8, runningTopic1, morningSnackTopic1, breakTopic1, workAMTopic2, networkingTopic4, weekdayNow9to11Topic1)
 
             setNatureImage(to: "midmorning3")
             updateQuote(quote: QuoteData.q7)
@@ -534,13 +534,13 @@ class NowViewController: UIViewController {
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic2, workAMTopic2, morningSnackTopic1, breakTopic1, lunchTopic1, meditationTopic0, gymTopic9, schoolAMTopic2, weekdayNow9to11Topic1)
+            appendNineTopics(cafeTopic2, workAMTopic2, morningSnackTopic1, breakTopic1, lunchTopic1, meditationTopic0, gymTopic9, networkingTopic1, weekdayNow9to11Topic1)
 
             setNatureImage(to: "day3")
             updateQuote(quote: QuoteData.q8)
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, cafePMTopic0, gymTopic10, meditationTopic0, schoolAMTopic2, tuesdayNow11to14Topic0) // Tues specific tips
+            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, cafePMTopic0, gymTopic10, meditationTopic0, networkingTopic1, tuesdayNow11to14Topic0) // Tues specific tips
 
             setNatureImage(to: "day3")
             updateQuote(quote: QuoteData.q8)
@@ -548,14 +548,14 @@ class NowViewController: UIViewController {
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic1, afternoonSnackTopic1, breakPMTopic0, meditationTopic0, cafePMTopic1, commutePMTopic1, gymTopic0, schoolPMTopic2, weekdayNow14to16Topic1)
+            appendNineTopics(workPMTopic1, afternoonSnackTopic1, breakPMTopic0, meditationTopic0, cafePMTopic1, commutePMTopic1, gymTopic0, networkingTopic2, weekdayNow14to16Topic1)
 
             setNatureImage(to: "afternoon3")
             updateQuote(quote: QuoteData.q8)
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic1, afternoonSnackTopic2, breakPMTopic0, commutePMTopic1, groceryStoreTopic3, happyHourTopic0, gymTopic1, schoolAMTopic1, weekdayNow14to16Topic1)
+            appendNineTopics(workPMTopic1, afternoonSnackTopic2, breakPMTopic0, commutePMTopic1, groceryStoreTopic3, happyHourTopic0, gymTopic1, networkingTopic2, weekdayNow14to16Topic1)
 
             setNatureImage(to: "afternoon3")
             updateQuote(quote: QuoteData.q8)
@@ -606,41 +606,41 @@ class NowViewController: UIViewController {
 
         case 8...9:
             print("weekdayMTW, Mid Morning")
-            appendNineTopics(getReadyAMTopic2, breakfastTopic0, meditationTopic1, gymTopic7, cafeTopic3, commuteAMTopic2, workAMTopic4, schoolAMTopic3, weekdayNow5to8Topic2)
+            appendNineTopics(getReadyAMTopic2, breakfastTopic0, meditationTopic1, gymTopic7, cafeTopic3, commuteAMTopic2, workAMTopic4, networkingTopic3, weekdayNow5to8Topic2)
 
             setNatureImage(to: "morning4")
             updateQuote(quote: QuoteData.q10)
 
         case 10:
             print("weekdayMTW, Late Morning")
-            appendNineTopics(cafeTopic3, commuteAMTopic2, gymTopic8, runningTopic1, breakTopic0, morningSnackTopic0, workAMTopic4, schoolAMTopic3, weekdayNow9to11Topic2)
+            appendNineTopics(cafeTopic3, commuteAMTopic2, gymTopic8, runningTopic1, breakTopic0, morningSnackTopic0, workAMTopic4, networkingTopic3, weekdayNow9to11Topic2)
 
             setNatureImage(to: "midmorning4")
             updateQuote(quote: QuoteData.q10)
 
         case 11:
-            appendNineTopics(cafeTopic3, workAMTopic2, morningSnackTopic0, breakTopic0, lunchTopic1, meditationTopic1, gymTopic9, schoolAMTopic2, weekdayNow9to11Topic1)
+            appendNineTopics(cafeTopic3, workAMTopic2, morningSnackTopic0, breakTopic0, lunchTopic1, meditationTopic1, gymTopic9, networkingTopic3, weekdayNow9to11Topic1)
 
             setNatureImage(to: "day4")
             updateQuote(quote: QuoteData.q11)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(workAMTopic5, lunchTopic2, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic10, meditationTopic1, schoolAMTopic3, weekdayNow11to14Topic1)
+            appendNineTopics(workAMTopic5, lunchTopic2, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic10, meditationTopic1, networkingTopic4, weekdayNow11to14Topic1)
 
             setNatureImage(to: "day4")
             updateQuote(quote: QuoteData.q11)
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic4, afternoonSnackTopic1, breakTopic0, cafePMTopic0, meditationTopic1, commutePMTopic2, gymTopic2, schoolPMTopic3, weekdayNow14to16Topic2)
+            appendNineTopics(workPMTopic4, afternoonSnackTopic1, breakTopic0, cafePMTopic0, meditationTopic1, commutePMTopic2, gymTopic2, networkingTopic4, weekdayNow14to16Topic2)
 
             setNatureImage(to: "afternoon4")
             updateQuote(quote: QuoteData.q11)
 
         case 16:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic5, afternoonSnackTopic2, breakTopic0, commutePMTopic2, happyHourTopic0, groceryStoreTopicWDAY, gymTopic3, schoolPMTopic3, weekdayNow14to16Topic2)
+            appendNineTopics(workPMTopic5, afternoonSnackTopic2, breakTopic0, commutePMTopic2, happyHourTopic0, groceryStoreTopicWDAY, gymTopic3, networkingTopic4, weekdayNow14to16Topic2)
 
             setNatureImage(to: "afternoon4")
             updateQuote(quote: QuoteData.q11)
@@ -690,28 +690,28 @@ class NowViewController: UIViewController {
             updateQuote(quote: QuoteData.q13)
 
         case 8...9:
-            appendNineTopics(getReadyAMTopic0, breakfastTopic0, meditationTopic0, gymTopic7, cafeTopic0, commuteAMTopic3, workAMTopic3, schoolAMTopic3, weekdayNow5to8Topic2)
+            appendNineTopics(getReadyAMTopic0, breakfastTopic0, meditationTopic0, gymTopic7, cafeTopic0, commuteAMTopic3, workAMTopic3, networkingTopic1, weekdayNow5to8Topic2)
 
             setNatureImage(to: "morning5")
             updateQuote(quote: QuoteData.q13)
 
         case 10:
             print("weekdayTF, Late Morning")
-            appendNineTopics(cafeTopic0, commuteAMTopic0, gymTopic8, runningTopic1, breakTopic1, morningSnackTopic1, workAMTopic3, schoolAMTopic1, weekdayNow9to11Topic3)
+            appendNineTopics(cafeTopic0, commuteAMTopic0, gymTopic8, runningTopic1, breakTopic1, morningSnackTopic1, workAMTopic3, networkingTopic1, weekdayNow9to11Topic3)
 
             setNatureImage(to: "midmorning5")
             updateQuote(quote: QuoteData.q13)
 
         case 11:
             print("weekdayTF, Late Morning")
-            appendNineTopics(cafeTopic0, workAMTopic3, morningSnackTopic1, breakTopic1, meditationTopic0, gymTopic9, lunchTopic0, schoolAMTopic1, weekdayNow9to11Topic3)
+            appendNineTopics(cafeTopic0, workAMTopic3, morningSnackTopic1, breakTopic1, meditationTopic0, gymTopic9, lunchTopic0, networkingTopic1, weekdayNow9to11Topic3)
 
             setNatureImage(to: "midmorning5")
             updateQuote(quote: QuoteData.q13)
 
         case 12...13:
             print("weekdayTF, Midday")
-            appendNineTopics(workAMTopic1, lunchTopic1, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic10, meditationTopic0, schoolPMTopic1, weekdayNow11to14Topic2)
+            appendNineTopics(workAMTopic1, lunchTopic1, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic10, meditationTopic0, networkingTopic2, weekdayNow11to14Topic2)
 
             setNatureImage(to: "day5")
             updateQuote(quote: QuoteData.q14)
@@ -719,14 +719,14 @@ class NowViewController: UIViewController {
         case 14...15: // 2PM-4PM
             print("weekdayTF, Afternoon")
 
-            appendNineTopics(workPMTopic3, afternoonSnackTopic1, breakPMTopic0, meditationTopic0, cafePMTopic1, gymTopic0, commutePMTopic3, schoolPMTopic1, weekdayNow14to16Topic3)
+            appendNineTopics(workPMTopic3, afternoonSnackTopic1, breakPMTopic0, meditationTopic0, cafePMTopic1, gymTopic0, commutePMTopic3, networkingTopic2, weekdayNow14to16Topic3)
 
             setNatureImage(to: "afternoon5")
             updateQuote(quote: QuoteData.q15)
 
         case 16:
             print("weekdayTF, Afternoon")
-            appendNineTopics(workPMTopic3, afternoonSnackTopic2, breakPMTopic0, commutePMTopic3, happyHourTopic0, gymTopic1, cafePMTopic1, schoolPMTopic3, weekdayNow14to16Topic3)
+            appendNineTopics(workPMTopic3, afternoonSnackTopic2, breakPMTopic0, commutePMTopic3, happyHourTopic0, gymTopic1, cafePMTopic1, networkingTopic2, weekdayNow14to16Topic3)
 
             setNatureImage(to: "afternoon5")
             updateQuote(quote: QuoteData.q15)
@@ -779,42 +779,42 @@ class NowViewController: UIViewController {
 
         case 8...9:
             print("weekday Fri, Late Morning")
-            appendNineTopics(getReadyAMTopic1, breakfastTopic2, meditationTopic1, commuteAMTopic4, workAMTopic0, cafeTopic1, gymTopic7, schoolAMTopic2, weekdayNow9to11Topic4)
+            appendNineTopics(getReadyAMTopic1, breakfastTopic2, meditationTopic1, commuteAMTopic4, workAMTopic0, cafeTopic1, gymTopic7, networkingTopic3, weekdayNow9to11Topic4)
 
             setNatureImage(to: "midmorning6")
             updateQuote(quote: QuoteData.q17)
 
         case 10:
             print("weekday Fri, Late Morning")
-            appendNineTopics(commuteAMTopic4, cafeTopic1, gymTopic8, runningTopic0, workAMTopic2, breakTopic1, morningSnackTopic0, schoolAMTopic2, weekdayNow9to11Topic4)
+            appendNineTopics(commuteAMTopic4, cafeTopic1, gymTopic8, runningTopic0, workAMTopic2, breakTopic1, morningSnackTopic0, networkingTopic3, weekdayNow9to11Topic4)
 
             setNatureImage(to: "midmorning6")
             updateQuote(quote: QuoteData.q17)
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(workAMTopic3, morningSnackTopic0, breakTopic1, lunchTopic1, meditationTopic0, gymTopic9, cafeTopic1, schoolPMTopic2, weekdayNow11to14Topic3)
+            appendNineTopics(workAMTopic3, morningSnackTopic0, breakTopic1, lunchTopic1, meditationTopic0, gymTopic9, cafeTopic1, networkingTopic3, weekdayNow11to14Topic3)
 
             setNatureImage(to: "day6")
             updateQuote(quote: QuoteData.q18)
 
         case 12...13:
             print("weekday Fri, Midday")
-            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, meditationTopic0, cafePMTopic1, gymTopic10, schoolPMTopic2, weekdayNow11to14Topic3)
+            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, meditationTopic0, cafePMTopic1, gymTopic10, networkingTopic4, weekdayNow11to14Topic3)
 
             setNatureImage(to: "day6")
             updateQuote(quote: QuoteData.q18)
 
         case 14...15:
             print("weekday Fri, Afternoon")
-            appendNineTopics(workPMTopic2, afternoonSnackTopic1, breakTopic1, meditationTopic1, cafePMTopic0, gymTopic2, commuteFridayPMTopic0, schoolPMTopic2, weekdayNow14to16Topic4)
+            appendNineTopics(workPMTopic2, afternoonSnackTopic1, breakTopic1, meditationTopic1, cafePMTopic0, gymTopic2, commuteFridayPMTopic0, networkingTopic4, weekdayNow14to16Topic4)
 
             setNatureImage(to: "afternoon6")
             updateQuote(quote: QuoteData.q18)
 
         case 16:
             print("weekday Fri, Afternoon")
-            appendNineTopics(workPMTopic2, afternoonSnackTopic2, breakTopic1, commuteFridayPMTopic0, happyHourTopic0, gymTopic3, cafePMTopic0, schoolPMTopic2, weekdayNow14to16Topic4)
+            appendNineTopics(workPMTopic2, afternoonSnackTopic2, breakTopic1, commuteFridayPMTopic0, happyHourTopic0, gymTopic3, cafePMTopic0, networkingTopic4, weekdayNow14to16Topic4)
 
             setNatureImage(to: "afternoon6")
             updateQuote(quote: QuoteData.q18)
@@ -1047,7 +1047,7 @@ class NowViewController: UIViewController {
         case 8...9:
             print("weekdayMTW, mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(getReadyAMTopic0, gymTopic7, runningTopic0, breakfastTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1, weekdayNow5to8Topic8)
+            appendNineTopics(getReadyAMTopic0, gymTopic7, runningTopic0, breakfastTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, weekdayNow5to8Topic8)
 
             setNatureImage(to: "morning2")
             updateQuote(quote: QuoteData.q4)
@@ -1055,7 +1055,7 @@ class NowViewController: UIViewController {
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1, morningSnackTopic1, breakTopic0, runningTopic0, gymTopic8, weekdayNow9to11Topic5)
+            appendNineTopics(cafeTopic1, commuteAMTopic0, workAMTopic0, morningSnackTopic1, breakTopic0, runningTopic0, gymTopic8, networkingTopic1, weekdayNow9to11Topic5)
 
             setNatureImage(to: "midmorning2")
             updateQuote(quote: QuoteData.q4)
@@ -1063,14 +1063,14 @@ class NowViewController: UIViewController {
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic1, workAMTopic0, schoolAMTopic1, morningSnackTopic1, breakTopic0, lunchTopic0, gymTopic0, runningTopic0, weekdayNow9to11Topic5)
+            appendNineTopics(cafeTopic1, workAMTopic0, morningSnackTopic1, breakTopic0, lunchTopic0, gymTopic0, runningTopic0, networkingTopic1, weekdayNow9to11Topic5)
 
             setNatureImage(to: "midmorning2")
             updateQuote(quote: QuoteData.q4)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(workAMTopic1, lunchTopic0, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic1, meditationTopic0, schoolPMTopic1, weekdayNow11to14Topic4)
+            appendNineTopics(workAMTopic1, lunchTopic0, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic1, meditationTopic0, networkingTopic2, weekdayNow11to14Topic4)
 
             setNatureImage(to: "day2")
             updateQuote(quote: QuoteData.q5)
@@ -1078,7 +1078,7 @@ class NowViewController: UIViewController {
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic1, breakTopic0, meditationTopic0, cafePMTopic0, commutePMTopic0, gymTopic2, schoolPMTopic1, weekdayNow14to16Topic5)
+            appendNineTopics(workPMTopic0, afternoonSnackTopic1, breakTopic0, meditationTopic0, cafePMTopic0, commutePMTopic0, gymTopic2, networkingTopic2, weekdayNow14to16Topic5)
 
             setNatureImage(to: "afternoon2")
             updateQuote(quote: QuoteData.q5)
@@ -1086,7 +1086,7 @@ class NowViewController: UIViewController {
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, gymTopic3, schoolPMTopic1, weekdayNow14to16Topic5)
+            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakTopic0, commutePMTopic0, groceryStoreTopicWDAY, happyHourTopic0, gymTopic3, networkingTopic2, weekdayNow14to16Topic5)
 
             setNatureImage(to: "afternoon2")
             updateQuote(quote: QuoteData.q5)
@@ -1140,7 +1140,7 @@ class NowViewController: UIViewController {
         case 8...9:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(getReadyAMTopic1, breakfastTopic2, gymTopic7, runningTopic1, cafeTopic2, commuteTuesdayAMTopic0, workAMTopic2, schoolAMTopic2, weekdayNow5to8Topic6) //*
+            appendNineTopics(getReadyAMTopic1, breakfastTopic2, gymTopic7, runningTopic1, cafeTopic2, commuteTuesdayAMTopic0, workAMTopic2, networkingTopic3, weekdayNow5to8Topic6) //*
 
             setNatureImage(to: "morning3")
             updateQuote(quote: QuoteData.q7)
@@ -1148,7 +1148,7 @@ class NowViewController: UIViewController {
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic2, commuteTuesdayAMTopic0, gymTopic8, runningTopic1, morningSnackTopic0, breakTopic1, workAMTopic2, schoolAMTopic2, weekdayNow9to11Topic6)
+            appendNineTopics(cafeTopic2, commuteTuesdayAMTopic0, gymTopic8, runningTopic1, morningSnackTopic0, breakTopic1, workAMTopic2, networkingTopic3, weekdayNow9to11Topic6)
 
             setNatureImage(to: "midmorning3")
             updateQuote(quote: QuoteData.q7)
@@ -1156,13 +1156,13 @@ class NowViewController: UIViewController {
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(cafeTopic2, workAMTopic2, morningSnackTopic0, breakTopic1, lunchTopic1, meditationTopic1, gymTopic0, schoolAMTopic2, weekdayNow9to11Topic6)
+            appendNineTopics(cafeTopic2, workAMTopic2, morningSnackTopic0, breakTopic1, lunchTopic1, meditationTopic1, gymTopic0, networkingTopic3, weekdayNow9to11Topic6)
 
             setNatureImage(to: "day3")
             updateQuote(quote: QuoteData.q8)
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, cafePMTopic0, gymTopic1, meditationTopic1, schoolAMTopic2, tuesdayNow11to14Topic0) // Tues specific tips
+            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, cafePMTopic0, gymTopic1, meditationTopic1, networkingTopic4, tuesdayNow11to14Topic0) // Tues specific tips
 
             setNatureImage(to: "day3")
             updateQuote(quote: QuoteData.q8)
@@ -1170,14 +1170,14 @@ class NowViewController: UIViewController {
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic1, afternoonSnackTopic1, breakPMTopic0, meditationTopic1, cafePMTopic1, commutePMTopic1, gymTopic2, schoolPMTopic2, weekdayNow14to16Topic6)
+            appendNineTopics(workPMTopic1, afternoonSnackTopic1, breakPMTopic0, meditationTopic1, cafePMTopic1, commutePMTopic1, gymTopic2, networkingTopic4, weekdayNow14to16Topic6)
 
             setNatureImage(to: "afternoon3")
             updateQuote(quote: QuoteData.q8)
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic1, afternoonSnackTopic2, breakPMTopic0, commutePMTopic1, groceryStoreTopic3, happyHourTopic0, gymTopic3, schoolAMTopic1, weekdayNow14to16Topic6)
+            appendNineTopics(workPMTopic1, afternoonSnackTopic2, breakPMTopic0, commutePMTopic1, groceryStoreTopic3, happyHourTopic0, gymTopic3, networkingTopic4, weekdayNow14to16Topic6)
 
             setNatureImage(to: "afternoon3")
             updateQuote(quote: QuoteData.q8)
@@ -1228,41 +1228,41 @@ class NowViewController: UIViewController {
 
         case 8...9:
             print("weekdayMTW, Mid Morning")
-            appendNineTopics(getReadyAMTopic2, breakfastTopic0, meditationTopic0, gymTopic7, cafeTopic3, commuteAMTopic2, workAMTopic4, schoolAMTopic3, weekdayNow5to8Topic7)
+            appendNineTopics(getReadyAMTopic2, breakfastTopic0, meditationTopic0, gymTopic7, cafeTopic3, commuteAMTopic2, workAMTopic4, networkingTopic1, weekdayNow5to8Topic7)
 
             setNatureImage(to: "morning4")
             updateQuote(quote: QuoteData.q10)
 
         case 10:
             print("weekdayMTW, Late Morning")
-            appendNineTopics(cafeTopic3, commuteAMTopic2, gymTopic8, runningTopic1, breakTopic0, morningSnackTopic1, workAMTopic4, schoolAMTopic3, weekdayNow9to11Topic7)
+            appendNineTopics(cafeTopic3, commuteAMTopic2, gymTopic8, runningTopic1, breakTopic0, morningSnackTopic1, workAMTopic4, networkingTopic1, weekdayNow9to11Topic7)
 
             setNatureImage(to: "midmorning4")
             updateQuote(quote: QuoteData.q10)
 
         case 11:
-            appendNineTopics(cafeTopic3, workAMTopic2, morningSnackTopic1, breakTopic0, lunchTopic1, meditationTopic0, gymTopic0, schoolAMTopic2, weekdayNow9to11Topic7)
+            appendNineTopics(cafeTopic3, workAMTopic2, morningSnackTopic1, breakTopic0, lunchTopic1, meditationTopic0, gymTopic0, networkingTopic1, weekdayNow9to11Topic7)
 
             setNatureImage(to: "day4")
             updateQuote(quote: QuoteData.q11)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(workAMTopic5, lunchTopic2, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic1, meditationTopic0, schoolAMTopic3, weekdayNow11to14Topic1)
+            appendNineTopics(workAMTopic5, lunchTopic2, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic1, meditationTopic0, networkingTopic2, weekdayNow11to14Topic1)
 
             setNatureImage(to: "day4")
             updateQuote(quote: QuoteData.q11)
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic4, afternoonSnackTopic1, breakTopic0, cafePMTopic0, meditationTopic0, commutePMTopic2, gymTopic2, schoolPMTopic3, weekdayNow14to16Topic7)
+            appendNineTopics(workPMTopic4, afternoonSnackTopic1, breakTopic0, cafePMTopic0, meditationTopic0, commutePMTopic2, gymTopic2, networkingTopic2, weekdayNow14to16Topic7)
 
             setNatureImage(to: "afternoon4")
             updateQuote(quote: QuoteData.q11)
 
         case 16:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic5, afternoonSnackTopic2, breakTopic0, commutePMTopic2, happyHourTopic0, groceryStoreTopicWDAY, gymTopic3, schoolPMTopic3, weekdayNow14to16Topic7)
+            appendNineTopics(workPMTopic5, afternoonSnackTopic2, breakTopic0, commutePMTopic2, happyHourTopic0, groceryStoreTopicWDAY, gymTopic3, networkingTopic1, weekdayNow14to16Topic7)
 
             setNatureImage(to: "afternoon4")
             updateQuote(quote: QuoteData.q11)
@@ -1312,28 +1312,28 @@ class NowViewController: UIViewController {
             updateQuote(quote: QuoteData.q13)
 
         case 8...9:
-            appendNineTopics(getReadyAMTopic0, breakfastTopic0, meditationTopic1, gymTopic7, cafeTopic0, commuteAMTopic3, workAMTopic3, schoolAMTopic3, weekdayNow5to8Topic8)
+            appendNineTopics(getReadyAMTopic0, breakfastTopic0, meditationTopic1, gymTopic7, cafeTopic0, commuteAMTopic3, workAMTopic3, networkingTopic3, weekdayNow5to8Topic8)
 
             setNatureImage(to: "morning5")
             updateQuote(quote: QuoteData.q13)
 
         case 10:
             print("weekdayTF, Late Morning")
-            appendNineTopics(cafeTopic0, commuteAMTopic0, gymTopic8, runningTopic1, breakTopic1, morningSnackTopic0, workAMTopic3, schoolAMTopic1, weekdayNow9to11Topic8)
+            appendNineTopics(cafeTopic0, commuteAMTopic0, gymTopic8, runningTopic1, breakTopic1, morningSnackTopic0, workAMTopic3, networkingTopic3, weekdayNow9to11Topic8)
 
             setNatureImage(to: "midmorning5")
             updateQuote(quote: QuoteData.q13)
 
         case 11:
             print("weekdayTF, Late Morning")
-            appendNineTopics(cafeTopic0, workAMTopic3, morningSnackTopic0, breakTopic1, meditationTopic1, gymTopic0, lunchTopic0, schoolAMTopic1, weekdayNow9to11Topic8)
+            appendNineTopics(cafeTopic0, workAMTopic3, morningSnackTopic0, breakTopic1, meditationTopic1, gymTopic0, lunchTopic0, networkingTopic3, weekdayNow9to11Topic8)
 
             setNatureImage(to: "midmorning5")
             updateQuote(quote: QuoteData.q13)
 
         case 12...13:
             print("weekdayTF, Midday")
-            appendNineTopics(workAMTopic1, lunchTopic1, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic1, meditationTopic1, schoolPMTopic1, weekdayNow11to14Topic2)
+            appendNineTopics(workAMTopic1, lunchTopic1, afternoonSnackTopic0, breakTopic0, cafePMTopic1, gymTopic1, meditationTopic1, networkingTopic4, weekdayNow11to14Topic2)
 
             setNatureImage(to: "day5")
             updateQuote(quote: QuoteData.q14)
@@ -1341,14 +1341,14 @@ class NowViewController: UIViewController {
         case 14...15: // 2PM-4PM
             print("weekdayTF, Afternoon")
 
-            appendNineTopics(workPMTopic3, afternoonSnackTopic1, breakPMTopic0, meditationTopic1, cafePMTopic1, gymTopic2, commutePMTopic3, schoolPMTopic1, weekdayNow14to16Topic8)
+            appendNineTopics(workPMTopic3, afternoonSnackTopic1, breakPMTopic0, meditationTopic1, cafePMTopic1, gymTopic2, commutePMTopic3, networkingTopic4, weekdayNow14to16Topic8)
 
             setNatureImage(to: "afternoon5")
             updateQuote(quote: QuoteData.q15)
 
         case 16:
             print("weekdayTF, Afternoon")
-            appendNineTopics(workPMTopic3, afternoonSnackTopic2, breakPMTopic0, commutePMTopic3, happyHourTopic0, gymTopic3, cafePMTopic1, schoolPMTopic3, weekdayNow14to16Topic8)
+            appendNineTopics(workPMTopic3, afternoonSnackTopic2, breakPMTopic0, commutePMTopic3, happyHourTopic0, gymTopic3, cafePMTopic1, networkingTopic4, weekdayNow14to16Topic8)
 
             setNatureImage(to: "afternoon5")
             updateQuote(quote: QuoteData.q15)
@@ -1401,42 +1401,42 @@ class NowViewController: UIViewController {
 
         case 8...9:
             print("weekday Fri, Late Morning")
-            appendNineTopics(getReadyAMTopic1, breakfastTopic2, meditationTopic0, commuteAMTopic4, workAMTopic0, cafeTopic1, gymTopic7, schoolAMTopic2, weekdayNow5to8Topic9)
+            appendNineTopics(getReadyAMTopic1, breakfastTopic2, meditationTopic0, commuteAMTopic4, workAMTopic0, cafeTopic1, gymTopic7, networkingTopic1, weekdayNow5to8Topic9)
 
             setNatureImage(to: "midmorning6")
             updateQuote(quote: QuoteData.q17)
 
         case 10:
             print("weekday Fri, Late Morning")
-            appendNineTopics(commuteAMTopic4, cafeTopic1, gymTopic8, runningTopic0, workAMTopic2, breakTopic1, morningSnackTopic1, schoolAMTopic2, weekdayNow9to11Topic9)
+            appendNineTopics(commuteAMTopic4, cafeTopic1, gymTopic8, runningTopic0, workAMTopic2, breakTopic1, morningSnackTopic1, networkingTopic1, weekdayNow9to11Topic9)
 
             setNatureImage(to: "midmorning6")
             updateQuote(quote: QuoteData.q17)
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(workAMTopic3, morningSnackTopic1, breakTopic1, lunchTopic1, meditationTopic0, gymTopic0, cafeTopic1, schoolPMTopic2, weekdayNow9to11Topic9)
+            appendNineTopics(workAMTopic3, morningSnackTopic1, breakTopic1, lunchTopic1, meditationTopic0, gymTopic0, cafeTopic1, networkingTopic1, weekdayNow9to11Topic9)
 
             setNatureImage(to: "day6")
             updateQuote(quote: QuoteData.q18)
 
         case 12...13:
             print("weekday Fri, Midday")
-            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, meditationTopic0, cafePMTopic1, gymTopic1, schoolPMTopic2, weekdayNow11to14Topic3)
+            appendNineTopics(workAMTopic3, lunchTopic1, afternoonSnackTopic0, breakTopic1, meditationTopic0, cafePMTopic1, gymTopic1, networkingTopic2, weekdayNow11to14Topic3)
 
             setNatureImage(to: "day6")
             updateQuote(quote: QuoteData.q18)
 
         case 14...15:
             print("weekday Fri, Afternoon")
-            appendNineTopics(workPMTopic2, afternoonSnackTopic1, breakTopic1, meditationTopic0, cafePMTopic0, gymTopic2, commuteFridayPMTopic0, schoolPMTopic2, weekdayNow14to16Topic9)
+            appendNineTopics(workPMTopic2, afternoonSnackTopic1, breakTopic1, meditationTopic0, cafePMTopic0, gymTopic2, commuteFridayPMTopic0, networkingTopic2, weekdayNow14to16Topic9)
 
             setNatureImage(to: "afternoon6")
             updateQuote(quote: QuoteData.q18)
 
         case 16:
             print("weekday Fri, Afternoon")
-            appendNineTopics(workPMTopic2, afternoonSnackTopic2, breakTopic1, commuteFridayPMTopic0, happyHourTopic0, gymTopic3, cafePMTopic0, schoolPMTopic2, weekdayNow14to16Topic9)
+            appendNineTopics(workPMTopic2, afternoonSnackTopic2, breakTopic1, commuteFridayPMTopic0, happyHourTopic0, gymTopic3, cafePMTopic0, networkingTopic2, weekdayNow14to16Topic9)
 
             setNatureImage(to: "afternoon6")
             updateQuote(quote: QuoteData.q18)
@@ -1580,6 +1580,10 @@ class NowViewController: UIViewController {
 
 
 
+
+
+
+
     func setNatureImage(to imageTitle: String) {
         performUIUpdatesOnMain {
 //            self.natureImageView.image = UIImage(named: imageTitle)
@@ -1635,6 +1639,26 @@ class NowViewController: UIViewController {
         self.topic5Button.setTitle(topic5.title, for: .normal)
         self.topic6Button.setTitle(topic6.title, for: .normal)
         self.topic7Button.setTitle(topic7.title, for: .normal)
+
+        // set UIBUttons COLOR
+//        self.topic0Button.layer.borderColor = UIColor.init(hexString: "9A165F", withAlpha: 1)?.cgColor
+//        self.topic1Button.layer.borderColor = UIColor.init(hexString: "5F1078", withAlpha: 1)?.cgColor
+//        self.topic2Button.layer.borderColor = UIColor.init(hexString: "160D46", withAlpha: 1)?.cgColor
+//        self.topic3Button.layer.borderColor = UIColor.init(hexString: "9A165F", withAlpha: 1)?.cgColor
+//        self.topic4Button.layer.borderColor = UIColor.init(hexString: "5F1078", withAlpha: 1)?.cgColor
+//        self.topic5Button.layer.borderColor = UIColor.init(hexString: "160D46", withAlpha: 1)?.cgColor
+//        self.topic6Button.layer.borderColor = UIColor.init(hexString: "9A165F", withAlpha: 1)?.cgColor
+//        self.topic7Button.layer.borderColor = UIColor.init(hexString: "5F1078", withAlpha: 1)?.cgColor
+//
+//        self.topic0Button.setTitleColor(UIColor.init(hexString: "9A165F", withAlpha: 1), for: .normal)
+//        self.topic1Button.setTitleColor(UIColor.init(hexString: "5F1078", withAlpha: 1), for: .normal)
+//        self.topic2Button.setTitleColor(UIColor.init(hexString: "160D46", withAlpha: 1), for: .normal)
+//        self.topic3Button.setTitleColor(UIColor.init(hexString: "9A165F", withAlpha: 1), for: .normal)
+//        self.topic4Button.setTitleColor(UIColor.init(hexString: "5F1078", withAlpha: 1), for: .normal)
+//        self.topic5Button.setTitleColor(UIColor.init(hexString: "160D46", withAlpha: 1), for: .normal)
+//        self.topic6Button.setTitleColor(UIColor.init(hexString: "9A165F", withAlpha: 1), for: .normal)
+//        self.topic7Button.setTitleColor(UIColor.init(hexString: "5F1078", withAlpha: 1), for: .normal)
+
 
         // set 4 'Now' tips to be displayed in initial table view
         appendNowTips()
@@ -1713,7 +1737,7 @@ class NowViewController: UIViewController {
 
         // Identify what button was tapped
 
-        // select button previously tapped
+        // selected button previously tapped
         // Check if this button has been tapped just prior
         if currentIndex == indexNumber {
 
@@ -1724,7 +1748,7 @@ class NowViewController: UIViewController {
                 button.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
                 button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
 
-//                self.displayHourInTopicLabel()
+                self.displayHourInTopicLabel()
             }
 
             currentIndex = -1
@@ -1743,7 +1767,11 @@ class NowViewController: UIViewController {
                 button.setTitleColor(.white, for: .normal)
                 button.backgroundColor = NowConstants.YvonneColor.defaultBlue
 
+                //Display selected Topic Title
+                let originalTitleText = self.topics[indexNumber].title
+                let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
 
+                self.topicLabel.text = "\(replacedText) TIPS"
 
             }
 
@@ -1792,8 +1820,6 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
             selectedColor = UIColor.flatMint()
         case 1:
             UIColor.flatRed()
-        case 1:
-            UIColor.flatLime()
         case 2:
             UIColor.flatPink()
         case 3:
@@ -1828,8 +1854,6 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 
         // configure cell in UITableViewCell file
         cell.configureCell(tip: tip)
-
-       
 
         return cell
     }

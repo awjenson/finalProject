@@ -79,9 +79,9 @@ class NowTableViewCell: UITableViewCell {
 
 
 
-        boarderColorView.layer.borderColor = UIColor.init(hexString: UIColor.lightGray.hexValue(), withAlpha: 0.8)?.cgColor
-
-        boarderColorView.layer.borderWidth = 2
+//        boarderColorView.layer.borderColor = UIColor.init(hexString: UIColor.lightGray.hexValue(), withAlpha: 0.8)?.cgColor
+//
+//        boarderColorView.layer.borderWidth = 2
 
 
 //        boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor

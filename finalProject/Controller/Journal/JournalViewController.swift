@@ -38,24 +38,24 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
 
     // moodButtions OutletCollection only used for flipping UI when buttons tapped
-    @IBOutlet var headerButtons: [RoundedOvalButton]!
+    @IBOutlet var headerButtons: [RoundCorneredButton]!
 
     // Created individual buttons because Outlet Collection did not work
-    @IBOutlet weak var header0Button: RoundedOvalButton!
-    @IBOutlet weak var header1Button: RoundedOvalButton!
-    @IBOutlet weak var header2Button: RoundedOvalButton!
-    @IBOutlet weak var header3Button: RoundedOvalButton!
+    @IBOutlet weak var header0Button: RoundCorneredButton!
+    @IBOutlet weak var header1Button: RoundCorneredButton!
+    @IBOutlet weak var header2Button: RoundCorneredButton!
+    @IBOutlet weak var header3Button: RoundCorneredButton!
     // 2nd row
-    @IBOutlet weak var header4Button: RoundedOvalButton!
-    @IBOutlet weak var header5Button: RoundedOvalButton!
-    @IBOutlet weak var header6Button: RoundedOvalButton!
-    @IBOutlet weak var header7Button: RoundedOvalButton!
+    @IBOutlet weak var header4Button: RoundCorneredButton!
+    @IBOutlet weak var header5Button: RoundCorneredButton!
+    @IBOutlet weak var header6Button: RoundCorneredButton!
+    @IBOutlet weak var header7Button: RoundCorneredButton!
 
     // 3rd row
-    @IBOutlet weak var header8Button: RoundedOvalButton!
-    @IBOutlet weak var header9Button: RoundedOvalButton!
-    @IBOutlet weak var header10Button: RoundedOvalButton!
-    @IBOutlet weak var header11Button: RoundedOvalButton!
+    @IBOutlet weak var header8Button: RoundCorneredButton!
+    @IBOutlet weak var header9Button: RoundCorneredButton!
+    @IBOutlet weak var header10Button: RoundCorneredButton!
+    @IBOutlet weak var header11Button: RoundCorneredButton!
 
 
 
@@ -427,7 +427,7 @@ class JournalViewController: UIViewController {
 //    }
 
 
-    private func resetHeaderButtonOriginalStyle(button: RoundedOvalButton) {
+    private func resetHeaderButtonOriginalStyle(button: RoundCorneredButton) {
 
         performUIUpdatesOnMain {
             // reset to original color display
@@ -466,7 +466,7 @@ class JournalViewController: UIViewController {
 
 
 
-    @IBAction func headerButtonTapped(_ sender: RoundedOvalButton) {
+    @IBAction func headerButtonTapped(_ sender: RoundCorneredButton) {
 
         if let headerNumber = headerButtons.index(of: sender) {
 
@@ -478,7 +478,7 @@ class JournalViewController: UIViewController {
         }
     }
 
-    func flipButton(at indexNumber: Int, on button: RoundedOvalButton) {
+    func flipButton(at indexNumber: Int, on button: RoundCorneredButton) {
 
         // reset buttons to original UI display
         resetHeaderButtonOriginalStyle(button: header0Button)

@@ -22,13 +22,13 @@ class CardView: UIView {
 
     func initCardView() {
         layer.cornerRadius = 12
-        layer.borderWidth = 1.5
-        layer.borderColor = UIColor.gray.cgColor
+        layer.borderWidth = 0
+        layer.borderColor = UIColor.clear.cgColor
         layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOpacity = 0.9
-        layer.shadowOffset = CGSize(width: -0.6, height: 1.2)
+        layer.shadowOpacity = 1
+        layer.shadowOffset = CGSize(width: -0.6, height: 1.5)
         layer.shadowRadius = 1
-        backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+//        backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
     }
 
 }
