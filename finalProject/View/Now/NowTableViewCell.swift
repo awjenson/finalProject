@@ -9,9 +9,15 @@
 import UIKit
 import ChameleonFramework
 
+// The NowTableViewCell is the boss
 protocol NowTableViewCellDelegate {
+
+    //YouTube: UIButton in UITableViewCell using Delegates and Protocols in Swift
+    //https://www.youtube.com/watch?v=UPrBXUWPf6Q
+
     // Implement these functions in the NowViewController
     func goToSourceURL(url: String)
+    //add a delegate variable below, assign it to the VC
 }
 
 class NowTableViewCell: UITableViewCell {
@@ -19,30 +25,45 @@ class NowTableViewCell: UITableViewCell {
     // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
     var delegate: NowTableViewCellDelegate?
 
-    @IBOutlet weak var tipIconView: UIView!
-
     @IBOutlet weak var boarderColorView: UIView!
 
 //    @IBOutlet weak var headerImageView: UIImageView!
+    @IBOutlet weak var tipIconView: UIView!
+    @IBOutlet weak var tipNumberLabel: UILabel!
 
 
 //    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var sourceButton: UIButton!
 
-    var tipItem: Tip!
+    var tipItem: Tip! //created because of delegate and protocol video
 
     func configureCell(tip: Tip) {
+
+        //set tipItem to tip so you can use it in other methods
+        tipItem = tip
+
+
+        tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
+        tipIconView.clipsToBounds = true
+
+       
 
 //        setupProfileImage(stringName: "coffee")
 
 //        headerImageView.image = UIImage(named: "coffee")
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
-        sourceLabel.text = tip.sourceName
 
+        //Underline effect for UIButton Title and left aligment
+        let attributedString = NSMutableAttributedString(string: tip.sourceName)
+        attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
+        sourceButton.contentHorizontalAlignment = .left
 
+        sourceButton.setTitle(tip.sourceName, for: .normal)
+        sourceButton.titleLabel?.attributedText = attributedString
         // Display UI of CELL Boarder
 
         // Increase-line-spacing-in-uilabel
@@ -137,6 +158,12 @@ class NowTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    @IBAction func sourceButtonTapped(_ sender: Any) {
+
+        delegate?.goToSourceURL(url: tipItem.sourceURL!)
+    }
+
 
 
 }

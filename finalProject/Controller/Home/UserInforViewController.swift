@@ -47,6 +47,27 @@ class UserInfoViewController: UIViewController {
         return .lightContent
     }
 
+    func restartApplication() {
+        print("restart app")
+//        let viewController = UserInfoViewController()
+//        let navCtrl = UINavigationController(rootViewController: viewController)
+//
+//        guard
+//            let window = UIApplication.shared.keyWindow,
+//            let rootViewController = window.rootViewController
+//            else {
+//                return
+//        }
+//
+//        navCtrl.view.frame = rootViewController.view.frame
+//        navCtrl.view.layoutIfNeeded()
+//
+//        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+//            window.rootViewController = navCtrl
+//        })
+
+    }
+
 
 
     // MARK: - Life Cycle Methods
@@ -54,12 +75,14 @@ class UserInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Used to refresh app when re-entering from background
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.userInfoVC = self
+
         setupUI()
 
-
-
-        
     }
+
 
     
 
@@ -172,7 +195,6 @@ class UserInfoViewController: UIViewController {
             greetingLabel.text = "Good Night"
         case 5...8:
             greetingLabel.text = "Rise and Shine"
-            authorLabel.text = ""
         case 9...11:
             greetingLabel.text = "Good Morning"
         case 12...17:
@@ -189,58 +211,85 @@ class UserInfoViewController: UIViewController {
         switch hour {
         case 0...4:
             setNatureImage(to: "night\(day)")
-            authorLabel.text = "\(beginningStatement) helps you to fall asleep"
+
         case 5...7:
             setNatureImage(to: "morning\(day)")
-            authorLabel.text = "\(beginningStatement) makes you feel alert and energized"
+
         case 8:
             setNatureImage(to: "morning\(day)")
-            authorLabel.text = "\(beginningStatement) reduces stress, anxiety, and depresion"
+
         case 9:
             setNatureImage(to: "midmorning\(day)")
-            authorLabel.text = "\(beginningStatement) reduces stress, anxiety, and depresion"
+
         case 10...11:
             setNatureImage(to: "midmorning\(day)")
-            authorLabel.text = "\(beginningStatement) improves concentration, focus, memorization"
+
         case 12...13:
             setNatureImage(to: "day\(day)")
-            authorLabel.text = "\(beginningStatement) improves posture"
+
         case 14:
             setNatureImage(to: "afternoon\(day)")
-            authorLabel.text = "\(beginningStatement) protects the body from bacteria and viruses"
+
         case 15:
             setNatureImage(to: "afternoon\(day)")
-            authorLabel.text = "\(beginningStatement) protects the body from bacteria and viruses"
+
         case 16:
             setNatureImage(to: "afternoon\(day)")
-            authorLabel.text = "\(beginningStatement) improves heart and organ function"
+
         case 17:
             setNatureImage(to: "evening\(day)")
-            authorLabel.text = "\(beginningStatement) improves heart and organ function"
+
         case 18:
             setNatureImage(to: "evening\(day)")
-            authorLabel.text = "\(beginningStatement) improves heart and organ function"
+
         case 19:
             setNatureImage(to: "sunset\(day)")
-            authorLabel.text = "\(beginningStatement) improves athletic performance"
+
         case 20:
-            setNatureImage(to: "sunset\(day)")
-            authorLabel.text = "\(beginningStatement) slows the aging process"
+            setNatureImage(to: "dusk\(day)")
+
         case 21:
             setNatureImage(to: "night\(day)")
-            authorLabel.text = "\(beginningStatement) slows the aging process"
+
         case 22...23:
             setNatureImage(to: "night\(day)")
-            authorLabel.text = "\(beginningStatement) makes you feel calm and relaxed"
+
 
         default:
             greetingLabel.text = "Hello"
         }
-
-
-
     }
 
+
+/*
+     authorLabel.text = "\(beginningStatement) helps you to fall asleep"
+
+     authorLabel.text = "\(beginningStatement) makes you feel alert and energized"
+
+     authorLabel.text = "\(beginningStatement) reduces stress, anxiety, and depresion"
+
+     authorLabel.text = "\(beginningStatement) reduces stress, anxiety, and depresion"
+
+     authorLabel.text = "\(beginningStatement) improves concentration, focus, memorization"
+
+     authorLabel.text = "\(beginningStatement) improves posture"
+
+     authorLabel.text = "\(beginningStatement) protects the body from bacteria and viruses"
+
+     authorLabel.text = "\(beginningStatement) protects the body from bacteria and viruses"
+
+     authorLabel.text = "\(beginningStatement) improves heart and organ function"
+
+     authorLabel.text = "\(beginningStatement) improves heart and organ function"
+     authorLabel.text = "\(beginningStatement) improves heart and organ function"
+     authorLabel.text = "\(beginningStatement) improves athletic performance"
+     authorLabel.text = "\(beginningStatement) slows the aging process"
+               authorLabel.text = "\(beginningStatement) slows the aging process"
+
+     authorLabel.text = "\(beginningStatement) makes you feel calm and relaxed"
+
+
+     */
 
 /*
 

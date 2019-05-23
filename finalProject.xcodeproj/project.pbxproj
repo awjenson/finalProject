@@ -37,6 +37,7 @@
 		DA388FA620F2957000AC5EDC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA388FA520F2957000AC5EDC /* CardView.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA404BD520B103DC007220F4 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA404BD420B103DC007220F4 /* CounterViewController.swift */; };
+		DA4B8923226EDCB1007671B0 /* BlueZones.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B8922226EDCB1007671B0 /* BlueZones.swift */; };
 		DA511DE3213F171B0056949B /* MoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511DE2213F171B0056949B /* MoodData.swift */; };
 		DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */; };
 		DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A249209E4845008018D1 /* NewUserList.swift */; };
@@ -127,6 +128,7 @@
 		DA388FA520F2957000AC5EDC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA404BD420B103DC007220F4 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		DA4B8922226EDCB1007671B0 /* BlueZones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueZones.swift; sourceTree = "<group>"; };
 		DA511DE2213F171B0056949B /* MoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodData.swift; sourceTree = "<group>"; };
 		DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorneredButton.swift; sourceTree = "<group>"; };
 		DA59A249209E4845008018D1 /* NewUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserList.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				DA606B502064969100DD14C0 /* Topic.swift */,
 				DA3F77C42055BE4800F7361A /* Tip.swift */,
 				DA0EDE0B2104EEB300B9363F /* Quote.swift */,
+				DA4B8922226EDCB1007671B0 /* BlueZones.swift */,
 			);
 			path = Now;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				DA78988D2052EFA1005046D8 /* NowViewController.swift in Sources */,
 				DA272D0B20BCE62200137039 /* AdviceData.swift in Sources */,
 				DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */,
+				DA4B8923226EDCB1007671B0 /* BlueZones.swift in Sources */,
 				DA7898832051E39E005046D8 /* ProfileViewController.swift in Sources */,
 				DA9CC27720FD3B58001A89B7 /* RoundedOvalButton.swift in Sources */,
 				DAB060CA21547EAC001DB425 /* NewUserViewController.swift in Sources */,

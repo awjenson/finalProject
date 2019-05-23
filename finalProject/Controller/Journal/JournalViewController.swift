@@ -243,7 +243,6 @@ class JournalViewController: UIViewController {
 
 
         setNatureImage(to: "night1")
-        updateQuote(quote: QuoteData.q1)
 
         switch dayOfWeek {
         case 1: // Sun
@@ -270,7 +269,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
+//            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -280,7 +279,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
+//            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -290,7 +289,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
+            appendHeaders(goodGreatHeader1, boredHeader1, lazyHeader1, confidenceHeader1, lonelyHeader1, jealousHeader1, anxiousHeader1, stressedHeader1, madHeader1, depressedHeader1, sadHeader1, goodGreatHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -300,7 +299,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
+//            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -310,7 +309,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
+//            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -320,7 +319,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
+//            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -330,7 +329,7 @@ class JournalViewController: UIViewController {
         switch hour {
         case 0...24:
             print("Hello")
-            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
+//            appendHeaders(confidenceHeader1, charismaHeader1, leadershipHeader1, mentalToughnessHeader1, creativityHeader1, anxiousHeader1, stressedHeader1, boredHeader1, madHeader1, depressedHeader1, sadHeader1, lazyHeader1)
         default:
             print("ERROR: INVALID HOUR!")
         }
@@ -432,7 +431,7 @@ class JournalViewController: UIViewController {
         performUIUpdatesOnMain {
             // reset to original color display
             button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
-            button.backgroundColor = .white
+            button.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
         }
     }
 
@@ -489,9 +488,8 @@ class JournalViewController: UIViewController {
         resetHeaderButtonOriginalStyle(button: header5Button)
         resetHeaderButtonOriginalStyle(button: header6Button)
         resetHeaderButtonOriginalStyle(button: header7Button)
-
-        resetHeaderButtonOriginalStyle(button: header7Button)
-        resetHeaderButtonOriginalStyle(button: header7Button)
+        resetHeaderButtonOriginalStyle(button: header8Button)
+        resetHeaderButtonOriginalStyle(button: header9Button)
 
         // Identify what button was tapped
 
@@ -506,7 +504,7 @@ class JournalViewController: UIViewController {
 
             // Unselected
             performUIUpdatesOnMain {
-                button.backgroundColor = .white
+                button.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
                 button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
 
 
@@ -528,7 +526,7 @@ class JournalViewController: UIViewController {
                 //                button.setTitleColor(.black, for: .normal)
                 //                button.backgroundColor = NowConstants.YvonneColor.silver
 
-                button.setTitleColor(.white, for: .normal)
+                button.setTitleColor(UIColor.init(hexString: "FFF1E5", withAlpha: 1), for: .normal)
                 button.backgroundColor = NowConstants.YvonneColor.defaultBlue
 
             }

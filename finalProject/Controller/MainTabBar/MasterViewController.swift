@@ -57,10 +57,14 @@ class MasterViewController: UIViewController {
         return greeting
     }
 
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+
+        
     }
 
     private func setupView() {
