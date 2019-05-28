@@ -47,26 +47,7 @@ class UserInfoViewController: UIViewController {
         return .lightContent
     }
 
-    func restartApplication() {
-        print("restart app")
-//        let viewController = UserInfoViewController()
-//        let navCtrl = UINavigationController(rootViewController: viewController)
-//
-//        guard
-//            let window = UIApplication.shared.keyWindow,
-//            let rootViewController = window.rootViewController
-//            else {
-//                return
-//        }
-//
-//        navCtrl.view.frame = rootViewController.view.frame
-//        navCtrl.view.layoutIfNeeded()
-//
-//        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
-//            window.rootViewController = navCtrl
-//        })
 
-    }
 
 
 
@@ -80,6 +61,17 @@ class UserInfoViewController: UIViewController {
         appDelegate.userInfoVC = self
 
         setupUI()
+
+    }
+
+    func refreshUI() {
+
+        print("Refresh UserVC")
+
+//        greetingLabel.text = ""
+//        setNatureImage(to: "")
+
+        dayOfWeekAndHour()
 
     }
 
@@ -189,6 +181,7 @@ class UserInfoViewController: UIViewController {
         
         let beginningStatement = "repeating this"
 
+        print("HI GREETING")
         //greeting
         switch hour {
         case 0...4:

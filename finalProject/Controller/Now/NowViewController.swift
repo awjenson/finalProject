@@ -172,11 +172,55 @@ class NowViewController: UIViewController {
         print("Refresh NowVC")
         topics = []
         tips = []
-        titleLabel.text = ""
         topicButtons = []
+
+//        let blankTopic0 = Topic(title: "", icon: "", tip: [])
+//        let blankTopic1 = Topic(title: "", icon: "", tip: [])
+//        let blankTopic2 = Topic(title: "", icon: "", tip: [])
+//        let blankTopic3 = Topic(title: "", icon: "", tip: [])
+//
+//        let blankTopic4 = Topic(title: "", icon: "", tip: [])
+//        let blankTopic5 = Topic(title: "", icon: "", tip: [])
+//        let blankTopic6 = Topic(title: "", icon: "", tip: [])
+//        let blankTopic7 = Topic(title: "", icon: "", tip: [])
+//        let blankNowTopic8 = Topic(title: "", icon: "", tip: [])
+
+
+
 
         performUIUpdatesOnMain {
 
+//            self.titleLabel.text = ""
+//            self.quoteLabel.text = ""
+//            self.authorLabel.text = ""
+
+
+
+//            self.topic0Button.titleLabel?.text = ""
+//            self.topic1Button.titleLabel?.text = ""
+//            self.topic2Button.titleLabel?.text = ""
+//            self.topic3Button.titleLabel?.text = ""
+//
+//            self.topic4Button.titleLabel?.text = ""
+//            self.topic5Button.titleLabel?.text = ""
+//            self.topic6Button.titleLabel?.text = ""
+//            self.topic7Button.titleLabel?.text = ""
+
+
+
+//            self.topics = [blankTopic0, blankTopic1, blankTopic2, blankTopic3, blankTopic4, blankTopic5, blankTopic6, blankTopic7, blankNowTopic8]
+
+        }
+
+
+
+        setupUI()
+
+
+
+        performUIUpdatesOnMain {
+
+            // set UIButtons
             self.resetTopicButtonOriginalStyle(button: self.topic0Button)
             self.resetTopicButtonOriginalStyle(button: self.topic1Button)
             self.resetTopicButtonOriginalStyle(button: self.topic2Button)
@@ -186,13 +230,11 @@ class NowViewController: UIViewController {
             self.resetTopicButtonOriginalStyle(button: self.topic6Button)
             self.resetTopicButtonOriginalStyle(button: self.topic7Button)
 
-        }
 
-        setupUI()
-
-        performUIUpdatesOnMain {
             // removed animation because it was too slow
+            self.nowTableView.reloadData()
             self.nowTableView.setContentOffset(.zero, animated: false)
+
         }
     }
 
@@ -213,7 +255,6 @@ class NowViewController: UIViewController {
         // place 8 buttons in desired order (excludes Now tips)
         topicButtons = [topic0Button, topic1Button, topic2Button,
                         topic3Button, topic4Button, topic5Button, topic6Button, topic7Button]
-
 
 
         dayOfWeekAndHour()
@@ -432,6 +473,7 @@ class NowViewController: UIViewController {
     }
 
     func displayHourInTopicLabel() {
+        print("ARE WE HERE SECOND")
         formatter.dateFormat = "h a" // "a" prints "pm" or "am"
         let hourString = formatter.string(from: Date()) // "12 AM"
         titleLabel.text = "Your \(hourString) Tips"
@@ -443,6 +485,8 @@ class NowViewController: UIViewController {
     // MARK: - Time-based Functions
 
     func dayOfWeekAndHour() {
+
+
 
         let dayOfWeek = calendar.component(.weekday, from: date)
         hour = calendar.component(.hour, from: date)
@@ -612,7 +656,7 @@ class NowViewController: UIViewController {
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic4, barTopic1, dateTopic0, sundayNow17to20Topic0)
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic4, barTopic1, dateTopic0, sundayNow17to18Topic0)
 
             setNatureImage(to: "sunset1")
 
@@ -620,7 +664,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("Weekend, Mid Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic5, barTopic1, dateTopic0, sundayNow17to20Topic0)
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic5, barTopic1, dateTopic0, sundayNow19to20Topic0)
 
             setNatureImage(to: "sunset1")
 
@@ -713,12 +757,12 @@ class NowViewController: UIViewController {
             setNatureImage(to: "sunset2")
 
 
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic4, groceryStoreTopic2, dinnerTopic1, restaurantTopic1, happyHourTopic0, homePMTopic1, weekdayNow17to20Topic0)
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic4, groceryStoreTopic2, dinnerTopic1, restaurantTopic1, happyHourTopic0, homePMTopic1, weekdayNow17to18Topic0)
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic5, groceryStoreTopic2, restaurantTopic1, dinnerTopic1, dateTopic0, barTopic3, networkingTopic1, homePMTopic1, weekdayNow17to20Topic0)
+            appendNineTopics(gymTopic5, groceryStoreTopic2, restaurantTopic1, dinnerTopic1, dateTopic0, barTopic3, networkingTopic1, homePMTopic1, weekdayNow19to20Topic0)
 
 
             setNatureImage(to: "sunset2")
@@ -801,7 +845,7 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic1, commutePMTopic1, happyHourTopic0, gymTopic4, groceryStoreTopic4, dinnerTopic2, networkingTopic2, homePMTopic2, weekdayNow17to20Topic1)
+            appendNineTopics(workLateTopic1, commutePMTopic1, happyHourTopic0, gymTopic4, groceryStoreTopic4, dinnerTopic2, networkingTopic2, homePMTopic2, weekdayNow17to18Topic1)
 
             setNatureImage(to: "sunset3")
 
@@ -809,7 +853,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic5, groceryStoreTopic4, restaurantTopic2, dinnerTopic2, dateTopic2, barTopic1, networkingTopic2, homePMTopic2, weekdayNow17to20Topic1)
+            appendNineTopics(gymTopic5, groceryStoreTopic4, restaurantTopic2, dinnerTopic2, dateTopic2, barTopic1, networkingTopic2, homePMTopic2, weekdayNow19to20Topic1)
 
             setNatureImage(to: "sunset3")
 
@@ -817,7 +861,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic1, barTopic2, safetyTopic3, homePMTopic2, lateNightSnackTopic1, bathroomPMTopic0, bedtimeTopic5, cantSleepTopic1, weekdayNow21to24Topic1)
+            appendNineTopics(dinnerAfter9PMTopic1, barTopic2, safetyTopic3, homePMTopic2, lateNightSnackTopic1, bathroomPMTopic0, bedtimeTopic6, cantSleepTopic1, weekdayNow21to24Topic1)
 
             setNatureImage(to: "night3")
 
@@ -886,14 +930,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic2, happyHourTopic0, gymTopic4, groceryStoreTopic5, dinnerTopic3, networkingTopic3, homePMTopic3, weekdayNow17to20Topic2)
+            appendNineTopics(workLateTopic0, commutePMTopic2, happyHourTopic0, gymTopic4, groceryStoreTopic5, dinnerTopic3, networkingTopic3, homePMTopic3, weekdayNow17to18Topic2)
 
             setNatureImage(to: "sunset4")
 
 
         case 19...20:
             print("Weekday, Evening")
-            appendNineTopics(gymTopic5, groceryStoreTopic5, restaurantTopic0, dinnerTopic3, dateTopic1, barTopic3, networkingTopic3, homePMTopic3, weekdayNow17to20Topic2)
+            appendNineTopics(gymTopic5, groceryStoreTopic5, restaurantTopic0, dinnerTopic3, dateTopic1, barTopic3, networkingTopic3, homePMTopic3, weekdayNow19to20Topic2)
 
             setNatureImage(to: "sunset4")
 
@@ -972,14 +1016,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-            appendNineTopics(workLateTopic1, commutePMTopic3, happyHourTopic0, groceryStoreTopic6, gymTopic2, dinnerTopic4, networkingTopic4, homePMTopic4, weekdayNow17to20Topic3)
+            appendNineTopics(workLateTopic1, commutePMTopic3, happyHourTopic0, groceryStoreTopic6, gymTopic2, dinnerTopic4, networkingTopic4, homePMTopic4, weekdayNow17to18Topic3)
 
             setNatureImage(to: "afternoon5")
 
 
         case 19...20:
             print("weekdayTF, Evening")
-            appendNineTopics(gymTopic5, groceryStoreTopic6, dinnerTopic4, restaurantTopic1, dateTopic1, barTopic3, networkingTopic4, homePMTopic4, weekdayNow17to20Topic3)
+            appendNineTopics(gymTopic5, groceryStoreTopic6, dinnerTopic4, restaurantTopic1, dateTopic1, barTopic3, networkingTopic4, homePMTopic4, weekdayNow19to20Topic3)
 
 
             setNatureImage(to: "sunset5")
@@ -1061,7 +1105,7 @@ class NowViewController: UIViewController {
         case 17...18:
             print("weekday Fri, Evening 5-6PM")
 
-            appendNineTopics(commuteFridayPMTopic0, happyHourTopic0, groceryStoreTopic7, gymTopic4, restaurantTopic2, dinnerTopic0, networkingTopic1, homePMTopic5, weekdayNow17to20Topic4)
+            appendNineTopics(commuteFridayPMTopic0, happyHourTopic0, groceryStoreTopic7, gymTopic4, restaurantTopic2, dinnerTopic0, networkingTopic1, homePMTopic5, weekdayNow17to18Topic4)
 
             setNatureImage(to: "afternoon6")
 
@@ -1069,7 +1113,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendNineTopics(goingOutTopic0, gymTopic5, dinnerTopic0, restaurantTopic0, barTopic2, dateTopic1, homePMTopic0, safetyTopic6, weekdayNow17to20Topic4)
+            appendNineTopics(goingOutTopic0, gymTopic5, dinnerTopic0, restaurantTopic0, barTopic2, dateTopic1, homePMTopic0, safetyTopic6, weekdayNow19to20Topic4)
 
             setNatureImage(to: "sunset6")
 
@@ -1077,7 +1121,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, dateTopic2, barTopic3, safetyTopic6, homePMTopic1, lateNightSnackTopic1, bedtimeFriTopic1, cantSleepTopic1, weekdayNow21to24Topic4)
+            appendNineTopics(dinnerAfter9PMTopic0, dateTopic2, barTopic3, safetyTopic6, homePMTopic1, lateNightSnackTopic1, bedtimeFriTopic5, cantSleepTopic1, weekdayNow21to24Topic4)
 
             setNatureImage(to: "night6")
 
@@ -1151,7 +1195,7 @@ class NowViewController: UIViewController {
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic3, goingOutTopic0, dinnerTopic1, restaurantTopic1, dateTopic1, barTopic2, groceryStoreTopic7, safetyTopic2, saturdayNow17to20Topic1)
+            appendNineTopics(homePMTopic3, goingOutTopic0, dinnerTopic1, restaurantTopic1, dateTopic1, barTopic2, groceryStoreTopic7, safetyTopic2, saturdayNow17to18Topic0)
 
             setNatureImage(to: "sunset7")
 
@@ -1159,7 +1203,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic4, goingOutTopic0, dinnerTopic1, restaurantTopic1, dateTopic1, barTopic2, groceryStoreTopic7, safetyTopic3, saturdayNow17to20Topic1)
+            appendNineTopics(homePMTopic4, goingOutTopic0, dinnerTopic1, restaurantTopic1, dateTopic1, barTopic2, groceryStoreTopic7, safetyTopic3, saturdayNow19to20Topic0)
 
             setNatureImage(to: "sunset7")
 
@@ -1234,7 +1278,7 @@ class NowViewController: UIViewController {
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic2, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic4, barTopic4, dateTopic0, sundayNow17to20Topic2)
+            appendNineTopics(homePMTopic0, dinnerTopic2, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic4, barTopic4, dateTopic0, sundayNow17to18Topic0)
 
             setNatureImage(to: "sunset1")
 
@@ -1242,7 +1286,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("Weekend, Mid Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic2, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic5, barTopic1, dateTopic0, sundayNow17to20Topic2)
+            appendNineTopics(homePMTopic0, dinnerTopic2, restaurantTopic0, groceryStoreTopic1, shoppingClothesTopic1, gymTopic5, barTopic1, dateTopic0, sundayNow19to20Topic0)
 
             setNatureImage(to: "sunset1")
 
@@ -1251,7 +1295,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(barTopic2, dateTopic1, safetyTopic1, homePMTopic0, bathroomPMTopic0, lateNightSnackTopic0, bedtimeTopic5, cantSleepTopic1, sunday21to24Topic2)
+            appendNineTopics(barTopic2, dateTopic1, safetyTopic1, homePMTopic0, bathroomPMTopic0, lateNightSnackTopic0, bedtimeTopic7, cantSleepTopic1, sunday21to24Topic2)
 
             setNatureImage(to: "night1")
 
@@ -1334,12 +1378,12 @@ class NowViewController: UIViewController {
             setNatureImage(to: "sunset2")
 
 
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic4, groceryStoreTopic2, dinnerTopic3, restaurantTopic1, happyHourTopic0, homePMTopic1, weekdayNow17to20Topic5)
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic4, groceryStoreTopic2, dinnerTopic3, restaurantTopic1, happyHourTopic0, homePMTopic1, weekdayNow17to18Topic5)
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic5, groceryStoreTopic2, restaurantTopic1, dinnerTopic3, dateTopic0, barTopic3, networkingTopic1, homePMTopic1, weekdayNow17to20Topic5)
+            appendNineTopics(gymTopic5, groceryStoreTopic2, restaurantTopic1, dinnerTopic3, dateTopic0, barTopic3, networkingTopic1, homePMTopic1, weekdayNow19to20Topic0)
 
 
             setNatureImage(to: "sunset2")
@@ -1422,7 +1466,7 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic1, commutePMTopic1, happyHourTopic0, gymTopic4, groceryStoreTopic4, dinnerTopic4, networkingTopic2, homePMTopic2, weekdayNow17to20Topic6)
+            appendNineTopics(workLateTopic1, commutePMTopic1, happyHourTopic0, gymTopic4, groceryStoreTopic4, dinnerTopic4, networkingTopic2, homePMTopic2, weekdayNow17to18Topic6)
 
             setNatureImage(to: "sunset3")
 
@@ -1430,7 +1474,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic5, groceryStoreTopic4, restaurantTopic2, dinnerTopic4, dateTopic2, barTopic1, networkingTopic2, homePMTopic2, weekdayNow17to20Topic6)
+            appendNineTopics(gymTopic5, groceryStoreTopic4, restaurantTopic2, dinnerTopic4, dateTopic2, barTopic1, networkingTopic2, homePMTopic2, weekdayNow19to20Topic1)
 
             setNatureImage(to: "sunset3")
 
@@ -1507,14 +1551,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic2, happyHourTopic0, gymTopic4, groceryStoreTopic5, dinnerTopic0, networkingTopic3, homePMTopic3, weekdayNow17to20Topic7)
+            appendNineTopics(workLateTopic0, commutePMTopic2, happyHourTopic0, gymTopic4, groceryStoreTopic5, dinnerTopic0, networkingTopic3, homePMTopic3, weekdayNow17to18Topic7)
 
             setNatureImage(to: "sunset4")
 
 
         case 19...20:
             print("Weekday, Evening")
-            appendNineTopics(gymTopic5, groceryStoreTopic5, restaurantTopic0, dinnerTopic0, dateTopic1, barTopic3, networkingTopic3, homePMTopic3, weekdayNow17to20Topic7)
+            appendNineTopics(gymTopic5, groceryStoreTopic5, restaurantTopic0, dinnerTopic0, dateTopic1, barTopic3, networkingTopic3, homePMTopic3, weekdayNow19to20Topic2)
 
             setNatureImage(to: "sunset4")
 
@@ -1593,14 +1637,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-            appendNineTopics(workLateTopic1, commutePMTopic3, happyHourTopic0, groceryStoreTopic6, gymTopic4, dinnerTopic1, networkingTopic4, homePMTopic4, weekdayNow17to20Topic8)
+            appendNineTopics(workLateTopic1, commutePMTopic3, happyHourTopic0, groceryStoreTopic6, gymTopic4, dinnerTopic1, networkingTopic4, homePMTopic4, weekdayNow17to18Topic8)
 
             setNatureImage(to: "afternoon5")
 
 
         case 19...20:
             print("weekdayTF, Evening")
-            appendNineTopics(gymTopic5, groceryStoreTopic6, dinnerTopic1, restaurantTopic1, dateTopic1, barTopic3, networkingTopic4, homePMTopic4, weekdayNow17to20Topic8)
+            appendNineTopics(gymTopic5, groceryStoreTopic6, dinnerTopic1, restaurantTopic1, dateTopic1, barTopic3, networkingTopic4, homePMTopic4, weekdayNow19to20Topic3)
 
 
             setNatureImage(to: "sunset5")
@@ -1625,7 +1669,7 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekday Fri, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(barTopic1, safetyTopic6, lateNightSnackTopic1, homePMTopic5, meditationTopic0, bathroomPMTopic1, bedtimeTopic5, cantSleepTopic2, weekdayNow0to4Topic4)
+            appendNineTopics(barTopic1, safetyTopic6, lateNightSnackTopic1, homePMTopic5, meditationTopic0, bathroomPMTopic1, bedtimeFriTopic5, cantSleepTopic2, weekdayNow0to4Topic4)
 
             setNatureImage(to: "night6")
 
@@ -1682,7 +1726,7 @@ class NowViewController: UIViewController {
         case 17...18:
             print("weekday Fri, Evening 5-6PM")
 
-            appendNineTopics(commuteFridayPMTopic0, happyHourTopic0, groceryStoreTopic7, gymTopic4, restaurantTopic2, dinnerTopic2, networkingTopic3, homePMTopic5, weekdayNow17to20Topic9)
+            appendNineTopics(commuteFridayPMTopic0, happyHourTopic0, groceryStoreTopic7, gymTopic4, restaurantTopic2, dinnerTopic2, networkingTopic3, homePMTopic5, weekdayNow17to18Topic9)
 
             setNatureImage(to: "afternoon6")
 
@@ -1690,7 +1734,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendNineTopics(goingOutTopic0, gymTopic5, dinnerTopic2, restaurantTopic0, barTopic2, dateTopic1, homePMTopic0, safetyTopic6, weekdayNow17to20Topic9)
+            appendNineTopics(goingOutTopic0, gymTopic5, dinnerTopic2, restaurantTopic0, barTopic2, dateTopic1, homePMTopic0, safetyTopic6, weekdayNow19to20Topic4)
 
             setNatureImage(to: "sunset6")
 
@@ -1698,7 +1742,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, dateTopic2, barTopic3, safetyTopic6, homePMTopic1, lateNightSnackTopic0, bedtimeFriTopic1, cantSleepTopic1, weekdayNow21to24Topic9)
+            appendNineTopics(dinnerAfter9PMTopic0, dateTopic2, barTopic3, safetyTopic6, homePMTopic1, lateNightSnackTopic0, bedtimeFriTopic5, cantSleepTopic1, weekdayNow21to24Topic9)
 
             setNatureImage(to: "night6")
 
@@ -1772,7 +1816,7 @@ class NowViewController: UIViewController {
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic3, goingOutTopic0, dinnerTopic3, restaurantTopic1, dateTopic1, barTopic2, groceryStoreTopic7, safetyTopic2, saturdayNow17to20Topic3)
+            appendNineTopics(homePMTopic3, goingOutTopic0, dinnerTopic3, restaurantTopic1, dateTopic1, barTopic2, groceryStoreTopic7, safetyTopic2, saturdayNow17to18Topic0)
 
             setNatureImage(to: "sunset7")
 
@@ -1780,7 +1824,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic4, goingOutTopic0, dinnerTopic3, restaurantTopic1, dateTopic1, barTopic4, groceryStoreTopic7, safetyTopic3, saturdayNow17to20Topic3)
+            appendNineTopics(homePMTopic4, goingOutTopic0, dinnerTopic3, restaurantTopic1, dateTopic1, barTopic4, groceryStoreTopic7, safetyTopic3, saturdayNow19to20Topic0)
 
             setNatureImage(to: "sunset7")
 
@@ -1791,7 +1835,6 @@ class NowViewController: UIViewController {
             appendNineTopics(dinnerAfter9PMTopic2, dateTopic2, barTopic3, safetyTopic4, homePMTopic5, lateNightSnackTopic0, bathroomPMTopic1, bedtimeTopic7, saturday21to24Topic2)
 
             setNatureImage(to: "night7")
-
 
         default:
             print("Weekend,INVALID HOUR!")
@@ -1867,6 +1910,8 @@ class NowViewController: UIViewController {
     func appendNineTopics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic,_ topic4: Topic,_ topic5: Topic,_ topic6: Topic,_ topic7: Topic, _ topic8Now: Topic) {
 
         topics = [topic0, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8Now]
+
+        print("topics count \(topics.count)")
 
         // set UIButtons
         self.topic0Button.setTitle(topic0.title, for: .normal)
@@ -2027,6 +2072,8 @@ class NowViewController: UIViewController {
 
         // Take selected index in topics array and subtract 1 because we start with zero
         let counter = (topics[index].tip.count - 1)
+
+        print("counter: \(counter)")
 
         for item in 0...counter {
             tips.append(topics[index].tip[item])

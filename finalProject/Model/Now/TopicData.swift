@@ -24,7 +24,8 @@ let breakfastTip1 = Tip(header: Constants.Image.breakfast1, title: "Consume at l
 let breakfastTip2 = Tip(header: Constants.Image.breakfast2, title: "Reduce your odds of having an afternoon slump today by eating a healthy breakfast", body: "Eating breakfast reduces your chances an unhealthy snack later in the day. We can also crave extra calories if we have not eaten enough during the day or if we have skipped lunch. \n\nWhen you don't eat regularly, your body starts to crave high calorie, comfort type food. We're less likely to have a slump and eat unhealthy if we've fuelled our bodies well beforehand." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip3 = Tip(header: Constants.Image.cereal, title: "Cereal: There should always be at least five grams of fiber, and there should always be more fiber than sugar", body: "The more sugar in your breakfast cereal, the faster it digests, and the hungrier you’ll be. Conversely, more fiber will keep you fuller longer. For extra fiber, add chia or flax seeds." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip4 = Tip(header: Constants.Image.yogurt, title: "Eating healthy fats keeps you feeling full for longer", body: "Let’s look at the supposed healthy breakfast of non-fat Greek yogurt, high-fiber cereal and berries. Switch to 2%-fat yogurt or to add some nuts." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-///////////
+
+//2
 let breakfastTip5 = Tip(header: Constants.Image.breakfast2, title: "The Best Foods to Eat for Breakfast", body: "A healthy breakfast includes fiber, protein and healthy fat that gives you energy and makes you feel full. \n\n• Protein: Eggs, Greek Yogurt, Protein Shake, Cottage Cheese \n\n• Fiber: Oatmeal, Chia Seeds, Flaxseeds \n\n• Vitamins: Berries and Citrus Fruit \n\n• Healthy Fats: Nuts, Avocado, Peanut Butter \n\n• Caffeine: Coffee or Green Tea" , sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/12-best-foods-to-eat-in-morning#section4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip6 = Tip(header: Constants.Image.unhealthyBreakfast, title: "The Worst Foods to Eat for Breakfast", body: "The list below contain little nutrients and high amounts of sugar, refined grains, and trans fats: \n\n• Fruit Juice and Smooties \n\n• Cereal, Bagels, Breads, Granola Bars, Muffins, Toaster Pastries, Pancakes, and Waffles \n\n• Butter, Flavored Yogurt, and Cream Cheese \n\n• Bacon and Sausage \n\n• Jelly, Syrup, Flavored Creamers, and Ketchup" , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/worst-breakfast-foods/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip7 = Tip(header: "🍓", title: "A healthy breakfast includes lean protein, whole-grain carbohydrates, healthy fat, and fresh fruit", body: "Try low-fat Greek yogurt topped with fresh berries and a handful of nuts; a whole-wheat English muffin spread with a dollop of peanut butter; or an egg scrambled in extra-virgin olive oil along with some spinach, mushrooms, or other vegetables." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/nutrition/breakfast-and-beyond-the-case-for-a-healthy-morning-meal", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -38,6 +39,8 @@ let breakfastTip12 = Tip(header: "", title: "Drink water during or after a meal 
 
 //4
 let breakfastTip13 = Tip(header: "🚰", title: "Lose Weight: Drink 16 ounces of water before every meal", body: "Study: Over the course of 12 weeks, dieters who drank 16 ounces of water before meals, 3 times per day, lost about 5 pounds more than dieters who did not increase their water intake. \n\nWater promotes weight loss because it fills up the stomach with a substance that has zero calories. People feel fuller as a result, and eat less calorie-containing food during the meal.", sourceName: "Virginia Polytechnic Institute and State University", sourceURL: "https://vtnews.vt.edu/articles/2010/08/082310-cals-davy.html", sponsorLogo: "", sponsorURL: "")
+let breakfastTip14 = Tip(header: "", title: "Reduce calorie consumption by 44% simply by eating with a smaller bowl or plate", body: "When serving food onto bigger plates, we subconsciously want to fill the empty space—and end up piling on more. Research from Cornell showed that both adults and kids poured more cereal into larger bowls and consumed 44% more calories.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
+let breakfastTip15 = Tip(header: "", title: "Weight Loss: Unless you’re lactose intolerant, steering clear of milk, yogurt and other popular dairy-based breakfast foods to save calories may be doing you more harm than good", body: "The primary reason: Calcium plays a key role in regulating the way the body metabolizes food. Specifically, it determines whether we burn calories or tack them on as excess fat. \n\nStudy A calcium-rich diet can help you burn more fat.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
 
 
 let breakfastTipArray0 = [breakfastTip1, breakfastTip2, breakfastTip3, breakfastTip4]
@@ -48,6 +51,11 @@ let breakfastTopic1 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: bre
 
 let breakfastTipArray2 = [breakfastTip9, breakfastTip10, breakfastTip11, breakfastTip12]
 let breakfastTopic2 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArray2)
+
+let breakfastTipArray3 = [breakfastTip13, breakfastTip14, breakfastTip15, breakfastTip12]
+let breakfastTopic3 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArray3)
+
+
 
 // MARK: - Brunch
 
@@ -65,11 +73,14 @@ let brunchTip4 = Tip(header: "", title: "Drink water during or after a meal to a
 //2
 let brunchTip5 = Tip(header: "🚰", title: "Lose Weight: Drink 16 ounces of water before every meal", body: "Study: Over the course of 12 weeks, dieters who drank 16 ounces of water before meals, 3 times per day, lost about 5 pounds more than dieters who did not increase their water intake. \n\nWater promotes weight loss because it fills up the stomach with a substance that has zero calories. People feel fuller as a result, and eat less calorie-containing food during the meal.", sourceName: "Virginia Polytechnic Institute and State University", sourceURL: "https://vtnews.vt.edu/articles/2010/08/082310-cals-davy.html", sponsorLogo: "", sponsorURL: "")
 let brunchTip6 = Tip(header: "🍞", title: "For sides, choose either whole-grain toast or the potatoes — not both", body: "Otherwise, you end up with too many carbs on your plate. In place of potatoes, ask for fruit or a side salad to add some low-calorie, high nutritional value to your meal. And avoid home fries and hashbrowns which are likely deep fried and covered in butter and oil." , sourceName: "Everyday Health", sourceURL: "https://www.everydayhealth.com/pictures/what-to-order-at-brunch/#06", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let brunchTip7 = Tip(header: "", title: "Prevent weight gain: Be mindful that you eat more food when you eat out with others", body: "A meal consumed with one other person is typically 33% larger than a meal consumed alone. It gets scarier from there. A meal consumed with two friends was associated with a 47% bigger meal. Dining with four, six, or 8+ friends was associated with meal increases of 69%, 70% and 96%, respectively." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-
-var brunchTipArray0 = [brunchTip1, brunchTip2, brunchTip3, brunchTip4]
-
+let brunchTipArray0 = [brunchTip1, brunchTip2, brunchTip3, brunchTip4]
 let brunchTopic0 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray0)
+
+//WIP
+let brunchTipArray1 = [brunchTip5, brunchTip6, brunchTip7, brunchTip4]
+let brunchTopic1 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray0)
 
 // MARK: - Lunch
 
@@ -101,11 +112,13 @@ let lunchTip15 = Tip(header: "", title: "Live longer: Eat with smaller plates, a
 let lunchTip16 = Tip(header: "", title: "Live longer: Eat until you are 80% full", body: "It takes 20 minutes for the stomach to tell the brain it is full. Undereating, as the theory goes, slows down the body's metabolism in a way such that it produces less damaging oxidants - agents that rust the body from within.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 //4
-let lunchTip17 = Tip(header: "", title: "Live longer: Make beans or tofu the centerpiece of lunches and dinners", body: "Diets rich in beans are associated with fewer heart attacks and less colon cancer. They are also an excellent source of protein. \n\nTofu is an excellent source of protein without the side effects of meat. Tofu is low in calories, high in protein, rich in minerals, devoid of cholesterol, and eco-friendly.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let lunchTip17 = Tip(header: "", title: "Prevent weight gain: Drink 2 cups of water before eating", body: "Study: people who drank 2 cups of water before eating consumed 75 to 90 fewer calories over the course of a meal than they would otherwise. This may simply be because water is filling, but researchers note the added water may well be displacing calories otherwise spent on high-calorie beverages such as sodas, sports drinks, and fruit drinks.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
 let lunchTip18 = Tip(header: "", title: "Live longer: Eat a Mediterranean style diet - olive oil, fruits, vegetables, beans, whole grains, some fish, moderate amounts of wine, and low in dairy and meat products", body: "Study: People who follow the Mediterranean diet have stronger bones, lower cancer rates, and live up to 4 years longer than those who don't.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let lunchTip19 = Tip(header: "", title: "Live longer: Eat fruits, vegetables, nuts, seeds, whole grains, and beans", body: "Many studies link a plant-rich diet to a lower risk of premature death, as well as a reduced risk of cancer, metabolic syndrome, heart disease, and depression. \n\nAvoid eating meat, especially processed meat, as some research suggests that eating meat increases your risk of premature death and certain diseases.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/13-habits-linked-to-a-long-life", sponsorLogo: "", sponsorURL: "")
+let lunchTip20 = Tip(header: "", title: "Live longer: Make beans or tofu the centerpiece of lunches and dinners", body: "Diets rich in beans are associated with fewer heart attacks and less colon cancer. They are also an excellent source of protein. \n\nTofu is an excellent source of protein without the side effects of meat. Tofu is low in calories, high in protein, rich in minerals, devoid of cholesterol, and eco-friendly.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
-
-
+//5
+let lunchTip21 = Tip(header: "", title: "Lose belly fat: Don't add cheese to your meal", body: "Removing cheese from just one meal a day can save you over 41,000 calories a year. In other words, you could lose up to 12 pounds in just 12 months by saying “hold the cheese, please.”", sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
 let lunchTopic0 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray0)
@@ -119,7 +132,7 @@ let lunchTopic2 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray2)
 let lunchTipArray3 = [lunchTip13, lunchTip14, lunchTip15, lunchTip16]
 let lunchTopic3 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray3)
 
-let lunchTipArray4 = [lunchTip17, lunchTip18, lunchTip8, lunchTip12]//WIP
+let lunchTipArray4 = [lunchTip17, lunchTip18, lunchTip19, lunchTip12]//WIP
 let lunchTopic4 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray4)
 
 // MARK: - Dinner
@@ -152,8 +165,23 @@ let dinnerTip15 = Tip(header: "", title: "Live longer: Focus only on your food w
 let dinnerTip16 = Tip(header: "", title: "Live longer: Eat a lean, plant-based diet accented with meat", body: "A study of people who lived to 100+ years old in Sardinia, Italy, found that their diet consists of whole-gain bread, beans, garden vegetables, and fruits. Meat is largely reserved for Sundays and special occasions.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 //4
-let dinnerTip17 = Tip(header: "", title: "Live longer: Cook with olive oil, which contains cholesterol-lowering mono-unsaturated fats", body: "Look for the freshest oil, as time can diminish its antioxidant power, and never cook with so much heat that the oil smokes. High heat breaks down healthy fats, making them much less healthy.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-let dinnerTip18 = Tip(header: "", title: "Live longer: Eat a Mediterranean style diet - olive oil, fruits, vegetables, beans, whole grains, some fish, moderate amounts of wine, and low in dairy and meat products", body: "Study: People who follow the Mediterranean diet have stronger bones, lower cancer rates, and live up to 4 years longer than those who don't.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+
+let dinnerTip17 = Tip(header: "", title: "Prevent weight gain: Drink 2 cups of water before eating", body: "Study: people who drank 2 cups of water before eating consumed 75 to 90 fewer calories over the course of a meal than they would otherwise. This may simply be because water is filling, but researchers note the added water may well be displacing calories otherwise spent on high-calorie beverages such as sodas, sports drinks, and fruit drinks.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+let dinnerTip18 = Tip(header: "", title: "Live longer: Cook with olive oil, which contains cholesterol-lowering mono-unsaturated fats", body: "Look for the freshest oil, as time can diminish its antioxidant power, and never cook with so much heat that the oil smokes. High heat breaks down healthy fats, making them much less healthy.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let dinnerTip19 = Tip(header: "", title: "Reduce calorie consumption by 44% simply by eating with a smaller bowl or plate", body: "When serving food onto bigger plates, we subconsciously want to fill the empty space—and end up piling on more. Research from Cornell showed that both adults and kids poured more cereal into larger bowls and consumed 44% more calories.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
+let dinnerTip20 = Tip(header: "", title: "Prevent weight gain and disease: Choose beverages with few or no calories. Water is best.", body: "Drink Plenty: Water, seltzer water, Skim or 1% milk \n\nDrink Occasionally: Diet soda, low-calorie, low-sugar drinks, 100% juice \n\nDrink Rarely, If At All: Regular sodas, energy or sports drinks, fruit drinks \n\nResearch shows that sugary drinks are one of the major determinants of obesity and diabetes, and evidence indicates that high consumption of sugary drinks increases the risk for heart disease, the number one killer of men and women in the U.S.", sourceName: "Harvard School of Public Health", sourceURL: "https://www.hsph.harvard.edu/nutritionsource/healthy-drinks/beverages-public-health-concerns/", sponsorLogo: "", sponsorURL: "")
+
+//5
+let dinnerTip21 = Tip(header: "", title: "Eat with health-minded people. Study: When we eat with overweight people, we may consume more food than what we usually do or what we would if dining with non-overweight people", body: "Ditching your overweight friend isn’t mandatory, but expanding your social circle to include some health-minded people can help you keep your weight—in check. Otherwise, encourage your friends and family to eat healthier." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+
+let dinnerTip22 = Tip(header: "", title: "Live longer: Eat a Mediterranean style diet - olive oil, fruits, vegetables, beans, whole grains, some fish, moderate amounts of wine, and low in dairy and meat products", body: "Study: People who follow the Mediterranean diet have stronger bones, lower cancer rates, and live up to 4 years longer than those who don't.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+
+let dinnerTip23 = Tip(header: "", title: "Reduce calorie consumption by 22% by eating with a red plate", body: "Study: Participants who served themselves pasta alfredo on a white plate loaded their plate with 22% more pasta than those who were given red plates.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
+
+let dinnerTip24 = Tip(header: "", title: "Study: Chewing more increases the number of calories burned during digestion and improves absorption of nutrients from food", body: "The study suggests a partial link between obesity trends and chewing. If you slowed down and chewed more, you could potentially burn 2,000 more calories each month.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
+
+//6
+let dinnerTip25 = Tip(header: "", title: "Prevent weight gain: Slow down and chew your food more", body: "Study: People who focused on doubling the number of times they chewed before swallowing ate 15% less food and 112 fewer calories over the course of a meal.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
 
 //0
 let dinnerTipArray0 = [dinnerTip1, dinnerTip2, dinnerTip3, dinnerTip4]
@@ -168,9 +196,11 @@ let dinnerTopic2 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArr
 let dinnerTipArray3 = [dinnerTip13, dinnerTip14, dinnerTip15, dinnerTip16]
 let dinnerTopic3 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray3)
 
-let dinnerTipArray4 = [dinnerTip17, dinnerTip18, dinnerTip8, dinnerTip12]//WIP
+let dinnerTipArray4 = [dinnerTip17, dinnerTip18, dinnerTip19, dinnerTip20]
 let dinnerTopic4 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray4)
 
+let dinnerTipArray5 = [dinnerTip21, dinnerTip22, dinnerTip23, dinnerTip24]
+let dinnerTopic5 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray5)
 
 // MARK: - Dinner (Late)
 
@@ -218,24 +248,33 @@ let dinnerAfter9PMTopic3 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinn
 let morningSnackTitle = "Morning \nSnack"
 let morningSnackIcon = "Sna"
 
-//1
+//0
 let morningSnackTip1 = Tip(header: "🚰", title: "Being thirsty can sometimes be confused with hunger", body: "The body’s thirst signal is similar to the hunger signal, meaning you could reach for a snack when you should be reaching for a drink. Drink water or tea. If you’re still hungry five minutes later, it’s probably actual hunger." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/healthy-eating/eating-when-not-hungry/", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip2 = Tip(header: "🧠", title: "Missed Breakfast? Improve memory and reduce anxiety by eating a ceral bar", body: "Study: When participants ate a cereal bar as midmorning snack, especially if they hadn’t eaten breakfast, they became much more alert and less anxious than those who didn’t snack. \n\nCheck the label, because most prepackaged cereal bars — even fiber and protein-packed ones — contain more sugar than your dietician would recommend." , sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip3 = Tip(header: "🥜", title: "People who regularly ate almonds as a mid-morning snack reported feeling less hungry at lunch and at dinner and ate fewer calories daily than non-almond eaters", body: "While the amount, frequency, and types of snacks consumed throughout the world continues to contribute to the obesity epidemic, some snacks, such as almonds, nuts and other high-fiber snacks, may limit overall daily food consumption." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2013/07/130716115723.htm", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip4 = Tip(header: "💻", title: "Don't eat your snack while doing something else — like surfing the Internet, watching TV, or working at your desk", body: "Often times we find ourselves mindlessly snacking because of certain emotions or situations (boredom, loneliness, stress). Start to notice when your emotions are fueling your eating and try to find a different outlet for those emotions." , sourceName: "Eating Bird Food", sourceURL: "https://www.eatingbirdfood.com/how-to-stop-mindless-snacking/", sponsorLogo: "", sponsorURL: "")
 
-//2 WIP
-let morningSnackTip5 = Tip(header: "🤔", title: "Year-long study finds dieters who ate a mid-morning snack lost less weight (7% of their body weight) compared to those those who did not eat a mid-morning snack (11% of their body weight)", body: "Because there's usually a shorter interval between breakfast and lunch, researchers believe that mid-morning snacking may be a reflection of mindless eating habits rather than eating because of true hunger. They recommend that those looking to lose weight listen to their hunger and have a snack if they go a long time — like 5 hours — between meals." , sourceName: "Shape", sourceURL: "https://www.shape.com/blogs/shape-your-life/want-lose-weight-when-you-eat-your-snack-food-matters-study-finds", sponsorLogo: "", sponsorURL: "")
+//1
+let morningSnackTip5 = Tip(header: "🤔", title: "Don't eat a mid-morning snack. Dieters who did not eat a mid-morning snack lost more weight (11% of their body weight) than those who ate a mid-morning snack (7% of their body weight)", body: "Because there's usually a shorter interval between breakfast and lunch, researchers believe that mid-morning snacking may be a reflection of mindless eating habits rather than eating because of true hunger. They recommend that those looking to lose weight listen to their hunger and have a snack if they go a long time — like 5 hours — between meals." , sourceName: "Shape", sourceURL: "https://www.shape.com/blogs/shape-your-life/want-lose-weight-when-you-eat-your-snack-food-matters-study-finds", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip6 = Tip(header: "🥗", title: "Reduce premature skin aging: Avoid eating highly processed or sugary foods. Eat more whole grains, fruits and vegetables", body: "Avoid eating highly processed or sugary foods because they cause inflammation at the cellular level which can speed up skin aging. \n\nEat more antioxidant-rich fruits and vegetables – such as berries, citrus fruits, kiwi, pineapple, broccoli and red and green peppers – because antioxidants can help reduce the signs of aging (sagging and wrinkling of the skin)." , sourceName: "U.S. News & World Report", sourceURL: "https://health.usnews.com/wellness/aging-well/articles/2017-01-09/6-surprising-factors-that-can-accelerate-the-aging-of-your-skin", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip7 = Tip(header: "", title: "Live longer: Eat 2 ounces of nuts every day", body: "Study: person who ate nuts at least 5 times per week, 2 ounces per serving, lived on average about 2 years longer than those who didn't eat nuts. \n\nThe best nuts are almonds, peanuts, pecans, pistachios, hazelnuts, walnuts, and pine nuts.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let morningSnackTip8 = Tip(header: "", title: "Don't drink diet soda because it gives you belly fat. Drink black tea instead, for a caffeine buzz without the weight gain", body: "While switching from regular soda to diet soda saves you calories, researchers monitored 475 adults for 10 years and found that the participants who drank diet soda saw a 70% increase in waist circumference compared with those who didn’t drink any soda. And the participants who drank more than 2 diet sodas a day suffered a 500% waist expansion. \n\nThe same researchers conducted a separate study on mice that indicates it might be the aspartame that causes the weight gain. Aspartame raises blood glucose levels to a point where the liver cannot handle it all, so the excess glucose is converted into fat.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
 
 
+//2
+let morningSnackTip9 = Tip(header: "", title: "Lose belly fat: Don't eat a mid-morning snack. Wait until the afternoon to have a snack", body: "Study: Mid-morning snackers tended to consume more throughout the day than afternoon snackers. Afternoon snackers, on the other hand, tend to choose good snacks. Afternoon snacking was associated with a slightly higher intake of filling fiber and fruits and vegetables.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
 
+//0
 let morningSnackTipArray0 = [morningSnackTip1, morningSnackTip2, morningSnackTip3, morningSnackTip4]
 let morningSnackTopic0 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray0)
 
-let morningSnackTipArray1 = [morningSnackTip5, morningSnackTip6, morningSnackTip7, morningSnackTip2]
+//1
+let morningSnackTipArray1 = [morningSnackTip5, morningSnackTip6, morningSnackTip7, morningSnackTip8]
 let morningSnackTopic1 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray1)
+
+//2
+let morningSnackTipArray2 = [morningSnackTip9, morningSnackTip6, morningSnackTip7, morningSnackTip2]
+let morningSnackTopic2 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray2)
 
 // MARK: - AfternoonSnack
 
@@ -254,7 +293,8 @@ let afternoonSnackTip7 = Tip(header: "🥜", title: "Eating too few nuts and see
 let afternoonSnackTip8 = Tip(header: "🥕", title: "Eat 8 portions of fruit and vegetables each day to increase happiness", body: "Researchers found that happiness increased incrementally for each extra daily portion of fruit and vegetables up to eight portions per day. The well-being improvements occurred within 24 months." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2016/07/160710094239.htm", sponsorLogo: "", sponsorURL: "")
 
 //3 (WIP)
-let afternoonSnackTip9 = Tip(header: "🍎", title: "Study finds afternoon snackers ate more fruits and vegetables in a day compared to those who didn't snack between lunch and dinner", body: "Adding a snack might help people deal better with hunger and ultimately help them to make more sound choices at their next meal. \n\nHealthy snacks include fresh fruits; non-starchy vegetables; proteins such as low-fat yogurt, string cheese, or a small handful of nuts; whole-grain crackers; and non-calorie beverages such as water, coffee and tea. \n\nUnhealthy snacks include empty-calorie items that contribute fat, salt, sugar and little nutritional value, such as potato chips and sugar-sweetened beverages." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2011/11/111128132716.htm", sponsorLogo: "", sponsorURL: "")
+let afternoonSnackTip9 = Tip(header: "🍎", title: "Study finds afternoon snackers ate more fruits and vegetables in a day compared to those who didn't snack between lunch and dinner", body: "Adding a snack might help people deal better with hunger and ultimately help them to make healthier choices at their next meal. \n\nHealthy snacks include fresh fruits; non-starchy vegetables; proteins such as low-fat yogurt, string cheese, or a small handful of nuts; whole-grain crackers; and non-calorie beverages such as water, coffee and tea. \n\nUnhealthy snacks include empty-calorie items that contribute fat, salt, sugar and little nutritional value, such as potato chips and sugar-sweetened beverages." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2011/11/111128132716.htm", sponsorLogo: "", sponsorURL: "")
+let afternoonSnackTip10 = Tip(header: "", title: "Live longer: eat nuts daily", body: "Study: People who consumed at least 3 servings of nuts per week had a 39% lower risk of premature death. Nuts are rich in protein, fiber, and  antioxidants." , sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/13-habits-linked-to-a-long-life", sponsorLogo: "", sponsorURL: "")
 
 let afternoonSnackTipArray0 = [afternoonSnackTip1, afternoonSnackTip2, afternoonSnackTip3, afternoonSnackTip4]
 let afternoonSnackTopic0 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray0)
@@ -262,7 +302,7 @@ let afternoonSnackTopic0 = Topic(title: afternoonSnackTitle, icon: afternoonSnac
 let afternoonSnackTipArray1 = [afternoonSnackTip5, afternoonSnackTip6, afternoonSnackTip7, afternoonSnackTip8]
 let afternoonSnackTopic1 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray1)
 
-let afternoonSnackTipArray2 = [afternoonSnackTip9, afternoonSnackTip8, afternoonSnackTip7, afternoonSnackTip6]
+let afternoonSnackTipArray2 = [afternoonSnackTip9, afternoonSnackTip10, afternoonSnackTip4, afternoonSnackTip6]
 let afternoonSnackTopic2 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray2)
 
 // MARK: - LateNightSnack
@@ -426,7 +466,14 @@ let gymTip43 = Tip(header: "🚰", title: "Drink 16 ounces of extra water before
 
 let gymTip44 = Tip(header: "", title: "Lose Weight: Drink 16 ounces of water before every meal", body: "Study: Over the course of 12 weeks, dieters who drank 16 ounces of water before meals, 3 times per day, lost about 5 pounds more than dieters who did not increase their water intake. \n\nWater promotes weight loss because it fills up the stomach with a substance that has zero calories. People feel fuller as a result, and eat less calorie-containing food during the meal.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 
+//11
+let gymTip45 = Tip(header: "", title: "Lose Belly Fat: Don't eat before your workout", body: "Though fasted cardio isn’t suitable for everyone, a study found that exercising in a fasted state can burn almost 20% more fat compared with exercising with fuel in your belly. If you must eat before a workout, make sure it’s a light snack.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
+let gymTip46 = Tip(header: "", title: "Lose weight: Don't bring bottled water to the gym. Instead, bring a reusable, BPA-free water bottle", body: "Not only does bottled water drain your wallet, it may also slow your weight loss progress, due to the BPA in the plastic. BPA is a chemical that’s been linked to obesity and belly fat, according to a Harvard study. \n\nTrade in your throw-away bottle for the reusable, BPA-free variety.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
+let gymTip47 = Tip(header: "", title: "Burn more fat: Do a 20 minute high-intensity interval training (HIIT) workout instead of a 40 minute steady pace workout", body: "Study: When women performed a 20-minute HIIT workout 3 times per week, they shed nearly 6 pounds more than those who exercised for 40 minutes 3 times a week at a steady pace. \n\nWhile HIIT is of shorter duration than a regular cardio workout, it results in greater post-exercise oxygen consumption, meaning that you continue burning calories for a period of time afterward.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
+let gymTip48 = Tip(header: "", title: "Burn more fat: Don't only do cardio. Weight training helps you get and maintain a lean physique", body: "The more muscle mass you have the faster your metabolism. Weight training causes you to burn more calories per workout than cardio sessions, and you continue to burn them post workout.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
 
+//12
+let gymTip49 = Tip(header: "", title: "Unless you’re challenging your muscles with heavy enough weights, you won’t see any physical changes", body: "“If you’re doing more than 10 reps with ease, your weight probably isn’t heavy enough,” warns personal trainer Dustin Hassard. “Vary your reps and consistently increase the amount you’re lifting to see results.” \n\nAnd after your workout, replenish your tired muscles with a protein shake.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
 
 
 let gymTipArray0 = [gymTip1, gymTip2, gymTip3, gymTip4]
@@ -598,26 +645,32 @@ let AMRoutineTopic3 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMR
 let AMGetReadyTitle = "Getting \nReady"
 let AMGetReadyIcon = "Get"
 
-//1
+//0
 let getReadyAM0 = Tip(header: "🚰", title: "Drink a glass of water to rehydrate", body: "Every night, your body goes through a fast while you’re asleep, leaving you dehydrated when you wake up. Drink eight ounces of water as soon as you’re up to hydrate.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
 let getReadyAM1 = Tip(header: "🚿", title: "Showering or bathing in water that’s too hot will dry out your skin and cause it to age prematurely", body: "Warm water is much better. Apply moisturiser while your skin is still damp – it’ll be absorbed more easily." , sourceName: "Health24", sourceURL: "https://www.health24.com/Medical/Flu/Health-tips/45-best-health-tips-ever-20120721", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let getReadyAM2 = Tip(header: "👔", title: "The colors of our clothes do affect our moods and productivity", body: "Wear these colors: \n• Blue = Stability \n• Red = Passion \n• Yellow = Happiness \n• Orange = Energy \n• Green = Success \n• Purple = Luxury \n• Black = Power \n• White = Cleanliness \n\nAvoid this color: \n• Grey = Quiet", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/color-psychology/", sponsorLogo: "", sponsorURL: "")
 let getReadyAM3 = Tip(header: "👅", title: "Avoid morning breath. Brush your tongue", body: "More than 300 types of bacteria accumulate in your mouth while you sleep, and a speedy tooth-brushing job isn’t going to eliminate your morning breath fully. Take an extra minute to brush your tongue to enjoy a fresher feeling.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
 
-//2
+//1
 let getReadyAM4 = Tip(header: "👋", title: "Say goodbye to everyone before you leave home", body: "Before you head out the door, kiss everyone you love in your house. Physically connecting with your loved ones will frame your day with positivity and a reminder of what’s important to you, along with reducing stress. \n\nIf you live with roommates, then wish them a great day.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/happy-morning-routine/", sponsorLogo: "", sponsorURL: "")
 let getReadyAM5 = Tip(header: "👖", title: "Avoid wearing jeans and baggy clothes because they are associated with being in a depressed mood", body: "100 women were asked what they wore when feeling depressed and more than half of them said jeans. Only a third would wear jeans when feeling happy. And 57% of the women said they would wear a baggy top when depressed, yet a mere 2% would wear one when feeling happy. \n\nThe study found that 'happy' clothes -- ones that made women feel good -- were well-cut, figure enhancing, and made from bright and beautiful fabrics. The psychologists conclude that the strong link between clothing and mood state suggests we should put on clothes that we associate with happiness, even when feeling low.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2012/03/120308062537.htm", sponsorLogo: "", sponsorURL: "")
 let getReadyAM6 = Tip(header: "😁", title: "Feel immediately happier by smiling in the mirror", body: "Seeing your own smile reduces stress and ‘tricks’ your brain into feeling happy even if you’re not feeling it.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 let getReadyAM7 = Tip(header: "☀️", title: "Wear sunscreen every day (not just in the summer and not just on sunny days)", body: "Ultraviolet rays that are the cause of sun damage, wrinkles, and skin cancer are always present. They are independent of cold or hot weather, and are not blocked by clouds. \n\nWear broad spectrum sunscreen shield against UVA and UVB rays. A minimum of SPF 15 or 30 is recommended for everyday wear. When in the sun, it’s important to reapply sunscreen to exposed areas every 2 hours.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/katiechang/2017/05/24/why-you-need-to-wear-sunscreen-every-day-not-just-in-the-summer/#6e92a9e87c06", sponsorLogo: "", sponsorURL: "")
 
-//3
+//2
 let getReadyAM8 = Tip(header: "📰", title: "Don't consume negative news in the morning because it makes you less effective throughout the day. Instead, listen to uplifting, positive news (or audio) in morning", body: "Study: Individuals who watched just 3 minutes of negative news in the morning had a 27% greater likelihood of reporting their day as unhappy 6 to 8 hours later compared to the individuals who watched 3 minutes of solutions-focused news in the morning. The solution-focused news group watched stories of resilience to build the belief that our behavior matters.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/09/consuming-negative-news-can-make-you-less-effective-at-work", sponsorLogo: "", sponsorURL: "")
 let getReadyAM9 = Tip(header: "👕", title: "Free up your brainpower: Wear the same type of clothes each day", body: "Steve Jobs, Mark Zuckerberg, and Barack Obama have all applied this idea to their lives. Wearing the same thing each day frees up the brainpower you would have put into picking out an outfit to make other, more important decisions." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/barack-obama-mark-zuckerberg-wear-the-same-outfit-2015-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let getReadyAM10 = Tip(header: "👔", title: "Don't wear grey clothes to work", body: "Colors do affect our moods and productivity. Grey inspires people to be passive, uninvolved and have a lack of energy. \n\nIf you like wearing grey, pairing it with a brighter color will help offset the effect.", sourceName: "Science of People", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+let getReadyAM11 = Tip(header: "👖", title: "Reduce belly fat: Dress causually to work", body: "Researchers found that people who wore denim to work took almost 500 more steps (about a quarter mile) throughout the day than they did on days when they wore more formal attire. Over time, those additional step can help you maintain your lean physique.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+
+//3
+let getReadyAM12 = Tip(header: "", title: "Opening your shades in the morning helps with weight loss", body: "Study: People who get direct exposure to sunlight in the mornings between 8 am and noon reduce their risk of weight gain—regardless of how much they eat. Researchers theorize that the morning sun helps to synchronize metabolism so we burn fat more efficiently.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
+
+
 
 let getReadyAMTipArray0 = [getReadyAM0, getReadyAM1, getReadyAM2, getReadyAM3]
 let getReadyAMTipArray1 = [getReadyAM4, getReadyAM5, getReadyAM6, getReadyAM7]
-let getReadyAMTipArray2 = [getReadyAM8, getReadyAM9, getReadyAM10, getReadyAM7]
+let getReadyAMTipArray2 = [getReadyAM8, getReadyAM9, getReadyAM10, getReadyAM11]
 
 let getReadyAMTopic0 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray0)
 let getReadyAMTopic1 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray1)
@@ -753,8 +806,8 @@ let barTip19 = Tip(header: "😐", title: "Drinking too much may cause depressio
 let barTip20 = Tip(header: "🍺", title: "The U.S. government defines \"moderate drinking\" as one drink for women per day and two for men", body: "Drinking too much alcohol can add to your waistline and increase the risk of several cancers (i.e., breast, colon, esophagus).", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/09/harvard-study-says-these-5-habits-may-help-you-live-10-years-longer.html", sponsorLogo: "", sponsorURL: "")
 
 //
-let barTip21 = Tip(header: "", title: "Live longer: Drinking 1-2 glasses of alcohol a day is the most you need to take advantage of its health benefits", body: "Studies show that people who have 1 serving of beer, wine, or spirits per day may accrue some health benefits. Red wine offers an extra bonus in that it contains artery-scrubbing polyphenols that may help fight arteriosclerosis. \n\nBeware, however, of the toxic effects of alcohol on the liver and brain - along with increased risk of accidents - when daily consumption exceeds 1-2 glasses. In that case, the risks of drinking can outweigh any health benefits.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-
+let barTip21 = Tip(header: "", title: "Live longer: Drink wine instead of beer or spirits", body: "A 29-year study showed that men who preferred wine were 34% less likely to die early than those who preferred beer or spirits.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/13-habits-linked-to-a-long-life", sponsorLogo: "", sponsorURL: "")
+let barTip22 = Tip(header: "", title: "Live longer: Drinking 1-2 glasses of alcohol a day is the most you need to take advantage of its health benefits", body: "Studies show that people who have 1 serving of beer, wine, or spirits per day may accrue some health benefits. Red wine offers an extra bonus in that it contains artery-scrubbing polyphenols that may help fight arteriosclerosis. \n\nBeware, however, of the toxic effects of alcohol on the liver and brain - along with increased risk of accidents - when daily consumption exceeds 1-2 glasses. In that case, the risks of drinking can outweigh any health benefits.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 
 //WOMEN
@@ -796,6 +849,7 @@ let happyHourTip4 = Tip(header: "🍺", title: "People who drink heavily when th
 //2
 let happyHourTip5 = Tip(header: "💤", title: "'Happy Hour' drinks can affect sleep too", body: "Studies have found that alcohol consumed even 6 hours before bedtime can increase wakefulness during the second half of sleep, even though the alcohol consumed has already been eliminated from the body.", sourceName: "Very Well Mind", sourceURL: "https://www.verywellmind.com/alcohol-and-sleep-66571", sponsorLogo: "", sponsorURL: "")
 
+
 let happyHourTipArray0 = [happyHourTip1, happyHourTip2, happyHourTip3, happyHourTip4]
 let happyHourTopic0 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray0)
 
@@ -827,6 +881,7 @@ let cafeTip12 = Tip(header: "☕️", title: "Drinking coffee is associated with
 // 4
 let cafeTip13 = Tip(header: "🚪", title: "Make kindness a habit: Hold the door for people behind you, especially if the person behind is carrying packages, bags or kids", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
 let cafeTip14 = Tip(header: "🔥", title: "Wait until very hot beverages cool down before drinking. Drinking very hot beverages increases the risk of esophageal cancer", body: "Esophageal cancer is the eighth most common cancer and is often fatal. It is possible that the trauma from drinking very hot beverages leads to cell changes and hence to cancer." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2019/03/20/health/hot-tea-linked-to-higher-cancer-risk-study-intl/index.html", sponsorLogo: "", sponsorURL: "")
+let cafeTip15 = Tip(header: "", title: "Green tea boosts your metabolism and helps burn belly fat", body: "12-week study: Participants who combined a daily habit of 4-5 cups of green tea with a 25-minute workout lost an average of 2 more pounds and more belly fat than the non tea-drinking exercisers. /n/nGreen tea contains catechins, a type of antioxidant that triggers the release of fat from fat cells and helps speed the liver’s capacity for turning fat into energy." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
 
 let cafeTipArray0 = [cafeTip1, cafeTip2, cafeTip3, cafeTip4]
 let cafeTipArray1 = [cafeTip5, cafeTip6, cafeTip7, cafeTip8]
@@ -856,6 +911,9 @@ let cafePMTip6 = Tip(header: "🕛", title: "Avoid caffeine use past noon each d
 let cafePMTip7 = Tip(header: "☕️", title: "Caffeine consumed 6 hours before bed lowers sleep quality", body: "Researchers found that sleep quality was diminished for people who consumed caffeine 6 hours before bed. While participants might not have felt the caffeine in their body, it still affected their sleep amounts by over an hour." , sourceName: "Medium", sourceURL: "https://medium.com/the-mission/the-latest-time-you-should-drink-coffee-according-to-science-8c1db17bca21", sponsorLogo: "", sponsorURL: "")
 let cafePMTip8 = Tip(header: "🔥", title: "Caffeine in coffee, tea, and chocolate may increase the risk of acid reflux", body: "Switching to decaffeinated versions of these drinks can help minimize the symptoms. Chocolate contains both caffeine and cocoa, and both of these increase the symptoms of acid reflux. Alternatively, ginger tea or fat-free milk can help reduce the production of stomach acid." , sourceName: "Medical News Daily", sourceURL: "https://www.medicalnewstoday.com/articles/314886.php", sponsorLogo: "", sponsorURL: "")
 
+//3
+
+
 
 let cafePMTipArray0 = [cafePMTip1, cafePMTip2, cafePMTip3, cafePMTip4]
 let cafePMTipArray1 = [cafePMTip5, cafePMTip6, cafePMTip7, cafePMTip8]
@@ -865,7 +923,7 @@ let cafePMTopic1 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray1)
 
 // MARK: - CAFE, NIGHT
 
-let cafePMTip9 = Tip(header: "🙅‍♀️", title: "Cut down on caffeine in tea, coffee, energy drinks or colas, especially in the evening", body: "Caffeine interferes with the process of falling asleep, and also prevents deep sleep. Instead, have a warm, milky drink or herbal tea." , sourceName: "", sourceURL: "https://www.nhs.uk/live-well/sleep-and-tiredness/10-tips-to-beat-insomnia/", sponsorLogo: "", sponsorURL: "")
+let cafePMTip9 = Tip(header: "🙅‍♀️", title: "Cut down on caffeine in tea, coffee, energy drinks or colas, especially in the evening", body: "Caffeine interferes with the process of falling asleep, and also prevents deep sleep. Instead, have a warm, milky drink or herbal tea." , sourceName: "NHS", sourceURL: "https://www.nhs.uk/live-well/sleep-and-tiredness/10-tips-to-beat-insomnia/", sponsorLogo: "", sponsorURL: "")
 
 // MARK: - BREAKS
 
@@ -1037,7 +1095,7 @@ let groceryStoreTip36 = Tip(header: "", title: "Live longer: Buy darker honey", 
 
 //9
 let groceryStoreTip37 = Tip(header: "", title: "Live longer: Buy goat's milk", body: "Goat milk is a great source of calcium, potassium, and the stress-relieving hormone tryptophan. It's unlikely to cause an allergic reaction and can usually be tolerated by people who are lactose intolerant. It's also easily digestible for older people.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-
+let groceryStoreTip38 = Tip(header: "", title: "Prevent weight gain: Use the self-checkout kiosks", body: "Study: Impulse purchases dropped 32.1% for women—and 16.7% for men—when they were the ones to scan their items and swipe their credit card. \n\nAlthough not all impulse buys are bad for your belly, 80% of candy and 61% of salty snack purchases are unplanned.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1096,7 +1154,7 @@ let shoppingClothesTip4 = Tip(header: "🎶", title: "Slow music and cool colors
 let shoppingClothesTip5 = Tip(header: "🔥", title: "Easy ways to burn calories while you're shopping", body: "Walk or ride your bike to your destination. If you're driving, park your car as far away from the door as possible when running errands. If you use public transportation, ride standing up and get off a stop early and walk the extra distance. At the mall: take the stairs and skip escalators and elevators.", sourceName: "The Active Times", sourceURL: "https://www.theactivetimes.com/20-easy-ways-build-exercise-your-daily-routine", sponsorLogo: "", sponsorURL: "")
 let shoppingClothesTip6 = Tip(header: "👕", title: "Simplify your day and reduce decision fatigue: buy a work uniform", body: "Steve Jobs, Mark Zuckerberg, and Dr. Dre all use work uniforms. Having a regular uniform makes it quick and easy to get dressed. You can conserve all that decision-making power directly towards more important decisions. A go-to outfit also saves loads of time shopping. You know what you're looking for and can get right to your favorite store. Or better yet, if you know your size, style, and color, you can order everything online -- without the annoyance of sending back returns." , sourceName: "Inc.", sourceURL: "https://www.inc.com/craig-bloem/this-1-unusual-habit-helped-make-mark-zuckerberg-steve-jobs-dr-dre-successful.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let shoppingClothesTip7 = Tip(header: "🤓", title: "Forget luxury goods — rich people are investing more in education and health", body: "In the US, the top 1% have been spending less on material goods since 2007. Showing off wealth is no longer the way to signify having wealth because the rich and middle class can now own the same luxary brand. Instead, the rich are investing in education and health to advance their social status and wealth." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/discreet-wealth-new-status-symbol-rich-people-2018-11", sponsorLogo: "", sponsorURL: "")
-let shoppingClothesTip8 = Tip(header: "😀", title: "People feel happier when they buy something for someone else then when they buy something for themselves", body: "This happiness boost was the same regardless of whether the gift cost $20 or $100. The study found that doing good deeds for others makes people happier, and makes them more likely to do more good deeds in the future." , sourceName: "The Greater Good Science Center at UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/kindness_makes_you_happy_and_happiness_makes_you_kind", sponsorLogo: "", sponsorURL: "")
+let shoppingClothesTip8 = Tip(header: "😀", title: "People feel happier when they buy something for someone else than when they buy something for themselves", body: "This happiness boost was the same regardless of whether the gift cost $20 or $100. The study found that doing good deeds for others makes people happier, and makes them more likely to do more good deeds in the future." , sourceName: "The Greater Good Science Center at UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/kindness_makes_you_happy_and_happiness_makes_you_kind", sponsorLogo: "", sponsorURL: "")
 
 //3 WIP(1)
 let shoppingClothesTip9 = Tip(header: "💸", title: "Research: Most material possessions don’t make us happier, they make less happy", body: "We think the things we buy will bring us happiness, but then we get them and we wonder ‘what’s next? Instead, it’s things like experiences and having more time to do things we love -- and spend time with people we love -- that drive happiness. The deepest pleasures are derived from interpersonal love, warm relationships, giving, appreciation, and gratitude. ", sourceName: "MarketWatch", sourceURL: "https://www.marketwatch.com/story/the-dark-reasons-so-many-rich-people-are-miserable-human-beings-2018-02-22", sponsorLogo: "", sponsorURL: "")
@@ -1151,6 +1209,7 @@ let commuteAMTip19 = Tip(header: "🎧", title: "A 5 year study of rich and poor
 // MON
 let commuteAMTip20 = Tip(header: "🌻", title: "Improve your mood by taking the scenic route for your morning commute", body: "Research finds that simply seeing beautiful flowers increases happiness. The happiness boost is greatest for night owls who have a hard time getting going in the morning, the researchers found." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip21 = Tip(header: "", title: "Long-distance commuters: Improve health, happiness, and relationships by communiting before or after rush-hour (and try to work from home at least one day a week)", body: "Commuting exacts considerable stress on the human mind and body and on family relationships. Each added travel minute correlates with an increase in health problems. \n\nPeople with longer commute experience more headaches, backaches, digestive problems, higher blood pressure, sleep disturbances, fatigue, and concentration problems compared to those with shorter commutes, studies show.", sourceName: "Thrive Global", sourceURL: "https://www.scientificamerican.com/article/commuting-takes-its-toll/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip22 = Tip(header: "", title: "Use the stairs instead of the elevator, and you’ll burn twice as many calories as you do walking", body: "Study: A 150-pound person could lose about 6 pounds per year just by climbing up 2 flights of stairs every day. Increase that up to 6 flights, and you could lose 18 pounds without ever hitting the gym.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/easy-ways-to-burn-calories/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 // MON
@@ -1175,7 +1234,7 @@ let commuteAMTopic4 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: com
 
 //WEEK 2
 //MON
-let commuteAMTipArray5 = [commuteAMTip20, commuteAMTip21, commuteAMTip15, commuteAMTip19]//WIP
+let commuteAMTipArray5 = [commuteAMTip20, commuteAMTip21, commuteAMTip22, commuteAMTip19]//WIP
 let commuteAMTopic5 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray5)
 
 // MARK: - Commute, PM
@@ -1215,6 +1274,11 @@ let commuteFridayPMTip1 = Tip(header: "", title: "Reduce stress: Listen to class
 let commuteFridayPMTip2 = Tip(header: "", title: "63% of millionaires listen to audiobooks during their commute", body: "By increasing your knowledge, your are able to see more opportunities and separate from the competition, which translate into more money. \n\nMillionaires read current events, educational career-related material, personal development, biographies of successful people, and history. Only 11% of them read purely for entertainment purposes.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", sponsorLogo: "", sponsorURL: "")
 let commuteFridayPMTip3 = Tip(header: "", title: "Calm down before you get home. Extreme traffic increases the likelihood of domestic violence by 6%", body: "This is because extreme traffic leads to negative mental health outcomes, including stress and aggression. And domestic violence has been shown to be sensitive to these negative emotions caused by extreme traffic. \n\nCalm down by taking a couple of deep breaths, thinking of one thing you're grateful for, listening to relaxing music, or walking a few blocks before you get home.", sourceName: "The Conversation", sourceURL: "https://theconversation.com/the-stress-of-sitting-in-traffic-can-lead-to-more-crime-72323", sponsorLogo: "", sponsorURL: "")
 //WEEK 2
+//MON
+let commutePMTip17 = Tip(header: "", title: "Lose weight: Singing in your car helps your burn calories", body: "Turning up the radio and singing along to your favorite tunes will help you burn calories during your commute. If you spend 40 minutes singing, you’ll burn about 100 calories." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/easy-ways-to-burn-calories/", sponsorLogo: "", sponsorURL: "")
+
+
+
 //FRI
 let commuteFridayPMTip4 = Tip(header: "⚠️", title: "Warning. Friday from 4:00 p.m. to 7:00 p.m. is the day and time when the most road rage occurs during the week", body: "An analysis of Instagram posts hashtagged #RoadRage found that road rage mentions peak on Friday from 4:00 p.m to 7:00 p.m. \n\nNever challenge fellow motorists. Try to use your horn only when necessary as it can anger other drivers. If you’re concerned about an aggressive driver, immediately report the situation to law enforcement." , sourceName: "Auto Insurance Center", sourceURL: "https://www.autoinsurancecenter.com/roadrage-instagram-posts.htm", sponsorLogo: "", sponsorURL: "")
 
@@ -1239,6 +1303,10 @@ let commutePMTopic3 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: com
 //FRI
 let commuteFridayPMTipArray0 = [commuteFridayPMTip0, commuteFridayPMTip1, commuteFridayPMTip2, commuteFridayPMTip3]
 let commuteFridayPMTopic0 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commuteFridayPMTipArray0)
+
+//WEEK 2
+//MON
+
 
 // MARK: - Work, AM
 
@@ -1455,7 +1523,7 @@ let workPMTip44 = Tip(header: "", title: "Sign it's time to quit your job: You'v
 let workPMTip45 = Tip(header: "", title: "Getting a higher degree will increase your lifetime earnings, study finds", body: "Men with bachelor's degrees earn approximately $900,000 more in median lifetime earnings than high school graduates. Men with graduate degrees earn $1.5 million more in median lifetime earnings than high school graduates. \n\nWomen with bachelor's degrees earn $630,000 more in median lifetime earnings than high school graduates. Women with graduate degrees earn $1.1 million more than high school graduates." , sourceName: "US Social Security Administration", sourceURL: "https://www.ssa.gov/policy/docs/research-summaries/education-earnings.html", sponsorLogo: "", sponsorURL: "")
 let workPMTip46 = Tip(header: "😴", title: "Increase productivity at work by taking a nap. Many tech companies have nap rooms for this very reason", body: "Sleepiness tends to peak around 2 p.m. making it a good time for a nap. Some of the greatest creative minds, most notably Thomas Edison, were or are huge fans of naps. Napping for 15 minutes you could be doing yourself (and your employer) a huge favor." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/successful-people-do-during-afternoon-lull-2014-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let workPMTip47 = Tip(header: "💵", title: "Job switchers are earning 48% higher annual pay increases in 2018 than those who stay in their jobs", body: "The pay raise gap between job seekers and job stayers in 2018 hasn't been this big since 2000. More workers are quitting their jobs and taking advantage of a labor market that's prioritizing employees over employers." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-get-a-raise-quit-your-job-2018-7", sponsorLogo: "", sponsorURL: "")
-
+let workPMTip48 = Tip(header: "💵", title: "Millionaire Habit: Go above and beyond in work and business", body: "Unsuccessful people have “it’s not in my job description” syndrome. Consequently, they are never given more responsibility, and their wages grow very little from year to year—if they keep their jobs at all. \n\nWealthy individuals, on the other hand, make themselves invaluable to their employers or customers, writing articles related to their industry, speaking at industry events and networking. " , sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", sponsorLogo: "", sponsorURL: "")
 
 
 // Male CEOs with lower-pitched voices tended to manage large companies, make $187,000 a year more than their higher-pitched peers, and last in political office on average five months longer.
@@ -1618,8 +1686,9 @@ let workLateTopic1 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLa
 
 // MARK: - Work: Night Shift
 let nightShiftWorkersTip1 = Tip(header: "🍽", title: "Night-shift workers has an increased risk of obesity as well as cardiovascular, cerebrovascular and gastrointestinal disorders", body: "Human circadian rhythms in sleep and metabolism are synchronized to the daily rotation of the earth, so that when the sun goes down you are supposed to be sleeping, not eating. When sleep and eating are not aligned with the body’s internal clock, it can lead to changes in appetite and metabolism, which could lead to weight gain." , sourceName: "Northwestern University", sourceURL: "https://www.northwestern.edu/newscenter/stories/2011/05/night-owls-weight-gain.html", sponsorLogo: "", sponsorURL: "")
+let nightShiftWorkersTip2 = Tip(header: "", title: "People burn fewer calories when they work after the sun’s gone down and sleep during the day", body: "Study: When participants slept during the day, researchers found that they burned 52 to 59 fewer calories than they did while sleeping in the evening—likely because the schedule messed with their circadian rhythm, the body’s internal clock that plays a major role in metabolism function." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
 
-
+// https://www.eatthis.com/night-shift-weight-loss/
 
 // MARK: - Work by Quarter (WIP)
 // Display in Q4
@@ -1769,6 +1838,8 @@ let homeAMTip4 = Tip(header: "", title: "Live longer: Put tempting foods in hard
 //
 let homeAMTip5 = Tip(header: "☀️", title: "Get outside. Spending too much time indoors disrupts your natural sleep cycle", body: "Human sleep cycles have evolved to respond to natural daylight. Not getting enough sunlight affects the resetting of your circadian clock and, as a result, reduces your sleep quality." , sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/sponsor-story/velux/2018/05/15/indoor-generation-and-health-risks-spending-more-time-inside/610289002/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homeAMTip6 = Tip(header: "", title: "Live longer: Showcase fruits and vegetables to increase your chances of eating them instead of unhealthy foods", body: "Put a beautiful fruit bowl in the middle of your kitchen table. At the bottom of it, leave a note that reads \"Fill Me.\" \n\nInstead of hiding vegetables in the refrigerator compartment that says \"Produce,\" put them front and center on shelves where you can see them.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let homeAMTip7 = Tip(header: "🍟", title: "Study: People living near fast-food restaurants were significantly less able to enjoy pleasurable activities that require savoring", body: "The study's authors propose that's because fast food can incite people to feel more impatient, diminishing their ability to slow down and savour life's simpler joys. The findings indicate the importance of thinking more carefully about the cues we're exposed to in our everyday environments and how they can affect our psychology." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2014/06/140602155905.htm", sponsorLogo: "", sponsorURL: "")
+
 
 let homeAMTipArray0 = [homeAMTip1, homeAMTip2, homeAMTip3, homeAMTip4]
 let homeAMTopic0 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray0)
@@ -1806,11 +1877,8 @@ let homePMTip16 = Tip(header: "😳", title: "Scientists recommend washing your 
 
 //4
 let homePMTip17 = Tip(header: "🗑", title: "Reduce clutter: Sort new mail near a recycle bin", body: "Don't drop mail on the counter with the rest of the mail for the month. Much of the mail you receive is junk. Mail can generally be sorted into: \n\n1. Recycle bin: junk mail you don’t need. \n\n2. To-do pile: event invitations or bills (if you still use manual payment methods). \n\n3. To-review pile: magazines, periodicals, personal letters" , sourceName: "Stanford BeWell", sourceURL: "https://bewell.stanford.edu/a-clean-well-lighted-place/", sponsorLogo: "", sponsorURL: "")
-
 let homePMTip18 = Tip(header: "🛋", title: "Each hour spent sitting in front of the TV per day raised a person’s risk of death from cardiovascular disease by 18% and the risk of cancer death by 9%", body: "Even if someone has a healthy body weight, prolonged periods of sitting have an unhealthy influence on blood sugar and blood fat levels. Compared with those watching less than 2 hours of TV, people who sat in front of the box for more than 4 hours a day were 80% more likely to die for reasons linked to heart and artery disease." , sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/science/2010/jan/11/watching-television-increases-death-heart-disease", sponsorLogo: "", sponsorURL: "")
-
 let homePMTip19 = Tip(header: "💪", title: "If you watch TV for 3 hours tonight and do a mini workout during each commercial break, your exercise time will total over 45 minutes", body: "A 150-pound person can burn 300 calories doing body weight exercises in that time. Do one exercise for the duration of each commercial: \n\n• Step forward into a lunge, then step back and switch legs. \n• Get down on the floor and do pushups or crunches. \n• Do dips off the couch. \n• Hold a plank position with your hands or elbows." , sourceName: "Verywell", sourceURL: "https://www.verywellfit.com/how-to-burn-300-calories-while-you-watch-tv-3495599", sponsorLogo: "", sponsorURL: "")
-
 let homePMTip20 = Tip(header: "😰", title: "Clutter in your home makes you more stressed and lowers your ability to process information", body: "Researchers found that when your environment is cluttered, the chaos restricts your ability to focus. Clutter makes you distracted and unable to process information as well as you do in an uncluttered and organized environment. If you want to have less stress and process information as effectively as possible, you need to clear the clutter from your home and work environment." , sourceName: "Stanford BeWell", sourceURL: "https://bewell.stanford.edu/a-clean-well-lighted-place/", sponsorLogo: "", sponsorURL: "")
 
 //5
@@ -1819,10 +1887,11 @@ let homePMTip22 = Tip(header: "🚶‍♂️", title: "Go for a walk outside red
 let homePMTip23 = Tip(header: "😳", title: "Clean your kitchen sponges every fews days because they collect billions of bacteria", body: "Best ways to clean sponges: drop them into boiling water for 2 minutes, put them in the microwave for 2 minutes while damp, and replace them when they deteriorate." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homePMTip24 = Tip(header: "", title: "Live longer: Put family first. Establish one room where family members gather daily", body: "Larger homes make it easier for family members to isolate themselves from the group. Smaller homes make it easier for families to bond and spend time together. \n\nSuccessful families make a point of eating at least one meal a day together, spending family time, and taking annual vacations.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
-
 //6
 let homePMTip25 = Tip(header: "", title: "Live longer: Make family a priority. Create a family shrine", body: "People in Okinawa, Japan, live longer than almost anyone on earth. In Okinawan homes, the ancestor shrine is always displayed in the best room of the house. It serves as a constant reminder that we're not islands in time but connected to something bigger. \n\nPick a wall to display pictures of your parents and children, or take annual family pictures and display them in progression.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-let homePMTip26 = Tip(header: "", title: "Read a book. Those who read 7+ books per year are more than 122% more likely to be millionaires as opposed to those who never read or only read 1-3 books per year, survey finds", body: "Reading dramatically correlates with income and higher education, as well as overall happiness. For example, Bill Gates reads 50 books a year and Warren Buffett spends as much as 80% of his day reading." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/04/07/7-rich-habits-of-highly-successful-people.html", sponsorLogo: "", sponsorURL: "")
+let homePMTip26 = Tip(header: "", title: "Millionaire Habit: Read a book. Those who read 7+ books per year are more than 122% more likely to be millionaires as opposed to those who never read or only read 1-3 books per year, survey finds", body: "Reading dramatically correlates with income and higher education, as well as overall happiness. For example, Bill Gates reads 50 books a year and Warren Buffett spends as much as 80% of his day reading." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/04/07/7-rich-habits-of-highly-successful-people.html", sponsorLogo: "", sponsorURL: "")
+let homePMTip27 = Tip(header: "", title: "Prevent weight gain: Keep your TV, laptop, and cell phone out of the bedroom", body: "Researchers found that students with access to one electronic device were 1.47 times as likely to be overweight as kids with no devices in the bedroom. That increased to 2.57 times for kids with three devices. Keep your electronic devices in the living room." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
+
 
 let homePMTipArray0 = [homePMTip1, homePMTip2, homePMTip3, homePMTip4]
 let homePMTopic0 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray0)
@@ -1842,7 +1911,8 @@ let homePMTopic4 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArr
 let homePMTipArray5 = [homePMTip21, homePMTip22, homePMTip23, homePMTip24]
 let homePMTopic5 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray5)
 
-
+let homePMTipArray6 = [homePMTip25, homePMTip26, homePMTip27, homePMTip24]//WIP
+let homePMTopic6 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray6)
 
 // MARK: - AM Bathroom
 
@@ -1953,9 +2023,11 @@ let bedtimeTip34 = Tip(header: "😴", title: "Prevent unnecessary wrinkles by s
 //TUES
 let bedtimeTip35 = Tip(header: "🌡", title: "Your bedroom should be should be cool (60-67 degrees) and free from any light or noise that can disturb your sleep", body: "Consider using blackout curtains, eye shades, ear plugs, \"white noise\" machines, humidifiers, fans and other devices." , sourceName: "National Sleep Foundation", sourceURL: "https://www.sleepfoundation.org/articles/healthy-sleep-tips", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip36 = Tip(header: "📵", title: "Cellphone or computer use in bed before bedtime increases your risk of insomnia", body: "A study found that a mean usage of 46.6 minutes per night of cellphone and computer before bed were both positively associated with insomnia." , sourceName: "The Ohio State University", sourceURL: "https://u.osu.edu/emotionalfitness/2015/06/17/cell-phone-use-before-bedtime-might-impact-sleep-and-daytime-tiredness/", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip37 = Tip(header: "", title: "Turn your computer off overnight. It helps the planet and your bank account", body: "You can save an average of $14/year. It may not sound like a lot but it’s better off in your pocket than someone else’s." , sourceName: "The Random Acts of Kindness Foundation", sourceURL: "https://www.randomactsofkindness.org/kindness-ideas/942-turn-your-computer-off-overnight", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip38 = Tip(header: "", title: "Study: Participants who slept in the darkest rooms were 21% less likely to be obese than those sleeping in the lightest rooms", body: "That connection is tied to the main sleep hormone produced by our bodies, melatonin. Too little melatonin means that we don’t properly get into sleep mode that you can also think of as belly-fat-blasting mode. \n\nDon't sleep with a night light and look into getting some blackout curtains." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
 
-
-
+//WED
+let bedtimeTip39 = Tip(header: "", title: "Lose belly fat while you sleep: Lower your bedroom's temperature", body: "Colder temperatures subtly enhance the effectiveness of our stores of brown fat, a special kind of fat that keeps you warm by helping you burn through the fat stored in your belly. \n\nParticipants spent a few weeks sleeping in bedrooms with varying temperatures: A neutral 75 degrees, a cool 66 degrees, and a balmy 81 degrees. Sleeping at 66 degrees doubled the subjects' volumes of brown fat, which helped them lose belly fat." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1977,10 +2049,9 @@ let bedtimeTopic3 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTi
 //THUR
 let bedtimeTipArray4 = [ bedtimeTip17,  bedtimeTip18,  bedtimeTip19,  bedtimeTip20]
 let bedtimeTopic4 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray4)
-
 //FRI
 let bedtimeTipArray5 = [ bedtimeFridayTip1,  bedtimeFridayTip2,  bedtimeTip21,  bedtimeTip22]
-let bedtimeTopic5 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray5)
+let bedtimeFriTopic5 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray5)
 //SAT
 let bedtimeTipArray6 = [ bedtimeTip23, bedtimeTip24, bedtimeTip25, bedtimeTip27]
 let bedtimeTopic6 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray6)
@@ -1993,8 +2064,10 @@ let bedtimeTopic7 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTi
 let bedtimeTipArray8 = [ bedtimeTip32,  bedtimeTip33,  bedtimeTip34,  bedtimeTip35]
 let bedtimeTopic8 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray8)
 //TUE
-let bedtimeFriTipArray1 = [ bedtimeTip36,  bedtimeTip30,  bedtimeTip20,  bedtimeTip10]
-let bedtimeFriTopic1 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeFriTipArray1)
+let bedtimeTipArray9 = [ bedtimeTip36,  bedtimeTip37,  bedtimeTip38,  bedtimeTip39]
+let bedtimeFriTopic9 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray9)
+
+//WED
 
 
 // MARK: - Evening Ritual
@@ -2048,7 +2121,8 @@ let restaurantTip4 = Tip(header: "🍽", title: "Reduce weight gain by putting h
 //2
 let restaurantTip5 = Tip(header: "🚪", title: "Make kindness a habit: Hold the door for people behind you, especially if the person behind is carrying bags or kids", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
 
-let restaurantTip6 = Tip(header: "👀", title: "Mindful eating: Look at the colors on the walls", body: "Restaurants with bold, bright colors—think reds and oranges—are stimulating, so you’re more likely to order more. However, softer colors like blues, peaches, grays and pinks encourage a more relaxed, eat-slowly atmosphere." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let restaurantTip6 = Tip(header: "", title: "Prevent weight gain: Sit by a window or in a well-lit part of the restaurant", body: "Study: People ordered healthier foods if they sat by a window or in a well-lit part of the restaurant, but they ate heavier food and ordered more of it if they sat at a dark table or booth. \n\nPeople sitting farthest from the front door ate the fewest salads and were 73% more likely to order dessert. " , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+
 let restaurantTip7 = Tip(header: "🍲", title: "Look for these healthy buzzwords", body: "Roasted, baked, braised, broiled, poached, rubbed, seared, grilled, steamed, sautéed, spiced, seasoned indicate that the food was cooked in the healthiest way possible." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 let restaurantTip8 = Tip(header: "🚶‍♂️", title: "Plan to do some light exercise after dinner", body: "A nice stroll after dinner will not only help you digest, it’ll keep you from ordering something heavy while out. Why? You simply won’t want to feel weighed down and sluggish for a walk." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -2059,25 +2133,44 @@ let restaurantTip11 = Tip(header: "🥘", title: "Fat and calories hide in these
 let restaurantTip12 = Tip(header: "🚪", title: "Make kindness a habit: Leave your server a very generous tip", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
 
 //4
-let restaurantTip13 = Tip(header: "🍟", title: "People living in communities with higher prevalence of fast-food restaurants were significantly less able to enjoy pleasurable activities that require savoring", body: "The study's authors propose that's because fast food can incite people to feel more impatient, diminishing their ability to slow down and savour life's simpler joys. We think about fast food as saving us time and freeing us up to do the things that we want to do. The findings indicate the importance of thinking more carefully about the cues we're exposed to in our everyday environments and how they can affect our psychology." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2014/06/140602155905.htm", sponsorLogo: "", sponsorURL: "")
+let restaurantTip13 = Tip(header: "", title: "Prevent weight gain: Where you sit affects what you order", body: "People sitting farthest from the front door ate the fewest salads and were 73% more likely to order dessert. People sitting at high-top bar tables ordered more salads and fewer desserts. \n\nPeople sitting within 2 tables of the bar drank an average of 3 more beers or mixed drinks (per table of 4) than those sitting within 3 tables of the bar. The closer a table was to a TV screen, the more fried food a person bought." , sourceName: "Today", sourceURL: "https://www.today.com/health/where-fat-tables-are-restaurants-2D80195912", sponsorLogo: "", sponsorURL: "")
+
+let restaurantTip14 = Tip(header: "", title: "Prevent weight gain: Ordering a salad appetizer can reduce total calorie intake over the course of the meal by up to 20%", body: "For a 600-calorie meal, that would mean a savings of about 120 calories—more than a mile on the treadmill." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let restaurantTip15 =  Tip(header: "", title: "Prevent weight gain: Order your dressing on the side", body: "If you order a creamy dressing like Caesar, that would run you about 400 calories. Those who ask for their dressing on the side, however, could cut their calorie intake in half. For that Caesar salad, that translates to 200 fewer calories on your plate that would eventually end up on your love handles and thighs." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+
+let restaurantTip16 = Tip(header: "👀", title: "Mindful eating: Look at the colors on the walls", body: "Restaurants with bold, bright colors—think reds and oranges—are stimulating, so you’re more likely to order more. However, softer colors like blues, peaches, grays and pinks encourage a more relaxed, eat-slowly atmosphere." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/how-to-eat-healthy-at-restaurants/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+//5
+let restaurantTip17 = Tip(header: "", title: "Prevent weight gain: Eat a small snack before going to a restaurant", body: "A series of studies found that eating an apple or a broth-based soup prior to sitting down to a restaurant meal can reduce total calorie intake by 20%. With the average restaurant meal weighing in at 1,128 calories, saving 20% once a day could help you lose up to 23 pounds this year.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
+let restaurantTip18 = Tip(header: "", title: "The Waiter Rule: The way someone treats the wait staff at a restaurant shows how they often feel about, and treat, those who are perceived to be of a lower status. On the other hand, those who are kind, considerate and appreciative of their wait staff are often happier and more successful in their lives", body: "Make a little effort to make eye contact with the person serving you. Smile. Ask how they are doing. They are often dealing with many things 'behind the scenes' both personally and in their job that the customer never knows about. Be compassionate if your food doesn't come out as quickly as you'd like. Sometimes that's because they are short-staffed or the cooks are backed up in the kitchen." , sourceName: "The Random Acts of Kindness Foundation", sourceURL: "https://www.randomactsofkindness.org/kindness-ideas/882-be-kind-to-your-server", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let restaurantTip19 = Tip(header: "", title: "Prevent weight gain: Ask for a veggie appetizer instead of the bread basket", body: "While bread basket can be delicious, it's also void of any major nutritional benefits - and just two slices of the French variety has 376 calories (not including the butter)." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+let restaurantTip20 = Tip(header: "", title: "Study: 3 of the most popular cuisines in the U.S. - American, Chinese and Italian - had the highest calorie counts with an average of 1,495 calories per meal", body: "In 100+ U.S. restaurants, researcher found that a single meal serving - even before adding beverages, appetizers or desserts - sometimes exceeded the caloric requirements for an entire day. \n\nPrevent weight gain: If you want an appetizer, skip dessert, and vice versa. Consider making one or two appetizers your entrée. Avoid sugar-sweetened beverages and remember that alcoholic beverages contain calories, too. Ask for half of your meal to be boxed before it arrives at the table." , sourceName: "Tufts University Health & Nutrition Letter", sourceURL: "https://www.nutritionletter.tufts.edu/issues/12_6/current-articles/92-of-Restaurant-Meals-Too-High-in-Calories_1959-1.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 
 
 
+//1
 let restaurantTipArray0 = [restaurantTip1, restaurantTip2, restaurantTip3, restaurantTip4]
 let restaurantTopic0 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray0)
-
+//2
 let restaurantTipArray1 = [restaurantTip5, restaurantTip6, restaurantTip7, restaurantTip8]
 let restaurantTopic1 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray1)
-
+//3
 let restaurantTipArray2 = [restaurantTip9, restaurantTip10, restaurantTip11, restaurantTip12]
 let restaurantTopic2 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray2)
+//4
+let restaurantTipArray3 = [restaurantTip13, restaurantTip14, restaurantTip15, restaurantTip16]
+let restaurantTopic3 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray3)
+//5
+let restaurantTipArray4 = [restaurantTip17, restaurantTip18, restaurantTip19, restaurantTip20]
+let restaurantTopic4 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray4)
 
-
-
-
-
-
+// MARK: - Movie Theater
+let movieTheaterTip1 = Tip(header: "", title: "Prevent weight gain: Don't buy the theater popcorn", body: "A medium bag of popcorn at Regal Cinemas carries a whopping 1,200 calories, according to an independent lab analysis by Center for Science in the Public. That’s 60% of the day’s calories." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let movieTheaterTip2 = Tip(header: "", title: "Want popcorn? Buy the medlarge popcorn, not the extra-large popcorn", body: "Study: Moviegoers ate 45% more popcorn from extra-large containers than large ones." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 
 
@@ -2087,6 +2180,7 @@ let restaurantTopic2 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: 
 
 let sex0 = Tip(header: "👩", title: "Females should always pee after sex to prevent UTIs", body: "Females are 10 times more likely to get a UTI. Peeing flushes out bacteria in your urethra naturally caused by having sex. It's recommended to pee within 30 minutes after sex.", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/144605-why-pee-after-sex-exactly-why-when-you-should-go-after-every-romp", sponsorLogo: "", sponsorURL: "")
 let sex1 = Tip(header: "👫", title: "The happiest couples have sex at least once a week", body: "Couples who had sex once a week reported being happier than couples who had less sex. And couples who had sex more frequently weren’t any happier than those who had sex once a week. It’s important to maintain an intimate connection with your partner, but you don’t need to have sex everyday as long as you’re maintaining that connection.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
+let sex2 = Tip(header: "👫", title: "Sex helps you burn calories", body: "Research: Women burn off 69 calories during the average sex sesh, while men burn off 100.", sourceName: "Reader's DigesEat This, Not That!", sourceURL: "https://www.eatthis.com/easy-ways-to-burn-calories/", sponsorLogo: "", sponsorURL: "")
 
 // MARK: - Relationships / Couples
 

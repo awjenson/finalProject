@@ -108,6 +108,8 @@ let stressedHint10 = Hint(title: "Navy SEALs use box-breathing to slow down thei
 
 let stressedHint11 = Hint(title: "Psychotherapy helps improve your mental health and future income, 13-year study finds", body: "Men who reported having had stress and mental problems, and consulting a psychotherapist, experienced a 13% income increase in the subsequent year. Women experienced an 8% income increase. The study found gender discrimination to partially explain the difference in income increase. However, consulting a psychotherapist helps women nearly twice as much as men in terms of mental health.", sourceName: "The Conversation", sourceURL: "https://theconversation.com/psychotherapy-can-make-you-richer-especially-if-you-are-a-man-107628")
 
+let stressedHint12 = Hint(title: "Feeling stressed slows your metabolism, which slows your ability to burn fat. Stress also makes your crave fatty and sugar-laden foods", body: "Study: The types of food we crave when we’re stressed out tend to be fatty and sugar-laden. That means it will be far harder for you to say no to those unhealthy foods and snacks.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/")
+
 let stressedHintArray1 = [stressedHint1, stressedHint2]
 let stressedHeader1 = Header(title: stressedTitle, quote: stressedQuote1, hints: stressedHintArray1)
 
