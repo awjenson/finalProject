@@ -27,9 +27,7 @@ class RoundCorneredButton: UIButton {
         titleLabel?.numberOfLines = 2 // if you want unlimited number of lines put 0
         titleLabel?.textAlignment = .center
 
-
         // UI
-
 
         layer.cornerRadius = 12
         layer.borderWidth = 1.4

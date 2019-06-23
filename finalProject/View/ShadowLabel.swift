@@ -34,5 +34,13 @@ class ShadowLabel: UILabel {
 
     }
 
+    func copyLabel() -> UILabel {
+        let label = UILabel()
+        label.font = self.font
+        label.frame = self.frame
+        label.text = self.text
+        return label
+    }
+
 }
 

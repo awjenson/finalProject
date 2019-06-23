@@ -37,6 +37,8 @@ class UserInfoViewController: UIViewController {
     let date = Date()
     let calendar = Calendar.current
 
+    var selectedImage: String?
+
     //Hide status bar (time, wifi, etc.)
     override var prefersStatusBarHidden: Bool {
         return true
@@ -60,25 +62,56 @@ class UserInfoViewController: UIViewController {
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.userInfoVC = self
 
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        leftSwipe.direction = .left
+        self.view.addGestureRecognizer(leftSwipe)
+
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        rightSwipe.direction = .right
+        self.view.addGestureRecognizer(rightSwipe)
+
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        upSwipe.direction = .up
+        self.view.addGestureRecognizer(upSwipe)
+
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        downSwipe.direction = .down
+        self.view.addGestureRecognizer(downSwipe)
+        
+
         setupUI()
 
     }
 
-    func refreshUI() {
+    let appTabBar = MainTabBarViewController()
 
-        print("Refresh UserVC")
 
-//        greetingLabel.text = ""
-//        setNatureImage(to: "")
 
-        dayOfWeekAndHour()
+    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
+
+        print("Swipe")
+        performSegue(withIdentifier: "swipe", sender: self)
 
     }
 
 
+    @IBAction func tapAction(_ sender: Any) {
+        print("Tap")
+        performSegue(withIdentifier: "swipe", sender: self)
+
+    }
+
+    func removeNatureImage() {
+        natureImageView.removeFromSuperview()
+        natureImageView.image = nil
+    }
+
     
 
     func setupUI() {
+        print("UserVC SetupUI")
+
+
 
         // Quote View
         let selectedGradientColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame: quoteView.frame, andColors:[UIColor.clear, UIColor.black])
@@ -88,6 +121,12 @@ class UserInfoViewController: UIViewController {
         dayOfWeekAndHour()
 
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+
+    }
+
+
 
     func dayOfWeekAndHour() {
 
@@ -241,10 +280,7 @@ class UserInfoViewController: UIViewController {
         case 20:
             setNatureImage(to: "dusk\(day)")
 
-        case 21:
-            setNatureImage(to: "night\(day)")
-
-        case 22...23:
+        case 21...24:
             setNatureImage(to: "night\(day)")
 
 
@@ -252,6 +288,90 @@ class UserInfoViewController: UIViewController {
             greetingLabel.text = "Hello"
         }
     }
+
+
+
+
+    let duration = 1.0
+    let fontSizeSmall: CGFloat = 22
+    let fontSizeBig: CGFloat = 40
+    var isSmall: Bool = true
+
+    func reset(_ sender: Any) {
+
+        print("quoteLabel.font.pointSize \(quoteLabel.font.pointSize)")
+
+        var bounds = quoteLabel.bounds
+        quoteLabel.font = quoteLabel.font.withSize(fontSizeSmall)
+        bounds.size = quoteLabel.intrinsicContentSize
+        quoteLabel.bounds = bounds
+
+        quoteLabel.backgroundColor = .blue
+
+        isSmall = true
+
+        enlarge()
+
+
+        isSmall = !isSmall
+    }
+
+    func enlarge() {
+        print("enlarge")
+        print("quoteLabel.font.pointSize \(quoteLabel.font.pointSize)")
+
+
+        var biggerBounds = quoteLabel.bounds
+
+        quoteLabel.font = quoteLabel.font.withSize(fontSizeBig)
+        biggerBounds.size = quoteLabel.intrinsicContentSize
+
+        quoteLabel.transform = scaleTransform(from: biggerBounds.size, to: quoteLabel.bounds.size)
+
+        quoteLabel.bounds = biggerBounds
+
+        UIView.animate(withDuration: duration) {
+            self.quoteLabel.transform = .identity
+            self.quoteLabel.bounds = biggerBounds
+            self.shrink()
+        }
+    }
+
+
+
+    func shrink() {
+        print("shrink")
+        print("quoteLabel.font.pointSize \(quoteLabel.font.pointSize)")
+
+        let labelCopy = quoteLabel.copyLabel()
+        var smallerBounds = labelCopy.bounds
+        print("quoteLabel.bounds in shrink \(quoteLabel.bounds)")
+        labelCopy.font = quoteLabel.font.withSize(fontSizeSmall)
+        smallerBounds.size = labelCopy.intrinsicContentSize
+
+        let shrinkTransform = scaleTransform(from: quoteLabel.bounds.size, to: smallerBounds.size)
+
+        UIView.animate(withDuration: duration, animations: {
+            self.quoteLabel.transform = shrinkTransform
+        }, completion: { done in
+            self.quoteLabel.font = labelCopy.font
+            self.quoteLabel.transform = .identity
+            self.quoteLabel.bounds = smallerBounds
+
+            self.enlarge()
+        })
+    }
+
+    private func scaleTransform(from: CGSize, to: CGSize) -> CGAffineTransform {
+
+        var scaleX = to.width / from.width
+        var scaleY = to.height / from.height
+
+        return CGAffineTransform(scaleX: scaleX, y: scaleY)
+    }
+
+
+
 
 
 /*
@@ -1280,10 +1400,12 @@ class UserInfoViewController: UIViewController {
 
 ////////////////////////////////////////////////////////////////
 
-    func setNatureImage(to imageTitle: String) {
+    func setNatureImage(to imageTitle: String?) {
+
         print("imageTitle: \(imageTitle)")
-        performUIUpdatesOnMain {
-            self.natureImageView.image = UIImage(named: imageTitle)
+
+        if let imageToLoad = imageTitle {
+            self.natureImageView.image = UIImage(named: imageToLoad)
         }
     }
 

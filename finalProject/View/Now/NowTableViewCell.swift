@@ -48,10 +48,9 @@ class NowTableViewCell: UITableViewCell {
 
         tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
         tipIconView.clipsToBounds = true
+        tipIconView.layer.borderWidth = 1
+        tipIconView.layer.borderColor = UIColor.init(hexString: "2283F6")?.cgColor
 
-       
-
-//        setupProfileImage(stringName: "coffee")
 
 //        headerImageView.image = UIImage(named: "coffee")
         titleLabel.text = tip.title

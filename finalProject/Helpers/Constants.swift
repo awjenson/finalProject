@@ -10,6 +10,39 @@ import Foundation
 
 struct Constants {
 
+    struct Icon {
+        static let snack = "icons8-apple"
+        static let job = "icons8-commercial_development_management"
+        static let date = "icons8-champagne"
+        static let bar = "icons8-cocktail"
+        static let cafe = "icons8-coffee"
+        static let home = "icons8-exterior"
+        static let food = "icons8-restaurant"
+        static let restaurant = "icons8-food"
+        static let commute = "icons8-transportation"
+        static let bedtime = "icons8-sleep"
+        static let cantSleep = "icons8-undergo_insomnia"
+        static let gym = "icons8-weightlift"
+        static let shopping = "icons8-shopping_bag_full"
+        static let groceries = "icons8-shopping_cart_loaded"
+        static let relax = "icons8-walking"
+        static let meditate = "icons8-meditation_guru"
+        static let yoga = "icons8-yoga"
+        static let running = "icons8-running"
+        static let bathroom = "icons8-toilet_paper"
+        static let safety = "icons8-siren"
+        static let event = "icons8-people_working_together"
+        static let gettingReady = "icons8-v_neck_t_shirt"
+        static let goingOut = "icons8-legs_in_boots"
+        static let school = "icons8-graduation_cap"
+        static let routine = "icons8-checklist"
+        static let work = "icons8-commercial_development_management"
+        static let travel = "icons8-airplane_mode_on"
+
+
+    }
+
+
     struct Image {
         static let alcohol = "alcohol"
         static let cereal = "cereal"

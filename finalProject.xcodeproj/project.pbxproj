@@ -47,8 +47,10 @@
 		DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */; };
 		DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */; };
 		DA606B512064969100DD14C0 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA606B502064969100DD14C0 /* Topic.swift */; };
+		DA643DB122A9F87E005CA14D /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA643DB022A9F87E005CA14D /* CircleButton.swift */; };
 		DA687C3622605EAC0037DD48 /* RoundProfileIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */; };
 		DA687C38226064F00037DD48 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA687C37226064F00037DD48 /* UserProfileViewController.swift */; };
+		DA687E6E229E1171000E1465 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA687E6D229E1170000E1465 /* LaunchScreenViewController.swift */; };
 		DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */; };
 		DA6EBB3321C9C149006F7259 /* PersonAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EBB3221C9C149006F7259 /* PersonAdvice.swift */; };
 		DA6EBB3521C9CDEE006F7259 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EBB3421C9CDEE006F7259 /* Header.swift */; };
@@ -138,8 +140,10 @@
 		DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatement.swift; sourceTree = "<group>"; };
 		DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalAdvice.swift; sourceTree = "<group>"; };
 		DA606B502064969100DD14C0 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		DA643DB022A9F87E005CA14D /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundProfileIconButton.swift; sourceTree = "<group>"; };
 		DA687C37226064F00037DD48 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		DA687E6D229E1170000E1465 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		DA6D721320B4FD75002FCD1D /* MasterJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterJournalViewController.swift; sourceTree = "<group>"; };
 		DA6EBB3221C9C149006F7259 /* PersonAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonAdvice.swift; sourceTree = "<group>"; };
 		DA6EBB3421C9CDEE006F7259 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -342,6 +346,7 @@
 				DA09E2F922126E5A0050C1E8 /* GradientView.swift */,
 				DAEA7483222FBB0700AEDF95 /* RoundCornerView.swift */,
 				DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */,
+				DA643DB022A9F87E005CA14D /* CircleButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				DAC6384C20B3A7D20004891D /* Now */,
 				DAC6384D20B3A7FC0004891D /* Profile */,
 				DA5AEDAC2076FFDD0094AA57 /* Journal */,
+				DA687E6D229E1170000E1465 /* LaunchScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				DA687C38226064F00037DD48 /* UserProfileViewController.swift in Sources */,
 				DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */,
 				DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */,
+				DA643DB122A9F87E005CA14D /* CircleButton.swift in Sources */,
 				DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */,
 				DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */,
 				DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */,
@@ -654,6 +661,7 @@
 				DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */,
 				DACA911C20FBD09200475CE5 /* HabitFact.swift in Sources */,
 				DA272D0D20BCE72B00137039 /* CounterAdvice.swift in Sources */,
+				DA687E6E229E1171000E1465 /* LaunchScreenViewController.swift in Sources */,
 				DADE4C7A20E9A5D300E19393 /* QuoteData.swift in Sources */,
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
