@@ -15,7 +15,9 @@ import Foundation
 
 // Add mental traning, mindfulness, and philosophies to user's toolkit
 
-
+//Find and audience to target
+//Add 'Friendship' or 'Hangout' tips
+//
 
 
 // MARK: - Breakfast
@@ -183,29 +185,40 @@ let dinnerTip23 = Tip(header: "", title: "Reduce calorie consumption by 22% by e
 
 let dinnerTip24 = Tip(header: "", title: "Study: Chewing more increases the number of calories burned during digestion and improves absorption of nutrients from food", body: "The study suggests a partial link between obesity trends and chewing. If you slowed down and chewed more, you could potentially burn 2,000 more calories each month.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "", sponsorURL: "")
 
-//6 (WIP)
+//6
 let dinnerTip25 = Tip(header: "", title: "Prevent weight gain: Slow down and chew your food more", body: "Study: People who focused on doubling the number of times they chewed before swallowing ate 15% less food and 112 fewer calories over the course of a meal.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
 let dinnerTip26 = Tip(header: "", title: "Prevent weight gain: Don't watch TV or videos while eating dinner", body: "Study: People who never watched TV during meals had 37% lower odds of being obese than those who always watched TV or videos during family meals.", sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-health-obesity-meals-tv/home-cooked-meals-hold-the-tv-linked-to-less-obesity-idUSKBN16928E", sponsorLogo: "", sponsorURL: "")
+let dinnerTip27 = Tip(header: "", title: "The Worst and Best Foods for Acid Reflux", body: "WORST: \nFried & Spicy Foods \nBeef & Eggs \nDairy Products \nTomatoes \nPeanut Butter \nJam & Jelly \nChocolate \nAlcohol, Carbonated Drinks, and Coffee \n\nBEST: \nKale & Raw Spinach \nBroccoli & Celery \nLentils \nBone Broth \nGinger \nPineapple & Watermelon \nOatmeal \nAlmond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
+let dinnerTip28 = Tip(header: "", title: "Study: Participants who ate slower consumed 66 fewer calories per meal than their fast-eating counterparts and felt fuller after their meal", body: "It takes about 20 minutes for your brain to recognize that your body is full. Take your time and eat mindfully to avoid overeating, avoid weight gain, and reduce feeling hungry later.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/surprising-habits-affecting-health/", sponsorLogo: "", sponsorURL: "")
+//7 (WIP)
+let dinnerTip29 = Tip(header: "", title: "Reduce weight gain: Serve food from the kitchen counter, not from the dinner table", body: "Study: When food is served from the dinner table, people ate 35% more food during the meal. If going for second helpings requires leaving the table, people are more likely to restrain themselves from overeating as opposed to when food is served at arm’s length.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/surprising-habits-affecting-health/", sponsorLogo: "", sponsorURL: "")
 
-
+//Week 1
 //0
 let dinnerTipArray0 = [dinnerTip1, dinnerTip2, dinnerTip3, dinnerTip4]
 let dinnerTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray0)
-
+//1
 let dinnerTipArray1 = [dinnerTip5, dinnerTip6, dinnerTip7, dinnerTip8]
 let dinnerTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray1)
-
+//2
 let dinnerTipArray2 = [dinnerTip9, dinnerTip10, dinnerTip11, dinnerTip12]
 let dinnerTopic2 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray2)
-
+//3
 let dinnerTipArray3 = [dinnerTip13, dinnerTip14, dinnerTip15, dinnerTip16]
 let dinnerTopic3 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray3)
-
+//4
 let dinnerTipArray4 = [dinnerTip17, dinnerTip18, dinnerTip19, dinnerTip20]
 let dinnerTopic4 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray4)
-
+//5
 let dinnerTipArray5 = [dinnerTip21, dinnerTip22, dinnerTip23, dinnerTip24]
 let dinnerTopic5 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray5)
+//6
+let dinnerTipArray6 = [dinnerTip25, dinnerTip26, dinnerTip27, dinnerTip28]
+let dinnerTopic6 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray6)
+//Week 2
+//7 (WIP)
+let dinnerTipArray7 = [dinnerTip29, dinnerTip16, dinnerTip20, dinnerTip24]
+let dinnerTopic7 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray7)
 
 // MARK: - Dinner (Late)
 
@@ -235,21 +248,22 @@ let dinnerAfter9PM16 = Tip(header: "🍽", title: "Stop eating 1.5 to 2 hours be
 //4 WIP
 let dinnerAfter9PM17 = Tip(header: "", title: "Drink water during or after a meal to aid digestion", body: "Water helps break down food so that your body can absorb the nutrients. Water also softens stool, which helps prevent constipation." , sourceName: "Mayo Clinic", sourceURL: "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/digestion/faq-20058348", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM18 = Tip(header: "", title: "Prevent weight gain: Don't watch TV or videos while eating dinner", body: "Study: People who never watched TV during meals had 37% lower odds of being obese than those who always watched TV or videos during family meals.", sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-health-obesity-meals-tv/home-cooked-meals-hold-the-tv-linked-to-less-obesity-idUSKBN16928E", sponsorLogo: "", sponsorURL: "")
+let dinnerAfter9PM19 = Tip(header: "", title: "The Worst and Best Foods for Acid Reflux", body: "WORST: \nFried & Spicy Foods \nBeef & Eggs \nDairy Products \nTomatoes \nPeanut Butter \nJam & Jelly \nChocolate \nAlcohol, Carbonated Drinks, and Coffee \n\nBEST: \nKale & Raw Spinach \nBroccoli & Celery \nLentils \nBone Broth \nGinger \nPineapple & Watermelon \nOatmeal \nAlmond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
 
-
+//0
 let dinnerAfter9PMTipArray0 = [dinnerAfter9PM1, dinnerAfter9PM2, dinnerAfter9PM3, dinnerAfter9PM4]
 let dinnerAfter9PMTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray0)
-
+//1
 let dinnerAfter9PMTipArray1 = [dinnerAfter9PM5, dinnerAfter9PM6, dinnerAfter9PM7, dinnerAfter9PM8]
 let dinnerAfter9PMTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray1)
-
+//2
 let dinnerAfter9PMTipArray2 = [dinnerAfter9PM9, dinnerAfter9PM10, dinnerAfter9PM11, dinnerAfter9PM12]
 let dinnerAfter9PMTopic2 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray2)
-
+//3
 let dinnerAfter9PMTipArray3 = [dinnerAfter9PM13, dinnerAfter9PM14, dinnerAfter9PM15, dinnerAfter9PM16]
 let dinnerAfter9PMTopic3 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray3)
-
-let dinnerAfter9PMTipArray4 = [dinnerAfter9PM17, dinnerAfter9PM18, dinnerAfter9PM8, dinnerAfter9PM12]//WIP
+//4
+let dinnerAfter9PMTipArray4 = [dinnerAfter9PM17, dinnerAfter9PM18, dinnerAfter9PM19, dinnerAfter9PM12]//WIP
 let dinnerAfter9PMTopic4 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray4)
 
 // MARK: - Morning Snack
@@ -332,11 +346,12 @@ let lateNightSnackTip4 = Tip(header: "🥑", title: "Eating healthy fats at nigh
 //1
 let lateNightSnackTip5 = Tip(header: "🍽", title: "Late-night eating is associated with a higher risk of diabetes", body: "Glucose tolerance is how well your body can take sugar from your bloodstream into your tissues. Researchers found that our glucose tolerance becomes relatively impaired in the evening compared to the morning. Impaired glucose tolerance is a risk factor for diabetes." , sourceName: "Vox", sourceURL: "https://www.vox.com/2016/2/17/11034546/eating-late-night-bad-diet", sponsorLogo: "", sponsorURL: "")
 let lateNightSnackTip6 = Tip(header: "🍽", title: "To prevent weight gain, try not to eat after 11 p.m.", body: "In one study, participants who ate between 11 p.m. and 5 a.m. gained more weight than those who did not eat during those hours. If you need to eat, reach for a healthy protein-packed snack: almonds, low-fat cottage cheese, Greek yogurt, or vegetables dipped in hummus or guacamole." , sourceName: "U.S. News", sourceURL: "https://health.usnews.com/health-news/health-wellness/articles/2015/06/26/will-eating-at-night-really-make-you-gain-weight", sponsorLogo: "", sponsorURL: "")
+let lateNightSnackTip7 = Tip(header: "🔥", title: "The Worst and Best Snacks for Acid Reflux", body: "WORST: \nPeanut Butter \nJam & Jelly \nDairy Products \nCarbonated Drinks and Coffee \nChocolate \n\nBEST: \nAlmond Butter \nOatmeal \nPineapple & Watermelon  \nBroccoli & Celery \nGinger", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
 
 let lateNightSnackTipArray0 = [lateNightSnackTip1, lateNightSnackTip2, lateNightSnackTip3, lateNightSnackTip4]
 let lateNightSnackTopic0 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray0)
 
-let lateNightSnackTipArray1 = [lateNightSnackTip5, lateNightSnackTip6, lateNightSnackTip4, lateNightSnackTip3]//WIP
+let lateNightSnackTipArray1 = [lateNightSnackTip5, lateNightSnackTip6, lateNightSnackTip7, lateNightSnackTip3]//WIP
 let lateNightSnackTopic1 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray1)
 
 // MARK: - Journaling
@@ -405,7 +420,7 @@ let meditationTopic1 = Topic(title: meditationTitle, icon: meditationIcon, tip: 
 
 // MARK: - Gym
 
-let gymTitle = "Exercise / Gym"
+let gymTitle = "Workout"
 let gymIcon = Constants.Icon.gym
 
 //WEEK 1
@@ -677,7 +692,7 @@ let getReadyAM7 = Tip(header: "☀️", title: "Wear sunscreen every day (not ju
 let getReadyAM8 = Tip(header: "📰", title: "Don't consume negative news in the morning because it makes you less effective throughout the day. Instead, listen to uplifting, positive news (or audio) in morning", body: "Study: Individuals who watched just 3 minutes of negative news in the morning had a 27% greater likelihood of reporting their day as unhappy 6 to 8 hours later compared to the individuals who watched 3 minutes of solutions-focused news in the morning. The solution-focused news group watched stories of resilience to build the belief that our behavior matters.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/09/consuming-negative-news-can-make-you-less-effective-at-work", sponsorLogo: "", sponsorURL: "")
 let getReadyAM9 = Tip(header: "👕", title: "Free up your brainpower: Wear the same type of clothes each day", body: "Steve Jobs, Mark Zuckerberg, and Barack Obama have all applied this idea to their lives. Wearing the same thing each day frees up the brainpower you would have put into picking out an outfit to make other, more important decisions." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/barack-obama-mark-zuckerberg-wear-the-same-outfit-2015-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let getReadyAM10 = Tip(header: "👔", title: "Don't wear grey clothes to work", body: "Colors do affect our moods and productivity. Grey inspires people to be passive, uninvolved and have a lack of energy. \n\nIf you like wearing grey, pairing it with a brighter color will help offset the effect.", sourceName: "Science of People", sourceURL: "", sponsorLogo: "", sponsorURL: "")
-let getReadyAM11 = Tip(header: "👖", title: "Reduce belly fat: Dress causually to work", body: "Researchers found that people who wore denim to work took almost 500 more steps (about a quarter mile) throughout the day than they did on days when they wore more formal attire. Over time, those additional step can help you maintain your lean physique.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+let getReadyAM11 = Tip(header: "👖", title: "Reduce belly fat: Dress casually to work", body: "Researchers found that people who wore denim to work took almost 500 more steps (about a quarter mile) throughout the day than they did on days when they wore more formal attire. Over time, those additional step can help you maintain your lean physique.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
 
 //3
 let getReadyAM12 = Tip(header: "", title: "Opening your shades in the morning helps with weight loss", body: "Study: People who get direct exposure to sunlight in the mornings between 8 am and noon reduce their risk of weight gain—regardless of how much they eat. Researchers theorize that the morning sun helps to synchronize metabolism so we burn fat more efficiently.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
@@ -825,7 +840,7 @@ let barTip20 = Tip(header: "🍺", title: "The U.S. government defines \"moderat
 //5 WIP
 let barTip21 = Tip(header: "", title: "Live longer: Drink wine instead of beer or spirits", body: "A 29-year study showed that men who preferred wine were 34% less likely to die early than those who preferred beer or spirits.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/13-habits-linked-to-a-long-life", sponsorLogo: "", sponsorURL: "")
 let barTip22 = Tip(header: "", title: "Live longer: Drinking 1-2 glasses of alcohol a day is the most you need to take advantage of its health benefits", body: "Studies show that people who have 1 serving of beer, wine, or spirits per day may accrue some health benefits. Red wine offers an extra bonus in that it contains artery-scrubbing polyphenols that may help fight arteriosclerosis. \n\nBeware, however, of the toxic effects of alcohol on the liver and brain - along with increased risk of accidents - when daily consumption exceeds 1-2 glasses. In that case, the risks of drinking can outweigh any health benefits.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-
+let barTip23 = Tip(header: "", title: "Alcohol increases your risk of acid reflux", body: "Because alcohol has been shown to slow the rate at which your food flows through your digestive system. This means your food is not being broken down as rapidly as it should, and it sits in your stomach, which increases your risk of acid reflux. ", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
 
 //WOMEN
 let barWomenTip1 = Tip(header: "🍸", title: "Women accumulate more alcohol in their bloodstreams than men do", body: "Women have lower levels of the stomach enzyme that neutralizes alcohol before it moves into the bloodstream. Women tend to have a higher proportion of body fat, which does not absorb alcohol; this increases alcohol levels in the blood. Women also tend to weigh less than men, so drink for drink, there is more alcohol in a woman's bloodstream.", sourceName: "Harvard Medical Publishing", sourceURL: "https://www.health.harvard.edu/addiction/alcohols-effects-on-the-body", sponsorLogo: "", sponsorURL: "")
@@ -852,7 +867,7 @@ let barTopic3 = Topic(title: barTitle, icon: barIcon, tip: barTipArray3)
 let barTipArray4 = [barTip17, barTip18, barTip19, barTip20]
 let barTopic4 = Topic(title: barTitle, icon: barIcon, tip: barTipArray4)
 
-let barTipArray5 = [barTip21, barTip22, barTip12, barTip16]//WIP
+let barTipArray5 = [barTip21, barTip22, barTip23, barTip16]//WIP
 let barTopic5 = Topic(title: barTitle, icon: barIcon, tip: barTipArray5)
 
 // MARK: - Happy Hour
@@ -882,10 +897,11 @@ let cafeTitle = "Coffee / Cafe"
 let cafeIcon = Constants.Icon.cafe
 
 //0
-let cafeTip1 = Tip(header: "☕️", title: "Caffeine (in moderation) may help you live longer", body: "If you take your coffee daily, and abstain from smoking, you’re likely to live longer than the average adult." , sourceName: "New England Journal of Medicine", sourceURL: "https://www.nejm.org/doi/full/10.1056/NEJMoa1112010", sponsorLogo: "", sponsorURL: "")
-let cafeTip2 = Tip(header: "🍵", title: "Green tea increases metabolism to help you burn fat and helps to decrease cancer risk", body: "To get higher levels of cancer-fighting antioxidants, it's best to brew tea yourself and drink it hot. Iced tea and ready-to-drink green teas have less antioxidants." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let cafeTip1 = Tip(header: "", title: "Standing in line - Reduce stress, decrease anxiety, and feel kinder towards the people around you with a quick mindfulness practice", body: "1. Take a few deep breaths to center yourself in the moment. \n2. Notice your thoughts and surroundings without reacting or judging. \n3. Acknowledge the presence of others and wish them well. \n\nStudies show that mindfulness helps you stay calm and improves your outlook on life." , sourceName: "DeStress Monday", sourceURL: "https://www.destressmonday.org/mindful-boost-waiting-line/", sponsorLogo: "", sponsorURL: "")
+
+let cafeTip2 = Tip(header: "☕️", title: "Caffeine (in moderation) may help you live longer", body: "If you take your coffee daily, and abstain from smoking, you’re likely to live longer than the average adult." , sourceName: "New England Journal of Medicine", sourceURL: "https://www.nejm.org/doi/full/10.1056/NEJMoa1112010", sponsorLogo: "", sponsorURL: "")
 let cafeTip3 = Tip(header: "☕️", title: "Coffee can help you lose weight as long as your don't add sugar or cream", body: "Coffee stimulates your metabolismm which can help you lose weight, but only a little. Don't count on this for weight loss, especially if you add calories with toppings." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/ss/slideshow-fat-fighting-foods?ecd=wnl_din_112616&ctr=wnl-din-112616_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d%22,%22Source:%20WebMD", sponsorLogo: "", sponsorURL: "")
-let cafeTip4 = Tip(header: "🥛", title: "Unless you specify your milk preference, Starbucks will automatically give you 2% milk, and most other cafes will give you whole milk", body: "If you're ordering a \"fancy\" coffee, then you should consider nonfat milk. For example, a tall nonfat latte at Starbucks is 100 calories, whereas the same drink with 2% milk is 150 calories. 50 calories adds up over time." , sourceName: "U.S. News & World Report", sourceURL: "https://health.usnews.com/health-news/blogs/eat-run/2014/02/26/how-to-order-a-healthy-cup-of-coffee", sponsorLogo: "", sponsorURL: "")
+let cafeTip4 = Tip(header: "🍵", title: "Green tea increases metabolism to help you burn fat and helps to decrease cancer risk", body: "To get higher levels of cancer-fighting antioxidants, it's best to brew tea yourself and drink it hot. Iced tea and ready-to-drink green teas have less antioxidants." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //1
 let cafeTip5 = Tip(header: "😀", title: "Make kindness a habit: Smile and ask your barista how their day is going", body: "We can all take little steps to ensure we are being kind every single day. And studies have found that being kind to others also makes you happier." , sourceName: "Inc.", sourceURL: "https://www.inc.com/peter-economy/7-remarkably-effective-ways-to-make-kindness-a-habit.html", sponsorLogo: "", sponsorURL: "")
@@ -900,15 +916,16 @@ let cafeTip10 = Tip(header: "☕️", title: "Watch your calories: Every time yo
 let cafeTip11 = Tip(header: "🤔", title: "What is your favorite place to think big?", body: "LinkedIn cofounder Reid Hoffman said he does his best thinking in places that are brand new to him, like a cafe he's never been to before." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/mark-zuckerberg-bill-gates-best-place-to-think-2018-11", sponsorLogo: "", sponsorURL: "")
 let cafeTip12 = Tip(header: "☕️", title: "Drinking coffee is associated with a lower risk of death", body: "A study of 400,000+ people found that drinking coffee (decaf, ground, and instant) reduced the risk of death from cardiovascular disease and some cancers." , sourceName: "The Journal of the American Medical Association", sourceURL: "https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2686145", sponsorLogo: "", sponsorURL: "")
 
-// 3 WIP
-let cafeTip13 = Tip(header: "🚪", title: "Make kindness a habit: Hold the door for people behind you, especially if the person behind is carrying packages, bags or kids", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
-let cafeTip14 = Tip(header: "🔥", title: "Wait until very hot beverages cool down before drinking. Drinking very hot beverages increases the risk of esophageal cancer", body: "Esophageal cancer is the eighth most common cancer and is often fatal. It is possible that the trauma from drinking very hot beverages leads to cell changes and hence to cancer." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2019/03/20/health/hot-tea-linked-to-higher-cancer-risk-study-intl/index.html", sponsorLogo: "", sponsorURL: "")
-let cafeTip15 = Tip(header: "", title: "Green tea boosts your metabolism and helps burn belly fat", body: "12-week study: Participants who combined a daily habit of 4-5 cups of green tea with a 25-minute workout lost an average of 2 more pounds and more belly fat than the non tea-drinking exercisers. /n/nGreen tea contains catechins, a type of antioxidant that triggers the release of fat from fat cells and helps speed the liver’s capacity for turning fat into energy." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
+// 3
+let cafeTip13 = Tip(header: "🚪", title: "Make kindness a habit: Hold the door for people behind you when you're enter and exit", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
+let cafeTip14 = Tip(header: "", title: "Green tea boosts your metabolism and helps burn belly fat", body: "12-week study: Participants who combined a daily habit of 4-5 cups of green tea with a 25-minute workout lost an average of 2 more pounds and more belly fat than the non tea-drinking exercisers. /n/nGreen tea contains catechins, a type of antioxidant that triggers the release of fat from fat cells and helps speed the liver’s capacity for turning fat into energy." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
+let cafeTip15 = Tip(header: "🥛", title: "Unless you specify your milk preference, Starbucks will automatically give you 2% milk, and most other cafes will give you whole milk", body: "If you're ordering a \"fancy\" coffee, then you should consider nonfat milk. For example, a tall nonfat latte at Starbucks is 100 calories, whereas the same drink with 2% milk is 150 calories. 50 calories adds up over time." , sourceName: "U.S. News & World Report", sourceURL: "https://health.usnews.com/health-news/blogs/eat-run/2014/02/26/how-to-order-a-healthy-cup-of-coffee", sponsorLogo: "", sponsorURL: "")
+let cafeTip16 = Tip(header: "🔥", title: "Wait until very hot beverages cool down before drinking. Drinking very hot beverages increases the risk of esophageal cancer", body: "Esophageal cancer is the eighth most common cancer and is often fatal. It is possible that the trauma from drinking very hot beverages leads to cell changes and hence to cancer." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2019/03/20/health/hot-tea-linked-to-higher-cancer-risk-study-intl/index.html", sponsorLogo: "", sponsorURL: "")
 
 let cafeTipArray0 = [cafeTip1, cafeTip2, cafeTip3, cafeTip4]
 let cafeTipArray1 = [cafeTip5, cafeTip6, cafeTip7, cafeTip8]
 let cafeTipArray2 = [cafeTip9, cafeTip10, cafeTip11, cafeTip12]
-let cafeTipArray3 = [cafeTip13, cafeTip14, cafeTip11, cafeTip8]//WIP
+let cafeTipArray3 = [cafeTip13, cafeTip14, cafeTip11, cafeTip12]
 
 let cafeTopic0 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray0)
 let cafeTopic1 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray1)
@@ -1008,17 +1025,18 @@ let dateTip4 = Tip(header: "🌶", title: "Eat these aphrodisiac foods to increa
 //1
 let dateTip5 = Tip(header: "🚶‍♀️", title: "Easy ways to burn calories while on a date", body: "Instead of always opting for sedentary plans, like going to the movies, schedule more adventurous activities like walking dates, park dates, bike rides, or easy day-hikes.", sourceName: "The Active Times", sourceURL: "https://www.theactivetimes.com/20-easy-ways-build-exercise-your-daily-routine", sponsorLogo: "", sponsorURL: "")
 let dateTip6 = Tip(header: "❓", title: "Research: People who asked a lot of questions on their first dates, were much more likely to get asked out on second dates", body: "Self-disclosure feels good. By asking your date questions, they attribute that enjoyment to you, the question asker, which causes your date to like you more. So asking more questions during a date makes you more likeable and more likely to get a second date.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/ideacast/2016/06/asking-for-advice-makes-people-think-youre-smarter.html", sponsorLogo: "", sponsorURL: "")
-let dateTip7 = Tip(header: "👫", title: "Mimicking - occasionally copying the verbal and nonverbal behaviors of a date or partner - makes them more attracted to you", body: "Researchers found that when any individual mimics the behavior of another, they become more liked by that other person. So, copy your partner’s gestures on occasion. Repeat a word or phrase now and again. You may find it makes them like you more, increases their comfort around you, and improves your romance, too.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201706/mimicry-and-attraction-in-romantic-relationships", sponsorLogo: "", sponsorURL: "")
+let dateTip7 = Tip(header: "👫", title: "Mimicking - occasionally copying the verbal and nonverbal behaviors of a date or partner - makes them more attracted to you", body: "Researchers found that when any individual mimics the behavior of another, they become more liked by that other person. \n\nSo, copy your partner’s gestures on occasion. Repeat a word or phrase now and again. You may find it makes them like you more, increases their comfort around you, and improves your romance, too.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201706/mimicry-and-attraction-in-romantic-relationships", sponsorLogo: "", sponsorURL: "")
 let dateTip8 = Tip(header: "❓", title: "Increase your likability: Ask more questions, particularly follow-up questions", body: "A speed-dating study found that people who ask more questions, particularly follow-up questions, are better liked by their conversation partners. It even led to an increase in second dates among the speed-daters. \n\nAsking follow-up questions increases how much we are liked because they show that we are listening sincerely and trying to show we care.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/09/23/smarter-living/how-to-be-more-likeable.html", sponsorLogo: "", sponsorURL: "")
 
 //2
-let dateTip9 = Tip(header: "😀", title: "Build Trust: Smile and make eye contact more with your date or partner to let them know you are interested", body: "Make more frequent and longer eye contact to convey greater interest as well. Selectively copy your partner’s verbal and non-verbal behavior to increase their comfort and build more rapport too.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201806/behaviors-build-trust-and-attraction", sponsorLogo: "", sponsorURL: "")
+let dateTip9 = Tip(header: "😀", title: "Smiling and making more eye contact with your date or partner lets them know you are interested", body: "Make more frequent and longer eye contact to convey greater interest as well. Selectively copy your partner’s verbal and non-verbal behavior to increase their comfort and build more rapport too.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201806/behaviors-build-trust-and-attraction", sponsorLogo: "", sponsorURL: "")
 let dateTip10 = Tip(header: "📵", title: "Build a stronger connection with your date by putting your phone away", body: "Studies show that when two people are talking, the mere presence of a phone on a table between them or in the periphery of their vision changes both what they talk about and the degree of connection they feel. People keep the conversation on topics where they won’t mind being interrupted. They don’t feel as invested in each other.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2015/09/27/opinion/sunday/stop-googling-lets-talk.html?_r=0", sponsorLogo: "", sponsorURL: "")
 let dateTip11 = Tip(header: "😊", title: "When someone is attracted to you, blood will flow to their face, causing their cheeks to get red", body: "It is an evolutionary way the body tries to attract the opposite sex. This happens with lips and eyes. The redder the lips and the whiter the eyes, the more fertile and attractive someone is.", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/body-language-attraction/", sponsorLogo: "", sponsorURL: "")
 let dateTip12 = Tip(header: "👫", title: "Speed-dating study finds daters were more often chosen when they had expansive body language (open postures involving widespread limbs, a stretched torso, and/or enlargement of the occupied space)", body: "In fact, for every unit of increase in expansiveness noted by the researchers, the participant was 76% more likely to be chosen for a date. \n\nThis effect was true for both men and women — and the increase in romantic attractiveness was partially due to increased perceptions of the individual’s dominance (and potential status and resources as a mate).", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201709/how-our-body-language-can-make-us-attractive", sponsorLogo: "", sponsorURL: "")
 
 //3
 let dateTip13 = Tip(header: "", title: "Be more attractive: Speak in a higher pitched voice for women, lower for men", body: "Study: A higher-pitched voice in women is more attractive to men—and vice versa, that a lower-pitched voice in men is more attractive to women. Past research suggests this is based on evolutionary reasons.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/relationships/how-to-be-more-attractive/", sponsorLogo: "", sponsorURL: "")
+let dateTip14 = Tip(header: "", title: "Getting dessert increases attraction", body: "Study: Participants were given a description of a potential mate. Then, half of the participants drank a sweet beverage, while the others had water. The sugar-tasting group was more interested in going out with the potential date, and expected their relationship to be more intimate. \n\nThe researchers suggest that your brain associates sweet flavors with the concept of romance, so when you activate one of those parts of your mind, it lights up the other.", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/sex-women/a19533673/foods-that-turn-a-woman-on/", sponsorLogo: "", sponsorURL: "")
 
 
 //WOMEN
@@ -1123,11 +1141,16 @@ let groceryStoreTip32 = Tip(header: "🛒", title: "Safety tip: After checkout, 
 let groceryStoreTip33 = Tip(header: "", title: "Live longer: Buy smaller packages and you'll consume less calories", body: "Study: When given large packages of food, participants consumed 23% more (about 150 calories) than when they were given medium packages.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 let groceryStoreTip34 = Tip(header: "", title: "Live longer: Buy vegetables that are darker green or red because they tend to have more nutrients than lighter varieties", body: "Leafy greens are low in sodium and calories, and they are completely cholesterol free. A healthy plant-based diet has been associated with an extra decade of life expectancy and a reduced risk of diabetes and heart disease.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 let groceryStoreTip35 = Tip(header: "", title: "Live longer: Goat's milk has more nutritional value than cow's milk", body: "One glass of goat's milk contains 13% more calcium, 25% more vitamin B6, 47% vitamin A, 134% more potassium, and 3 times more vitamin B3. \n\nStudy: Compared to cow's milk, goat's milk may be better at preventing mineral losses in bones and iron deficiencies.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-let groceryStoreTip36 = Tip(header: "", title: "Live longer: Buy darker honey", body: "Study: Darker honey was found to have more antioxidants and less water than lighter honey. Honey may help control blood sugar levels and slow the oxidation of \"bad\" cholesterol levels in the blood, which is a good thing.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip36 = Tip(header: "", title: "Standing in line - Reduce stress, decrease anxiety, and feel kinder towards the people around you with a quick mindfulness practice", body: "1. Take a few deep breaths to center yourself in the moment. \n2. Notice your thoughts and surroundings without reacting or judging. \n3. Acknowledge the presence of others and wish them well. \n\nStudies show that mindfulness helps you stay calm and improves your outlook on life." , sourceName: "DeStress Monday", sourceURL: "https://www.destressmonday.org/mindful-boost-waiting-line/", sponsorLogo: "", sponsorURL: "")
 
 //9 WIP
 let groceryStoreTip37 = Tip(header: "", title: "Live longer: Buy goat's milk", body: "Goat milk is a great source of calcium, potassium, and the stress-relieving hormone tryptophan. It's unlikely to cause an allergic reaction and can usually be tolerated by people who are lactose intolerant. It's also easily digestible for older people.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-let groceryStoreTip38 = Tip(header: "", title: "Prevent weight gain: Use the self-checkout kiosks", body: "Study: Impulse purchases dropped 32.1% for women—and 16.7% for men—when they were the ones to scan their items and swipe their credit card. \n\nAlthough not all impulse buys are bad for your belly, 80% of candy and 61% of salty snack purchases are unplanned.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip38 = Tip(header: "", title: "Live longer: Buy darker honey", body: "Study: Darker honey was found to have more antioxidants and less water than lighter honey. Honey may help control blood sugar levels and slow the oxidation of \"bad\" cholesterol levels in the blood, which is a good thing.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip39 = Tip(header: "", title: "Prevent weight gain: Use the self-checkout kiosks", body: "Study: Impulse purchases dropped 32.1% for women—and 16.7% for men—when they were the ones to scan their items and swipe their credit card. \n\nAlthough not all impulse buys are bad for your belly, 80% of candy and 61% of salty snack purchases are unplanned.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
+
+
+
+
 
 
 
@@ -1152,7 +1175,7 @@ let groceryStoreTipArray6 = [groceryStoreTip25, groceryStoreTip26, groceryStoreT
 let groceryStoreTipArray7 = [groceryStoreTip29, groceryStoreTip30, groceryStoreTip31, groceryStoreTip32]
 
 let groceryStoreTipArray8 = [groceryStoreTip33, groceryStoreTip34, groceryStoreTip35, groceryStoreTip36]
-let groceryStoreTipArray9 = [groceryStoreTip37, groceryStoreTip38, groceryStoreTip11, groceryStoreTip15]//WIP
+let groceryStoreTipArray9 = [groceryStoreTip37, groceryStoreTip38, groceryStoreTip39, groceryStoreTip15]//WIP
 
 
 //
@@ -1197,18 +1220,20 @@ let shoppingClothesTip6 = Tip(header: "👕", title: "Simplify your day and redu
 let shoppingClothesTip7 = Tip(header: "🤓", title: "Forget luxury goods — rich people are investing more in education and health", body: "In the US, the top 1% have been spending less on material goods since 2007. Showing off wealth is no longer the way to signify having wealth because the rich and middle class can now own the same luxary brand. Instead, the rich are investing in education and health to advance their social status and wealth." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/discreet-wealth-new-status-symbol-rich-people-2018-11", sponsorLogo: "", sponsorURL: "")
 let shoppingClothesTip8 = Tip(header: "😀", title: "People feel happier when they buy something for someone else than when they buy something for themselves", body: "This happiness boost was the same regardless of whether the gift cost $20 or $100. The study found that doing good deeds for others makes people happier, and makes them more likely to do more good deeds in the future." , sourceName: "The Greater Good Science Center at UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/kindness_makes_you_happy_and_happiness_makes_you_kind", sponsorLogo: "", sponsorURL: "")
 
-//2 WIP(1)
+//2 WIP
 let shoppingClothesTip9 = Tip(header: "💸", title: "Research: Most material possessions don’t make us happier, they make less happy", body: "We think the things we buy will bring us happiness, but then we get them and we wonder ‘what’s next? Instead, it’s things like experiences and having more time to do things we love -- and spend time with people we love -- that drive happiness. The deepest pleasures are derived from interpersonal love, warm relationships, giving, appreciation, and gratitude. ", sourceName: "MarketWatch", sourceURL: "https://www.marketwatch.com/story/the-dark-reasons-so-many-rich-people-are-miserable-human-beings-2018-02-22", sponsorLogo: "", sponsorURL: "")
 let shoppingClothesTip10 = Tip(header: "🚪", title: "Make kindness a habit: Hold the door for people behind you, especially if the person behind is carrying packages, bags or kids", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
 let shoppingClothesTip11 = Tip(header: "🚶‍♂️", title: "Reduce impulse shopping. Walk away for 10 minutes", body: "When you feel the urge to buy a product that falls short of your shopping list: Walk away. Give yourself at least 10 minutes to contemplate the purchase. Most consumers will either forget about the merchandise or recognize their impulsive behavior." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/build-these-10-shopping-habits-to-save-big-2012-3", sponsorLogo: "", sponsorURL: "")
+let shoppingClothesTip12 = Tip(header: "", title: "Standing in line - Reduce stress, decrease anxiety, and feel kinder towards the people around you with a quick mindfulness practice", body: "1. Take a few deep breaths to center yourself in the moment. \n2. Notice your thoughts and surroundings without reacting or judging. \n3. Acknowledge the presence of others and wish them well. \n\nStudies show that mindfulness helps you stay calm and improves your outlook on life." , sourceName: "DeStress Monday", sourceURL: "https://www.destressmonday.org/mindful-boost-waiting-line/", sponsorLogo: "", sponsorURL: "")
 
+//0
 let shoppingClothesTipArray0 = [shoppingClothesTip1, shoppingClothesTip2, shoppingClothesTip3, shoppingClothesTip4]
 let shoppingClothesTopic0 = Topic(title: shoppingClothesTitle, icon: shoppingClothesIcon, tip: shoppingClothesTipArray0)
-
+//1
 let shoppingClothesTipArray1 = [shoppingClothesTip5, shoppingClothesTip6, shoppingClothesTip7, shoppingClothesTip8]
 let shoppingClothesTopic1 = Topic(title: shoppingClothesTitle, icon: shoppingClothesIcon, tip: shoppingClothesTipArray1)
-
-let shoppingClothesTipArray2 = [shoppingClothesTip9, shoppingClothesTip10, shoppingClothesTip11, shoppingClothesTip8]//WIP(1)
+//2
+let shoppingClothesTipArray2 = [shoppingClothesTip9, shoppingClothesTip10, shoppingClothesTip11, shoppingClothesTip12]
 let shoppingClothesTopic2 = Topic(title: shoppingClothesTitle, icon: shoppingClothesIcon, tip: shoppingClothesTipArray2)
 
 // MARK: - Commute, AM
@@ -1353,8 +1378,8 @@ let commuteFridayPMTopic0 = Topic(title: commutePMTitle, icon: commutePMIcon, ti
 
 
 // MARK: - Work, AM
-
-let workAMTitle = "Work / Productivity"
+let workTitle = "Work / Productivity"
+let workAMTitle = workTitle
 let workAMIcon = Constants.Icon.work
 
 // WEEK 1
@@ -1470,7 +1495,7 @@ let workAMTopic9 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArr
 
 // MARK: - Work, PM
 
-let workPMTitle = "Work"
+let workPMTitle = workTitle
 let workPMIcon = Constants.Icon.work
 
 // WEEK 1
@@ -1875,12 +1900,13 @@ let homeAMTip5 = Tip(header: "☀️", title: "Get outside. Spending too much ti
 let homeAMTip6 = Tip(header: "", title: "Live longer: Showcase fruits and vegetables to increase your chances of eating them instead of unhealthy foods", body: "Put a beautiful fruit bowl in the middle of your kitchen table. At the bottom of it, leave a note that reads \"Fill Me.\" \n\nInstead of hiding vegetables in the refrigerator compartment that says \"Produce,\" put them front and center on shelves where you can see them.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 let homeAMTip7 = Tip(header: "🍟", title: "Study: People living near fast-food restaurants were significantly less able to enjoy pleasurable activities that require savoring", body: "The study's authors propose that's because fast food can incite people to feel more impatient, diminishing their ability to slow down and savour life's simpler joys. The findings indicate the importance of thinking more carefully about the cues we're exposed to in our everyday environments and how they can affect our psychology." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2014/06/140602155905.htm", sponsorLogo: "", sponsorURL: "")
 
+let homeAMTip8 = Tip(header: "🍌", title: "Keep bananas from ripening too fast: Wrap each banana stem separately with a small piece of plastic. If needed, tie a rubber band on the outside of the plastic wrap", body: "This is because bananas release a gas called ethylene through their stems when ripening. \n\nOnce your bananas reach the perfect level of ripeness to your liking, put them into the fridge. The bananas will keep at the same level of ripeness while in the refrigerator, giving you more time to enjoy your bananas without wasting them. \n\nBut warning: If you put the bananas in the refrigerator when they are green, they will never ripen. And if you take them out after being in the fridge, they will simply turn black.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/keep-bananas-fresh/", sponsorLogo: "", sponsorURL: "")
 
 let homeAMTipArray0 = [homeAMTip1, homeAMTip2, homeAMTip3, homeAMTip4]
 let homeAMTopic0 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray0)
 
-//WIP
-let homeAMTipArray1 = [homeAMTip5, homeAMTip6, homeAMTip7, homeAMTip4]
+
+let homeAMTipArray1 = [homeAMTip5, homeAMTip6, homeAMTip7, homeAMTip8]
 let homeAMTopic1 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray1)
 
 // MARK: - Home, PM
@@ -1922,7 +1948,7 @@ let homePMTip20 = Tip(header: "😰", title: "Clutter in your home makes you mor
 
 //5
 let homePMTip21 = Tip(header: "📺", title: "People who binge-watch TV tend to have problems with self-control", body: "Binge-watching is classified as viewing 2+ episodes of the same TV show in one sitting. Research is showing that the habit of binge-watching is driven by the same impulse as other addictions, such as drugs and alcohol, which involve firing up the dopamine receptors, the reward center of the brain." , sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/depression-loneliness-linked-to-binge-watching-television/", sponsorLogo: "", sponsorURL: "")
-let homePMTip22 = Tip(header: "🚶‍♂️", title: "Go for a walk outside reduces blood pressure, while increasing brain activity responsible for relaxation", body: "Research shows that going for a deliberate stroll helped reduce the effects of depression. Known as \"forest bathing,\" is the Japanese practice of simply being in nature. \n\nPro tip: Leave your earbuds at home and just take in the sounds of your neighborhood." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homePMTip22 = Tip(header: "🚶‍♂️", title: "Going for a walk outside reduces blood pressure, while increasing brain activity responsible for relaxation", body: "Research shows that going for a deliberate stroll helped reduce the effects of depression. Known as \"forest bathing,\" is the Japanese practice of simply being in nature. \n\nPro tip: Leave your earbuds at home and just take in the sounds of your neighborhood." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homePMTip23 = Tip(header: "😳", title: "Clean your kitchen sponges every fews days because they collect billions of bacteria", body: "Best ways to clean sponges: drop them into boiling water for 2 minutes, put them in the microwave for 2 minutes while damp, and replace them when they deteriorate." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homePMTip24 = Tip(header: "", title: "Live longer: Put family first. Establish one room where family members gather daily", body: "Larger homes make it easier for family members to isolate themselves from the group. Smaller homes make it easier for families to bond and spend time together. \n\nSuccessful families make a point of eating at least one meal a day together, spending family time, and taking annual vacations.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
@@ -1935,6 +1961,8 @@ let homePMTip28 = Tip(header: "", title: "Volunteering 2+ hours a week reduces l
 //7
 let homePMTip29 = Tip(header: "", title: "Change your pillowcase and sheets once a week. One study found that your pillowcase has more bacteria than your toilet seat", body: "The longer you wait between washes, the more acne you will have from oil that gets transferred from your body to your sheets. In addition, dust mites live and reproduce in your sheets. Dust mites cause red and itchy eyes, runny noses, and other cold-like symptoms in people who are allergic. \n\nExperts recommend washing your sheets once a week with the hottest water possible." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com.au/bed-how-often-should-wash-sheets-dust-mites-fungi-bacteria-2019-5", sponsorLogo: "", sponsorURL: "")
 let homePMTip30 = Tip(header: "", title: "Each square inch of carpet has nearly 700 times more bacteria than on your toilet seat", body: "Clean it: Vacuum your carpets. And since your vacuum cleaner can’t reach to the bottom of the carpet, hire a company to deep clean at least once a year." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
+let homePMTip31 = Tip(header: "", title: "30-year study: Unhappy people watched 20% more TV in their spare time than very happy people", body: "The researchers believe that TV may provide viewers with short-run pleasure, but at the expense of long-term unhappiness. \n\nHappy people The researchers found that happy people socialize more, read more newspapers, and attend more religious services." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2008/11/081113080006.htm", sponsorLogo: "", sponsorURL: "")
+let homePMTip32 = Tip(header: "", title: "Wipe down doorknobs once a week (in some rooms)", body: "Doorknobs in the bathroom and the kitchen are bound to catch a lot more bacteria, so disinfecting them at least once a week might be a good idea, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271#anchor-Disinfectthesinks", sponsorLogo: "", sponsorURL: "")
 
 let homePMTipArray0 = [homePMTip1, homePMTip2, homePMTip3, homePMTip4]
 let homePMTopic0 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray0)
@@ -1957,7 +1985,7 @@ let homePMTopic5 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArr
 let homePMTipArray6 = [homePMTip25, homePMTip26, homePMTip27, homePMTip28]
 let homePMTopic6 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray6)
 
-let homePMTipArray7 = [homePMTip29, homePMTip30, homePMTip20, homePMTip24]//WIP
+let homePMTipArray7 = [homePMTip29, homePMTip30, homePMTip31, homePMTip32]
 let homePMTopic7 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray7)
 
 // MARK: - AM Bathroom
@@ -1973,7 +2001,7 @@ let bathroomTip4 = Tip(header: "🚽", title: "Scientists recommend wiping down 
 
 //1
 let bathroomTip5 = Tip(header: "", title: "Live longer by weighing yourself often — not in an obsessive way, of course", body: "Study: Those who monitored their weight less frequently were more likely to gain weight. Weight control significantly reduced the risk of diabetes, cardiovascular risk factors and cancer." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/09/harvard-study-says-these-5-habits-may-help-you-live-10-years-longer.html", sponsorLogo: "", sponsorURL: "")
-let bathroomTip6 = Tip(header: "", title: "Colon and rectal cancer is on the rise for people as young as 20 years old", body: "Talk to your doctor if any of the following symptoms don't go away: \n\n• Rectal bleeding: This includes blood coming from the rectum, or blood in the stool or in the toilet after a bowel movement. \n\n• Dark or black stools: This may indicate bleeding from a tumor. \n\n• \n\n•Narrow, thin or ribbon-like stool: This may signal that a tumor is obstructing your bowels or rectum. Loose stool (diarrhea) or constipation (less than 3 bowel movements a week: Especially if changes in bowel movements last 2 weeks or more.", sourceName: "Yale Medicine", sourceURL: "https://www.yalemedicine.org/stories/colorectal-cancer-in-young-people/", sponsorLogo: "", sponsorURL: "")
+let bathroomTip6 = Tip(header: "", title: "Colon and rectal cancer is on the rise for people as young as 20 years old", body: "Talk to your doctor if any of the following symptoms don't go away: \n\n• Rectal bleeding: This includes blood coming from the rectum, or blood in the stool or in the toilet after a bowel movement. \n\n• Dark or black stools: This may indicate bleeding from a tumor. \n\n•Narrow, thin or ribbon-like stool: This may signal that a tumor is obstructing your bowels or rectum. Loose stool (diarrhea) or constipation (less than 3 bowel movements a week: Especially if changes in bowel movements last 2 weeks or more.", sourceName: "Yale Medicine", sourceURL: "https://www.yalemedicine.org/stories/colorectal-cancer-in-young-people/", sponsorLogo: "", sponsorURL: "")
 let bathroomTip7 = Tip(header: "🚰", title: "Drinking water reduces your chances of getting constipation", body: "Proper hydration keeps things flowing along your gastrointestinal tract and prevents constipation. When you don't get enough liquid, the colon pulls water from stools to maintain hydration -- and the result is constipation. \n\nAdequate liquid and fiber is the perfect combination, because the liquid pumps up the fiber and acts like a broom to keep your bowel functioning properly." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let bathroomTip8 = Tip(header: "", title: "Avoid bacteria: Wash your hands and dry them with paper towels, not jet air dryers", body: "Not drying your hands after washing them helps bacteria to survive on your hands. And a study found that paper towels are the most hygienic way to dry your hands. Avoid jet air dryers, which have also been associated with the spread of germs in bathrooms.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/blog/the-bacterial-horror-of-the-hot-air-hand-dryer-2018051113823", sponsorLogo: "", sponsorURL: "")
 

@@ -51,7 +51,7 @@ let saturdayNow0to4Tip3 = Tip(header: "😴", title: "Go to sleep now. A late be
 //SUN (WIP)
 let sundayNow0to4Tip4 = Tip(header: "🛌", title: "Go to sleep. When we’re tired we eat more the next day which results in weight gain", body: "In a meta-analysis of 11 studies, researchers showed that people ate 385 extra calories following a night of sleep deprivation. That’s about the same amount as a serving of Häagen-Dazs peanut butter ice cream a day." , sourceName: "Vox", sourceURL: "https://www.vox.com/science-and-health/2019/3/26/18280663/night-eating-sleep-loss-weight-gain", sponsorLogo: "", sponsorURL: "")
 let sundayNow0to4Tip5 = Tip(header: "🦉", title: "Night owls -- people who prefer to stay up late and sleep late -- have 10% higher risk of dying sooner than morning people", body: "Scientists also found that night owls are more likely to suffer from diabetes, psychological disorders and neurological disorders. \n\nKeep a regular bedtime. Get exposed to light early in the morning. Ask your boss if you can start later. Exercise and eat healthier." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2018/04/180412085736.htm", sponsorLogo: "", sponsorURL: "")
-
+let sundayNow0to4Tip6 = Tip(header: "", title: "", body: "" , sourceName: "Science Daily", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 //SAT (WIP)
 let saturdayNow0to4Tip4 = Tip(header: "🧠", title: "Go to sleep. Not getting enough sleep increase your risk of  Alzheimer's and all other diseases associated with dementia", body: "While the brain sleeps, it clears out harmful toxins, a process that may reduce the risk of Alzheimer's, researchers say. This could explain why we don't think clearly after a sleepless night and why a prolonged lack of sleep can actually kill a person." , sourceName: "NPR", sourceURL: "https://www.npr.org/sections/health-shots/2013/10/18/236211811/brains-sweep-themselves-clean-of-toxins-during-sleep", sponsorLogo: "", sponsorURL: "")
@@ -293,7 +293,7 @@ let weekendNow14to16Tip3 = Tip(header: "💪", title: "3pm-6pm is when physical 
 let weekendNow14to16Tip4 = Tip(header: "🍝", title: "Avoid weight gain by eating smaller meals after 3 p.m", body: "A study of overweight and obese people found that \"late eaters,\" people classified as eating their biggest meal after 3 p.m., lost significantly less weight — and took longer to lose it — than \"early eaters,\" those who ate their main meal before 3 p.m." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/why-eating-late-bad-unhealthy-2018-1", sponsorLogo: "", sponsorURL: "")
 let weekendNow14to16Tip5 = Tip(header: "😴", title: "The best time to take a nap is between 2 p.m and 3 p.m.", body: "We typically experience some sleepiness or decrease in alertness after lunch. A 10-30 minute nap at this time is less likely to interfere with nighttime rest than naps later in the day." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5", sponsorLogo: "", sponsorURL: "")
 let weekendNow14to16Tip6 = Tip(header: "👫", title: "Focus on face-to-face relationships. The more you use Facebook/social media, the worse you feel", body: "While real-world social networks were positively associated with overall well-being, the use of Facebook was negatively associated with overall well-being. \n\nExposure to the carefully curated images from others’ lives leads to negative self-comparison, and the sheer quantity of social media interaction detracts from more meaningful real-life experiences." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/04/a-new-more-rigorous-study-confirms-the-more-you-use-facebook-the-worse-you-feel", sponsorLogo: "", sponsorURL: "")
-let weekendNow14to16Tip7 = Tip(header: "💪", title: "We all need 150+ minutes per week (or 22 minutes per day) of moderate-intensity exercise (like brisk walking) and muscle-strengthening exercise twice a week", body: "Among adults (18-64 years old), only 27% of men and 19% of women met the recommended guidelines for both aerobic and muscle-strengthening exercise." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/americans-arent-meeting-exercise-goals", sponsorLogo: "", sponsorURL: "")
+let weekendNow14to16Tip7 = Tip(header: "💪", title: "We all need 22 minutes per day of moderate-intensity exercise (like brisk walking) and muscle-strengthening exercise twice a week", body: "Among adults (18-64 years old), only 27% of men and 19% of women met the recommended guidelines for both aerobic and muscle-strengthening exercise. Exercise today." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/americans-arent-meeting-exercise-goals", sponsorLogo: "", sponsorURL: "")
 
 ////// WEEK 2
 //SUN
@@ -553,7 +553,9 @@ let weekdayNow5to8Tip37 = Tip(header: "", title: "Feel happier: When you first w
 let weekdayNow5to8Tip38 = Tip(header: "", title: "80% of the world-class performers Tim Ferriss interviewed for his book, “Tools of Titans,” had a mindfulness ritual in their morning routine", body: "By meditating, \"you’re practicing focus when it doesn’t matter (sitting on a couch for 10 minutes) so that you can focus better later when it does matter (negotiation, conversation with a loved one, etc.),\" he writes. \n\nFerriss recommends first-timers try a meditation app, like Headspace or Calm." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/01/23/tim-ferriss-5-step-morning-routine.html", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip39 = Tip(header: "", title: "Write down the most important tasks that you need to complete today. It helps you simplify your life by focusing on what really counts", body: "These tasks are ones which support important long term goals that are aligned to your purpose, passion or general direction in life. \n\n\"If you have a goal, write it down. If you do not write it down, you do not have a goal - you have a wish.\" - Steve Maraboli" , sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/lifestyle/7-morning-rituals-empower-your-day-change-your-life.html", sponsorLogo: "", sponsorURL: "")
 
-
+//Week 3
+//MON
+let weekdayNow5to8Tip40 = Tip(header: "", title: "Weight Loss: Drink water first thing in the morning. Don't drink coffee until 9 a.m.", body: "Study: Participants who drank 17 ounces of water (about two glasses) increased their metabolic rate by 30%, allowing them to burn more calories. Make it a habit to drink water before you drink coffee. \n\nBecause your cortisol levels naturally rise in the morning after you wake and peak between 8-9 a.m., having coffee before or during this time may result in increased stress and its stimulating effects won’t be as effective than after 9 a.m." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/surprising-habits-affecting-health/", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEK 1
@@ -597,6 +599,8 @@ let weekdayNow5to8Topic8 = Topic(title: weekdayNow5to8Title, icon: weekdayNow5to
 // FRI
 let weekdayNow5to8TipArray9 = [weekdayNow5to8Tip36, weekdayNow5to8Tip37, weekdayNow5to8Tip38, weekdayNow5to8Tip39]
 let weekdayNow5to8Topic9 = Topic(title: weekdayNow5to8Title, icon: weekdayNow5to8Icon, tip: weekdayNow5to8TipArray9)
+
+//WEEK3
 
 
 // MARK: - Now, Weekday, 9to11
@@ -738,8 +742,17 @@ let weekdayNow11to14Tip21 = Tip(header: "", title: "Live longer: Drink 5-6 glass
 let weekdayNow11to14Tip22 = Tip(header: "☀️", title: "Lower your risk of skin cancer: Reduce sun exposure between 10 a.m. and 4 p.m.", body: "If you have to be outside during this time: \n\n• Work in the shade \n\n• Apply (and reapply) sunscreen \n\n• Wear a wide-brimmed hat that protects your face and neck", sourceName: "Raleigh Medical Group", sourceURL: "https://www.raleighmedicalgroup.com/blog/entryid/185/skin-cancer-prevention", sponsorLogo: "", sponsorURL: "")
 
 //TUES
-let bzTip78 = Tip(header: "", title: "Live longer: Add more movement into your life by living in neighborhoods with sidewalks, commuting to places by bike, and planting a garden each spring", body: "A study of 100+ year-olds in Greece found that they exercised mindlessly, but just gardening, walking to their neighbor's house, or doing their own yard work.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip23 = Tip(header: "", title: "Live longer: Add more movement into your life by living in neighborhoods with sidewalks, commuting to places by bike, and planting a garden each spring", body: "A study of 100+ year-olds in Greece found that they exercised mindlessly, but just gardening, walking to their neighbor's house, or doing their own yard work.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip24 = Tip(header: "", title: "Project confidence: It's all in your posture. When standing, imagine a string pulling your head up toward the sky", body: "To stand confidently, keep your legs aligned with your shoulders and your feet approximately four to six inches apart. Distribute your weight equally on both legs, keep your shoulders back—but not way back—and turn your body towards others. \n\nAvoid standing in a \"submissive position\" with your legs crossed, hands folded in front of you, or weight pressed down on one hip. ", sourceName: "American Express", sourceURL: "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/4-ways-your-body-language-can-project-confidence/", sponsorLogo: "", sponsorURL: "")
 
+//WED
+let weekdayNow11to14Tip27 = Tip(header: "", title: "Project confidence: When you're able to maintain eye contact, you're communicating to others that you're honest, approachable and confident.", body: "Those who aren't able to maintain eye contact or are the first to break eye contact signal that they're hiding something, feeling uncomfortable, or projecting a lower-status than or submissiveness to the person they're speaking with.", sourceName: "American Express", sourceURL: "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/4-ways-your-body-language-can-project-confidence/", sponsorLogo: "", sponsorURL: "")
+
+//THUR
+let weekdayNow11to14Tip31 = Tip(header: "", title: "Project confidence: Have good posture while sitting", body: "Sit with your back straight with your rear toward the back of the chair, and your feet planted firmly on the floor. \n\nThis kind of sitting position puts the least amount of strain on supporting muscles, keeps you from back and neck pains and helps you develop a strong core—all essential for good standing posture. Additionally, good posture opens your airways, which ensures proper breathing.", sourceName: "American Express", sourceURL: "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/4-ways-your-body-language-can-project-confidence/", sponsorLogo: "", sponsorURL: "")
+
+//FRI
+let weekdayNow11to14Tip35 = Tip(header: "", title: "Confidence reminder: Having an upright posture in the face of stress can maintain positive self-esteem, reduce negative mood, and increase positive mood compared to a slumped posture.", body: "Study: Upright participants reported higher self-esteem, better mood, and lower fear, compared to slumped participants. Sitting upright may be a simple behavioral strategy to help build resilience to stress.", sourceName: "American Psychological Association", sourceURL: "https://psycnet.apa.org/record/2014-37739-001", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 // MON
@@ -755,17 +768,30 @@ let weekdayNow11to14TipArray1 = [weekdayNow11to14Tip7, weekdayNow11to14Tip8, wee
 let weekdayNow11to14Topic1 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray1)
 
 // THU
-let weekdayNow11to14TipArray2 = [weekdayNow11to14Tip11, weekdayNow11to14Tip12, weekdayNow11to14Tip13, weekdayNow11to14Tip14]
+let weekdayNow11to14TipArray2 = [weekdayNow11to14Tip31, weekdayNow11to14Tip12, weekdayNow11to14Tip13, weekdayNow11to14Tip14]
 let weekdayNow11to14Topic2 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray2)
 
 // FRI
-let weekdayNow11to14TipArray3 = [weekdayNow11to14Tip15, weekdayNow11to14Tip16, weekdayNow11to14Tip17, weekdayNow11to14Tip18]
+let weekdayNow11to14TipArray3 = [weekdayNow11to14Tip35, weekdayNow11to14Tip16, weekdayNow11to14Tip17, weekdayNow11to14Tip18]
 let weekdayNow11to14Topic3 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray3)
 
 //WEEK 2
 //MON
 let weekdayNow11to14TipArray4 = [weekdayNow11to14Tip19, weekdayNow11to14Tip20, weekdayNow11to14Tip21, weekdayNow11to14Tip22]
 let weekdayNow11to14Topic4 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray4)
+//TUE
+let weekdayNow11to14TipArray5 = [weekdayNow11to14Tip23, weekdayNow11to14Tip24, tuesdayNow11to14Tip0, weekdayNow11to14Tip6]
+let weekdayNow11to14Topic5 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray5)
+//WED
+let weekdayNow11to14TipArray6 = [weekdayNow11to14Tip19, weekdayNow11to14Tip10, weekdayNow11to14Tip9, weekdayNow11to14Tip8]
+let weekdayNow11to14Topic6 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray6)
+//THUR
+let weekdayNow11to14TipArray7 = [weekdayNow11to14Tip19, weekdayNow11to14Tip14, weekdayNow11to14Tip13, weekdayNow11to14Tip12]
+let weekdayNow11to14Topic7 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray7)
+//FRI
+let weekdayNow11to14TipArray8 = [weekdayNow11to14Tip18, weekdayNow11to14Tip17, weekdayNow11to14Tip16, weekdayNow11to14Tip14]
+let weekdayNow11to14Topic8 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to14TipArray7)
+
 
 
 
@@ -776,7 +802,7 @@ let weekdayNow14to16Icon = "Now"
 
 //WEEK 1
 //// MON
-let weekdayNow14to16Tip0 = Tip(header: "🚶‍♂️", title: "Experts advise desk workers take breaks throughout the day to stand or walk for 2 hours every day", body: "Study: Men who sat 6+ hours per day at work were 90% more likely to report moderate levels of psychological distress—say, feeling tired, nervous, restless, or hopeless—than those who sat for less time. Prolonged sitting is associated with an increased risk of diabetes, obesity, and back pain.", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/health/a19841065/sitting-too-long-could-put-your-brain-health-at-risk/", sponsorLogo: "", sponsorURL: "")
+let weekdayNow14to16Tip0 = Tip(header: "🚶‍♂️", title: "Experts advise desk workers take breaks throughout the day to stand or walk for 2 hours every day", body: "Study: Men who sat 6+ hours per day at work were 90% more likely to report moderate levels of psychological distress—say, feeling tired, nervous, restless, or hopeless—than those who sat for less time. \n\nProlonged sitting is associated with an increased risk of diabetes, obesity, and back pain.", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/health/a19841065/sitting-too-long-could-put-your-brain-health-at-risk/", sponsorLogo: "", sponsorURL: "")
 let weekdayNow14to16Tip1 = Tip(header: "😠", title: "If you're in a bad mood this afternoon, you're not alone", body: "A study found people typically feel less happy, feel less warm toward others, and feel less positive emotions in the afternoon. While positive emotions and moods are typically highest in the morning and evening.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/dp/B072Q985YX/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
 let weekdayNow14to16Tip2 = Tip(header: "📝", title: "Before you leave work, write tomorrow's to-do list", body: "The last thing the CEO of American Express, Kenneth Chenault, does before leaving his office is to write down the top 3 things he wants to accomplish tomorrow. Then he uses the list to start his next day." , sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/what-successful-people-do-before-they-go-to-sleep.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow14to16Tip3 = Tip(header: "🤔", title: "Improve your performance: Ask yourself how did your day go?", body: "Researchers asked a group of employees to spend 15 minutes at the end of each day to reflect on how their day went. After 10 days, the group of employees who spent time reflecting at the end of each day outperformed other employees who did not by 23%." , sourceName: "LinkedIn", sourceURL: "https://learning.linkedin.com/blog/learning-tips/want-to-get-better-at-your-job--build-in-time-to-reflect", sponsorLogo: "TBD", sponsorURL: "www.test.com")

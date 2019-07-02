@@ -83,23 +83,50 @@ class UserInfoViewController: UIViewController {
 
     }
 
+    func reloadViewFromNib() {
+        let parent = view.superview
+        view.removeFromSuperview()
+        view = nil
+        parent?.addSubview(view) // This line causes the view to be reloaded
+    }
+
+
+
     let appTabBar = MainTabBarViewController()
 
 
 
     @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
-
-        print("Swipe")
-        performSegue(withIdentifier: "swipe", sender: self)
+        segueToNextVC()
 
     }
 
 
     @IBAction func tapAction(_ sender: Any) {
-        print("Tap")
-        performSegue(withIdentifier: "swipe", sender: self)
+        segueToNextVC()
 
     }
+
+    func segueToNextVC() {
+
+        performSegue(withIdentifier: "swipe", sender: self)
+
+        quoteLabel.removeFromSuperview()
+        authorLabel.text = ""
+
+
+
+
+
+    }
+
+    func removeAnimation() {
+        self.quoteLabel.layer.removeAllAnimations()
+        self.view.layer.removeAllAnimations()
+        self.view.layoutIfNeeded()
+    }
+
+
 
     func removeNatureImage() {
         natureImageView.removeFromSuperview()
@@ -119,6 +146,8 @@ class UserInfoViewController: UIViewController {
         self.quoteView.backgroundColor = selectedGradientColor
 
         dayOfWeekAndHour()
+
+        reset(self)
 
     }
 
@@ -290,11 +319,13 @@ class UserInfoViewController: UIViewController {
     }
 
 
-
-
+    //Animation
+    //https://medium.com/livefront/animating-font-size-in-uilabels-fb6fd273a5f3
     let duration = 1.0
-    let fontSizeSmall: CGFloat = 22
-    let fontSizeBig: CGFloat = 40
+    let enlargeDuration = 0.7
+    let shrinkDuration = 1.8
+    let fontSizeSmall: CGFloat = 18
+    let fontSizeBig: CGFloat = 34
     var isSmall: Bool = true
 
     func reset(_ sender: Any) {
@@ -306,12 +337,9 @@ class UserInfoViewController: UIViewController {
         bounds.size = quoteLabel.intrinsicContentSize
         quoteLabel.bounds = bounds
 
-        quoteLabel.backgroundColor = .blue
-
         isSmall = true
 
         enlarge()
-
 
         isSmall = !isSmall
     }
@@ -330,7 +358,12 @@ class UserInfoViewController: UIViewController {
 
         quoteLabel.bounds = biggerBounds
 
-        UIView.animate(withDuration: duration) {
+        UIView.animate(withDuration: enlargeDuration) {
+
+            guard self.quoteLabel != nil else {
+                print("False (enlarge): quoteLabel is nil")
+                return
+            }
             self.quoteLabel.transform = .identity
             self.quoteLabel.bounds = biggerBounds
             self.shrink()
@@ -351,13 +384,17 @@ class UserInfoViewController: UIViewController {
 
         let shrinkTransform = scaleTransform(from: quoteLabel.bounds.size, to: smallerBounds.size)
 
-        UIView.animate(withDuration: duration, animations: {
+        UIView.animate(withDuration: shrinkDuration, animations: {
             self.quoteLabel.transform = shrinkTransform
         }, completion: { done in
+
+            guard self.quoteLabel != nil else {
+                print("False (shrink): quoteLabel is nil")
+                return
+            }
             self.quoteLabel.font = labelCopy.font
             self.quoteLabel.transform = .identity
             self.quoteLabel.bounds = smallerBounds
-
             self.enlarge()
         })
     }
@@ -1426,3 +1463,4 @@ class UserInfoViewController: UIViewController {
 
 
 }
+

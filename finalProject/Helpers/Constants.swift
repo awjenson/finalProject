@@ -33,7 +33,7 @@ struct Constants {
         static let safety = "icons8-siren"
         static let event = "icons8-people_working_together"
         static let gettingReady = "icons8-v_neck_t_shirt"
-        static let goingOut = "icons8-legs_in_boots"
+        static let goingOut = "icons8-exit_sign"
         static let school = "icons8-graduation_cap"
         static let routine = "icons8-checklist"
         static let work = "icons8-commercial_development_management"
