@@ -11,6 +11,19 @@
 
 import Foundation
 
+// MARK: - Warrent Buffet
+
+
+
+let warrenBuffetHint1 = Hint(title: "Simple 3 step process for prioritizing", body: "First, you write down a list of 25 career goals. \nSecond, you do some soul-searching and circle the 5 highest-priority goals. Just 5. \nThird, you take a good hard look at the twenty goals you didn't circle. se you avoid at all costs. They're what distract you; they eat away time and energy, taking your eye from the goals that matter more. \nTo help you prioritize, add columns that allow you to sort out how interestest and important these projects are. Rate each goal on a scale from 1 to 10, from least to most interesting and then again from least to most important. \nAn additional step: Ask yourself, To what extent do these goals serve a common purpose? The more they're part of the same goal hierarchy the more focused your passion.", sourceName: "Grit: The Power of Passion and Perseverance", sourceURL: "https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth-ebook/dp/B010MH9V3W")
+
+// MARK: - Will Shortz
+let willShortzQuote = Quote(quote: "\"Figure out what you enjoy doing most in life, and then try to do it full-time. Life is short. Follow your passion.\"", source: "Will Shortz", bio: "Long-time editor of the New York Times crossword puzzle")
+
+// MARK: - Jeff Bezos
+let jeffBezosQuote = Hint(title: "Jeff Bezos told Princeton graduates the story of leaving a high-salary, high-status Manhattan finance job to start Amazon", body: "\"After much consideration, I took the less safe path to follow my passion... Whatever it is that you want to do, you'll find in life that if you're not passionate about what it is you're working on, you won't be able to stick with it.\"", sourceName: "Grit: The Power of Passion and Perseverance", sourceURL: "https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth-ebook/dp/B010MH9V3W")
+
+
 // MARK: - Bruce Lee
 
 let bruceLeeTitle = "Bruce Lee"
@@ -59,7 +72,7 @@ struct AdviceData {
 
     static let markDivinePurpose = ProfileDataModel(category: "PURPOSE", title: "\"As a young man I felt lost...\"", body: "\"I had an MBA, a good job at a top-tier accounting firm, but was unhappy in spite of it. I stumbled into a matrial arts dojo, thinking it might help. Grinding my character down on the training floor was followed by polishing it in the meditation hall. \n\nSlowly and methodically I turned my body, mind, emotions, and intutition to a new vibration - one that allowed me to hear my inner voice. That voice told me I wasn't living my purpose, that my misery would endur until I could align with my purpose. \n\nWhat is it that you are really supposed to do with your life? What one thing would you focus on if you had nothing holding you back?\"", url: "https://sealfit.com/", headerUserTextLabel: "Your purpose:")
 
-    static let markDivineTop5Goals = ProfileDataModel(category: "GOALS", title: "Set SMART Goals: Specific, Measurable, Achievable, Realistic (but Challenging, and Time-bound", body: "When facing a monster challenge like Navy SEAL's Hell Week, reduce it to micro-goals. You can bite-chuncks of of an elephant long before swallowing the whole thing at once.", url: "https://sealfit.com/", headerUserTextLabel: "Your top 5 goals:")
+    static let markDivineTop5Goals = ProfileDataModel(category: "GOALS", title: "Set SMART Goals: Specific, Measurable, Achievable, Realistic (but Challenging), and Time-bound", body: "When facing a monster challenge like Navy SEAL's Hell Week, reduce it to micro-goals. You can bite-chuncks of of an elephant long before swallowing the whole thing at once.", url: "https://sealfit.com/", headerUserTextLabel: "Your top 5 goals:")
 
     static let markDivineVision = ProfileDataModel(category: "VISION", title: "A deeper awareness of what drives your behavior allow us to create a new vision and path that becomes our authentic destiny.", body: "Mark left behind the corporate world to pursue his vision to become an elite Navy SEAL officer. At 26 he graduated as honor-man (#1 ranked trainee) of his SEAL BUD/s class number 170. \n\n\"Hold a powerful vision of who you want to be at some time-certain future.  If you back the mental vision with massive action, do the work to root out negative blocks, and propel your vision with desire, belief and expectation, then surely you will become that person.\"", url: "https://sealfit.com/", headerUserTextLabel: "Your vision statement:")
 

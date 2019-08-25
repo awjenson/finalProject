@@ -284,6 +284,7 @@ class NowViewController: UIViewController {
 
     func setupUI() {
 
+
 //        self.view.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
         self.view.backgroundColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
 //        self.view.backgroundColor = UIColor.red
@@ -664,9 +665,11 @@ class NowViewController: UIViewController {
 
 
 
-
     func displayHourInTopicLabel() {
         formatter.dateFormat = "h a" // "a" prints "pm" or "am"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+
         let hourString = formatter.string(from: Date()) // "12 AM"
         titleLabel.text = "\(hourString) Tips"
     }
@@ -2167,6 +2170,7 @@ class NowViewController: UIViewController {
         topics = [topic0, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8Now]
 
 
+
         setupButtonIcons(topics)
 
         self.topic0Label.text = topic0.title
@@ -2177,6 +2181,9 @@ class NowViewController: UIViewController {
         self.topic5Label.text = topic5.title
         self.topic6Label.text = topic6.title
         self.topic7Label.text = topic7.title
+
+
+//        self.topic1Label.sizeToFit()
 
 
 

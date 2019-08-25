@@ -288,26 +288,14 @@ class UserInfoViewController: UIViewController {
         case 12...13:
             setNatureImage(to: "day\(day)")
 
-        case 14:
+        case 14...16:
             setNatureImage(to: "afternoon\(day)")
 
-        case 15:
-            setNatureImage(to: "afternoon\(day)")
-
-        case 16:
-            setNatureImage(to: "afternoon\(day)")
-
-        case 17:
+        case 17...18:
             setNatureImage(to: "evening\(day)")
 
-        case 18:
-            setNatureImage(to: "evening\(day)")
-
-        case 19:
+        case 19...20:
             setNatureImage(to: "sunset\(day)")
-
-        case 20:
-            setNatureImage(to: "dusk\(day)")
 
         case 21...24:
             setNatureImage(to: "night\(day)")

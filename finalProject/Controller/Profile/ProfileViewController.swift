@@ -283,7 +283,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         quoteTextLabel.text = selectedPersonProfile.advice
 
         // Media
-        mediaTitleLabel.text = selectedPersonProfile.description
+//        mediaTitleLabel.text = selectedPersonProfile.description
     }
 
 

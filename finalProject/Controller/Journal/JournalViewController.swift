@@ -163,7 +163,7 @@ class JournalViewController: UIViewController {
         // place buttons in desired order (excludes FamousPerson hints)
         headerButtons = [header0Button, header1Button, header2Button, header3Button,
                          header4Button, header5Button, header6Button, header7Button,
-                         header8Button, header9Button]
+                        header8Button, header9Button, header10Button,header11Button]
 
 
         // determines which buttons headers and hints are displayed
