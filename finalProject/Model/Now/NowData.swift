@@ -161,7 +161,7 @@ let sunday9to11Tip3 = Tip(header: "", title: "Live longer: Schedule an hour a we
 
 
 // SAT
-let weekendNow9to11Tip4 = Tip(header: "🧠", title: "Your mind performs at its peak during the first 2-4 hours after you wake up", body: "Successful people take advantage of that time to do things for themselves. This could involve: \n• exercising \n• meditating \n• going for a nice walk", sourceName: "MoneyVersed", sourceURL: "https://moneyversed.com/weekend-habits-successful-people/", sponsorLogo: "logo", sponsorURL: "logoURL")
+let weekendNow9to11Tip4 = Tip(header: "🧠", title: "Your mind performs at its peak during the first 2-4 hours after you wake up", body: "Successful people take advantage of that time to do things for themselves. \n\n• Exercise \n• Meditate \n• Go for a nice walk", sourceName: "MoneyVersed", sourceURL: "https://moneyversed.com/weekend-habits-successful-people/", sponsorLogo: "logo", sponsorURL: "logoURL")
 let weekendNow9to11Tip5 = Tip(header: "🏞", title: "Being in nature increases feelings of happiness and healthiness", body: "Being in nature may provide people with resilience to meet the challenges of everyday life, while also facilitating exercise, social contact and a sense of purpose. It also reduces blood pressure and contributes to longer lifespans amongst senior citizens." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekendNow9to11Tip6 = Tip(header: "🙏", title: "Best way to reduce stress is to attend church or religious services, survey finds", body: "Most effective ways to reduce stress:\n•  Church or religious services (77%)\n•  Pray (73%)\n•  Play sports (73%)\n•  Massage or spa (71%)\n•  Meditage or yoga (70%)\n•  See mental health professional (68%)\n•  Exercise or walk (62%)\n\nLess effective ways to reduce stress:\n•  Watch TV or movie (33%)\n•  Surf the Internet (29%)", sourceName: "American Psychological Association", sourceURL: "https://www.apa.org/news/press/releases/stress/2013/snapshot.aspx", sponsorLogo: "", sponsorURL: "")
 let weekendNow9to11Tip7 = Tip(header: "💪", title: "Sitting 8+ hours a day with no physical activity leads to the same risk of dying posed by obesity and smoking", body: "Too much sitting increases your risk of death from cardiovascular disease and cancer. Take a break from sitting every 30 minutes. \n\nStudy: Getting 60-75 minutes of moderately intense physical activity a day reduced the negative effects of too much sitting." , sourceName: "Mayo Clinic", sourceURL: "https://www.mayoclinic.org/healthy-lifestyle/adult-health/expert-answers/sitting/faq-20058005", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -267,7 +267,7 @@ let weekendNow11to14Tip21 = Tip(header: "🚰", title: "Drink water. Drinking 8 
 let weekendNow11to14Tip22 = Tip(header: "", title: "Live longer: Increase your social connections (family, friends, rommantic partner, club membership, and volunteering)", body: "Across 148 studies, individuals with adequate social relationships have a 50% greater likelihood of survival compared to those with poor or insufficient social relationships. The magnitude of this effect is comparable with quitting smoking and it exceeds many well-known risk factors for mortality such as obesity and physical inactivity.", sourceName: "PLOS Medicine", sourceURL: "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1000316#pmed-1000316-g006", sponsorLogo: "", sponsorURL: "")
 let weekendNow11to14Tip23 = Tip(header: "", title: "Live longer: Enroll in a yoga class", body: "Yoga, when done properly, will help increase balance. It also strengthens all muscle groups, increases flexibility, is good for your joints, and can lessen lower back pain. It may also provide the same kind of social support and spiritual centering that religions do. \n\nBe sure to practice it at least twice weekly.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
-//WEEK 3
+//WEEK 4
 //SUN
 
 
@@ -322,6 +322,13 @@ let weekendNow14to16Tip13 = Tip(header: "🚰", title: "Drinking 8 glasses of wa
 let weekendNow14to16Tip14 = Tip(header: "🍽", title: "To prevent weight gain, experts say, limit food consumption to your hours of peak activity", body: "Researchers but 2 groups of mice on the same diet. One group was allowed to eat anytime; the other group was restricted to eating only during an 8-hour period when they were normally awake and active. The mice that ate only while active were 40% leaner and had lower cholesterol and blood sugar.", sourceName: "Wall Street Journal", sourceURL: "https://www.wsj.com/articles/SB10000872396390444180004578018294057070544", sponsorLogo: "", sponsorURL: "")
 let weekendNow14to16Tip15 = Tip(header: "", title: "Live longer: Focus your life on serving others or caring for your family", body: "Study: Successful 100+ year-olds have a strong sense of purpose. They feel needed and want to contribute to a greater good. \n\nAs soon as they lose this, the switch goes off. They die very quickly if they don't feel needed.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
+//WEEK 3
+//SUN
+let weekendNow14to16Tip16 = Tip(header: "", title: "Millionaire Habit: Exercise daily. 66% of the millionaires exercise 30+ minutes every day", body: "Exercising can boost your: \n• memory \n• concentration \n• mental sharpness \n\nGo for a: \n• bike ride \n• walk \n• run \n• jog", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-exercise-every-day-2016-4", sponsorLogo: "", sponsorURL: "")
+
+//SAT
+let weekendNow14to16Tip20 = Tip(header: "", title: "Millionaire Habit: Exercise daily. On average, millionaires work out 3.5 hours a week", body: "The consistency with which millionaires have a workout plan and stay with it relates directly to how successful they have become. \n\nMillionaires work hard at staying in shape, some by hitting the gym on the way to work, others by taking part in exercise classes or team sports.", sourceName: "The Street", sourceURL: "https://www.thestreet.com/lifestyle/lifestyle-habits-of-millionaires-that-everyone-should-adopt-14547729", sponsorLogo: "", sponsorURL: "")
+
 
 //WEEK 1
 //SUN
@@ -360,12 +367,12 @@ let saturdayNow17to20Tip2 = Tip(header: "🚭", title: "30-year study finds that
 let saturdayNow17to20Tip3 = Tip(header: "👫", title: "Loneliness increases when you choose social media interactions over face-to-face interactions", body: "20% of Americans report feeling lonely. Researchers found that lonely people spend more time on Facebook than non-lonely people. \n\nUsing social media to organize future face-to-face meetings is healthy. But, spending time alone, scrolling through social media is unhealthy." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-making-us-lonely/308930/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 2
-//SUN
+//SUN (WIP 1)
 let weekendNow17to20Tip0 = Tip(header: "🤳", title: "Reducing your time on social media helps to lower your risk of developing narcissistic traits", body: "Study: Facebook users have higher levels of total narcissism than Facebook nonusers. Narcissism manifests in patterns of: \n• Fantastic grandiosity \n• Craving for attention \n• Lack of empathy" , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-making-us-lonely/308930/", sponsorLogo: "", sponsorURL: "")
 let weekendNow17to20Tip1 = Tip(header: "🍽", title: "Restrict eating to a 12-hour cycle", body: "Our bodies were designed for a 12-hour eating cycle. Disrupting this natural order by, say, snacking at 2 a.m., leads to poor sleep and weight gain.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/the-new-secrets-of-perfect-sleep/", sponsorLogo: "", sponsorURL: "")
 let weekendNow17to20Tip2 = Tip(header: "🚰", title: "Drink water. Drinking 8 glasses of water per day can aid in weight loss for the average person - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. Replacing caloric and sugary beverages such as soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 
-//SAT
+//SAT (WIP - 1)
 let weekendNow17to20Tip3 = Tip(header: "👫", title: "Spend tonight with family or friends. Being lonely is extremely bad for your health", body: "If you’re lonely, you are more likely to be depressed, to sleep badly, and to suffer dementia and general cognitive decline. You’re less likely to exercise. You’re more likely to be obese. You’re less likely to survive a serious operation and more likely to have hormonal imbalances. You’re more likely to be put in a geriatric home at an earlier age than a similar person who isn’t lonely." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-making-us-lonely/308930/", sponsorLogo: "", sponsorURL: "")
 let weekendNow17to20Tip4 = Tip(header: "🚰", title: "Drink water. Drinking 8 glasses of water per day can aid in weight loss for the average person - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. Replacing caloric and sugary beverages such as soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 let weekendNow17to20Tip5 = Tip(header: "", title: "Prevent weight gain: Avoid drinking alcohol tonight", body: "Study: Drinking alcohol causes people to eat an extra 384 calories daily, likely because it makes us more sensitive to food aromas and less likely to resist indulgent fare." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
@@ -424,12 +431,14 @@ let saturday21to24Tip8 = Tip(header: "🙅‍♀️", title: "Sleep better: Avoi
 //WEEK 2
 //SUN
 let sunday21to24Tip9 = Tip(header: "😴", title: "Not getting enough sleep causes premature aging and wrinkles", body: "Your body's cortisol levels naturally decrease while we sleep. Miss out on sleep, though, and that cycle is disrupted. Persistently high cortisol levels can contribute to the breakdown of collagen (a protein that's key in helping your skin look young and fresh) and elastic tissue.", sourceName: "Allure", sourceURL: "https://www.allure.com/story/sleep-and-skin-what-happens", sponsorLogo: "", sponsorURL: "")
+let sunday21to24Tip10 = Tip(header: "", title: "Whatever it is that you consume the 2 hours before you go to bed, do it consciously. Don’t do anything that prevents you from calming down and becoming sleepy", body: "If you do, see, smell, touch, eat, drink, hear or spend time around something that stresses you, your body will rise the cortisol levels in your body, which is the exact opposite to what you need in order to relax and have a good, deep, relaxing sleep.", sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 
 
 
 //SAT
 let saturday21to24Tip9 = Tip(header: "😴", title: "Not getting enough sleep causes premature aging and wrinkles", body: "If you don't sleep, your body doesn't make as much human growth hormone (which stimulates cell production), so your skin won't be as thick. Without time to produce new, fresh cells and fix yesterday's damage, you're practically welcoming accelerated aging—plus, collagen may prematurely stiffen (hello, fine lines and wrinkles!)", sourceName: "Allure", sourceURL: "https://www.allure.com/story/sleep-and-skin-what-happens", sponsorLogo: "", sponsorURL: "")
+let saturday21to24Tip10 = Tip(header: "", title: "Avoid alcohol right before bedtime because it hurts sleep quality", body: "While alcohol can certainly help you fall asleep, the National Institute of Health finds that it hurts sleep quality. \n\nAlcohol keeps people in the lighter stages of sleep from which they can be awakened easily and prevents them from falling into deeper, more restorative stages of sleep, the institute finds.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -893,6 +902,7 @@ let weekdayNow14to16Tip19 = Tip(header: "🌬", title: "Even just 3-5 minutes of
 //MON
 let weekdayNow14to16Tip20 = Tip(header: "", title: "Avoid weight gain: When the afternoon slump hits and the effects of your morning coffee have worn off, go for a walk or a workout to get reenergized", body: "It's fine to drink coffee in the morning, but drinking more coffee in the afternoon to stay alert may increase your risk of weight gain. Study: Too much caffeine can lead to insulin resistance and increased fat storage." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/healthy-home/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow14to16Tip21 = Tip(header: "", title: "Sitting up straight in your chair gives you more confidence in your own thoughts, study finds", body: "On the other hand, slumped over your desk gives you less confidence in your own thoughts. The researchers found that people's thoughts are influenced by their posture, even though they don't realize that is what's happening." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2009/10/091005111627.htm", sponsorLogo: "", sponsorURL: "")
+let weekdayNow14to16Tip22 = Tip(header: "", title: "Millionaire Habit: Work 50+ hours a week", body: "Study of what rich people and poor people do every week: \n• 86% of rich people worked 50+ hours a week \n• 43% of poor people worked 50+ hours a week" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/common-myths-about-rich-people-2015-6", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 //MON
@@ -916,8 +926,8 @@ let weekdayNow14to16TipArray4 = [weekdayNow14to16Tip16, weekdayNow14to16Tip17, w
 let weekdayNow14to16Topic4 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray4)
 
 //WEEK 2
-//MON (WIP)
-let weekdayNow14to16TipArray5 = [weekdayNow14to16Tip20, weekdayNow14to16Tip2, weekdayNow14to16Tip1, weekdayNow14to16Tip0]
+//MON (WIP: 1)
+let weekdayNow14to16TipArray5 = [weekdayNow14to16Tip20, weekdayNow14to16Tip21, weekdayNow14to16Tip22, weekdayNow14to16Tip4]
 let weekdayNow14to16Topic5 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray5)
 
 //TUE (WIP)
@@ -1025,7 +1035,10 @@ let thursday17to18Week3Tip1 = Tip(header: "", title: "Live longer: Keep in touch
 let thursday17to18Week3Tip2 = Tip(header: "", title: "Increase Happiness: Exercise makes you happier than money", body: "Study: People who are physically active feel just as good as those who avoid physical activity but earn $25,000 more a year. \n\nBut exercising too much can have the reverse effect on happiness. According to the study, physical activity only improves mental well-being within a certain time frame: 3-5 training sessions per week, each lasting around 45 minutes, is ideal.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/exercise-makes-you-happier-than-money-says-yale-and-oxford-study-2019-4", sponsorLogo: "", sponsorURL: "")
 
 //FRI
-let friday17to18Week3Tip1 = Tip(header: "", title: "Exercise often. People who exercised regularly felt bad for 35 days a year while people who did not exercise regularly felt bad for 53 days, on average", body: "The scientists also found that team sports, cycling, and aerobic and gym activities had the most positive effect on mental health.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/exercise-makes-you-happier-than-money-says-yale-and-oxford-study-2019-4", sponsorLogo: "", sponsorURL: "")
+let friday17to18Week3Tip1 = Tip(header: "", title: "Exercise often. People who exercised regularly felt bad for 35 days a year while people who did not exercise regularly felt bad for 53 days, on average", body: "The scientists also found that team sports, cycling, and aerobic and gym activities had the most positive effect on mental health. \n\nThe ultimate goal, if you want to become a self-made millionaire, is to save 20% or more or your net pay and prudently invest those savings.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/exercise-makes-you-happier-than-money-says-yale-and-oxford-study-2019-4", sponsorLogo: "", sponsorURL: "")
+let friday17to18Week3Tip2 = Tip(header: "", title: "94% of the self-made millionaires, who became rich by saving money, saved 20% or more of their net pay or their net income", body: "They did this early in their work lives, long before they accumulated their millions. Get into the habit of saving something. ", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/self-made-millionaires-habits-build-wealth-2017-9#1-they-establish-savings-goals-early-in-their-lives-1", sponsorLogo: "", sponsorURL: "")
+
+//
 
 
 
@@ -1104,7 +1117,7 @@ let weekday19to20Tip14 = Tip(header: "🔥", title: "To reduce heartburn, don’
 let weekday19to20Tip15 = Tip(header: "", title: "Read a book. Those who read 7+ books per year are more than 122% more likely to be millionaires as opposed to those who never read or only read 1-3 books per year, survey finds", body: "Reading dramatically correlates with income and higher education, as well as overall happiness. For example, Bill Gates reads 50 books a year and Warren Buffett spends as much as 80% of his day reading." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/04/07/7-rich-habits-of-highly-successful-people.html", sponsorLogo: "", sponsorURL: "")
 let weekday19to20Tip16 = Tip(header: "", title: "Millionaire habit: Start with your current income, increase it, and then start adding multiple flows of income", body: "You won't get rich without multiple flows of income. Developing multiple flows of income could mean starting a side hustle, generating passive income, or picking up a high-paying side job.", sourceName: "Yahoo! Finance", sourceURL: "https://uk.finance.yahoo.com/news/11-habits-start-20s-want-150800135.html", sponsorLogo: "", sponsorURL: "")
 
-//
+//FRI
 let weekday19to20Tip17 = Tip(header: "", title: "Avoid alcohol, chocolate, nut butter, spicy foods, and junk foods after 8 p.m.", body: "Studies have found that consuming these 5 foods at night can led to weight gain and a poor night of sleep.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/five-foods-avoid-after-8-pm/", sponsorLogo: "", sponsorURL: "")
 
 let weekday19to20Tip18 = Tip(header: "", title: "Live Longer: Spend tonight with your family or friends", body: "Having just 3 social ties may decrease your risk of early death by more than 200%. \n\nA strong social circle might also help you react less negatively to stress, perhaps further explaining the positive effect on lifespan." , sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/13-habits-linked-to-a-long-life", sponsorLogo: "TBD", sponsorURL: "www.test.com")

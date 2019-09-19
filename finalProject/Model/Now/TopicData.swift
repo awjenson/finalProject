@@ -41,14 +41,14 @@ let motivateAMTip8 = Tip(header: "", title: "\"Whether it's eight o'clock in the
 //3
 let motivateAMTip9 = Tip(header: "", title: "\"Don't think in the morning. That's a big mistake that people make. They wake up in the morning and they start thinking. Don't think. Just execute the plan. The plan is the alarm clock goes off, you get up, you go work out. Get some.\" \n\n- Jocko Willink", body: "Jocko Willink is a retired US Navy SEAL, podcaster, and author." , sourceName: "Brainy Quote", sourceURL: "https://www.brainyquote.com/topics/morning", sponsorLogo: "", sponsorURL: "")
 let motivateAMTip10 = Tip(header: "", title: "\"That nice, soft pillow and the warm blanket, and it's all comfortable, and no one wants to leave that comfort - but if you can wake up early in the morning, get a head start on everyone else that's still sleeping, get productive time doing things that you need to do - that's a huge piece to moving your life forward.\" \n\n- Jocko Willink", body: "Jocko Willink is a retired US Navy SEAL, podcaster, and author." , sourceName: "Brainy Quote", sourceURL: "https://www.brainyquote.com/topics/morning", sponsorLogo: "", sponsorURL: "")
-let motivateAMTip11 = Tip(header: "", title: "\"\" \n\n- ", body: "" , sourceName: "Brainy Quote", sourceURL: "https://www.brainyquote.com/topics/morning", sponsorLogo: "", sponsorURL: "")
+let motivateAMTip11 = Tip(header: "", title: "\"Be pleasant until ten o'clock in the morning and the rest of the day will take care of itself.\" \n\n- Elbert Hubbard", body: "Elbert Hubbard was an American writer, artist, and philosopher." , sourceName: "Everyday Power", sourceURL: "https://everydaypower.com/morning-quotes/", sponsorLogo: "", sponsorURL: "")
 let motivateAMTip12 = Tip(header: "", title: "\"\" \n\n- ", body: "" , sourceName: "Brainy Quote", sourceURL: "https://www.brainyquote.com/topics/morning", sponsorLogo: "", sponsorURL: "")
 
 //4
 let motivateAMTip13 = Tip(header: "", title: "\"That nice, soft pillow and the warm blanket, and it's all comfortable, and no one wants to leave that comfort - but if you can wake up early in the morning, get a head start on everyone else that's still sleeping, get productive time doing things that you need to do - that's a huge piece to moving your life forward.\" \n\n- Jocko Willink", body: "Jocko Willink is a retired US Navy SEAL, podcaster, and author." , sourceName: "Brainy Quote", sourceURL: "https://www.brainyquote.com/topics/morning", sponsorLogo: "", sponsorURL: "")
 
 
-//Day
+//Mid-Day
 //1
 let motivateDayTip1 = Tip(header: "", title: "\"Success is going from failure to failure without losing your enthusiasm.\" \n\n- Sir Winston Churchill", body: "Sir Winston Churchill was Prime Minister of the UK from 1940 to 1945, when he led Britain to victory in  World War II, and again from 1951 to 1955." , sourceName: "Everyday Power", sourceURL: "https://everydaypower.com/morning-quotes/", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip2 = Tip(header: "", title: "\"When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.\" \n\n- Henry Ford", body: "Henry Ford was the founder of the Ford Motor Company." , sourceName: "Everyday Power", sourceURL: "https://everydaypower.com/morning-quotes/", sponsorLogo: "", sponsorURL: "")
@@ -67,15 +67,13 @@ let motivateDayTip10 = Tip(header: "", title: "\"For me, I am driven by two main
 let motivateDayTip11 = Tip(header: "", title: "\"No act of kindness, no matter how small, is ever wasted.\" \n\n- Aesop", body: "Aesop is believed to have been alive from 620 to 560 BC. It was believed that he was a slave, but was given his freedom because of his literacy and storytelling." , sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/quotes/tag/compassion", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip12 = Tip(header: "", title: "\"Protect your enthusiasm from the negativity and fear of others. Never decide to do nothing just because you can only do little. Do what you can. You would be surprised at what \"little\" acts have done for our world.\" \n\n- Steve Maraboli", body: "Steve Maraboli is an internet radio commentator, motivational speaker and author." , sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/quotes/tag/compassion", sponsorLogo: "", sponsorURL: "")
 
-
-
 //4
 let motivateDayTip13 = Tip(header: "", title: "\"The simplest acts of kindness are by far more powerful then a thousand heads bowing in prayer.\" \n\n- Mahatma Gandhi", body: "Mahatma Gandhi was an Indian lawyer and political ethicist, who employed nonviolent resistance to lead the successful campaign for India's independence from British Rule." , sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/quotes/tag/compassion", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip14 = Tip(header: "", title: "\"Smile at strangers and you just might change a life.\" \n\n- Steve Maraboli", body: "Steve Maraboli is an internet radio commentator, motivational speaker and author." , sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/quotes/tag/compassion", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip15 = Tip(header: "", title: "\"You have not lived today until you have done something for someone who can never repay you.\" \n\n- John Bunyan", body: "John Bunyan was an English author and preacher." , sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/quotes/tag/compassion", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip16 = Tip(header: "", title: "\"You have not lived today until you have done something for someone who can never repay you.\" \n\n- John Bunyan", body: "John Bunyan was an English author and preacher." , sourceName: "Good Reads", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
-//5
+//5 (WIP Day)
 let motivateDayTip17 = Tip(header: "", title: "\"If we have no peace, it is because we have forgotten that we belong to each other.\"", body: "- Mother Teresa \n\nMother Teresa was an Albanian-Indian Roman Catholic nun and missionary." , sourceName: "Goalcast", sourceURL: "https://www.goalcast.com/2017/04/10/top-20-most-inspiring-mother-teresa-quotes/", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip18 = Tip(header: "", title: "\"Let us always meet each other with smile, for the smile is the beginning of love.\" \n\n- Mother Teresa", body: "Mother Teresa was an Albanian-Indian Roman Catholic nun and missionary." , sourceName: "Goalcast", sourceURL: "https://www.goalcast.com/2017/04/10/top-20-most-inspiring-mother-teresa-quotes/", sponsorLogo: "", sponsorURL: "")
 
@@ -95,19 +93,32 @@ let motivatePMTip6 = Tip(header: "", title: "\"What can you do to promote world 
 //
 
 
+//MOTIVATE - AM, Day, PM
+//AM
+let motivateAMTipArray0 = [motivateAMTip1, motivateAMTip2, motivateAMTip3, motivateAMTip4]
+let motivateAMTopic0 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivateAMTipArray0)
+
+let motivateAMTipArray1 = [motivateAMTip1, motivateAMTip2, motivateAMTip3, motivateAMTip4]
+let motivateAMTopic1 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivateAMTipArray1)
+
+let motivateAMTipArray2 = [motivateAMTip1, motivateAMTip2, motivateAMTip3, motivateAMTip4]
+let motivateAMTopic2 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivateAMTipArray2)
 
 
+//MID-DAY
+let motivateDayTipArray0 = [motivateDayTip1, motivateDayTip2, motivateDayTip3, motivateDayTip4]
+let motivateDayTopic0 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivateDayTipArray0)
+
+let motivateDayTipArray1 = [motivateDayTip5, motivateDayTip6, motivateDayTip7, motivateDayTip8]
+let motivateDayTopic1 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivateDayTipArray1)
+
+let motivateDayTipArray2 = [motivateDayTip9, motivateDayTip10, motivateDayTip11, motivateDayTip12]
+let motivateDayTopic2 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivateDayTipArray2)
 
 
-
-
-
-
-
-
-
-let motivateTipArray0 = [motivateAMTip1, motivateAMTip2, motivateAMTip3, motivateAMTip4]
-let motivateTopic0 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivateTipArray0)
+//PM
+let motivatePMTipArray0 = [motivatePMTip1, motivatePMTip1, motivatePMTip1, motivatePMTip1]
+let motivatePMTopic0 = Topic(title: motivateTitle, icon: motivateIcon, tip: motivatePMTipArray0)
 
 
 
@@ -176,7 +187,7 @@ let brunchTip7 = Tip(header: "", title: "Prevent weight gain: Be mindful that yo
 let brunchTipArray0 = [brunchTip1, brunchTip2, brunchTip3, brunchTip4]
 let brunchTopic0 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray0)
 
-//WIP
+//WIP (1)
 let brunchTipArray1 = [brunchTip5, brunchTip6, brunchTip7, brunchTip4]
 let brunchTopic1 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray0)
 
@@ -216,8 +227,8 @@ let lunchTip19 = Tip(header: "", title: "Live longer: Eat fruits, vegetables, nu
 let lunchTip20 = Tip(header: "", title: "Live longer: Make beans or tofu the centerpiece of lunches and dinners", body: "Diets rich in beans are associated with fewer heart attacks and less colon cancer. They are also an excellent source of protein. \n\nTofu is an excellent source of protein without the side effects of meat. Tofu is low in calories, high in protein, rich in minerals, devoid of cholesterol, and eco-friendly.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 //5 (WIP)
-let lunchTip21 = Tip(header: "", title: "Research: Eating less meat and more vegetables can help fight climate change", body: "58% of all food emissions come from animal products. Eating meat =contributes to global warming through the methane gas the animals produce, but also via deforestation to expand pastures. \n\nRising temperatures, increased rain and more extreme weather events will all have a negative impact on crops and livestock.", sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/science-environment-49238749", sponsorLogo: "", sponsorURL: "")
-
+let lunchTip21 = Tip(header: "", title: "Millionaire Habit: Network during your lunch hour", body: "Study: 55% of millionaires networked during their lunch hour. \n\nFurthermore, 79% of millionaires networked 5+ hours each month.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/common-myths-about-rich-people-2015-6", sponsorLogo: "", sponsorURL: "")
+let lunchTip22 = Tip(header: "", title: "Research: Eating less meat and more vegetables can help fight climate change", body: "58% of all food emissions come from animal products. Eating meat =contributes to global warming through the methane gas the animals produce, but also via deforestation to expand pastures. \n\nRising temperatures, increased rain and more extreme weather events will all have a negative impact on crops and livestock.", sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/science-environment-49238749", sponsorLogo: "", sponsorURL: "")
 
 
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
@@ -234,6 +245,10 @@ let lunchTopic3 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray3)
 
 let lunchTipArray4 = [lunchTip17, lunchTip18, lunchTip19, lunchTip20]
 let lunchTopic4 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray4)
+
+//WIP:2
+let lunchTipArray5 = [lunchTip21, lunchTip22, lunchTip12, lunchTip16]
+let lunchTopic5 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray5)
 
 // MARK: - Dinner
 
@@ -530,7 +545,7 @@ let gymIcon = Constants.Icon.gym
 
 //WEEK 1
 // 0
-let gymTip1 = Tip(header: "🚰", title: "Improve performance by drinking 20 ounces of water 2 hours before exercise and drink throughout your workout", body: "During exercise, drink fluids early, and drink at regular intervals to prevent muscle fatigue by replacing fluids lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let gymTip1 = Tip(header: "🚰", title: "Improve performance: Drink 20 ounces of water 2 hours before exercise and drink throughout your workout", body: "During exercise, drink water early, and drink at regular intervals to prevent muscle fatigue by replacing water lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let gymTip2 = Tip(header: "💪", title: "Research: People who practiced positive self-talk were able to push harder for longer", body: "You can go a lot harder than you think you can. When you're tired, tell yourself positive, empowering phrases like: \n• \"I got this!\" \n• \"I am strong!\"" , sourceName: "Time", sourceURL: "https://time.com/4606637/exercise-motivational-skills-training/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let gymTip3 = Tip(header: "🏋️‍♀️", title: "When your mind is telling you you're done, you're really only 40% done", body: "When you're doing something difficult and you think you need to stop, don't. You’re only actually 40% done. \n\nThe 40% rule reminds us that no matter how exhausted we might feel, it is always possible to draw on an untapped reserve of energy and motivation that we all possess." , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/chrismyers/2017/10/06/the-40-rule-the-simple-secret-to-success/#48c94eea5cdd", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let gymTip4 = Tip(header: "🏃‍♀️", title: "For better results, shorter but more intensive exercise is more effective than longer drawn-out exercise", body: "To get the best results in your fitness, research has found that shorter but more intensive exercise is more effective than longer drawn-out exercise.  \n\nMost of the growth actually comes during the recovery process. However, the only way to truly recover is by actually pushing yourself to exhaustion during the workout." , sourceName: "ACSM", sourceURL: "https://www.acsm.org/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -765,7 +780,7 @@ let yogaTopic0 = Topic(title: yogaTitle, icon: yogaIcon, tip: yogaTipArray0)
 
 
 
-// MARK: - Morning Routine
+// MARK: - Morning Routine, AM
 
 let AMRoutineTitle = "Morning Routine"
 let AMRoutineIcon = Constants.Icon.routine
@@ -773,16 +788,16 @@ let AMRoutineIcon = Constants.Icon.routine
 let AMRoutine0 = Tip(header: "🌄", title: "Apple CEO Tim Cook wakes up at 4 a.m. to exercise", body: "Cook's morning routine includes a one hour workout at the gym, which he says helps reduce stress and prepares him for the day." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/apple-ceo-tim-cooks-daily-routine-2018-11", sponsorLogo: "", sponsorURL: "")
 
 // Tony Robbins
-let AMRoutine1 = Tip(header: "🌬", title: "Tony Robbins' 10 minute morning routine boosts his energy level for the day", body: "1. Breathing Exercise (1 minute): \n• (He usually plays instrumental meditative music.) \n• Begin by sitting straight with your eyes closed. \n• Inhale deeply through your nostrils while simultaneously lifting your arms up in a shoulder press motion, \n• Exhale forcefully through your nostrils while bringing your arms back down to your body, palms up. \n• Do 3 sets of 30 quick repetitions, with a brief break in between each set." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tony-robbins-morning-routine-meditation-and-workout-2017-10", sponsorLogo: "", sponsorURL: "")
-let AMRoutine2 = Tip(header: "🙏", title: "Tony Robbins then practices gratitude to eliminate anger and fear", body: "2. Express gratitude (3 minutes): \n\nThink about 3 things your grateful for. \"I make sure that one of them is very simple: The wind on my face, the reflection of the clouds that I just saw.\" \n\nThis process eliminates anger and fear because, \"You can't be fearful and grateful simultaneously,\" Robbins said.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/01/26/tony-robbins-shares-the-10-minute-routine-that-sets-him-up-for-success.html", sponsorLogo: "", sponsorURL: "")
-let AMRoutine3 = Tip(header: "🌎", title: "Tony Robbins then visualizes positive energy flowing through him and sending well wishes out to the world", body: "3. Experience connection (3 minutes): \n\nHe imagines a light flowing in through his head and to the rest of his body, feeling as if the light is energizing and healing him. \n\nIn this visualization, the light flows outward to the rest of the world, reaching his loved ones as well as strangers.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/01/26/tony-robbins-shares-the-10-minute-routine-that-sets-him-up-for-success.html", sponsorLogo: "", sponsorURL: "")
-let AMRoutine4 = Tip(header: "🤔", title: "Tony Robbins then visualizes 3 things that he's going to accomplish today", body: "4. Visualize success (3 minutes): \n\nHe spends a minute each imagining what it would feel and look like to accomplish 3 of his goals. Focus on how these accomplishments not only benefit you but allow you to help others.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tony-robbins-morning-routine-meditation-and-workout-2017-10", sponsorLogo: "", sponsorURL: "")
+let AMRoutine1 = Tip(header: "🌬", title: "Tony Robbins' 10 minute morning routine boosts his energy level for the day \n\n1. Breathing exercise (1 minute):", body: "• Sit straight with your eyes closed. \n\n• Inhale deeply through your nose while lifting your arms up towards the sky. \n\n• Exhale quickly through your nose while lowering your arms back down to your body. \n\n• Do 3 sets of 30 reps, with a break in between each set." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tony-robbins-morning-routine-meditation-and-workout-2017-10", sponsorLogo: "", sponsorURL: "")
+let AMRoutine2 = Tip(header: "🙏", title: "2. Tony Robbins practices gratitude to eliminate anger and fear (3 minutes):", body: "Think of 3 things you're grateful for. \"I make sure that one of them is very simple.\" \n\n• Your family \n• Your friends \n• The sun \n\nThis process eliminates anger and fear because, \"You can't be fearful and grateful simultaneously,\" Robbins said.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/01/26/tony-robbins-shares-the-10-minute-routine-that-sets-him-up-for-success.html", sponsorLogo: "", sponsorURL: "")
+let AMRoutine3 = Tip(header: "🌎", title: "3. Tony Robbins visualizes positive energy flowing through him and sending well wishes out to others (3 minutes):", body: "• Imagine a light flowing into your head and body, energizing and healing you. \n\n• Then, visualize the light flowing outward, healing loved ones and strangers.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/01/26/tony-robbins-shares-the-10-minute-routine-that-sets-him-up-for-success.html", sponsorLogo: "", sponsorURL: "")
+let AMRoutine4 = Tip(header: "🤔", title: "4. Tony Robbins visualizes 3 things that he's going to accomplish today (3 minutes)", body: "Spend one minute each imagining what it would feel and look like to accomplish 3 of your goals. \n\nVisualize how they will: \n• Benefit you \n• Benefit others", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tony-robbins-morning-routine-meditation-and-workout-2017-10", sponsorLogo: "", sponsorURL: "")
 
 // Jocko Willink
 let AMRoutine5 = Tip(header: "🌄", title: "Retired US Navy SEAL Jocko Willink wakes up a 4:30 a.m. and exercises", body: "He grabs his workout clothes, laid out the night before, and heads to the gym for a one hour strength workout. The exercises can either be lower weight with high reps and little rest or heavy weight with low reps and lots of rest.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/retired-navy-seal-jocko-willinks-morning-routine-2015-11", sponsorLogo: "", sponsorURL: "")
-let AMRoutine6 = Tip(header: "💪", title: "Jocko Willink warms up to get his blood flowing and muscles loosened up", body: "Repeat this cycle: \n\n• Hang on a pull-up bar for 10 to 15 seconds. \n• Hold a push-up position for 10 to 15 seconds. \n• Get on the ground, face down, arch your head to ceiling to stretch abs. \n• Raise hips to the sky and stretch your back (aka the downward dog pose in yoga). \n• Do a slow squat and hold at bottom for 10 to 15 seconds. \n• Do a burpee. \n• Do a pull-up. \n• Do a push-up. \n• Do a few jumping jacks.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/retired-navy-seal-jocko-willink-workout-philosophy-2017-11", sponsorLogo: "", sponsorURL: "")
-let AMRoutine7 = Tip(header: "🏋️‍♂️", title: "Jocko Willink does strength training exercises to get stronger", body: "His exercises include: \n\n• Dead lifts. \n• Cleans. \n• Jerks. \n• Snatches. \n• Dips. \n• Maxing out to dead hang pull-ups. \n• Overhead squats, back squats, and front squats. \n• Core exercises like crunches and hanging leg raises.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/retired-navy-seal-jocko-willink-workout-philosophy-2017-11", sponsorLogo: "", sponsorURL: "")
-let AMRoutine8 = Tip(header: "🏃‍♂️", title: "Jocko Willink then spends a few minutes (intense bursts) to 30 minutes (steady) on cardio training", body: "He pushes himself after his main exercises with either: \n\n• A few sprints. \n• A hard 1-2 mile run. \n• A stationary bike. \n• Or, a rowing machine.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/retired-navy-seal-jocko-willink-workout-philosophy-2017-11", sponsorLogo: "", sponsorURL: "")
+let AMRoutine6 = Tip(header: "💪", title: "Jocko Willink warms up to get his blood flowing and muscles loosened up", body: "Repeat this cycle: \n\n• Hang on a pull-up bar for 10 to 15 seconds. \n• Hold a push-up position for 10 to 15 seconds. \n• Get on the ground, face down, arch your head to ceiling to stretch abs. \n• Raise hips to the sky and stretch your back (aka the downward dog pose in yoga). \n\n• Do a slow squat and hold at bottom for 10 to 15 seconds. \n• Do a burpee. \n• Do a pull-up. \n• Do a push-up. \n• Do a few jumping jacks.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/retired-navy-seal-jocko-willink-workout-philosophy-2017-11", sponsorLogo: "", sponsorURL: "")
+let AMRoutine7 = Tip(header: "🏋️‍♂️", title: "Jocko Willink does strength training exercises to get stronger", body: "His exercises include: \n\n• Dead lifts. \n• Cleans. \n• Jerks. \n• Snatches. \n• Dips. \n\n• Maxing out to dead hang pull-ups. \n• Overhead squats, back squats, and front squats. \n• Core exercises like crunches and hanging leg raises.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/retired-navy-seal-jocko-willink-workout-philosophy-2017-11", sponsorLogo: "", sponsorURL: "")
+let AMRoutine8 = Tip(header: "🏃‍♂️", title: "Jocko Willink then spends a few minutes (intense bursts) to 30 minutes (steady) on cardio training", body: "He pushes himself after his main exercises with either: \n\n• A few sprints. \n• A hard 1-2 mile run. \n• A stationary bike. \n• A rowing machine.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/retired-navy-seal-jocko-willink-workout-philosophy-2017-11", sponsorLogo: "", sponsorURL: "")
 
 // Gary V (WIP)
 
@@ -802,9 +817,6 @@ let AMRoutine14 = Tip(header: "💪", title: "Do 5 to 10 reps of something (1 mi
 let AMRoutine15 = Tip(header: "🧘‍♀️", title: "Meditate (10-20 minutes): \n90% of the high-performers profiled in Tim Ferriss' book Tools of Titans have a daily mindfulness or meditation practice", body: "The National Institutes of Health and the American Heart Association have both concluded that daily meditation can lower a patient's blood pressure and stress levels. Meditation also improves your emotional control, which is why so many high-performers do it. \n\nTry a free guided meditation on apps like: \n• Calm \n• Headspace \n• 10% Happier", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tim-ferriss-meditation-mindfulness-2017-11", sponsorLogo: "", sponsorURL: "")
 
 let AMRoutine16 = Tip(header: "📝", title: "Journaling (5-10 minutes)", body: "Answer these 3 questions: \n\n• I am grateful for... 1.___ 2.___ 3.___ \n\n• What would make today great? 1.___ 2.___ 3.___ \n\n• Daily affirmations: I am... 1.___ 2.___ 3.___", sourceName: "The Tim Ferriss Show", sourceURL: "https://fhww.files.wordpress.com/2018/09/tim-ferriss-5-morning-rituals.pdf", sponsorLogo: "", sponsorURL: "")
-
-//Science-Backed
-
 
 
 let AMRoutineTipArray0 = [AMRoutine1, AMRoutine2, AMRoutine3, AMRoutine4]//SUN, WEEK 1
@@ -1386,8 +1398,15 @@ let shoppingClothesTip11 = Tip(header: "🚶‍♂️", title: "Reduce impulse s
 let shoppingClothesTip12 = Tip(header: "", title: "Standing in line - Reduce stress, decrease anxiety, and feel kinder towards the people around you with a quick mindfulness practice", body: "1. Take a few deep breaths to center yourself in the moment. \n2. Notice your thoughts and surroundings without reacting or judging. \n3. Acknowledge the presence of others and wish them well. \n\nStudies show that mindfulness helps you stay calm and improves your outlook on life." , sourceName: "DeStress Monday", sourceURL: "https://www.destressmonday.org/mindful-boost-waiting-line/", sponsorLogo: "", sponsorURL: "")
 
 //3
-let shoppingClothesTip13 = Tip(header: "", title: "You can score big savings by marking your calendar for the best months to buy the following items", body: "January: linens and bedding, exercise equipment, winter clothing \n\n• February: TVs, tax-filing software, cookware and small kitchen appliances \n\n• March: skis and snowboards, high-end fashion, luggage \n\n• April: tires, cruise vacations, hotel discounts on tax day \n\n• May: mattresses, smart-home hubs, office furniture \n\n• June: gardening tools, gym memberships, camping gear \n\n• July: swimwear, air conditioners \n\n• August: laptops, school supplies, shoes \n\n• September: older iPhone models, grills, summer clothing \n\n• October: outgoing models of sedans and SUVs, Halloween costumes, patio furniture \n\n• November: gaming systems, tablets, large appliances \n\n• December: jewelry, toys, wedding dresses" , sourceName: "Kiplinger", sourceURL: "https://www.kiplinger.com/slideshow/spending/T050-S000-ways-to-stop-wasting-money/index.html", sponsorLogo: "", sponsorURL: "")
+let shoppingClothesTip13 = Tip(header: "💵", title: "Millionaire Haibt: Be frugal with you money", body: "Study of 200+ millionaires finds: \n\n• 67% said they were frugal with their money. \n• 87% said they never purchased a new luxury car in their lives. \n• 30% clipped coupons." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/common-myths-about-rich-people-2015-6", sponsorLogo: "", sponsorURL: "")
 
+let shoppingClothesTip14 = Tip(header: "", title: "The average self-made millionaire saves money by not buying luxary brands. 61% of people who earn $250,000+ a year aren't buying luxury cars at all. They're buying the same Toyotas, Hondas and Fords as the rest of us.", body: "The reason? They’re not willing to spend the money on a premium vehicle that is going to drop up to 70% in value within the first four years. \n\nIt’s also why they avoid leasing cars because it ultimately costs more money. Instead, they invest in items that increase in value." , sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/article/304219", sponsorLogo: "", sponsorURL: "")
+let shoppingClothesTip15 = Tip(header: "💵", title: "Millionaire Haibt: Saving money is critical to financial success. Follow the 80/20 rule: Save 20% of your income while living on 80%.", body: "Research of self-made millionaires found that most didn't become wealthy because they made a lot, but because they saved a lot, and accumulated wealth. \n\n\"Saving money is critical to financial success?\" \n• 88% of rich people agree \n• 52% of poor people agree" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/common-myths-about-rich-people-2015-6", sponsorLogo: "", sponsorURL: "")
+
+let shoppingClothesTip16 = Tip(header: "", title: "You can score big savings by marking your calendar for the best months to buy the following items", body: "January: linens and bedding, exercise equipment, winter clothing \n\n• February: TVs, tax-filing software, cookware and small kitchen appliances \n\n• March: skis and snowboards, high-end fashion, luggage \n\n• April: tires, cruise vacations, hotel discounts on tax day \n\n• May: mattresses, smart-home hubs, office furniture \n\n• June: gardening tools, gym memberships, camping gear \n\n• July: swimwear, air conditioners \n\n• August: laptops, school supplies, shoes \n\n• September: older iPhone models, grills, summer clothing \n\n• October: outgoing models of sedans and SUVs, Halloween costumes, patio furniture \n\n• November: gaming systems, tablets, large appliances \n\n• December: jewelry, toys, wedding dresses" , sourceName: "Kiplinger", sourceURL: "https://www.kiplinger.com/slideshow/spending/T050-S000-ways-to-stop-wasting-money/index.html", sponsorLogo: "", sponsorURL: "")
+
+//4
+let shoppingClothesTip17 = Tip(header: "", title: "67% of millionaires in a 5-year study said they were frugal (aka spending their money wisely)", body: "Being frugal will not make you rich, but it does mean you will keep more of your money as your purchases are driven by quality and price." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/self-made-millionaires-habits-build-wealth-2017-9#2-they-are-frugal-2", sponsorLogo: "", sponsorURL: "")
 
 //0
 let shoppingClothesTipArray0 = [shoppingClothesTip1, shoppingClothesTip2, shoppingClothesTip3, shoppingClothesTip4]
@@ -1398,6 +1417,10 @@ let shoppingClothesTopic1 = Topic(title: shoppingClothesTitle, icon: shoppingClo
 //2
 let shoppingClothesTipArray2 = [shoppingClothesTip9, shoppingClothesTip10, shoppingClothesTip11, shoppingClothesTip12]
 let shoppingClothesTopic2 = Topic(title: shoppingClothesTitle, icon: shoppingClothesIcon, tip: shoppingClothesTipArray2)
+
+//3
+let shoppingClothesTipArray3 = [shoppingClothesTip13, shoppingClothesTip14, shoppingClothesTip15, shoppingClothesTip16]
+let shoppingClothesTopic3 = Topic(title: shoppingClothesTitle, icon: shoppingClothesIcon, tip: shoppingClothesTipArray3)
 
 // MARK: - Commute, AM
 
@@ -1754,6 +1777,8 @@ let workPMTip52 = Tip(header: "", title: "When to look for a new job, according 
 
 //THURS
 let workPMTip53 = Tip(header: "", title: "When to look for a new job, according to experts", body: "If you find yourself dreading going to work in the morning more than usual, or you have low motivation and you procrastinate more than you used to, these are all signs that your body is telling you to look at what's going on in your day-to-day.", sourceName: "Bustle", sourceURL: "https://www.bustle.com/p/when-to-look-for-a-new-job-according-to-experts-18169407", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let workPMTip54 = Tip(header: "", title: "Self-made millionaire advice from Tyra Banks: When it comes to asking for a raise, \"You need to sit there and talk about your value.\"", body: "\"Talk about what you have done that has increased revenues, increased engagement, or how you've been working from nine to nine, even though you are only supposed to be working from nine to six. And that you are a salaried employee, so it's not like you're getting more money.\" \n\nShe added: \"And based on your input, into that company, and based on the metrics and the things that have happened because of the things that you were doing, that's why you deserve the raise. You don't need a raise, deserve a raise.\"", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/best-money-advice-from-self-made-millionaires-2018-12", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
 
 // Male CEOs with lower-pitched voices tended to manage large companies, make $187,000 a year more than their higher-pitched peers, and last in political office on average five months longer.
 
@@ -2010,58 +2035,83 @@ let networkingTopic4 = Topic(title: networkingTitle, icon: networkingIcon, tip: 
 
 // MARK: - Side Hustle
 //1
-let sideHustle1 = Tip(header: "🤓", title: "Founder advice: successful entrepreneurship means having experienced the problems you're trying to solve", body: "In the lowest possible moments, where possibly you're even doubting yourself, you have to have a core belief that the problem you're trying to solve is real, or you're never going to make it through. \n\nWhen no one believes in your idea, you have to be the one who believes in it." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/entrepreneurship-advice-from-flash-boys-star-brad-katsuyama-2018-12", sponsorLogo: "", sponsorURL: "")
+let sideHustle0 = Tip(header: "🤓", title: "Founder advice: successful entrepreneurship means having experienced the problems you're trying to solve", body: "In the lowest possible moments, where possibly you're even doubting yourself, you have to have a core belief that the problem you're trying to solve is real, or you're never going to make it through. \n\nWhen no one believes in your idea, you have to be the one who believes in it." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/entrepreneurship-advice-from-flash-boys-star-brad-katsuyama-2018-12", sponsorLogo: "", sponsorURL: "")
 
-let sideHustle2 = Tip(header: "🗣", title: "To succeed as an entrepreneur, you have to be a storyteller", body: "What moves people is someone who is credible and relatable. People can see straight through storytelling that is false, staged or cynical. It has to come from the heart, not just the head. \n\nRichard Branson said, \"I often find a subject I’m pondering becomes a lot clearer once it is down on paper – it’s one of the reasons I blog so much.\"" , sourceName: "Virgin (Richard Branson)", sourceURL: "https://www.virgin.com/richard-branson/why-entrepreneurs-are-storytellers", sponsorLogo: "", sponsorURL: "")
+let sideHustle1 = Tip(header: "🗣", title: "To succeed as an entrepreneur, you have to be a storyteller", body: "What moves people is someone who is credible and relatable. People can see straight through storytelling that is false, staged or cynical. It has to come from the heart, not just the head. \n\nRichard Branson said, \"I often find a subject I’m pondering becomes a lot clearer once it is down on paper – it’s one of the reasons I blog so much.\"" , sourceName: "Virgin (Richard Branson)", sourceURL: "https://www.virgin.com/richard-branson/why-entrepreneurs-are-storytellers", sponsorLogo: "", sponsorURL: "")
 
-let sideHustle3 = Tip(header: "🙃", title: "Failure is an important ingredient to success", body: "J.K. Rowling’s first Harry Potter book was rejected by 12 publishers (and before she even wrote the book she suffered a stream of potentially devastating personal failures). \n\nMichael Jordon was cut from his high school basketball team. \n\nAbraham Lincoln suffered a series of lost elections (along with some successes) before he went on to become one of the greatest US presidents." , sourceName: "UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/passion_adversity_success", sponsorLogo: "", sponsorURL: "")
-//2
-let sideHustle4 = Tip(header: "⏳", title: "Elite performers practice roughly the same amount every day, including weekends", body: "Most successful people average 10 years of practice before becoming great. Even child-prodigies generally work at it for a decade or more. Tiger Woods had been working on his golf game for 15 years when he became the youngest-ever winner of the U.S. Amateur Championship." , sourceName: "UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/a_new_theory_of_elite_performance", sponsorLogo: "", sponsorURL: "")
-let sideHustle5 = Tip(header: "🤓", title: "Founder advice: Choose a problem you've personally experienced. Otherwise, you'll lose interest down the road.", body: "Solving a problem you (or a loved one) has faced ensures that you'll have the passion required to stick with it over a long period of hard work. Next, go out and talk to people and really understand the market." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/business-entrepreneurship-advice-kara-goldin-hint-ceo-2019-2", sponsorLogo: "", sponsorURL: "")
-let sideHustle6 = Tip(header: "🙅‍♀️", title: "Successful businesses are great at saying no to the many unimportant things and remain focused on saying yes to the few things that truly matter", body: "Apple Co-founder, Steve Jobs, said, \"People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the 100 other good ideas that there are. \n\nYou have to pick carefully. I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.\"" , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/warren-buffett-says-this-is-1-simple-habit-that-separates-successful-people-from-everyone-else.html", sponsorLogo: "", sponsorURL: "")
-let sideHustle7 = Tip(header: "", title: "“Positivity breeds positivity,” according to self-made billionaire Richard Branson", body: "When Virgin was launching its 3 airline companies, the Virgin team never focused on the negative aspects of other airlines or asked customers questions like, “Are you sick of the competition?” \n\nInstead of focusing on everything that other airlines were doing wrong or doing poorly, his team took a more positive approach. They asked potential customers what they look forward to when flying, what they want from an airline and also highlighted their unique offerings." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2018/01/16/richard-branson-uses-this-simple-trick-to-live-a-positive-life.html", sponsorLogo: "", sponsorURL: "")
+let sideHustle2 = Tip(header: "🙃", title: "Failure is an important ingredient to success", body: "J.K. Rowling’s first Harry Potter book was rejected by 12 publishers (and before she even wrote the book she suffered a stream of potentially devastating personal failures). \n\nMichael Jordon was cut from his high school basketball team. \n\nAbraham Lincoln suffered a series of lost elections (along with some successes) before he went on to become one of the greatest US presidents." , sourceName: "UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/passion_adversity_success", sponsorLogo: "", sponsorURL: "")
 
-//3
+let sideHustle3 = Tip(header: "⏳", title: "Elite performers practice roughly the same amount every day, including weekends", body: "Most successful people average 10 years of practice before becoming great. Even child-prodigies generally work at it for a decade or more. Tiger Woods had been working on his golf game for 15 years when he became the youngest-ever winner of the U.S. Amateur Championship." , sourceName: "UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/a_new_theory_of_elite_performance", sponsorLogo: "", sponsorURL: "")
 
-
+//2 (WIP)
+let sideHustle4 = Tip(header: "🤓", title: "Founder advice: Choose a problem you've personally experienced. Otherwise, you'll lose interest down the road.", body: "Solving a problem you (or a loved one) has faced ensures that you'll have the passion required to stick with it over a long period of hard work. Next, go out and talk to people and really understand the market." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/business-entrepreneurship-advice-kara-goldin-hint-ceo-2019-2", sponsorLogo: "", sponsorURL: "")
+let sideHustle5 = Tip(header: "🙅‍♀️", title: "Successful businesses are great at saying no to the many unimportant things and remain focused on saying yes to the few things that truly matter", body: "Apple Co-founder, Steve Jobs, said, \"People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the 100 other good ideas that there are. \n\nYou have to pick carefully. I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.\"" , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/warren-buffett-says-this-is-1-simple-habit-that-separates-successful-people-from-everyone-else.html", sponsorLogo: "", sponsorURL: "")
+let sideHustle6 = Tip(header: "", title: "“Positivity breeds positivity,” according to self-made billionaire Richard Branson", body: "When Virgin was launching its 3 airline companies, the Virgin team never focused on the negative aspects of other airlines or asked customers questions like, “Are you sick of the competition?” \n\nInstead of focusing on everything that other airlines were doing wrong or doing poorly, his team took a more positive approach. They asked potential customers what they look forward to when flying, what they want from an airline and also highlighted their unique offerings." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2018/01/16/richard-branson-uses-this-simple-trick-to-live-a-positive-life.html", sponsorLogo: "", sponsorURL: "")
 
 
 
+let sideHustleTitle = "Side Hustle"
+let sideHustleIcon = Constants.Icon.sideHustle
+
+let sideHustleTipArray0 = [sideHustle0, sideHustle1, sideHustle2, sideHustle3]
+let sideHustleTopic0 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray0)
+//WIP (1)
+let sideHustleTipArray1 = [sideHustle4, sideHustle5, sideHustle6, sideHustle3]
+let sideHustleTopic1 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray1)
 
 
 
-// MARK: - Studying/Homework
-//1
+
+
+// MARK: - Studying / Homework
+//0
+let studying0 = Tip(header: "🎶", title: "Music you like increases focus, while music you don’t decreases focus", body: "Music that causes pleasurable feelings can improve concentration. Music with no (or little) words might be best for studying, as human speech is something our brains pay particular attention to. As a result, some people argue that one of the best music genres for concentration is the video game soundtrack." , sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/education/2016/aug/20/does-music-really-help-you-concentrate", sponsorLogo: "", sponsorURL: "")
 let studying1 = Tip(header: "🧠", title: "Taking brief mental breaks improves performance when working on a long task", body: "The brain is built to detect and respond to change, and prolonged attention to a single task actually decreases performance. When faced with long tasks (such as doing your homework or studying before an exam), it is best to impose brief breaks on yourself. Brief mental breaks will actually help you stay focused on your task!" , sourceName: "Univeristy of Illinois", sourceURL: "https://news.illinois.edu/view/6367/205427", sponsorLogo: "", sponsorURL: "")
 let studying2 = Tip(header: "🚶‍♂️", title: "Taking hourly 5-minute walking breaks boosts energy levels, sharpens focus, and reduces fatigue", body: "These 5 minute breaks were also more valuable than a single 30-minute walking break. Also, research found that people who took outdoor breaks and did not check their smartphones returned feeling happier and more rested than people who walked indoors and checked their smartphones." , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/3-winning-habits-youll-find-in-most-successful-people-this-year.html", sponsorLogo: "", sponsorURL: "")
 let studying3 = Tip(header: "🚰", title: "Study better by drinking water. Mild dehydration can lower a person's energy level and ability to think clearly", body: "Researchers found that a lack of water resulted in headaches, fatigue, and difficulty in concentrating. The study's participants also considered cognitive tasks as more difficult when slightly dehydrated." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/health/archive/2012/02/study-of-the-day-mild-dehydration-alters-mood-makes-thinking-hard/253320/", sponsorLogo: "", sponsorURL: "")
-let studying4 = Tip(header: "📖", title: "The most effective way to become a National Spelling Bee champion is solitary study", body: "The highest performers in the National Spelling Bee spend the most time by studying long lists alone. \"Deliberate practice\" is the most effective, but probably the least fun, way to learn to spell obscure words. In fact, it is the elite performer’s willingness to engage in hard or, quite often, very boring, practice that distinguishes people who are good at their chosen activity from those who are the very best at it." , sourceName: "UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/a_new_theory_of_elite_performance", sponsorLogo: "", sponsorURL: "")
 
-//2
+//1
+let studying4 = Tip(header: "📖", title: "The most effective way to become a National Spelling Bee champion is solitary study", body: "The highest performers in the National Spelling Bee spend the most time by studying long lists alone. \"Deliberate practice\" is the most effective, but probably the least fun, way to learn to spell obscure words. In fact, it is the elite performer’s willingness to engage in hard or, quite often, very boring, practice that distinguishes people who are good at their chosen activity from those who are the very best at it." , sourceName: "UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/a_new_theory_of_elite_performance", sponsorLogo: "", sponsorURL: "")
 let studying5 = Tip(header: "📵", title: "Improve your performance on memory and problem solving by not having your phone near you", body: "Researchers asked participants to either place phones on their desks, in their bags/pockets, or in another room entirely. They were then tested on their working memory capacity, as well as problem solving. According to the study, \"the mere presence of participants' own smartphones impaired their performance,\" noting that even though the participants received no notifications from their phones over the course of the test, they did far more poorly than the participants who had their phones in another room." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/2017/06/30/cellphones-distraction-study_a_23009948/", sponsorLogo: "", sponsorURL: "")
 let studying6 = Tip(header: "🏋️‍♂️", title: "Study better by exercising first", body: "Studies show our brainpower gets a boost following even a short workout, as our bodies are pumping oxygen and nutrients to the brain. Exercising shortly before studying can make you more alert, open, and able to learn new information during your post-workout study session." , sourceName: "The Best Colleges", sourceURL: "https://www.thebestcolleges.org/17-scientifically-proven-ways-to-study-better-this-year/", sponsorLogo: "", sponsorURL: "")
 let studying7 = Tip(header: "🧘‍♀️", title: "Study better by getting into a calm and positive mood first", body: "UC Irvine researchers find that being stressed can produce corticotropin-releasing hormones that disrupt the process of creating and storing memories. Taking study breaks to go for a walk or take in a few deep breaths will help help lower your stress  level and improve your studying." , sourceName: "The Best Colleges", sourceURL: "https://www.thebestcolleges.org/17-scientifically-proven-ways-to-study-better-this-year/", sponsorLogo: "", sponsorURL: "")
+
+//2
 let studying8 = Tip(header: "🤔", title: "People learn better when using multiple, 1-hour studying sessions (with breaks) rather than one extended session (without breaks)", body: "Brain synapses encode memories in the hippocampus much better when activated briefly at one-hour intervals. Some sets of synapses require hourlong delays between activation in order to store new information. This explains why prolonged ‘cramming’ is inefficient – only one set of synapses is being engaged." , sourceName: "University of California, Irvine", sourceURL: "https://news.uci.edu/2014/12/10/multiple-short-learning-sessions-strengthen-memory-formation-in-fragile-x-syndrome-2/", sponsorLogo: "", sponsorURL: "")
-//3
 let studying9 = Tip(header: "⏳", title: "Learn better by studying a short time on each class every day over several days and weeks", body: "The total amount of time spent studying will be the same (or less) than 1 or 2 marathon library sessions, but you will learn the information more deeply and retain much more for the long term. Long study sessions lead to a lack of concentration and thus a lack of learning and retention." , sourceName: "University of North Carolina at Chapel Hill", sourceURL: "https://learningcenter.unc.edu/tips-and-tools/studying-101-study-smarter-not-harder/", sponsorLogo: "", sponsorURL: "")
 let studying10 = Tip(header: "🏛", title: "Studying in multiple locations helps you remember more later", body: "Rather than sitting at your desk or the kitchen table studying for hours, finding some new scenery will create new associations in your brain and make it easier to recall information later. Also, by changing your environment, your brain is forced to retrieve the same information in different places and will therefore see that information as more useful and worth holding onto." , sourceName: "Open Colleges", sourceURL: "https://www.opencolleges.edu.au/informed/features/how-does-the-brain-learn-best-10-smart-studying-strategies/", sponsorLogo: "", sponsorURL: "")
 let studying11 = Tip(header: "📝", title: "Compared to just studying for an exam, students who answered these questions were less stressed and outperformed those who did not, by an average of 1/3 of a letter grade (e.g. B+ to A-)", body: "Answer these questions: \n\n• What grade do you want on the exam? \n\n• How important is it to get this grade? \n\n• What's the probability that you will get this grade? \n\n• What kinds of questions might the exam include? \n\n• And what resources will you use to study and why will they be useful (lecture notes, practice exam questions, textbook readings, instructor office hours, private tutoring)?", sourceName: "Quartz", sourceURL: "https://qz.com/978273/a-stanford-professors-15-minute-study-hack-improves-test-grades-by-a-third-of-a-grade/", sponsorLogo: "", sponsorURL: "")
-let studying12 = Tip(header: "📖", title: "Psychologists agree that reviewing the material you just learned soon after class is better than 'cramming' right before exam day", body: "The first time you hear a lecture or study something new, you retain up to 80% of what you’ve just learned -- if you review the material within 24 hours. And this effect is cumulative; so after a week, you may retain 100% of the same information after only 5 minutes of review." , sourceName: "The Best Colleges", sourceURL: "https://www.thebestcolleges.org/17-scientifically-proven-ways-to-study-better-this-year/", sponsorLogo: "", sponsorURL: "")
 
-//4
+//3
+let studying12 = Tip(header: "📖", title: "Psychologists agree that reviewing the material you just learned soon after class is better than 'cramming' right before exam day", body: "The first time you hear a lecture or study something new, you retain up to 80% of what you’ve just learned -- if you review the material within 24 hours. And this effect is cumulative; so after a week, you may retain 100% of the same information after only 5 minutes of review." , sourceName: "The Best Colleges", sourceURL: "https://www.thebestcolleges.org/17-scientifically-proven-ways-to-study-better-this-year/", sponsorLogo: "", sponsorURL: "")
 let studying13 = Tip(header: "📝", title: "Taking practice tests (or quizing yourself) is a better way to study than simply re-reading your notes or textbook", body: "Students who took practice tests while studying on their own performed better on long-term memory recall exams than students who simply studyed by re-reading the material. Also, the researchers found that students who rely on repeated study alone often come away with a false sense of confidence about their mastery of the material." , sourceName: "Washington University in St. Louis", sourceURL: "https://source.wustl.edu/2006/03/repeated-testtaking-better-for-retention-than-repeated-studying-research-shows/", sponsorLogo: "", sponsorURL: "")
-let studying14 = Tip(header: "🎶", title: "Music you like increases focus, while music you don’t decreases focus", body: "Music that causes pleasurable feelings can improve concentration. Music with no (or little) words might be best for studying, as human speech is something our brains pay particular attention to. As a result, some people argue that one of the best music genres for concentration is the video game soundtrack." , sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/education/2016/aug/20/does-music-really-help-you-concentrate", sponsorLogo: "", sponsorURL: "")
+
+
+
+
 
 
 //Day
 let studyingDay2 = Tip(header: "😴", title: "Taking a daytime nap shortly after learning new information improves long-term memory recall", body: "Children who took a daytime nap shortly after learning new information scored 10% higher on a memory test taken the next day compared to children who did not nap during the day. It seems that there is an additional benefit of having the sleep occur in close proximity to the learning." , sourceName: "University of Massachusetts Amherst", sourceURL: "https://www.umass.edu/newsoffice/article/sleep-research-study-finds-daytime-naps", sponsorLogo: "", sponsorURL: "")
+
 
 //PM
 let studyingPM1 = Tip(header: "🛌", title: "Studying before bedtime is best because our brains create stronger memories during sleep", body: "Participants who engaged in studying before bedtime were able to recall information from their memory at a higher rate and felt more confident about their answers compared to those who studied in the morning. This is because, the cortex of the brain, which is important for building neural connections for creating memories of newly learned information, becomes very active when during sleep." , sourceName: "Chronobiology", sourceURL: "https://www.chronobiology.com/scientists-say-studying-before-bedtime-is-best/", sponsorLogo: "", sponsorURL: "")
 let studyingPM2 = Tip(header: "🛌", title: "Go to bed at the same time everyday. Students who had irregular sleep hours ended up with worse grades compared to those who went to bed and woke up at the same time every day", body: "Irregular sleepers had a delayed release of the sleep hormone melatonin by 2.6 hours compared to students with more regular sleep patterns. \n\nIncreased exposure to daytime light and less exposure to electronic light-emitting devices before bedtime, may be effective in improving sleep regularity." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2017/06/170612094045.htm", sponsorLogo: "", sponsorURL: "")
 let studyingPM3 = Tip(header: "🛌", title: "Don't stay up too late. Being a night owl is linked with lower GPA", body: "Study of college freshman: Evening types scored below a B average and morning and intermediate types scored above a B average. The evening types also slept on average 41 minutes less than other students on school nights. \n\nHave a: \n• regular bedtime routine \n• regular bed time \n• regular wake time \n• sleep in a comfortable bed" , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2009/06/090609072813.htm", sponsorLogo: "", sponsorURL: "")
 
-//
+let studyTitle = "Studying"
+let studyIcon = Constants.Icon.study
+
+let studyTipArray0 = [studying0, studying1, studying2, studying3]
+let studyTopic0 = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArray1)
+
+let studyTipArray1 = [studying4, studying5, studying6, studying7]
+let studyTopic1 = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArray2)
+
+let studyTipArray2 = [studying8, studying9, studying10, studying11]
+let studyTopic2 = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArray2)
+
 
 //  //Ironically, they didn't save any time because in the end they slept just as much as those on a more regular schedule.
 
@@ -2154,7 +2204,7 @@ let homePMTip32 = Tip(header: "", title: "Wipe down doorknobs once a week (in so
 let homePMTip33 = Tip(header: "", title: "Save the environment: Limit your washing machine usage. Every time we wash our clothes an average of 9 million [plastic] microfibres are released into the environment", body: "If your clothes have a stain, try spot-cleaning them with water rather than washing the whole garment. \n\nWhen you do wash: \n• Set the machine to a lower temperature \n• Use liquid detergent: Powder detergent creates more friction between the clothes [during washing], so more fibres are released, whereas liquid is smoother. The less friction there is, the fewer fibres are released. \n• Avoid overloading washing machines - fewer clothes in the drum means there's less friction." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/world-48908413", sponsorLogo: "", sponsorURL: "")
 let homePMTip34 = Tip(header: "", title: "Unplug inactive devices. On average, inactive devices account for $165 of your annual electricity bill", body: "Study: The 10 most energy-draining always-on devices, with the cost of their annual energy use, were as follows: \n\n• Water recirculation pump, up to $93 \n• Desktop computer, up to $49 \n• TV, up to $38 \n• Cable set-top box, up to $30 \n• Audio receiver/stereo, up to $22 \n• Printer, up to $11 \n• Furnace, up to $8 \n• Coffee maker, up to $6 \n• Dryer, up to $4 \n• Ground fault circuit interrupter outlets, $1 each" , sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/always-on-devices-are-using-huge-amounts-of-energy/", sponsorLogo: "", sponsorURL: "")
 let homePMTip35 = Tip(header: "", title: "Save time: Use the dishwasher to clean more than just dishes", body: "Dishwasher friendly items include: rubber flip-flops, canvas sneakers and baseball caps, makeup brushes, non-electrical plastic and rubber kids’ toys, contacts cases, mouth guards, hair brushes and combs, shower heads, refrigerator shelves and plastic and metal garden tools. \n\nHowever, don't combine them with dishes to reduce the chance of any lingering food bits getting stuck in the items." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/lifestyle/25-time-saving-hacks-will-add-hours-back-your-week-ncna1041011", sponsorLogo: "", sponsorURL: "")
-
+let homePMTip36 = Tip(header: "", title: "Research: 85% of self-made millionaires read two or more books per month", body: "Millionaires read books that encourage self-improvement. This includes topics like: \n• career \n• health \n• how-tos \n• biographies \n• self-help \n• leadership \n•  current events \n\nReading every day puts you in the top 5% of the crowd." , sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/article/304219", sponsorLogo: "", sponsorURL: "")
 
 let homePMTipArray0 = [homePMTip1, homePMTip2, homePMTip3, homePMTip4]
 let homePMTopic0 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray0)
@@ -2183,16 +2233,21 @@ let homePMTopic7 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArr
 let homePMTipArray8 = [homePMTip33, homePMTip34, homePMTip35, homePMTip32]
 let homePMTopic8 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray8)
 
-// MARK: - AM Bathroom
+// MARK: - Bathroom AM
 
 let bathroomTitle = "Bathroom"
 let bathroomIcon = Constants.Icon.bathroom
 
 //0
 let bathroomTip1 = Tip(header: "🚽", title: "Are you hydrated when you go to the bathroom? Staying hydrated reduces your risk for kidney stones.", body: "When you're getting enough water, urine flows freely, is light in color and free of odor. When your body is not getting enough fluids, urine concentration, color, and odor increases because the kidneys trap extra fluid for bodily functions. \n\nIf you chronically drink too little, you may be at higher risk for kidney stones, especially in warm climates." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#1", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let bathroomTip2 = Tip(header: "", title: "Live longer: Weighing yourself daily helps you to reduce your weight and keep it off in the long run", body: "One study followed women who were trying to lose weight. After two years, women who weighted themselves daily lost an average of 12 pounds. Women who never weighed themselves actually gained an average of 5 pounds. \n\nIn other words, at the end of 2 years, women who weighed themselves every day were (on average) about 17 pounds lighter than the women who never weighed themselves.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let bathroomTip2 = Tip(header: "😁", title: "Millionaire Habit: Floss every day", body: "Study of what rich people and poor people do every day: \"I floss every day.\" \n• Rich people who agree: 62% \n• Poor people who agree: 16%", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-daily-habits-2014-6", sponsorLogo: "", sponsorURL: "")
+
 let bathroomTip3 = Tip(header: "🏡", title: "Scientists recommend cleaning your bathroom door knobs once a week", body: "Disinfect bathroom door knobs at least once a week, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let bathroomTip4 = Tip(header: "🚽", title: "Scientists recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. Disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks. Your shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomTip4 = Tip(header: "", title: "Live longer: Weighing yourself daily helps you to reduce your weight and keep it off in the long run", body: "One study followed women who were trying to lose weight. After two years, women who weighted themselves daily lost an average of 12 pounds. Women who never weighed themselves actually gained an average of 5 pounds. \n\nIn other words, at the end of 2 years, women who weighed themselves every day were (on average) about 17 pounds lighter than the women who never weighed themselves.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+
+
+
+
 
 //1
 let bathroomTip5 = Tip(header: "", title: "Live longer by weighing yourself often — not in an obsessive way, of course", body: "Study: Those who monitored their weight more frequently were less likely to gain weight. \n\nA healthy weight reduces your risk of: \n• High blood pressure \n• High cholesterol \n• Diabetes \n• Cancer" , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/09/harvard-study-says-these-5-habits-may-help-you-live-10-years-longer.html", sponsorLogo: "", sponsorURL: "")
@@ -2205,7 +2260,7 @@ let bathroomTip9 = Tip(header: "", title: "Study: Smartphones are more than 6 ti
 
 let bathroomTip10 = Tip(header: "", title: "Your bathroom faucet handle can have 21 times the bacteria of your toilet seat", body: "One study found that drug-resistant bacteria like E. coli can spread from the pipes to your sink and hands. Clean it: Disinfect and clean regularly along with the rest of your sink to make sure washing your hands isn’t making you dirtier.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
 let bathroomTip11 = Tip(header: "😁", title: "Take care of your smile like supermodel Christie Brinkley", body: "\"My smile has been my ticket to the world. Smiling releases the same feel-good hormones you get jogging. Caring for your lips and gums is important. I brush my teeth morning and night, alternating toothpaste brands. In addition to flossing I use a Water Pik to massage my gums and remove food particles. I love the toothpicks with a bottle-brush-like cleaner on one end and carry them with me.\" \n\nChristie Brinkley is an American model, actress and entrepreneur.", sourceName: "Los Angeles Times", sourceURL: "https://www.latimes.com/health/la-he-christie-brinkley-interview-20151226-story.html", sponsorLogo: "", sponsorURL: "")
-
+let bathroomTip12 = Tip(header: "🚽", title: "Scientists recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. Disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks. \n\nYour shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 var bathroomTipArray0 = [bathroomTip1, bathroomTip2, bathroomTip3, bathroomTip4]
 let bathroomTopic0 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray0)
@@ -2213,7 +2268,7 @@ let bathroomTopic0 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathro
 var bathroomTipArray1 = [bathroomTip5, bathroomTip6, bathroomTip7, bathroomTip8]
 let bathroomTopic1 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray1)
 
-var bathroomTipArray2 = [bathroomTip9, bathroomTip10, bathroomTip11, bathroomTip8]
+var bathroomTipArray2 = [bathroomTip9, bathroomTip10, bathroomTip11, bathroomTip12]
 let bathroomTopic2 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray2)
 
 // MARK: - Bathroom PM
@@ -2235,6 +2290,10 @@ let bathroomPMTip4 = Tip(header: "😳", title: "Scientist recommend wiping down
 let bathroomPMTip5 = Tip(header: "🗑", title: "Throw contacts away in the trash. NOT down the toilet or sink. ", body: "Contacts don’t decompose, and as a result, nearly 50 tons of contacts could end up in American water supplies each year. Tiny bits of plastic from many sources have also been spotted in the oceans and other bodies of water, where they may be ingested by fish, corals and other animals." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/health/archive/2018/08/contacts-down-the-drain/567850/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let bathroomPMTip6 = Tip(header: "", title: "Improve your balance by standing on one foot when brushing your teeth", body: "Balance is important since falls are common cause of injuries and death among seniors (in the US, about 1/3 adults over age 65 falls each year.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 let bathroomPMTip7 = Tip(header: "😁", title: "Take care of your smile like supermodel Christie Brinkley", body: "\"My smile has been my ticket to the world. Smiling releases the same feel-good hormones you get jogging. Caring for your lips and gums is important. I brush my teeth morning and night, alternating toothpaste brands. In addition to flossing I use a Water Pik to massage my gums and remove food particles. I love the toothpicks with a bottle-brush-like cleaner on one end and carry them with me.\" \n\nChristie Brinkley is an American model, actress and entrepreneur.", sourceName: "Los Angeles Times", sourceURL: "https://www.latimes.com/health/la-he-christie-brinkley-interview-20151226-story.html", sponsorLogo: "", sponsorURL: "")
+
+//2
+let bathroomPMTip8 = Tip(header: "😁", title: "Millionaire Habit: Floss every day", body: "Study of what rich people and poor people every day: \"I floss every day.\" \n• Rich people who agree: 62% \n• Poor people who agree: 16%", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-daily-habits-2014-6", sponsorLogo: "", sponsorURL: "")
+
 
 let bathroomPMTipArray0 = [bathroomPMTip1, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
 let bathroomPMTopic0 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray0)
@@ -2384,8 +2443,36 @@ let bedtimeTopic13 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeT
 
 // MARK: - Evening Ritual
 
-let PMRoutine1 = Tip(header: "📝", title: "Journaling (5-10 minutes)", body: "Answer these 2 questions: \n\n3 amazing things that happened today... 1.____ 2.____ 3.____ \n\n How could I have made today better? 1.____ 2.____ 3.____ ", sourceName: "The Tim Ferriss Show", sourceURL: "https://fhww.files.wordpress.com/2018/09/tim-ferriss-5-morning-rituals.pdf", sponsorLogo: "", sponsorURL: "")
+/*
+Plan your day
+ Journal
+ Visualize
+ Pick your clothes
+ Go to bed at the same time
+ */
 
+
+//1
+let eveningRoutine1 = Tip(header: "", title: "Composer Ludwig van Beethoven went to bed at 10 p.m. at the latest", body: "He was able to optimize his early-morning routine because he got his recommended 7 to 9 hours of sleep the night before. \n\nTo get into the habit of going to bed early, set an alarm in the evening to remind you to go to sleep", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3042968/the-evening-routines-of-the-most-successful-people", sponsorLogo: "", sponsorURL: "")
+let eveningRoutine2 = Tip(header: "🚶‍♂️", title: "Each night before bed, Buffer CEO, Joel Gascoigne, takes a 20-minute walk.", body: "\"This is a wind down period, and allows me to evaluate the day's work, think about the greater challenges, gradually stop thinking about work, and reach a state of tiredness,\" he writes. \n\nStudies find that walking—especially in nature—reduces stress and anxiety.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
+let eveningRoutine3 = Tip(header: "", title: "Plan out when you're going to wake up, count back however many hours you need to sleep, and then set an alarm to remind yourself to get ready for bed", body: "Going to bed at a consistent time each evening is a key habit all sleep experts recommend. \n\nThe worst thing you can do is stay up late then hit snooze in the morning.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
+let eveningRoutine4 = Tip(header: "", title: "Stretching, sauna, massage, a hot bath or shower, foam rolling, yin/restorative yoga – those are all things that help your body to release tension and will support your body to relax and support a deep sleep.", body: "Try out different practices and find something that helps you relax.", sourceName: "Thrive Global", sourceURL: "https://thriveglobal.com/stories/the-real-power-of-morning-and-evening-rituals/", sponsorLogo: "", sponsorURL: "")
+
+//2
+let eveningRoutine5 = Tip(header: "📖", title: "Each night before bed, Microsoft billionaire Bill Gates spends an hour reading a book, ranging on topics from politics to current events.", body: "Aside from gaining new knowledge, reading daily: \n• Reduces stress \n• Improves memory \n\nStudy: Reading for as little as 6 minutes a day can reduce stress levels by up to 68%. \n\nStudy: People who stimulated their minds through activities like reading, reduced cognitive decline by an average of 32% as they got older in age.", sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/productivity/6-habits-highly-successful-people-before-bedtime.html", sponsorLogo: "", sponsorURL: "")
+let eveningRoutine6 = Tip(header: "", title: "Each night before bed, Benjamin Franklin asked himself the same self-improvement question: \"What good have I done today?\"", body: "Regardless of how badly the day went, successful people typically manage to avoid that pessimistic spiral of negative self-talk because they know it will only create more stress. \n\nTaking a few moments to think about what went right over the course of the day can put you in a positive, grateful mood.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
+let eveningRoutine7 = Tip(header: "", title: "Each night before bed, Arianna Huffington puts her phone in another room so she’s not distracted by it before bed", body: "The bright lights produced by our cell phone screens disrupt our bodies natural sleep rhythm causing us to have a much harder time falling asleep. \n\nAs she details in her book, \"Thrive,\" she also has banned all electronics from the bedroom, including: \n• iPads \n• Kindles \n• laptops", sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/productivity/6-habits-highly-successful-people-before-bedtime.html", sponsorLogo: "", sponsorURL: "")
+let eveningRoutine8 = Tip(header: "", title: "Kenneth Chenault, CEO of American Express, writes down 3 things he wants to accomplish the next day.", body: "This helps him prioritize first thing the next morning. \n\nClearing the mind for a good night sleep is critical for a lot of successful people.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
+
+//3
+let eveningRoutine9 = Tip(header: "", title: "Arianna Huffington, the author of The Sleep Revolution: Transforming Your Life One Night At A Time, shares her tips for a night routine that ensures better sleep:", body: "• No electronic devices 30 minutes before bedtime (or remove all devices from your bedroom) \n• No working on the bed \n• Do some light stretching and deep breathing \n• Wear pyjamas to send a sleep-friendly message to your body \n• Read physical books or use an e-reader that does not emit blue light \n• Drink chamomile or lavender tea \n• Write a list of things you are grateful for", sourceName: "The Mindful Company", sourceURL: "https://www.mindful-company.com/blogs/notebook/the-night-routines-of-notable-people", sponsorLogo: "", sponsorURL: "")
+
+
+let eveningRoutineTipArray0 = [eveningRoutine1,  eveningRoutine2, eveningRoutine3, eveningRoutine4]
+let eveningRoutineTopic0 = Topic(title: cantSleepTitle, icon: cantSleepIcon, tip: eveningRoutineTipArray0)
+
+let eveningRoutineTipArray1 = [eveningRoutine5,  eveningRoutine6, eveningRoutine7, eveningRoutine8]
+let eveningRoutineTopic1 = Topic(title: cantSleepTitle, icon: cantSleepIcon, tip: eveningRoutineTipArray1)
 
 // MARK: - Can't Sleep
 let cantSleepTitle = "Can't Sleep"
@@ -2506,26 +2593,69 @@ let sex0 = Tip(header: "👩", title: "Females should always pee after sex to pr
 let sex1 = Tip(header: "👫", title: "The happiest couples have sex at least once a week", body: "Couples who had sex once a week reported being happier than couples who had less sex. And couples who had sex more frequently weren’t any happier than those who had sex once a week. It’s important to maintain an intimate connection with your partner, but you don’t need to have sex everyday as long as you’re maintaining that connection.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 let sex2 = Tip(header: "👫", title: "Sex helps you burn calories", body: "Research: Women burn off 69 calories during the average sex sesh, while men burn off 100.", sourceName: "Reader's DigesEat This, Not That!", sourceURL: "https://www.eatthis.com/easy-ways-to-burn-calories/", sponsorLogo: "", sponsorURL: "")
 
-// MARK: - Relationships / Couples
+// MARK: Relationships, AM
+
+let relationshipAM1 = Tip(header: "🤗", title: "Have your first coffee — or juice — of the day together with your partner", body: "Even if it’s standing next to the sink, bachelor-style, enjoying that first cup together is a way to bond and reboot your relationship for the day ahead. \n\n• If you have extra time, brew it for partner. \n\n• If you want to sweeten the moment, make that coffee and bring it to your partner — or make some steamed milk to make the coffee special. This little kindness kick-starts the day in a positive way.", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/179623-the-best-way-to-start-your-day-with-your-partner-according-to-experts", sponsorLogo: "", sponsorURL: "")
+let relationshipAM2 = Tip(header: "🤗", title: "Leave a romantic note on the bathroom mirror or kitchen table or put it in your partner’s wallet or purse", body: "It will be sure to brighten their day.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/relationships/40-creative-romantic-ideas/", sponsorLogo: "", sponsorURL: "")
+let relationshipAM3 = Tip(header: "🤗", title: "Put the phones away and be present with your partner", body: "One of the simplest romantic ideas you can do is just put them away for a day. Focus on each other instead of your screen.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/relationships/40-creative-romantic-ideas/", sponsorLogo: "", sponsorURL: "")
+let relationshipAM4 = Tip(header: "🤗", title: "A kiss before you leave for the day should also be part of your daily routine.", body: "It begins the day with love and connection with a simple act.", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/179623-the-best-way-to-start-your-day-with-your-partner-according-to-experts", sponsorLogo: "", sponsorURL: "")
+
+//1
+let relationshipTitle = "Relationship"
+let relationshipIcon = Constants.Icon.relationship
+
+let relationshipAMTipArray0 = [relationshipAM1, relationshipAM2, relationshipAM3, relationshipAM4]
+
+let relationshipAMTopic0 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray0)
+
+//Relationships, Day
 
 //1
 let relationship0 = Tip(header: "🤗", title: "Expressing gratitude can improve relationships", body: "Study: Individuals who took time to express gratitude for their partner not only felt more positive toward the other person but also felt more comfortable expressing concerns about their relationship. Express gratitude: \n\n• In person \n• Phone call \n• Text message", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier", sponsorLogo: "", sponsorURL: "")
+let relationship4 = Tip(header: "😀", title: "Increase happiness by being a giving partner", body: "Americans who are very giving in relationships—being emotionally available and hospitable—are much more likely to be in excellent health (48%) than those who are not (31%).", sourceName: "The New Republic", sourceURL: "https://newrepublic.com/article/119477/science-generosity-why-giving-makes-you-happy", sponsorLogo: "", sponsorURL: "")
+
+//ODD Relationship Advice...
 let relationship1 = Tip(header: "👫", title: "People who have cheated before are 350% more likely to cheat again", body: "People who’ve been cheated on in the past are more likely to date a cheater again down the line. In addition, cheaters are significantly more prone to dating other cheaters.", sourceName: "Women's Health", sourceURL: "https://www.womenshealthmag.com/relationships/a19932020/will-they-cheat-again/", sponsorLogo: "", sponsorURL: "")
+
+
 let relationship2 = Tip(header: "👰", title: "People who marry when they're very young are more likely to divorce", body: "An American who weds at 25 is 11% less likely to divorce than one who marries at age 24. But waiting too long has a downside. Past the age of about 32-even after controlling for religion, education, geographic location, and other factors-the odds of divorce increase by 5% per year for at least the next decade.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let relationship3 = Tip(header: "🎓", title: "Finish as much education as you can before getting married", body: "Couples tend to be more satisfied with their marriages, and less likely to divorce, if they have more education before the wedding.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
 //2
-let relationship4 = Tip(header: "😀", title: "Increase happiness by being a giving partner", body: "Americans who are very giving in relationships—being emotionally available and hospitable—are much more likely to be in excellent health (48%) than those who are not (31%).", sourceName: "The New Republic", sourceURL: "https://newrepublic.com/article/119477/science-generosity-why-giving-makes-you-happy", sponsorLogo: "", sponsorURL: "")
+
 let relationship5 = Tip(header: "", title: "Study: People were more successful in replacing bad habits for good ones if their partner made the same change, at the same time, as well", body: "For example, among women who smoked, 50% managed to quit if their partner gave up smoking too at the same time, compared with 17% of women whose partners were already non-smokers, and 8% of those whose partners were regular smokers. \n\nThe study found that men were equally affected by their partners and were more likely to quit smoking, get active, or lose weight if their partner made the same behaviour change. \n\nLower your risk of disease by quiting these unhealthy habits: \n• smoking \n• excess weight \n• physical inactivity \n• poor diet \n• alcohol consumption", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2015/01/150119124551.htm", sponsorLogo: "", sponsorURL: "")
+let relationship6 = Tip(header: "", title: "Study: Do something new and different together. Partners who regularly share new experiences report greater boosts in marital happiness than those who simply share pleasant but familiar experiences.", body: "New experiences activate the brain’s reward system, flooding it with dopamine and norepinephrine. These are the same brain circuits that are ignited in early romantic love. \n\nWhether you take a pottery class or go on a white-water rafting trip, activating your dopamine systems while you are together can help bring back the excitement you felt on your first date.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/guides/well/how-to-have-a-better-relationship", sponsorLogo: "", sponsorURL: "")
+let relationship7 = Tip(header: "", title: "Approaches arguments or tough conversations with empathy and kindness from the start, not with anger or hostility", body: "Research: Couples that started tough conversations with empathy and kindness towards each other were successfully able to deescalate any negativity towards each other and were more likely to stay together. \n\nConversely, out of the 130 couples researched, all 17 couples that later divorced began their conversations with what he called a \"harsh startup\" — more displays of negative emotions and less positive emotions.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/marriage-advice-science-2019-4", sponsorLogo: "", sponsorURL: "")
+
+//3
+let relationship8 = Tip(header: "", title: "When talking about conflict, use couple-focused words such as \"we,\" \"our\" and \"us\"", body: "Study: Spouses who used couple-focused words such as \"we,\" \"our\" and \"us\" when talking about a conflict also showed more affection, fewer negative behaviors such as anger, and lower physiological stress levels during the disagreement. \n\nUsing words that expressed separateness, such as \"I,\" \"you,\" and \"me,\" during the discussion was associated with marital dissatisfaction. ", sourceName: "Live Science", sourceURL: "https://www.livescience.com/14104-happy-marriage-tips.html", sponsorLogo: "", sponsorURL: "")
+
+//MARK: - Relationships PM
+let relationshipPM1 = Tip(header: "", title: "Get more sleep. Not getting enough sleep reduces your self-control which can negatively affect your relationship.", body: "Self-control plays a big role in relationship success: Those with higher self-control are more able to respond in constructive ways to their partners, and the more self-control couples have, the higher their relationship quality tends to be.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/meet-catch-and-keep/201501/7-simple-ways-you-can-become-better-partner", sponsorLogo: "", sponsorURL: "")
+let relationshipPM2 = Tip(header: "", title: "Avoid being hungry around your partner. Being \"hangry\" can negatively affect your relationship.", body: "When you’re hungry, you're more likely to act with anger and aggression; in relationships, these \"hangry\" moments do little to promote relationship well-being.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/meet-catch-and-keep/201501/7-simple-ways-you-can-become-better-partner", sponsorLogo: "", sponsorURL: "")
+let relationshipPM3 = Tip(header: "", title: "Go to bed at the same time if possible. It builds connection and provides opportunity for more intimate connecting.", body: "Too many couples go to bed at different times, leading disconnected lives in the evening after already having spent all day apart. Happy couples, however, are intentional about coming back together at bedtime and reconnecting, if only for the few minutes of brushing teeth and getting under the covers.", sourceName: "Huffington Post", sourceURL: "https://www.huffpost.com/entry/happiest-couples-do-before-bed_n_591f3d6be4b034684b0c3ff5", sponsorLogo: "", sponsorURL: "")
+let relationshipPM4 = Tip(header: "", title: "Kiss goodnight every night.", body: "Some people don't like to sleep close together—maybe they like their space, or they get too hot—but a kiss goodnight is one of the simplest ways to connect at the end of the day. Close out your day with a combination of physical and emotional intimacy. ", sourceName: "SELF", sourceURL: "https://www.self.com/story/6-things-to-do-before-bed-in-a-relationship", sponsorLogo: "", sponsorURL: "")
 
 
-// Pre-marriage
+//1
+let relationshipPMTipArray0 = [relationshipPM1, relationshipPM2, relationshipPM3, relationshipPM4]
+let relationshipPMTopic0 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: relationshipPMTipArray0)
+
+
+// MARK: - Pre-Marriage
 let relationship25 = Tip(header: "👰", title: "Couples that dated for at least 1 year before marriage were 20% less likely to divorce than those who made the move quickly. Couples that had dated for more than 3 years were even less likely to divorce. ", body: " ", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")// WIP
 let relationship26 = Tip(header: "💍", title: "The more a couple spent on its wedding and engagement ring, the more likely they were to divorce", body: " ", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")// WIP
 
 let relationship27 = Tip(header: "👫", title: "High-conflict marriages without much affection, turn out to be very bad for our health, perhaps worse than getting divorced", body: "80-year-old men and women who were happily partnered reported that on the days when they had more physical pain, their mood remained just as happy, while those in unhappy relationships had their physical pain magnified by being in more emotional pain. \n\nPeople who are in relationships where they feel they can count on their partner in times of need actually have a sharper, longer-lasting ability to remember things. All the same, those who were in a relationship where they felt they couldn't count on their partner experienced early memory decline.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/10/31/this-harvard-study-reveals-how-you-can-be-happier-and-more-successful.html", sponsorLogo: "", sponsorURL: "")
 
+// MARRIAGE
+let marriage1 = Tip(header: "👰", title: "Women are most likely to cheat between 6 and 10 years of a relationship, and men are most likely to cheat after 11 years", body: "The research identified being female, being more religious, and being married for a shorter amount of time as the 3 most influential factors in people resisting cheating. The decision to stay out of an affair was motivated more by internal than external factors-fear of being alone and the desire to adhere to moral standards were found to be more influential in keeping people out of extramarital affairs than concerns of how cheating would impact their kids or partner.", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/sex-women/a19541650/marriage-when-is-cheating-most-likely-to-happen/", sponsorLogo: "", sponsorURL: "")
 
+let marriage2 = Tip(header: "👰", title: "The best age to get married seems to be somewhere between 28 and 32", body: "Overall, those who marry before age 25 tend to be more likely to divorce than those who marry after that age. In general, marrying later in life tends to point to better odds of staying married.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
+
+let marriage3 = Tip(header: "🎓", title: "People with a college degree are about 10% less likely to divorce", body: "Women who had completed their college education had a rate of about 14.2 divorces per 1,000 while those who only completed some college had a rate of 23 per 1,000.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
+
+let marriage4 = Tip(header: "👨‍👩‍👧‍👦", title: "Couples are less likely to get divorced if they have children", body: "Ratings of happiness and life satisfaction in that same study tended to decrease after couples had children.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
 
 // MARK: - Breakups
 
@@ -2536,17 +2666,39 @@ let breakup1 = Tip(header: "🗣", title: "The most humane and fair thing to do 
 // BODY HEALTH
 let body1 = Tip(header: "🍺", title: "Whether it's called a beer belly, a spare tire, or the middle-age spread - abdominal obesity is the shape of health risk", body: "Abdominal obesity increases the risk of heart attack, stroke, diabetes, erectile dysfunction, and other woes. Risk begins to mount at a waist size above 37 inches for men, and a measurement above 40 inches would put you in the danger zone. For women, the corresponding waist sizes are 31½ and 35 inches, respectively.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier", sponsorLogo: "", sponsorURL: "") // - seperate this by male and female tips
 
+
+
 // MARK: - PARENTING
+
+//WEEKEND, AM
+let parenting0 = Tip(header: "🧠", title: "Children who are held, rocked, soothed and attended to by an \"in tune\" parent have larger brains than children who are touched less or who are outright neglected", body: "Eye contact in particular fosters bonding and stimulates brain development, and children these days receive less eye contact than ever because of both kids and parents being locked onto screens. \n\nEye contact, face to face interaction, touch, and observing body language all help children learn to regulate emotion and  arousal, develop a sense of self, and build capacity for intimacy.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "", sponsorURL: "")
+
+let parenting1 = Tip(header: "🤓", title: "Studies found that kids who do chores have higher GPAs and were more likely to have sucessful relationships and careers", body: "One study found that kids with the highest GPA’s did more chores, had less than 30 minutes of daily screen-time, and spent more time with their parents. Another study showed that children who started doing chores at age 3 or 4 were more likely to have successful relationships and careers and were more self-sufficient.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "", sponsorURL: "")
+
+
+
 
 //WEEKDAY
 
+
 //AM
-let parentingAMTip1 = Tip(header: "", title: "Researchers found that children were much more likely to have a positive body image if they regularly ate breakfast with a parent.", body: "Children and adolescents are under a lot of pressure from social media and pop culture when it comes to physical appearance. Having a healthy relationship with food from eating breakfast and spending meal time with family might have a significant impact on well-being." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/03/190321130312.htm", sponsorLogo: "", sponsorURL: "")
+let parentingAMTip0 = Tip(header: "", title: "Researchers found that children were much more likely to have a positive body image if they regularly ate breakfast with a parent.", body: "Children and adolescents are under a lot of pressure from social media and pop culture when it comes to physical appearance. Having a healthy relationship with food from eating breakfast and spending meal time with family might have a significant impact on well-being." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/03/190321130312.htm", sponsorLogo: "", sponsorURL: "")
+let parentingAMTip1 = Tip(header: "", title: "Aim for 12 hugs (or physical connections) every day", body: "As family therapist Virginia Satir famously said, \"We need 4 hugs a day for survival. We need 8 hugs a day for maintenance. We need 12 hugs a day for growth.\" \n\nSnuggle your child first thing in the morning for a few minutes, and last thing at night. Hug when you say goodbye, when you're re-united, and often in between." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/peaceful-parents-happy-kids/201706/10-habits-strengthen-parent-child-relationship", sponsorLogo: "", sponsorURL: "")
+let parentingAMTip2 = Tip(header: "", title: "Have your kids make their beds in the morning. It instills good habits early on", body: "Making the bed creates a domino effect, triggering other healthy habits throughout the day and also establishes a feeling of accomplishment first thing in the morning." , sourceName: "NBC News", sourceURL: "https://www.sciencedaily.com/releases/2019/03/190321130312.htm", sponsorLogo: "", sponsorURL: "")
+let parentingAMTip3 = Tip(header: "", title: "Catch kids doing something right: \"You made your bed without being asked — that's terrific!\" or \"I was watching you play with your sister and you were very patient.\" These statements will do more to encourage good behavior over the long run than repeated scoldings.", body: "Have you ever stopped to think about how many times you react negatively to your kids in a given day? You may find yourself criticizing far more often than complimenting. How would you feel about a boss who treated you with that much negative guidance, even if it was well intentioned? \n\nMake a point of finding something to praise every day. Be generous with rewards — your love, hugs, and compliments can work wonders and are often reward enough. Soon you will find you are \"growing\" more of the behavior you would like to see." , sourceName: "KidsHealth", sourceURL: "https://kidshealth.org/en/parents/nine-steps.html", sponsorLogo: "", sponsorURL: "")
+
+//1
+
+//AM
+let parentingIcon = Constants.Icon.parenting
+let parentingTitle = "Parenting"
+
+let parentingAMTipArray0 = [parentingAMTip0, parentingAMTip1, parentingAMTip2, parentingAMTip3]
+
+let parentingAMTopic0 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingAMTipArray0)
+
 
 //PM
-
-
-
 // Dinner
 //1
 let parentingPMTip3 = Tip(header: "🗣", title: "For young children, dinnertime conversation increases vocabulary more than being read aloud", body: "The researchers counted the number of rare words – those not found on a list of 3,000 most common words – that the families used during dinner conversation. Young kids learned 1,000 rare words at the dinner table, compared to only 143 from parents reading storybooks aloud. Kids who have a large vocabulary read earlier and more easily." , sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/posteverything/wp/2015/01/12/the-most-important-thing-you-can-do-with-your-kids-eat-dinner-with-them/?utm_term=.21a61555e2d4", sponsorLogo: "", sponsorURL: "")
@@ -2563,41 +2715,29 @@ let parentingPMTip9 = Tip(header: "", title: "Making it clear you have ambitions
 let parentingPMTip1 = Tip(header: "🍽", title: "Teens who eat with their families 5 or more times a week are more likely to get better grades in school and less likely to have substance abuse problems", body: "According to a Columbia University survey, found teens having family dinners 5 or more times a week were 40% more likely to get A's and B's, 42% less likely to drink alcohol, 59% less likely to smoke cigarettes, and 66% less likely to try marijuana. At a time when kids are under a lot of stress, having regular mealtimes are a great time for parents to listen and show support for their kids." , sourceName: "ABC News", sourceURL: "https://abcnews.go.com/WNT/Health/story?id=1123055&page=1", sponsorLogo: "", sponsorURL: "")
 let parentingPMTip21 = Tip(header: "", title: "Increase their chances of success: Praise them for their effort instead of their natural abilities. It helps them develop a growth mindset instead of a fixed mindset", body: "• Natural ability praise (bad): Great job! You're so smart! \n• Effort praise (good): Great job! You worked hard and figured it out! \n\nIf you praise them for their natural intelligence, you're praising them for a) something they had nothing to do with achieving, and b) something they can't do anything to improve. But when you praise them for their effort, you're encouraging them to develop grit and a growth mindset to be successful in life. \n\nThe effects of these praise strategies are quantifiable even children are as young as 1 to 3 years of age." , sourceName: "Inc.", sourceURL: "https://www.inc.com/bill-murphy-jr/want-to-raise-successful-kids-science-says-do-these-5-things-every-day.html", sponsorLogo: "", sponsorURL: "")
 
+let parentingPMTipArray0 = [relationshipPM1, relationshipPM2, relationshipPM3, relationshipPM4]
+let parentingPMTopic0 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingAMTipArray0)
+
 // Bedtime
-// 1
-let parentingPMTip2 = Tip(header: "📵", title: "Don't allow screentime within an hour of bedtime. Keep smartphones and tablets out of the bedroom after \"lights-out\" time", body: "The blue light emitted by electronic screens tricks our brains into thinking it’s still daytime, and then we don’t produce enough of the sleep hormone melatonin to fall asleep quickly and get high-quality sleep. Sleep deprivation among teens spiked after 2012 – just as smartphone use became common." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/worry-over-kids-excessive-smartphone-use-is-more-justified-than-ever-before-108585", sponsorLogo: "", sponsorURL: "")
-let parentingPMTip18 = Tip(header: "😴", title: "Sleep experts agree that teens need 9+ hours of sleep a night", body: "But by 2015, 43% of U.S. teens reported sleeping less than 7 hours a night on most nights – meaning almost half of U.S. teens are significantly sleep-deprived. Researchers found that teens who spent more time with their friends in person or on sports or exercise actually slept more. However, teens who spent more time online and on social media were more likely to sleep less, making it the most likely cause of teen sleep deprivation. Teens who don’t sleep enough perform more poorly in school and are at greater risk of developing obesity. Sleep deprivation is also linked to anxiety and depression." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/teens-are-sleeping-less-but-theres-a-surprisingly-easy-fix-85157", sponsorLogo: "", sponsorURL: "")
-let parentingPMTip19 = Tip(header: "", title: "Read to your kids daily. Young children whose parents read them 5 books a day enter kindergarten having heard about 1.4 million more words than kids who were never read to. Kids who hear more vocabulary words are going to pick up reading skills more quickly and easily when they enter school.", body: "Even kids who are read only one book a day will hear about 290,000 more words by age 5 than those who don't regularly read books with a parent. \n\nParents can get access to books that are appropriate for their children at the local library." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/04/190404074947.htm", sponsorLogo: "", sponsorURL: "")
-let parentingPMTip20 = Tip(header: "", title: "Study: Between the ages of 18 months and about 3 years of age is the most influential time with regard a child's language learning. It is therefore important to read to children often from an early age.", body: "Reading aloud to a child before the child can speak positively influences the number of words the child learns. By sitting with an adult who is reading books, children become aware of letters and words, and it will be easier for them to read when starting school." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2015/10/151014110402.htm", sponsorLogo: "", sponsorURL: "")
+// 0
+let parentingBedtimeTip0 = Tip(header: "📵", title: "Don't allow screentime within an hour of bedtime. Keep smartphones and tablets out of the bedroom after \"lights-out\" time", body: "The blue light emitted by electronic screens tricks our brains into thinking it’s still daytime, and then we don’t produce enough of the sleep hormone melatonin to fall asleep quickly and get high-quality sleep. Sleep deprivation among teens spiked after 2012 – just as smartphone use became common." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/worry-over-kids-excessive-smartphone-use-is-more-justified-than-ever-before-108585", sponsorLogo: "", sponsorURL: "")
+let parentingBedtimeTip1 = Tip(header: "😴", title: "Sleep experts agree that teens need 9+ hours of sleep a night", body: "But by 2015, 43% of U.S. teens reported sleeping less than 7 hours a night on most nights – meaning almost half of U.S. teens are significantly sleep-deprived. Researchers found that teens who spent more time with their friends in person or on sports or exercise actually slept more. However, teens who spent more time online and on social media were more likely to sleep less, making it the most likely cause of teen sleep deprivation. Teens who don’t sleep enough perform more poorly in school and are at greater risk of developing obesity. Sleep deprivation is also linked to anxiety and depression." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/teens-are-sleeping-less-but-theres-a-surprisingly-easy-fix-85157", sponsorLogo: "", sponsorURL: "")
+let parentingBedtimeTip2 = Tip(header: "", title: "Read to your kids daily. Young children whose parents read them 5 books a day enter kindergarten having heard about 1.4 million more words than kids who were never read to. Kids who hear more vocabulary words are going to pick up reading skills more quickly and easily when they enter school.", body: "Even kids who are read only one book a day will hear about 290,000 more words by age 5 than those who don't regularly read books with a parent. \n\nParents can get access to books that are appropriate for their children at the local library." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/04/190404074947.htm", sponsorLogo: "", sponsorURL: "")
+let parentingBedtimeTip3 = Tip(header: "", title: "Study: Between the ages of 18 months and about 3 years of age is the most influential time with regard a child's language learning. It is therefore important to read to children often from an early age.", body: "Reading aloud to a child before the child can speak positively influences the number of words the child learns. By sitting with an adult who is reading books, children become aware of letters and words, and it will be easier for them to read when starting school." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2015/10/151014110402.htm", sponsorLogo: "", sponsorURL: "")
 
-//2 - Bedtime
-let parentingPMTip22 = Tip(header: "", title: "The American Academy of Pediatrics recommends that parents need to read to their children from the earliest ages.", body: "Infants, even? Yep. While the youngest babies might not understand your words, the impact of your reading aloud to them is thought to have at least two benefits: \n\n• bonding over verbal exchanges between parent and child, and \n• demonstrating how communication itself works. \n\nThe stronger their language skills are when they reach kindergarten, the more prepared they are to be able to read. The better they read, the more likely they will graduate from high school, achieve higher education, enjoy positive familial relationships, and attain economic security." , sourceName: "Inc.", sourceURL: "https://www.inc.com/bill-murphy-jr/neuroscience-kids-success-parents-best-practices.html", sponsorLogo: "", sponsorURL: "")
+//2
+let parentingBedtimeTip4 = Tip(header: "", title: "The American Academy of Pediatrics recommends that parents need to read to their children from the earliest ages.", body: "Infants, even? Yep. While the youngest babies might not understand your words, the impact of your reading aloud to them is thought to have at least two benefits: \n\n• bonding over verbal exchanges between parent and child, and \n• demonstrating how communication itself works. \n\nThe stronger their language skills are when they reach kindergarten, the more prepared they are to be able to read. The better they read, the more likely they will graduate from high school, achieve higher education, enjoy positive familial relationships, and attain economic security." , sourceName: "Inc.", sourceURL: "https://www.inc.com/bill-murphy-jr/neuroscience-kids-success-parents-best-practices.html", sponsorLogo: "", sponsorURL: "")
 
-let parentingPMTip23 = Tip(header: "", title: "Raise Successful Kids: Instead of simply reading straight through a book with your children, embrace dramatic pauses and interrupt the story at appropriate moments to encourage your children to put themselves into the minds of the characters. Let them sort through the conflict before the characters do.", body: "Reading in this style, for example, by asking your child, \"What would you do, if you were the main character?\" helps them develop greater intellectual empathy. \n\nAt the end of the day, you're teaching your children not only to become better readers, but more effective people -- intellectually empathetic people who have better relationships and lower divorce rates and who often turn out to become better bosses, co-workers, negotiators, and friends." , sourceName: "Inc.", sourceURL: "https://www.inc.com/bill-murphy-jr/neuroscience-kids-success-parents-best-practices.html", sponsorLogo: "", sponsorURL: "")
+let parentingBedtimeTip5 = Tip(header: "", title: "Raise Successful Kids: Instead of simply reading straight through a book with your children, embrace dramatic pauses and interrupt the story at appropriate moments to encourage your children to put themselves into the minds of the characters. Let them sort through the conflict before the characters do.", body: "Reading in this style, for example, by asking your child, \"What would you do, if you were the main character?\" helps them develop greater intellectual empathy. \n\nAt the end of the day, you're teaching your children not only to become better readers, but more effective people -- intellectually empathetic people who have better relationships and lower divorce rates and who often turn out to become better bosses, co-workers, negotiators, and friends." , sourceName: "Inc.", sourceURL: "https://www.inc.com/bill-murphy-jr/neuroscience-kids-success-parents-best-practices.html", sponsorLogo: "", sponsorURL: "")
+//WIP (break out into two?)
+let parentingBedtimeTip6 = Tip(header: "📵", title: "Don't allow kids to keep smartphones in their room after bedtime. If they use their smartphones as alarm clocks, buy them inexpensive alarm clocks", body: "Unlike other electronic devices such as TVs and desktop computers, smartphones (and tablets) are easily carried into the bedroom and held by hand in bed. \n\nMost of the students interviewed for the book “iGen” said that they kept their phones within reach as they slept, in part, because they all used it as their alarm clock. \n\nMany also said that their smartphones were the last thing they looked at before they went to sleep at night. \n\nThat’s a problem, because answering texts and scrolling through social media is mentally and emotionally stimulating, which leads to disturbed sleep. \n\nOthers said that they also regularly reached for their phones, often just out of habit, when they woke up in the middle of the night. \n\nThe blue light emitted by smartphones and tablets simulates daylight, inhibiting the brain’s production of melatonin, the hormone that helps us fall asleep and stay asleep. \n\nA 2014 study found that 80% of teens admitted to using their phones when they were supposed to be sleeping." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/teens-are-sleeping-less-but-theres-a-surprisingly-easy-fix-85157", sponsorLogo: "", sponsorURL: "")
 
+let parentingBedtimeTipArray0 = [parentingBedtimeTip0, parentingBedtimeTip1, parentingBedtimeTip2, parentingBedtimeTip3]
 
-
-
-
-
-
-
+let parentingBedtimeTopic0 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingAMTipArray0)
 
 
-// If your family uses phones as alarm clocks, buy inexpensive alarm clocks.
-// Spending five or more hours a day online (vs. one hour) upped the risk of sleeping too little more than 50 percent.
-
-// Avoid teens using smartphones in bedroom
-// TODO: - Finish Parting Advice
-let parentingPMTip200 = Tip(header: "📵", title: "Don't allow kids to keep smartphones in their room after bedtime. If they use their smartphones as alarm clocks, buy them inexpensive alarm clocks", body: "Unlike other electronic devices such as TVs and desktop computers, smartphones (and tablets) are easily carried into the bedroom and held by hand in bed. Most of the students I interviewed for my book “iGen” told me they kept their phones within reach as they slept, in part, because they all used it as their alarm clock. Many also told me that their smartphones were the last thing they looked at before they went to sleep at night. That’s a problem, because answering texts and scrolling through social media is mentally and emotionally stimulating, which leads to disturbed sleep. Others told me that they also regularly reached for their phones, often just out of habit, when they woke up in the middle of the night. The blue light emitted by smartphones and tablets simulates daylight, inhibiting the brain’s production of melatonin, the hormone that helps us fall asleep and stay asleep. A 2014 study found that 80 percent of teens admitted to using their phones when they were supposed to be sleeping." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/teens-are-sleeping-less-but-theres-a-surprisingly-easy-fix-85157", sponsorLogo: "", sponsorURL: "")
-
-
-//WEEKEND
-let parenting0 = Tip(header: "🧠", title: "Children who are held, rocked, soothed and attended to by an \"in tune\" parent have larger brains than children who are touched less or who are outright neglected", body: "Eye contact in particular fosters bonding and stimulates brain development, and children these days receive less eye contact than ever because of both kids and parents being locked onto screens. Eye contact, face to face interaction, touch, and observing body language all help children learn to regulate emotion and  arousal, develop a sense of self, and build capacity for intimacy. ", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "", sponsorURL: "")
-
-let parenting1 = Tip(header: "🤓", title: "Studies found that kids who do chores have higher GPAs and were more likely to have sucessful relationships and careers", body: "One study found that kids with the highest GPA’s did more chores, had less than 30 minutes of daily screen-time, and spent more time with their parents. Another study showed that children who started doing chores at age 3 or 4 were more likely to have successful relationships and careers and were more self-sufficient.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "", sponsorURL: "")
-
-// WIP
+// WIP?
 let parenting2 = Tip(header: "🎓", title: "Rich parents invest in top-notch education to secure and preserve their children's social status", body: "In 2014, the top 1% spent 860% more than the national average on education, from high-end preschools to SAT tutors to Ivy League tuition. Rich parents are spending millions to live within walking distance of the country's best schools— an investment in hopes of setting their children up for a successful, well-connected future.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/discreet-wealth-new-status-symbol-rich-people-2018-11", sponsorLogo: "", sponsorURL: "")
 
 let parenting3 = Tip(header: "🚎", title: "Children who live near transportation noise are more likely to test poorly for language and cognitive skills and have lower reading scores", body: "Chronic noise impairs a child’s development and may have a lifelong effect on educational attainment and overall health. Numerous studies now show that children exposed to households or classrooms near airplane flight paths, railways or highways are slower in their development of cognitive and language skills and have lower reading scores. The report concludes, citing children as particularly vulnerable to the effects of chronic urban and suburban racket. One study in New York City found that reading scores of sixth-grade students whose classrooms faced train tracks were a year behind those on the quieter side of the building. Researchers also found that the Munich students near the working airports had significantly higher levels of the stress hormones adrenaline and cortisol and markedly higher blood pressure readings than children in quieter neighborhoods. Evidence suggests that elevated blood pressure in childhood predicts higher blood pressure later in life, and higher levels of stress hormones are linked to several life-threatening adult illnesses, including high blood pressure, elevated cholesterol and other lipids, and heart disease. We think one thing that might be going on is that children who are exposed to noise develop a stress response of ignoring the noise, but not only do they ignore noise, there’s evidence that they also ignore speech. So not only are they ignoring the stimuli that are harmful, but they’re also ignoring stimuli that they need to pay attention to.", sourceName: "American Psychological Association", sourceURL: "https://www.apa.org/monitor/2011/07-08/silence.aspx", sponsorLogo: "", sponsorURL: "")
@@ -2644,20 +2784,20 @@ let schoolAMTip6 = Tip(header: "🤔", title: "Sitting up straight in your chair
 let schoolAMTip7 = Tip(header: "🚶‍♂️", title: "Walking around for just 5 minutes every hour can help you be more productive", body: "Studies have found that movement-based activities during the school day can improve students' focus and standardized test scores. Moving your body improves learning because it stimulates more blood cells in the brain.", sourceName: "Inc.", sourceURL: "https://www.inc.com/betsy-mikel/science-says-kids-learn-better-when-their-teachers-do-this.html", sponsorLogo: "", sponsorURL: "")
 let schoolAMTip8 = Tip(header: "⚽️", title: "Students who take recess often earn better grades than those with fewer recesses", body: "Students who have recess work harder, fidget less, and focus better. They even develop better social skills, show greater empathy, and eat healthier food.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
-//3 (WIP)
+//3
 let schoolAMTip9 = Tip(header: "👫", title: "Improve your success by being kind and helpful towards other students", body: "Researchers have found that students who show this kind of behavior: 1) achieve greater academic success, 2) have more friends, and 3) develop better relationships with teachers.", sourceName: "University of California, Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/4_ways_to_encourage_kindness_in_students", sponsorLogo: "", sponsorURL: "")
 let schoolAMTip10 = Tip(header: "", title: "Study: A one-point increase in high school GPA raises annual earnings in adulthood by around 12% for men and 14% for women", body: "In addition, a one-point increase in GPA doubles the probability of completing college -- from 21% to 42% -- for both genders.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2014/05/140519092835.htm", sponsorLogo: "", sponsorURL: "")
 let schoolAMTip11 = Tip(header: "", title: "Study: Having a positive attitude improves your ability to answer math problems, increases your memory, and enhances your problem-solving abilities", body: "Based on the data, a positive attitude contributes to a similar level of achievement in math as a student's IQ. \n\nWhen students are positive about math, they tend to have more interest in math and are more likely to practice, resulting in more success.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2018/02/05/stanford-university-study-positivity-makes-kids-smarter.html", sponsorLogo: "", sponsorURL: "")
-let schoolAMTip12 = Tip(header: "", title: "Conscientious people are more likely to have higher GPAs", body: "Here are a few suggestions to be more conscientious: \n\n• show gratitude for others \n• be on time \n• organize your desk \n• use reminders \n• make daily plans—and work on sticking to them", sourceName: "Science Daily", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+let schoolAMTip12 = Tip(header: "", title: "Conscientious people are more likely to have higher GPAs", body: "Here are a few suggestions to be more conscientious: \n\n• show gratitude for others \n• be on time \n• organize your desk \n• use reminders \n• make daily plans—and work on sticking to them", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2013/03/130319124310.htm", sponsorLogo: "", sponsorURL: "")
 
 
 let schoolAMTipArray1 = [schoolAMTip1, schoolAMTip2, schoolAMTip3, schoolAMTip4]
 let schoolAMTipArray2 = [schoolAMTip5, schoolAMTip6, schoolAMTip7, schoolAMTip8]
-let schoolAMTipArray3 = [schoolAMTip9, schoolAMTip10, schoolAMTip11, schoolAMTip4]//WIP
+let schoolAMTipArray3 = [schoolAMTip9, schoolAMTip10, schoolAMTip11, schoolAMTip12]
 
 let schoolAMTopic1 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray1)
 let schoolAMTopic2 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray2)
-let schoolAMTopic3 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray3)//WIP
+let schoolAMTopic3 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray3)
 
 
 
@@ -2680,6 +2820,7 @@ let schoolPMTip11 = Tip(header: "", title: "Study: Students who spend 2+ years i
 
 let schoolPMTipArray1 = [schoolPMTip1, schoolPMTip2, schoolPMTip3, schoolPMTip4]
 let schoolPMTipArray2 = [schoolPMTip5, schoolPMTip6, schoolPMTip7, schoolPMTip8]
+//WIP (2)
 let schoolPMTipArray3 = [schoolPMTip9, schoolPMTip10, schoolPMTip7, schoolPMTip4]//WIP
 
 let schoolPMTopic1 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray1)
@@ -2711,46 +2852,101 @@ let fStudent1 = Tip(header: "⛹️‍♀️", title: "Girls who play team sport
 
 
 
-// MARRIAGE
-let marriage1 = Tip(header: "👰", title: "Women are most likely to cheat between 6 and 10 years of a relationship, and men are most likely to cheat after 11 years", body: "The research identified being female, being more religious, and being married for a shorter amount of time as the 3 most influential factors in people resisting cheating. The decision to stay out of an affair was motivated more by internal than external factors-fear of being alone and the desire to adhere to moral standards were found to be more influential in keeping people out of extramarital affairs than concerns of how cheating would impact their kids or partner.", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/sex-women/a19541650/marriage-when-is-cheating-most-likely-to-happen/", sponsorLogo: "", sponsorURL: "")
 
-let marriage2 = Tip(header: "👰", title: "The best age to get married seems to be somewhere between 28 and 32", body: "Overall, those who marry before age 25 tend to be more likely to divorce than those who marry after that age. In general, marrying later in life tends to point to better odds of staying married.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
-
-let marriage3 = Tip(header: "🎓", title: "People with a college degree are about 10% less likely to divorce", body: "Women who had completed their college education had a rate of about 14.2 divorces per 1,000 while those who only completed some college had a rate of 23 per 1,000.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
-
-let marriage4 = Tip(header: "👨‍👩‍👧‍👦", title: "Couples are less likely to get divorced if they have children", body: "Ratings of happiness and life satisfaction in that same study tended to decrease after couples had children.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/2017/01/137440/divorce-rate-in-america-statistics", sponsorLogo: "", sponsorURL: "")
 
 // MARK: - TRAVEL
 
 let travelTitle = "Travel"
 let travelIcon = Constants.Icon.travel
 
-let travelTip0 = Tip(header: "😴", title: "Reduce jet lag by changing your bedtime to better match the local time of your destination", body: "Jet lag occurs when we cross three or more time zone changes, because it throws off our circadian rhythm -- the biological clock that helps control when we wake and fall asleep. Try to sleep on the plane if it’s nighttime where you’re going or stay awake if it’s daytime -- but don’t force it.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/travel/want-to-minimize-jet-lag-heres-what-the-doctors-order/2018/08/29/23c14836-a7d8-11e8-97ce-cc9042272f07_story.html?noredirect=on&utm_term=.cb43c744e8ee", sponsorLogo: "", sponsorURL: "")
+//1
+let travelTip0 = Tip(header: "😴", title: "Reduce jet lag by changing your bedtime to better match the local time of your destination", body: "Jet lag occurs when we cross three or more time zone changes, because it throws off our circadian rhythm -- the biological clock that helps control when we wake and fall asleep. Try to sleep on the plane if it’s nighttime where you’re going or stay awake if it’s daytime -- but don’t force it.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/travel/want-to-minimize-jet-lag-heres-what-the-doctors-order/2018/08/29/23c14836-a7d8-11e8-97ce-cc9042272f07_story.html", sponsorLogo: "", sponsorURL: "")
 
-let travelTip1 = Tip(header: "😰", title: "Poorly planned and stressful vacations eliminate the benefits of time away, study finds", body: "If you plan ahead, create social connections on the trip, go far from your work, and feel safe, 94% of vacations have a good ROI in terms of your energy and outlook upon returning to work. Just make sure you plan the trip at least a month in advance, as one of the key predictors of vacation ROI is the amount of stress caused by not planning ahead.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/07/the-data-driven-case-for-vacation", sponsorLogo: "", sponsorURL: "")
+let travelTip1 = Tip(header: "😰", title: "Study: Poorly planned and stressful vacations eliminate the benefits of time away", body: "If you plan ahead, create social connections on the trip, go far from your work, and feel safe, 94% of vacations have a good ROI in terms of your energy and outlook upon returning to work. \n\nJust make sure you plan the trip at least a month in advance, as one of the key predictors of vacation ROI is the amount of stress caused by not planning ahead.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/07/the-data-driven-case-for-vacation", sponsorLogo: "", sponsorURL: "")
 
-let travelTip2 = Tip(header: "🙌", title: "Make sure to end the trip on a high note because our brains place more weight on things that happened last in a series", body: "This so-called \"recency effect\" means the end of a vacation is more easily recalled than the beginning. If you’re only going to upgrade once, splurge on the business class seat on the way home, not the way there. Plan your big dinner at the Michelin-starred restaurant for your final night, not your first.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3048975/the-scientifically-proven-way-to-have-the-best-vacation-ever", sponsorLogo: "", sponsorURL: "")
+let travelTip2 = Tip(header: "🙌", title: "Make sure to end the trip on a high note because our brains place more weight on things that happened last in a series", body: "This so-called \"recency effect\" means the end of a vacation is more easily recalled than the beginning. If you’re only going to upgrade once, splurge on the business class seat on the way home, not the way there. \n\nPlan your big dinner at the Michelin-starred restaurant for your final night, not your first.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3048975/the-scientifically-proven-way-to-have-the-best-vacation-ever", sponsorLogo: "", sponsorURL: "")
 
 let travelTip3 = Tip(header: "🏝", title: "Vacations further away from home leads to greater levels of happiness, study finds", body: "An average vacation (or \"staycation\") was found to create no positive effect on happiness. But 84% of the best trips recorded by participants were to locations outside of country.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/02/when-a-vacation-reduces-stress-and-when-it-doesnt", sponsorLogo: "", sponsorURL: "")
 
-/////////////
+//2
 let travelTip4 = Tip(header: "😰", title: "Vacations with medium to high levels of stress showed no increase in happiness after a vacation", body: "• Plan ahead. 74% find the most stressful part of travel to be figuring out the details: transportation, wasting time figure things out on the trip, and being unfamiliar with the location. \n\n• Meet with someone knowledgeable at the location. On the best trips, 77% met with a local host or had a knowledgeable friend.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/02/when-a-vacation-reduces-stress-and-when-it-doesnt", sponsorLogo: "", sponsorURL: "")
 let travelTip5 = Tip(header: "🏝", title: "Study: The health and wellness benefits of a vacation peaked at about 8 days in", body: "Research finds that we return to previous happiness levels fairly quickly after a vacation, and so shorter vacations experienced frequently contribute more to overall well-being than longer but less infrequent multi-week vacations.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3048975/the-scientifically-proven-way-to-have-the-best-vacation-ever", sponsorLogo: "", sponsorURL: "")
 let travelTip6 = Tip(header: "📸", title: "Under some conditions taking a photo of something actually makes it harder to remember the event fully", body: "Taking pictures rather than concentrating fully on the events in front of us prevents memories from taking hold. However, taking a photograph of a specific detail on the object by zooming in on it with the camera seemed to preserve memory for the object, not just for the part that was zoomed in on but also for the part that was out of frame.", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/science/science-news/10507146/Taking-photographs-ruins-the-memory-research-finds.html", sponsorLogo: "", sponsorURL: "")
 
 let travelTip7 = Tip(header: "😀", title: "Destinations that are compatable with your personality and also fascinate or inspire you are best for your mental health", body: "The destination should have enough variation of interest and activities for you to be engaged with. Travel to a place that makes you feel at ease so you don't waste energy on feeling anxious. Also, a place that lets you disconnect from everyday life (e.g. technoloogy) or is physically different from where you live will likely make you feel more rejuvenated when you return.", sourceName: "Travel + Leisure", sourceURL: "https://www.travelandleisure.com/travel-news/beach-vacation-not-good-for-mental-health-study", sponsorLogo: "", sponsorURL: "")
 
-//
+//3
+let travelTip8 = Tip(header: "", title: "Healthy skin while flying: \n• Bring a moisturizer with SPF on the plane (look for a 3-ounce tube or smaller) \n• Avoid alcohol and salty foods \n• Drink lots of water during the flight \n• And if you're sitting next to the window, pull the shade down", body: "When you're flying, your skin has to contend with dehydration from the plane's dry air and sun damage because UV rays penetrate the plane's windows. \n\nThe more frequently you fly, the more UV exposure when you're on an airplane, which may explain why flight attendants have an increased risk of melanoma.", sourceName: "U.S. News & World Report", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 
-var travelTipArray0 = [travelTip0, travelTip1, travelTip2, travelTip3]
+
+/*
+ SKYSCANNER TIPS: I found conflicting articles that show the opposite is true to what this research found, so IGNORE for now.
+
+let travelTip8 = Tip(header: "✈️", title: "Research: Best time to book a flight = 5am-2pm EST. Worst time to book a flight = 3pm-4am EST.", body: "Based on historical data: \n• 6am EST time is the cheapest time of the day to book a flight \n• 1am EST is the most expensive time of the day to book a flight", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//AM
+let travelAMTip1 = Tip(header: "✈️", title: "Cheapest times of day to book = 5am-2pm EST. The cheapest days to book a flight are Saturday and Sunday", body: "Cheapest days of week to book = Saturday and Sunday \n\nCheapest times of day to book = 5am-2pm EST \n\nWhen looking at all destinations around the world, early Sunday morning on average had the cheapest round-trip prices in 2018.", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//PM
+
+//MON
+//AM
+let travelMondayAMTip1 = Tip(header: "✈️", title: "Warning: Monday is the most expensive day to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//PM
+let travelMondayPMTip1 = Tip(header: "✈️", title: "Warning: Monday from 3pm-4am EST is the most expensive day and time to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//TUE
+let travelTuesdayAMTip1 = Tip(header: "✈️", title: "Cheapest time of day to book a flight = 5am-2pm EST", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//PM
+let travelTuesdayPMTip1 = Tip(header: "✈️", title: "Warning: 3pm-4am EST is the most expensive time of day to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+////WED
+//AM
+let travelWednesdayAMTip1 = Tip(header: "✈️", title: "Warning: Wednesday is the 3nd most expensive day to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//PM
+let travelWednesdayPMTip1 = Tip(header: "✈️", title: "Warning: Wednesday is the 3nd most expensive day to book a flight. Also, 3pm-4am EST is the most expensive time of day to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//THU
+//AM
+let travelThursdayAMTip1 = Tip(header: "✈️", title: "Cheapest time of day to book a flight = 5am-2pm EST", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//PM
+let travelThursdayPMTip1 = Tip(header: "✈️", title: "Warning: 3pm-4am EST is the most expensive time of day to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+////FRI
+//AM
+let travelFridayAMTip1 = Tip(header: "✈️", title: "Warning: Friday is the 2nd most expensive day to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//PM
+let travelFridayPMTip1 = Tip(header: "✈️", title: "Warning: Friday is the 2nd most expensive day to book a flight. Also, 3pm-4am EST is the most expensive time of day to book a flight", body: "Cheapest days to book a flight: \n• Saturday \n• Sunday \n\nCheapest hours to book a flight: \n• 5am-2pm EST (cheapest hours) \n• 6am EST (cheapest hour) \n\nCheapest # of days in advance to book a flight: \n• Domestic: 30 days \n• International: 4 months", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+
+////SAT
+let travelSaturdaydayTip1 = Tip(header: "✈️", title: "Saturday is a great day to book a flight. Research finds Saturday and Sunday are the cheapest days to book a flight", body: "Cheapest day of week to book: \n• Domestic flight = Saturday \n• International flight = Sunday. \n\nWant to play it safe? When looking at all destinations around the world, Sunday on average had the cheapest round-trip prices in 2018.", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+//SUN
+let travelSundayTip1 = Tip(header: "✈️", title: "Sunday is a great day to book a flight. Research: The cheapest days to book a flight are Saturday and Sunday", body: "Cheapest day of week to book: \n• Domestic flight = Saturday \n• International flight = Sunday. \n\nWant to play it safe? When looking at all destinations around the world, Sunday on average had the cheapest round-trip prices in 2018.", sourceName: "Skyscanner", sourceURL: "https://www.skyscanner.com/tips-and-inspiration/best-time-to-book-usa", sponsorLogo: "", sponsorURL: "")
+
+*/
+
+
+let travelTipArray0 = [travelTip0, travelTip1, travelTip2, travelTip3]
+
+let travelTipArray1 = [travelTip4, travelTip5, travelTip6, travelTip7]
+
+//WIP (3)
+let travelTipArray2 = [travelTip8, travelTip6, travelTip7, travelTip3]//WIP
+
 let travelTopic0 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray0)
-
-var travelTipArray1 = [travelTip4, travelTip5, travelTip6, travelTip7]
 let travelTopic1 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray1)
+let travelTopic2 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray2)//WIP
 
 //MARK: - AIRPORT
-let airportTip1 = Tip(header: "", title: "Healthy skin while flying: Bring a moisturizer with SPF on the plane (look for a 3-ounce tube or smaller), avoid alcohol and salty foods, and drink lots of water during the flight, and if you're sitting next to the window, pull the shade down", body: "When you're flying, your skin has to contend with dehydration from the plane's dry air and sun damage because UV rays penetrate the plane's windows. \n\nThe more frequently you fly, the more UV exposure when you're on an airplane, which may explain why flight attendants have an increased risk of melanoma. ", sourceName: "U.S. News & World Report", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+
 
 
 
