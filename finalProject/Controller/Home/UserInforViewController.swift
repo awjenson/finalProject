@@ -83,6 +83,26 @@ class UserInfoViewController: UIViewController {
 
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Important: Need this when working with Observers to avoid memory leak!
+        NotificationCenter.default.removeObserver(self)
+
+
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+       
+
+    }
+
+
+
+
+
     func reloadViewFromNib() {
         let parent = view.superview
         view.removeFromSuperview()
@@ -113,11 +133,6 @@ class UserInfoViewController: UIViewController {
 
         quoteLabel.removeFromSuperview()
         authorLabel.text = ""
-
-
-
-
-
     }
 
     func removeAnimation() {

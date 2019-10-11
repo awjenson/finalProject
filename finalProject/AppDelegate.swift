@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var nowVC: NowViewController?
+    var adviceVC: ProfileViewController?
     var userInfoVC: UserInfoViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -49,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         userInfoVC?.reloadViewFromNib()
         nowVC?.segueToIntroVC()
+        adviceVC?.segueToIntroVC()
 
         
 

@@ -12,6 +12,7 @@
 		DA05883620EEF47F0065098D /* KeyboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883520EEF47F0065098D /* KeyboardService.swift */; };
 		DA05883820EEFC970065098D /* UITextView+DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05883720EEFC970065098D /* UITextView+DoneButton.swift */; };
 		DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */; };
+		DA05F7842336E19000FEB154 /* RoundCorneredImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05F7832336E19000FEB154 /* RoundCorneredImageView.swift */; };
 		DA061138225003AA008CABE5 /* MindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA061137225003AA008CABE5 /* MindViewController.swift */; };
 		DA09E2FA22126E5A0050C1E8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA09E2F922126E5A0050C1E8 /* GradientView.swift */; };
 		DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0B2104EEB300B9363F /* Quote.swift */; };
@@ -72,6 +73,7 @@
 		DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */; };
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
 		DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */; };
+		DAAC061A2349959700E8C625 /* AdviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC06192349959700E8C625 /* AdviceTableViewCell.swift */; };
 		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
 		DAB060CA21547EAC001DB425 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB060C921547EAC001DB425 /* NewUserViewController.swift */; };
 		DAB647E921F03FBB00CBB6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB647E821F03FBB00CBB6AE /* Assets.xcassets */; };
@@ -103,6 +105,7 @@
 		DA05883520EEF47F0065098D /* KeyboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardService.swift; sourceTree = "<group>"; };
 		DA05883720EEFC970065098D /* UITextView+DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DoneButton.swift"; sourceTree = "<group>"; };
 		DA05B7D620FEC84700729AF4 /* ShadowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowLabel.swift; sourceTree = "<group>"; };
+		DA05F7832336E19000FEB154 /* RoundCorneredImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorneredImageView.swift; sourceTree = "<group>"; };
 		DA061137225003AA008CABE5 /* MindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindViewController.swift; sourceTree = "<group>"; };
 		DA09E2F922126E5A0050C1E8 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DA0EDE0B2104EEB300B9363F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 		DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
 		DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		DAAC06192349959700E8C625 /* AdviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewCell.swift; sourceTree = "<group>"; };
 		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
 		DAB060C921547EAC001DB425 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		DAB647E821F03FBB00CBB6AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -258,10 +262,10 @@
 		DA272D0720BCB70900137039 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				DA272D0A20BCE62200137039 /* AdviceData.swift */,
+				DA6EBB3621CACF2C006F7259 /* HeaderData.swift */,
 				DA6EBB3421C9CDEE006F7259 /* Header.swift */,
 				DA0EDE0D2104EF6D00B9363F /* Hint.swift */,
-				DA6EBB3621CACF2C006F7259 /* HeaderData.swift */,
-				DA272D0A20BCE62200137039 /* AdviceData.swift */,
 				DA511DE2213F171B0056949B /* MoodData.swift */,
 				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
 				DAC6384920B1CE310004891D /* GoalItem.swift */,
@@ -331,7 +335,7 @@
 			children = (
 				DAA1022620537D5200A25EFC /* Journal */,
 				DA78987D2050DBB6005046D8 /* Now */,
-				DA78987E2050DBBC005046D8 /* Profile */,
+				DA78987E2050DBBC005046D8 /* Advice */,
 				DA388FA520F2957000AC5EDC /* CardView.swift */,
 				DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */,
 				DA9CC27620FD3B58001A89B7 /* RoundedOvalButton.swift */,
@@ -347,6 +351,7 @@
 				DAEA7483222FBB0700AEDF95 /* RoundCornerView.swift */,
 				DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */,
 				DA643DB022A9F87E005CA14D /* CircleButton.swift */,
+				DA05F7832336E19000FEB154 /* RoundCorneredImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -422,11 +427,12 @@
 			path = Now;
 			sourceTree = "<group>";
 		};
-		DA78987E2050DBBC005046D8 /* Profile */ = {
+		DA78987E2050DBBC005046D8 /* Advice */ = {
 			isa = PBXGroup;
 			children = (
+				DAAC06192349959700E8C625 /* AdviceTableViewCell.swift */,
 			);
-			path = Profile;
+			path = Advice;
 			sourceTree = "<group>";
 		};
 		DAA1022620537D5200A25EFC /* Journal */ = {
@@ -651,6 +657,7 @@
 				DA20FEDD21F03643000F0C53 /* UIImage+Extension.swift in Sources */,
 				DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */,
 				DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */,
+				DA05F7842336E19000FEB154 /* RoundCorneredImageView.swift in Sources */,
 				DAE95B3321E30B6300F01848 /* Thread+Extension.swift in Sources */,
 				DAB931052204129800808018 /* UIImageView+Extension.swift in Sources */,
 				DA78987620507C86005046D8 /* ProfileTableViewCell.swift in Sources */,
@@ -663,6 +670,7 @@
 				DA272D0D20BCE72B00137039 /* CounterAdvice.swift in Sources */,
 				DA687E6E229E1171000E1465 /* LaunchScreenViewController.swift in Sources */,
 				DADE4C7A20E9A5D300E19393 /* QuoteData.swift in Sources */,
+				DAAC061A2349959700E8C625 /* AdviceTableViewCell.swift in Sources */,
 				DA3F77C52055BE4800F7361A /* Tip.swift in Sources */,
 				DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */,
 				DA359C642043324F000190AD /* AppDelegate.swift in Sources */,

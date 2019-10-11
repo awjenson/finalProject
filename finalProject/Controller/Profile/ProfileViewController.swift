@@ -10,9 +10,9 @@
 
 import UIKit
 //import Firebase
-import SVProgressHUD
+import SafariServices // to display webview
 
-class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProfileViewController: UIViewController {
 
     // MARK: - IBOutlets
 
@@ -22,6 +22,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var mediaTitleLabel: UILabel!
 
+
+
+
+
+    //Tableview
     @IBOutlet weak var profileTableView: UITableView!
     @IBOutlet weak var profileTableViewFooter: UIView!
 
@@ -32,552 +37,904 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var quoteCardView: CardView!
     @IBOutlet weak var mediaCardView: CardView!
 
+    //Advice Title
+    @IBOutlet weak var adviceTitleLabel: UILabel!
+
+    //Buttons
+    @IBOutlet var adviceTopicButtons: [CircleButton]!
+
+    @IBOutlet weak var adviceTopic0Button: CircleButton!
+    @IBOutlet weak var adviceTopic1Button: CircleButton!
+    @IBOutlet weak var adviceTopic2Button: CircleButton!
+    @IBOutlet weak var adviceTopic3Button: CircleButton!
+
+    @IBOutlet weak var adviceTopic4Button: CircleButton!
+    @IBOutlet weak var adviceTopic5Button: CircleButton!
+    @IBOutlet weak var adviceTopic6Button: CircleButton!
+    @IBOutlet weak var adviceTopic7Button: CircleButton!
+
+    //Labels (of Buttons)
+    @IBOutlet var adviceTopicLabels: [UILabel]!
+
+    @IBOutlet weak var adviceTopic0Label: UILabel!
+    @IBOutlet weak var adviceTopic1Label: UILabel!
+    @IBOutlet weak var adviceTopic2Label: UILabel!
+    @IBOutlet weak var adviceTopic3Label: UILabel!
+
+    @IBOutlet weak var adviceTopic4Label: UILabel!
+    @IBOutlet weak var adviceTopic5Label: UILabel!
+    @IBOutlet weak var adviceTopic6Label: UILabel!
+    @IBOutlet weak var adviceTopic7Label: UILabel!
 
 
 
-    // MARK: - Properites
-    var userProfileItem = ProfileItem(timestamp: "", passion: "", purpose: "", goals: "", fears: "")
-    var userProfileArray: [String] = []
 
-    var userList = [ProfileStatement]()
-    var profileArray = [ProfileUserData]()
 
-    var canEditText = false
+    // MARK: - Properties
 
-    var results = [ProfileDataResults]()
-    var selectedResults = [ProfileDataModel]() // this will be used to stores the user's vision and goals
-
-    // Time and Date
     let formatter = DateFormatter()
     let date = Date()
     let calendar = Calendar.current
+    var hour = 0 // set at load time
+    var newHour = 0 // updates at the top of every hour
 
-    // Card Color UI
-    var topicColor: UIColor?
-    var cellHeaderColor: [UIColor] = []
+    var quote = Quote(quote: "", source: "", bio: "")
+
+    var headers: [Header] = [] // array of headers used for QUOTES
+
+    var currentIndex:Int = -1 //initial integer since UIButton.index start at 0
 
 
-    // initial setup
-    var selectedPersonProfile = ProfileSelectedPerson(name: "", bio: "", advice: "", description: "", time: "", url: "")
 
-    let refreshControl = UIRefreshControl()
 
-    var currentKeyboardHeight:CGFloat = 10
+
+
+    // Tips and Topics
+    var topic0: Topic!
+    var topic1: Topic!
+    var topic2: Topic!
+    var topic3: Topic!
+    var topic4: Topic!
+    var topic5: Topic!
+    var topic6: Topic!
+    var topic7: Topic!
+
+
+    var topics: [Topic] = [] // array of topics
+    var tips: [Tip] = []
+
+
+    //    var cellHeaderColor: [UIColor] = []
+    //    var topicColor: UIColor?
+
 
     // MARK: - Lifecycle Methods
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        print("viewWillAppear")
 
-//        let keyboardHeight = KeyboardService.keyboardHeight()
-//        let keyboardSize = KeyboardService.keyboardSize()
-//        currentKeyboardHeight = keyboardHeight
-//
-        
-//        print("keyboardHeight \(keyboardHeight)")
-//        profileTableViewFooter.frame.size.height = keyboardHeight
-
-        // Add notification observers
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
-//                                               name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
-//                                               name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if internetConnected() {
-            // Will retrieve profile user data in beta version
-//            retrieveProfileUserData()
-        } else {
-            performUIUpdatesOnMain {
-                self.createAlert(title: "No Internet Connection", message: "Not able to retrieve data from database. Please connect to the Internet and try again.")
-            }
-        }
         setupUI()
+
+
+        //Used to refresh app when re-entering from background
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.adviceVC = self
     }
 
-//    override open func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(true)
-////        NotificationCenter.default.removeObserver(self)
-//    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Important: Need this when working with Observers to avoid memory leak!
+        NotificationCenter.default.removeObserver(self)
+
+    }
+
+
+
+    var selectedTopicTitle = ""
+
+    func refreshUI() {
+        print("Refresh ProfileVC")
+
+    }
+
+
+
+
+
+
+
+
+
+
 
     // MARK: - Methods
 
     func setupUI() {
 
-//        userProfileArray = [userProfileItem.passion,
-//                            userProfileItem.purpose,
-//                            userProfileItem.goals,
-//                            userProfileItem.fears]
+
+        //        self.view.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+//        self.view.backgroundColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
+        //        self.view.backgroundColor = UIColor.red
+
+
+
+
+        // place 8 buttons in desired order (excludes Now tips)
+        adviceTopicButtons = [adviceTopic0Button, adviceTopic1Button, adviceTopic2Button, adviceTopic3Button,
+                        adviceTopic4Button, adviceTopic5Button, adviceTopic6Button, adviceTopic7Button]
+
+        adviceTopicLabels = [adviceTopic0Label, adviceTopic1Label, adviceTopic2Label, adviceTopic3Label,
+                       adviceTopic4Label, adviceTopic5Label, adviceTopic6Label, adviceTopic7Label]
+
+        // set footer
+        profileTableViewFooter.frame.size.height = self.view.frame.size.width + 20
+        //setupQuote() moved into dayOfWeekAndHour()
 
         dayOfWeekAndHour()
 
+        profileTableViewSetup()
+
+    }
+
+
+
+    // MARK: - Refresh Control
+    // https://medium.com/anantha-krishnan-k-g/pull-to-refresh-how-to-implement-f915743703f8
+
+    func profileTableViewSetup() {
+
         profileTableView.dataSource = self
         profileTableView.delegate = self
-
-        configureTableView()
-
-        setupRefreshControl()
+        // set estimated row height (needed for auto row height size)
+        profileTableView.rowHeight = UITableView.automaticDimension
+        profileTableView.estimatedRowHeight = 44
+        profileTableView.separatorStyle = .none
     }
 
-    func colorOfUI(_ hour: Int) {
 
-        switch hour {
-        case 0...4:
-            topicColor = NowConstants.HeaderIndigo.color900
-            cellHeaderColor = [NowConstants.HeaderIndigo.color800,
-                               NowConstants.HeaderIndigo.color700,
-                               NowConstants.HeaderIndigo.color600,
-                               NowConstants.HeaderIndigo.color500,
-                               NowConstants.HeaderIndigo.color400,
-                               NowConstants.HeaderIndigo.color300,
-                               NowConstants.HeaderIndigo.color200,]
-        case 5...8:
-            topicColor = NowConstants.HeaderAmber.color900
-            cellHeaderColor = [NowConstants.HeaderAmber.color800,
-                               NowConstants.HeaderAmber.color700,
-                               NowConstants.HeaderAmber.color600,
-                               NowConstants.HeaderAmber.color500,
-                               NowConstants.HeaderAmber.color400,
-                               NowConstants.HeaderAmber.color300,
-                               NowConstants.HeaderAmber.color200,]
-        case 9..<11:
-            topicColor = NowConstants.HeaderGreen.color900
-            cellHeaderColor = [NowConstants.HeaderGreen.color800,
-                               NowConstants.HeaderGreen.color700,
-                               NowConstants.HeaderGreen.color600,
-                               NowConstants.HeaderGreen.color500,
-                               NowConstants.HeaderGreen.color400,
-                               NowConstants.HeaderGreen.color300,
-                               NowConstants.HeaderGreen.color200,]
-        case 11..<14:
-            topicColor = NowConstants.HeaderCyan.color900
-            cellHeaderColor = [NowConstants.HeaderCyan.color800,
-                               NowConstants.HeaderCyan.color700,
-                               NowConstants.HeaderCyan.color600,
-                               NowConstants.HeaderCyan.color500,
-                               NowConstants.HeaderCyan.color400,
-                               NowConstants.HeaderCyan.color300,
-                               NowConstants.HeaderCyan.color200,]
-        case 14...16:
-            topicColor = NowConstants.HeaderTeal.color900
-            cellHeaderColor = [NowConstants.HeaderTeal.color800,
-                               NowConstants.HeaderTeal.color700,
-                               NowConstants.HeaderTeal.color600,
-                               NowConstants.HeaderTeal.color500,
-                               NowConstants.HeaderTeal.color400,
-                               NowConstants.HeaderTeal.color300,
-                               NowConstants.HeaderTeal.color200,]
-        case 17...20:
-            topicColor = NowConstants.HeaderRed.color900
-            cellHeaderColor = [NowConstants.HeaderRed.color800,
-                               NowConstants.HeaderRed.color700,
-                               NowConstants.HeaderRed.color600,
-                               NowConstants.HeaderRed.color500,
-                               NowConstants.HeaderRed.color400,
-                               NowConstants.HeaderRed.color300,
-                               NowConstants.HeaderRed.color200,]
-        case 21..<24:
-            topicColor = NowConstants.HeaderBlue.color900
-            cellHeaderColor = [NowConstants.HeaderBlue.color800,
-                               NowConstants.HeaderBlue.color700,
-                               NowConstants.HeaderBlue.color600,
-                               NowConstants.HeaderBlue.color500,
-                               NowConstants.HeaderBlue.color400,
-                               NowConstants.HeaderBlue.color300,
-                               NowConstants.HeaderBlue.color200,]
-        default:
-            print("ERROR with TopicColor and cellHeaderColor")
-        }
+    func segueToIntroVC() {
+        // return back to main/intro VC
+        performSegue(withIdentifier: "Back", sender: self)
     }
 
-    func setupRefreshControl() {
 
-        // add pull to refresh
-        refreshControl.addTarget(self, action: #selector(reloadProfile), for: .valueChanged)
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        profileTableView.addSubview(refreshControl)
+
+    func displayHourInTopicLabel() {
+        formatter.dateFormat = "h a" // "a" prints "pm" or "am"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+
+        let hourString = formatter.string(from: Date()) // "12 AM"
+        adviceTitleLabel.text = "\(hourString) Advice"
     }
 
-    @objc func reloadProfile() {
 
-        // the method also checks if the refreshControl is refreshing. This will stop and hide the acitivity indicator of the refresh control if it is currently being displayed to the user.
-        if self.refreshControl.isRefreshing {
-            // Reload time based array. Currently not using this (will add for beta release)
-//            retrieveProfileUserData()
-            self.refreshControl.endRefreshing()
-        }
-        self.profileTableView.reloadData()
-    }
+
+    // MARK: - Time-based Functions
 
     func dayOfWeekAndHour() {
+
         let dayOfWeek = calendar.component(.weekday, from: date)
-        let hour = calendar.component(.hour, from: date)
+        hour = calendar.component(.hour, from: date)
+        let week = calendar.component(.weekOfYear, from: date)
+        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
-        colorOfUI(hour)
+        //Display hour for topic title
+        displayHourInTopicLabel()
 
-        switch dayOfWeek {
-        case 1: // Sun
-            print("today is Sunday")
-            displaySelectedPersonProfile(person: AdviceData.martinLutherKingJr)
-            selectedResults.append(AdviceData.martinLutherKingJrPassion)
-            selectedResults.append(AdviceData.martinLutherKingJrPurpose)
-            selectedResults.append(AdviceData.martinLutherKingJrTop5Goals)
-            selectedResults.append(AdviceData.martinLutherKingJrVision)
-        case 2:
-            print("today is Monday")
-            displaySelectedPersonProfile(person: AdviceData.bruceLee)
-            selectedResults.append(AdviceData.bruceLeePassion)
-            selectedResults.append(AdviceData.bruceLeePurpose)
-            selectedResults.append(AdviceData.bruceLeeTop5Goals)
-            selectedResults.append(AdviceData.bruceLeeVision)
-        case 3:
-            print("today is Tuesday")
-            displaySelectedPersonProfile(person: AdviceData.oprahWinfrey)
-            selectedResults.append(AdviceData.oprahWinfreyPassion)
-            selectedResults.append(AdviceData.oprahWinfreyPurpose)
-            selectedResults.append(AdviceData.oprahWinfreyTop5Goals)
-            selectedResults.append(AdviceData.oprahWinfreyVision)
-        case 4:
-            print("today is Wednesday")
-            displaySelectedPersonProfile(person: AdviceData.markDivine)
-            selectedResults.append(AdviceData.markDivinePassion)
-            selectedResults.append(AdviceData.markDivinePurpose)
-            selectedResults.append(AdviceData.markDivineTop5Goals)
-            selectedResults.append(AdviceData.markDivineVision)
-        case 5:
-            print("today is Thursday")
-            displaySelectedPersonProfile(person: AdviceData.sophiaAmoruso)
-            selectedResults.append(AdviceData.sophiaAmorusoPassion)
-            selectedResults.append(AdviceData.sophiaAmorusoPurpose)
-            selectedResults.append(AdviceData.sophiaAmorusoTop5Goals)
-            selectedResults.append(AdviceData.sophiaAmorusoVision)
-        case 6:
-            print("today is Friday")
-            displaySelectedPersonProfile(person: AdviceData.bruceLee)
-            selectedResults.append(AdviceData.bruceLeePassion)
-            selectedResults.append(AdviceData.bruceLeePurpose)
-            selectedResults.append(AdviceData.bruceLeeTop5Goals)
-            selectedResults.append(AdviceData.bruceLeeVision)
-        case 7:
-            print("today is Saturday")
-            displaySelectedPersonProfile(person: AdviceData.oprahWinfrey)
-            selectedResults.append(AdviceData.oprahWinfreyPassion)
-            selectedResults.append(AdviceData.oprahWinfreyPurpose)
-            selectedResults.append(AdviceData.oprahWinfreyTop5Goals)
-            selectedResults.append(AdviceData.oprahWinfreyVision)
+        if week % 2 == 0 {
+            print("Week: \(week) is even")
+
+
+        } else {
+            print("Week: \(week) is odd")
+
+        }
+
+        func oddWeek() {
+            print("Odd Week")
+
+            switch dayOfWeek {
+            case 1: // Sunday
+                print("today is Sunday")
+                sunday1(hour)
+            case 2: // Monday
+                print("today is a Monday")
+                monday1(hour)
+            case 3: // Tuesday
+                print("today is a Tuesday")
+                tuesday1(hour)
+            case 4: // Wednesday
+                print("today is a Wednesday")
+                wednesday1(hour)
+            case 5: // Thursday
+                print("today is Thursday")
+                thursday1(hour)
+            case 6: // Friday
+                print("today is Friday")
+                friday1(hour)
+            case 7: // Saturday
+                print("today is Saturday")
+                saturday1(hour)
+            default:
+                print("ERROR: error with dayAndHour")
+            }
+        }
+
+        switch weekOfMonth {
+        case 1,3,5:
+            oddWeek()
+
         default:
-            print("error with dayAndHour")
-        }
-    }
-
-    func displaySelectedPersonProfile(person: ProfileSelectedPerson) {
-        selectedPersonProfile = person
-
-        // Quote
-        fullNameLabel.text = selectedPersonProfile.name
-        bioTextLabel.text = selectedPersonProfile.bio
-        quoteTextLabel.text = selectedPersonProfile.advice
-
-        // Media
-//        mediaTitleLabel.text = selectedPersonProfile.description
-    }
-
-
-    func retrieveProfileUserData() {
-
-        SVProgressHUD.show()
-        // listen for new messages in the firebase database with 'observe'
-        // Configure database to sync messages
-        // .reference() gets a DatabaseReference for the root of the app's Firebase Database
-        // ask Firebase to 'observe' for any new child's events ('childAdded')
-
-        // 2 Write the data by setting the value for the location specified
-
-        // add .child(currentUID) so only current user can see their data
-
-    }
-
-
-
-
-    func configureTableView() {
-        profileTableView.estimatedRowHeight = 50
-        profileTableView.rowHeight = UITableView.automaticDimension
-        profileTableView.allowsSelection = false
-        profileTableView.separatorStyle = .none
-
-    }
-
-    // viewDidLayoutSubviews()
-    // Called to notify the view controller that its view has just laid out its
-    // subviews.
-    // When the bounds change for a view controller's view, the view adjusts
-    // the positions of its subviews and then the system calls this method.
-    // However, this method being called does not indicate that the individual
-    // layouts of the view's subviews have been adjusted. Each subview is
-    // responsible for adjusting its own layout.
-    // Your view controller can override this method to make changes after the
-    // view lays out its subviews.
-    // The default implementation of this method does nothing.
-    /*
-     https://useyourloaf.com/blog/variable-height-table-view-header/
-     */
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        setupHeightOfTableHeaderView()
-
-    }
-
-    func setupHeightOfTableHeaderView() {
-        guard let headerView = profileTableView.tableHeaderView else {
-            return
-        }
-
-        // The table view header is created with the frame size set in
-        // the Storyboard. Calculate the new size and reset the header
-        // view to trigger the layout.
-        // Calculate the minimum height of the header view that allows
-        // the text label to fit its preferred width.
-        let size = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-
-        if headerView.frame.size.height != size.height {
-            headerView.frame.size.height = size.height
-
-            // Need to set the header view property of the table view
-            // to trigger the new layout. Be careful to only do this
-            // once when the height changes or we get stuck in a layout loop.
-            profileTableView.tableHeaderView = headerView
-
-            // Now that the table view header is sized correctly have
-            // the table view redo its layout so that the cells are
-            // correcly positioned for the new header size.
-            // This only seems to be necessary on iOS 9.
-            profileTableView.layoutIfNeeded()
+            //evenWeek()
+            oddWeek()
         }
 
 
     }
 
-    func changeTextViewBoarderColor(_ cell: ProfileTableViewCell) {
-        if canEditText == true {
-            cell.userTextView.layer.borderColor = UIColor.red.cgColor
-            cell.userTextView.layer.borderWidth = 2
+    //MARK: - WEEK 1
+
+    func sunday1(_ hour: Int) {
+        switch hour {
+
+        case 0...4:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingBedtimeTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomPMTopic0, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 5...10:
+            print("Weekend, Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivateAMTopic0, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             networkingTopic1, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 11...14:
+            appendNineTopics(motivateDayTopic2, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomTopic0, gymTopic5, meditationTopic1,
+                             adviceTopic0)
+
+        case 15...19:
+            print("Weekend, Early Evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingPMTopic0, sideHustleTopic1, studyTopic0,
+                             groceryStoreTopic1, gymTopic1, homePMTopic0,
+                             adviceTopic0)
+
+        case 20..<24:
+            print("Weekend, Late evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipBedTopic0, parentingBedtimeTopic0, sideHustleTopic1, studyTopic0,
+                             meditationTopic0, journalTopic0, cantSleepTopic1,
+                             adviceTopic0)
+
+        default:
+            print("Weekend,INVALID HOUR!")
         }
     }
 
-    // Toggles button on/off
-    func activateEditButton(bool: Bool) {
-        canEditText = bool
-        print("canEditText \(canEditText)")
+    // Monday (2)
+
+    // More people Google 'diet' and go to the gym at the start of the week, month year
+    // Same with starting a new job or new semester, they give us a fresh start
+    func monday1(_ hour: Int) {
+        switch hour {
+
+        case 0...4:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingBedtimeTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomPMTopic0, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+
+
+        case 5...10:
+            print("Weekend, Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivateAMTopic0, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             networkingTopic1, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 11...14:
+            appendNineTopics(motivateDayTopic2, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomTopic0, gymTopic5, meditationTopic1,
+                             adviceTopic0)
+
+        case 15...19:
+            print("Weekend, Early Evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingPMTopic0, sideHustleTopic1, studyTopic0,
+                             groceryStoreTopic1, gymTopic1, homePMTopic0,
+                             adviceTopic0)
+
+        case 20..<24:
+            print("Weekend, Late evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipBedTopic0, parentingBedtimeTopic0, sideHustleTopic1, studyTopic0,
+                             meditationTopic0, journalTopic0, cantSleepTopic1,
+                             adviceTopic0)
+
+
+        default:
+            print("Weekday,INVALID HOUR!")
+        }
     }
 
-    //MARK: - getKayboardHeight
-//    // Source: http://www.iostutorialjunction.com/2017/07/Programmatically-get-height-of-keyboard-in-swift-3-language-in-iOS-app-Tutorial.html
-//    @objc func keyboardWillShow(notification: Notification) {
-//        let userInfo:NSDictionary = notification.userInfo! as NSDictionary
-//        let keyboardFrame:NSValue = userInfo.value(forKey: UIKeyboardFrameEndUserInfoKey) as! NSValue
-//        let keyboardRectangle = keyboardFrame.cgRectValue
-//        let keyboardHeight = keyboardRectangle.height
-//        // do whatever you want with this keyboard height
-//        print("currentKeyboardHeight: \(keyboardHeight)")
-//        profileTableViewFooter.frame.size.height = keyboardHeight
-//    }
-//
-//    @objc func keyboardWillHide(notification: Notification) {
-//        // keyboard is dismissed/hidden from the screen
-//        profileTableViewFooter.frame.size.height = 10
-//    }
+    // Tuesday (3)
 
+    func tuesday1(_ hour: Int) {
+        switch hour {
+
+        case 0...4:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingBedtimeTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomPMTopic0, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 5...10:
+            print("Weekend, Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivateAMTopic0, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             networkingTopic1, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 11...14:
+            appendNineTopics(motivateDayTopic2, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomTopic0, gymTopic5, meditationTopic1,
+                             adviceTopic0)
+
+        case 15...19:
+            print("Weekend, Early Evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingPMTopic0, sideHustleTopic1, studyTopic0,
+                             groceryStoreTopic1, gymTopic1, homePMTopic0,
+                             adviceTopic0)
+
+        case 20..<24:
+            print("Weekend, Late evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipBedTopic0, parentingBedtimeTopic0, sideHustleTopic1, studyTopic0,
+                             meditationTopic0, journalTopic0, cantSleepTopic1,
+                             adviceTopic0)
+
+        default:
+            print("Weekday,INVALID HOUR!")
+        }
+    }
+
+    // Wednesday (4)
+
+    func wednesday1(_ hour: Int) {
+        switch hour {
+
+        case 0...4:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingBedtimeTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomPMTopic0, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 5...10:
+            print("Weekend, Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivateAMTopic0, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             networkingTopic1, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 11...14:
+            appendNineTopics(motivateDayTopic2, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomTopic0, gymTopic5, meditationTopic1,
+                             adviceTopic0)
+
+        case 15...19:
+            print("Weekend, Early Evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingPMTopic0, sideHustleTopic1, studyTopic0,
+                             groceryStoreTopic1, gymTopic1, homePMTopic0,
+                             adviceTopic0)
+
+        case 20..<24:
+            print("Weekend, Late evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipBedTopic0, parentingBedtimeTopic0, sideHustleTopic1, studyTopic0,
+                             meditationTopic0, journalTopic0, cantSleepTopic1,
+                             adviceTopic0)
+
+        default:
+            print("Weekday,INVALID HOUR!")
+        }
+    }
+
+    // Thursday (5)
+
+    func thursday1(_ hour: Int) {
+        switch hour {
+
+        case 0...4:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingBedtimeTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomPMTopic0, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 5...10:
+            print("Weekend, Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivateAMTopic0, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             networkingTopic1, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 11...14:
+            appendNineTopics(motivateDayTopic2, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomTopic0, gymTopic5, meditationTopic1,
+                             adviceTopic0)
+
+        case 15...19:
+            print("Weekend, Early Evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingPMTopic0, sideHustleTopic1, studyTopic0,
+                             groceryStoreTopic1, gymTopic1, homePMTopic0,
+                             adviceTopic0)
+
+        case 20..<24:
+            print("Weekend, Late evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipBedTopic0, parentingBedtimeTopic0, sideHustleTopic1, studyTopic0,
+                             meditationTopic0, journalTopic0, cantSleepTopic1,
+                             adviceTopic0)
+
+        default:
+            print("weekdayTF,INVALID HOUR!")
+        }
+    }
+
+    //Friday (6)
+
+    func friday1(_ hour: Int) {
+        switch hour {
+
+        case 0...4:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingBedtimeTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomPMTopic0, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 5...10:
+            print("Weekend, Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivateAMTopic0, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             networkingTopic1, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 11...14:
+            appendNineTopics(motivateDayTopic2, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomTopic0, gymTopic5, meditationTopic1,
+                             adviceTopic0)
+
+        case 15...19:
+            print("Weekend, Early Evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingPMTopic0, sideHustleTopic1, studyTopic0,
+                             groceryStoreTopic1, gymTopic1, homePMTopic0,
+                             adviceTopic0)
+
+        case 20..<24:
+            print("Weekend, Late evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipBedTopic0, parentingBedtimeTopic0, sideHustleTopic1, studyTopic0,
+                             meditationTopic0, journalTopic0, cantSleepTopic1,
+                             adviceTopic0)
+
+        default:
+            print("weekdayTF,INVALID HOUR!")
+        }
+    }
+
+    //Saturday (7)
+
+    func saturday1(_ hour: Int) {
+        switch hour {
+
+        case 0...4:
+            print("Weekend, Very Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingBedtimeTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomPMTopic0, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 5...10:
+            print("Weekend, Early Morning")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivateAMTopic0, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             networkingTopic1, meditationTopic0, journalTopic0,
+                             adviceTopic0)
+
+        case 11...14:
+            appendNineTopics(motivateDayTopic2, relationshipAMTopic0, parentingAMTopic0, sideHustleTopic0, studyTopic0,
+                             bathroomTopic0, gymTopic5, meditationTopic1,
+                             adviceTopic0)
+
+        case 15...19:
+            print("Weekend, Early Evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipPMTopic0, parentingPMTopic0, sideHustleTopic1, studyTopic0,
+                             groceryStoreTopic1, gymTopic1, homePMTopic0,
+                             adviceTopic0)
+
+        case 20..<24:
+            print("Weekend, Late evening")
+            // call function to display 9 time-based topics
+            appendNineTopics(motivatePMTopic0, relationshipBedTopic0, parentingBedtimeTopic0, sideHustleTopic1, studyTopic0,
+                             meditationTopic0, journalTopic0, cantSleepTopic1,
+                             adviceTopic0)
+
+
+        default:
+            print("Weekend,INVALID HOUR!")
+        }
+    }
+
+
+
+    //MARK: - WEEK 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private func sizeFooterToFit() {
+        if let footerView = profileTableView.tableFooterView {
+            footerView.setNeedsLayout()
+            footerView.layoutIfNeeded()
+
+            let height = footerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+            var frame = footerView.frame
+            frame.size.height = height
+            footerView.frame = frame
+
+            profileTableView.tableFooterView = footerView
+        }
+    }
+
+
+
+
+    private func resetTopicButtonOriginalStyle(button: CircleButton) {
+
+        performUIUpdatesOnMain {
+            // reset to original color display
+            //            button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
+            //            button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
+            //            button.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+
+            self.adviceTopic0Button.imageView?.image = UIImage(named: self.topics[0].icon)
+            self.adviceTopic1Button.imageView?.image = UIImage(named: self.topics[1].icon)
+            self.adviceTopic2Button.imageView?.image = UIImage(named: self.topics[2].icon)
+            self.adviceTopic3Button.imageView?.image = UIImage(named: self.topics[3].icon)
+            self.adviceTopic4Button.imageView?.image = UIImage(named: self.topics[4].icon)
+            self.adviceTopic5Button.imageView?.image = UIImage(named: self.topics[5].icon)
+            self.adviceTopic6Button.imageView?.image = UIImage(named: self.topics[6].icon)
+            self.adviceTopic7Button.imageView?.image = UIImage(named: self.topics[7].icon)
+
+
+
+            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 15, left: 15 , bottom: 15, right: 15)
+
+            self.adviceTopic0Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.adviceTopic1Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.adviceTopic2Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.adviceTopic3Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.adviceTopic4Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.adviceTopic5Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.adviceTopic6Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.adviceTopic7Button.imageEdgeInsets = unTappedButtonEdgeInsets
+        }
+    }
+
+    func setupButtonIcons(_ topics: [Topic]) {
+
+        //https://stackoverflow.com/questions/1469474/setting-an-image-for-a-uibutton-in-code
+        print("topics: \(topics)")
+
+        //row 1
+        self.adviceTopic0Button.setImage(UIImage(named: topics[0].icon) , for: UIControl.State.normal)
+        self.adviceTopic1Button.setImage(UIImage(named: topics[1].icon) , for: UIControl.State.normal)
+        self.adviceTopic2Button.setImage(UIImage(named: topics[2].icon) , for: UIControl.State.normal)
+        self.adviceTopic3Button.setImage(UIImage(named: topics[3].icon) , for: UIControl.State.normal)
+        //row2
+        self.adviceTopic4Button.setImage(UIImage(named: topics[4].icon) , for: UIControl.State.normal)
+        self.adviceTopic5Button.setImage(UIImage(named: topics[5].icon) , for: UIControl.State.normal)
+        self.adviceTopic6Button.setImage(UIImage(named: topics[6].icon) , for: UIControl.State.normal)
+        self.adviceTopic7Button.setImage(UIImage(named: topics[7].icon) , for: UIControl.State.normal)
+
+    }
+
+
+
+    func appendNineTopics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic, _ topic4: Topic, _ topic5: Topic, _ topic6: Topic, _ topic7: Topic, _ topic8Now: Topic) {
+
+        topics = [topic0, topic1, topic2, topic3,
+                  topic4, topic5, topic6, topic7,
+                  topic8Now]
+
+        setupButtonIcons(topics)
+
+        self.adviceTopic0Label.text = topic0.title
+        self.adviceTopic1Label.text = topic1.title
+        self.adviceTopic2Label.text = topic2.title
+        self.adviceTopic3Label.text = topic3.title
+        self.adviceTopic4Label.text = topic4.title
+        self.adviceTopic5Label.text = topic5.title
+        self.adviceTopic6Label.text = topic6.title
+        self.adviceTopic7Label.text = topic7.title
+
+        // set 4 'Now' tips to be displayed in initial table view
+        appendAdviceTips()
+
+
+    }
+
+    func appendAdviceTips() {
+        // for display in table view at launch
+        //
+        tips = [topics[8].tip[0],
+                topics[8].tip[1],
+                topics[8].tip[2],
+                topics[8].tip[3]]
+
+        print("tips array count: \(tips.count)")
+    }
 
     // MARK: - IBActions
 
-    @IBAction func learnMoreButtonTapped(_ sender: UIButton) {
 
-        print("Learn more button tapped")
 
-        let app = UIApplication.shared
+    @IBAction func returnToTopTapped(_ sender: Any) {
 
-        if let url = selectedPersonProfile.url {
+        performUIUpdatesOnMain {
+            // removed animation because it was too slow
+            self.profileTableView.setContentOffset(.zero, animated: false)
+        }
+    }
 
-            // print: true or false
-            print("verifyURL: \(verifyUrl(urlString: url))")
+    //    // Call this inside UIButton to scroll to top
+    func scrollToTop(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.tips.count-1, section: 0)
+            self.profileTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
 
-            if verifyUrl(urlString: url) == true {
-                performUIUpdatesOnMain {
-                    app.open(URL(string:url)!)
-                }
-            } else {
-                performUIUpdatesOnMain {
-                    self.createAlert(title: "Could not open URL", message: "Check Internet connection and try again.")
-                }
+
+    @IBAction func adviceTopicButtonTapped(_ sender: CircleButton) {
+        //IBAction linked to all RoundCircle Buttons
+        if let topicNumber = adviceTopicButtons.index(of: sender) {
+
+            flipButton(at: topicNumber, on: sender)
+
+        } else {
+            print("ARE WE IN ELSE?")
+            performUIUpdatesOnMain {
+                self.createAlert(title: "ERROR", message: "Could not load selected tips.")
             }
         }
     }
 
-//    @IBAction func saveButtonTapped(_ sender: UIButton) {
-//
-//        activateEditButton(bool: !canEditText)
-//
-//
-//
-//        if canEditText {
-//            profileTableViewFooter.frame.size.height = currentKeyboardHeight
-//            profile3TableView.reloadData()
-//            saveButton.setTitleColor(UIColor.red, for: .normal)
-//            saveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-//        } else {
-//            profileTableViewFooter.frame.size.height = 10
-//            view.endEditing(true)
-//            saveButton.setTitleColor(UIColor.init(red: 0, green: 122/255, blue: 1, alpha: 1), for: .normal)
-//            saveButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-//
-//            let now = Date()
-//            let formatter = DateFormatter()
-//            // initially set the format based on your datepicker date
-//            formatter.dateFormat = "MMMM d, yyyy h:mm a"
-//            let currentDate = formatter.string(from: now)
-//
-//            // Input array of user data into property, write to Firebase
-//            let newProfileItem = ProfileItem(timestamp: currentDate,
-//                                             passion: userProfileArray[0],
-//                                             purpose: userProfileArray[1],
-//                                             goals: userProfileArray[2],
-//                                             fears: userProfileArray[3])
-//
-//            ProfileService.writeProfileItem(for: User.current, profileItem: newProfileItem, success: { (success) in
-//                if success == true {
-//                    return
-//                } else if success == false {
-//                    self.createAlert(title: "Error", message: "Unable to write to database. Check your Internet connection and try again.")
-//                }
-//            })
-//        }
-//    }
 
 
-    // MARK: - Table View Methods
+    func flipButton(at indexNumber: Int, on button: CircleButton) {
 
-    // As long as `total` is the last case in our TableSection enum,
-    // this method will always be dynamically correct no mater how many table sections we add or remove.
+        // reset buttons to original UI display
+        resetTopicButtonOriginalStyle(button: adviceTopic0Button)
+        resetTopicButtonOriginalStyle(button: adviceTopic1Button)
+        resetTopicButtonOriginalStyle(button: adviceTopic2Button)
+        resetTopicButtonOriginalStyle(button: adviceTopic3Button)
+        resetTopicButtonOriginalStyle(button: adviceTopic4Button)
+        resetTopicButtonOriginalStyle(button: adviceTopic5Button)
+        resetTopicButtonOriginalStyle(button: adviceTopic6Button)
+        resetTopicButtonOriginalStyle(button: adviceTopic7Button)
 
-    enum TableSection: Int {
-        // I could use .count on the array of items
-        case purpose = 0, passion, goals, fears, total
+
+        // Identify what button was tapped
+
+        if currentIndex == indexNumber {
+
+            print("A - Previously Tapped")
+
+            // Selected button previously tapped, return to Now Tips
+            // Check if this button has been tapped just prior
+            appendAdviceTips()
+
+            // Unselected
+            performUIUpdatesOnMain {
+
+                //                button.imageEdgeInsets = UIEdgeInsets(top: 14, left: 14 , bottom: 14, right: 14)
+                //                button.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+                //
+                //                button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
+
+                self.displayHourInTopicLabel()
+
+
+            }
+
+            currentIndex = -1
+        } else {
+
+            print("B - Newly Tapped")
+
+            // select button NOT previously tapped
+            // gray out selected button
+            // display selected topic tips
+
+            appendTipsArrayBasedOnTopicSelected(indexNumber)
+
+            // Selected
+            performUIUpdatesOnMain {
+
+                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
+                button.imageView?.image = UIImage(named: "icons8-cancel")
+                // button title
+
+
+                //                button.setTitleColor(.white, for: .normal)
+                //                button.backgroundColor = NowConstants.YvonneColor.defaultBlue
+
+                //Display selected Topic Title
+                let originalTitleText = self.topics[indexNumber].title
+                let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
+
+                //                self.topicLabel.text = "\(replacedText) TIPS"
+
+            }
+
+            currentIndex = indexNumber
+        }// end of else
+
+        performUIUpdatesOnMain {
+            self.profileTableView.reloadData()
+        }
+    }
+
+    func appendTipsArrayBasedOnTopicSelected(_ index: Int) {
+        tips = []
+
+        // Take selected index in topics array and subtract 1 because we start with zero
+        let counter = (topics[index].tip.count - 1)
+
+        print("counter: \(counter)")
+
+        for item in 0...counter {
+            tips.append(topics[index].tip[item])
+        }
+    }
+
+
+    @IBAction func sourceButtonTapped(_ sender: Any) {
+        print("go to source")
+
+    }
+
+
+
+
+
+} // End of Home2ViewController
+
+// MARK: - Table View Methods
+
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
+
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TableSection.total.rawValue
+        return tips.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileTableViewCell
 
-        // Line separator (extend to left)
-//        cell.preservesSuperviewLayoutMargins = false
-//        cell.separatorInset = UIEdgeInsets.zero
-//        cell.layoutMargins = UIEdgeInsets.zero
+        /* In the future, you could create multiple subviews and then use a switch statement to display data for each subview
+         https://www.makeschool.com/online-courses/utorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/improving-the-ui */
 
-        // FAMOUS PERSON DATA
-//        cell.userTextView.layer.borderColor = UIColor.darkGray.cgColor
-//        cell.userTextView.layer.borderWidth = 2
-//        cell.userTextView.delegate = self
+        // Whatever tip is at each row
+        let tip = tips[indexPath.row]
 
-        cell.categoryLabel.text = selectedResults[indexPath.row].category
-        cell.titleLabel.text = selectedResults[indexPath.row].title
-        cell.bodyLabel.text = selectedResults[indexPath.row].body
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AdviceTableViewCell
 
-        // MARK: - Removed because I'm no longer including user text
-//        cell.headerUserTextViewLabel.text = selectedResults[indexPath.row].headerUserTextLabel
+        // cell's bottom line UI
+        cell.layoutMargins = UIEdgeInsets.zero
 
-//        // USER DATA - array
-//        cell.userTextView.text = userProfileArray[indexPath.row]
-//        // Set the delegate to be the VC when you create the cell
-//        cell.userTextView.delegate = self
-//        cell.userTextView.layer.borderWidth = 0.5
-//        changeTextViewBoarderColor(cell)
+        cell.adviceTipNumberLabel.text = "\(indexPath.row + 1)"
+
+        // configure cell in UITableViewCell file
+        cell.configureCell(tip: tip)
+
+        //Tell UITableViewCell who it's delegate is
+        //Give the boss the intern
+        cell.delegate = self  //self is the ProfileVC
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        profileTableView.deselectRow(at: indexPath, animated: true)
+
+//        let tip = tips[indexPath.row]
+//
+//        let app = UIApplication.shared
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AdviceTableViewCell
+//        if let url = tip.sourceURL {
+//
+//            // print: true or false
+//            print("verifyURL in 'Now' VC: \(verifyUrl(urlString: url))")
+//
+//            if verifyUrl(urlString: url) == true {
+//                app.open(URL(string:url)!)
+//            } else {
+//                performUIUpdatesOnMain {
+//                    self.createAlert(title: "Could not open URL", message: "Check your Internet connection and try again.")
+//                }
+//            }
+//        }
     }
-
-    // MARK: - TableViewCellDelegate methods
-
-
-
-
 
 }
 
+// MARK: - Table View Cell Methods
 
-extension ProfileViewController: UITextViewDelegate {
+extension ProfileViewController: AdviceTableViewCellDelegate {
 
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        if canEditText == false {
-            return false
-        } else {
-            return true
-        }
-    }
+    func goToSourceURL(url: String) {
+        // get the URL from the delegate and presents in Safari VC
+        let sourceURL = URL(string: url)!
+        let safariVC = SFSafariViewController(url: sourceURL)
+        safariVC.dismissButtonStyle = .close
+        safariVC.preferredBarTintColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+        safariVC.preferredControlTintColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
+        present(safariVC, animated: true, completion: nil)
 
-    func textViewDidChange(_ textView: UITextView) {
-        textViewWithDynamicHeightInsideTableViewCell()
-    }
 
-    func textViewWithDynamicHeightInsideTableViewCell () {
-        /*
-         According to article there is a UI bug, added code to fix it
-         http://candycode.io/self-sizing-uitextview-in-a-uitableview-using-auto-layout-like-reminders-app/
-         */
-        let currentOffset = profileTableView.contentOffset
-        UIView.setAnimationsEnabled(false)
-        profileTableView.beginUpdates()
-        profileTableView.endUpdates()
-        UIView.setAnimationsEnabled(true)
-        profileTableView.setContentOffset(currentOffset, animated: false)
-    }
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
 
-        // Only created this code to test (print statement)
-        var v : UIView = textView
-        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
-        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
-
-        guard let selectedIndexPath = self.profileTableView.indexPath(for: selectedCell) else {
-            return
-        }
-
-        print("Entered IndexPath: \(selectedIndexPath)")
-    }
-
-    func textViewDidEndEditing(_ textView: UITextView) {
-
-        print("$$$")
-        print("textViewDidEndEditing (Exited IndexPath)")
-        var v : UIView = textView
-        repeat { v = v.superview! } while !(v is ProfileTableViewCell)
-        let selectedCell = v as! ProfileTableViewCell // or UITableViewCell or whatever
-
-        print("%%%")
-        print(selectedCell)
-        print("&&&")
-        guard let selectedIndexPath = self.profileTableView.indexPath(for: selectedCell) else {
-            return
-        }
-
-        print("Exited IndexPath: \(selectedIndexPath)")
-
-        // Update Array with latest user textField.text
-        userProfileArray[selectedIndexPath.row] = selectedCell.userTextView.text
-        print(userProfileArray)
-        print("^^^")
     }
 }

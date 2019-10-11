@@ -11,17 +11,34 @@
 
 import Foundation
 
-// MARK: - Warrent Buffet
+let filmmakingTitle = "Filmmaking"
+let filmmakingIcon = Constants.Icon.filmmaking
+
+let screenwritingTitle = "Screenwriting"
+let screenwritingIcon = Constants.Icon.screenwriting
+
+
+let jeffBezosPassion1 = Tip(header: "Passion", title: "PASSION - Jeff Bezos", body: "Jeff Bezos on leaving a high-paying finance job to start Amazon: \n\n\"After much consideration, I took the less safe path to follow my passion... Whatever it is that you want to do, you'll find in life that if you're not passionate about what it is you're working on, you won't be able to stick with it.\"" , sourceName: "Grit: The Power of Passion and Perseverance", sourceURL: "https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth-ebook/dp/B010MH9V3W", sponsorLogo: "", sponsorURL: "")
+
+let markDivinePurpose1 = Tip(header: "Purpose", title: "PURPOSE - Mark Divine, retired Navy SEAL Commander", body: "• What is it that you are really supposed to do with your life? \n\n• What one thing would you focus on if you had nothing holding you back? \n\n• What makes you feel as if your hair is on fire? \n\nThis informs your purpose when intersected with your skills and talents." , sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1", sponsorLogo: "", sponsorURL: "")
+
+let warrenBuffettGoals1 = Tip(header: "GOAL", title: "GOALS - Warren Buffett", body: "STEP 1: Write down your top 25 goals. \nSTEP 2: Circle your top 5 goals. \nSTEP 3: The 20 you didn't circle became your ‘avoid at all cost list.’ No matter what, these things get no attention from you until you’ve succeeded with your top 5. \n\n\"The difference between successful people and really successful people is that really successful people say ‘no’ to almost everything.\" \n\n- Warren Buffett", sourceName: "Thrive Global", sourceURL: "https://thriveglobal.com/stories/say-no-more-often-warren-buffett/", sponsorLogo: "", sponsorURL: "")
+
+let bruceLeeVision1 = Tip(header: "Vision", title: "VISION - Bruce Lee", body: "At age 29, Bruce Lee wrote a letter to himself: \n\nMy Definite Chief Aim \n\n\"I, Bruce Lee, will be the first highest paid Oriental super star in the United States. In return I will give the most exciting performances and render the best of quality in the capacity of an actor. Starting 1970 I will achieve world fame and from then onward till the end of 1980 I will have in my possession $10,000,000. I will live the way I please and achieve inner harmony and happiness.\" \n\nBruce Lee \nJan. 1969" , sourceName: "QZ", sourceURL: "https://qz.com/932799/bruce-lee-achieved-all-his-life-goals-by-32-by-committing-to-one-personality-trait/", sponsorLogo: "", sponsorURL: "")
 
 
 
-let warrenBuffetHint1 = Hint(title: "Simple 3 step process for prioritizing", body: "First, you write down a list of 25 career goals. \nSecond, you do some soul-searching and circle the 5 highest-priority goals. Just 5. \nThird, you take a good hard look at the twenty goals you didn't circle. se you avoid at all costs. They're what distract you; they eat away time and energy, taking your eye from the goals that matter more. \nTo help you prioritize, add columns that allow you to sort out how interestest and important these projects are. Rate each goal on a scale from 1 to 10, from least to most interesting and then again from least to most important. \nAn additional step: Ask yourself, To what extent do these goals serve a common purpose? The more they're part of the same goal hierarchy the more focused your passion.", sourceName: "Grit: The Power of Passion and Perseverance", sourceURL: "https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth-ebook/dp/B010MH9V3W")
+let adviceTitle = ""
+let adviceIcon = ""
+
+let adviceTipArray0 = [jeffBezosPassion1, markDivinePurpose1, warrenBuffettGoals1, bruceLeeVision1]
+let adviceTopic0 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray0)
 
 // MARK: - Will Shortz
 let willShortzQuote = Quote(quote: "\"Figure out what you enjoy doing most in life, and then try to do it full-time. Life is short. Follow your passion.\"", source: "Will Shortz", bio: "Long-time editor of the New York Times crossword puzzle")
 
 // MARK: - Jeff Bezos
-let jeffBezosQuote = Hint(title: "Jeff Bezos told Princeton graduates the story of leaving a high-salary, high-status Manhattan finance job to start Amazon", body: "\"After much consideration, I took the less safe path to follow my passion... Whatever it is that you want to do, you'll find in life that if you're not passionate about what it is you're working on, you won't be able to stick with it.\"", sourceName: "Grit: The Power of Passion and Perseverance", sourceURL: "https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth-ebook/dp/B010MH9V3W")
+let jeffBezosQuote = Hint(title: "", body: "", sourceName: "", sourceURL: "")
 
 
 // MARK: - Bruce Lee
@@ -36,7 +53,7 @@ let bruceLeeHint3 = Hint(title: "GOALS: Set big goals", body: "\"A goal is not a
 let bruceLeeHint4 = Hint(title: "VISION: At age 29, he wrote...", body: "\"My Definite Chief Aim: I, Bruce Lee, will be the first highest-paid oriental superstar in the United States. In return I will give the most exciting performances and render the best quality in the capacity of an actor. Starting 1970 I will achieve for fame and from then onward till the end of 1980 I will have in my possession $10,000,000. I will live the way I please and achieve inner harmony and happiness.\"", sourceName: "QZ", sourceURL: "https://qz.com/932799/bruce-lee-achieved-all-his-life-goals-by-32-by-committing-to-one-personality-trait/")
 
 let bruceLeeHintArray1 = [bruceLeeHint1, bruceLeeHint2, bruceLeeHint3, bruceLeeHint4]
-let bruceLeeHeader1 = Header(title: bruceLeeTitle, quote: bruceLeeQuote1, hints: bruceLeeHintArray1)
+let bruceLeeHeader1 = Header(title: bruceLeeTitle, icon: "", quote: bruceLeeQuote1, hints: bruceLeeHintArray1)
 
 struct AdviceData {
 
@@ -56,7 +73,7 @@ struct AdviceData {
 
     static let oprahWinfrey = ProfileSelectedPerson(name: "Oprah Winfrey", bio: "American television personality, actress, and entrepreneur", advice: "\"Turn your wounds into wisdom.\"", description: "\"You BECOME What You #BELIEVE!\" - Oprah Winfrey (@Oprah) - Top 10 Rules", time: "29 min", url: "https://www.youtube.com/watch?v=xe99QWlM_9A")
 
-    static let martinLutherKingJr = ProfileSelectedPerson(name: "Martin Luther King Jr.", bio: "an American minister and civil rights activist", advice: "\"What are you doing for others?\"", description: "\"#BELIEVE In Your WORTHINESS!\" - Martin Luther King Jr. - Top 10 Rules", time: "24 min", url: "https://www.youtube.com/watch?v=t6lH7Z3_46A")
+    static let martinLutherKingJr = ProfileSelectedPerson(name: "Martin Luther King Jr.", bio: "an American minister and civil rights activist", advice: "\"Take the first step in faith. You don't have to see the whole staircase, just take the first step.\"", description: "\"#BELIEVE In Your WORTHINESS!\" - Martin Luther King Jr. - Top 10 Rules", time: "24 min", url: "https://www.youtube.com/watch?v=t6lH7Z3_46A")
 
     static let sophiaAmoruso = ProfileSelectedPerson(name: "Sophia Amoruso", bio: "founder of Nasty Gal and Girlboss", advice: "\"There are secret opportunities hidden inside every failure.\"", description: "Sophia Amoruso's Top 10 Rules For Success (@sophiaamoruso)", time: "13 min", url: "https://www.youtube.com/watch?v=eWEqrEr0J68")
 

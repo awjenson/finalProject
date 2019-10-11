@@ -11,6 +11,34 @@ import Foundation
 // Moods
 // + Confidence, Gratitude, Happiness
 
+// CRISIS
+let crisisTitle = "Crisis"
+let crisisTip1 = Hint(title: "Crisis Text Line serves anyone, in any type of crisis, providing access to free, 24/7 support at your fingertips", body: "Every texter is connected with a Crisis Counselor, a real-life human being trained to bring texters from a hot moment to a cool calm through active listening and collaborative problem solving. \n\n• USA: Text HOME to 741741 \n• CAN: Text HOME to 686868 \n• UK: Text HOME to 85258", sourceName: "Crisis Text Line", sourceURL: "https://www.crisistextline.org/")
+let crisisTip2 = Hint(title: "Veterans Crisis Line \n1-800-273-8255 \nText 838255", body: "Veterans in crisis and their families and friends can be connected with qualified Department of Veterans Affairs responders through a confidential toll-free hotline, online chat, or text by calling 1-800-273-TALK (8255) and pressing 1.", sourceName: "The National Suicide Prevention Lifeline", sourceURL: "https://suicidepreventionlifeline.org/talk-to-someone-now/")
+let crisisTip3 = Hint(title: "Disaster Distress Helpline \n1-800-985-5990 \nText TalkWithUs to 66746", body: "National, US-based crisis counseling and support phone line for people experiencing emotional distress related to natural or human-caused disasters. Some who may benefit include people affected by disaster, friends and family of those affected by disaster, and disaster recovery workers.", sourceName: "The National Suicide Prevention Lifeline", sourceURL: "https://suicidepreventionlifeline.org/talk-to-someone-now/")
+
+let crisisQuote1 = Quote(quote: "\"The struggle you’re in today is developing the strength you need tomorrow.\"", source: "Robert Tew", bio: "")
+let crisisQuote2 = Quote(quote: "\"It is during our darkest moments that we must focus to see the light.\"", source: "Aristotle", bio: "")
+
+
+let crisisHintArray1 = [crisisTip1, crisisTip2, crisisTip3]
+let crisisHeader1 = Header(title: crisisTitle, icon: Constants.Icon.good, quote: crisisQuote1, hints: crisisHintArray1)
+
+// SUICIDAL
+let suicideTitle = "Suicidal Thoughts"
+
+let suicideTip1 = Hint(title: "The National Suicide Prevention Lifeline is free and confidential \n• Call 1-800-273-8255", body: "If you’re thinking about suicide, are worried about a friend or loved one, or would like emotional support, the National Suicide Prevention Lifeline a free network and is available 24/7 across the United States.", sourceName: "The National Suicide Prevention Lifeline", sourceURL: "https://suicidepreventionlifeline.org/")
+let suicideTip2 = Hint(title: "Nacional de Prevención del Suicidio \n• Call 1-888-628-9454", body: "Lifeline ofrece 24/7, gratuito servicios en español, no es necesario hablar ingles si usted necesita ayuda.", sourceName: "The National Suicide Prevention Lifeline", sourceURL: "https://suicidepreventionlifeline.org/")
+
+
+
+let suicideQuote1 = Quote(quote: "\"Never never never give up.\"", source: "Winston Churchill", bio: "")
+
+let suicideHintArray1 = [suicideTip1, suicideTip2]
+let suicideHeader1 = Header(title: suicideTitle, icon: Constants.Icon.good, quote: suicideQuote1, hints: suicideHintArray1)
+
+
+
 // MARK: - SAD
 let sadTitle = "Sad"
 
@@ -22,7 +50,7 @@ let sadTip1 = Hint(title: "Advice to reduce sadness", body: "• Remember, it wi
 let sadTip2 = Hint(title: "Ways to improve your mood", body: "Researchers found that people reported being happiest when they were: relaxing, socializing, exercising, eating, doing spiritual activities, and engaging in intimate relations. So make time to do these activities more often in your day.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3048975/the-scientifically-proven-way-to-have-the-best-vacation-ever")
 
 let sadHintArray1 = [sadTip1, sadTip2]
-let sadHeader1 = Header(title: sadTitle, quote: sadQuote1, hints: sadHintArray1)
+let sadHeader1 = Header(title: sadTitle, icon: Constants.Icon.good, quote: sadQuote1, hints: sadHintArray1)
 
 // MARK: - DEPRESSED
 let depressedTitle = "Depressed"
@@ -58,7 +86,7 @@ let depressedDayHint1 = Hint(title: "Taking walks in nature lowers depression wh
 let depressedDayHint2 = Hint(title: "Exposure to sunlight boosts Vitamin D levels that are known to increase mood", body: "Moderate sunlight exposure helps improve your mood by boosting the serotonin levels in your body. Also known as the 'happiness hormone', it put you in a calm mood. Also, sunlight decreases the risk of depression in those at risk of seasonal affective disorder (SAD) during the winter months.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/nomanazish/2018/02/28/why-sunlight-is-actually-good-for-you/#5944743c5cd9")
 
 let depressedHintArray1 = [depressedHint1, depressedHint2]
-let depressedHeader1 = Header(title: depressedTitle, quote: depressedQuote1, hints: depressedHintArray1)
+let depressedHeader1 = Header(title: depressedTitle, icon: Constants.Icon.good, quote: depressedQuote1, hints: depressedHintArray1)
 
 // MARK: - BORED
 let boredTitle = "Bored"
@@ -68,9 +96,9 @@ let boredQuote1 = Quote(quote: "\"Bored with life? Throw yourself into some work
 let boredHint1 = Hint(title: "Advice to reduce boredom", body: "Chances are you feel trapped and imprisoned by your inability to grab onto anything that interests you. Tasks that are too easy are boring. See boredom as a \"call to action\". Enter a state of flow by doing activities that are both challenging and enjoyable.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/making-change/201507/how-beat-boredom")
 
 let boredHintArray1 = [boredHint1]
-let boredHeader1 = Header(title: boredTitle, quote: boredQuote1, hints: boredHintArray1)
+let boredHeader1 = Header(title: boredTitle, icon: Constants.Icon.good, quote: boredQuote1, hints: boredHintArray1)
 
-// MARK - MAD
+// MARK: - MAD / ANGRY
 
 let madTitle = "Mad"
 
@@ -78,8 +106,23 @@ let madQuote1 = Quote(quote: "\"Holding on to anger is like grasping a hot coal 
 let madHint1 = Hint(title: "Advice to reduce anger", body: "Anger can be simple to manage, once you know the basics of how and why the brain reacts to triggers. Scientific ways to calm down: \n\n• Take deep breaths \n\n• take a walk and get some fresh air \n\n• Write down why you're mad \n\n• Play loud or heavy music \n\n• Even doing nothing for two minutes was found to diminish feeling of anger", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/134593-6-ways-to-calm-down-when-youre-angry")
 let madHint2 = Hint(title: "Daily Stoic: How To Not Be Angry", body: "Let every thought be the thought of a dying man, the Stoics say, over and over again. A dying man doesn’t have twenty four hours to be angry. A person who realizes how fragile life is doesn’t take chances in saying things they’ll have to apologize for—because they know they might not get to. Don’t hang onto anger you know you’re going to let go of later—let go of it right this second.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/how-to-not-be-angry/")
 
+let madQuote2 = Quote(quote: "\"Where there is shouting, there is no true knowledge.\"", source: "Leonardo da Vinci", bio: "Leonardo da Vinci was an Italian polymath of the Renaissance and is widely considered one of the greatest painters of all time.")
+
+let madQuote3 = Quote(quote: "\"Hatred paralyzes life; love releases it.  Hatred confuses life; love harmonizes it.  Hatred darkens life; love illumines it.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+
+let madQuote4 = Quote(quote: "\"Man must evolve for all human conflict a method which rejects revenge, aggression and retaliation. The foundation of such a method is love.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+let madQuote5 = Quote(quote: "\"Never succumb to the temptation of becoming bitter. As you press for justice, be sure to move with dignity and discipline, using only the instruments of love.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+
+let madQuote6 = Quote(quote: "\"When evil men plot, good men must plan. When evil men burn and bomb, good men must build and bind. When evil men shout ugly words of hatred, good men must commit themselves to the glories of love.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+
+let madQuote7 = Quote(quote: "\"We must develop and maintain the capacity to forgive. He who is devoid of the power to forgive is devoid of the power to love. There is some good in the worst of us and some evil in the best of us. When we discover this, we are less prone to hate our enemies.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+
+
+let madQuote8 = Tip(header: "", title: "I shall never permit myself to stoop so low as to hate any man.", body: "- Booker T. Washington \n\nBooker T. Washington was an educator, author, and the most influential spokesman for the African-American community between 1895 and 1915." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/booker-t-washington-quotes", sponsorLogo: "", sponsorURL: "")
+
+
 let madHintArray1 = [madHint1, madHint2]
-let madHeader1 = Header(title: madTitle, quote: madQuote1, hints: madHintArray1)
+let madHeader1 = Header(title: madTitle, icon: Constants.Icon.good, quote: madQuote1, hints: madHintArray1)
 
 // MARK: - STRESSED
 
@@ -111,7 +154,7 @@ let stressedHint11 = Hint(title: "Psychotherapy helps improve your mental health
 let stressedHint12 = Hint(title: "Feeling stressed slows your metabolism, which slows your ability to burn fat. Stress also makes your crave fatty and sugar-laden foods", body: "Study: The types of food we crave when we’re stressed out tend to be fatty and sugar-laden. That means it will be far harder for you to say no to those unhealthy foods and snacks.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/")
 
 let stressedHintArray1 = [stressedHint1, stressedHint2]
-let stressedHeader1 = Header(title: stressedTitle, quote: stressedQuote1, hints: stressedHintArray1)
+let stressedHeader1 = Header(title: stressedTitle, icon: Constants.Icon.good, quote: stressedQuote1, hints: stressedHintArray1)
 
 // MARK: - ANXIOUS
 
@@ -144,7 +187,7 @@ let anxiousHintPM1 = Hint(title: "Mastering anxiety is about recognizing your in
 let anxiousHintPM2 = Hint(title: "Warming your body temperature helps to lower anxiety", body: "If you’re more relaxed after you get warm, you’re better able to focus on the big things that are causing your anxiety and to tackle them more calmly. \n\n• Eat and drink warm foods: soups, stews, and tea. And avoid foods that aggravate anxiety: sugar, caffeine, and alcohol. \n\n• Use a heating pad or get your whole body under a blanket. \n\n• Take warm or hot showers and baths. ", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/anxiety-warm-body-temperature_us_5baa7ad2e4b0f143d10e0ef1")
 
 let anxiousHintArray1 = [anxiousHint1, anxiousHint2]
-let anxiousHeader1 = Header(title: anxiousTitle, quote: anxiousQuote1, hints: anxiousHintArray1)
+let anxiousHeader1 = Header(title: anxiousTitle, icon: Constants.Icon.good, quote: anxiousQuote1, hints: anxiousHintArray1)
 
 
 // MARK: - LONELY
@@ -160,9 +203,9 @@ let lonelyHint2 = Hint(title: "You're not alone. 40% of U.S. adults report feeli
 let lonelyHint3 = Hint(title: "Reduce feelings of loneliness by spending less time on social media and more time with friends face-to-face", body: "Researchers found that people who reported spending the most time on social media had twice the odds of perceived social isolation than those who said they spent less on those sites. Replacing your real-world relationships with social media use is detrimental to your well-being. However, face-to-face social connectedness is strongly associated with well-being.", sourceName: "NPR", sourceURL: "https://www.npr.org/sections/health-shots/2017/03/06/518362255/feeling-lonely-too-much-time-on-social-media-may-be-why")
 
 let lonelyHintArray1 = [lonelyHint1, lonelyHint2]
-let lonelyHeader1 = Header(title: lonelyTitle, quote: lonelyQuote1, hints: lonelyHintArray1)
+let lonelyHeader1 = Header(title: lonelyTitle, icon: Constants.Icon.good, quote: lonelyQuote1, hints: lonelyHintArray1)
 
-// MARK: - ENVIOUS
+// MARK: - ENVIOUS / JEALOUS
 
 let jealousTitle = "Jealous"
 
@@ -172,18 +215,37 @@ let jealousHint1 = Hint(title: "Too much social media increases envy", body: "Re
 let jealousHint2 = Hint(title: "Daily Stoic: Envy", body: "If we’re not careful, we can waste enormous chunks of today being miserable over the fact that so-and-so is doing well or how badly we feel we deserve what so-and-so is enjoying? Because jealousy is a blinding passion. \n\nSo if you want to know what envy is, here’s your answer: It’s insanity. It’s death. It’s a thing to be avoided at all costs.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/do-you-know-what-envy-is/")
 
 let jealousHintArray1 = [jealousHint1, jealousHint2]
-let jealousHeader1 = Header(title: jealousTitle, quote: jealousQuote1, hints: jealousHintArray1)
+let jealousHeader1 = Header(title: jealousTitle, icon: Constants.Icon.good, quote: jealousQuote1, hints: jealousHintArray1)
 
-// MARK: - CONFIDENCE
+let jealousQuote2 = Quote(quote: "\"Capitalism is always in danger of inspiring men to be more concerned about making a living than making a life. We are prone to judge success by the index of our salaries or the size of our automobiles, rather than by the quality of our service and relationship to humanity.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+
+let jealousQuote3 = Quote(quote: "\"Of the seven deadly sins, envy is the silliest, because if you have it, you don't feel better. You feel worse. I've had some good times with gluttony. We won't get into lust.\"", source: "Warren Buffett", bio: "Warren Buffett is an investor and CEO of Berkshire Hathaway.")
+
+let jealousQuote4 = Quote(quote: "\"We never look back. We just figure there is so much to look forward to that there is no sense thinking of what we might have done. It just doesn't make any difference. You can only live life forward.\"", source: "Warren Buffett", bio: "Warren Buffett is an investor and CEO of Berkshire Hathaway.")
+
+let jealousQuote5 = Quote(quote: "\"The more we value things, the less we value ourselves.\"", source: "Bruce Lee", bio: "Bruce Lee was an actor, martial artist, philosopher, and founder of the martial art Jeet Kune Do.")
+
+let jealousQuote6 = Quote(quote: "\"Do not indulge in dreams of having what you have not, but reckon up the chief of the blessings you do possess, and then thankfully remember how you would crave for them if they were not yours.\"", source: "Marcus Aurelius", bio: "Marcus Aurelius was Roman emperor from 161 to 180 and a Stoic philosopher.")
+
+
+// MARK: - LOW CONFIDENCE
 
 let confidenceTitle = "Low Self-Confidence"
 
 let confidenceQuote1 = Quote(quote: "\"You gain strength, courage, and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself. 'I lived through this horror. I can take the next thing that comes along.'\"", source: "Eleanor Roosevelt", bio: "Diplomat and activist")
 
+
+
 let confidenceHint1 = Hint(title: "Boost confidence now", body: "• Sit up straight \n\n• Smile (the movement of the muscles in your face causes your brain to release endorphins which causess you to feel happy) \n\n• Nod your head up-and-down (the movement signals positive thoughts in your brain) \n\n• Visualize yourself scoring the winning goal or going through a tough workout (you first need to win in your head; only then can you win in the battleground) \n\n• Stand for two minutes in a wide stance with your hands in the air \n\n• Listen to heavy-bass songs \n\n• Exercise regularly \n\n• Spray on our favorite fragrance (a study found that it will make you feel more confident)", sourceName: "Greatist", sourceURL: "https://greatist.com/grow/easy-confidence-boosters")
 
 let confidenceHintArray1 = [confidenceHint1, confidenceHint1]
-let confidenceHeader1 = Header(title: confidenceTitle, quote: confidenceQuote1, hints: confidenceHintArray1)
+let confidenceHeader1 = Header(title: confidenceTitle, icon: Constants.Icon.good, quote: confidenceQuote1, hints: confidenceHintArray1)
+
+let confidenceQuote2 = Quote(quote: "\"If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+let confidenceQuote3 = Quote(quote: "\"Courage is an inner resolution to go forward in spite of obstacles and frightening situations; cowardice is a submissive surrender to circumstance.\"", source: "Martin Luther King Jr.", bio: "Martin Luther King Jr. was an American minister and activist who became the most visible spokesperson and leader in the civil rights movement from 1955 until his assassination in 1968.")
+
+
+
 
 // MARK: - GRATITUDE
 
@@ -199,7 +261,7 @@ let goodGreatHint1 = Hint(title: "Advice to improve wellbeing", body: "Practice 
 let goodGreatHint2 = Hint(title: "Gratitude improves wellbeing", body: "Research finds that practicing gratitude has many benefits: leads to more relationships, improves physical and psychological health, increases empathy and self-esteem, and reduces aggression and stress. What are you thankful for?", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/amymorin/2014/11/23/7-scientifically-proven-benefits-of-gratitude-that-will-motivate-you-to-give-thanks-year-round/#16c4850f183c")
 
 let goodGreatHintArray1 = [goodGreatHint1, goodGreatHint2]
-let goodGreatHeader1 = Header(title: goodGreatTitle, quote: goodGreatQuote1, hints: goodGreatHintArray1)
+let goodGreatHeader1 = Header(title: goodGreatTitle, icon: Constants.Icon.good, quote: goodGreatQuote1, hints: goodGreatHintArray1)
 
 // MARK: - RELATIONSHIP PROBLEM
 
@@ -210,7 +272,7 @@ let lazyTitle = "Lazy"
 // Quote
 let lazyQuote1 = Quote(quote: "\"It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.\"", source: "Pharrell Williams", bio: "Rapper, singer, songwriter, record producer, entrepreneur, and fashion designer")
 let lazyHintArray1 = [goodGreatHint1]
-let lazyHeader1 = Header(title: lazyTitle, quote: lazyQuote1, hints: lazyHintArray1)
+let lazyHeader1 = Header(title: lazyTitle, icon: Constants.Icon.good, quote: lazyQuote1, hints: lazyHintArray1)
 
 
 
@@ -228,6 +290,6 @@ let tiredAMHint1 = Hint(title: "During the day, exposing your body to bright lig
 //PM
 
 let tiredHintArray1 = [tiredAMHint1]
-let tiredHeader1 = Header(title: tiredTitle, quote: tiredQuote1, hints: tiredHintArray1)
+let tiredHeader1 = Header(title: tiredTitle, icon: Constants.Icon.good, quote: tiredQuote1, hints: tiredHintArray1)
 
 

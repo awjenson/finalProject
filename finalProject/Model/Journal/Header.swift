@@ -12,10 +12,12 @@ import Foundation
 struct Header {
     let title: String
     let quote: Quote
+    let icon: String
     let hints: [Hint] //Similar to [Tip]
 
-    init(title: String, quote: Quote, hints: [Hint]) {
+    init(title: String, icon: String, quote: Quote, hints: [Hint]) {
         self.title = title
+        self.icon = icon
         self.quote = quote
         self.hints = hints
     }

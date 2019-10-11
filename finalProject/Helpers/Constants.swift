@@ -11,6 +11,9 @@ import Foundation
 struct Constants {
 
     struct Icon {
+        static let cancel = "icons8-cancel"
+        static let undo = "icons8-undo"
+
         static let snack = "icons8-apple"
         static let job = "icons8-commercial_development_management"
         static let date = "icons8-champagne"
@@ -31,18 +34,33 @@ struct Constants {
         static let running = "icons8-running"
         static let bathroom = "icons8-toilet_paper"
         static let safety = "icons8-siren"
-        static let event = "icons8-people_working_together"
+        static let event = "icons8-collaboration"
         static let sideHustle = "icons8-graph"
         static let gettingReady = "icons8-v_neck_t_shirt"
         static let goingOut = "icons8-v_neck_longsleeve"
         static let school = "icons8-graduation_cap"
         static let study = "icons8-grades"
-        static let routine = "icons8-todo_list" //icons8-sun //icons8-checklist
+        static let routine = "icons8-numbered_list" //icons8-todo_list //icons8-sun //icons8-checklist
         static let work = "icons8-commercial_development_management"
-        static let travel = "icons8-airplane_mode_on"
+        static let travel = "icons8-map_marker" 
         static let motivate = "icons8-brainstorm_skill"
-        static let relationship = "icons8-novel"
+        static let quote = "icons8-quote"
+        static let relationship = "icons8-meeting"
         static let parenting = "icons8-single_father"
+        static let journal = "icons8-journal"
+
+        //mood
+        static let mad = "icons8-angry"
+        static let sad = "icons8-sad"
+        static let ok = "icons8-neutral_emoticon"
+        static let good = "icons8-happy"
+        static let great = "icons8-lol"
+
+        //you
+        static let screenwriting = "icons8-typewriter_with_paper"
+        static let filmmaking = "icons8-documentary"
+
+
 
 
 
