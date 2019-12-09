@@ -162,7 +162,7 @@ class UserInfoViewController: UIViewController {
 
         dayOfWeekAndHour()
 
-        reset(self)
+//        reset(self)
 
     }
 

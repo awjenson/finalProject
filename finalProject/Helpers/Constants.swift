@@ -35,19 +35,24 @@ struct Constants {
         static let bathroom = "icons8-toilet_paper"
         static let safety = "icons8-siren"
         static let event = "icons8-collaboration"
-        static let sideHustle = "icons8-graph"
+        static let sideHustle = "icons8-launched_rocket" //"icons8-graph"
         static let gettingReady = "icons8-v_neck_t_shirt"
         static let goingOut = "icons8-v_neck_longsleeve"
         static let school = "icons8-graduation_cap"
         static let study = "icons8-grades"
-        static let routine = "icons8-numbered_list" //icons8-todo_list //icons8-sun //icons8-checklist
-        static let work = "icons8-commercial_development_management"
+        static let routine = "icons8-todo_list" //icons8-numbered_list //icons8-todo_list //icons8-sun //icons8-checklist
+        static let work = "icons8-building" //"icons8-commercial_development_management" //icons8-under_computer
+        static let jobSearch = "icons8-bullish" //"icons8-find_matching_job"
         static let travel = "icons8-map_marker" 
         static let motivate = "icons8-brainstorm_skill"
         static let quote = "icons8-quote"
+        static let single = "icons8-men_age_group_4"
         static let relationship = "icons8-meeting"
         static let parenting = "icons8-single_father"
         static let journal = "icons8-journal"
+        static let goals = "icons8-trophy_2"
+        static let boost = "icons8-cool" //"icons8-launched_rocket"
+        static let wealth = "icons8-banknotes-1" //"icons8-coin_in_hand"
 
         //mood
         static let mad = "icons8-angry"
