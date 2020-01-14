@@ -354,7 +354,7 @@ class ProfileViewController: UIViewController {
             appendNineTopics(adviceTopic0, singleTopicPM0, relationshipPMTopic0, parentingBedtimeTopic0, studyTopic0, sideHustleTopic0, filmAdviceTopic0, screenwritingTopic0, jobSearchTopic0, wealthTopic0, confidenceTopic0, badMoodAMTopic0, motivateAMTopic0)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay0, relationshipAMTopic0, parentingAMTopic0, studyTopic0, sideHustleTopic0, filmProdTopic0, screenwritingTopic0, jobSearchTopic0, wealthTopic0, confidenceTopic0, badMoodDayTopic0, motivateDayTopic0)
+            appendNineTopics(adviceTopic0, singleTopicDay0, relationshipAMTopic0, parentingDayTopic0, studyTopic0, sideHustleTopic0, filmProdTopic0, screenwritingTopic0, jobSearchTopic0, wealthTopic0, confidenceTopic0, badMoodDayTopic0, motivateDayTopic0)
 
         case 15...19:
             print("Weekend, Early Evening")
@@ -381,25 +381,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic1)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic1)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic1)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic1)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay1, relationshipAMTopic1, parentingAMTopic1, studyTopic1, sideHustleTopic1, filmProdTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodDayTopic1, motivateDayTopic1)
+            appendNineTopics(adviceTopic1, singleTopicDay1, relationshipAMTopic1, parentingDayTopic1, studyTopic1, sideHustleTopic1, filmProdTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodDayTopic1, motivateDayTopic1)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipPMTopic1, parentingPMTopic1, studyTopic1, sideHustleTopic1, filmPostTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivateAfterTopic1)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipPMTopic1, parentingPMTopic1, studyTopic1, sideHustleTopic1, filmPostTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivateAfterTopic1)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipBedTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmPreTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivatePMTopic1)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipBedTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmPreTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivatePMTopic1)
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -414,25 +414,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic2)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic2)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic2)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic2)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay2, relationshipAMTopic2, parentingAMTopic2, studyTopic2, sideHustleTopic2, filmProdTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodDayTopic2, motivateDayTopic2)
+            appendNineTopics(adviceTopic2, singleTopicDay2, relationshipAMTopic2, parentingDayTopic2, studyTopic2, sideHustleTopic2, filmProdTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodDayTopic2, motivateDayTopic2)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipPMTopic2, parentingPMTopic2, studyTopic2, sideHustleTopic2, filmPostTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivateAfterTopic2)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipPMTopic2, parentingPMTopic2, studyTopic2, sideHustleTopic2, filmPostTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivateAfterTopic2)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipBedTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmPreTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivatePMTopic2)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipBedTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmPreTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivatePMTopic2)
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -447,25 +447,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic3)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic3)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic3)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic3)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay3, relationshipAMTopic3, parentingAMTopic3, studyTopic3, sideHustleTopic3, filmProdTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodDayTopic3, motivateDayTopic3)
+            appendNineTopics(adviceTopic3, singleTopicDay3, relationshipAMTopic3, parentingDayTopic3, studyTopic3, sideHustleTopic3, filmProdTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodDayTopic3, motivateDayTopic3)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipPMTopic3, parentingPMTopic3, studyTopic3, sideHustleTopic3, filmPostTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivateAfterTopic3)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipPMTopic3, parentingPMTopic3, studyTopic3, sideHustleTopic3, filmPostTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivateAfterTopic3)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipBedTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmPreTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivatePMTopic3)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipBedTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmPreTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivatePMTopic3)
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -480,25 +480,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic4)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic4)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic4)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic4)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay4, relationshipAMTopic4, parentingAMTopic4, studyTopic4, sideHustleTopic4, filmProdTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodDayTopic4, motivateDayTopic4)
+            appendNineTopics(adviceTopic4, singleTopicDay4, relationshipAMTopic4, parentingDayTopic4, studyTopic4, sideHustleTopic4, filmProdTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodDayTopic4, motivateDayTopic4)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipPMTopic4, parentingPMTopic4, studyTopic4, sideHustleTopic4, filmPostTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivateAfterTopic4)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipPMTopic4, parentingPMTopic4, studyTopic4, sideHustleTopic4, filmPostTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivateAfterTopic4)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipBedTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmPreTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivatePMTopic4)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipBedTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmPreTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivatePMTopic4)
 
         default:
             print("weekdayTF,INVALID HOUR!")
@@ -514,25 +514,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic5)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic5)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic5)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic5)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay5, relationshipAMTopic5, parentingAMTopic5, studyTopic5, sideHustleTopic5, filmProdTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodDayTopic5, motivateDayTopic5)
+            appendNineTopics(adviceTopic5, singleTopicDay5, relationshipAMTopic5, parentingDayTopic5, studyTopic5, sideHustleTopic5, filmProdTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodDayTopic5, motivateDayTopic5)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipPMTopic5, parentingPMTopic5, studyTopic5, sideHustleTopic5, filmPostTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivateAfterTopic5)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipPMTopic5, parentingPMTopic5, studyTopic5, sideHustleTopic5, filmPostTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivateAfterTopic5)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipBedTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmPreTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivatePMTopic5)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipBedTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmPreTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivatePMTopic5)
 
         default:
             print("weekdayTF,INVALID HOUR!")
@@ -547,25 +547,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic6)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic6)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic6)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic6)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay6, relationshipAMTopic6, parentingAMTopic6, studyTopic6, sideHustleTopic6, filmProdTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodDayTopic6, motivateDayTopic6)
+            appendNineTopics(adviceTopic6, singleTopicDay6, relationshipAMTopic6, parentingDayTopic6, studyTopic6, sideHustleTopic6, filmProdTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodDayTopic6, motivateDayTopic6)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipPMTopic6, parentingPMTopic6, studyTopic6, sideHustleTopic6, filmPostTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivateAfterTopic6)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipPMTopic6, parentingPMTopic6, studyTopic6, sideHustleTopic6, filmPostTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivateAfterTopic6)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipBedTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmPreTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivatePMTopic6)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipBedTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmPreTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivatePMTopic6)
 
 
         default:
@@ -593,7 +593,7 @@ class ProfileViewController: UIViewController {
             appendNineTopics(adviceTopic0, singleTopicPM0, relationshipPMTopic0, parentingBedtimeTopic0, studyTopic0, sideHustleTopic0, filmAdviceTopic0, screenwritingTopic0, jobSearchTopic0, wealthTopic0, confidenceTopic0, badMoodAMTopic0, motivateAMTopic7)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay0, relationshipAMTopic0, parentingAMTopic0, studyTopic0, sideHustleTopic0, filmProdTopic0, screenwritingTopic0, jobSearchTopic0, wealthTopic2, confidenceTopic0, badMoodDayTopic0, motivateDayTopic7)
+            appendNineTopics(adviceTopic0, singleTopicDay0, relationshipAMTopic0, parentingDayTopic0, studyTopic0, sideHustleTopic0, filmProdTopic0, screenwritingTopic0, jobSearchTopic0, wealthTopic2, confidenceTopic0, badMoodDayTopic0, motivateDayTopic7)
 
         case 15...19:
             print("Weekend, Early Evening")
@@ -620,25 +620,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic8)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic8)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic8)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipPMTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmAdviceTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodAMTopic1, motivateAMTopic8)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay1, relationshipAMTopic1, parentingAMTopic1, studyTopic1, sideHustleTopic1, filmProdTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodDayTopic1, motivateDayTopic8)
+            appendNineTopics(adviceTopic1, singleTopicDay1, relationshipAMTopic1, parentingDayTopic1, studyTopic1, sideHustleTopic1, filmProdTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodDayTopic1, motivateDayTopic8)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipPMTopic1, parentingPMTopic1, studyTopic1, sideHustleTopic1, filmPostTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivateAfterTopic8)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipPMTopic1, parentingPMTopic1, studyTopic1, sideHustleTopic1, filmPostTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivateAfterTopic8)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM1, relationshipBedTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmPreTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivatePMTopic8)
+            appendNineTopics(adviceTopic1, singleTopicPM1, relationshipBedTopic1, parentingBedtimeTopic1, studyTopic1, sideHustleTopic1, filmPreTopic1, screenwritingTopic1, jobSearchTopic1, wealthTopic1, confidenceTopic1, badMoodPMTopic1, motivatePMTopic8)
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -653,25 +653,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic9)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic9)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic9)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipPMTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmAdviceTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodAMTopic2, motivateAMTopic9)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay2, relationshipAMTopic2, parentingAMTopic2, studyTopic2, sideHustleTopic2, filmProdTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodDayTopic2, motivateDayTopic9)
+            appendNineTopics(adviceTopic2, singleTopicDay2, relationshipAMTopic2, parentingDayTopic2, studyTopic2, sideHustleTopic2, filmProdTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodDayTopic2, motivateDayTopic9)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipPMTopic2, parentingPMTopic2, studyTopic2, sideHustleTopic2, filmPostTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivateAfterTopic9)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipPMTopic2, parentingPMTopic2, studyTopic2, sideHustleTopic2, filmPostTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivateAfterTopic9)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM2, relationshipBedTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmPreTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivatePMTopic9)
+            appendNineTopics(adviceTopic2, singleTopicPM2, relationshipBedTopic2, parentingBedtimeTopic2, studyTopic2, sideHustleTopic2, filmPreTopic2, screenwritingTopic2, jobSearchTopic2, wealthTopic2, confidenceTopic2, badMoodPMTopic2, motivatePMTopic9)
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -686,25 +686,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic10)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic10)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic10)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipPMTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmAdviceTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodAMTopic3, motivateAMTopic10)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay3, relationshipAMTopic3, parentingAMTopic3, studyTopic3, sideHustleTopic3, filmProdTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodDayTopic3, motivateDayTopic10)
+            appendNineTopics(adviceTopic3, singleTopicDay3, relationshipAMTopic3, parentingDayTopic3, studyTopic3, sideHustleTopic3, filmProdTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodDayTopic3, motivateDayTopic10)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipPMTopic3, parentingPMTopic3, studyTopic3, sideHustleTopic3, filmPostTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivateAfterTopic10)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipPMTopic3, parentingPMTopic3, studyTopic3, sideHustleTopic3, filmPostTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivateAfterTopic10)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM3, relationshipBedTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmPreTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivatePMTopic10)
+            appendNineTopics(adviceTopic3, singleTopicPM3, relationshipBedTopic3, parentingBedtimeTopic3, studyTopic3, sideHustleTopic3, filmPreTopic3, screenwritingTopic3, jobSearchTopic3, wealthTopic3, confidenceTopic3, badMoodPMTopic3, motivatePMTopic10)
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -719,25 +719,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic11)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic11)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic11)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipPMTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmAdviceTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodAMTopic4, motivateAMTopic11)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay4, relationshipAMTopic4, parentingAMTopic4, studyTopic4, sideHustleTopic4, filmProdTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodDayTopic4, motivateDayTopic11)
+            appendNineTopics(adviceTopic4, singleTopicDay4, relationshipAMTopic4, parentingDayTopic4, studyTopic4, sideHustleTopic4, filmProdTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodDayTopic4, motivateDayTopic11)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipPMTopic4, parentingPMTopic4, studyTopic4, sideHustleTopic4, filmPostTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivateAfterTopic11)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipPMTopic4, parentingPMTopic4, studyTopic4, sideHustleTopic4, filmPostTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivateAfterTopic11)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM4, relationshipBedTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmPreTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivatePMTopic11)
+            appendNineTopics(adviceTopic4, singleTopicPM4, relationshipBedTopic4, parentingBedtimeTopic4, studyTopic4, sideHustleTopic4, filmPreTopic4, screenwritingTopic4, jobSearchTopic4, wealthTopic4, confidenceTopic4, badMoodPMTopic4, motivatePMTopic11)
 
         default:
             print("weekdayTF,INVALID HOUR!")
@@ -753,25 +753,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic12)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic12)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic12)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipPMTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmAdviceTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodAMTopic5, motivateAMTopic12)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay5, relationshipAMTopic5, parentingAMTopic5, studyTopic5, sideHustleTopic5, filmProdTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodDayTopic5, motivateDayTopic12)
+            appendNineTopics(adviceTopic5, singleTopicDay5, relationshipAMTopic5, parentingDayTopic5, studyTopic5, sideHustleTopic5, filmProdTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodDayTopic5, motivateDayTopic12)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipPMTopic5, parentingPMTopic5, studyTopic5, sideHustleTopic5, filmPostTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivateAfterTopic12)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipPMTopic5, parentingPMTopic5, studyTopic5, sideHustleTopic5, filmPostTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivateAfterTopic12)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM5, relationshipBedTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmPreTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivatePMTopic12)
+            appendNineTopics(adviceTopic5, singleTopicPM5, relationshipBedTopic5, parentingBedtimeTopic5, studyTopic5, sideHustleTopic5, filmPreTopic5, screenwritingTopic5, jobSearchTopic5, wealthTopic5, confidenceTopic5, badMoodPMTopic5, motivatePMTopic12)
 
         default:
             print("weekdayTF,INVALID HOUR!")
@@ -786,25 +786,25 @@ class ProfileViewController: UIViewController {
         case 0...4:
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic13)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic13)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic13)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipPMTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmAdviceTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodAMTopic6, motivateAMTopic13)
 
         case 10...14:
-            appendNineTopics(adviceTopic0, singleTopicDay6, relationshipAMTopic6, parentingAMTopic6, studyTopic6, sideHustleTopic6, filmProdTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodDayTopic6, motivateDayTopic13)
+            appendNineTopics(adviceTopic6, singleTopicDay6, relationshipAMTopic6, parentingDayTopic6, studyTopic6, sideHustleTopic6, filmProdTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodDayTopic6, motivateDayTopic13)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipPMTopic6, parentingPMTopic6, studyTopic6, sideHustleTopic6, filmPostTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivateAfterTopic13)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipPMTopic6, parentingPMTopic6, studyTopic6, sideHustleTopic6, filmPostTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivateAfterTopic13)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(adviceTopic0, singleTopicPM6, relationshipBedTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmPreTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivatePMTopic13)
+            appendNineTopics(adviceTopic6, singleTopicPM6, relationshipBedTopic6, parentingBedtimeTopic6, studyTopic6, sideHustleTopic6, filmPreTopic6, screenwritingTopic6, jobSearchTopic6, wealthTopic6, confidenceTopic6, badMoodPMTopic6, motivatePMTopic13)
 
         default:
             print("Weekend,INVALID HOUR!")
@@ -1064,7 +1064,7 @@ class ProfileViewController: UIViewController {
             performUIUpdatesOnMain {
 
                 button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
-                button.imageView?.image = UIImage(named: "icons8-cancel")
+                button.imageView?.image = UIImage(named: Constants.Icon.cancel)
                 // button title
 
 

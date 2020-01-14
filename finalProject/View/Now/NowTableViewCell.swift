@@ -41,7 +41,6 @@ class NowTableViewCell: UITableViewCell {
         //set tipItem to tip so you can use it in other methods
         tipItem = tip
 
-
         tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
         tipIconView.clipsToBounds = true
         tipIconView.layer.borderWidth = 1
@@ -84,12 +83,30 @@ class NowTableViewCell: UITableViewCell {
         titleLabel.attributedText = attributedStringTitle
         bodyLabel.attributedText = attributedStringBody
 
-        boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
-        boarderColorView.layer.shadowOpacity = 0.2
-        boarderColorView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        boarderColorView.layer.shadowRadius = 0.75
 
-        boarderColorView.layer.masksToBounds = false
+//        boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
+//        boarderColorView.layer.shadowOpacity = 2
+//        boarderColorView.layer.shadowOffset = CGSize(width: 1, height: -3)
+//        boarderColorView.layer.shadowRadius = 0.5
+
+//        boarderColorView.layer.masksToBounds = false
+
+
+//        boarderColorView.layer.borderWidth = 2
+//        boarderColorView.layer.cornerRadius = 12
+//        boarderColorView.layer.borderColor = UIColor.gray.cgColor
+//
+//        //Shadows
+//        boarderColorView.layer.shadowColor = UIColor.gray.cgColor
+//        boarderColorView.layer.shadowOffset = CGSize(width: 3, height: 3)
+//        boarderColorView.layer.shadowRadius = 5
+//        boarderColorView.layer.shadowOpacity = 0.3
+//        boarderColorView.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
+
+
+
+
+
 
     }
 

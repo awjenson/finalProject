@@ -912,26 +912,26 @@ class NowViewController: UIViewController {
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic0, networkingTopic0, safetyTopic0,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homeAMTopic0, eveningRoutineTopic0, bedtimeTopic0, cantSleepTopic0,
+                             restaurantTopic0, lateNightSnackTopic0, groceryStoreAMDTopic0, bathroomPMTopic0, homeAMTopic0, eveningRoutineTopic0, bedtimeTopic0, cantSleepTopic0,
                              sunday0to4Topic0)
 
         case 5...8:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, getReadyAMTopic0, breakfastTopic0, homeAMTopic0, bathroomTopic0, cafeTopic0, networkingTopic0, groceryStoreWENDTopic0, travelTopic0,
+            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, getReadyAMTopic0, breakfastTopic0, homeAMTopic0, bathroomTopic0, cafeTopic0, networkingTopic0, groceryStoreAMDTopic0, travelTopic0,
                              sundayNow5to8Topic0)
 
         case 9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic0, groceryStoreWENDTopic0, travelTopic0,
+            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic0, groceryStoreAMDTopic0, travelTopic0,
                              sundayNow9to10Topic0)
 
         case 10:
             print("Weekend, Late Morning")
             // call function to display 9 time-based topics // ****
             appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, getReadyAMTopic0, brunchTopic0, cafeTopic0,
-                networkingTopic0, groceryStoreTopic0, shoppingClothesTopic0, travelTopic0,
+                networkingTopic0, groceryStoreAMDTopic0, shoppingClothesTopic0, travelTopic0,
                 sundayNow9to10Topic0)
 
         case 11...13:
@@ -941,18 +941,18 @@ class NowViewController: UIViewController {
         case 14...16:
             print("Weekend, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, gymTopic0, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic0, networkingTopic0, dateTopic0, shoppingClothesTopic0, groceryStoreTopic0, travelTopic0, sundayNow14to16Topic1)
+            appendNineTopics(homePMTopic0, gymTopic0, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic0, networkingTopic0, dateTopic0, shoppingClothesTopic0, groceryStoreWENDTopic0, travelTopic0, sundayNow14to16Topic1)
 
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic0, dateTopic0, networkingTopic0, groceryStoreTopic0, shoppingClothesTopic0, gymTopic0, runningTopic0, yogaTopic0, travelTopic0,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic0, dateTopic0, networkingTopic0, groceryStoreWENDTopic0, shoppingClothesTopic0, gymTopic0, runningTopic0, yogaTopic0, travelTopic0,
                              sundayNow17to18Topic1)
 
         case 19...20:
             print("Weekend, Mid Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic0, dateTopic0, safetyTopic0, groceryStoreTopic0, shoppingClothesTopic0, gymTopic0, runningTopic0, yogaTopic0, travelTopic0,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic0, dateTopic0, safetyTopic0, groceryStoreWENDTopic0, shoppingClothesTopic0, gymTopic0, runningTopic0, yogaTopic0, travelTopic0,
                              sundayNow19to20Topic1)
 
         case 21..<24:
@@ -1032,13 +1032,13 @@ class NowViewController: UIViewController {
         case 17...18:
             print("weekdayMTW, Early-Evening")
 
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic1, runningTopic1, yogaTopic1, groceryStoreWDAYTopic0, shoppingClothesTopic1, dinnerTopic1, restaurantTopic1, happyHourTopic1, networkingTopic1, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic1, runningTopic1, yogaTopic1, groceryStoreTopic1, shoppingClothesTopic1, dinnerTopic1, restaurantTopic1, happyHourTopic1, networkingTopic1, homePMTopic1,
                              mondayNow17to18Topic1)
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic1, runningTopic1, yogaTopic1, groceryStoreWDAYTopic0, shoppingClothesTopic1, dinnerTopic1, restaurantTopic1, barTopic1, dateTopic1, networkingTopic1, safetyTopic1, homePMTopic1,
+            appendNineTopics(gymTopic1, runningTopic1, yogaTopic1, groceryStoreTopic1, shoppingClothesTopic1, dinnerTopic1, restaurantTopic1, barTopic1, dateTopic1, networkingTopic1, safetyTopic1, homePMTopic1,
                              mondayNow19to20Topic1)
 
         case 21..<24:
@@ -1092,7 +1092,7 @@ class NowViewController: UIViewController {
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(lunchTopic2, restaurantTopic2, cafePMTopic2, afternoonSnackTopic2, gymTopic2, yogaTopic2, runningTopic2, workPMTopic1, bathroomTopic2, breakTopic1, networkingTopic2, schoolPMTopic1,
+            appendNineTopics(lunchTopic2, restaurantTopic2, cafePMTopic2, afternoonSnackTopic2, gymTopic2, yogaTopic2, runningTopic2, workAMTopic1, bathroomTopic2, breakTopic1, networkingTopic2, schoolPMTopic1,
                              tuesdayNow11to13Topic1)
 
         case 12...13:
@@ -1114,14 +1114,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic1, commutePMTopic1, gymTopic2, runningTopic2, yogaTopic2, groceryStoreWDAYTopic0, shoppingClothesTopic2, dinnerTopic2, restaurantTopic2, happyHourTopic2, networkingTopic2, homePMTopic2,
+            appendNineTopics(workLateTopic1, commutePMTopic1, gymTopic2, runningTopic2, yogaTopic2, groceryStoreTopic2, shoppingClothesTopic2, dinnerTopic2, restaurantTopic2, happyHourTopic2, networkingTopic2, homePMTopic2,
                              tuesdayNow17to18Topic1)
 
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic2, yogaTopic2, groceryStoreWDAYTopic0, shoppingClothesTopic2, dinnerTopic2, restaurantTopic2, barTopic2, dateTopic2, networkingTopic2, safetyTopic2, homePMTopic2,
+            appendNineTopics(gymTopic2, runningTopic2, yogaTopic2, groceryStoreTopic2, shoppingClothesTopic2, dinnerTopic2, restaurantTopic2, barTopic2, dateTopic2, networkingTopic2, safetyTopic2, homePMTopic2,
                              tuesdayNow19to20Topic1)
 
         case 21..<24:
@@ -1178,7 +1178,7 @@ class NowViewController: UIViewController {
 
 
         case 11:
-            appendNineTopics(lunchTopic3, restaurantTopic3, cafePMTopic3, afternoonSnackTopic3, gymTopic3, yogaTopic3, runningTopic3, workPMTopic3, bathroomTopic3, breakTopic2, networkingTopic3, schoolPMTopic2,
+            appendNineTopics(lunchTopic3, restaurantTopic3, cafePMTopic3, afternoonSnackTopic3, gymTopic3, yogaTopic3, runningTopic3, workAMTopic2, bathroomTopic3, breakTopic2, networkingTopic3, schoolPMTopic2,
                              wednesdayNow11to13Topic1)
 
             setNatureImage(to: "day4")
@@ -1194,14 +1194,14 @@ class NowViewController: UIViewController {
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(afternoonSnackTopic3, cafePMTopic3, workPMTopic2, networkingTopic3, breakPMTopic2, commutePMTopic2, groceryStoreWDAYTopic0, shoppingClothesTopic2, gymTopic3, runningTopic3, yogaTopic3, schoolPMTopic2,
+            appendNineTopics(afternoonSnackTopic3, cafePMTopic3, workPMTopic2, networkingTopic3, breakPMTopic2, commutePMTopic2, groceryStoreTopic3, shoppingClothesTopic2, gymTopic3, runningTopic3, yogaTopic3, schoolPMTopic2,
                              wednesdayNow14to16Topic1)
 
             setNatureImage(to: "afternoon4")
 
         case 16:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic2, afternoonSnackTopic3, breakPMTopic3, commutePMTopic2, groceryStoreWDAYTopic0, shoppingClothesTopic3, happyHourTopic3, networkingTopic3, gymTopic3, runningTopic3, yogaTopic3, schoolPMTopic2,
+            appendNineTopics(workPMTopic2, afternoonSnackTopic3, breakPMTopic3, commutePMTopic2, groceryStoreTopic3, shoppingClothesTopic3, happyHourTopic3, networkingTopic3, gymTopic3, runningTopic3, yogaTopic3, schoolPMTopic2,
                              wednesdayNow14to16Topic1)
 
             setNatureImage(to: "afternoon4")
@@ -1209,14 +1209,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic2, commutePMTopic2, gymTopic3, runningTopic3, yogaTopic3, groceryStoreWDAYTopic0, shoppingClothesTopic3, dinnerTopic3, restaurantTopic3, happyHourTopic3, networkingTopic3, homePMTopic3,
+            appendNineTopics(workLateTopic2, commutePMTopic2, gymTopic3, runningTopic3, yogaTopic3, groceryStoreTopic3, shoppingClothesTopic3, dinnerTopic3, restaurantTopic3, happyHourTopic3, networkingTopic3, homePMTopic3,
                              wednesdayNow17to18Topic1)
 
             setNatureImage(to: "sunset4")
 
         case 19...20:
             print("Weekday, Evening")
-            appendNineTopics(gymTopic3, runningTopic3, yogaTopic3, groceryStoreWDAYTopic0, shoppingClothesTopic3, dinnerTopic3, restaurantTopic3, barTopic3, dateTopic3, networkingTopic3, safetyTopic3, homePMTopic3,
+            appendNineTopics(gymTopic3, runningTopic3, yogaTopic3, groceryStoreTopic3, shoppingClothesTopic3, dinnerTopic3, restaurantTopic3, barTopic3, dateTopic3, networkingTopic3, safetyTopic3, homePMTopic3,
                              wednesdayNow19to20Topic1)
 
             setNatureImage(to: "sunset4")
@@ -1278,7 +1278,7 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekdayTF, Late Morning")
-            appendNineTopics(lunchTopic4, restaurantTopic4, cafePMTopic4, afternoonSnackTopic4, gymTopic4, yogaTopic4, runningTopic4, workPMTopic3, bathroomTopic4, breakTopic3, networkingTopic4, schoolPMTopic3,
+            appendNineTopics(lunchTopic4, restaurantTopic4, cafePMTopic4, afternoonSnackTopic4, gymTopic4, yogaTopic4, runningTopic4, workAMTopic3, bathroomTopic4, breakTopic3, networkingTopic4, schoolPMTopic3,
                              thursdayNow11to13Topic1)
 
             setNatureImage(to: "midmorning5")
@@ -1302,7 +1302,7 @@ class NowViewController: UIViewController {
 
         case 16:
             print("weekdayTF, Afternoon")
-            appendNineTopics(workPMTopic3, afternoonSnackTopic4, breakPMTopic3, commutePMTopic3, groceryStoreWDAYTopic0, shoppingClothesTopic4, happyHourTopic4, networkingTopic4, gymTopic4, runningTopic4, yogaTopic4, schoolPMTopic3,
+            appendNineTopics(workPMTopic3, afternoonSnackTopic4, breakPMTopic3, commutePMTopic3, groceryStoreTopic4, shoppingClothesTopic4, happyHourTopic4, networkingTopic4, gymTopic4, runningTopic4, yogaTopic4, schoolPMTopic3,
                              thursdayNow14to16Topic1)
 
             setNatureImage(to: "afternoon5")
@@ -1310,7 +1310,7 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-            appendNineTopics(workLateTopic3, commutePMTopic3, gymTopic4, runningTopic4, yogaTopic4, groceryStoreWDAYTopic0, shoppingClothesTopic4, dinnerTopic4, restaurantTopic4, happyHourTopic4, networkingTopic4, homePMTopic4,
+            appendNineTopics(workLateTopic3, commutePMTopic3, gymTopic4, runningTopic4, yogaTopic4, groceryStoreTopic4, shoppingClothesTopic4, dinnerTopic4, restaurantTopic4, happyHourTopic4, networkingTopic4, homePMTopic4,
                              thursdayNow17to18Topic1)
 
             setNatureImage(to: "afternoon5")
@@ -1318,7 +1318,7 @@ class NowViewController: UIViewController {
 
         case 19...20:
             print("weekdayTF, Evening")
-            appendNineTopics(gymTopic4, runningTopic4, yogaTopic4, groceryStoreWDAYTopic0, shoppingClothesTopic4, dinnerTopic4, restaurantTopic4, barTopic4, dateTopic4, networkingTopic4, safetyTopic4, homePMTopic4,
+            appendNineTopics(gymTopic4, runningTopic4, yogaTopic4, groceryStoreTopic4, shoppingClothesTopic4, dinnerTopic4, restaurantTopic4, barTopic4, dateTopic4, networkingTopic4, safetyTopic4, homePMTopic4,
                              thursdayNow19to20Topic1)
 
             setNatureImage(to: "sunset5")
@@ -1384,7 +1384,7 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic5, restaurantTopic5, cafePMTopic5, afternoonSnackTopic5, gymTopic5, runningTopic5, workPMTopic4, bathroomTopic5, breakTopic4, networkingTopic5, travelTopic1, schoolPMTopic4,
+            appendNineTopics(lunchTopic5, restaurantTopic5, cafePMTopic5, afternoonSnackTopic5, gymTopic5, runningTopic5, workAMTopic4, bathroomTopic5, breakTopic4, networkingTopic5, travelTopic1, schoolPMTopic4,
                              fridayNow11to13Topic1)
 
             setNatureImage(to: "day6")
@@ -1400,7 +1400,7 @@ class NowViewController: UIViewController {
         case 14...15:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic5, cafePMTopic5, workPMTopic4, networkingTopic5, breakPMTopic4, commuteFridayPMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic5, gymTopic5, runningTopic5, travelTopic1, schoolPMTopic2,
+            appendNineTopics(afternoonSnackTopic5, cafePMTopic5, workPMTopic4, networkingTopic5, breakPMTopic4, commuteFridayPMTopic0, groceryStoreTopic5, shoppingClothesTopic5, gymTopic5, runningTopic5, travelTopic1, schoolPMTopic2,
                              fridayNow14to16Topic1)
 
             setNatureImage(to: "afternoon6")
@@ -1460,12 +1460,12 @@ class NowViewController: UIViewController {
 
         case 5...8:
             print("Weekend, Early Morning")
-            appendNineTopics(AMRoutineTopic6, gymTopic6, runningTopic6, yogaTopic6, homeAMTopic6, bathroomTopic6, getReadyAMTopic6, breakfastTopic6, cafeTopic6, networkingTopic6, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic6, gymTopic6, runningTopic6, yogaTopic6, homeAMTopic6, bathroomTopic6, getReadyAMTopic6, breakfastTopic6, cafeTopic6, networkingTopic6, groceryStoreTopic6, travelTopic2,
                              saturdayNow5to8Topic1)
 
         case 9:
             print("Weekend, Early Morning")
-            appendNineTopics(AMRoutineTopic6, gymTopic6, runningTopic6, yogaTopic6, homeAMTopic6, bathroomTopic6, getReadyAMTopic6, breakfastTopic6, cafeTopic6, networkingTopic6, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic6, gymTopic6, runningTopic6, yogaTopic6, homeAMTopic6, bathroomTopic6, getReadyAMTopic6, breakfastTopic6, cafeTopic6, networkingTopic6, groceryStoreTopic6, travelTopic2,
                              saturdayNow9to10Topic0)
 
         case 10:
@@ -1477,8 +1477,7 @@ class NowViewController: UIViewController {
         case 11...13:
             print("Weekend, Midday")
             appendNineTopics(homePMTopic6, gymTopic6, runningTopic6, cafePMTopic6,
-                             brunchTopic6, lunchTopic6, restaurantTopic6, barTopic6,
-                             networkingTopic6, groceryStoreWENDTopic0, shoppingClothesTopic6, travelTopic2,
+                             brunchTopic6, lunchTopic6, restaurantTopic6, barTopic6, networkingTopic6, groceryStoreTopic6, shoppingClothesTopic6, travelTopic2,
                              saturdayNow11to13Topic1)
 
         case 14...16:
@@ -1521,13 +1520,13 @@ class NowViewController: UIViewController {
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic0, networkingTopic1, safetyTopic1,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homeAMTopic0, eveningRoutineTopic0, bedtimeTopic0, cantSleepTopic1,
+                             restaurantTopic7, lateNightSnackTopic0, groceryStoreTopic7, bathroomPMTopic0, homeAMTopic0, eveningRoutineTopic0, bedtimeTopic0, cantSleepTopic1,
                              sunday0to4Topic2)
 
         case 5...8:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic7, travelTopic2,
                              sundayNow5to8Topic2)
 
         case 9:
@@ -1540,30 +1539,30 @@ class NowViewController: UIViewController {
             print("Weekend, Late Morning")
             // call function to display 9 time-based topics // ****
             appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, getReadyAMTopic0, brunchTopic0, cafeTopic0,
-                             networkingTopic1, groceryStoreTopic0, shoppingClothesTopic0, travelTopic2,
+                             networkingTopic1, groceryStoreTopic7, shoppingClothesTopic0, travelTopic2,
                              sundayNow9to10Topic1)
 
         case 11...13:
             print("Weekend, Midday")
-            appendNineTopics(homeAMTopic0, gymTopic0, runningTopic0, cafePMTopic0, brunchTopic0, lunchTopic0, restaurantTopic0, barTopic1, networkingTopic1, groceryStoreWENDTopic0, shoppingClothesTopic1, travelTopic2,
+            appendNineTopics(homeAMTopic0, gymTopic0, runningTopic0, cafePMTopic0, brunchTopic0, lunchTopic0, restaurantTopic7, barTopic1, networkingTopic1, groceryStoreTopic7, shoppingClothesTopic1, travelTopic2,
                              sundayNow11to13Topic2)
 
         case 14...16:
             print("Weekend, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic7, travelTopic2,
                              sundayNow14to16Topic2)
 
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic7, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic7, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              sundayNow17to18Topic2)
 
         case 19...20:
             print("Weekend, Mid Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic7, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic7, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              sundayNow19to20Topic2)
 
         case 21..<24:
@@ -1588,14 +1587,14 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0,
+                             restaurantTopic8, lateNightSnackTopic0, groceryStoreTopic8, bathroomPMTopic0,
                              homePMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              mondayNow0to4Topic2)
 
         case 5...7:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
+            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic0, workAMTopic5, schoolAMTopic1,
                              mondayNow5to8Topic2)
 
             // meditate, journal,
@@ -1605,60 +1604,60 @@ class NowViewController: UIViewController {
             print("weekdayMTW, arly Morning")
             // call function to display 9 time-based topics
             appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
+                             cafeTopic1, commuteAMTopic0, workAMTopic5, schoolAMTopic1,
                              mondayNow5to8Topic2)
 
         case 9:
             print("weekdayMTW, mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, schoolAMTopic1,
+            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic5, networkingTopic1, schoolAMTopic1,
                              mondayNow9to11Topic2)
 
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic1,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic1,
                              mondayNow9to11Topic2)
 
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic0, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
+            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic8, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic5, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
                              mondayNow11to13Topic2)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic8, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic5, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              mondayNow11to13Topic2)
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic5, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic8, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic2)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic5, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic8, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic2)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
 
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic8, shoppingClothesTopic0, dinnerTopic1, restaurantTopic8, happyHourTopic0, networkingTopic3, homePMTopic1,
                              mondayNow17to18Topic2)
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic8, shoppingClothesTopic0, dinnerTopic1, restaurantTopic8, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              mondayNow19to20Topic2)
 
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic8, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              mondayNow21to24Topic2)
 
 
@@ -1675,73 +1674,73 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic9, lateNightSnackTopic0, groceryStoreTopic9, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow0to4Topic2)
 
         case 5...7:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic6, schoolAMTopic3,
                              tuesdayNow5to8Topic2) //*
 
         case 8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic6, schoolAMTopic3,
                              tuesdayNow5to8Topic2) //*
 
         case 9:
             print("weekdayMTW, Mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic6, networkingTopic1, schoolAMTopic3,
                              tuesdayNow9to11Topic2) //*
 
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic6, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              tuesdayNow9to11Topic2)
 
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic9, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic6, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              tuesdayNow11to13Topic2)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic9, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic6, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              tuesdayNow11to13Topic2) // Tues specific tips
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic6, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic9, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic2)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic6, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic9, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic2)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic9, shoppingClothesTopic0, dinnerTopic1, restaurantTopic9, happyHourTopic0, networkingTopic3, homePMTopic1,
                              tuesdayNow17to18Topic2)
 
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic9, shoppingClothesTopic0, dinnerTopic1, restaurantTopic9, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              tuesdayNow19to20Topic2)
 
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic9, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow21to24Topic2)
 
         default:
@@ -1756,14 +1755,14 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekdayMTW, Very Early Morning")
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic10, lateNightSnackTopic0, groceryStoreTopic10, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow0to4Topic2)
 
             setNatureImage(to: "night4")
 
         case 5...7:
             print("weekdayMTW, Early Morning")
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic7, schoolAMTopic3,
                              wednesdayNow5to8Topic2) //*
 
             setNatureImage(to: "morning4")
@@ -1771,28 +1770,28 @@ class NowViewController: UIViewController {
         case 8:
             print("weekdayMTW, Mid Morning")
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic7, schoolAMTopic3,
                              wednesdayNow5to8Topic2)
 
             setNatureImage(to: "morning4")
 
         case 9:
             print("weekdayMTW, Mid Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic7, networkingTopic1, schoolAMTopic3,
                              wednesdayNow9to11Topic2)
 
             setNatureImage(to: "midmorning4")
 
         case 10:
             print("weekdayMTW, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic7, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              wednesdayNow9to11Topic2)
 
             setNatureImage(to: "midmorning4")
 
 
         case 11:
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic10, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic7, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              wednesdayNow11to13Topic2)
 
             setNatureImage(to: "day4")
@@ -1800,7 +1799,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic10, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic7, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              wednesdayNow11to13Topic2)
 
             setNatureImage(to: "day4")
@@ -1808,14 +1807,14 @@ class NowViewController: UIViewController {
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic7, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic10, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic2)
 
             setNatureImage(to: "afternoon4")
 
         case 16:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic7, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic10, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic2)
 
             setNatureImage(to: "afternoon4")
@@ -1823,22 +1822,21 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic10, shoppingClothesTopic0, dinnerTopic1, restaurantTopic10, happyHourTopic0, networkingTopic3, homePMTopic1,
                              wednesdayNow17to18Topic2)
 
             setNatureImage(to: "sunset4")
 
         case 19...20:
             print("Weekday, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic10, shoppingClothesTopic0, dinnerTopic1, restaurantTopic10, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              wednesdayNow19to20Topic2)
 
             setNatureImage(to: "sunset4")
 
-
         case 21..<24:
             print("Weekday, Late evening")
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic10, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow21to24Topic2)
 
             setNatureImage(to: "night4")
@@ -1856,14 +1854,14 @@ class NowViewController: UIViewController {
             print("weekdayTF, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic11, lateNightSnackTopic0, groceryStoreTopic11, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow0to4Topic2)
 
             setNatureImage(to: "night5")
 
         case 5...7:
             print("weekdayTF, Early Morning")
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic8, schoolAMTopic3,
                              thursdayNow5to8Topic2)
 
             setNatureImage(to: "morning5")
@@ -1871,20 +1869,20 @@ class NowViewController: UIViewController {
 
         case 8:
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic8, schoolAMTopic3,
                              thursdayNow5to8Topic2)
 
             setNatureImage(to: "morning5")
 
         case 9:
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic8, networkingTopic1, schoolAMTopic3,
                              thursdayNow9to11Topic2)
 
             setNatureImage(to: "midmorning5")
 
         case 10:
             print("weekdayTF, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic8, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              thursdayNow9to11Topic2)
 
             setNatureImage(to: "midmorning5")
@@ -1892,14 +1890,14 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekdayTF, Late Morning")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic11, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic8, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              thursdayNow11to13Topic2)
 
             setNatureImage(to: "midmorning5")
 
         case 12...13:
             print("weekdayTF, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic11, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic8, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              thursdayNow11to13Topic2)
 
             setNatureImage(to: "day5")
@@ -1908,7 +1906,7 @@ class NowViewController: UIViewController {
         case 14...15: // 2PM-4PM
             print("weekdayTF, Afternoon")
 
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic8, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic11, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic2)
 
             setNatureImage(to: "afternoon5")
@@ -1916,7 +1914,7 @@ class NowViewController: UIViewController {
 
         case 16:
             print("weekdayTF, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic8, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic11, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic2)
 
             setNatureImage(to: "afternoon5")
@@ -1924,7 +1922,7 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic11, shoppingClothesTopic0, dinnerTopic1, restaurantTopic11, happyHourTopic0, networkingTopic3, homePMTopic1,
                              thursdayNow17to18Topic2)
 
             setNatureImage(to: "afternoon5")
@@ -1932,7 +1930,7 @@ class NowViewController: UIViewController {
 
         case 19...20:
             print("weekdayTF, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic11, shoppingClothesTopic0, dinnerTopic1, restaurantTopic11, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              thursdayNow19to20Topic2)
 
             setNatureImage(to: "sunset5")
@@ -1940,7 +1938,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic11, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow21to24Topic2)
 
             setNatureImage(to: "night5")
@@ -1959,14 +1957,14 @@ class NowViewController: UIViewController {
             print("weekday Fri, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic12, lateNightSnackTopic0, groceryStoreTopic12, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              fridayNow0to4Topic2)
 
             setNatureImage(to: "night6")
 
         case 5...7:
             print("weekday Fri, Early Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic9, schoolAMTopic3,
                              fridayNow5to8Topic2)
 
             setNatureImage(to: "morning6")
@@ -1975,14 +1973,14 @@ class NowViewController: UIViewController {
         case 8:
             print("weekday Fri, Late Morning")
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic9, schoolAMTopic3,
                              fridayNow5to8Topic2)
 
             setNatureImage(to: "midmorning6")
 
         case 9:
             print("weekday Fri, Late Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic9, networkingTopic1, schoolAMTopic3,
                              fridayNow9to11Topic2)
 
             setNatureImage(to: "midmorning6")
@@ -1990,7 +1988,7 @@ class NowViewController: UIViewController {
 
         case 10:
             print("weekday Fri, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic9, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              fridayNow9to11Topic2)
 
             setNatureImage(to: "midmorning6")
@@ -1998,7 +1996,7 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic12, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workAMTopic9, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
                              fridayNow11to13Topic2)
 
             setNatureImage(to: "day6")
@@ -2006,7 +2004,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic12, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic9, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
                              fridayNow11to13Topic2)
 
             setNatureImage(to: "day6")
@@ -2014,7 +2012,7 @@ class NowViewController: UIViewController {
         case 14...15:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic4, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic9, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreTopic12, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
                              fridayNow14to16Topic2)
 
             setNatureImage(to: "afternoon6")
@@ -2023,7 +2021,7 @@ class NowViewController: UIViewController {
         case 16:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic4, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic6, shoppingClothesTopic0, travelTopic2,
+            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic9, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic12, shoppingClothesTopic0, travelTopic2,
                              fridayNow14to16Topic2)
 
             setNatureImage(to: "afternoon6")
@@ -2033,7 +2031,7 @@ class NowViewController: UIViewController {
             print("weekday Fri, Evening 5-6PM")
 
             ////FRIDAY ONLY COMMUTE
-            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic0, groceryStoreTopic6, shoppingClothesTopic0,  travelTopic2,
+            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic12, groceryStoreTopic12, shoppingClothesTopic0,  travelTopic2,
                              fridayNow17to18Topic2)
 
             setNatureImage(to: "afternoon6")
@@ -2041,7 +2039,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic0, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic6, travelTopic2,
+            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic12, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic12, travelTopic2,
                              fridayNow19to20Topic2)
 
             setNatureImage(to: "sunset6")
@@ -2050,7 +2048,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic0,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
+            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic12,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
                              lateNightSnackTopic1, eveningRoutineTopic0, bedtimeFriPMTopic5, cantSleepTopic3,
                              fridayNow21to24Topic2)
 
@@ -2069,12 +2067,12 @@ class NowViewController: UIViewController {
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic13, lateNightSnackTopic0, groceryStoreTopic13, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              saturday0to4Topic2)
 
         case 5...8:
             print("Weekend, Early Morning")
-            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic13, travelTopic2,
                              saturdayNow5to8Topic2)
 
         case 9:
@@ -2085,32 +2083,32 @@ class NowViewController: UIViewController {
         case 10:
             print("Weekend, Late Morning")
             appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, getReadyAMTopic0, brunchTopic0, cafeTopic0,
-                             networkingTopic1, groceryStoreTopic0, shoppingClothesTopic0, travelTopic2,
+                             networkingTopic1, groceryStoreTopic13, shoppingClothesTopic0, travelTopic2,
                              saturdayNow9to10Topic1)
 
         case 11...13:
             print("Weekend, Midday")
             appendNineTopics(homePMTopic6, gymTopic12, runningTopic0, cafePMTopic1,
-                             brunchTopic1, lunchTopic1, restaurantTopic3, barTopic2,
-                             networkingTopic1, groceryStoreWENDTopic0, shoppingClothesTopic1, travelTopic2,
+                             brunchTopic1, lunchTopic1, restaurantTopic13, barTopic2,
+                             networkingTopic1, groceryStoreTopic13, shoppingClothesTopic1, travelTopic2,
                              saturdayNow11to13Topic2)
 
         case 14...16:
             print("Weekend, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic13, travelTopic2,
                              saturdayNow14to16Topic2)
 
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic13, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic13, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow17to18Topic2)
 
         case 19...20:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic13, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic13, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow19to20Topic2)
 
         case 21..<24:
@@ -2140,13 +2138,13 @@ class NowViewController: UIViewController {
         case 5...8:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic0, travelTopic2,
                              sundayNow5to8Topic3)
 
         case 9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic0,  runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0,  runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic0, travelTopic2,
                              sundayNow9to10Topic2)
 
         case 10:
@@ -2158,7 +2156,7 @@ class NowViewController: UIViewController {
 
         case 11...13:
             print("Weekend, Midday")
-            appendNineTopics(homeAMTopic0, gymTopic0, runningTopic0, cafePMTopic0, brunchTopic0, lunchTopic0, restaurantTopic0, barTopic1, networkingTopic1, groceryStoreWENDTopic0, shoppingClothesTopic1, travelTopic2,
+            appendNineTopics(homeAMTopic0, gymTopic0, runningTopic0, cafePMTopic0, brunchTopic0, lunchTopic0, restaurantTopic0, barTopic1, networkingTopic1, groceryStoreTopic0, shoppingClothesTopic1, travelTopic2,
                              sundayNow11to13Topic3)
 
         case 14...16:
@@ -2170,13 +2168,13 @@ class NowViewController: UIViewController {
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic0, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              sundayNow17to18Topic3)
 
         case 19...20:
             print("Weekend, Mid Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic0, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              sundayNow19to20Topic3)
 
         case 21..<24:
@@ -2201,14 +2199,14 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0,
+                             restaurantTopic1, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0,
                              homePMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              mondayNow0to4Topic3)
 
         case 5...7:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
+            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic0, workAMTopic10, schoolAMTopic1,
                              mondayNow5to8Topic3)
 
             // meditate, journal,
@@ -2218,54 +2216,54 @@ class NowViewController: UIViewController {
             print("weekdayMTW, arly Morning")
             // call function to display 9 time-based topics
             appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
+                             cafeTopic1, commuteAMTopic0, workAMTopic10, schoolAMTopic1,
                              mondayNow5to8Topic3)
 
         case 9:
             print("weekdayMTW, mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, schoolAMTopic1,
+            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic10, networkingTopic1, schoolAMTopic1,
                              mondayNow9to11Topic3)
 
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic1,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic10, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic1,
                              mondayNow9to11Topic3)
 
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic0, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
+            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic1, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic10, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
                              mondayNow11to13Topic3)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic10, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              mondayNow11to13Topic3)
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic10, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic3)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic10, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic3)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
 
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
                              mondayNow17to18Topic3)
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              mondayNow19to20Topic3)
 
         case 21..<24:
@@ -2288,73 +2286,72 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic2, lateNightSnackTopic0, groceryStoreTopic1, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow0to4Topic3)
 
         case 5...7:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic11, schoolAMTopic3,
                              tuesdayNow5to8Topic3) //*
 
         case 8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic11, schoolAMTopic3,
                              tuesdayNow5to8Topic3) //*
 
         case 9:
             print("weekdayMTW, Mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic11, networkingTopic1, schoolAMTopic3,
                              tuesdayNow9to11Topic3) //*
 
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic11, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              tuesdayNow9to11Topic3)
 
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
-                             tuesdayNow11to13Topic3)
+            appendNineTopics(lunchTopic3, restaurantTopic2, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic11, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3, tuesdayNow11to13Topic3)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic2, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic11, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              tuesdayNow11to13Topic3) // Tues specific tips
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic11, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic1, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic3)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic11, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic1, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic3)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic1, shoppingClothesTopic0, dinnerTopic1, restaurantTopic2, happyHourTopic0, networkingTopic3, homePMTopic1,
                              tuesdayNow17to18Topic3)
 
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic1, shoppingClothesTopic0, dinnerTopic1, restaurantTopic2, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              tuesdayNow19to20Topic3)
 
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic2, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow21to24Topic3)
 
         default:
@@ -2369,14 +2366,14 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekdayMTW, Very Early Morning")
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic3, lateNightSnackTopic0, groceryStoreTopic3, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow0to4Topic3)
 
             setNatureImage(to: "night4")
 
         case 5...7:
             print("weekdayMTW, Early Morning")
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic12, schoolAMTopic3,
                              wednesdayNow5to8Topic3) //*
 
             setNatureImage(to: "morning4")
@@ -2384,28 +2381,28 @@ class NowViewController: UIViewController {
         case 8:
             print("weekdayMTW, Mid Morning")
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic12, schoolAMTopic3,
                              wednesdayNow5to8Topic3)
 
             setNatureImage(to: "morning4")
 
         case 9:
             print("weekdayMTW, Mid Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic12, networkingTopic1, schoolAMTopic3,
                              wednesdayNow9to11Topic3)
 
             setNatureImage(to: "midmorning4")
 
         case 10:
             print("weekdayMTW, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic12, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              wednesdayNow9to11Topic3)
 
             setNatureImage(to: "midmorning4")
 
 
         case 11:
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic3, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic12, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              wednesdayNow11to13Topic3)
 
             setNatureImage(to: "day4")
@@ -2413,7 +2410,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic3, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic12, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              wednesdayNow11to13Topic3)
 
             setNatureImage(to: "day4")
@@ -2421,14 +2418,14 @@ class NowViewController: UIViewController {
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic12, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic3, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic3)
 
             setNatureImage(to: "afternoon4")
 
         case 16:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic12, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic3, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic3)
 
             setNatureImage(to: "afternoon4")
@@ -2436,14 +2433,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic3, shoppingClothesTopic0, dinnerTopic1, restaurantTopic3, happyHourTopic0, networkingTopic3, homePMTopic1,
                              wednesdayNow17to18Topic3)
 
             setNatureImage(to: "sunset4")
 
         case 19...20:
             print("Weekday, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic3, shoppingClothesTopic0, dinnerTopic1, restaurantTopic3, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              wednesdayNow19to20Topic3)
 
             setNatureImage(to: "sunset4")
@@ -2451,7 +2448,7 @@ class NowViewController: UIViewController {
 
         case 21..<24:
             print("Weekday, Late evening")
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic3, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow21to24Topic3)
 
             setNatureImage(to: "night4")
@@ -2469,14 +2466,14 @@ class NowViewController: UIViewController {
             print("weekdayTF, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic4, lateNightSnackTopic0, groceryStoreTopic4, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow0to4Topic3)
 
             setNatureImage(to: "night5")
 
         case 5...7:
             print("weekdayTF, Early Morning")
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic13, schoolAMTopic3,
                              thursdayNow5to8Topic3)
 
             setNatureImage(to: "morning5")
@@ -2484,20 +2481,20 @@ class NowViewController: UIViewController {
 
         case 8:
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic13, schoolAMTopic3,
                              thursdayNow5to8Topic3)
 
             setNatureImage(to: "morning5")
 
         case 9:
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic13, networkingTopic1, schoolAMTopic3,
                              thursdayNow9to11Topic3)
 
             setNatureImage(to: "midmorning5")
 
         case 10:
             print("weekdayTF, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic13, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              thursdayNow9to11Topic3)
 
             setNatureImage(to: "midmorning5")
@@ -2505,14 +2502,14 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekdayTF, Late Morning")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic4, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic13, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              thursdayNow11to13Topic3)
 
             setNatureImage(to: "midmorning5")
 
         case 12...13:
             print("weekdayTF, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic4, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic13, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              thursdayNow11to13Topic3)
 
             setNatureImage(to: "day5")
@@ -2521,7 +2518,7 @@ class NowViewController: UIViewController {
         case 14...15: // 2PM-4PM
             print("weekdayTF, Afternoon")
 
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic13, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreTopic4, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic3)
 
             setNatureImage(to: "afternoon5")
@@ -2529,7 +2526,7 @@ class NowViewController: UIViewController {
 
         case 16:
             print("weekdayTF, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic13, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreTopic4, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic3)
 
             setNatureImage(to: "afternoon5")
@@ -2537,7 +2534,7 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic4, shoppingClothesTopic0, dinnerTopic1, restaurantTopic4, happyHourTopic0, networkingTopic3, homePMTopic1,
                              thursdayNow17to18Topic3)
 
             setNatureImage(to: "afternoon5")
@@ -2545,7 +2542,7 @@ class NowViewController: UIViewController {
 
         case 19...20:
             print("weekdayTF, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreTopic4, shoppingClothesTopic0, dinnerTopic1, restaurantTopic4, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              thursdayNow19to20Topic3)
 
             setNatureImage(to: "sunset5")
@@ -2553,7 +2550,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic4, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow21to24Topic3)
 
             setNatureImage(to: "night5")
@@ -2572,14 +2569,14 @@ class NowViewController: UIViewController {
             print("weekday Fri, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic5, lateNightSnackTopic0, groceryStoreTopic5, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              fridayNow0to4Topic3)
 
             setNatureImage(to: "night6")
 
         case 5...7:
             print("weekday Fri, Early Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic14, schoolAMTopic3,
                              fridayNow5to8Topic3)
 
             setNatureImage(to: "morning6")
@@ -2588,14 +2585,14 @@ class NowViewController: UIViewController {
         case 8:
             print("weekday Fri, Late Morning")
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic14, schoolAMTopic3,
                              fridayNow5to8Topic3)
 
             setNatureImage(to: "midmorning6")
 
         case 9:
             print("weekday Fri, Late Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic14, networkingTopic1, schoolAMTopic3,
                              fridayNow9to11Topic3)
 
             setNatureImage(to: "midmorning6")
@@ -2603,7 +2600,7 @@ class NowViewController: UIViewController {
 
         case 10:
             print("weekday Fri, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic14, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              fridayNow9to11Topic3)
 
             setNatureImage(to: "midmorning6")
@@ -2611,7 +2608,7 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic5, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workAMTopic14, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
                              fridayNow11to13Topic3)
 
             setNatureImage(to: "day6")
@@ -2619,7 +2616,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic5, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic14, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
                              fridayNow11to13Topic3)
 
             setNatureImage(to: "day6")
@@ -2627,7 +2624,7 @@ class NowViewController: UIViewController {
         case 14...15:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic4, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic14, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreTopic5, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
                              fridayNow14to16Topic3)
 
             setNatureImage(to: "afternoon6")
@@ -2636,7 +2633,7 @@ class NowViewController: UIViewController {
         case 16:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic4, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic6, shoppingClothesTopic0, travelTopic2,
+            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic14, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic5, shoppingClothesTopic0, travelTopic2,
                              fridayNow14to16Topic3)
 
             setNatureImage(to: "afternoon6")
@@ -2646,7 +2643,7 @@ class NowViewController: UIViewController {
             print("weekday Fri, Evening 5-6PM")
 
             ////FRIDAY ONLY COMMUTE
-            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic0, groceryStoreTopic6, shoppingClothesTopic0,  travelTopic2,
+            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic5, groceryStoreTopic5, shoppingClothesTopic0,  travelTopic2,
                              fridayNow17to18Topic3)
 
             setNatureImage(to: "afternoon6")
@@ -2654,7 +2651,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic0, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic6, travelTopic2,
+            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic5, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic5, travelTopic2,
                              fridayNow19to20Topic3)
 
             setNatureImage(to: "sunset6")
@@ -2663,7 +2660,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic0,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
+            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic5,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
                              lateNightSnackTopic1, eveningRoutineTopic0, bedtimeFriPMTopic5, cantSleepTopic3,
                              fridayNow21to24Topic3)
 
@@ -2682,48 +2679,48 @@ class NowViewController: UIViewController {
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic6, lateNightSnackTopic0, groceryStoreTopic6, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              saturday0to4Topic3)
 
         case 5...8:
             print("Weekend, Early Morning")
-            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic6, travelTopic2,
                              saturdayNow5to8Topic3)
 
         case 9:
             print("Weekend, Early Morning")
-            appendNineTopics(AMRoutineTopic0, gymTopic0,  runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0,  runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic6, travelTopic2,
                              saturdayNow9to10Topic2)
 
         case 10:
             print("Weekend, Late Morning")
             appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, getReadyAMTopic0, brunchTopic0, cafeTopic0,
-                             networkingTopic1, groceryStoreTopic0, shoppingClothesTopic0, travelTopic2,
+                             networkingTopic1, groceryStoreTopic6, shoppingClothesTopic0, travelTopic2,
                              saturdayNow9to10Topic2)
 
         case 11...13:
             print("Weekend, Midday")
             appendNineTopics(homePMTopic6, gymTopic12, runningTopic0, cafePMTopic1,
-                             brunchTopic1, lunchTopic1, restaurantTopic3, barTopic2,
-                             networkingTopic1, groceryStoreWENDTopic0, shoppingClothesTopic1, travelTopic2,
+                             brunchTopic1, lunchTopic1, restaurantTopic6, barTopic2,
+                             networkingTopic1, groceryStoreTopic6, shoppingClothesTopic1, travelTopic2,
                              saturdayNow11to13Topic3)
 
         case 14...16:
             print("Weekend, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic7, travelTopic2,
                              saturdayNow14to16Topic3)
 
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic6, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic7, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow17to18Topic3)
 
         case 19...20:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic6, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic7, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow19to20Topic3)
 
         case 21..<24:
@@ -2747,49 +2744,49 @@ class NowViewController: UIViewController {
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic0, networkingTopic1, safetyTopic1,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homeAMTopic0, eveningRoutineTopic0, bedtimeTopic0, cantSleepTopic1,
+                             restaurantTopic7, lateNightSnackTopic0, groceryStoreTopic8, bathroomPMTopic0, homeAMTopic0, eveningRoutineTopic0, bedtimeTopic0, cantSleepTopic1,
                              sunday0to4Topic4)
 
         case 5...8:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic8, travelTopic2,
                              sundayNow5to8Topic4)
 
         case 9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic0,  runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreWENDTopic0, travelTopic2,
+            appendNineTopics(AMRoutineTopic0, gymTopic0,  runningTopic0, yogaTopic0, homeAMTopic0, bathroomTopic0, getReadyAMTopic0, breakfastTopic0, cafeTopic0, networkingTopic1, groceryStoreTopic8, travelTopic2,
                              sundayNow9to10Topic3)
 
         case 10:
             print("Weekend, Late Morning")
             // call function to display 9 time-based topics // ****
             appendNineTopics(AMRoutineTopic0, gymTopic0, runningTopic0, yogaTopic0, homeAMTopic0, getReadyAMTopic0, brunchTopic0, cafeTopic0,
-                             networkingTopic1, groceryStoreTopic0, shoppingClothesTopic0, travelTopic2,
+                             networkingTopic1, groceryStoreTopic8, shoppingClothesTopic0, travelTopic2,
                              sundayNow9to10Topic3)
 
         case 11...13:
             print("Weekend, Midday")
-            appendNineTopics(homeAMTopic0, gymTopic0, runningTopic0, cafePMTopic0, brunchTopic0, lunchTopic0, restaurantTopic0, barTopic1, networkingTopic1, groceryStoreWENDTopic0, shoppingClothesTopic1, travelTopic2,
+            appendNineTopics(homeAMTopic0, gymTopic0, runningTopic0, cafePMTopic0, brunchTopic0, lunchTopic0, restaurantTopic7, barTopic1, networkingTopic1, groceryStoreTopic8, shoppingClothesTopic1, travelTopic2,
                              sundayNow11to13Topic4)
 
         case 14...16:
             print("Weekend, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, gymTopic1, runningTopic0, yogaTopic0, afternoonSnackTopic0, cafePMTopic0, barTopic1, networkingTopic1, dateTopic1, shoppingClothesTopic2, groceryStoreTopic9, travelTopic2,
                              sundayNow14to16Topic4)
 
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic7, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic9, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              sundayNow17to18Topic4)
 
         case 19...20:
             print("Weekend, Mid Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic7, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic9, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              sundayNow19to20Topic4)
 
         case 21..<24:
@@ -2814,7 +2811,7 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0,
+                             restaurantTopic8, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0,
                              homePMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              mondayNow0to4Topic4)
 
@@ -2830,8 +2827,7 @@ class NowViewController: UIViewController {
         case 8:
             print("weekdayMTW, arly Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
+            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
                              mondayNow5to8Topic4)
 
         case 9:
@@ -2849,42 +2845,42 @@ class NowViewController: UIViewController {
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic0, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
+            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic8, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
                              mondayNow11to13Topic4)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic8, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic15, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              mondayNow11to13Topic4)
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic15, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic4)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic15, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic4)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
 
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic8, happyHourTopic0, networkingTopic3, homePMTopic1,
                              mondayNow17to18Topic4)
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic8, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              mondayNow19to20Topic4)
 
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic8, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              mondayNow21to24Topic4)
 
 
@@ -2901,7 +2897,7 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic9, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow0to4Topic4)
 
         case 5...7:
@@ -2932,42 +2928,42 @@ class NowViewController: UIViewController {
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic9, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              tuesdayNow11to13Topic4)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic9, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic16, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              tuesdayNow11to13Topic4) // Tues specific tips
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic16, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic4)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic16, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic4)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic9, happyHourTopic0, networkingTopic3, homePMTopic1,
                              tuesdayNow17to18Topic4)
 
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic9, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              tuesdayNow19to20Topic4)
 
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic9, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow21to24Topic4)
 
         default:
@@ -2982,7 +2978,7 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekdayMTW, Very Early Morning")
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic10, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow0to4Topic4)
 
             setNatureImage(to: "night4")
@@ -3018,7 +3014,7 @@ class NowViewController: UIViewController {
 
 
         case 11:
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic10, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              wednesdayNow11to13Topic4)
 
             setNatureImage(to: "day4")
@@ -3026,7 +3022,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic10, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic17, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              wednesdayNow11to13Topic4)
 
             setNatureImage(to: "day4")
@@ -3034,14 +3030,14 @@ class NowViewController: UIViewController {
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic17, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic4)
 
             setNatureImage(to: "afternoon4")
 
         case 16:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic17, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic4)
 
             setNatureImage(to: "afternoon4")
@@ -3049,14 +3045,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic10, happyHourTopic0, networkingTopic3, homePMTopic1,
                              wednesdayNow17to18Topic4)
 
             setNatureImage(to: "sunset4")
 
         case 19...20:
             print("Weekday, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic10, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              wednesdayNow19to20Topic4)
 
             setNatureImage(to: "sunset4")
@@ -3064,7 +3060,7 @@ class NowViewController: UIViewController {
 
         case 21..<24:
             print("Weekday, Late evening")
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic10, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow21to24Topic4)
 
             setNatureImage(to: "night4")
@@ -3082,7 +3078,7 @@ class NowViewController: UIViewController {
             print("weekdayTF, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic11, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow0to4Topic4)
 
             setNatureImage(to: "night5")
@@ -3118,14 +3114,14 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekdayTF, Late Morning")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic11, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              thursdayNow11to13Topic4)
 
             setNatureImage(to: "midmorning5")
 
         case 12...13:
             print("weekdayTF, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic11, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic18, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              thursdayNow11to13Topic4)
 
             setNatureImage(to: "day5")
@@ -3134,7 +3130,7 @@ class NowViewController: UIViewController {
         case 14...15: // 2PM-4PM
             print("weekdayTF, Afternoon")
 
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic18, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic4)
 
             setNatureImage(to: "afternoon5")
@@ -3142,7 +3138,7 @@ class NowViewController: UIViewController {
 
         case 16:
             print("weekdayTF, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic18, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic4)
 
             setNatureImage(to: "afternoon5")
@@ -3150,7 +3146,7 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic11, happyHourTopic0, networkingTopic3, homePMTopic1,
                              thursdayNow17to18Topic4)
 
             setNatureImage(to: "afternoon5")
@@ -3158,7 +3154,7 @@ class NowViewController: UIViewController {
 
         case 19...20:
             print("weekdayTF, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic11, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              thursdayNow19to20Topic4)
 
             setNatureImage(to: "sunset5")
@@ -3166,7 +3162,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic11, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow21to24Topic4)
 
             setNatureImage(to: "night5")
@@ -3185,7 +3181,7 @@ class NowViewController: UIViewController {
             print("weekday Fri, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic12, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              fridayNow0to4Topic4)
 
             setNatureImage(to: "night6")
@@ -3224,7 +3220,7 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic12, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workAMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
                              fridayNow11to13Topic4)
 
             setNatureImage(to: "day6")
@@ -3232,7 +3228,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic12, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic19, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
                              fridayNow11to13Topic4)
 
             setNatureImage(to: "day6")
@@ -3240,7 +3236,7 @@ class NowViewController: UIViewController {
         case 14...15:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic4, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic19, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
                              fridayNow14to16Topic4)
 
             setNatureImage(to: "afternoon6")
@@ -3249,7 +3245,7 @@ class NowViewController: UIViewController {
         case 16:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic4, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic6, shoppingClothesTopic0, travelTopic2,
+            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic19, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic6, shoppingClothesTopic0, travelTopic2,
                              fridayNow14to16Topic4)
 
             setNatureImage(to: "afternoon6")
@@ -3259,7 +3255,7 @@ class NowViewController: UIViewController {
             print("weekday Fri, Evening 5-6PM")
 
             ////FRIDAY ONLY COMMUTE
-            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic0, groceryStoreTopic6, shoppingClothesTopic0,  travelTopic2,
+            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic12, groceryStoreTopic6, shoppingClothesTopic0,  travelTopic2,
                              fridayNow17to18Topic4)
 
             setNatureImage(to: "afternoon6")
@@ -3267,7 +3263,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic0, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic6, travelTopic2,
+            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic12, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic6, travelTopic2,
                              fridayNow19to20Topic4)
 
             setNatureImage(to: "sunset6")
@@ -3276,7 +3272,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic0,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
+            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic12,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
                              lateNightSnackTopic1, eveningRoutineTopic0, bedtimeFriPMTopic5, cantSleepTopic3,
                              fridayNow21to24Topic4)
 
@@ -3295,7 +3291,7 @@ class NowViewController: UIViewController {
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic13, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              saturday0to4Topic4)
 
         case 5...8:
@@ -3317,7 +3313,7 @@ class NowViewController: UIViewController {
         case 11...13:
             print("Weekend, Midday")
             appendNineTopics(homePMTopic6, gymTopic12, runningTopic0, cafePMTopic1,
-                             brunchTopic1, lunchTopic1, restaurantTopic3, barTopic2,
+                             brunchTopic1, lunchTopic1, restaurantTopic13, barTopic2,
                              networkingTopic1, groceryStoreWENDTopic0, shoppingClothesTopic1, travelTopic2,
                              saturdayNow11to13Topic4)
 
@@ -3330,13 +3326,13 @@ class NowViewController: UIViewController {
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic13, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow17to18Topic4)
 
         case 19...20:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic13, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow19to20Topic4)
 
         case 21..<24:
@@ -3427,14 +3423,14 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0,
+                             restaurantTopic1, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0,
                              homePMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              mondayNow0to4Topic5)
 
         case 5...7:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
+            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic0, workAMTopic5, schoolAMTopic1,
                              mondayNow5to8Topic5)
 
             // meditate, journal,
@@ -3444,42 +3440,42 @@ class NowViewController: UIViewController {
             print("weekdayMTW, arly Morning")
             // call function to display 9 time-based topics
             appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic0, workAMTopic0, schoolAMTopic1,
+                             cafeTopic1, commuteAMTopic0, workAMTopic5, schoolAMTopic1,
                              mondayNow5to8Topic5)
 
         case 9:
             print("weekdayMTW, mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, schoolAMTopic1,
+            appendNineTopics(AMRoutineTopic0, gymTopic2, runningTopic1, yogaTopic0,  getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic5, networkingTopic1, schoolAMTopic1,
                              mondayNow9to11Topic5)
 
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic0, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic1,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic0, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic1,
                              mondayNow9to11Topic5)
 
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic0, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
+            appendNineTopics(morningSnackTopic0, lunchTopic1, restaurantTopic1, cafeTopic1, gymTopic2, runningTopic1, yogaTopic0, workAMTopic5, bathroomTopic1, networkingTopic2, breakTopic0, schoolAMTopic1,
                              mondayNow11to13Topic5)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic20, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              mondayNow11to13Topic5)
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic20, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic5)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic20, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              mondayNow14to16Topic5)
 
         case 17...18:
@@ -3514,73 +3510,73 @@ class NowViewController: UIViewController {
             print("weekdayMTW, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic2, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow0to4Topic5)
 
         case 5...7:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic6, schoolAMTopic3,
                              tuesdayNow5to8Topic5) //*
 
         case 8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic6, schoolAMTopic3,
                              tuesdayNow5to8Topic5) //*
 
         case 9:
             print("weekdayMTW, Mid Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic6, networkingTopic1, schoolAMTopic3,
                              tuesdayNow9to11Topic5) //*
 
         case 10:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic6, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              tuesdayNow9to11Topic5)
 
         case 11:
             print("weekdayMTW, Late Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic2, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic6, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              tuesdayNow11to13Topic5)
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic2, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic21, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              tuesdayNow11to13Topic5) // Tues specific tips
 
         case 14...15:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic21, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic5)
 
         case 16:
             print("weekdayMTW, Afternoon")
             // call function to display 9 time-based topics
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic21, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              tuesdayNow14to16Topic5)
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic2, happyHourTopic0, networkingTopic3, homePMTopic1,
                              tuesdayNow17to18Topic5)
 
 
         case 19...20:
             print("Weekday, Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic2, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              tuesdayNow19to20Topic5)
 
         case 21..<24:
             print("Weekday, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic2, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              tuesdayNow21to24Topic5)
 
         default:
@@ -3595,43 +3591,42 @@ class NowViewController: UIViewController {
         case 0...4:
             print("weekdayMTW, Very Early Morning")
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic3, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow0to4Topic5)
 
             setNatureImage(to: "night4")
 
         case 5...7:
             print("weekdayMTW, Early Morning")
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic7, schoolAMTopic3,
                              wednesdayNow5to8Topic5) //*
 
             setNatureImage(to: "morning4")
 
         case 8:
             print("weekdayMTW, Mid Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic7, schoolAMTopic3,
                              wednesdayNow5to8Topic5)
 
             setNatureImage(to: "morning4")
 
         case 9:
             print("weekdayMTW, Mid Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic7, networkingTopic1, schoolAMTopic3,
                              wednesdayNow9to11Topic5)
 
             setNatureImage(to: "midmorning4")
 
         case 10:
             print("weekdayMTW, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic7, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              wednesdayNow9to11Topic5)
 
             setNatureImage(to: "midmorning4")
 
 
         case 11:
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic3, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic7, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              wednesdayNow11to13Topic5)
 
             setNatureImage(to: "day4")
@@ -3639,7 +3634,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekdayMTW, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic3, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic22, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              wednesdayNow11to13Topic5)
 
             setNatureImage(to: "day4")
@@ -3647,14 +3642,14 @@ class NowViewController: UIViewController {
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic22, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic5)
 
             setNatureImage(to: "afternoon4")
 
         case 16:
             print("weekdayMTW, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic22, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              wednesdayNow14to16Topic5)
 
             setNatureImage(to: "afternoon4")
@@ -3662,14 +3657,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic3, happyHourTopic0, networkingTopic3, homePMTopic1,
                              wednesdayNow17to18Topic5)
 
             setNatureImage(to: "sunset4")
 
         case 19...20:
             print("Weekday, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic3, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              wednesdayNow19to20Topic5)
 
             setNatureImage(to: "sunset4")
@@ -3677,7 +3672,7 @@ class NowViewController: UIViewController {
 
         case 21..<24:
             print("Weekday, Late evening")
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic3, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              wednesdayNow21to24Topic5)
 
             setNatureImage(to: "night4")
@@ -3695,14 +3690,14 @@ class NowViewController: UIViewController {
             print("weekdayTF, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic4, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow0to4Topic5)
 
             setNatureImage(to: "night5")
 
         case 5...7:
             print("weekdayTF, Early Morning")
-            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, getReadyAMTopic1, gymTopic2, yogaTopic0, runningTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic8, schoolAMTopic3,
                              thursdayNow5to8Topic5)
 
             setNatureImage(to: "morning5")
@@ -3710,20 +3705,20 @@ class NowViewController: UIViewController {
 
         case 8:
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic8, schoolAMTopic3,
                              thursdayNow5to8Topic5)
 
             setNatureImage(to: "morning5")
 
         case 9:
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic8, networkingTopic1, schoolAMTopic3,
                              thursdayNow9to11Topic5)
 
             setNatureImage(to: "midmorning5")
 
         case 10:
             print("weekdayTF, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic8, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              thursdayNow9to11Topic5)
 
             setNatureImage(to: "midmorning5")
@@ -3731,14 +3726,14 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekdayTF, Late Morning")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic4, cafePMTopic1, afternoonSnackTopic0, gymTopic3, yogaTopic0, runningTopic1, workAMTopic8, bathroomTopic1, breakTopic0, networkingTopic2, schoolPMTopic3,
                              thursdayNow11to13Topic5)
 
             setNatureImage(to: "midmorning5")
 
         case 12...13:
             print("weekdayTF, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic4, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, yogaTopic0, workPMTopic23, bathroomTopic1, networkingTopic2, breakTopic0, schoolPMTopic1,
                              thursdayNow11to13Topic5)
 
             setNatureImage(to: "day5")
@@ -3747,7 +3742,7 @@ class NowViewController: UIViewController {
         case 14...15: // 2PM-4PM
             print("weekdayTF, Afternoon")
 
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic0, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic23, networkingTopic3, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic5)
 
             setNatureImage(to: "afternoon5")
@@ -3755,7 +3750,7 @@ class NowViewController: UIViewController {
 
         case 16:
             print("weekdayTF, Afternoon")
-            appendNineTopics(workPMTopic0, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
+            appendNineTopics(workPMTopic23, afternoonSnackTopic2, breakPMTopic0, commutePMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, happyHourTopic0, networkingTopic3, gymTopic2, runningTopic0, yogaTopic0, schoolPMTopic1,
                              thursdayNow14to16Topic5)
 
             setNatureImage(to: "afternoon5")
@@ -3763,14 +3758,14 @@ class NowViewController: UIViewController {
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, happyHourTopic0, networkingTopic3, homePMTopic1,
+            appendNineTopics(workLateTopic0, commutePMTopic0, gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic4, happyHourTopic0, networkingTopic3, homePMTopic1,
                              thursdayNow17to18Topic5)
 
             setNatureImage(to: "afternoon5")
 
         case 19...20:
             print("weekdayTF, Evening")
-            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic1, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
+            appendNineTopics(gymTopic2, runningTopic0, yogaTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, dinnerTopic1, restaurantTopic4, barTopic5, dateTopic2, networkingTopic1, safetyTopic2, homePMTopic1,
                              thursdayNow19to20Topic5)
 
             setNatureImage(to: "sunset5")
@@ -3778,7 +3773,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic1, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
+            appendNineTopics(dinnerAfter9PMTopic0, restaurantTopic4, barTopic0, networkingTopic1, dateTopic2, safetyTopic2, homePMTopic1, lateNightSnackTopic1, bathroomPMTopic1, eveningRoutineTopic0, bedtimeTopic1, cantSleepTopic2,
                              thursdayNow21to24Topic5)
 
             setNatureImage(to: "night5")
@@ -3797,14 +3792,14 @@ class NowViewController: UIViewController {
             print("weekday Fri, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic5, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              fridayNow0to4Topic5)
 
             setNatureImage(to: "night6")
 
         case 5...7:
             print("weekday Fri, Early Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic1, breakfastTopic1, bathroomTopic1, homeAMTopic0, cafeTopic1, commuteAMTopic5, workAMTopic9, schoolAMTopic3,
                              fridayNow5to8Topic5)
 
             setNatureImage(to: "morning6")
@@ -3813,14 +3808,14 @@ class NowViewController: UIViewController {
         case 8:
             print("weekday Fri, Late Morning")
             appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, homeAMTopic0,
-                             cafeTopic1, commuteAMTopic5, workAMTopic5, schoolAMTopic3,
+                             cafeTopic1, commuteAMTopic5, workAMTopic9, schoolAMTopic3,
                              fridayNow5to8Topic5)
 
             setNatureImage(to: "midmorning6")
 
         case 9:
             print("weekday Fri, Late Morning")
-            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, schoolAMTopic3,
+            appendNineTopics(AMRoutineTopic3, gymTopic2, yogaTopic0, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic9, networkingTopic1, schoolAMTopic3,
                              fridayNow9to11Topic5)
 
             setNatureImage(to: "midmorning6")
@@ -3828,7 +3823,7 @@ class NowViewController: UIViewController {
 
         case 10:
             print("weekday Fri, Late Morning")
-            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic5, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
+            appendNineTopics(gymTopic2, runningTopic1, getReadyAMTopic0, breakfastTopic1, bathroomTopic1, cafeTopic1, commuteAMTopic5, workAMTopic9, networkingTopic1, morningSnackTopic0, breakTopic0, schoolAMTopic3,
                              fridayNow9to11Topic5)
 
             setNatureImage(to: "midmorning6")
@@ -3836,7 +3831,7 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic3, restaurantTopic1, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workPMTopic5, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
+            appendNineTopics(lunchTopic3, restaurantTopic5, cafePMTopic1, afternoonSnackTopic0, gymTopic3, runningTopic1, workAMTopic9, bathroomTopic1, breakTopic0, networkingTopic2, travelTopic2, schoolPMTopic3,
                              fridayNow11to13Topic5)
 
             setNatureImage(to: "day6")
@@ -3844,7 +3839,7 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic1, restaurantTopic0, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic0, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
+            appendNineTopics(lunchTopic1, restaurantTopic5, cafePMTopic1, afternoonSnackTopic0, gymTopic2, runningTopic1, workPMTopic24, bathroomTopic1, networkingTopic2, breakTopic0, travelTopic2, schoolPMTopic1,
                              fridayNow11to13Topic5)
 
             setNatureImage(to: "day6")
@@ -3852,7 +3847,7 @@ class NowViewController: UIViewController {
         case 14...15:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic4, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
+            appendNineTopics(afternoonSnackTopic1, cafePMTopic0, workPMTopic24, networkingTopic4, breakPMTopic1, commuteFridayPMTopic0, groceryStoreWDAYTopic0, shoppingClothesTopic0, gymTopic10, runningTopic0, travelTopic2, schoolPMTopic2,
                              fridayNow14to16Topic5)
 
             setNatureImage(to: "afternoon6")
@@ -3861,7 +3856,7 @@ class NowViewController: UIViewController {
         case 16:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic4, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic6, shoppingClothesTopic0, travelTopic2,
+            appendNineTopics(afternoonSnackTopic2, cafePMTopic0, workPMTopic24, breakPMTopic1, commuteFridayPMTopic0, gymTopic10, runningTopic0, happyHourTopic0, networkingTopic4, groceryStoreTopic6, shoppingClothesTopic0, travelTopic2,
                              fridayNow14to16Topic5)
 
             setNatureImage(to: "afternoon6")
@@ -3871,7 +3866,7 @@ class NowViewController: UIViewController {
             print("weekday Fri, Evening 5-6PM")
 
             ////FRIDAY ONLY COMMUTE
-            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic0, groceryStoreTopic6, shoppingClothesTopic0,  travelTopic2,
+            appendNineTopics(commuteFridayPMTopic0, gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, happyHourTopic0, networkingTopic1, dinnerTopic5, restaurantTopic5, groceryStoreTopic6, shoppingClothesTopic0,  travelTopic2,
                              fridayNow17to18Topic5)
 
             setNatureImage(to: "afternoon6")
@@ -3879,7 +3874,7 @@ class NowViewController: UIViewController {
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
             // call function to display 9 time-based topics
-            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic0, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic6, travelTopic2,
+            appendNineTopics(gymTopic10, runningTopic0, homePMTopic5, goingOutTopic0, dinnerTopic5, restaurantTopic5, barTopic5, networkingTopic1, dateTopic0, safetyTopic6, groceryStoreTopic6, travelTopic2,
                              fridayNow19to20Topic5)
 
             setNatureImage(to: "sunset6")
@@ -3888,7 +3883,7 @@ class NowViewController: UIViewController {
         case 21..<24:
             print("weekdayTF, Late evening 9-12PM")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic0,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
+            appendNineTopics(homePMTopic5, goingOutTopic0, dinnerAfter9PMTopic4, restaurantTopic5,  barTopic0, networkingTopic1, dateTopic2, safetyTopic6,
                              lateNightSnackTopic1, eveningRoutineTopic0, bedtimeFriPMTopic5, cantSleepTopic3,
                              fridayNow21to24Topic5)
 
@@ -3907,7 +3902,7 @@ class NowViewController: UIViewController {
             print("Weekend, Very Early Morning")
             // call function to display 9 time-based topics
             appendNineTopics(dinnerAfter9PMTopic0, barTopic3, networkingTopic1, safetyTopic2,
-                             restaurantTopic0, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
+                             restaurantTopic6, lateNightSnackTopic0, groceryStoreTopic0, bathroomPMTopic0, homePMTopic1, eveningRoutineTopic1, bedtimeTopic1, cantSleepTopic2,
                              saturday0to4Topic5)
 
         case 5...8:
@@ -3929,7 +3924,7 @@ class NowViewController: UIViewController {
         case 11...13:
             print("Weekend, Midday")
             appendNineTopics(homePMTopic6, gymTopic12, runningTopic0, cafePMTopic1,
-                             brunchTopic1, lunchTopic1, restaurantTopic3, barTopic2,
+                             brunchTopic1, lunchTopic1, restaurantTopic6, barTopic2,
                              networkingTopic1, groceryStoreWENDTopic0, shoppingClothesTopic1, travelTopic2,
                              saturdayNow11to13Topic5)
 
@@ -3942,13 +3937,13 @@ class NowViewController: UIViewController {
         case 17...18:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic6, barTopic1, dateTopic1, networkingTopic1, groceryStoreTopic1, shoppingClothesTopic0, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow17to18Topic5)
 
         case 19...20:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic0, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
+            appendNineTopics(homePMTopic0, dinnerTopic0, restaurantTopic6, barTopic1, dateTopic1, safetyTopic1, groceryStoreTopic1, shoppingClothesTopic1, gymTopic1, runningTopic0, yogaTopic0, travelTopic2,
                              saturdayNow19to20Topic5)
 
         case 21..<24:
@@ -4268,7 +4263,7 @@ class NowViewController: UIViewController {
             performUIUpdatesOnMain {
 
                 button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
-                button.imageView?.image = UIImage(named: "icons8-cancel")
+                button.imageView?.image = UIImage(named: Constants.Icon.cancel)
                 // button title
 
 
@@ -4321,6 +4316,24 @@ class NowViewController: UIViewController {
 extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 
 
+    //SECTION HEADER
+    //https://www.hackingwithswift.com/example-code/uikit/how-to-add-a-section-header-to-a-table-view
+
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let vw = UIView()
+//        vw.backgroundColor = UIColor.blue
+//        return "Live Longer"
+//    }
+
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let vw = UIView()
+//        vw.backgroundColor = UIColor.blue
+//
+//        return vw
+//    }
+
+
+    //CELL
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension

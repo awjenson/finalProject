@@ -11,7 +11,7 @@ import Foundation
 struct Constants {
 
     struct Icon {
-        static let cancel = "icons8-cancel"
+        static let cancel = "icons8-ok" //"icons8-cancel"
         static let undo = "icons8-undo"
 
         static let snack = "icons8-apple"
@@ -41,6 +41,9 @@ struct Constants {
         static let school = "icons8-graduation_cap"
         static let study = "icons8-grades"
         static let routine = "icons8-todo_list" //icons8-numbered_list //icons8-todo_list //icons8-sun //icons8-checklist
+        static let routineAM = "icons8-sun"
+        static let routinePM = "icons8-moon_symbol"
+
         static let work = "icons8-building" //"icons8-commercial_development_management" //icons8-under_computer
         static let jobSearch = "icons8-bullish" //"icons8-find_matching_job"
         static let travel = "icons8-map_marker" 

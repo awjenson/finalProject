@@ -734,7 +734,7 @@ class JournalViewController: UIViewController {
             performUIUpdatesOnMain {
 
                 button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
-                button.imageView?.image = UIImage(named: "icons8-cancel")
+                button.imageView?.image = UIImage(named: Constants.Icon.cancel)
                 // button title
 
 

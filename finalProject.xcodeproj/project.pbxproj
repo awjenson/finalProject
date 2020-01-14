@@ -492,8 +492,8 @@
 		DAC6384E20B3A9C60004891D /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				DA272F7022266CCB005B8157 /* MasterViewController.swift */,
 				DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */,
+				DA272F7022266CCB005B8157 /* MasterViewController.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -849,6 +849,7 @@
 			baseConfigurationReference = 7CE7DB62B68C9D78CB70C3F6 /* Pods-finalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
@@ -857,7 +858,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.finalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 4.2;
@@ -870,6 +871,7 @@
 			baseConfigurationReference = 208C5C3F877D89292FF1C441 /* Pods-finalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
@@ -878,7 +880,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.finalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 4.2;

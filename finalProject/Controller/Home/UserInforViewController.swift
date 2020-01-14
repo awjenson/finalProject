@@ -26,6 +26,8 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var natureImageView: UIImageView!
     @IBOutlet weak var greetingLabel: UILabel!
 
+
+    @IBOutlet weak var arrowButton: UIButton!
     @IBOutlet weak var quoteLabel: ShadowLabel!
     @IBOutlet weak var authorLabel: ShadowLabel!
 
@@ -50,13 +52,12 @@ class UserInfoViewController: UIViewController {
     }
 
 
-
-
-
     // MARK: - Life Cycle Methods
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad")
 
         //Used to refresh app when re-entering from background
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -77,14 +78,25 @@ class UserInfoViewController: UIViewController {
         let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         downSwipe.direction = .down
         self.view.addGestureRecognizer(downSwipe)
-        
 
         setupUI()
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear")
+
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        print("viewWillDisappear")
 
         // Important: Need this when working with Observers to avoid memory leak!
         NotificationCenter.default.removeObserver(self)
@@ -94,9 +106,7 @@ class UserInfoViewController: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-
-       
-
+        print("viewDidDisappear")
     }
 
 
@@ -131,6 +141,7 @@ class UserInfoViewController: UIViewController {
 
         performSegue(withIdentifier: "swipe", sender: self)
 
+        arrowButton.imageView?.removeFromSuperview()
         quoteLabel.removeFromSuperview()
         authorLabel.text = ""
     }
@@ -166,13 +177,12 @@ class UserInfoViewController: UIViewController {
 
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-
-    }
-
-
 
     func dayOfWeekAndHour() {
+
+        //reset natureIamgeView.image so when it's in the background for a while it doesn't display an old image
+        self.natureImageView.image = UIImage(named: "")
+        greetingLabel.text = ""
 
         let dayOfWeek = calendar.component(.weekday, from: date)
         let hour = calendar.component(.hour, from: date)
@@ -181,11 +191,8 @@ class UserInfoViewController: UIViewController {
         let weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
 
-
-
         if week % 2 == 0 {
             print("Week: \(week) is even")
-
 
         } else {
             print("Week: \(week) is odd")
