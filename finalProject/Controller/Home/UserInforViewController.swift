@@ -38,6 +38,13 @@ class UserInfoViewController: UIViewController {
     let formatter = DateFormatter()
     let date = Date()
     let calendar = Calendar.current
+    var dayOfWeek = 0
+    var hour = 0
+    var day = 0
+    var week = 0
+    var weekOfMonth = 0
+
+    
 
     var selectedImage: String?
 
@@ -63,6 +70,12 @@ class UserInfoViewController: UIViewController {
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.userInfoVC = self
 
+        let notificationCenter = NotificationCenter.default
+        //detect when your app moves to the background
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        //detect when your app returns from background
+        notificationCenter.addObserver(self, selector: #selector(appReturnedFromBackground), name: UIApplication.didBecomeActiveNotification, object: nil)
+
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         leftSwipe.direction = .left
         self.view.addGestureRecognizer(leftSwipe)
@@ -85,7 +98,11 @@ class UserInfoViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
+        print("viewWillAppear - called everytime you come to the viewController")
+        //Assign data to the ViewController or making API calls inside viewWillAppear that will call everytime when you came to that viewcontroller
+        setupUI()
+
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -110,14 +127,22 @@ class UserInfoViewController: UIViewController {
     }
 
 
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+
+    }
+
+    @objc func appReturnedFromBackground() {
+        print("App returned from Background")
+        setupUI()
+
+    }
 
 
 
     func reloadViewFromNib() {
-        let parent = view.superview
-        view.removeFromSuperview()
-        view = nil
-        parent?.addSubview(view) // This line causes the view to be reloaded
+
+
     }
 
 
@@ -159,12 +184,13 @@ class UserInfoViewController: UIViewController {
         natureImageView.image = nil
     }
 
+
+
+
     
 
     func setupUI() {
         print("UserVC SetupUI")
-
-
 
         // Quote View
         let selectedGradientColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame: quoteView.frame, andColors:[UIColor.clear, UIColor.black])
@@ -172,8 +198,6 @@ class UserInfoViewController: UIViewController {
         self.quoteView.backgroundColor = selectedGradientColor
 
         dayOfWeekAndHour()
-
-//        reset(self)
 
     }
 
@@ -184,12 +208,12 @@ class UserInfoViewController: UIViewController {
         self.natureImageView.image = UIImage(named: "")
         greetingLabel.text = ""
 
-        let dayOfWeek = calendar.component(.weekday, from: date)
-        let hour = calendar.component(.hour, from: date)
-        let day = calendar.component(.day, from: date)
-        let week = calendar.component(.weekOfYear, from: date)
-        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
-
+        dayOfWeek = calendar.component(.weekday, from: date)
+        hour = calendar.component(.hour, from: date)
+        day = calendar.component(.day, from: date)
+        day = Int.random(in: 1...31)
+        week = calendar.component(.weekOfYear, from: date)
+        weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
         if week % 2 == 0 {
             print("Week: \(week) is even")
@@ -267,20 +291,16 @@ class UserInfoViewController: UIViewController {
 //            evenWeek()
 //        }
 
-
-        
-        let beginningStatement = "repeating this"
-
-        print("HI GREETING")
-        //greeting
         switch hour {
         case 0...4:
             greetingLabel.text = "Good Night"
         case 5...8:
             greetingLabel.text = "Rise and Shine"
-        case 9...11:
+        case 9...10:
             greetingLabel.text = "Good Morning"
-        case 12...17:
+        case 11...13:
+            greetingLabel.text = "Good Day"
+        case 14...17:
             greetingLabel.text = "Good Afternoon"
         case 18...21:
             greetingLabel.text = "Good Evening"
@@ -290,7 +310,6 @@ class UserInfoViewController: UIViewController {
             greetingLabel.text = "Hello"
         }
 
-        //breathing tip
         switch hour {
         case 0...4:
             setNatureImage(to: "night\(day)")
@@ -321,6 +340,7 @@ class UserInfoViewController: UIViewController {
 
         case 21...24:
             setNatureImage(to: "night\(day)")
+
 
 
         default:

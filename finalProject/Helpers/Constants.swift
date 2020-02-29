@@ -10,6 +10,15 @@ import Foundation
 
 struct Constants {
 
+    struct Text {
+        static let rizeEmail = "   RizeTheApp@gmail.com   "
+    }
+
+    struct Webiste {
+
+        static let rizeFormURL = "https://forms.gle/BLoHBW61ZLnxoQiW8"
+    }
+
     struct Icon {
         static let cancel = "icons8-ok" //"icons8-cancel"
         static let undo = "icons8-undo"
@@ -53,14 +62,17 @@ struct Constants {
         static let relationship = "icons8-meeting"
         static let parenting = "icons8-single_father"
         static let journal = "icons8-journal"
+        static let friends = "icons8-friends"
+
         static let goals = "icons8-trophy_2"
         static let boost = "icons8-cool" //"icons8-launched_rocket"
         static let wealth = "icons8-banknotes-1" //"icons8-coin_in_hand"
+        static let motivation = "icons8-brainstorm_skill" //"icons8-idea_sharing"
 
         //mood
         static let mad = "icons8-angry"
         static let sad = "icons8-sad"
-        static let ok = "icons8-neutral_emoticon"
+        static let neutral = "icons8-neutral_emoticon"
         static let good = "icons8-happy"
         static let great = "icons8-lol"
 

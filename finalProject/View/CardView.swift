@@ -25,21 +25,12 @@ class CardView: UIView {
         //Rounded Card with Shadows
         //https://www.refactorstudios.com/blog/corners-borders-shadows-oh-my
 
-        layer.borderWidth = 0.3
+        layer.borderWidth = 0.5
         layer.cornerRadius = 12
 //        layer.borderColor = UIColor.gray.cgColor
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderColor = UIColor.gray.cgColor.copy(alpha: 0.5)
 
-        //Shadows
-        layer.shadowColor = UIColor.gray.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 3)
-        layer.shadowRadius = 3
-        layer.shadowOpacity = 0.3
-//        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
-
-
-
-//        backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+        
     }
 
 }

@@ -54,7 +54,7 @@ let sadHintArray1 = [sadTipx, ]
 let sadHeader1 = Header(title: sadTitle, icon: Constants.Icon.good, quote: sadQuote1, hints: sadHintArray1)
 
 // MARK: - DEPRESSED
-let depressedTitle = "Depressed"
+let depressedTitle_OLD = "Depressed"
 
 // Quotes
 let depressedQuote1 = Quote(quote: "\"I found that with depression, one of the most important things you could realize is that you're not alone.\"", source: "Dwayne Johnson", bio: "Actor")
@@ -101,7 +101,7 @@ let boredHeader1 = Header(title: boredTitle, icon: Constants.Icon.good, quote: b
 
 // MARK: - MAD / ANGRY
 
-let madTitle = "Mad"
+let madTitle_OLD = "Mad"
 
 let madQuote1 = Quote(quote: "\"Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned.\"", source: "Buddha", bio: "A monk whose teachings Buddhism was founded")
 let madHint1 = Hint(title: "Advice to reduce anger", body: "Anger can be simple to manage, once you know the basics of how and why the brain reacts to triggers. Scientific ways to calm down: \n\n• Take deep breaths \n\n• take a walk and get some fresh air \n\n• Write down why you're mad \n\n• Play loud or heavy music \n\n• Even doing nothing for two minutes was found to diminish feeling of anger", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/134593-6-ways-to-calm-down-when-youre-angry")
@@ -126,7 +126,7 @@ let madHeader1 = Header(title: madTitle, icon: Constants.Icon.good, quote: madQu
 
 // MARK: - STRESSED
 
-let stressedTitle = "Stressed"
+let stressedTitle_OLD = "Stressed"
 
 let stressedQuote1 = Quote(quote: "\"Remember that stress doesn't come from what's going on in your life. It comes from your thoughts about what's going on in your life.\"", source: "Andrew Bernstein", bio: "Philosopher")
 

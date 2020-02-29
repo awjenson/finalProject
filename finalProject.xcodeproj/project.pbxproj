@@ -26,6 +26,7 @@
 		DA2B85F720B8D59E005B7DD6 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B85F620B8D59E005B7DD6 /* MessageItem.swift */; };
 		DA2B860120B9EB52005B7DD6 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */; };
 		DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */; };
+		DA344865240B0CBB007FC75B /* RoundBoarderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */; };
 		DA359C642043324F000190AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C632043324F000190AD /* AppDelegate.swift */; };
 		DA359C692043324F000190AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C672043324F000190AD /* Main.storyboard */; };
 		DA359C6E2043324F000190AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C6C2043324F000190AD /* LaunchScreen.storyboard */; };
@@ -65,6 +66,7 @@
 		DA78988F2053102E005046D8 /* NowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988E2053102E005046D8 /* NowTableViewCell.swift */; };
 		DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */; };
 		DA8DC6FB21F66F1B00663DB4 /* BottomCornersRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */; };
+		DA97663323D3B7D4000FC1B0 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */; };
 		DA9CC27720FD3B58001A89B7 /* RoundedOvalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CC27620FD3B58001A89B7 /* RoundedOvalButton.swift */; };
 		DA9CC27920FD5413001A89B7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9CC27820FD5413001A89B7 /* UIView+Extension.swift */; };
 		DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1021C2053444000A25EFC /* RoundButton.swift */; };
@@ -119,6 +121,7 @@
 		DA2B85F620B8D59E005B7DD6 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
 		DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectedPerson.swift; sourceTree = "<group>"; };
+		DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBoarderButton.swift; sourceTree = "<group>"; };
 		DA359C602043324F000190AD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA359C632043324F000190AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA359C682043324F000190AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 		DA78988E2053102E005046D8 /* NowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowTableViewCell.swift; sourceTree = "<group>"; };
 		DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCornersRoundedView.swift; sourceTree = "<group>"; };
 		DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCornersRoundedView.swift; sourceTree = "<group>"; };
+		DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		DA9CC27620FD3B58001A89B7 /* RoundedOvalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedOvalButton.swift; sourceTree = "<group>"; };
 		DA9CC27820FD5413001A89B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DAA1021C2053444000A25EFC /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -352,6 +356,8 @@
 				DA687C3522605EAC0037DD48 /* RoundProfileIconButton.swift */,
 				DA643DB022A9F87E005CA14D /* CircleButton.swift */,
 				DA05F7832336E19000FEB154 /* RoundCorneredImageView.swift */,
+				DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */,
+				DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -642,6 +648,7 @@
 				DA5AEDAE2077000F0094AA57 /* JournalMessage.swift in Sources */,
 				DA606B512064969100DD14C0 /* Topic.swift in Sources */,
 				DA361D3120844F41007ACE59 /* LoginViewController.swift in Sources */,
+				DA344865240B0CBB007FC75B /* RoundBoarderButton.swift in Sources */,
 				DA78988F2053102E005046D8 /* NowTableViewCell.swift in Sources */,
 				DAC6384A20B1CE310004891D /* GoalItem.swift in Sources */,
 				DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */,
@@ -653,6 +660,7 @@
 				DA643DB122A9F87E005CA14D /* CircleButton.swift in Sources */,
 				DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */,
 				DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */,
+				DA97663323D3B7D4000FC1B0 /* RoundShadowView.swift in Sources */,
 				DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */,
 				DA20FEDD21F03643000F0C53 /* UIImage+Extension.swift in Sources */,
 				DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */,

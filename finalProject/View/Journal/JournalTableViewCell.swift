@@ -38,9 +38,10 @@ class JournalTableViewCell: UITableViewCell {
 
         tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
         tipIconView.clipsToBounds = true
-        tipIconView.layer.borderWidth = 1
-        tipIconView.layer.borderColor = UIColor.init(hexString: "2283F6")?.cgColor
+//        tipIconView.layer.borderWidth = 1
+//        tipIconView.layer.borderColor = UIColor.init(hexString: "2283F6")?.cgColor
 
+        
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
 
@@ -77,12 +78,8 @@ class JournalTableViewCell: UITableViewCell {
         titleLabel.attributedText = attributedStringTitle
         bodyLabel.attributedText = attributedStringBody
 
-        boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
-        boarderColorView.layer.shadowOpacity = 0.2
-        boarderColorView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        boarderColorView.layer.shadowRadius = 0.75
-
-        boarderColorView.layer.masksToBounds = false
+        //Shadow
+        
         
     }
 

@@ -22,19 +22,19 @@ protocol AdviceTableViewCellDelegate {
 
 class AdviceTableViewCell: UITableViewCell {
 
-    // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
-    var delegate: AdviceTableViewCellDelegate?
-
     @IBOutlet weak var boarderColorView: UIView!
 
     @IBOutlet weak var adviceTipIconView: UIView!
     @IBOutlet weak var adviceTipNumberLabel: UILabel!
 
-
+    @IBOutlet weak var headerLabel: UILabel!
 
     @IBOutlet weak var adviceTitleLabel: UILabel!
     @IBOutlet weak var adviceBodyLabel: UILabel!
     @IBOutlet weak var adviceSourceButton: UIButton!
+
+    // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
+    var delegate: AdviceTableViewCellDelegate?
 
     var tipItem: Tip! //created because of delegate and protocol video
 
@@ -43,21 +43,21 @@ class AdviceTableViewCell: UITableViewCell {
         //set tipItem to tip so you can use it in other methods
         tipItem = tip
 
-
         adviceTipIconView.layer.cornerRadius = adviceTipIconView.frame.size.width/2
         adviceTipIconView.clipsToBounds = true
-        adviceTipIconView.layer.borderWidth = 1
-        adviceTipIconView.layer.borderColor = UIColor.init(hexString: "42A67A")?.cgColor
+//        adviceTipIconView.layer.borderWidth = 1
+//        adviceTipIconView.layer.borderColor = UIColor.init(hexString: "42A67A")?.cgColor
 
 
+        headerLabel.text = tip.header
         adviceTitleLabel.text = tip.title
         adviceBodyLabel.text = tip.body
 
         //Underline effect for UIButton Title and left aligment
         let attributedString = NSMutableAttributedString(string: tip.sourceName)
         attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
-        adviceSourceButton.contentHorizontalAlignment = .left
 
+        adviceSourceButton.contentHorizontalAlignment = .left
         adviceSourceButton.setTitle(tip.sourceName, for: .normal)
         adviceSourceButton.titleLabel?.attributedText = attributedString
         // Display UI of CELL Boarder
@@ -86,12 +86,7 @@ class AdviceTableViewCell: UITableViewCell {
         adviceTitleLabel.attributedText = attributedStringTitle
         adviceBodyLabel.attributedText = attributedStringBody
 
-        boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
-        boarderColorView.layer.shadowOpacity = 0.2
-        boarderColorView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        boarderColorView.layer.shadowRadius = 0.75
-
-        boarderColorView.layer.masksToBounds = false
+       
 
     }
 

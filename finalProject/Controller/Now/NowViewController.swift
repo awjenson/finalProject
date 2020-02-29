@@ -55,6 +55,7 @@ class NowViewController: UIViewController {
 
 
 
+
     // topicButtion OutletCollection only used for flipping UI when buttons tapped
     // All topicButtons need to be linked to this
     @IBOutlet var topicButtons: [CircleButton]!
@@ -99,6 +100,8 @@ class NowViewController: UIViewController {
     @IBOutlet weak var returnToTopButton: RoundCorneredButton!
     @IBOutlet weak var footerView: UIView!
 
+    @IBOutlet weak var feedbackNowButton: UIButton!
+    
 
 
     // MARK: - Properties
@@ -301,7 +304,9 @@ class NowViewController: UIViewController {
 //        self.view.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
         self.view.backgroundColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
 //        self.view.backgroundColor = UIColor.red
-        self.quoteView.backgroundColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
+
+        //QuoteView = Blue Color
+//        self.quoteView.backgroundColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
 
 
 
@@ -315,7 +320,7 @@ class NowViewController: UIViewController {
                        topic8Label, topic9Label, topic10Label, topic11Label,]
 
         // set footer
-        footerView.frame.size.height = 140
+        footerView.frame.size.height = 250
         //setupQuote() moved into dayOfWeekAndHour()
 
         dayOfWeekAndHour()
@@ -675,8 +680,31 @@ class NowViewController: UIViewController {
         formatter.amSymbol = "AM"
         formatter.pmSymbol = "PM"
 
-        let hourString = formatter.string(from: Date()) // "12 AM"
-        titleLabel.text = "\(hourString) Tips"
+        let hourOfDay = calendar.component(.hour, from: date)
+
+//        let hour = formatter.string(from: Date()) // "12 AM"
+//        titleLabel.text = "\(hourString) Tips"
+//        titleLabel.text = "Good Afternoon"
+
+        switch hourOfDay {
+        case 0...4:
+            titleLabel.text = "Late Night Tips"
+        case 5...8:
+            titleLabel.text = "Morning Tips"
+        case 9...10:
+            titleLabel.text = "Mid-Morning Tips"
+        case 11...13:
+            titleLabel.text = "Day Tips"
+        case 14...17:
+            titleLabel.text = "Afternoon Tips"
+        case 18...21:
+            titleLabel.text = "Evening Tips"
+        case 22...23:
+            titleLabel.text = "Night Tips"
+        default:
+            titleLabel.text = "Tips"
+        }
+
     }
 
 
@@ -4299,11 +4327,18 @@ class NowViewController: UIViewController {
         }
     }
 
+    //MARK: - IB Actions
 
     @IBAction func sourceButtonTapped(_ sender: Any) {
         print("go to source")
 
     }
+
+    @IBAction func feedbackNowButtonTapped(_ sender: Any) {
+        goToSourceURL(url: Constants.Webiste.rizeFormURL)
+
+    }
+
 
 
 
@@ -4326,10 +4361,22 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 //    }
 
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let vw = UIView()
-//        vw.backgroundColor = UIColor.blue
+//        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+//        headerView.backgroundColor = UIColor(hexString: "FFF1E5")
 //
-//        return vw
+//        let label = UILabel()
+//        label.frame = CGRect.init(x: 20, y: 30, width: headerView.frame.width-10, height: headerView.frame.height-10)
+//        label.text = "Sleep Better"
+//        label.font = UIFont.boldSystemFont(ofSize: 30)
+//        label.textColor = .black
+//
+//        headerView.addSubview(label)
+//
+//        return headerView
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 70
 //    }
 
 
@@ -4343,29 +4390,7 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         return tips.count
     }
 
-    func tipIconColor(selectedButton: Int) -> UIColor{
-        var selectedColor = UIColor.flatTeal()
-        switch selectedButton {
-        case 0:
-            selectedColor = UIColor.flatMint()
-        case 1:
-            UIColor.flatRed()
-        case 2:
-            UIColor.flatPink()
-        case 3:
-            UIColor.flatPlum()
-        case 4:
-            UIColor.flatTeal()
-        case 5:
-            UIColor.flatGreen()
-        case 6:
-            UIColor.flatMaroon()
-        default:
-            UIColor.flatTeal()
-        }
 
-        return selectedColor ?? UIColor.flatTeal()
-    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
@@ -4376,6 +4401,8 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         let tip = tips[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
+
+
 
         // cell's bottom line UI
         cell.layoutMargins = UIEdgeInsets.zero

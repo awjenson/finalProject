@@ -22,39 +22,41 @@ protocol NowTableViewCellDelegate {
 
 class NowTableViewCell: UITableViewCell {
 
-    // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
-    var delegate: NowTableViewCellDelegate?
-
     @IBOutlet weak var boarderColorView: UIView!
 
     @IBOutlet weak var tipIconView: UIView!
     @IBOutlet weak var tipNumberLabel: UILabel!
 
+    @IBOutlet weak var headerLabel: UILabel!
+
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var sourceButton: UIButton!
+
+    // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
+    var delegate: NowTableViewCellDelegate?
 
     var tipItem: Tip! //created because of delegate and protocol video
 
     func configureCell(tip: Tip) {
 
-        //set tipItem to tip so you can use it in other methods
         tipItem = tip
 
         tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
         tipIconView.clipsToBounds = true
-        tipIconView.layer.borderWidth = 1
-        tipIconView.layer.borderColor = UIColor.init(hexString: "2283F6")?.cgColor
+//        tipIconView.layer.borderWidth = 1
+//        tipIconView.layer.borderColor = UIColor.init(hexString: "42A67A")?.cgColor
 
-
+        headerLabel.text = tip.header
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
 
         //Underline effect for UIButton Title and left aligment
         let attributedString = NSMutableAttributedString(string: tip.sourceName)
         attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
-        sourceButton.contentHorizontalAlignment = .left
 
+        sourceButton.contentHorizontalAlignment = .left
         sourceButton.setTitle(tip.sourceName, for: .normal)
         sourceButton.titleLabel?.attributedText = attributedString
         // Display UI of CELL Boarder
@@ -82,31 +84,6 @@ class NowTableViewCell: UITableViewCell {
         // *** Set Attributed String to your label ***
         titleLabel.attributedText = attributedStringTitle
         bodyLabel.attributedText = attributedStringBody
-
-
-//        boarderColorView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
-//        boarderColorView.layer.shadowOpacity = 2
-//        boarderColorView.layer.shadowOffset = CGSize(width: 1, height: -3)
-//        boarderColorView.layer.shadowRadius = 0.5
-
-//        boarderColorView.layer.masksToBounds = false
-
-
-//        boarderColorView.layer.borderWidth = 2
-//        boarderColorView.layer.cornerRadius = 12
-//        boarderColorView.layer.borderColor = UIColor.gray.cgColor
-//
-//        //Shadows
-//        boarderColorView.layer.shadowColor = UIColor.gray.cgColor
-//        boarderColorView.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        boarderColorView.layer.shadowRadius = 5
-//        boarderColorView.layer.shadowOpacity = 0.3
-//        boarderColorView.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
-
-
-
-
-
 
     }
 
