@@ -85,6 +85,18 @@ let sunday0to4Topic2 = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Ico
 let saturday0to4TipArray3 = [saturdayNow0to4Tip4, saturdayNow0to4Tip5, saturdayNow0to4Tip2, saturdayNow0to4Tip3]
 let saturday0to4Topic2 = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturday0to4TipArray3)
 
+
+//////////
+//RANDOM
+let sunday0to4TipArrays = [sunday0to4TipArray0, sunday0to4TipArray2,]
+let sunday0to4Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sunday0to4TipArrays.random())
+//RANDOM
+let saturday0to4TipArrays = [saturday0to4TipArray1, saturday0to4TipArray3,]
+let saturday0to4Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturday0to4TipArrays.random())
+
+
+
+
 //WEEK 3
 // SUN (4 WIP)
 let sunday0to4TipArray4 = [sundayNow0to4Tip4, sundayNow0to4Tip5, sundayNow0to4Tip6, sundayNow0to4Tip3]
@@ -108,6 +120,10 @@ let sunday0to4Topic5 = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Ico
 // SAT (4 WIP)
 let saturday0to4TipArray9 = [saturdayNow0to4Tip5, saturdayNow0to4Tip2, saturdayNow0to4Tip4, saturdayNow0to4Tip3]
 let saturday0to4Topic5 = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturday0to4TipArray9)
+
+
+
+
 
 // MARK: - Now, Weekend, 5to8
 
@@ -136,16 +152,18 @@ let weekendNow5to8Tip11 = Tip(header: "Millionaire Habit", title: "Make your bed
 
 //SAT
 let weekendNow5to8Tip12 = Tip(header: "Reduce Belly Fat", title: "Step outside for a jog or walk first thing in the morning", body: "Getting outside in the early morning sunlight helps regulate your circadian rhythm, which affects how well you: \n\n• Burn fat \n• Eat \n• Sleep" , sourceName: "Eat This, Not That!", sourceURL: "Studies have shown that people who are up-and-at-’em first thing have a lower BMI compared to those who take their sunshine later in the day. \n\n", sponsorLogo: "", sponsorURL: "")
-let weekendNow5to8Tip13 = Tip(header: "Weight Loss", title: "Consuming 30 grams of protein within 30 minutes of waking up helps with weight loss", body: "According to Tim Ferriss: \n\n\"If you nail breakfast, even if you don’t change any of your other behaviors, that is often enough to lose 10-20 pounds per month of fat… Fat loss is 99% diet.\" \n\nRecommended foods: \n• Eggs \n• Lentils \n• Black beans \n• Dark green vegetables", sourceName: "Healthline", sourceURL: "https://www.healthline.com/health-news/how-30-grams-of-protein-at-breakfast-can-help-you-lose-weight", sponsorLogo: "", sponsorURL: "")
+let weekendNow5to8Tip13 = Tip(header: "Lose Weight", title: "Consuming 30 grams of protein within 30 minutes of waking up helps with weight loss", body: "According to Tim Ferriss: \n\n\"If you nail breakfast, even if you don’t change any of your other behaviors, that is often enough to lose 10-20 pounds per month of fat… Fat loss is 99% diet.\" \n\nRecommended foods: \n• Eggs \n• Lentils \n• Black beans \n• Dark green vegetables", sourceName: "Healthline", sourceURL: "https://www.healthline.com/health-news/how-30-grams-of-protein-at-breakfast-can-help-you-lose-weight", sponsorLogo: "", sponsorURL: "")
 let weekendNow5to8Tip14 = Tip(header: "Boost Your Mood", title: "Drink 16-ounces of water before your morning coffee or tea", body: "You're dehydrated when you get out of bed and coffee or tea can dehydrate you further. \n\nBeing dehydrated makes you feel sluggish, which is not how you should start the day." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekendNow5to8Tip15 = Tip(header: "Prevent Weight Gain", title: "Front-load your calories early in the day to jump-start your metabolism and prevent obesity, starting with a healthy breakfast and tapering off to a smaller lunch and light dinner", body: "Researchers also found that those who ate their largest meal early in the day were more likely to have less body fat than those who ate a large lunch or dinner." , sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2017/08/21/well/eat/the-case-for-a-breakfast-feast.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //WEEK 3
 //SUN
-let weekendNow5to8Tip16 = Tip(header: "Weight Loss", title: "Study: People who exercised before noon lost more weight, on average, than those who completed the same workouts after 3 p.m.", body: "While both groups lost weight: \n\n• The early-exercise group tended to be more active throughout the day, taking more steps in total than those who exercised later. \n\n• They also ate less, although the difference amounted to barely 100 calories per day on average." , sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2019/07/31/well/move/morning-exercise-may-offer-the-most-weight-loss-benefits.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekendNow5to8Tip16 = Tip(header: "Lose Weight", title: "Study: People who exercised before noon lost more weight, on average, than those who completed the same workouts after 3 p.m.", body: "While both groups lost weight: \n\n• The early-exercise group tended to be more active throughout the day, taking more steps in total than those who exercised later. \n\n• They also ate less, although the difference amounted to barely 100 calories per day on average." , sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2019/07/31/well/move/morning-exercise-may-offer-the-most-weight-loss-benefits.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekendNow5to8Tip17 = Tip(header: "Maximize Productivity", title: "Our brains are the sharpest during the first 2-4 hours after we wake up", body: "Use these less distractive hours to work on a creative project, exercise, meditate, or spend time with the people you love." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/successful-people-who-wake-up-really-early-2016-9", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekendNow5to8Tip18 = Tip(header: "Increase Happiness", title: "Practice faith or spirituality. In most countries, religious people are happier than nonreligious people", body: "Study: People who went to services in a church, mosque, or synagogue regularly experienced a more significant mental health boost than those who engaged only in other social activities. \n\n• If you're religious, attend services regularly. \n\n• If you're not, take the time to visit several places of worship to see if any resonate. \n\n• If organized religion isn't your thing, look for groups in your area with whom you might share and practice your spiritual beliefs." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 //let weekendNow5to8Tip19
+
+
 
 
 //SAT
@@ -175,9 +193,22 @@ let saturdayNow5to8Topic2 = Topic(title: weekendNow5to8Title, icon: weekendNow5t
 //SUN (1 WIP)
 let sundayNow5to8TipArray4 = [weekendNow5to8Tip16, weekendNow5to8Tip17, weekendNow5to8Tip18, weekendNow5to8Tip3]
 let sundayNow5to8Topic3 = Topic(title: weekendNow5to8Title, icon: weekendNow5to8Icon, tip: sundayNow5to8TipArray4)//SUN
-//SAT (4 WIP)
+//SAT (3 WIP)
 var saturdayNow5to8TipArray5 = [weekendNow5to8Tip20, weekendNow5to8Tip5, weekendNow5to8Tip6, weekendNow5to8Tip7]
 let saturdayNow5to8Topic3 = Topic(title: weekendNow5to8Title, icon: weekendNow5to8Icon, tip: saturdayNow5to8TipArray5)//SAT
+
+//////////
+//RANDOM
+let sundayNow5to8TipArrays = [sundayNow5to8TipArray0, sundayNow5to8TipArray2, sundayNow5to8TipArray4,]
+let sundayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow5to8TipArrays.random())
+//RANDOM
+let saturdayNow5to8TipArrays = [saturdayNow5to8TipArray1, saturdayNow5to8TipArray3,]
+let saturdayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow5to8TipArrays.random())
+
+
+
+
+
 
 // WEEK 4
 //SUN (4 WIP)
@@ -219,13 +250,13 @@ let saturdayNow9to11Tip3 = Tip(header: "Reduce Your Risk", title: "Sitting 8+ ho
 //SUN
 let sundayNow9to11Tip4 = Tip(header: "Live Healthier ☀️", title: "Get sun exposure within 2 hours of waking up", body: "Morning sun exposure helps your circadian clock to reset itself for a new day and will help you fall asleep tonight." , sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/the-new-secrets-of-perfect-sleep/", sponsorLogo: "", sponsorURL: "")
 let sundayNow9to11Tip5 = Tip(header: "Live Longer", title: "People who attend religious services at least once a month have a 30%-35% reduced risk of death over a 7.5 year follow-up period", body: "Study: 20%-30% of this effect may be explained by better health behaviors (especially physical activity) among regular service attendees. \n\nIf you're not religious, or if you haven't found a positive spirital experience, you may want to explore a belief that is not based on strict dogma.", sourceName: "Published by: American Sociological Association", sourceURL: "https://www.jstor.org/stable/3653839", sponsorLogo: "", sponsorURL: "")
-let sundayNow9to11Tip6 = Tip(header: "Weight Loss", title: "Drinking 8 glasses of water per day can aid in weight loss for the average person - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
+let sundayNow9to11Tip6 = Tip(header: "Lose Weight", title: "Drinking 8 glasses of water per day can aid in weight loss for the average person - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 let sundayNow9to11Tip7 = Tip(header: "Live Longer", title: "Walk more. It's what all successful people who live to 100 did - and do - almost daily", body: "Walking: \n• Relieves stress \n• Aids digestion after a meal \n\nIt's easier on the joints than running, and if you're walking briskly, may have the same cardiovascular benefits as running.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 //SAT
 let saturdayNow9to11Tip4 = Tip(header: "Increase Happiness 🌲", title: "Get some fresh air in nature", body: "Research: As air pollution increases, happiness decreases. And the effect is true even if you're near a busy road. \n\nThe link between mood and air quality was so strong that the researchers recommended clean air as an anti-depressant." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 let saturdayNow9to11Tip5 = Tip(header: "Reduce Your Risk", title: "Study: Participants who posted excessive amounts of images and selfies on social media showed a 25% increase in narcissistic traits", body: "This increase took many of these participants above the clinical cut-off for Narcissistic Personality Disorder. \n\nNarcissism is a personality characteristic that can involve grandiose exhibitionism, beliefs relating to entitlement, and exploiting others." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2018/11/181109112655.htm", sponsorLogo: "", sponsorURL: "")
-let saturdayNow9to11Tip6 = Tip(header: "Weight Loss", title: "Drink 8 glasses of water per day - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. Replacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
+let saturdayNow9to11Tip6 = Tip(header: "Lose Weight", title: "Drink 8 glasses of water per day - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. Replacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 let saturdayNow9to11Tip7 = Tip(header: "Live Longer", title: "Do physical activities that you enjoy", body: "Forget the gym if you don't like it - you're not likely to go there if it's a chore. \n\nRather than exercising for the sake of exercising, make your lifestyle active. \n\n• Walk to the store. \n• Ride a bicycle instead of driving.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 3
@@ -291,6 +322,18 @@ let sundayNow9to10Topic3 = Topic(title: weekendNow9to11Title, icon: weekendNow9t
 let saturdayNow9to10Array3 = [saturdayNow9to11Tip12, saturdayNow9to11Tip13, saturdayNow9to11Tip14, saturdayNow9to11Tip15]
 let saturdayNow9to10Topic3 = Topic(title: weekendNow9to11Title, icon: weekendNow9to11Icon, tip: saturdayNow9to10Array3)
 
+//////////
+//RANDOM
+let sundayNow9to10TipArrays = [sundayNow9to10Array0, sundayNow9to10Array1, sundayNow9to10Array2, sundayNow9to10Array3,]
+let sundayNow9to10Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow9to10TipArrays.random())
+//RANDOM
+let saturdayNow9to10TipArrays = [saturdayNow9to10Array0, saturdayNow9to10Array1, saturdayNow9to10Array2, saturdayNow9to10Array3,]
+let saturdayNow9to10Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow9to10TipArrays.random())
+
+
+
+
+
 
 //WEEK 5
 //SUN (WIP 4)
@@ -311,7 +354,7 @@ let weekendNow11to13Icon = "Now"
 
 //WEEK 1
 //SUN
-let weekendNow11to13Tip0 = Tip(header: "Prevent Wrinkles And Premature Aging ☀️", title: "Wear sunscreen everyday", body: "Research: People who used sunscreen daily were less likely to have wrinkles, sagging skin, and dark spots after 4.5 years than people who didn't use sunscreen daily." , sourceName: "The Skin Cancer Foundation", sourceURL: "https://www.skincancer.org/prevention/sun-protection/sunscreen/aging", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekendNow11to13Tip0 = Tip(header: "Prevent Wrinkles", title: "Wear sunscreen everyday", body: "Research: People who used sunscreen daily were less likely to have wrinkles, sagging skin, and dark spots after 4.5 years than people who didn't use sunscreen daily." , sourceName: "The Skin Cancer Foundation", sourceURL: "https://www.skincancer.org/prevention/sun-protection/sunscreen/aging", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekendNow11to13Tip1 = Tip(header: "Live Better", title: "Disconnect from technology on the weekend and reconnect with yourself and people", body: "• Take a ‘tech Sabbath.’ Even a walk without your phone can feel liberating. \n\n• \"A day of rest\" is an ancient tradition that is used for reflection and connection." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/every-week-i-unplug-from-technology-for-24-hours-and-im-convinced-it-makes-me-better-at-my-job-2016-9", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekendNow11to13Tip2 = Tip(header: "Reduce Your Risk ☀️", title: "Lower your risk of skin cancer: Reduce sun exposure between 10 a.m. and 4 p.m.", body: "Having 5+ sunburns during your lifetime doubles your risk of melanoma, the deadliest form of skin cancer. \n\nIf you have to be outside: \n\n• Work in the shade \n• Apply (and reapply) sunscreen \n• Wear a wide-brimmed hat that protects your face and neck", sourceName: "Raleigh Medical Group", sourceURL: "https://www.raleighmedicalgroup.com/blog/entryid/185/skin-cancer-prevention", sponsorLogo: "", sponsorURL: "")
 let weekendNow11to13Tip3 = Tip(header: "Live Better 🌲", title: "Spending time in nature is good for your mind, body, and spirit", body: "Being Active Outdoors: \n\n• Keeps your joints loose \n• Reduces anxiety, depression, and stress \n• Reduces your chances of getting a virus; since you're not breathing in the same recycled air as everyone else is when you stay indoors" , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-nature-can-solve-life-s-most-challenging-problems-ncna749361", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -364,48 +407,59 @@ let weekendNow11to13Tip30 = Tip(header: "Increase Happiness", title: "Set up a w
 let weekendNow11to13Tip31 = Tip(header: "Increase Happiness", title: "Arrange your schedule to include socializing for 6-7 hours a day", body: "Evidence proves that your social network - and your level of engagement with it - contribute significantly to your happiness. \n\nEven introverts tend to be happier when they are around people than when they're alone.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 5
+//SUN
 let weekendNow11to13Tip32 = Tip(header: "Be More Interesting", title: "Stop Doing Uninteresting Things", body: "Uninteresting People: \n• Watch TV every day \n• Eat at the same restaurants over and over again \n• Go to the same vacation spot every year \n• Only read the books that were assigned in high school \n• Spend hours checking their social media feeds \n• Talk about the weather \n• Expect other people to do all the talking \n\nIf you want to be a more interesting person, you have to do interesting things: \n• Try a new restaurant you have driven by a million times but never tried \n• Create a bucket list and pledge to do one activity every month \n• Go to the movie theater and watch a movie that you would never normally choose \n• Sign up for a workout class that you have never done before \n• Pick up a magazine you would never normally read and explore it cover to cover \n• Start a learning bucket list and learn one new skill", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/interesting/", sponsorLogo: "", sponsorURL: "")
+
+//SAT
+let weekendNow11to13Tip36 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEK 1
 //SUN
-let weekendNow11to13TipArray0 = [weekendNow11to13Tip0, weekendNow11to13Tip1, weekendNow11to13Tip2, weekendNow11to13Tip3]
-let sundayNow11to13Topic1 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray0)
+let sundayNow11to13TipArray0 = [weekendNow11to13Tip0, weekendNow11to13Tip1, weekendNow11to13Tip2, weekendNow11to13Tip3]
+let sundayNow11to13Topic1 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: sundayNow11to13TipArray0)
 //SAT
-let weekendNow11to13TipArray1 = [weekendNow11to13Tip4, weekendNow11to13Tip5, weekendNow11to13Tip6, weekendNow11to13Tip7]
-let saturdayNow11to13Topic1 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray1)
+let saturdayNow11to13TipArray1 = [weekendNow11to13Tip4, weekendNow11to13Tip5, weekendNow11to13Tip6, weekendNow11to13Tip7]
+let saturdayNow11to13Topic1 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: saturdayNow11to13TipArray1)
 
 //WEEK 2
 //SUN
-let weekendNow11to13TipArray2 = [weekendNow11to13Tip8, weekendNow11to13Tip9, weekendNow11to13Tip10, weekendNow11to13Tip11]
-let sundayNow11to13Topic2 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray2)
+let sundayNow11to13TipArray2 = [weekendNow11to13Tip8, weekendNow11to13Tip9, weekendNow11to13Tip10, weekendNow11to13Tip11]
+let sundayNow11to13Topic2 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: sundayNow11to13TipArray2)
 //SAT
-let weekendNow11to13TipArray3 = [weekendNow11to13Tip12, weekendNow11to13Tip13, weekendNow11to13Tip14, weekendNow11to13Tip15]
-let saturdayNow11to13Topic2 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray3)
+let saturdayNow11to13TipArray3 = [weekendNow11to13Tip12, weekendNow11to13Tip13, weekendNow11to13Tip14, weekendNow11to13Tip15]
+let saturdayNow11to13Topic2 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: saturdayNow11to13TipArray3)
 
 //WEEK 3
 //SUN
-let weekendNow11to13TipArray4 = [weekendNow11to13Tip16, weekendNow11to13Tip17, weekendNow11to13Tip18, weekendNow11to13Tip19]
-let sundayNow11to13Topic3 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray4)
+let sundayNow11to13TipArray4 = [weekendNow11to13Tip16, weekendNow11to13Tip17, weekendNow11to13Tip18, weekendNow11to13Tip19]
+let sundayNow11to13Topic3 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: sundayNow11to13TipArray4)
 //SAT
-let weekendNow11to13TipArray5 = [weekendNow11to13Tip20, weekendNow11to13Tip21, weekendNow11to13Tip22, weekendNow11to13Tip23]
-let saturdayNow11to13Topic3 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray5)
+let saturdayNow11to13TipArray5 = [weekendNow11to13Tip20, weekendNow11to13Tip21, weekendNow11to13Tip22, weekendNow11to13Tip23]
+let saturdayNow11to13Topic3 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: saturdayNow11to13TipArray5)
 
 //WEEK 4
 //SUN
-let weekendNow11to13TipArray6 = [weekendNow11to13Tip24, weekendNow11to13Tip25, weekendNow11to13Tip26, weekendNow11to13Tip27]
-let sundayNow11to13Topic4 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray6)
+let sundayNow11to13TipArray6 = [weekendNow11to13Tip24, weekendNow11to13Tip25, weekendNow11to13Tip26, weekendNow11to13Tip27]
+let sundayNow11to13Topic4 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: sundayNow11to13TipArray6)
 //SAT
-let weekendNow11to13TipArray7 = [weekendNow11to13Tip28, weekendNow11to13Tip29, weekendNow11to13Tip30, weekendNow11to13Tip31]
-let saturdayNow11to13Topic4 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray7)
+let saturdayNow11to13TipArray7 = [weekendNow11to13Tip28, weekendNow11to13Tip29, weekendNow11to13Tip30, weekendNow11to13Tip31]
+let saturdayNow11to13Topic4 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: saturdayNow11to13TipArray7)
 
 //WEEK 5
-//SUN (4 WIP)
-let weekendNow11to13TipArray8 = [weekendNow11to13Tip32, weekendNow11to13Tip26, weekendNow11to13Tip25, weekendNow11to13Tip20]
-let sundayNow11to13Topic5 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray8)
-//SAT (4 WIP)
-let weekendNow11to13TipArray9 = [weekendNow11to13Tip15, weekendNow11to13Tip13, weekendNow11to13Tip14, weekendNow11to13Tip18]
-let saturdayNow11to13Topic5 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: weekendNow11to13TipArray9)
+//SUN (3 WIP)
+let sundayNow11to13TipArray8 = [weekendNow11to13Tip32, weekendNow11to13Tip26, weekendNow11to13Tip25, weekendNow11to13Tip20]
+let sundayNow11to13Topic5 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: sundayNow11to13TipArray8)
+//SAT (3 WIP)
+let saturdayNow11to13TipArray9 = [weekendNow11to13Tip36, weekendNow11to13Tip13, weekendNow11to13Tip14, weekendNow11to13Tip18]
+let saturdayNow11to13Topic5 = Topic(title: weekendNow11to13Title, icon: weekendNow11to13Icon, tip: saturdayNow11to13TipArray9)
+
+//RANDOM
+let sundayNow11to13TipArrays = [sundayNow11to13TipArray0, sundayNow11to13TipArray2, sundayNow11to13TipArray4, sundayNow11to13TipArray6, sundayNow11to13TipArray8,]
+let sundayNow11to13Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow11to13TipArrays.random())
+//RANDOM
+let saturdayNow11to13TipArrays = [saturdayNow11to13TipArray1, saturdayNow11to13TipArray3, saturdayNow11to13TipArray5, saturdayNow11to13TipArray7, saturdayNow11to13TipArray9,]
+let saturdayNow11to13Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow11to13TipArrays.random())
 
 
 // MARK: - Now, Weekend, 14to16
@@ -428,13 +482,13 @@ let weekendNow14to16Tip7 = Tip(header: "Live Longer", title: "We all need 22 min
 ////// WEEK 2
 //SUN
 let weekendNow14to16Tip8 = Tip(header: "The Right Time", title: "For many, the optimal time to take a nap is 7 hours after waking", body: "• 7AM wake up = 2PM nap \n• 8AM wake up = 3PM nap \n\nThere's evidence that regular nappers get more from their naps than infrequent nappers." , sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
-let weekendNow14to16Tip9 = Tip(header: "Weight Loss", title: "Drink 8 glasses of water per day - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
+let weekendNow14to16Tip9 = Tip(header: "Lose Weight", title: "Drink 8 glasses of water per day - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 let weekendNow14to16Tip10 = Tip(header: "Live Longer", title: "Encourage your family and friends to live healthy lives improves your odds of living a healthy life", body: "Research: People were more likely to become obese when their friends became obese. \n\nIn the case of close mutual friends, if one became obese, the odds of the other becoming obese nearly tripled. \n\nIt seemed the same effect occurred with weight loss.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 let weekendNow14to16Tip11 = Tip(header: "Live Healthier", title: "People who spend 2+ hours in nature a week are more likely to report good health and higher psychological wellbeing than those who don't visit nature at all during an average week", body: "The majority of nature visits in this research took place within just 2 miles of home so even visiting local urban green spaces seems to be a good thing. \n\nThe study found it didn't matter whether the 2 hours was achieved in a single visit or over several shorter visits.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/06/190613095227.htm", sponsorLogo: "", sponsorURL: "")
 
 //SAT
 let weekendNow14to16Tip12 = Tip(header: "Billionaire Habit", title: "Have a regular exercise routine", body: "You need to be physically fit to perform at the highest levels. \n\n• Richard Branson wakes up early to exercise. \n\n• Mark Cuban does 60 minutes of cardio at least 6 days a week.", sourceName: "Market Watch", sourceURL: "https://www.marketwatch.com/story/4-habits-that-self-made-billionaires-practice-nearly-every-day-2019-07-11", sponsorLogo: "", sponsorURL: "")
-let weekendNow14to16Tip13 = Tip(header: "Weight Loss", title: "Drink 8 glasses of water per day - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
+let weekendNow14to16Tip13 = Tip(header: "Lose Weight", title: "Drink 8 glasses of water per day - drink more if you’re overweight or your working out a lot", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 let weekendNow14to16Tip14 = Tip(header: "Prevent Weight Gain", title: "Limit food consumption to your hours of peak activity", body: "Researchers put 2 groups of mice on the same diet. \n\nOne group was allowed to eat anytime; the other group was restricted to eating only during an 8-hour period when they were normally awake and active. \n\nThe mice that ate only while active were 40% leaner and had lower cholesterol and blood sugar.", sourceName: "Wall Street Journal", sourceURL: "https://www.wsj.com/articles/SB10000872396390444180004578018294057070544", sponsorLogo: "", sponsorURL: "")
 let weekendNow14to16Tip15 = Tip(header: "Live Longer", title: "Focus your life on serving others or caring for your family", body: "Study: Successful 100+ year-olds have a strong sense of purpose. They feel needed and contribute to a greater good. \n\nAs soon as they lose this, the switch goes off. They die very quickly if they don't feel needed.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
@@ -484,6 +538,19 @@ let sundayNow14to16Topic3 = Topic(title: weekendNow14to16Title, icon: weekendNow
 let weekendNow14to16TipArray5 = [weekendNow14to16Tip20, weekendNow14to16Tip21, weekendNow14to16Tip22, weekendNow14to16Tip23]
 let saturdayNow14to16Topic3 = Topic(title: weekendNow14to16Title, icon: weekendNow14to16Icon, tip: weekendNow14to16TipArray5)
 
+
+//RANDOM
+let sundayNow14to16TipArrays = [weekendNow14to16TipArray0, weekendNow14to16TipArray2, weekendNow14to16TipArray4,]
+let sundayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow14to16TipArrays.random())
+//RANDOM
+let saturdayNow14to16TipArrays = [weekendNow14to16TipArray1, weekendNow14to16TipArray3, weekendNow14to16TipArray5,]
+let saturdayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow14to16TipArrays.random())
+
+
+
+
+
+
 //WEEK 4
 //SUN (4 WIP)
 let weekendNow14to16TipArray6 = [weekendNow14to16Tip11, weekendNow14to16Tip17, weekendNow14to16Tip10, weekendNow14to16Tip3]
@@ -524,12 +591,13 @@ let saturdayNow17to20Tip3 = Tip(header: "Prevent Weight Gain", title: "• Eat o
 // SUN
 let sundayNow17to20Tip4 = Tip(header: "Increase Happiness", title: "Join a club, sports team, or service organization that lines up with your interests and passions", body: "Give priority to organizations whose members are like you in age, values, and interests and you'll create new friendships." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let sundayNow17to20Tip5 = Tip(header: "Reduce The Sunday Scaries", title: "Survey: the Sunday scaries’ average time of arrival is 3:58 p.m.", body: "Clinical psychologist explains: Many working Americans worry about the upcoming workweek on Sundays. This feeling, whether we call it anxiety, worry, stress, fear, whatever, it's all really the same thing. \n\nPsychologically, it's a response to the perception of some sort of threat. For most people, the stress of Sunday is uncomfortable but ultimately manageable. \n\nExercising, taking a walk, or doing some activity that you really enjoy on Sunday can take your mind off the scaries temporarily." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/family/archive/2020/02/sunday-scaries-anxiety-workweek/606289/", sponsorLogo: "", sponsorURL: "")
-
+let sundayNow17to20Tip6 = Tip(header: "Increase Happiness", title: "Give and help others", body: "Results from a massive study of over 200,000 respondents revealed that being generous had a positive effect on one’s happiness in a whopping 93% of (120 of 136) countries. \n\nResearchers looked at generosity indicators such as giving money, volunteering, and even being emotionally available to friends and found that the more generous people were, the happier they reported feeling.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/06/why-rich-people-arent-as-happy-as-they-could-be", sponsorLogo: "", sponsorURL: "")
 
 
 //SAT
 let saturdayNow17to20Tip4 = Tip(header: "Avoid Social Media", title: "Loneliness increases when you choose social media interactions over face-to-face interactions. Spend tonight with family or friends", body: "Research: Lonely people spend more time on Facebook than non-lonely people. \n\nUsing social media to organize future face-to-face meetings is healthy. \n\nBut, spending time alone, scrolling through social media is unhealthy." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-making-us-lonely/308930/", sponsorLogo: "", sponsorURL: "")
-
+let saturdayNow17to20Tip5 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let saturdayNow17to20Tip6 = Tip(header: "Live Longer", title: "Study: Exercising 30 minutes per day increases life expectancy", body: "Compared to no exercise: \n\n• 75 minutes of exercise per week was associated with an increase of 1.8 years in life expectancy. \n\n• 150+ minutes of exercise per week was associated with an increase of up to 4.5 years in life expectancy. \n\nInactive and obese people had a life expectancy that was 5-7 years SHORTER than people who were normal weight and moderately active." , sourceName: "PLOS Medicine", sourceURL: "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001335", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -549,12 +617,27 @@ let saturdayNow17to18Topic1 = Topic(title: weekendNow17to18Title, icon: weekendN
 
 //WEEK 2
 // SUN (WIP - 2)
-let sundayNow17to18TipArray2 = [sundayNow17to20Tip4, sundayNow17to20Tip5, sundayNow17to20Tip2, sundayNow17to20Tip0]
+let sundayNow17to18TipArray2 = [sundayNow17to20Tip4, sundayNow17to20Tip5, sundayNow17to20Tip6, sundayNow17to20Tip3]
 let sundayNow17to18Topic2 = Topic(title: weekendNow17to18Title, icon: weekendNow17to18Icon, tip: sundayNow17to18TipArray2)
 
-// SAT (WIP - 3)
-let saturdayNow17to18TipArray2 = [saturdayNow17to20Tip4, saturdayNow17to20Tip1, saturdayNow17to20Tip2, saturdayNow17to20Tip0]
+// SAT (WIP - 2)
+let saturdayNow17to18TipArray2 = [saturdayNow17to20Tip4, saturdayNow17to20Tip5, saturdayNow17to20Tip6, saturdayNow17to20Tip3]
 let saturdayNow17to18Topic2 = Topic(title: weekendNow17to18Title, icon: weekendNow17to18Icon, tip: saturdayNow17to18TipArray2)
+
+
+//RANDOM
+let sundayNow17to18TipArrays = [sundayNow17to18TipArray1, sundayNow17to18TipArray2,]
+let sundayNow17to18Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow17to18TipArrays.random())
+//RANDOM
+let saturdayNow17to18TipArrays = [saturdayNow17to18TipArray1, saturdayNow17to18TipArray2,]
+let saturdayNow17to18Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow17to18TipArrays.random())
+
+
+
+
+
+
+
 
 //WEEK 3
 // SUN (WIP - 4)
@@ -600,7 +683,7 @@ let weekendNow17to20Tip3 = Tip(header: "Sleep Better Tonight", title: "Do some l
 
 //SAT (WIP - 1)
 let weekendNow17to20Tip4 = Tip(header: "Live Healthy", title: "Being lonely is bad for your health. Spend tonight with family or friends", body: "Lonely people are more likely to: \n\n• Not exercise \n• Be obese \n• Be depressed \n• Sleep badly \n• Suffer cognitive decline \n• Develop dementia \n• Be put in a geriatric home at an earlier age than a similar person who isn’t lonely" , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2012/05/is-facebook-making-us-lonely/308930/", sponsorLogo: "", sponsorURL: "")
-let weekendNow17to20Tip5 = Tip(header: "Weight Loss", title: "Drinking 8 glasses of water per day can aid in weight loss for the average person", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss. \n\nDrink more if you’re overweight or your working out a lot." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
+let weekendNow17to20Tip5 = Tip(header: "Lose Weight", title: "Drinking 8 glasses of water per day can aid in weight loss for the average person", body: "Study: 43% of adults drink less than 4 cups of water a day. \n\nReplacing soda, fruit juice, and sweetened iced teas with water can also help boost weight loss. \n\nDrink more if you’re overweight or your working out a lot." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
 let weekendNow17to20Tip6 = Tip(header: "Prevent Weight Gain", title: "Avoid drinking alcohol tonight", body: "Study: Drinking alcohol causes people to eat an extra 384 calories daily. \n\nAlcohol makes us: \n• More sensitive to food aromas \n• Less likely to resist unhealthy foods" , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 3
@@ -614,6 +697,16 @@ let sundayNow19to20Topic1 = Topic(title: weekendNow19to20Title, icon: weekendNow
 //SAT (WIP - 1)
 let saturdayNow19to20TipArray1 = [weekendNow17to20Tip4, weekendNow17to20Tip5, weekendNow17to20Tip6, saturdayNow17to20Tip3]
 let saturdayNow19to20Topic1 = Topic(title: weekendNow19to20Title, icon: weekendNow19to20Icon, tip: saturdayNow19to20TipArray1)
+
+//RANDOM
+let sundayNow19to20TipArrays = [sundayNow19to20TipArray0]
+let sundayNow19to20Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow19to20TipArrays.random())
+//RANDOM
+let saturdayNow19to20TipArrays = [saturdayNow19to20TipArray1]
+let saturdayNow19to20Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow19to20TipArrays.random())
+
+
+
 
 //WEEK 2
 //SUN (WIP - 4)
@@ -741,6 +834,22 @@ let sunday21to24Topic4 = Topic(title: weekendNow21to24Title, icon: weekendNow21t
 let saturday21to24TipArray7 = [saturday21to24Tip8, saturday21to24Tip7, saturday21to24Tip6, saturday21to24Tip5]
 let saturday21to24Topic4 = Topic(title: weekendNow21to24Title, icon: weekendNow21to24Icon, tip: saturday21to24TipArray7)
 
+//RANDOM
+let sunday21to24TipArrays = [sunday21to24TipArray0, sunday21to24TipArray2, sunday21to24TipArray4, sunday21to24TipArray6,]
+let sunday21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sunday21to24TipArrays.random())
+//RANDOM
+let saturday21to24TipArrays = [saturday21to24TipArray1, saturday21to24TipArray3, saturday21to24TipArray5, saturday21to24TipArray7,]
+let saturday21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow14to16TipArrays.random())
+
+
+
+
+
+
+
+
+
+
 //WEEK 5
 // SUN (WIP - 4)
 let sunday21to24TipArray8 = [sunday21to24Tip5, sunday21to24Tip8, sunday21to24Tip7, sunday21to24Tip6]
@@ -749,6 +858,10 @@ let sunday21to24Topic5 = Topic(title: weekendNow21to24Title, icon: weekendNow21t
 // SAT (WIP - 4)
 let saturday21to24TipArray9 = [saturday21to24Tip5, saturday21to24Tip8, saturday21to24Tip7, saturday21to24Tip6]
 let saturday21to24Topic5 = Topic(title: weekendNow21to24Title, icon: weekendNow21to24Icon, tip: saturday21to24TipArray9)
+
+
+
+
 
 
 // MARK: - WEEKDAY
@@ -847,6 +960,31 @@ let thursdayNow0to4Topic2 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0t
 let weekdayNow0to4TipArray9 = [friday0to4Tip1, weekdayNow0to4Tip17, weekdayNow0to4Tip18, weekdayNow0to4Tip19]
 let fridayNow0to4Topic2 = Topic(title: weekdayNow0to4Title, icon: weekdayNow0to4Icon, tip: weekdayNow0to4TipArray9)
 
+/////////////////
+//RANDOM - MON
+let mondayNow0to4TipArrays = [weekdayNow0to4TipArray0, weekdayNow0to4TipArray5,]
+let mondayNow0to4Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow0to4TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow0to4TipArrays = [weekdayNow0to4TipArray1, weekdayNow0to4TipArray6,]
+let tuesdayNow0to4Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow0to4TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow0to4TipArrays = [weekdayNow0to4TipArray2, weekdayNow0to4TipArray7,]
+let wednesdayNow0to4Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow0to4TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow0to4TipArrays = [weekdayNow0to4TipArray3, weekdayNow0to4TipArray8,]
+let thursdayNow0to4Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow0to4TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow0to4TipArrays = [weekdayNow0to4TipArray4, weekdayNow0to4TipArray9,]
+let fridayNow0to4Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow0to4TipArrays.random())
+
+
+
+
+
 //WEEK 3
 //MON (WIP - 4)
 let weekdayNow0to4TipArray10 = [weekdayNow0to4Tip0, weekdayNow0to4Tip1, weekdayNow0to4Tip2, weekdayNow0to4Tip3]
@@ -925,7 +1063,7 @@ let weekdayNow5to8Tip3 = Tip(header: "Look Better", title: "Before you leave for
 // TUES
 let weekdayNow5to8Tip4 = Tip(header: "☕️", title: "The best time to drink coffee is after 9:30 a.m.", body: "That's because the stress hormone cortisol, which regulates energy, generally peaks between 8 a.m. and 9 a.m., so you don't need the boost right then.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5#-2", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 let weekdayNow5to8Tip5 = Tip(header: "Healthy Habit", title: "Drinking water first thing in the morning helps to rehydrate the body", body: "Our bodies are slightly dehydrated when we wake up in the morning. Drinking a couple of glasses of water allows the body to rehydrate and helps with digestion after breakfast.", sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
-let weekdayNow5to8Tip6 = Tip(header: "Weight Loss", title: "Breakfast eaters are 1/3 less likely to be overweight or obese", body: "They also show greater restraint when it comes to impulse snacking and overeating at other meals. \n\nComing as it does after the day's longest period without food, breakfast seems to influence metabolism more strongly than lunch or dinner.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/nutrition/breakfast-and-beyond-the-case-for-a-healthy-morning-meal", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
+let weekdayNow5to8Tip6 = Tip(header: "Lose Weight", title: "Breakfast eaters are 1/3 less likely to be overweight or obese", body: "They also show greater restraint when it comes to impulse snacking and overeating at other meals. \n\nComing as it does after the day's longest period without food, breakfast seems to influence metabolism more strongly than lunch or dinner.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/nutrition/breakfast-and-beyond-the-case-for-a-healthy-morning-meal", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 let weekdayNow5to8Tip7 = Tip(header: "Increase Success 👔", title: "Dress well today. It may increase your earnings potential", body: "Study: People were shown photos of men dressed in either business or casual attire. They were then asked questions about how the men would perform in a variety of jobs. \n\nResults indicated that the men wearing casual attire were expected to earn a lower starting salary compared to the men dressed in business attire. Moreover, the men in business attire were expected to make more money and get promoted more rapidly.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/ashleystahl/2016/05/11/how-self-worth-affects-your-salary/#4c97d0e677fa", sponsorLogo: "", sponsorURL: "")
 
 
@@ -962,13 +1100,13 @@ let weekdayNow5to8Tip23 = Tip(header: "Not A Breakfast Eater?", title: "Try Inte
 // TUE
 let weekdayNow5to8Tip24 = Tip(header: "Avoid Weight Gain", title: "People who eat breakfast are less likely to gain weight and develop belly fat", body: "Study: On average, people who ate breakfast regularly only gained 3 pounds each year, while those who skipped breakfast gained 8 pounds. \n\nEating breakfast sets you up for eating healthy for the rest of the day." , sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/eat-breakfast-gain-less-weight-belly-fat-study/", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip25 = Tip(header: "Avoid Weight Gain", title: "Eat your biggest meal of the day before 3 PM", body: "Study: People who ate their biggest meal after 3 PM, lost significantly less weight — and took longer to lose it — than people who ate their biggest meal before 3 PM." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/why-eating-late-bad-unhealthy-2018-1", sponsorLogo: "", sponsorURL: "")
-let weekdayNow5to8Tip26 = Tip(header: "Avoid Weight Gain", title: "Eat breakfast, because skipping breakfast tricks your brain into thinking you want higher-calorie foods", body: "Study: When people skipped breakfast their brain's reward center became more active when they saw a high-calorie food (pizza and cake) as opposed to a low-calorie food (vegetables and fish). \n\nWhen people ate breakfast their brain's reward center did not show any significantly greater activity when they saw a high-calorie food." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/news/20090615/skip-breakfast-get-fat", sponsorLogo: "", sponsorURL: "")
+let weekdayNow5to8Tip26 = Tip(header: "Avoid Weight Gain", title: "Eat breakfast. Skipping breakfast tricks your brain into thinking you want higher-calorie foods", body: "Study: When people skipped breakfast their brain's reward center became more active when they saw a high-calorie food (pizza and cake) as opposed to a low-calorie food (vegetables and fish). \n\nWhen people ate breakfast their brain's reward center did not show any significantly greater activity when they saw a high-calorie food." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/news/20090615/skip-breakfast-get-fat", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip27 = Tip(header: "Increase Happiness", title: "Don't spend more than 30 minutes on social media today", body: "Study: Limiting your social media usage to 30 minutes per day reduces your risk of: \n\n• Depression \n• Loneliness" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/facebook-instagram-snapchat-social-media-well-being-2018-11", sponsorLogo: "", sponsorURL: "")
 
 // WED
 let weekdayNow5to8Tip28 = Tip(header: "Healthy Habit", title: "The sooner you can drink a big glass of water with lemon, the better you'll feel", body: "Being dehydrated lowers brain performance and mood. \n\nHaving a large glass of water with lemon in the morning helps stimulate digestion and decreases inflammation, which can improve your memory and focus this morning." , sourceName: "Bustle", sourceURL: "https://www.bustle.com/p/7-ways-to-change-your-morning-routine-that-can-drastically-boost-your-mood-8168589", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip29 = Tip(header: "Increase Happiness", title: "Be like Jennifer Aniston: Don't look at your phone in the morning", body: "Jennifer Aniston finds that her happiest days always begin with a device-free routine. \n\n\"It felt so liberating not to be tied to [my phone]. When you start the day the way you should, which is for ourselves, that’s a great way to start your day.\"" , sourceName: "Thrive Global", sourceURL: "https://thriveglobal.com/stories/jennifer-aniston-arianna-huffington-boundaries-technology-happiness-morning-routine/", sponsorLogo: "", sponsorURL: "")
-let weekdayNow5to8Tip30 = Tip(header: "Weight Loss", title: "Dieters are more successful at losing weight—and keeping it off—when they eat breakfast every day", body: "If you don't already eat breakfast, start. If you are already a breakfast eater, try eating the same breakfast multiple days each week. \n\nRepeating the same meals can help you shed pounds, according to research.", sourceName: "EatingWell", sourceURL: "http://www.eatingwell.com/article/280967/7-small-changes-with-big-results/", sponsorLogo: "", sponsorURL: "")
+let weekdayNow5to8Tip30 = Tip(header: "Lose Weight", title: "Dieters are more successful at losing weight—and keeping it off—when they eat breakfast every day", body: "If you don't already eat breakfast, start. If you are already a breakfast eater, try eating the same breakfast multiple days each week. \n\nRepeating the same meals can help you shed pounds, according to research.", sourceName: "EatingWell", sourceURL: "http://www.eatingwell.com/article/280967/7-small-changes-with-big-results/", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip31 = Tip(header: "Make More Money", title: "Arrive on time to work today. People who test high in conscientiousness, such as being on time, earn higher salaries", body: "Research: Conscientiousness is the personality trait most often correlated with job performance. \n\nConscientious people tend to be super organized, responsible, and plan ahead. \n\nIf someone shows up on time, that's a great clue toward conscientiousness, since a punctual person has to be organized enough to arrive on time." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/conscientiousness-predicts-job-performance-2014-12", sponsorLogo: "", sponsorURL: "")
 
 
@@ -983,11 +1121,11 @@ let weekdayNow5to8Tip35 = Tip(header: "Productivity", title: "What's the one goa
 let weekdayNow5to8Tip36 = Tip(header: "Prevent Weight Gain", title: "Eat breakfast earlier in the morning", body: "Study: Later meal timing was associated with: \n• higher body mass index \n• greater body fat" , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/03/190323145204.htm", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip37 = Tip(header: "Increase Happiness", title: "When you first wake up, think of 3 things you're grateful for", body: "Priming your brain with positive information at the start of your day puts your attention on the good in your life rather than the bad. \n\nThis reprograms your brain to have a more upbeat world view. \n\nGratitude makes you happier, more resilient, more likeable, and can literally add years to your life." , sourceName: "Inc.", sourceURL: "https://www.inc.com/minda-zetlin/do-this-one-thing-before-you-get-up-every-morning.html", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip38 = Tip(header: "Live Better", title: "80%+ of the world-class performers Tim Ferriss interviewed for his book, “Tools of Titans,” had a mindfulness ritual in their morning routine", body: "By meditating, \"you’re practicing focus when it doesn’t matter (sitting on a couch for 10 minutes) so that you can focus better later when it does matter (negotiation, conversation with a loved one, etc.).\" \n\nFerriss recommends first-timers try a meditation app, like Headspace or Calm." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/01/23/tim-ferriss-5-step-morning-routine.html", sponsorLogo: "", sponsorURL: "")
-let weekdayNow5to8Tip39 = Tip(header: "Increase Success", title: "Write down the most important tasks that you need to complete today. It helps you simplify your life by focusing on what really counts", body: "Write tasks that support your long term goals and are aligned with your purpose, passion, or direction in life. \n\n\"If you have a goal, write it down. If you do not write it down, you do not have a goal - you have a wish.\" \n\n- Steve Maraboli" , sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/lifestyle/7-morning-rituals-empower-your-day-change-your-life.html", sponsorLogo: "", sponsorURL: "")
+let weekdayNow5to8Tip39 = Tip(header: "Increase Success", title: "Write down the most important tasks that you need to complete today. It simplifies your life by focusing on what really counts", body: "Write tasks that: \n• Support your long term goals \n• Are aligned with your purpose, passion, or direction in life. \n\n\"If you have a goal, write it down. If you do not write it down, you do not have a goal - you have a wish.\" \n\n- Steve Maraboli" , sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/lifestyle/7-morning-rituals-empower-your-day-change-your-life.html", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 3
 //MON
-let weekdayNow5to8Tip40 = Tip(header: "Weight Loss", title: "Drink water first thing in the morning. Don't drink coffee until 9 a.m.", body: "Study: People who drank 17 ounces of water (about 2 glasses) increased their metabolic rate by 30%, allowing them to burn more calories. \n\nBecause your cortisol levels naturally rise in the morning after you wake and peak between 8-9 a.m., having coffee before 9 a.m. can result in increased stress and its caffeine effects won’t be as effective than drinking it after 9 a.m." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/surprising-habits-affecting-health/", sponsorLogo: "", sponsorURL: "")
+let weekdayNow5to8Tip40 = Tip(header: "Lose Weight", title: "Drink water first thing in the morning. Don't drink coffee until 9 a.m.", body: "Study: People who drank 17 ounces of water (about 2 glasses) increased their metabolic rate by 30%, allowing them to burn more calories. \n\nBecause your cortisol levels naturally rise in the morning after you wake and peak between 8-9 a.m., having coffee before 9 a.m. can result in increased stress and its caffeine effects won’t be as effective than drinking it after 9 a.m." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/surprising-habits-affecting-health/", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip41 = Tip(header: "Improve Performance", title: "Morning exercise, such as a brisk walk, improves cognitive performance like decision-making throughout the day", body: "Furthermore, the study found that moderate-intensity exercise in the morning combined with brief 3-minute walking breaks during an 8-hour day of sitting can boost your short-term memory compared to 8 hours of uninterrupted sitting." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/04/190429154529.htm", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip42 = Tip(header: "Reflect", title: "How to tell if you slept well last night: The less you remember your dreams, the better you slept.", body: "Everyone dreams. Lack of dream recollection means that you're a healthy sleeper because it’s a sign you spent more time in deep sleep, stages 3 and 4. \n\nIt's in stages 3-4 that our body repairs muscles, stimulates development, boosts immune functions, and builds up energy for the next day." , sourceName: "Medium", sourceURL: "https://medium.com/an-idea-for-you/how-to-tell-if-you-slept-well-last-night-and-what-to-do-if-you-didnt-e338553af778", sponsorLogo: "", sponsorURL: "")
 let weekdayNow5to8Tip43 = Tip(header: "Prevent Weight Gain", title: "Study: People gain weight when they eat calories at night. Solution: Eat early and within a 12-hour window or less ― only when there’s sunlight", body: "Our bodies become more insulin resistant later in the day which causes sugar to stay in your bloodstream and be turned into fat. \n\nEat 75% of your daily calories before 2 p.m., with breakfast and lunch being your largest meals, and dinner the smallest. \n\nGetting plenty of protein and healthy fat (avocado, chia seeds, salmon, and walnuts) in the morning and at lunchtime will ward off hunger tonight.", sourceName: "Cleveland Clinic", sourceURL: "https://health.clevelandclinic.org/its-not-just-what-you-eat-but-also-when-that-matters/", sponsorLogo: "", sponsorURL: "")
@@ -1084,6 +1222,38 @@ let thursdayNow5to8Topic3 = Topic(title: weekdayNow5to8Title, icon: weekdayNow5t
 let weekdayNow5to8TipArray14 = [weekdayNow5to8Tip56, weekdayNow5to8Tip37, weekdayNow5to8Tip38, weekdayNow5to8Tip39]
 let fridayNow5to8Topic3 = Topic(title: weekdayNow5to8Title, icon: weekdayNow5to8Icon, tip: weekdayNow5to8TipArray14)
 
+/////////////////
+//RANDOM - MON
+let mondayNow5to8TipArrays = [weekdayNow5to8TipArray0, weekdayNow5to8TipArray5, weekdayNow5to8TipArray10]
+let mondayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow5to8TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow5to8TipArrays = [weekdayNow5to8TipArray1, weekdayNow5to8TipArray6, weekdayNow5to8TipArray11]
+let tuesdayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow5to8TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow5to8TipArrays = [weekdayNow5to8TipArray2, weekdayNow5to8TipArray7, weekdayNow5to8TipArray12]
+let wednesdayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow5to8TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow5to8TipArrays = [weekdayNow5to8TipArray3, weekdayNow5to8TipArray8, weekdayNow5to8TipArray13]
+let thursdayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow5to8TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow5to8TipArrays = [weekdayNow5to8TipArray4, weekdayNow5to8TipArray9, weekdayNow5to8TipArray14]
+let fridayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow5to8TipArrays.random())
+
+
+
+
+
+
+
+
+
+
+
+
 //WEEK 4
 // MON (WIP - 4)
 let weekdayNow5to8TipArray15 = [weekdayNow5to8Tip23, weekdayNow5to8Tip21, weekdayNow5to8Tip22, weekdayNow5to8Tip20]
@@ -1172,7 +1342,7 @@ let mondayNow9to11Week2Tip4 = Tip(header: "Prevent Weight Gain", title: "Eat lun
 
 //TUE
 let tuesdayNow9to11Week2Tip1 = Tip(header: "In a bad mood today? 😤", title: "It's okay, you're not alone", body: "Analysis of Google Searches: People searched for the terms \"anxiety\", \"depression\", \"stress\", \"fatigue\", and \"pain\" the most on Tuesday and Wednesday, making them tied for the most miserable days of the week." , sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/news/wonk/wp/2014/12/03/the-google-misery-index-the-times-of-year-were-most-depressed-anxious-and-stressed/?utm_term=.ce96d202a3f3", sponsorLogo: "", sponsorURL: "")
-let tuesdayNow9to11Week2Tip2 = Tip(header: "Weight Loss 🍽", title: "For people who are trying to lose weight, eat most of your calories earlier in the day and then consume less at night", body: "Studies have found that when people eat more at night, they put on more weight." , sourceName: "Vox", sourceURL: "https://www.vox.com/2016/2/17/11034546/eating-late-night-bad-diet", sponsorLogo: "", sponsorURL: "")
+let tuesdayNow9to11Week2Tip2 = Tip(header: "Lose Weight", title: "For people who are trying to lose weight, eat most of your calories earlier in the day and then consume less at night", body: "Studies have found that when people eat more at night, they put on more weight." , sourceName: "Vox", sourceURL: "https://www.vox.com/2016/2/17/11034546/eating-late-night-bad-diet", sponsorLogo: "", sponsorURL: "")
 let tuesdayNow9to11Week2Tip3 = Tip(header: "Sleep Better Tonight ☀️", title: "Get sun exposure within 2 hours of waking up", body: "Morning sun exposure helps your circadian clock to reset itself for a new day and will help you fall asleep tonight." , sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/the-new-secrets-of-perfect-sleep/", sponsorLogo: "", sponsorURL: "")
 let tuesdayNow9to11Week2Tip4 = Tip(header: "Productivity", title: "If you want to receive less email, send less emails", body: "LinkedIn CEO Jeff Weiner's golden rule for email management, is, don't send an email unless absolutely necessary. When you send an email, your inbox fills up with the responses from your emails and with the responses of the people who were added to those threads." , sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/email-habits-of-successful-executives.html", sponsorLogo: "", sponsorURL: "")
 
@@ -1192,6 +1362,7 @@ let thursdayNow9to11Tip4 = Tip(header: "Be More Likable", title: "People like be
 let fridayNow9to11Tip1 = Tip(header: "Increase Happiness", title: "Happiness and unhappiness are contagious, and they both start with you", body: "We like people who care about us, who really listen to us, and who are generous with their time and resources. \n\n• Give at least 3 positive comments for each negative comment you speak.", sourceName: "The Blue Zones of Happiness: Lessons From the World's Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
 let fridayNow9to11Tip2 = Tip(header: "Improve Health", title: "DO: Breathe through your nose \nDON'T: Breath through your mouth", body: "Nose breathing is a major line of defense against airborne pathogens. The nostrils, hair and nasal passageways are designed to assist in filtering allergens and foreign bodies from entering the lungs. \n\nThe mouth has no defense system. \n\nBy nose breathing you may experience decreasing allergies or colds." , sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/wellness/when-it-comes-to-breathing-during-exercise-youre-probably-doing-it-wrong/2019/01/23/b4d3c338-1e59-11e9-8b59-0a28f2191131_story.html", sponsorLogo: "", sponsorURL: "")
+let fridayNow9to11Tip3 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 3
 
@@ -1227,9 +1398,42 @@ let wednesdayNow9to11Topic2 = Topic(title: weekdayNow9to11Title, icon: weekdayNo
 // THU
 let weekdayNow9to11TipArray8 = [thursdayNow9to11Tip1, thursdayNow9to11Tip2, thursdayNow9to11Tip3, thursdayNow9to11Tip4]
 let thursdayNow9to11Topic2 = Topic(title: weekdayNow9to11Title, icon: weekdayNow9to11Icon, tip: weekdayNow9to11TipArray8)
-// FRI (WIP - 2)
-let weekdayNow9to11TipArray9 = [fridayNow9to11Tip1, fridayNow9to11Tip2, weekdayNow9to11Tip18, weekdayNow9to11Tip19]
+// FRI (WIP - 1)
+let weekdayNow9to11TipArray9 = [fridayNow9to11Tip1, fridayNow9to11Tip2, fridayNow9to11Tip3, weekdayNow9to11Tip19]
+
+
+/////////////////
+//RANDOM - MON
+let mondayNow9to11TipArrays = [weekdayNow9to11TipArray0, weekdayNow9to11TipArray5]
+let mondayNow9to11Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow9to11TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow9to11TipArrays = [weekdayNow9to11TipArray1, weekdayNow9to11TipArray6]
+let tuesdayNow9to11Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow9to11TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow9to11TipArrays = [weekdayNow9to11TipArray2, weekdayNow9to11TipArray7]
+let wednesdayNow9to11Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow9to11TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow9to11TipArrays = [weekdayNow9to11TipArray3, weekdayNow9to11TipArray8]
+let thursdayNow9to11Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow9to11TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow9to11TipArrays = [weekdayNow9to11TipArray4, weekdayNow9to11TipArray9]
+let fridayNow9to11Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow9to11TipArrays.random())
+
+
+
+
+
+
+
+
 let fridayNow9to11Topic2 = Topic(title: weekdayNow9to11Title, icon: weekdayNow9to11Icon, tip: weekdayNow9to11TipArray9)
+
+
+
 
 //WEEK 3
 // MON (WIP - 4)
@@ -1303,9 +1507,9 @@ let weekdayNow11to14Tip5 = Tip(header: "Improve Mood And Productivity 🎶", tit
 let weekdayNow11to14Tip6 = Tip(header: "Work Smarter 🗣", title: "Wear large, over-the-ear headphones to help block out unwanted noise", body: "Workers lose as much as 86 minutes per day due to noise distractions. \n\nEmployees should speak to an office manager or human resources director on this issue." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/03/stop-noise-from-ruining-your-open-office", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 // WED
-let weekdayNow11to14Tip7 = Tip(header: "Warning", title: "The more you use Facebook/social media, the worse you feel", body: "While real-world social networks were positively associated with overall well-being, the use of Facebook was negatively associated with overall well-being. Liking others’ content and clicking links significantly predicted a reduction in self-reported physical health, mental health, and life satisfaction." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/04/a-new-more-rigorous-study-confirms-the-more-you-use-facebook-the-worse-you-feel", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow11to14Tip7 = Tip(header: "Warning", title: "The more you use Facebook/social media, the worse you feel", body: "While real-world social networks were positively associated with overall well-being, the use of Facebook was negatively associated with overall well-being. \n\nLiking others’ content and clicking links significantly predicted a reduction in self-reported physical health, mental health, and life satisfaction." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2017/04/a-new-more-rigorous-study-confirms-the-more-you-use-facebook-the-worse-you-feel", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip8 = Tip(header: "Increase Focus and Mood", title: "Listen to nature sounds while you work. Nearby speech distracts 48% of office workers", body: "Sounds of nature can mask intelligible speech just as well as white noise while also enhancing cognitive functioning, optimizing the ability to concentrate, and increasing overall worker satisfaction." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-music-for-productivity-2015-7", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let weekdayNow11to14Tip9 = Tip(header: "Increase Productivity", title: "Decorating your office with plants or pictures of your family or pet can increase productivity up to 15%", body: "Seeing plants around you can improve morale, increase satisfaction with your work, and make you more patient. Set your screensaver or web browser to display nature images." , sourceName: "Inc.", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow11to14Tip9 = Tip(header: "Increase Productivity", title: "Decorating your office with plants or pictures of your family or pet can increase productivity up to 15%", body: "Seeing plants around you can improve morale, increase satisfaction with your work, and make you more patient. \n\nSet your screensaver or web browser to display nature images." , sourceName: "Inc.", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip10 = Tip(header: "Be Confident", title: "Stand tall, with your neck elongated, ears and shoulders aligned, chest slightly sticking out, and legs slightly apart", body: "This changes the chemicals in our brain to make us feel stronger and more confident, and it gives the outward appearance of credibility, strength, and vitality." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/common-body-language-mistakes-employees-make-2014-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 // THUR
@@ -1386,6 +1590,33 @@ let thursdayNow11to13Topic2 = Topic(title: weekdayNow11to14Title, icon: weekdayN
 let weekdayNow11to13TipArray9 = [weekdayNow11to14Tip35, weekdayNow11to14Tip17, weekdayNow11to14Tip16, weekdayNow11to14Tip14]
 let fridayNow11to13Topic2 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to13TipArray9)
 
+/////////////////
+//RANDOM - MON
+let mondayNow11to13TipArrays = [weekdayNow11to13TipArray0, weekdayNow11to13TipArray5]
+let mondayNow11to13Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow11to13TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow11to13TipArrays = [tuesdayNow11to13TipArray1, weekdayNow11to13TipArray6]
+let tuesdayNow11to13Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow11to13TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow11to13TipArrays = [weekdayNow11to13TipArray2, weekdayNow11to13TipArray7]
+let wednesdayNow11to13Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow11to13TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow11to13TipArrays = [weekdayNow11to13TipArray3, weekdayNow11to13TipArray8]
+let thursdayNow11to13Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow11to13TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow11to13TipArrays = [weekdayNow11to13TipArray4, weekdayNow11to13TipArray9]
+let fridayNow11to13Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow11to13TipArrays.random())
+
+
+
+
+
+
+
 //WEEK 3
 // MON (WIP 4)
 let weekdayNow11to13TipArray10 = [weekdayNow11to14Tip3, weekdayNow11to14Tip1, weekdayNow11to14Tip2, weekdayNow11to14Tip0]
@@ -1458,7 +1689,7 @@ let weekdayNow14to16Tip3 = Tip(header: "Improve Performance", title: "Ask yourse
 // Tuesday-specific tip
 let weekdayNow14to16Tip4 = Tip(header: "Low on energy?", title: "Our bodies’ biological clocks create an urge to sleep in the afternoon", body: "Research: Moving your body may help you feel less bored and tired. \n\nAnd a walk outside in the sunlight and among trees and flowers may improve your focus and mood." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/minding-the-body/201802/5-simple-fixes-afternoon-slump-work", sponsorLogo: "", sponsorURL: "")
 let weekdayNow14to16Tip5 = Tip(header: "Fix Your Posture 👩‍💻", title: "People who sit at a desk for a long period of time tend to roll their shoulders in and hang their head forward", body: "Every inch you hold your head forward, you add 10 pounds of pressure on your spine. \n\nWhen you finally do lean back again, like at the end of the day, the overworked muscles tense up, which can lead to tension headaches. \n\nTake a break from sitting every 30 minutes." , sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/money/business/2015/06/07/cheat-sheet-body-language-donts/28460019/", sponsorLogo: "", sponsorURL: "")
-let weekdayNow14to16Tip6 = Tip(header: "Increase Happiness", title: "Avoid social media in the afternoon because this is when people write the most negative posts", body: "A study of Twitter posts found that the majority of negative posts occurred in the afternoon, with the most amount of negative posts occurring between 3 PM and 4 PM, while the most positive posts occurred in the morning and evening. \n\nThis analysis suggests that our moods are driven in part by a shared biological rhythm." , sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2011/09/30/science/30twitter.html", sponsorLogo: "", sponsorURL: "")
+let weekdayNow14to16Tip6 = Tip(header: "Increase Happiness", title: "Avoid social media in the afternoon because this is when people write the most negative posts", body: "A study of Twitter posts found that the majority of negative posts occurred in the afternoon while the most positive posts occurred in the morning and evening. \n\nThis analysis suggests that our moods are driven in part by a shared biological rhythm." , sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2011/09/30/science/30twitter.html", sponsorLogo: "", sponsorURL: "")
 let weekdayNow14to16Tip7 = Tip(header: "Feeling depressed today? 😔", title: "You're not alone. People feel the most depressed on Tuesday", body: "Analysis of Google Searches: People searched for the term \"depression\" the most on Tuesday, followed by Monday, Wednesday, and Thursday." , sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/news/wonk/wp/2014/12/03/the-google-misery-index-the-times-of-year-were-most-depressed-anxious-and-stressed/?utm_term=.ce96d202a3f3", sponsorLogo: "", sponsorURL: "")
 
 //// WED
@@ -1488,10 +1719,11 @@ let weekdayNow14to16Tip22 = Tip(header: "Millionaire Habit", title: "Work 50+ ho
 let weekdayNow14to16Tip23 = Tip(header: "Live Longer", title: "Sitting for more than 3 hours a day can cut 2 years off your life expectancy, even if you exercise regularly", body: "• Stand up more \n• Stretch more \n• Take walking breaks" , sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
 
 //TUES
-let weekdayNow14to16Tip24 = Tip(header: "Live Healthier", title: "When sitting, sit with good posture", body: "Engage your core to straighten your back, rotate your pelvis forward, and push chin back to straighten your neck. \n\nThis may be uncomfortable at first, so treat it like resistance training." , sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
+let weekdayNow14to16Tip24 = Tip(header: "Live Healthier", title: "Sit with good posture", body: "• Engage your core to straighten your back. \n\n• Rotate your pelvis forward. • Push your chin back to straighten your neck." , sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
 let weekdayNow14to16Tip25 = Tip(header: "Tired?", title: "Naps have been shown to consistently outperform high doses of caffeine for cognitive tasks, logical reasoning, and motor performance", body: "You are supposed to get sleepy in the afternoon; it's part of your circadian cycle. \n\nIt's a signal for your body, telling you to stop and recharge. \n\nFamous nappers include: \n• Albert Einstein \n• Thomas Edison \n• Winston Churchill" , sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
 let weekdayNow14to16Tip26 = Tip(header: "Increase Confidence", title: "Plant your feet in an open, wide stance that's in line with your hips and shoulders", body: "Confident people have two feet firmly planted on the ground. \n\nIt projects more confidence than if your legs are crossed or together.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/body-language-tricks-appear-more-confident-2016-3", sponsorLogo: "", sponsorURL: "")
-//let weekdayNow14to16Tip27
+let weekdayNow14to16Tip27 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+
 
 
 //WED
@@ -1531,8 +1763,8 @@ let fridayNow14to16Topic1 = Topic(title: weekdayNow14to16Title, icon: weekdayNow
 let weekdayNow14to16TipArray5 = [weekdayNow14to16Tip20, weekdayNow14to16Tip21, weekdayNow14to16Tip22, weekdayNow14to16Tip23]
 let mondayNow14to16Topic2 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray5)
 
-//TUE (WIP 2)
-let weekdayNow14to16TipArray6 = [weekdayNow14to16Tip24, weekdayNow14to16Tip25, weekdayNow14to16Tip5, weekdayNow14to16Tip4]
+//TUE
+let weekdayNow14to16TipArray6 = [weekdayNow14to16Tip24, weekdayNow14to16Tip25, weekdayNow14to16Tip26, weekdayNow14to16Tip27]
 let tuesdayNow14to16Topic2 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray6)
 
 //WED (WIP 2)
@@ -1546,6 +1778,32 @@ let thursdayNow14to16Topic2 = Topic(title: weekdayNow14to16Title, icon: weekdayN
 //FRI (WIP 3)
 let weekdayNow14to16TipArray9 = [weekdayNow14to16Tip36, weekdayNow14to16Tip18, weekdayNow14to16Tip17, weekdayNow14to16Tip16]
 let fridayNow14to16Topic2 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray9)
+
+/////////////////
+//RANDOM - MON
+let mondayNow14to16TipArrays = [weekdayNow14to16TipArray0, weekdayNow14to16TipArray5]
+let mondayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow14to16TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow14to16TipArrays = [weekdayNow14to16TipArray1, weekdayNow14to16TipArray6]
+let tuesdayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow14to16TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow14to16TipArrays = [weekdayNow14to16TipArray2, weekdayNow14to16TipArray7]
+let wednesdayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow14to16TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow14to16TipArrays = [weekdayNow14to16TipArray3, weekdayNow14to16TipArray8]
+let thursdayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow14to16TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow14to16TipArrays = [weekdayNow14to16TipArray4, weekdayNow14to16TipArray9]
+let fridayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow14to16TipArrays.random())
+
+
+
+
+
 
 //WEEK 3
 //MON (WIP 4)
@@ -1677,7 +1935,7 @@ let thursday17to18Week2Tip2 = Tip(header: "Prevent Weight Gain", title: "Cook di
 let thursday17to18Week2Tip3 = Tip(header: "Millionaire Habit", title: "Network and volunteer regularly. You'll build relationships that can result in more business advisors or customers, or help you land a better job", body: "• 75% of wealthy people network and volunteer 5+ hours a month. \n\n• Only 10% of people struggling financially network and volunteer. \n\nOften the boards and committees of nonprofits are made up of wealthy, successful people. \n\nKnowing them may result in future business relationships or job referrals.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", sponsorLogo: "", sponsorURL: "")
 let thursday17to18Week2Tip4 = Tip(header: "Prevent Weight Gain", title: "Spend time with friends who are active, eat well, and make other healthy choices", body: "Study: A person’s chance of becoming obese increased by 57% if he or she had a friend who became obese. \n\nYour social network has an big effect on your income, happiness, and especially your weight." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/if-your-best-friend-becomes-obese-you-will-too-says-harvard-professor-2014-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-//FRI
+//*** FRIDAY ONLY
 let friday17to18Week2Tip1 = Tip(header: "Live Healthier", title: "After a long week, don't reward yourself with alcohol, food, or sugary treats. Instead, choose calorie-free rewards such as a manicure, a massage, or a movie", body: "There’s nothing wrong with rewarding yourself after a long week. But, rewarding yourself with drinks and foods is likely the reason you’re not losing weight." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")//FRIDAY*
 let friday17to18Week2Tip2 = Tip(header: "Millionaire Habit", title: "Hang out with high-achievers because your friends could affect your net worth", body: "In most cases, your net worth mirrors the level of your closest friends. \n\nWe become like the people we associate with, and that's why winners surround themselves with winners.", sourceName: "Yahoo! Finance", sourceURL: "https://uk.finance.yahoo.com/news/11-habits-start-20s-want-150800135.html", sponsorLogo: "", sponsorURL: "")
 let friday17to18Week2Tip3 = Tip(header: "Live Longer", title: "Exercise for 15 minutes per day", body: "Study: Compared with individuals in the inactive group, those who exercised for 15 min a day had a 14% reduced risk of premature death, and had a 3 year longer life expectancy. \n\nFor every additional 15 min of daily exercise beyond the minimum amount of 15 min a day further decreased their risk of premature death by 4%.", sourceName: "The Lancet", sourceURL: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(11)60749-6/fulltext", sponsorLogo: "", sponsorURL: "")
@@ -1691,7 +1949,7 @@ let friday17to18Week2Tip4 = Tip(header: "Millionaire Habit", title: "Pay Yoursel
 let monday17to18Week3Tip1 = Tip(header: "Increase Happiness", title: "Exercise often. It increases endorphins in your brain and improves your self-image, both ways to make you happier", body: "Strength training and aerobic training are good at decreasing depression and improving long-term heart health, according to research.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-make-sure-get-happier-as-you-get-older-2019-8", sponsorLogo: "", sponsorURL: "")
 let monday17to18Week3Tip2 = Tip(header: "Save Money", title: "Cook at home. Study: Ordering delivery from a restaurant is 5 times more expensive than cooking at home", body: "Average price per serving based on 86 meals: \n• Restaurant Delivery = $20.37 \n• Home Cooking = $4.31 \n\nWhen cooking at home, you will: \n• Save a substantial amount of money on carb-based meals like pasta or pizza; and \n• Save the most on protein-based meals like beef or chicken when compared to ordering from a restaurant.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/priceonomics/2018/07/10/heres-how-much-money-do-you-save-by-cooking-at-home/#212e3e0235e5", sponsorLogo: "", sponsorURL: "")
 
-let monday17to18Week3Tip3 = Tip(header: "Reduce Cancer Risk", title: "Eat dinner before 9 p.m. and eat dinner 2 hours or more before you go to bed", body: "Study: People who waited 2+ hours after eating dinner to sleep had a 20% reduced risk for breast and prostate cancers combined compared with people who went to sleep immediately after dinner. \n\nPeople who ate dinner earlier — before 9 pm — also had similar reductions in risk compared with those who ate after 10 pm.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2018/07/180717182312.htm", sponsorLogo: "", sponsorURL: "")
+let monday17to18Week3Tip3 = Tip(header: "Reduce Cancer Risk", title: "Eat dinner before 9 p.m. and 2 hours or more before you go to bed", body: "Study: People who waited 2 hours or more after eating dinner to sleep had a 20% reduced risk for breast and prostate cancers combined compared with people who went to sleep immediately after dinner. \n\nPeople who ate dinner earlier — before 9 pm — also had similar reductions in risk compared with those who ate after 10 pm.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2018/07/180717182312.htm", sponsorLogo: "", sponsorURL: "")
 let monday17to18Week3Tip4 = Tip(header: "Millionaire Habit", title: "Save 20% of your net income and live on the remaining 80%", body: "Among those who are struggling financially, almost all are living above their means. They spend more than they earn, and their debt is overwhelming them. \n\nMake a habit of saving and budgeting your monthly net pay: \n\n• Spend no more than 25% on housing, no matter if you own or rent. \n\n• Spend no more than 15% on food. \n\n• Limit entertainment—bars, movies, etc. to no more than 10% of your spending. Vacations should account for no more than 5% of your annual net pay. \n\n• Spend no more than 5% on auto loans and never lease. 94% of the wealthy buy instead of leasing. \n\n• Stay away from accumulating credit card debt. If you are doing this, it’s a clear sign that you need to cut back somewhere.", sourceName: "Success Magazine", sourceURL: "https://www.success.com/16-rich-habits/", sponsorLogo: "", sponsorURL: "")
 
 
@@ -1781,6 +2039,34 @@ let thursdayNow17to18Topic3 = Topic(title: weekdayNow17to18Title, icon: weekdayN
 //FRI
 let weekdayNow17to18TipArray14 = [friday17to18Week3Tip1, friday17to18Week3Tip2, friday17to18Week3Tip3, friday17to18Week3Tip4]
 let fridayNow17to18Topic3 = Topic(title: weekdayNow17to18Title, icon: weekdayNow17to18Icon, tip: weekdayNow17to18TipArray14)
+
+/////////////////
+//RANDOM - MON
+let mondayNow17to18TipArrays = [weekdayNow17to18TipArray0, weekdayNow17to18TipArray5, weekdayNow17to18TipArray10]
+let mondayNow17to18Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow17to18TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow17to18TipArrays = [weekdayNow17to18TipArray1, weekdayNow17to18TipArray6, weekdayNow17to18TipArray11]
+let tuesdayNow17to18Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow17to18TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow17to18TipArrays = [weekdayNow17to18TipArray2, weekdayNow17to18TipArray7, weekdayNow17to18TipArray12]
+let wednesdayNow17to18Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow17to18TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow17to18TipArrays = [weekdayNow17to18TipArray3, weekdayNow17to18TipArray8, weekdayNow17to18TipArray13]
+let thursdayNow17to18Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow17to18TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow17to18TipArrays = [weekdayNow17to18TipArray4, weekdayNow17to18TipArray9, weekdayNow17to18TipArray14]
+let fridayNow17to18Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow17to18TipArrays.random())
+
+
+
+
+
+
+
 
 //WEEK 4
 //MON (WIP 4)
@@ -1875,16 +2161,16 @@ let weekday19to20Tip27 = Tip(header: "Increase Well-Being", title: "Say \"I am e
 let weekday19to20Tip28 = Tip(header: "Increase Happiness", title: "Join a club that aligns with your interests. You'll gain a sense of purpose and meet like-minded people", body: "Study: Joining a group that meets even once a month produces the same happiness gain as doubling your income. \n\nYou could join a volunteer organization, a religious mission group, or a committed self-improvement class.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
 //WED
-let weekday19to20Tip29 = Tip(header: "Increase Creativity 📵", title: "Avoid screen-time tonight", body: "When your brain is fed a constant stream of stimulating entertainment on a 2-D screen with flat, unnatural light, your senses are saturated and creative drive is reduced." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekday19to20Tip29 = Tip(header: "🤔", title: "Exercising before bed may be keeping you from getting the good night’s sleep", body: "Revving up your energy and heart rate late at night may prevent you from falling asleep easily. \n\nThe best time to exercise is 3 to 4 hours prior to going to sleep. The increase in core body temperature followed by a decrease in core body temperature mimics the natural drop in body temperature needed to fall asleep and maintain sleep.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/why-cant-i-sleep/", sponsorLogo: "", sponsorURL: "")
 let weekday19to20Tip30 = Tip(header: "Avoid Weight Gain", title: "Study: Nighttime eating leads to weight gain. Solution: Eat early and within a 12-hour window or less ― only when there’s sunlight", body: "Our bodies become more insulin resistant later in the day which causes sugar to stay in your bloodstream and be turned into fat. \n\nEat 75% of your daily calories before 2 p.m., with breakfast and lunch being your largest meals, and dinner the smallest. \n\nGetting plenty of protein and healthy fat (avocado, chia seeds, salmon, and walnuts) in the morning and at lunchtime will ward off hunger at night.", sourceName: "Cleveland Clinic", sourceURL: "https://health.clevelandclinic.org/its-not-just-what-you-eat-but-also-when-that-matters/", sponsorLogo: "", sponsorURL: "")
 let weekday19to20Tip31 = Tip(header: "Increase Happiness", title: "Make social connections a higher priority. Loneliness is as bad to your well-being as smoking 15 cigarettes a day", body: "A lot of times, especially in the US, we let our friendships take a backseat to our careers or parenting. \n\nIt's important to make more space for friends in your life. \n\nAs you get older, loneliness increases your risks of: \n• High blood pressure \n• Cardiovascular disease \n• Dementia", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
-//let weekday19to20Tip32 =
+let weekday19to20Tip32 = Tip(header: "", title: "Plan out when you're going to wake up, count back however many hours you need to sleep, and then set an alarm to remind yourself to get ready for bed", body: "Going to bed at a consistent time each evening is a key habit all sleep experts recommend. \n\nThe worst thing you can do is stay up late then hit snooze in the morning.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
 
 
 //THUR
-let weekday19to20Tip33 = Tip(header: "Live Longer", title: "Study: Exercising 30 minutes per day increases life expectancy", body: "Compared to no exercise: \n\n• 75 minutes of exercise per week was associated with an increase of 1.8 years in life expectancy. \n\n• 150+ minutes of exercise per week was associated with an increase of up to 4.5 years in life expectancy. \n\nInactive and obese people had a life expectancy that was 5-7 years SHORTER than people who were normal weight and moderately active." , sourceName: "PLOS Medicine", sourceURL: "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001335", sponsorLogo: "", sponsorURL: "")
+let weekday19to20Tip33 = Tip(header: "Sleep Better", title: "Don’t schedule a strenuous gym session within 3 hours of your bedtime", body: "Your core body temperature falls when we’re ready to go to sleep. But, an intense workout raises your body temperature, making it more difficult for you to fall asleep afterward.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/the-new-secrets-of-perfect-sleep/", sponsorLogo: "", sponsorURL: "")
 let weekday19to20Tip34 = Tip(header: "Increase Happiness", title: "Research: Pet owners tend to be healthier and happier than people without pets", body: "Studies find that dog owners get more than 5 hours of exercise a week. \n\nPets have been found to reduce stress, improve self-esteem, and win your heart in a way guaranteed to bring happiness. \n\nIf you don't have one already, adopt a pet, preferably a rescue cat or dog.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
-//let weekday19to20Tip35
+let weekday19to20Tip35 = Tip(header: "Increase Creativity 📵", title: "Avoid screen-time tonight", body: "When your brain is fed a constant stream of stimulating entertainment on a 2-D screen with flat, unnatural light, your senses are saturated and creative drive is reduced." , sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/mental-wealth/201704/10-ways-protect-the-brain-daily-screen-time", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 //let weekday19to20Tip36
 
 //FRI
@@ -1893,6 +2179,11 @@ let weekday19to20Tip37 = Tip(header: "Live Longer", title: "Study: People who re
 //let weekday19to20Tip38
 //let weekday19to20Tip39
 //let weekday19to20Tip40
+
+
+
+
+
 
 //WEEK 1
 //MON
@@ -1918,15 +2209,46 @@ let mondayNow19to20Topic2 = Topic(title: weekdayNow19to20Title, icon: weekdayNow
 //TUE
 let weekdayNow19to20TipArray6 = [weekday19to20Tip25, weekday19to20Tip26, weekday19to20Tip27, weekday19to20Tip28]
 let tuesdayNow19to20Topic2 = Topic(title: weekdayNow19to20Title, icon: weekdayNow19to20Icon, tip: weekdayNow19to20TipArray6)
-//WED (WIP 1)
-let weekdayNow19to20TipArray7 = [weekday19to20Tip29, weekday19to20Tip30, weekday19to20Tip31, weekday19to20Tip12]
+//WED
+let weekdayNow19to20TipArray7 = [weekday19to20Tip29, weekday19to20Tip30, weekday19to20Tip31, weekday19to20Tip32]
 let wednesdayNow19to20Topic2 = Topic(title: weekdayNow19to20Title, icon: weekdayNow19to20Icon, tip: weekdayNow19to20TipArray7)
 //THUR (WIP 2)
-let weekdayNow19to20TipArray8 = [weekday19to20Tip33, weekday19to20Tip34, weekday19to20Tip15, weekday19to20Tip16]
+let weekdayNow19to20TipArray8 = [weekday19to20Tip33, weekday19to20Tip34, weekday19to20Tip35, weekday19to20Tip16]
 let thursdayNow19to20Topic2 = Topic(title: weekdayNow19to20Title, icon: weekdayNow19to20Icon, tip: weekdayNow19to20TipArray8)
 //FRI (WIP 3)
 let weekdayNow19to20TipArray9 = [weekday19to20Tip37, weekday19to20Tip18, weekday19to20Tip19, weekday19to20Tip17]
 let fridayNow19to20Topic2 = Topic(title: weekdayNow19to20Title, icon: weekdayNow19to20Icon, tip: weekdayNow19to20TipArray9)
+
+/////////////////
+//RANDOM - MON
+let mondayNow19to20TipArrays = [weekdayNow19to20TipArray0, weekdayNow19to20TipArray5]
+let mondayNow19to20Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow19to20TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow19to20TipArrays = [weekdayNow19to20TipArray1, weekdayNow19to20TipArray6]
+let tuesdayNow19to20Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow19to20TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow19to20TipArrays = [weekdayNow19to20TipArray2, weekdayNow19to20TipArray7]
+let wednesdayNow19to20Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow19to20TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow19to20TipArrays = [weekdayNow19to20TipArray3, weekdayNow19to20TipArray8]
+let thursdayNow19to20Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow19to20TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow19to20TipArrays = [weekdayNow19to20TipArray4, weekdayNow19to20TipArray9]
+let fridayNow19to20Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow19to20TipArrays.random())
+
+
+
+
+
+
+
+
+
+
 
 //WEEK 3
 //MON
@@ -2071,14 +2393,20 @@ let weekdayNow21to24Tip51 = Tip(header: "Lose Weight", title: "Go to sleep. Not 
 //THURS
 let weekdayNow21to24Tip52 = Tip(header: "Increase Happiness", title: "Sleep at least 7.5 hours a night", body: "Research: If you're sleeping less than 6 hours per night, you're about 30% LESS happy than you would be if you had slept enough. \n\nCutting sleep is almost always a bad idea; you are less productive and less creative, you have less energy, and you will likely lose time in the long run because sleep-deprived people live shorter lives.", sourceName: "Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let weekdayNow21to24Tip53 = Tip(header: "Sleep Better", title: "Avoid electronic devices after 9 PM. Blue light from the screens suppress melatonin release and shifts our sleep cycle", body: "We need darkness to cue us to sleep. \n\nAverage sleep dealy at night: \n• Tablet: 96 min \n• Smartphone: 67 min \n• E-reader: 58 min \n• Light bulb: 55 min \n• Candle: 0 min", sourceName: "National Geographic", sourceURL: "https://www.nationalgeographic.com/magazine/2018/08/science-of-sleep/", sponsorLogo: "", sponsorURL: "")
-//let weekdayNow21to24Tip54
-//let weekdayNow21to24Tip55
+let weekdayNow21to24Tip54 = Tip(header: "🚶‍♂️", title: "Each night before bed, Buffer CEO, Joel Gascoigne, takes a 20-minute walk.", body: "\"This is a wind-down period and allows me to evaluate the day's work, think about the greater challenges, gradually stop thinking about work, and reach a state of tiredness,\" he writes. \n\nStudies find that walking—especially in nature—reduces stress and anxiety.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip55 = Tip(header: "Successful Habit", title: "Composer Ludwig van Beethoven went to bed at 10 p.m. at the latest", body: "He was able to optimize his early-morning routine because he got his recommended 7 to 9 hours of sleep the night before. \n\nTo get into the habit of going to bed early, set an alarm in the evening to remind you to go to sleep", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3042968/the-evening-routines-of-the-most-successful-people", sponsorLogo: "", sponsorURL: "")
 
 //FRI
 let weekdayNow21to24Tip56 = Tip(header: "Sleep Better", title: "Stop drinking liquids 60 minutes before bed", body: "This is usually the least time it takes you to pass excess fluid. \n\nThe exception here is if you have been drinking alcohol. Go ahead and continue drinking water right up to bedtime.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")//Alcohol
 let weekdayNow21to24Tip57 = Tip(header: "Prevent The Sunday Scaries", title: "Survey: 88% of people have a feeling of anxiety on Sunday when thinking about Monday morning", body: "Take action now to prevent the Sunday Scaries. \n\nTop ways to reduce the Sunday Scaries: n\n• 44% take time for myself during the weekend \n\n• 42% of people make sure to get a full night’s rest on Friday and Saturday \n\n• 21% take a “digital detox” for part of the weekend" , sourceName: "Medium", sourceURL: "https://medium.com/@pitch_20575/study-majority-of-americans-come-down-with-a-case-of-the-sunday-scaries-every-week-2ce405acb626", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip58 = Tip(header: "Millionaire Habit", title: "Arianna Huffington's tips for a night routine that ensures better sleep:", body: "• No electronic devices 30 minutes before bedtime (or remove all devices from your bedroom) \n• No working on the bed \n• Do some light stretching and deep breathing \n• Wear pajamas to send a sleep-friendly message to your body \n• Read physical books or use an e-reader that does not emit blue light \n• Drink chamomile or lavender tea \n• Write a list of things you are grateful for", sourceName: "The Mindful Company", sourceURL: "https://www.mindful-company.com/blogs/notebook/the-night-routines-of-notable-people", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip59 = Tip(header: "CEO Advice", title: "Kenneth Chenault, CEO of American Express, writes down 3 things he wants to accomplish tomorrow", body: "This helps him prioritize first thing the next morning. \n\nClearing the mind for a good night sleep is critical for a lot of successful people.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
+
 
 //WEEK 4
+//MON
+let weekdayNow21to24Tip60 = Tip(header: "Billionaire Habit", title: "Each night before bed, Microsoft billionaire Bill Gates spends an hour reading a book, ranging on topics from politics to current events.", body: "Aside from gaining new knowledge, reading daily: \n• Reduces stress \n• Improves memory \n\nStudy: Reading for as little as 6 minutes a day can reduce stress levels by up to 68%. \n\nStudy: People who stimulated their minds through activities like reading, reduced cognitive decline by an average of 32% as they got older in age.", sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/productivity/6-habits-highly-successful-people-before-bedtime.html", sponsorLogo: "", sponsorURL: "")
+
 
 
 
@@ -2138,25 +2466,49 @@ let tuesdayNow21to24Topic3 = Topic(title: weekdayNow21to24Title, icon: weekdayNo
 let weekdayNow21to24TipArray12 = [weekdayNow21to24Tip48, weekdayNow21to24Tip49, weekdayNow21to24Tip50, weekdayNow21to24Tip51]
 let wednesdayNow21to24Topic3 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray12)
 
-// Thursday (WIP 2)
-let weekdayNow21to24TipArray13 = [weekdayNow21to24Tip52, weekdayNow21to24Tip53, weekdayNow21to24Tip14, weekdayNow21to24Tip15]
+// Thursday
+let weekdayNow21to24TipArray13 = [weekdayNow21to24Tip52, weekdayNow21to24Tip53, weekdayNow21to24Tip54, weekdayNow21to24Tip55]
 let thursdayNow21to24Topic3 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray13)
 
-// Friday (WIP 2)
-let weekdayNow21to24TipArray14 = [weekdayNow21to24Tip56, weekdayNow21to24Tip57, weekdayNow21to24Tip18, weekdayNow21to24Tip19]
+// Friday
+let weekdayNow21to24TipArray14 = [weekdayNow21to24Tip56, weekdayNow21to24Tip57, weekdayNow21to24Tip58, weekdayNow21to24Tip59]
 let fridayNow21to24Topic3 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray14)
 
+/////////////////
+//RANDOM - MON
+let mondayNow21to24TipArrays = [weekdayNow21to24TipArray0, weekdayNow21to24TipArray5, weekdayNow21to24TipArray10]
+let mondayNow21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow21to24TipArrays.random())
+
+//RANDOM - TUE
+let tuesdayNow21to24TipArrays = [weekdayNow21to24TipArray1, weekdayNow21to24TipArray6, weekdayNow21to24TipArray11]
+let tuesdayNow21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: tuesdayNow21to24TipArrays.random())
+
+//RANDOM - WED
+let wednesdayNow21to24TipArrays = [weekdayNow21to24TipArray2, weekdayNow21to24TipArray7, weekdayNow21to24TipArray12]
+let wednesdayNow21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: wednesdayNow21to24TipArrays.random())
+
+//RANDOM - THU
+let thursdayNow21to24TipArrays = [weekdayNow21to24TipArray3, weekdayNow21to24TipArray8, weekdayNow21to24TipArray13]
+let thursdayNow21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow21to24TipArrays.random())
+
+//RANDOM - FRI
+let fridayNow21to24TipArrays = [weekdayNow21to24TipArray4, weekdayNow21to24TipArray9, weekdayNow21to24TipArray14]
+let fridayNow21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow21to24TipArrays.random())
+
+
+
+
 ////WEEK 4
-// Monday (WIP 4)
-let weekdayNow21to24TipArray15 = [weekdayNow21to24Tip23, weekdayNow21to24Tip21, weekdayNow21to24Tip22, weekdayNow21to24Tip20]
+// Monday (WIP 3)
+let weekdayNow21to24TipArray15 = [weekdayNow21to24Tip60, weekdayNow21to24Tip21, weekdayNow21to24Tip22, weekdayNow21to24Tip20]
 let mondayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray15)
 
 // Tuesday (WIP 4)
-let weekdayNow21to24TipArray16 = [weekdayNow21to24Tip25, tuesdayNow21to24Tip24, weekdayNow21to24Tip26, weekdayNow21to24Tip27]
+let weekdayNow21to24TipArray16 = [tuesdayNow21to24Tip24, weekdayNow21to24Tip25, weekdayNow21to24Tip26, weekdayNow21to24Tip27]
 let tuesdayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray16)
 
 // Wednesday (WIP 4)
-let weekdayNow21to24TipArray17 = [weekdayNow21to24Tip31, weekdayNow21to24Tip29, weekdayNow21to24Tip30, weekdayNow21to24Tip28]
+let weekdayNow21to24TipArray17 = [weekdayNow21to24Tip28, weekdayNow21to24Tip29, weekdayNow21to24Tip30, weekdayNow21to24Tip31]
 let wednesdayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray17)
 
 // Thursday (WIP 4)
@@ -2164,28 +2516,28 @@ let weekdayNow21to24TipArray18 = [weekdayNow21to24Tip35, weekdayNow21to24Tip33, 
 let thursdayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray18)
 
 // Friday (WIP 4)
-let weekdayNow21to24TipArray19 = [weekdayNow21to24Tip39, weekdayNow21to24Tip37, weekdayNow21to24Tip38, weekdayNow21to24Tip36]
+let weekdayNow21to24TipArray19 = [weekdayNow21to24Tip36, weekdayNow21to24Tip37, weekdayNow21to24Tip38, weekdayNow21to24Tip39]
 let fridayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray19)
 
 ////WEEK 5
 // Monday (WIP 4)
-let weekdayNow21to24TipArray20 = [weekdayNow21to24Tip21, weekdayNow21to24Tip23, weekdayNow21to24Tip22, weekdayNow21to24Tip20]
+let weekdayNow21to24TipArray20 = [weekdayNow21to24Tip40, weekdayNow21to24Tip41, weekdayNow21to24Tip42, weekdayNow21to24Tip43]
 let mondayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray20)
 
 // Tuesday (WIP 4)
-let weekdayNow21to24TipArray21 = [tuesdayNow21to24Tip24, weekdayNow21to24Tip25, weekdayNow21to24Tip26, weekdayNow21to24Tip27]
+let weekdayNow21to24TipArray21 = [weekdayNow21to24Tip44, weekdayNow21to24Tip45, weekdayNow21to24Tip46, weekdayNow21to24Tip47]
 let tuesdayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray21)
 
 // Wednesday (WIP 4)
-let weekdayNow21to24TipArray22 = [weekdayNow21to24Tip29, weekdayNow21to24Tip31, weekdayNow21to24Tip30, weekdayNow21to24Tip28]
+let weekdayNow21to24TipArray22 = [weekdayNow21to24Tip48, weekdayNow21to24Tip49, weekdayNow21to24Tip50, weekdayNow21to24Tip51]
 let wednesdayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray22)
 
 // Thursday (WIP 4)
-let weekdayNow21to24TipArray23 = [weekdayNow21to24Tip33, weekdayNow21to24Tip35, weekdayNow21to24Tip34, weekdayNow21to24Tip32]
+let weekdayNow21to24TipArray23 = [weekdayNow21to24Tip52, weekdayNow21to24Tip53, weekdayNow21to24Tip54, weekdayNow21to24Tip55]
 let thursdayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray23)
 
 // Friday (WIP 4)
-let weekdayNow21to24TipArray24 = [weekdayNow21to24Tip37, weekdayNow21to24Tip39, weekdayNow21to24Tip38, weekdayNow21to24Tip36]
+let weekdayNow21to24TipArray24 = [weekdayNow21to24Tip56, weekdayNow21to24Tip57, weekdayNow21to24Tip58, weekdayNow21to24Tip59]
 let fridayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray24)
 
 

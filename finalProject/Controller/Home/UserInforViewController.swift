@@ -314,16 +314,10 @@ class UserInfoViewController: UIViewController {
         case 0...4:
             setNatureImage(to: "night\(day)")
 
-        case 5...7:
+        case 5...8:
             setNatureImage(to: "morning\(day)")
 
-        case 8:
-            setNatureImage(to: "morning\(day)")
-
-        case 9:
-            setNatureImage(to: "midmorning\(day)")
-
-        case 10...11:
+        case 9...11:
             setNatureImage(to: "midmorning\(day)")
 
         case 12...13:
@@ -338,10 +332,11 @@ class UserInfoViewController: UIViewController {
         case 19...20:
             setNatureImage(to: "sunset\(day)")
 
-        case 21...24:
+        case 21:
+            setNatureImage(to: "dusk\(day)")
+
+        case 22...24:
             setNatureImage(to: "night\(day)")
-
-
 
         default:
             greetingLabel.text = "Hello"

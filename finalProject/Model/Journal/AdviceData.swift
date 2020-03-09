@@ -112,7 +112,7 @@ let personalTip16 = Tip(header: "Mental Toughness", title: "Navy SEAL technique 
 
 //5
 let personalTip17 =  Tip(header: "Confidence", title: "Make This Your New Mantra: \"Never give up. Never accept failure. There is a solution to everything.\"", body: "Succeeding through great adversity is a huge confidence booster. \n\nLow self-confidence is often caused by negative thoughts running through our minds. \n\nThe next time you hear that negativity in your head, switch it immediately to a positive affirmation.", sourceName: "Inc.", sourceURL: "https://www.inc.com/peter-economy/5-powerful-ways-to-boost-your-confidence.html", sponsorLogo: "", sponsorURL: "")
-let personalTip18 = Tip(header: "Confidence", title: "Talk to yourself positively in the second person (“you”) rather than in the first person (“I”)", body: "Study: Individuals who spoke to themselves in the second person (“you”) reported higher levels of confidence and motivation. \n\nThe researchers concluded that this was because the use of “you” reminds us of receiving advice and encouragement from other people.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", sponsorLogo: "", sponsorURL: "")
+let personalTip18 = Tip(header: "Confidence", title: "Talk to yourself positively in the second person (“you”)", body: "Study: Individuals who spoke to themselves in the second person (“you”), rather than in the first person (“I”), reported higher levels of confidence and motivation. \n\nThis may be because the use of “you” reminds us of receiving advice and encouragement from other people.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", sponsorLogo: "", sponsorURL: "")
 
 let personalTip19 = Tip(header: "Millionaire Advice", title: "If you have little money and you want to be rich, you must first be \"focused,\" not \"balanced.\" If you look at anyone successful, at the start they were not balanced. Balanced people go nowhere. They stay in one spot. To make progress, you must first go unbalanced.", body: "Thomas Edison was not balanced. He was focused. Bill Gates was not balanced. He was focused. George Patton did not take his tanks wide. He focused them and blew through the weak spots in the German line. \n\nIf you have any desire of being rich, you must focus. Put a lot of your eggs in a few baskets. \n\nDo not do what poor and middle class people do; put their few eggs in many baskets. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let personalTip20 = Tip(header: "Mental Toughness", title: "Reframe negative thoughts into positive thoughts", body: "In his book, \"Breaking BUD/S: How Regular Guys Can Become Navy SEALs\", D.H. Xavier recalls his own “Hell Week” experience — \n\n“They were kicking me while I was down. My belief could have been that they truly didn’t want me there; the consequence of that belief would have been me quitting. Instead, my belief was that I didn’t care what they said. I believed I was capable of succeeding…” \n\n• See “bad” events as a challenge for you to go out there and improve yourself", sourceName: "Gear Patrol", sourceURL: "https://gearpatrol.com/2019/05/18/box-breathing-navy-seals/", sponsorLogo: "", sponsorURL: "")
@@ -140,6 +140,9 @@ let personalTopic5 = Topic(title: personalTitle, icon: personalIcon, tip: person
 let personalTipArray6 = [personalTip9, personalTip10, personalTip11, personalTip12]
 let personalTopic6 = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArray6)
 
+// RANDOM
+let personalTipArrays = [personalTipArray0, personalTipArray1, personalTipArray2, personalTipArray3, personalTipArray4, personalTipArray5, personalTipArray6,]
+let personalTopic = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArrays.random())
 
 //MARK: - Friends
 
@@ -199,12 +202,22 @@ let friendsTopic3 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTi
 
 let friendsTipArray4 = [friendsTip17, friendsTip18, friendsTip19, friendsTip20]
 let friendsTopic4 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArray4)
-// WIP
+
 let friendsTipArray5 = [friendsTip21, friendsTip22, friendsTip23, friendsTip24]
 let friendsTopic5 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArray5)
+
+// RANDOM
+let friendsTipArrays = [friendsTipArray0, friendsTipArray1, friendsTipArray2, friendsTipArray3, friendsTipArray4, friendsTipArray5,]
+let friendsTopic = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArrays.random())
+
+
 // WIP
 let friendsTipArray6 = [friendsTip9, friendsTip10, friendsTip11, friendsTip12]
 let friendsTopic6 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArray6)
+
+
+
+
 
 // MARK: - Motivate
 
@@ -431,7 +444,7 @@ let motivateDayTip24 = Tip(header: "", title: "He who is not courageous enough t
 //7
 let motivateDayTip25 = Tip(header: "Quote", title: "Each person must live their life as a model for others.", body: "- Rosa Parks \n\nAmerican activist in the civil rights movement.", sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/quotes/128784-each-person-must-live-their-life-as-a-model-for", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip26 = Tip(header: "Quote", title: "Don't do things that you know are morally wrong. Not because someone is watching, but because you are. Self-esteem is just the reputation that you have with yourself. You'll always know.", body: "- Naval Ravikant \n\nCEO and a co-founder of AngelList." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/naval-ravikant-quotes", sponsorLogo: "", sponsorURL: "")
-let motivateDayTip27 = Tip(header: "Quote", title: "Wouldn't it be a beautiful world if just 10 percent of the people who believe in the power of love would compete with one another to see who could do the most good for the most people?", body: "- Muhammad Ali \n\nAmerican professional boxer and activist." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/muhammad-ali-quotes", sponsorLogo: "", sponsorURL: "")
+let motivateDayTip27 = Tip(header: "Quote", title: "Wouldn't it be a beautiful world if just 10% of the people who believe in the power of love would compete with one another to see who could do the most good for the most people?", body: "- Muhammad Ali \n\nAmerican professional boxer and activist." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/muhammad-ali-quotes", sponsorLogo: "", sponsorURL: "")
 let motivateDayTip28 = Tip(header: "Quote", title: "It takes twenty years to build a reputation and five minutes to lose it. If you think about that, you will do things differently.", body: "- Warren Buffett \n\nInvestor and CEO of Berkshire Hathaway." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/warren-buffett-quotes", sponsorLogo: "", sponsorURL: "")
 
 //8
@@ -653,9 +666,9 @@ let motivatePMTip24 = Tip(header: "Quote", title: "If something is important eno
 
 //7
 let motivatePMTip25 = Tip(header: "Motivational Quote", title: "Don’t let your mind control you. Control your mind.", body: "- Jocko Willink \n\nRetired US Navy SEAL, podcaster, and author." , sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/author/quotes/10803973.Jocko_Willink", sponsorLogo: "", sponsorURL: "")
-let motivatePMTip26 = Tip(header: "Quote", title: "One reason so few of us achieve what we truly want is that we never direct our focus; we never concentrate our power. Most people dabble their way through life, never deciding to master anything in particular.", body: "- Tony Robbins \n\nBest-selling author, life and business strategist, and entrepreneur." , sourceName: "Awaken The Greatness Within", sourceURL: "https://www.awakenthegreatnesswithin.com/68-inspirational-tony-robbins-quotes-to-awaken-the-giant-within/", sponsorLogo: "", sponsorURL: "")
-let motivatePMTip27 = Tip(header: "Quote", title: "The great courageous act that we must all do, is to have the courage to step out of our history and past so that we can live our dreams.", body: "- Oprah Winfrey \n\nOprah Winfrey is an American television personality, actress, and entrepreneur." , sourceName: "Goalcast", sourceURL: "https://www.goalcast.com/2016/09/28/top-20-inspiring-oprah-winfrey-quotes-that-will-empower-you/", sponsorLogo: "", sponsorURL: "")
-let motivatePMTip28 = Tip(header: "Quote", title: "Take the opportunity to learn from your mistakes: find the cause of your problem and eliminate it. Don’t try to be perfect; just be an excellent example of being human.", body: "- Tony Robbins \n\nBest-selling author, life and business strategist, and entrepreneur." , sourceName: "Goalcast", sourceURL: "https://www.goalcast.com/2016/08/18/top-20-inspiring-tony-robbins-quotes/", sponsorLogo: "", sponsorURL: "")
+let motivatePMTip26 = Tip(header: "Quote", title: "If you don't control your mind, someone else will.", body: "- John Allston" , sourceName: "Quotes.net", sourceURL: "https://www.quotes.net/authors/John+Allston", sponsorLogo: "", sponsorURL: "")
+let motivatePMTip27 = Tip(header: "Quote", title: "Stop letting people who do so little for you control so much of your mind, feelings & emotions.", body: "- Will Smith \n\nAmerican actor and rapper" , sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/inspirational-quotes-by-will-smith/", sponsorLogo: "", sponsorURL: "")
+let motivatePMTip28 = Tip(header: "Quote", title: "The primary cause of unhappiness is never the situation but the thought about it. Be aware of the thoughts you are thinking. Seperate them from the situation, which is always neutral. Life isn't as serious as the mind makes it out to be.", body: "- Eckhart Tolle \n\nAuthor and spiritual teacher" , sourceName: "Habits For Wellbeing", sourceURL: "https://www.habitsforwellbeing.com/20-quotes-about-the-mind/", sponsorLogo: "", sponsorURL: "")
 
 //8
 let motivatePMTip29 = Tip(header: "Quote", title: "No, I don't ever give up.", body: "- Elon Musk \n\nEntrepreneur and CEO of SpaceX and Tesla" , sourceName: "Wisdom To Inspire", sourceURL: "https://wisdomtoinspire.com/authors/elon-musk", sponsorLogo: "", sponsorURL: "")
@@ -723,7 +736,10 @@ let motivatePMTip59 = Tip(header: "", title: "The best investment you can make i
 let motivatePMTip60 = Tip(header: "Quote", title: "Formal education will make you a living; self-education will make you a fortune.", body: "- Jim Rohn \n\nEntrepreneur, author and motivational speaker." , sourceName: "Success", sourceURL: "https://www.success.com/17-motivating-quotes-about-becoming-rich/", sponsorLogo: "", sponsorURL: "")
 
 //16
-
+let motivatePMTip61 = Tip(header: "Quote", title: "The first step is you have to say that you can.", body: "- Will Smith \n\nAmerican actor and rapper" , sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/inspirational-quotes-by-will-smith/", sponsorLogo: "", sponsorURL: "")
+let motivatePMTip62 = Tip(header: "Quote", title: "One reason so few of us achieve what we truly want is that we never direct our focus; we never concentrate our power. Most people dabble their way through life, never deciding to master anything in particular.", body: "- Tony Robbins \n\nBest-selling author, life and business strategist, and entrepreneur." , sourceName: "Awaken The Greatness Within", sourceURL: "https://www.awakenthegreatnesswithin.com/68-inspirational-tony-robbins-quotes-to-awaken-the-giant-within/", sponsorLogo: "", sponsorURL: "")
+let motivatePMTip63 = Tip(header: "Quote", title: "The great courageous act that we must all do, is to have the courage to step out of our history and past so that we can live our dreams.", body: "- Oprah Winfrey \n\nOprah Winfrey is an American television personality, actress, and entrepreneur." , sourceName: "Goalcast", sourceURL: "https://www.goalcast.com/2016/09/28/top-20-inspiring-oprah-winfrey-quotes-that-will-empower-you/", sponsorLogo: "", sponsorURL: "")
+let motivatePMTip64 = Tip(header: "Quote", title: "Take the opportunity to learn from your mistakes: find the cause of your problem and eliminate it. Don’t try to be perfect; just be an excellent example of being human.", body: "- Tony Robbins \n\nBest-selling author, life and business strategist, and entrepreneur." , sourceName: "Goalcast", sourceURL: "https://www.goalcast.com/2016/08/18/top-20-inspiring-tony-robbins-quotes/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -781,6 +797,13 @@ let motivateAMTopic12 = Topic(title: motivateAMTitle, icon: motivateIcon, tip: m
 let motivateAMTipArray13 = [motivateAMTip53, motivateAMTip54, motivateAMTip55, motivateAMTip56]
 let motivateAMTopic13 = Topic(title: motivateAMTitle, icon: motivateIcon, tip: motivateAMTipArray13)
 
+let motivateAMTipArray14 = [motivateAMTip57, motivateAMTip58, motivateAMTip59, motivateAMTip60]
+let motivateAMTipArray15 = [motivatePMTip61, motivatePMTip62, motivatePMTip63, motivatePMTip64]
+
+// RANDOM
+let motivateAMTipArrays = [motivateAMTipArray0, motivateAMTipArray1, motivateAMTipArray2, motivateAMTipArray3, motivateAMTipArray4, motivateAMTipArray5, motivateAMTipArray6, motivateAMTipArray7, motivateAMTipArray8, motivateAMTipArray9, motivateAMTipArray10, motivateAMTipArray11, motivateAMTipArray12, motivateAMTipArray13, motivateAMTipArray14, motivateAMTipArray15]
+let motivateAMTopic = Topic(title: motivateAMTitle, icon: motivateIcon, tip: motivateAMTipArrays.random())
+
 
 //DAY
 //WEEK 1
@@ -828,6 +851,19 @@ let motivateDayTipArray13 = [motivateDayTip53, motivateDayTip54, motivateDayTip5
 let motivateDayTopic13 = Topic(title: motivateDayTitle, icon: motivateIcon, tip: motivateDayTipArray13)
 
 
+let motivateDayTipArray14 = [motivateDayTip57, motivateDayTip58, motivateDayTip59, motivateDayTip60]
+let motivateDayTipArray15 = [motivateDayTip61, motivateDayTip62, motivateDayTip63, motivateDayTip64]
+let motivateDayTipArray16 = [motivateDayTip65, motivateDayTip66, motivateDayTip67, motivateDayTip68]
+let motivateDayTipArray17 = [motivateDayTip69, motivateDayTip70, motivateDayTip71, motivateDayTip12]
+
+
+
+// RANDOM
+let motivateDayTipArrays = [motivateDayTipArray0, motivateDayTipArray1, motivateDayTipArray2, motivateDayTipArray3, motivateDayTipArray4, motivateDayTipArray5, motivateDayTipArray6, motivateDayTipArray7, motivateDayTipArray8, motivateDayTipArray9, motivateDayTipArray10, motivateDayTipArray11, motivateDayTipArray12, motivateDayTipArray14, motivateAMTipArray14, motivateAMTipArray15, motivateDayTipArray16, motivateDayTipArray17]
+let motivateDayTopic = Topic(title: motivateDayTitle, icon: motivateIcon, tip: motivateDayTipArrays.random())
+
+
+
 //AFTERNOON
 //WEEK 1
 let motivateAfterTipArray0 = [motivateAfterTip1, motivateAfterTip2, motivateAfterTip3, motivateAfterTip4]
@@ -872,6 +908,13 @@ let motivateAfterTopic12 = Topic(title: motivateDayTitle, icon: motivateIcon, ti
 
 let motivateAfterTipArray13 = [motivateAfterTip53, motivateAfterTip54, motivateAfterTip55, motivateAfterTip56]
 let motivateAfterTopic13 = Topic(title: motivateDayTitle, icon: motivateIcon, tip: motivateAfterTipArray13)
+
+let motivateAfterTipArray14 = [motivateAfterTip57, motivateAfterTip58, motivateAfterTip59, motivateAfterTip40]
+
+// RANDOM
+let motivateAfterTipArrays = [motivateAfterTipArray0, motivateAfterTipArray1, motivateAfterTipArray2, motivateAfterTipArray3, motivateAfterTipArray4, motivateAfterTipArray5, motivateAfterTipArray6, motivateAfterTipArray7, motivateAfterTipArray8, motivateAfterTipArray9, motivateAfterTipArray10, motivateAfterTipArray11, motivateAfterTipArray12, motivateAfterTipArray13, motivateAfterTipArray14,]
+let motivateAfterTopic = Topic(title: motivateAMTitle, icon: motivateIcon, tip: motivateAfterTipArrays.random())
+
 
 
 //PM
@@ -920,7 +963,13 @@ let motivatePMTipArray13 = [motivatePMTip53, motivatePMTip54, motivatePMTip55, m
 let motivatePMTopic13 = Topic(title: motivatePMTitle, icon: motivateIcon, tip: motivatePMTipArray13)
 
 
+let motivatePMTipArray14 = [motivatePMTip57, motivatePMTip58, motivatePMTip59, motivatePMTip60]
+let motivatePMTipArray15 = [motivatePMTip61, motivatePMTip62, motivatePMTip63, motivatePMTip64]
 
+
+// RANDOM
+let motivatePMTipArrays = [motivatePMTipArray0, motivatePMTipArray1, motivatePMTipArray2, motivatePMTipArray3, motivatePMTipArray4, motivatePMTipArray5, motivatePMTipArray6, motivatePMTipArray7, motivatePMTipArray8, motivatePMTipArray9, motivatePMTipArray10, motivatePMTipArray11, motivatePMTipArray12, motivatePMTipArray13, motivateAfterTipArray14, motivatePMTipArray15,]
+let motivatePMTopic = Topic(title: motivatePMTitle, icon: motivateIcon, tip: motivatePMTipArrays.random())
 
 
 
@@ -974,8 +1023,8 @@ let stressedTipAM11 = Tip(header: "Reduce Anxiety", title: "Researched-backed wa
 
 //3
 let stressedTipAM12 = Tip(header: "Quote", title: "When we commit to action, to actually doing something rather than feeling trapped by events, the stress in our life becomes manageable.", body: "- Greg Anderson \n\nAuthor and Certified Anger Management Facilitator", sourceName: "Wise Old Sayings", sourceURL: "https://www.wiseoldsayings.com/stress-quotes/", sponsorLogo: "", sponsorURL: "")
-let stressedTipAM13 = Tip(header: "Reduce Stress", title: "Practice religion. Research: Religion helps to buffer the stressful effect of life events", body: "There’s also the added benefit of being around others. Connection to like-minds in a spiritual setting may help you find the support you need during a stressful time.", sourceName: "Greatist", sourceURL: "https://greatist.com/happiness/23-scientifically-backed-ways-reduce-stress-right-now", sponsorLogo: "", sponsorURL: "")
-let stressedTipAM14 = Tip(header: "Reduce Stress", title: "Hang with a pet. Study: Playing with a pet for just 10 minutes lowered cortisol levels in college students.", body: "Pets are like furry therapists, and their prescription for unconditional love really can do wonders for our mental state.", sourceName: "Greatist", sourceURL: "https://greatist.com/happiness/23-scientifically-backed-ways-reduce-stress-right-now", sponsorLogo: "", sponsorURL: "")
+let stressedTipAM13 = Tip(header: "Reduce Stress", title: "Practice religion. Research finds religion helps to buffer the stressful effect of life events", body: "There’s also the added benefit of being around others. Connection to like-minded people in a spiritual setting may help you find the support you need during a stressful time.", sourceName: "Greatist", sourceURL: "https://greatist.com/happiness/23-scientifically-backed-ways-reduce-stress-right-now", sponsorLogo: "", sponsorURL: "")
+let stressedTipAM14 = Tip(header: "Reduce Stress", title: "Hang out with a pet. Study: Playing with a pet for just 10 minutes lowered cortisol levels in college students.", body: "Pets are like furry therapists, and their prescription for unconditional love really can do wonders for our mental state.", sourceName: "Greatist", sourceURL: "https://greatist.com/happiness/23-scientifically-backed-ways-reduce-stress-right-now", sponsorLogo: "", sponsorURL: "")
 
 //If you want to conquer the anxiety of life, live in the moment, live in the breath.
 //Amit Ray
@@ -998,6 +1047,11 @@ let stressedAMTopic2 = Topic(title: stressedTitle, icon: stressedIcon, tip: stre
 //3 WIP
 let stressedTipAMArray3 = [stressedTipAM12, stressedTipAM13, stressedTipAM14, stressedTipAM3]
 let stressedAMTopic3 = Topic(title: stressedTitle, icon: stressedIcon, tip: stressedTipAMArray3)
+
+// RANDOM
+let stressedAMTipArrays = [stressedTipAMArray0, stressedTipAMArray1, stressedTipAMArray2, stressedTipAMArray3,]
+let stressedAMTopic = Topic(title: stressedTitle, icon: stressedIcon, tip: stressedAMTipArrays.random())
+
 
 //4 WIP
 let stressedTipAMArray4 = [stressedTipAM4, stressedTipAM5, stressedTipAM6, stressedTipAM7]
@@ -1038,7 +1092,7 @@ let madTipAM15 = Tip(header: "Quote", title: "Hate destroys the very structure o
 
 //5
 let madTipAM16 = Tip(header: "Quote", title: "He who angers you conquers you.", body: "- Elizabeth Kenny", sourceName: "Wise Old Sayings", sourceURL: "https://www.wiseoldsayings.com/anger-quotes/", sponsorLogo: "", sponsorURL: "")
-let madTipAM17 = Tip(header: "Quote", title: "Throughout life people will make you mad, disrespect you and treat you bad. Let God deal with the things they do, cause hate in your heart will consume you too.", body: "- Will Smith", sourceName: "Wise Old Sayings", sourceURL: "https://www.wiseoldsayings.com/hate-quotes/", sponsorLogo: "", sponsorURL: "")
+let madTipAM17 = Tip(header: "Quote", title: "Throughout life people will make you mad, disrespect you and treat you bad. Let God deal with the things they do, cause hate in your heart will consume you too.", body: "- Will Smith \n\nAmerican actor and rapper", sourceName: "Wise Old Sayings", sourceURL: "https://www.wiseoldsayings.com/hate-quotes/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1061,6 +1115,12 @@ let madAMTopic3 = Topic(title: madTitle, icon: madIcon, tip: madTipAMArray3)
 //4 WIP
 let madTipAMArray4 = [madTipAM16, madTipAM17, madTipAM6, madTipAM7]
 let madAMTopic4 = Topic(title: madTitle, icon: madIcon, tip: madTipAMArray4)
+
+
+// RANDOM
+let madAMTipArrays = [madTipAMArray0, madTipAMArray1, madTipAMArray3, madTipAMArray4,]
+let madAMTopic = Topic(title: madTitle, icon: madIcon, tip: madAMTipArrays.random())
+
 
 //5 WIP
 let madTipAMArray5 = [madTipAM4, madTipAM5, madTipAM6, madTipAM7]
@@ -1101,8 +1161,12 @@ let depressedTipAMArray1 = [depressedTipAM4, depressedTipAM5, depressedTipAM6, d
 let depressedAMTopic1 = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedTipAMArray1)
 
 //2
-let depressedTipAMArray2 = [depressedTipAM8, depressedTipAM9, depressedTipAM2, depressedTipAM3]
+let depressedTipAMArray2 = [depressedTipAM8, depressedTipAM9, depressedTipAM10, depressedTipAM3]
 let depressedAMTopic2 = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedTipAMArray2)
+
+// RANDOM
+let depressedAMTipArrays = [depressedTipAMArray0, depressedTipAMArray1, depressedTipAMArray2, depressedTipAMArray3,]
+let depressedAMTopic = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedAMTipArrays.random())
 
 //3
 let depressedTipAMArray3 = [depressedTipAM4, depressedTipAM5, depressedTipAM6, depressedTipAM7]
@@ -1138,8 +1202,8 @@ let badMoodTipDay7 = Tip(header: "Hapi App", title: "• Voice chat with a liste
 //0
 let stressedTipDay0 = Tip(header: "Quote", title: "Nothing diminishes anxiety faster than action.", body: "- Walter Anderson \n\nFormer Chairman and CEO of Parade Publications", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201409/22-calming-quotes-people-anxiety", sponsorLogo: "", sponsorURL: "")
 let stressedTipDay1 = Tip(header: "Quote", title: "Anxiety and fear produce energy. Focus on the solution, not the problem.", body: "- Walter Anderson \n\nFormer Chairman and CEO of Parade Publications", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201409/22-calming-quotes-people-anxiety", sponsorLogo: "", sponsorURL: "")
-let stressedTipDay2 = Tip(header: "Reduce Anxiety", title: "Mastering anxiety is about recognizing your inner dialogue and using positive self-talk", body: "Far too often, we focus on our fears. \n\n• Redirect your thoughts by focusing on what you can do right \n\n• Don't be overwhelmed by what might go wrong. \n\n• Take positive steps forward.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201405/22-quick-tips-change-your-anxiety-forever", sponsorLogo: "", sponsorURL: "")
-let stressedTipDay3 = Tip(header: "Reduce Stress", title: "People felt less stressed when they checked their email less often, study finds", body: "Check your email in chunks several times a day, rather than constantly responding to messages as they come in.", sourceName: "The University of British Columbia", sourceURL: "https://news.ubc.ca/2014/12/03/check-less-to-reduce-email-stress/", sponsorLogo: "", sponsorURL: "")
+let stressedTipDay2 = Tip(header: "Reduce Anxiety", title: "Mastering anxiety is about recognizing your inner dialogue and using positive self-talk", body: "Far too often, we focus on our fears. \n\n• Redirect your thoughts by focusing on what you can do right. \n\n• Don't be overwhelmed by what might go wrong. \n\n• Take positive steps forward.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/anxiety-zen/201405/22-quick-tips-change-your-anxiety-forever", sponsorLogo: "", sponsorURL: "")
+let stressedTipDay3 = Tip(header: "Reduce Stress", title: "Study: People felt less stressed when they checked their email less often", body: "Check your email in chunks several times a day, rather than constantly responding to messages as they come in.", sourceName: "The University of British Columbia", sourceURL: "https://news.ubc.ca/2014/12/03/check-less-to-reduce-email-stress/", sponsorLogo: "", sponsorURL: "")
 
 
 //1
@@ -1175,6 +1239,13 @@ let stressedDayTopic2 = Topic(title: stressedTitle, icon: stressedIcon, tip: str
 //3
 let stressedTipDayArray3 = [stressedTipDay12, stressedTipDay13, stressedTipDay14, stressedTipDay15]
 let stressedDayTopic3 = Topic(title: stressedTitle, icon: stressedIcon, tip: stressedTipDayArray3)
+
+// RANDOM
+let stressedTipDayArrays = [stressedTipDayArray0, stressedTipDayArray1, stressedTipDayArray2, stressedTipDayArray3,]
+let stressedDayTopic = Topic(title: depressedTitle, icon: depressedIcon, tip: stressedTipDayArrays.random())
+
+
+
 //4 WIP
 let stressedTipDayArray4 = [stressedTipDay0, stressedTipDay1, stressedTipDay2, stressedTipDay3]
 let stressedDayTopic4 = Topic(title: stressedTitle, icon: stressedIcon, tip: stressedTipDayArray4)
@@ -1220,6 +1291,12 @@ let depressedDayTopic1 = Topic(title: depressedTitle, icon: depressedIcon, tip: 
 //2
 let depressedTipDayArray2 = [depressedTipDay8, depressedTipDay1, depressedTipDay2, depressedTipDay3]
 let depressedDayTopic2 = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedTipDayArray2)
+
+
+// RANDOM
+let depressedTipDayArrays = [depressedTipDayArray0, depressedTipDayArray1, depressedTipDayArray2, depressedTipDayArray4,]
+let depressedDayTopic = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedTipDayArrays.random())
+
 
 //3
 let depressedTipDayArray3 = [depressedTipDay4, depressedTipDay5, depressedTipDay6, depressedTipDay7]
@@ -1274,6 +1351,11 @@ let madDayTopic1 = Topic(title: madTitle, icon: madIcon, tip: madTipDayArray1)
 //2
 let madTipDayArray2 = [madTipDay8, madTipDay9, madTipDay10, madTipDay11]
 let madDayTopic2 = Topic(title: madTitle, icon: madIcon, tip: madTipDayArray2)
+
+// RANDOM
+let madTipDayArrays = [madTipDayArray0, madTipDayArray1, madTipDayArray2,]
+let madDayTopic = Topic(title: madTitle, icon: madIcon, tip: madTipDayArrays.random())
+
 
 //3 WIP
 let madTipDayArray3 = [madTipDay0, madTipDay1, madTipDay2, madTipDay3]
@@ -1330,6 +1412,12 @@ let stressedPMTopic1 = Topic(title: stressedTitle, icon: stressedIcon, tip: stre
 let stressedTipPMArray2 = [stressedTipPM8, stressedTipPM9, stressedTipPM2, stressedTipPM3]
 let stressedPMTopic2 = Topic(title: stressedTitle, icon: stressedIcon, tip: stressedTipPMArray2)
 
+// RANDOM
+let stressedTipPMArrays = [stressedTipPMArray0, stressedTipPMArray1, stressedTipPMArray2,]
+let stressedPMTopic = Topic(title: madTitle, icon: madIcon, tip: stressedTipPMArrays.random())
+
+
+
 //3
 let stressedTipPMArray3 = [stressedTipPM0, stressedTipPM1, stressedTipPM2, stressedTipPM3]
 let stressedPMTopic3 = Topic(title: stressedTitle, icon: stressedIcon, tip: stressedTipPMArray3)
@@ -1355,7 +1443,7 @@ let depressedTipPM3 = Tip(header: "Depressed", title: " CEO of Onnit, Aubrey Mar
 
 //1
 let depressedTipPM4 = Tip(header: "Quote", title: "Once you replace negative thoughts with positive ones, you will start having positive results.", body: "– Willie Nelson \n\nAmerican musician, actor, and activist." , sourceName: "Goalcast", sourceURL: "https://www.goalcast.com/2018/06/08/20-depression-quotes/", sponsorLogo: "", sponsorURL: "")
-let depressedTipPM5 = Tip(header: "Depressed", title: "Don't stay up too late. Keeping your body clock in sync with the solar day may help reduce depression", body: "A study found that the brains of people with depression were not synchronized to the usual solar day in terms of gene activity inside their brain cells. \n\nIt’s as if they were living in a different time zone. \n\nGo to bed between 10PM and 11PM and get 7-8 hours of sleep every night.", sourceName: "University of Michigan", sourceURL: "https://www.uofmhealth.org/news/archive/201305/out-sync-world-brain-study-shows-body-clocks-depressed", sponsorLogo: "", sponsorURL: "")
+let depressedTipPM5 = Tip(header: "Depressed", title: "Don't stay up too late. Keeping your body clock in sync with the solar day may help reduce depression", body: "Study: The brains of people with depression were not synchronized to the usual solar day in terms of gene activity inside their brain cells. \n\nIt’s as if they were living in a different time zone. \n\nGo to bed between 10PM and 11PM and get 7-8 hours of sleep every night.", sourceName: "University of Michigan", sourceURL: "https://www.uofmhealth.org/news/archive/201305/out-sync-world-brain-study-shows-body-clocks-depressed", sponsorLogo: "", sponsorURL: "")
 let depressedTipPM6 = Tip(header: "Reduce Smartphone Usage", title: "Teen's happiness levels have been decreasing since 2012 (the year when the majority of Americans owned smartphones)", body: "These declines in well-being mirror other studies finding sharp increases in mental health issues among iGen, including in depressive symptoms, major depression, self-harm and suicide.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/", sponsorLogo: "", sponsorURL: "")
  let depressedTipPM7 = Tip(header: "Feel Happier", title: "Aubrey Marcus, CEO of Onnit, journals regularly and journals the most when he's going through something difficult", body: "Research: People who engage in expressive writing report feeling happier and less negative than they felt before writing. \n\nOther depressive symptoms like anxiety tend to drop after writing about emotional issues." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
 
@@ -1375,6 +1463,12 @@ let depressedPMTopic1 = Topic(title: depressedTitle, icon: depressedIcon, tip: d
 //2 WIP
 let depressedTipPMArray2 = [depressedTipPM8, depressedTipPM1, depressedTipPM2, depressedTipPM3]
 let depressedPMTopic2 = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedTipPMArray2)
+
+
+// RANDOM
+let depressedTipPMArrays = [depressedTipPMArray0, depressedTipPMArray1, depressedTipPMArray2,]
+let depressedPMTopic = Topic(title: madTitle, icon: madIcon, tip: depressedTipPMArrays.random())
+
 
 //3 WIP
 let depressedTipPMArray3 = [depressedTipPM0, depressedTipPM1, depressedTipPM2, depressedTipPM3]
@@ -1422,6 +1516,12 @@ let madPMTopic1 = Topic(title: madTitle, icon: madIcon, tip: madTipPMArray1)
 //2 WIP
 let madTipPMArray2 = [madTipPM8, madTipPM9, madTipPM2, madTipPM3]
 let madPMTopic2 = Topic(title: madTitle, icon: madIcon, tip: madTipPMArray2)
+
+
+// RANDOM
+let madPMArrays = [madTipPMArray0, madTipPMArray1, madTipPMArray2,]
+let madPMTopic = Topic(title: madTitle, icon: madIcon, tip: madPMArrays.random())
+
 
 //3 WIP
 let madTipPMArray3 = [madTipPM0, madTipPM1, madTipPM2, madTipPM3]
@@ -1493,7 +1593,10 @@ let wealth19 = Tip(header: "Increase Happiness", title: "If you plan to live in 
 let wealth20 = Tip(header: "Life Healthy", title: "Research: People with better finances have lower rates of obesity", body: "In other words, along with a good diet and regular physical activity, financial security could help keep you healthy.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let wealth21 = Tip(header: "Budgeting", title: "Stick to a program of regularly recording yoru spending limits impulse buys", body: "When you know what you spend, you're less likely to overspend and thus avoid more debt - a sure way to avoid stress. \n\n• Write in a notebook \n• Create a spreadsheet \n• Try an online website or app like mint.com.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let wealth22 = Tip(header: "Millionaire Habit", title: "\"Pay yourself first.\" This means, on payday, save or invest a portion of your paycheck first and then use the remaining money to pay for everything else (rent, food, clothes, entertainment)", body: "The poor and middle-class pay for everything else first and only save or invest what’s left over—that's paying yourself last \n\nThe key is to automate: Direct-depositing contributions to a retirement account before that money hits your checking account is a great first step.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/learnvest/2014/07/24/are-you-paying-yourself-first-the-money-habit-that-can-boost-wealth/#16ce4270732c", sponsorLogo: "", sponsorURL: "")
-let wealth23 = Tip(header: "Millionaire Advice", title: "The sonner you forget about needing a paycheck, the easier your adult life will be.", body: "Keep using your brain, work for free, and soon your mind will show you ways to making money far beyond what I could every pay you. \n\nYou will see things that other people never see. Opportunities right in front of their noses. \n\nMost people never see these opportunities because they're looking for money and security, so that's all they get. \n\nThe moment you see one opportunity, you will see them for the rest of your life. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let wealth23 = Tip(header: "Warning", title: "Becoming wealthy can make you less generous and more greedy", body: "In one study, participants were given $10 and told that they could contribute any or all of it to another participant, the richer participants contributed, on average, 44% less. \n\nOther researchers have found that wealthier people tend to give a smaller percentage of their income to charity.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/06/why-rich-people-arent-as-happy-as-they-could-be", sponsorLogo: "", sponsorURL: "")
+
+
+
 
 //
 let wealth24 = Tip(header: "Quote", title: "Most people fail to realize that in life, it's not how much money you make, it's how much money you keep.", body: "- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
@@ -1502,13 +1605,21 @@ let wealth25 = Tip(header: "Millionaire Advice", title: "I am concerned that too
 
 let wealth26 = Tip(header: "Millionaire Advice", title: "Rich people acquire assets. The poor and middle class acquire liabilities, but they think they are assets.", body: "\n\nAn asset is something that puts money in your pocket. A liability is something that takes money out of your pocket. \n\nConcentrate your efforts on only buying income-generating assets. That's the best way to get started on a path to becoming rich. \n\nFocus on keeping liabilities and expenses down. This will make more money available to continue pouring into the asset column. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 
-let wealth27 = Tip(header: "Millionaire Advice", title: "The middle class is a constant state of financial struggle because their primary income is through wages, and as their wages increase, so do their expenses.", body: "They treat their home as their primary asset, instead on investing in income-producing assets. \n\nTreating your home as an investment and the philosophy that a pay raise means you can buy a larger home or spend more is the foundation of today's debt-ridden society. \n\nThis is high risk living caused by weak financial education. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let wealth27 = Tip(header: "Warning", title: "Research finds that the ideal income point is $95,000 for life evaluation and $60,000-$75,000 for emotional well-being", body: "The research is based on data from the Gallup World Poll, which is a representative survey sample of more than 1.7 million individuals from 164 countries. For reporting this study, the amounts are reported in U.S. dollars, and the data is per individual, not family. \n\nThe study also found once the threshold was reached, further increases in income tended to be associated with reduced life satisfaction and a lower level of well-being. This may be because money is important for meeting basic needs, purchasing conveniences, and maybe even loan repayments, but to a point. After the optimal point of needs is met, people may be driven by desires such as pursuing more material gains and engaging in social comparisons, which could, ironically, lower well-being. \n\nMoney is only a part of what really makes us happy, and we’re learning more about the limits of money.", sourceName: "Purdue University", sourceURL: "https://www.purdue.edu/newsroom/releases/2018/Q1/money-only-buys-happiness-for-a-certain-amount.html", sponsorLogo: "", sponsorURL: "")
 
 //
 let wealth28 = Tip(header: "Millionaire Advice", title: "DON'T: Say \"I can't afford it.\" \nDO: Say \"How can I afford it?\"", body: "The words \"I can't afford it\" shuts down your brain. You don't have to think anymore. \n\n\"How can I afford it?\" opens up the brain. It forces you to think and search for answers. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let wealth29 = Tip(header: "Millionaire Advice", title: "Real assets fall into several categories:", body: "1. Businesses that do not require your presence. You own them, but they are managed and run by other people. If you have to work there, it's not a business. It's a job. \n\n2. Stocks. \n\n3. Bonds. \n\n4. Mutual funds. \n\n5. Income-generating real estate. \n\n6. Notes (IOUs) \n\n7. Royalties from intellectual property such as music, scripts, patents. \n\n8. And anything else that has value, produces income or appreciates and has a ready market.", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let wealth30 = Tip(header: "Millionaire Advice", title: "Smart investors don't time markets. If they miss a wave, they search for the next one and get themselves in position.", body: "Why this is hard for most investors is because buying what is not popular is frightening to them. \n\nTimid investors are like sheep going along with the crowd. Or their greed gets them in when wise investors have already taken their profits and moved on. \n\nWise investors buy an investment when it's not popular. They know their profits are made when they buy, not when they sell. \n\nThey'll wait patiently. They do not time the market. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
-let wealth31 = Tip(header: "Quote", title: "Forcing myself to think about how to make extra money is like going to the gym and working out with weights.", body: "The more I work my mental money muscles out, the stronger I get. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let wealth31 = Tip(header: "Warning", title: "Becoming wealthy can make you less friendly and less generous", body: "In one study, participants were paired to play a game of Monopoly. \n\nThe game was rigged so that one of the participants quickly became far wealthier than the other. \n\nIt turned out that the wealthier a participant grew, the meaner he/she progressively became. \n\nFor example, the wealthier participants started assuming more dominant postures and began talking down to their \"poorer\" counterparts. \n\nThey also consumed a greater share of a bowl of pretzels meant to be shared equally.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/06/why-rich-people-arent-as-happy-as-they-could-be", sponsorLogo: "", sponsorURL: "")
+
+//
+let wealth32 = Tip(header: "Quote", title: "Forcing myself to think about how to make extra money is like going to the gym and working out with weights.", body: "The more I work my mental money muscles out, the stronger I get. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let wealth33 = Tip(header: "Millionaire Advice", title: "The middle class is a constant state of financial struggle because their primary income is through wages, and as their wages increase, so do their expenses.", body: "They treat their home as their primary asset, instead on investing in income-producing assets. \n\nTreating your home as an investment and the philosophy that a pay raise means you can buy a larger home or spend more is the foundation of today's debt-ridden society. \n\nThis is high risk living caused by weak financial education. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let wealth34 = Tip(header: "Millionaire Advice", title: "The sonner you forget about needing a paycheck, the easier your adult life will be.", body: "Keep using your brain, work for free, and soon your mind will show you ways to making money far beyond what I could every pay you. \n\nYou will see things that other people never see. Opportunities right in front of their noses. \n\nMost people never see these opportunities because they're looking for money and security, so that's all they get. \n\nThe moment you see one opportunity, you will see them for the rest of your life. \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let wealth35 = Tip(header: "Warning", title: "Becoming wealthy can make you more isolated – and isolation makes us less happy", body: "Psychologically, the acquisition of wealth—and more generally, possessions that signal high status—makes us want to distance ourselves from others. \n\nThis may be due to a feeling of competition and selfishness that sets in with the acquisition of wealth or status. \n\nIt may also be because, quite simply, we don’t need other people to survive the way we did when we were poorer. \n\nAs for the physical element, it’s quite straightforward: the wealthier we become, the more likely we are to erect boundaries between ourselves and others—for example, by living in a bigger house with a fence around it.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/06/why-rich-people-arent-as-happy-as-they-could-be", sponsorLogo: "", sponsorURL: "")
+//
+
 
 //WEEK 1
 //0
@@ -1534,11 +1645,15 @@ let wealthTipArray6 = [wealth24, wealth25, wealth26, wealth27]
 let wealthTopic6 = Topic(title: wealthTitle, icon: wealthIcon, tip: wealthTipArray6)
 
 //WEEK 2
-let wealthTipArray7 = [wealth28, wealth29, wealth30, wealth27]
+let wealthTipArray7 = [wealth28, wealth29, wealth30, wealth31]
 let wealthTopic7 = Topic(title: wealthTitle, icon: wealthIcon, tip: wealthTipArray7)
 
+let wealthTipArray8 = [wealth32, wealth33, wealth34, wealth35]
+let wealthTopic8 = Topic(title: wealthTitle, icon: wealthIcon, tip: wealthTipArray8)
 
-
+// RANDOM
+let wealthArrays = [wealthTipArray0, wealthTipArray1, wealthTipArray2, wealthTipArray3, wealthTipArray4, wealthTipArray5, wealthTipArray6, wealthTipArray7, wealthTipArray8]
+let wealthTopic = Topic(title: wealthTitle, icon: wealthIcon, tip: wealthArrays.random())
 
 
 
@@ -1575,6 +1690,7 @@ let jobSearch15 = Tip(header: "Increase Happiness", title: "When choosing a job,
 let jobSearch16 = Tip(header: "Increase Happiness", title: "DO: Seek a job that that feeds your passions, values, natural talents \nDON'T: Seek a job just because you think it will pay better, give you a big office, or title", body: "Follow your heart rather than listening to what others tell you to do. \n\nSeek a job that fits your identity, allows you to pursue excellence, and benefits society. \n\nIf you feel stuck in your current position, take a chance on something new to see how you like it. \n\nPut high priority on working with people you like." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let jobSearch17 = Tip(header: "Warren Buffett", title: "Try to work for whomever you admire most", body: "It won’t necessarily be the job that you’ll have 10 years later, but you’ll have the opportunity to pick up so much as you go along. \n\nWhile salary is an important factor when thinking about your career, you don’t want to take a job just for the money.", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/08/31/billionaire-investor-warren-buffetts-best-advice.html", sponsorLogo: "", sponsorURL: "")
 let jobSearch18 = Tip(header: "Millionaire Advice", title: "I recommend to young people to seek work for what they will learn, more than what they will earn.", body: "Look down the road at what skills they want to acquire before choosing a specific profession and before getting trapped in the \"Rat Race.\" \n\n- Robert Kiyosaki", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let jobSearch19 = Tip(header: "Warning", title: "A large portion of one's lifetime wage growth occurs in the first 10 years of a career", body: "Starting with a higher salary puts people on a higher initial trajectory.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1602,9 +1718,16 @@ let jobSearchTopic2 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: job
 
 let jobSearchTipArray3 = [jobSearch12, jobSearch13, jobSearch14, jobSearch15]
 let jobSearchTopic3 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchTipArray3)
-// (WIP 1)
-let jobSearchTipArray4 = [jobSearch16, jobSearch17, jobSearch18, jobSearch4]
+
+let jobSearchTipArray4 = [jobSearch16, jobSearch17, jobSearch18, jobSearch19]
 let jobSearchTopic4 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchTipArray4)
+
+// RANDOM
+let jobSearchArrays = [jobSearchTipArray0, jobSearchTipArray1, jobSearchTipArray2, jobSearchTipArray3, jobSearchTipArray4,]
+let jobSearchTopic = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchArrays.random())
+
+
+
 // (WIP 4)
 let jobSearchTipArray5 = [jobSearch5, jobSearch6, jobSearch14, jobSearch8]
 let jobSearchTopic5 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchTipArray5)
@@ -2312,6 +2435,12 @@ let studyTopic2 = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArray2)
 //3 WIP-1
 let studyTipArray3 = [study12, study13, study14, study3]
 let studyTopic3 = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArray3)
+
+// RANDOM
+let studyTipArrays = [studyTipArray0, studyTipArray1, studyTipArray2, studyTipArray3,]
+let studyTopic = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArrays.random())
+
+
 //4 WIP-4
 let studyTipArray4 = [study4, study5, study6, study7]
 let studyTopic4 = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArray4)
@@ -2332,6 +2461,10 @@ let studyDay1 = Tip(header: "😴", title: "Benefits of studying during the day:
 let studyDayTipArray0 = [studyDay0, studyDay1, study2, study12]
 let studyDayTopic0 = Topic(title: studyTitle, icon: studyIcon, tip: studyDayTipArray0)
 
+// RANDOM
+let studyDayTipArrays = [studyDayTipArray0,]
+let studyDayTopic = Topic(title: studyTitle, icon: studyIcon, tip: studyTipArrays.random())
+
 //PM
 let studyPM0 = Tip(header: "🛌", title: "Studying before bedtime is best because our brains create stronger memories during sleep", body: "Participants who engaged in studying before bedtime were able to recall information from their memory at a higher rate and felt more confident about their answers compared to those who studied in the morning. \n\nThis is because, the cortex of the brain, which is important for building neural connections for creating memories of newly learned information, becomes very active when during sleep." , sourceName: "Chronobiology", sourceURL: "https://www.chronobiology.com/scientists-say-studying-before-bedtime-is-best/", sponsorLogo: "", sponsorURL: "")
 let studyPM1 = Tip(header: "🛌", title: "Go to bed at the same time every day. Students who had irregular sleep hours ended up with worse grades compared to those who went to bed and woke up at the same time every day", body: "Irregular sleepers had a delayed release of the sleep hormone melatonin by 2.6 hours compared to students with more regular sleep patterns. \n\nIncreased exposure to daytime light and less exposure to electronic light-emitting devices before bedtime, may be effective in improving sleep regularity." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2017/06/170612094045.htm", sponsorLogo: "", sponsorURL: "")
@@ -2344,6 +2477,10 @@ let studyPM3 = Tip(header: "😴", title: "Benefits of studying during the eveni
 //0
 let studyPMTipArray0 = [studyPM0, studyPM1, studyPM2, studyPM3]
 let studyPMTopic0 = Topic(title: studyTitle, icon: studyIcon, tip: studyPMTipArray0)
+
+// RANDOM
+let studyPMTipArrays = [studyPMTipArray0,]
+let studyPMTopic = Topic(title: studyTitle, icon: studyIcon, tip: studyPMTipArrays.random())
 
 
 //REDO:
@@ -2384,8 +2521,12 @@ let singleTopicAM0 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipA
 let singleTipAMArray1 = [singleAM4, singleAM5, singleAM6, singleAM7]
 let singleTopicAM1 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray1)
 
-let singleTipAMArray2 = [singleAM8, singleAM0, singleAM2, singleAM6]
+let singleTipAMArray2 = [singleAM8, singleAM1, singleAM2, singleAM6]
 let singleTopicAM2 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray2)
+
+// RANDOM
+let singleTipAMArrays = [singleTipAMArray0, singleTipAMArray1, singleTipAMArray2,]
+let singleAMTopic = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArrays.random())
 
 let singleTipAMArray3 = [singleAM3, singleAM4, singleAM5, singleAM1]
 let singleTopicAM3 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray3)
@@ -2501,6 +2642,15 @@ let singleTopicDay5 = Topic(title: singleTitle, icon: singleIcon, tip: singleTip
 let singleTipDayArray6 = [singleDay24, singleDay25, singleDay26, singleDay27]
 let singleTopicDay6 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipDayArray6)
 
+let singleTipDayArray7 = [singleDay28, singleDay29, singleDay30, singleDay31]
+let singleTipDayArray8 = [singleDay32, singleDay33, singleDay34, singleDay35]
+let singleTipDayArray9 = [singleDay36, singleDay37, singleDay38, singleDay39]
+let singleTipDayArray10 = [singleDay40, singleDay41, singleDay42, singleDay39]
+
+// RANDOM
+let singleTipDayArrays = [singleTipDayArray0, singleTipDayArray1, singleTipDayArray2, singleTipDayArray3, singleTipDayArray4, singleTipDayArray5, singleTipDayArray6, singleTipDayArray7, singleTipDayArray8, singleTipDayArray9, singleTipDayArray10]
+let singleDayTopic = Topic(title: singleTitle, icon: singleIcon, tip: singleTipDayArrays.random())
+
 
 // MARK: Single, PM
 //0
@@ -2513,8 +2663,6 @@ let singlePM3 = Tip(header: "Increase Attraction", title: "Online Dating - Study
 //1
 let singlePM4 = Tip(header: "Post-Breakup", title: "Studies find breakups can lead to insomnia, intrusive thoughts, and even physical pain", body: "The first 30 days after a breakup is part of the natural withdrawal process. \n\nImprove your mood by going out, meeting new people, and distracting yourself with exercise, new hobbies, or watching a funny movie. \n\nAfter 30 days, if you're still feeling deep sadness, as well as feelings of worthlessness or hopelessness, then it’s a time to seek professional support.", sourceName: "Refinery29", sourceURL: "https://www.refinery29.com/en-us/cant-sleep-after-breakup", sponsorLogo: "", sponsorURL: "")
 let singlePM5 = Tip(header: "", title: "Dating App Advice For Men: Study suggests you may want to include a photo of you with your female friends", body: "College-age women were more likely to rate a man as attractive if shown a photo of him surrounded by four women than if shown a photo of him alone. \n\nResearchers estimate that the reason for this may be evolutionary-based.", sourceName: "Connected: The Surprising Power of Our Social Networks and How They Shape Our Lives", sourceURL: "https://www.amazon.com/Connected-Surprising-Power-Social-Networks-ebook/dp/B002OFVO5Y", sponsorLogo: "", sponsorURL: "")
-
-
 let singlePM6 = Tip(header: "", title: "Dating App Advice For Women: Study suggests you should avoid displaying too many photos of yourself surrounded by your male friends", body: "College-age men were less likely to rate a woman as attractive if she was shown surrounded by four men that if she was alone. \n\nResearchers estimate that the reason for this may be evolutionary-based.", sourceName: "Connected: The Surprising Power of Our Social Networks and How They Shape Our Lives", sourceURL: "https://www.amazon.com/Connected-Surprising-Power-Social-Networks-ebook/dp/B002OFVO5Y", sponsorLogo: "", sponsorURL: "")
 
 
@@ -2523,8 +2671,13 @@ let singlePM6 = Tip(header: "", title: "Dating App Advice For Women: Study sugge
 let singleTipPMArray0 = [singlePM0, singlePM1, singlePM2, singlePM3]
 let singleTopicPM0 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipPMArray0)
 
-let singleTipPMArray1 = [singlePM4, singlePM3, singlePM2, singlePM1]
+let singleTipPMArray1 = [singlePM4, singlePM5, singlePM6, singlePM1]
 let singleTopicPM1 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipPMArray1)
+
+// RANDOM
+let singleTipPMArrays = [singleTipPMArray0, singleTipPMArray1,]
+let singlePMTopic = Topic(title: singleTitle, icon: singleIcon, tip: singleTipPMArrays.random())
+
 
 let singleTipPMArray2 = [singlePM1, singlePM0, singlePM2, singlePM3]
 let singleTopicPM2 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipPMArray2)
@@ -2548,7 +2701,6 @@ let singleTopicPM6 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipP
 
 
 // MARK: - Online Dating
-
 
 let onlineDateingTip2 = Tip(header: "👍", title: "Having expansive and open body language can potentially increase your romantic attractiveness — especially when someone else has to make a quick decision about you as a mate", body: "Profile picture tips: \n\n• Be expansive. Whether you are sitting or standing, express yourself with widespread limbs and big expressions. Hold your arms wide, high above your head, or stretch them out across the table or back of a booth. \n\n• Be open. Keep your body poses open, too. Don’t cross your arms or legs (which may indicate nervousness or disinterest). And keep your hands out of your pockets. \n\n• Take up space. Get comfortable and stretch out. Use up the space around you, and don’t collapse your body inward.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-attraction-doctor/201709/how-our-body-language-can-make-us-attractive", sponsorLogo: "", sponsorURL: "")
 
@@ -2583,6 +2735,13 @@ let relationshipAMTopic0 = Topic(title: relationshipTitle, icon: relationshipIco
 //(WIP 1)
 let relationshipAMTipArray1 = [relationshipAM4, relationshipAM5, relationshipAM6, relationshipAM3]
 let relationshipAMTopic1 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray1)
+
+
+// RANDOM
+let relationshipAMArrays = [relationshipAMTipArray0, relationshipAMTipArray1,]
+let relationshipAMTopic = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMArrays.random())
+
+
 
 //(WIP 4)
 let relationshipAMTipArray2 = [relationshipAM1, relationshipAM0, relationshipAM2, relationshipAM3]
@@ -2635,9 +2794,15 @@ let relationshipDayTopic0 = Topic(title: relationshipTitle, icon: relationshipIc
 let relationshipDayTipArray1 = [relationshipDay4, relationshipDay5, relationshipDay6, relationshipDay7]
 let relationshipDayTopic1 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray1)
 
-//2 WIP-4
+//2
 let relationshipDayTipArray2 = [relationshipDay8, relationshipDay9, relationshipDay10, relationshipDay11]
 let relationshipDayTopic2 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray2)
+
+// RANDOM
+let relationshipDayArrays = [relationshipDayTipArray0, relationshipDayTipArray1, relationshipDayTipArray2,]
+let relationshipDayTopic = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayArrays.random())
+
+
 
 //3 WIP-4
 let relationshipDayTipArray3 = [relationshipDay5, relationshipDay4, relationshipDay6, relationshipDay7]
@@ -2709,9 +2874,15 @@ let relationshipPMTopic2 = Topic(title: relationshipTitle, icon: relationshipIco
 let relationshipPMTipArray3 = [relationshipPM12, relationshipPM13, relationshipPM14, relationshipPM15]
 let relationshipPMTopic3 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray3)
 
-//3 (WIP: 3)
+//3 (WIP: 1)
 let relationshipPMTipArray4 = [relationshipPM16, relationshipPM17, relationshipPM2, relationshipPM3]
 let relationshipPMTopic4 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray4)
+
+// RANDOM
+let relationshipPMArrays = [relationshipPMTipArray0, relationshipPMTipArray1, relationshipPMTipArray2, relationshipPMTipArray3, relationshipPMTipArray4,]
+let relationshipPMTopic = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMArrays.random())
+
+
 
 //3 (WIP: 4)
 let relationshipPMTipArray5 = [relationshipPM15, relationshipPM5, relationshipPM6, relationshipPM7]
@@ -2753,6 +2924,12 @@ let relationshipBedTopic1 = Topic(title: relationshipTitle, icon: relationshipIc
 //2 WIP-3
 let relationshipBedTipArray2 = [relationshipBed8, relationshipBed3, relationshipBed2, relationshipBed1]
 let relationshipBedTopic2 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray2)
+
+// RANDOM
+let relationshipBedArrays = [relationshipBedTipArray0, relationshipBedTipArray1, relationshipBedTipArray2,]
+let relationshipBedTopic = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedArrays.random())
+
+
 
 //3 WIP-4
 let relationshipBedTipArray3 = [relationshipBed7, relationshipBed6, relationshipBed5, relationshipBed4]
@@ -2847,8 +3024,16 @@ let parentingAMTopic1 = Topic(title: parentingTitle, icon: parentingIcon, tip: p
 let parentingAMTipArray2 = [parentingAMTip8, parentingAMTip9, parentingAMTip10, parentingAMTip11]
 let parentingAMTopic2 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingAMTipArray2)
 //WIP 4
-let parentingAMTipArray3 = [parentingAMTip5, parentingAMTip4, parentingAMTip6, parentingAMTip7]
+let parentingAMTipArray3 = [parentingAMTip12, parentingAMTip4, parentingAMTip6, parentingAMTip7]
 let parentingAMTopic3 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingAMTipArray3)
+
+
+
+// RANDOM
+let parentingAMArrays = [parentingAMTipArray0, parentingAMTipArray1, parentingAMTipArray2, parentingAMTipArray3, parentingAMTipArray4]
+let parentingAMTopic = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingAMArrays.random())
+
+
 //WIP 4
 let parentingAMTipArray4 = [parentingAMTip1, parentingAMTip0, parentingAMTip2, parentingAMTip3]
 let parentingAMTopic4 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingAMTipArray4)
@@ -2904,6 +3089,12 @@ let parentingDayTopic3 = Topic(title: parentingTitle, icon: parentingIcon, tip: 
 //4 WIP
 let parentingDayTipArray4 = [parentingDayTip16, parentingDayTip1, parentingDayTip2, parentingDayTip3]
 let parentingDayTopic4 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingDayTipArray4)
+
+// RANDOM
+let parentingDayArrays = [parentingDayTipArray0, parentingDayTipArray1, parentingDayTipArray2, parentingDayTipArray3, parentingDayTipArray4]
+let parentingDayTopic = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingDayArrays.random())
+
+
 //5 WIP
 let parentingDayTipArray5 = [parentingDayTip4, parentingDayTip5, parentingDayTip6, parentingDayTip7]
 let parentingDayTopic5 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingDayTipArray5)
@@ -2946,6 +3137,8 @@ let parentingPMTip15 = Tip(header: "", title: "Encourage your kides to travel; e
 
 //5
 let parentingPMTip16 = Tip(header: "", title: "Help your kids eater better at home...", body: "Put precut veggies on the middle shelf of the fridge and cookies out of sight. \n\nBuy more tempting salad dressing with cool names and less tempting bread. \n\nSet salad bowls on the dinner table every night." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
+let parentingPMTip17 = Tip(header: "", title: "Girls who play team sports are more likely to graduate from college, find a job, and be employed in male-dominated industries", body: "There’s even a direct link between playing sports in high school and earning a bigger salary as an adult. \n\nLearning to own victory and survive defeat in sports is apparently good training for owning triumphs and surviving setbacks at work.", sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2014/05/the-confidence-gap/359815/", sponsorLogo: "", sponsorURL: "")
+
 
 
 //WEEK 1
@@ -2961,9 +3154,15 @@ let parentingPMTopic2 = Topic(title: parentingTitle, icon: parentingIcon, tip: p
 //3
 let parentingPMTipArray3 = [parentingPMTip12, parentingPMTip13, parentingPMTip14, parentingPMTip15]
 let parentingPMTopic3 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingPMTipArray3)
-//4
-let parentingPMTipArray4 = [parentingPMTip16, parentingPMTip1, parentingPMTip2, parentingPMTip3]
+//4 WIP
+let parentingPMTipArray4 = [parentingPMTip16, parentingPMTip17, parentingPMTip2, parentingPMTip3]
 let parentingPMTopic4 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingPMTipArray4)
+
+// RANDOM
+let parentingPMArrays = [parentingPMTipArray0, parentingPMTipArray1, parentingPMTipArray2, parentingPMTipArray3, parentingPMTipArray4]
+let parentingPMTopic = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingPMArrays.random())
+
+
 //5
 let parentingPMTipArray5 = [parentingPMTip4, parentingPMTip5, parentingPMTip6, parentingPMTip7]
 let parentingPMTopic5 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingPMTipArray5)
@@ -2995,6 +3194,11 @@ let parentingBedtimeTopic0 = Topic(title: parentingTitle, icon: parentingIcon, t
 let parentingBedtimeTipArray1 = [parentingBedtimeTip4, parentingBedtimeTip5, parentingBedtimeTip6, parentingBedtimeTip7]
 let parentingBedtimeTopic1 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingBedtimeTipArray1)
 
+// RANDOM
+let parentingBedtimeArrays = [parentingBedtimeTipArray0, parentingBedtimeTipArray1,]
+let parentingBedtimeTopic = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingBedtimeArrays.random())
+
+
 //2
 let parentingBedtimeTipArray2 = [parentingBedtimeTip0, parentingBedtimeTip1, parentingBedtimeTip2, parentingBedtimeTip3]
 let parentingBedtimeTopic2 = Topic(title: parentingTitle, icon: parentingIcon, tip: parentingBedtimeTipArray2)
@@ -3021,7 +3225,7 @@ let parenting2 = Tip(header: "🎓", title: "Rich parents invest in top-notch ed
 
 let parenting3 = Tip(header: "🚎", title: "Children who live near transportation noise are more likely to test poorly for language and cognitive skills and have lower reading scores", body: "Chronic noise impairs a child’s development and may have a lifelong effect on educational attainment and overall health. Numerous studies now show that children exposed to households or classrooms near airplane flight paths, railways or highways are slower in their development of cognitive and language skills and have lower reading scores. The report concludes, citing children as particularly vulnerable to the effects of chronic urban and suburban racket. One study in New York City found that reading scores of sixth-grade students whose classrooms faced train tracks were a year behind those on the quieter side of the building. Researchers also found that the Munich students near the working airports had significantly higher levels of the stress hormones adrenaline and cortisol and markedly higher blood pressure readings than children in quieter neighborhoods. Evidence suggests that elevated blood pressure in childhood predicts higher blood pressure later in life, and higher levels of stress hormones are linked to several life-threatening adult illnesses, including high blood pressure, elevated cholesterol and other lipids, and heart disease. We think one thing that might be going on is that children who are exposed to noise develop a stress response of ignoring the noise, but not only do they ignore noise, there’s evidence that they also ignore speech. So not only are they ignoring the stimuli that are harmful, but they’re also ignoring stimuli that they need to pay attention to.", sourceName: "American Psychological Association", sourceURL: "https://www.apa.org/monitor/2011/07-08/silence.aspx", sponsorLogo: "", sponsorURL: "")
 
-let parenting4 = Tip(header: "🙏", title: "Adolescent who practice religion on a regular basis do better in school than those who do not practice religion", body: "A study found that adolescents who attend religious services, pray on a regular basis, feel close to God, and emphasize the role of faith in their daily lives had an average GPA of 3.22. However, adolescents who believe that a God exists but avoid religious involvement and broader issues of the relevance of religion for their life had an average GPA of 2.93. Being religious helps adolescents in middle and high school because they are rewarded for being obedient and respectful and for having self-control. And religious communities socialize adolescents to cultivate two habits highly valued in public schools: conscientiousness and cooperation." , sourceName: "Stanford University", sourceURL: "https://ed.stanford.edu/news/religiously-engaged-adolescents-demonstrate-habits-help-them-get-better-grades-stanford-scholar", sponsorLogo: "", sponsorURL: "")
+let parenting4 = Tip(header: "🙏", title: "Adolescent who practice religion on a regular basis do better in school than those who do not practice religion", body: "Study: Adolescents who attend religious services, pray on a regular basis, feel close to God, and emphasize the role of faith in their daily lives had an average GPA of 3.22. However, adolescents who believe that a God exists but avoid religious involvement and broader issues of the relevance of religion for their life had an average GPA of 2.93. Being religious helps adolescents in middle and high school because they are rewarded for being obedient and respectful and for having self-control. And religious communities socialize adolescents to cultivate two habits highly valued in public schools: conscientiousness and cooperation." , sourceName: "Stanford University", sourceURL: "https://ed.stanford.edu/news/religiously-engaged-adolescents-demonstrate-habits-help-them-get-better-grades-stanford-scholar", sponsorLogo: "", sponsorURL: "")
 
 let parenting5 = Tip(header: "👨‍👩‍👧‍👦", title: "Having kids later in life will increases your happiness more than having kids earlier in life", body: "Researchers from the London School of Economics found that one or two children provided the most happiness and that older parents found more joy in parenting than younger ones." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 let parenting6 = Tip(header: "🤝", title: "Teens who exhibited prosocial behavior -- such as helping, sharing and comforting -- toward strangers had higher self-esteem a year later", body: "This study helps us to understand that young people who help those with whom they do not have a relationship report feeling better about themselves over time. Given the importance of self-esteem during the teen years, this is an important finding. Parents can help by providing opportunities for their children to help and serve others who are less fortunate." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2017/12/171218115626.htm", sponsorLogo: "", sponsorURL: "")
@@ -3037,13 +3241,13 @@ let parentingToddlers2 = Tip(header: "🌊", title: "For children under age 5, d
 // Parenting: High Income Children
 
 // Teens
-let parentingHighIncomeTeens1 = Tip(header: "😐", title: "Children who come from affluent families are more likely to suffer from depression, anxiety and substance abuse than those who come from less affluent families", body: "A study found that suburban high schoolers reported significantly higher use of cigarettes, alcohol, marijuana, and hard drugs than did their inner-city counterparts. In addition, substance use was linked with depression and anxiety among affluent (but not inner-city) younth, suggesting efforts to self-medicate; this “negative affect” type of substance use tends to be sustained over time, rather than stopping soon after the teen years. \n\nStatistical analyses showed that children with very high perfectionist strivings—those who saw achievement failures as personal failures—had relatively high depression, anxiety, and substance use, as did those who indicated that their parents overemphasized their accomplishments, valuing them disproportionately more than their personal character." , sourceName: "National Center for Biotechnology Information", sourceURL: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1948879/", sponsorLogo: "", sponsorURL: "")
+let parentingHighIncomeTeens1 = Tip(header: "😐", title: "Children who come from affluent families are more likely to suffer from depression, anxiety and substance abuse than those who come from less affluent families", body: "Study: Suburban high schoolers reported significantly higher use of cigarettes, alcohol, marijuana, and hard drugs than did their inner-city counterparts. In addition, substance use was linked with depression and anxiety among affluent (but not inner-city) younth, suggesting efforts to self-medicate; this “negative affect” type of substance use tends to be sustained over time, rather than stopping soon after the teen years. \n\nStatistical analyses showed that children with very high perfectionist strivings—those who saw achievement failures as personal failures—had relatively high depression, anxiety, and substance use, as did those who indicated that their parents overemphasized their accomplishments, valuing them disproportionately more than their personal character." , sourceName: "National Center for Biotechnology Information", sourceURL: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1948879/", sponsorLogo: "", sponsorURL: "")
 
 // Daughter
 let parentingHighIncomeDaughters1 = Tip(header: "🙎‍♀️", title: "Study: Girls in the suburbs were 3 times more likely to report clinically significant levels of depression than girls in the inner-city", body: "A study found strong links between physical attractiveness and peer popularity among affluent girls. This variable alone explained more than half the variation in their popularity scores, suggesting particularly high emphasis on physical appearance among this subgroup of girls (the links between attractiveness and popularity were substantially weaker among inner-city girls and among both groups of boys)." , sourceName: "National Center for Biotechnology Information", sourceURL: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1948879/", sponsorLogo: "", sponsorURL: "")
 
 // Son
-let parentingHighIncomeSons1 = Tip(header: "🙇‍♂️", title: "For suburban boys, high peer status was linked with overt displays of low academic effort, disobedience at school, aggressiveness among girls, and substance use", body: "A study found, among suburban boys, popularity with classmates was linked with high substance use, suggesting that the peer group may endorse and even encourage substance use among affluent teenage boys. The study found that substance abuse for suburban boys began as early as 7th grade, with 7% of seventh-grade boys reported having drunk alcohol until intoxicated or using marijuana about once a month. \n\nAll adolescents might be drawn to overt forms of rebellion, but it is quite plausible that wealthy youth, unlike their poor counterparts, can dabble in drug use or delinquency without any substantive damage to their life prospects, given various safety nets (i.e., concerned adults and access to high-quality treatment services). Many children of highly educated, affluent parents will likely come to assume positions of influence in society, and their own equanimity of spirit may have far-reaching ramifications." , sourceName: "National Center for Biotechnology Information", sourceURL: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1948879/", sponsorLogo: "", sponsorURL: "")
+let parentingHighIncomeSons1 = Tip(header: "🙇‍♂️", title: "For suburban boys, high peer status was linked with overt displays of low academic effort, disobedience at school, aggressiveness among girls, and substance use", body: "Study: Among suburban boys, popularity with classmates was linked with high substance use, suggesting that the peer group may endorse and even encourage substance use among affluent teenage boys. The study found that substance abuse for suburban boys began as early as 7th grade, with 7% of seventh-grade boys reported having drunk alcohol until intoxicated or using marijuana about once a month. \n\nAll adolescents might be drawn to overt forms of rebellion, but it is quite plausible that wealthy youth, unlike their poor counterparts, can dabble in drug use or delinquency without any substantive damage to their life prospects, given various safety nets (i.e., concerned adults and access to high-quality treatment services). Many children of highly educated, affluent parents will likely come to assume positions of influence in society, and their own equanimity of spirit may have far-reaching ramifications." , sourceName: "National Center for Biotechnology Information", sourceURL: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1948879/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -3109,7 +3313,7 @@ let passion19 = Tip(header: "Quote", title: "I think we all have passions. And y
 
 let purpose0 = Tip(header: "Purpose", title: "Mark Divine, Retired Navy SEAL: Your purpose is where your passion, skills, and talents intersect", body: "First, uncover your passion. Ask yourself these questions: \n\n• What one thing would you focus on if you had nothing holding you back? \n\n• What makes you feel as if your hair is on fire? \n\n• What are you really supposed to do with your life? \n\nNext, list your skills and talents." , sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/dp/B00DFFGMPO/", sponsorLogo: "", sponsorURL: "")
 
-let purpose1 = Tip(header: "Purpose", title: "Mark Zuckerberg", body: "“Purpose is that sense that we are part of something bigger than ourselves. That we are needed, that we have something better ahead to work for. Purpose is what creates true happiness.“ \n\nResearch: ‘Purpose-driven’ people: \n\n• Are 50% more likely to be a leader \n\n• Earn a higher income and have a higher net worth \n\n• Live up to 7 years longer" , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/margiewarrell/2017/05/30/feeling-stuck-take-zuckerbergs-advice-and-commit-to-a-purpose-bigger-than-yourself/", sponsorLogo: "", sponsorURL: "")
+let purpose1 = Tip(header: "Purpose", title: "“Purpose is that sense that we are part of something bigger than ourselves. That we are needed, that we have something better ahead to work for. Purpose is what creates true happiness.“", body: "- Mark Zuckerberg \n\nResearch: ‘Purpose-driven’ people: \n\n• Are 50% more likely to be a leader \n\n• Earn more money and have a higher net worth \n\n• Live up to 7 years longer" , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/margiewarrell/2017/05/30/feeling-stuck-take-zuckerbergs-advice-and-commit-to-a-purpose-bigger-than-yourself/", sponsorLogo: "", sponsorURL: "")
 
 let purpose2 = Tip(header: "Purpose", title: "Formula to help you get clarity on your purpose: ", body: "Gifts (what you have to offer others) \n+ Passion (what really excites you) \n+ Values (what you find most important) \n= Your Calling \n\nG + P + V = C \n\nWhen you find where your greatest abilities, passion, and values intersect, you're on your purpose. \n\nHaving a purpose that provides real value requires us to think of others. Only when our purpose is larger than ourselves can we accomplish something truly memorable." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
@@ -3166,7 +3370,9 @@ let fear1 = Tip(header: "🤔", title: "FEAR - Robert Tew, Professional Athlete"
 
 let fear10 = Tip(header: "", title: "Sit on your bed one day and ask yourself, what remarkably stupid things am I doing on a regular basis to absolutely screw up my life. There's no better pathway to self realization than to pause at the highest good that you can conceive of and commit yourself to it. Then, ask yourself do you have anything really better to do? And if you don't then why would you do anything else? If you orient yourself properly and then pay attention to what you do every day. That works. Because what happens is that the world shifts itself around your aim. Let's say your aim is the highest possible aim. So, that sets up the world around you. It organizes all of your perceptions. It organizes what you see and what you don't see. It organizes your emotions and motivations. So, then you organize yourself around that aim. And then what happens is the day manifests itself as a set of challenges and problems. And if you solve them properly then you stay on the pathway towards that aim. And you can concentrate on the day. And it seems to me that that is what makes every moment of the day supercharged with meaning. Because if everything that you're doing every day is related to the highest possible aim that you can conceptualize. Well, that's the very definition of the meaning that would sustain you in your life.", body: "Jordan Peterson", sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
 
-
+//passion19
+//goals11
+//purpose7
 
 let adviceTipArray0 = [passion0, passion7, goals0, vision0]
 let adviceTopic0 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray0)
@@ -3174,20 +3380,28 @@ let adviceTopic0 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArr
 let adviceTipArray1 = [passion1, purpose4, goals1, vision1]
 let adviceTopic1 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray1)
 
-let adviceTipArray2 = [passion2, passion9, goals2, fear0]
+let adviceTipArray2 = [passion2, passion9, goals2, purpose0]
 let adviceTopic2 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray2)
 
-let adviceTipArray3 = [passion3, passion10, goals3, fear1]
+let adviceTipArray3 = [passion3, passion10, goals3, purpose1]
 let adviceTopic3 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray3)
 
-let adviceTipArray4 = [passion4, passion11, goals4, purpose0]
+let adviceTipArray4 = [passion4, passion11, goals4, purpose2]
 let adviceTopic4 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray4)
 
-let adviceTipArray5 = [passion5, passion12, goals5, purpose1]
+let adviceTipArray5 = [passion5, passion12, goals5, purpose3]
 let adviceTopic5 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray5)
 
-let adviceTipArray6 = [passion6, passion13, goals6, purpose2]
+let adviceTipArray6 = [passion6, passion13, goals6, purpose4]
 let adviceTopic6 = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceTipArray6)
+///////
+let adviceTipArray7 = [passion14, passion15, goals7, purpose5]
+let adviceTipArray8 = [passion16, passion17, goals6, purpose7]
+let adviceTipArray9 = [passion18, passion19, goals0, purpose0]//WIP
+
+// RANDOM
+let adviceArrays = [adviceTipArray0, adviceTipArray1, adviceTipArray2, adviceTipArray3, adviceTipArray4, adviceTipArray5, adviceTipArray6, adviceTipArray7, adviceTipArray8, adviceTipArray9]
+let adviceTopic = Topic(title: adviceTitle, icon: adviceIcon, tip: adviceArrays.random())
 
 
 // MARK: Jeff Bezos

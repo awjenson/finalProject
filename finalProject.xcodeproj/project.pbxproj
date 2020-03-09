@@ -18,6 +18,7 @@
 		DA0EDE0C2104EEB300B9363F /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0B2104EEB300B9363F /* Quote.swift */; };
 		DA0EDE0E2104EF6D00B9363F /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EDE0D2104EF6D00B9363F /* Hint.swift */; };
 		DA15AE1220B649B400EFC4C2 /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */; };
+		DA1B32B624155AD70084AE6D /* OldNowVCCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1B32B524155AD70084AE6D /* OldNowVCCode.swift */; };
 		DA20FEDD21F03643000F0C53 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA20FEDC21F03643000F0C53 /* UIImage+Extension.swift */; };
 		DA2223A220E8672800103829 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2223A120E8672800103829 /* ResponseTableViewCell.swift */; };
 		DA272D0B20BCE62200137039 /* AdviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA272D0A20BCE62200137039 /* AdviceData.swift */; };
@@ -92,6 +93,7 @@
 		DADE4C7A20E9A5D300E19393 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE4C7920E9A5D300E19393 /* QuoteData.swift */; };
 		DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1EC6520AA801E00EA9B3E /* EditButton.swift */; };
 		DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2977920BB76EC00868BF2 /* InternetConnection.swift */; };
+		DAE70F2B240C3AE100A6238D /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE70F2A240C3AE100A6238D /* Array+Extension.swift */; };
 		DAE95B3321E30B6300F01848 /* Thread+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE95B3221E30B6300F01848 /* Thread+Extension.swift */; };
 		DAEA7484222FBB0700AEDF95 /* RoundCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA7483222FBB0700AEDF95 /* RoundCornerView.swift */; };
 		DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */; };
@@ -113,6 +115,7 @@
 		DA0EDE0B2104EEB300B9363F /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		DA0EDE0D2104EF6D00B9363F /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		DA15AE1120B649B400EFC4C2 /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
+		DA1B32B524155AD70084AE6D /* OldNowVCCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldNowVCCode.swift; sourceTree = "<group>"; };
 		DA20FEDC21F03643000F0C53 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		DA2223A120E8672800103829 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
 		DA272D0A20BCE62200137039 /* AdviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceData.swift; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 		DADE4C7920E9A5D300E19393 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
 		DAE1EC6520AA801E00EA9B3E /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		DAE2977920BB76EC00868BF2 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
+		DAE70F2A240C3AE100A6238D /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		DAE95B3221E30B6300F01848 /* Thread+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thread+Extension.swift"; sourceTree = "<group>"; };
 		DAEA7483222FBB0700AEDF95 /* RoundCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerView.swift; sourceTree = "<group>"; };
 		DAF1B32E207AFDFD0090EBF0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -465,6 +469,7 @@
 				DA20FEDC21F03643000F0C53 /* UIImage+Extension.swift */,
 				DAB931042204129800808018 /* UIImageView+Extension.swift */,
 				DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */,
+				DAE70F2A240C3AE100A6238D /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 			children = (
 				DA78988C2052EFA1005046D8 /* NowViewController.swift */,
 				DA687C37226064F00037DD48 /* UserProfileViewController.swift */,
+				DA1B32B524155AD70084AE6D /* OldNowVCCode.swift */,
 			);
 			path = Now;
 			sourceTree = "<group>";
@@ -636,6 +642,7 @@
 				DA05883820EEFC970065098D /* UITextView+DoneButton.swift in Sources */,
 				DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */,
 				DA361D3920896E5D007ACE59 /* Date+convertToString.swift in Sources */,
+				DA1B32B624155AD70084AE6D /* OldNowVCCode.swift in Sources */,
 				DA061138225003AA008CABE5 /* MindViewController.swift in Sources */,
 				DA015BF42073E36300A0342F /* UIViewControllerExtension.swift in Sources */,
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
@@ -671,6 +678,7 @@
 				DA78987620507C86005046D8 /* ProfileTableViewCell.swift in Sources */,
 				DACA911E20FBD0B700475CE5 /* HabitQuote.swift in Sources */,
 				DAA1022520537A2400A25EFC /* JournalViewController.swift in Sources */,
+				DAE70F2B240C3AE100A6238D /* Array+Extension.swift in Sources */,
 				DA272F7122266CCB005B8157 /* MasterViewController.swift in Sources */,
 				DA2B860120B9EB52005B7DD6 /* ProfileItem.swift in Sources */,
 				DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */,
