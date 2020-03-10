@@ -25,7 +25,7 @@ class CardView: UIView {
         //Rounded Card with Shadows
         //https://www.refactorstudios.com/blog/corners-borders-shadows-oh-my
 
-        layer.borderWidth = 0.5
+        layer.borderWidth = 0.8
         layer.cornerRadius = 12
 //        layer.borderColor = UIColor.gray.cgColor
         layer.borderColor = UIColor.gray.cgColor.copy(alpha: 0.5)
