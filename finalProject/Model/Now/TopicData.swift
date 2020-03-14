@@ -3547,20 +3547,6 @@ let schoolAMTopic = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTip
 
 
 
-let schoolAMTipArray4 = [schoolAMTip5, schoolAMTip6, schoolAMTip7, schoolAMTip8]
-let schoolAMTipArray5 = [schoolAMTip9, schoolAMTip10, schoolAMTip11, schoolAMTip12]
-let schoolAMTipArray6 = [schoolAMTip13, schoolAMTip6, schoolAMTip7, schoolAMTip8]
-
-let schoolAMTopic0 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray0)
-let schoolAMTopic1 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray1)
-let schoolAMTopic2 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray2)
-let schoolAMTopic3 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray3)
-let schoolAMTopic4 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray4)
-let schoolAMTopic5 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray5)
-let schoolAMTopic6 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolAMTipArray6)
-
-
-
 //PM
 //0
 let schoolPMTip1 = Tip(header: "Increase Happiness", title: "When searching for friends, look for people who make you feel good about yourself and do their best to support you", body: "Even if it consists of only 1 or 2 people, having a group of friends you can trust and rely on will make your life far easier. \n\nIf a friend starts making you feel worthless, don’t be afraid to cut them out of your life. \n\nIt may be difficult, but it will make you far happier in the long-run." , sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Survive-High-School", sponsorLogo: "", sponsorURL: "")
@@ -3586,26 +3572,13 @@ let schoolPMTip13 = Tip(header: "⛹️‍♀️", title: "Girls who play team s
 let schoolPMTipArray0 = [schoolPMTip1, schoolPMTip2, schoolPMTip3, schoolPMTip4]
 let schoolPMTipArray1 = [schoolPMTip5, schoolPMTip6, schoolPMTip7, schoolPMTip8]
 let schoolPMTipArray2 = [schoolPMTip9, schoolPMTip10, schoolPMTip11, schoolPMTip12]
-let schoolPMTipArray3 = [schoolPMTip12, schoolPMTip10, schoolPMTip11, schoolPMTip12]
+let schoolPMTipArray3 = [schoolPMTip13, schoolPMTip10, schoolPMTip4, schoolPMTip12]
+
 //
 let schoolPMTipArrays = [schoolPMTipArray0, schoolPMTipArray1, schoolPMTipArray2, schoolPMTipArray3,]
 let schoolPMTopic = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArrays.random())
 
 
-
-
-
-let schoolPMTipArray4 = [schoolPMTip5, schoolPMTip6, schoolPMTip7, schoolPMTip8]
-let schoolPMTipArray5 = [schoolPMTip9, schoolPMTip10, schoolPMTip11, schoolPMTip12]
-let schoolPMTipArray6 = [schoolPMTip8, schoolPMTip7, schoolPMTip6, schoolPMTip5]
-
-let schoolPMTopic0 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray0)
-let schoolPMTopic1 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray1)
-let schoolPMTopic2 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray2)
-let schoolPMTopic3 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray3)
-let schoolPMTopic4 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray4)
-let schoolPMTopic5 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray5)
-let schoolPMTopic6 = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArray6)
 
 
 // I've found conflicting studies with early start times and math test scores
@@ -3677,24 +3650,8 @@ let travelTipArray3 = [travelTip12, travelTip13, travelTip14, travelTip15]
 let travelTipArray4 = [travelTip16, travelTip17, travelTip18, travelTip19]
 //
 let travelTipArrays = [travelTipArray0, travelTipArray1, travelTipArray2, travelTipArray3, travelTipArray4,]
-let travelTopic = Topic(title: schoolTitle, icon: schoolIcon, tip: travelTipArrays.random())
+let travelTopic = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArrays.random())
 
-
-
-
-
-
-
-let travelTipArray5 = [travelTip8, travelTip9, travelTip7, travelTip6]
-let travelTipArray6 = [travelTip7, travelTip6, travelTip5, travelTip4]
-
-let travelTopic0 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray0)
-let travelTopic1 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray1)
-let travelTopic2 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray2)
-let travelTopic3 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray3)
-let travelTopic4 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray4)
-let travelTopic5 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray5)
-let travelTopic6 = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArray6)
 
 
 

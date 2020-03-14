@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=k-GvIqh5Xcs
 
 import UIKit
 import SafariServices // to display webview
-import ChameleonFramework
+
 
 class NowViewController: UIViewController {
 
@@ -838,7 +838,9 @@ class NowViewController: UIViewController {
 
         case 5...7:
             print("weekday Fri, Early Morning")
-            appendNineTopics(AMRoutineTopic, gymTopic, yogaTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
+            appendNineTopics(AMRoutineTopic, gymTopic, yogaTopic, runningTopic,
+                             getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic,
+                             cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
                              fridayNow5to8Topic)
 
             setNatureImage(to: "morning6")
@@ -846,7 +848,8 @@ class NowViewController: UIViewController {
 
         case 8:
             print("weekday Fri, Late Morning")
-            appendNineTopics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic,
+            appendNineTopics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic,
+                             getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic,
                              cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
                              fridayNow5to8Topic)
 
@@ -854,7 +857,8 @@ class NowViewController: UIViewController {
 
         case 9:
             print("weekday Fri, Late Morning")
-            appendNineTopics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic5, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, schoolAMTopic,
+            appendNineTopics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic,
+                             getReadyAMTopic, breakfastTopic, bathroomTopic5, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, schoolAMTopic,
                              fridayNow9to11Topic)
 
             setNatureImage(to: "midmorning6")
@@ -862,7 +866,9 @@ class NowViewController: UIViewController {
 
         case 10:
             print("weekday Fri, Late Morning")
-            appendNineTopics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic,
+            appendNineTopics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic,
+                             bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic,
+                             networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic,
                              fridayNow9to11Topic)
 
             setNatureImage(to: "midmorning6")
@@ -870,7 +876,9 @@ class NowViewController: UIViewController {
 
         case 11:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, runningTopic, workAMTopic, bathroomTopic, breakTopic, networkingTopic, travelTopic, schoolPMTopic,
+            appendNineTopics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic,
+                             gymTopic, runningTopic, workAMTopic, bathroomTopic,
+                             breakTopic, networkingTopic, travelTopic, schoolAMTopic,
                              fridayNow11to13Topic)
 
             setNatureImage(to: "day6")
@@ -878,7 +886,9 @@ class NowViewController: UIViewController {
 
         case 12...13:
             print("weekday Fri, Midday")
-            appendNineTopics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, runningTopic, workPMTopic, bathroomTopic, networkingTopic, breakTopic, travelTopic, schoolPMTopic,
+            appendNineTopics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic,
+                             gymTopic, runningTopic, workPMTopic, bathroomTopic,
+                             networkingTopic, breakTopic, travelTopic, schoolPMTopic,
                              fridayNow11to13Topic)
 
             setNatureImage(to: "day6")
@@ -886,7 +896,9 @@ class NowViewController: UIViewController {
         case 14...15:
             ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-            appendNineTopics(afternoonSnackTopic, cafePMTopic, workPMTopic, networkingTopic, breakPMTopic, commuteFridayPMTopic, groceryStoreTopic, shoppingClothesTopic, gymTopic, runningTopic, travelTopic, schoolPMTopic,
+            appendNineTopics(afternoonSnackTopic, cafePMTopic, workPMTopic, networkingTopic,
+                             breakPMTopic, commuteFridayPMTopic, groceryStoreTopic, shoppingClothesTopic,
+                             gymTopic, runningTopic, travelTopic, schoolPMTopic,
                              fridayNow14to16Topic)
 
             setNatureImage(to: "afternoon6")

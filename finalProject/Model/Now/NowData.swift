@@ -784,7 +784,7 @@ let sunday21to24Tip12 = Tip(header: "Billionaire Habit", title: "Go to bed. Self
 
 //SAT
 let saturday21to24Tip9 = Tip(header: "Look Younger", title: "Not getting enough sleep causes premature aging and wrinkles", body: "If you don't sleep, your body doesn't make as much human growth hormone (which stimulates cell production), so your skin won't be as thick. \n\nWithout time to produce new, fresh cells and fix yesterday's damage, you're practically welcoming accelerated aging—plus, collagen may prematurely stiffen (hello, fine lines and wrinkles!)", sourceName: "Allure", sourceURL: "https://www.allure.com/story/sleep-and-skin-what-happens", sponsorLogo: "", sponsorURL: "")
-let saturday21to24Tip10 = Tip(header: "Prevent The Sunday Scaries", title: "Survey: 88% of people have a feeling of anxiety on Sunday when thinking about Monday morning", body: "Take action now to prevent the Sunday Scaries. \n\nTop ways to reduce the Sunday Scaries: n\n• 44% take time for myself during the weekend \n\n• 42% of people make sure to get a full night’s rest on Friday and Saturday \n\n• 21% take a “digital detox” for part of the weekend" , sourceName: "Medium", sourceURL: "https://medium.com/@pitch_20575/study-majority-of-americans-come-down-with-a-case-of-the-sunday-scaries-every-week-2ce405acb626", sponsorLogo: "", sponsorURL: "")
+let saturday21to24Tip10 = Tip(header: "Prevent The Sunday Scaries", title: "Survey: 88% of people have a feeling of anxiety on Sunday when thinking about Monday morning", body: "Take action now to prevent the Sunday Scaries. \n\nTop ways to reduce the Sunday Scaries: \n\n• 44% take time for myself during the weekend \n\n• 42% of people make sure to get a full night’s rest on Saturday \n\n• 21% take a “digital detox” for part of the weekend" , sourceName: "Medium", sourceURL: "https://medium.com/@pitch_20575/study-majority-of-americans-come-down-with-a-case-of-the-sunday-scaries-every-week-2ce405acb626", sponsorLogo: "", sponsorURL: "")
 
 let saturday21to24Tip11 = Tip(header: "Increase Testosterone", title: "Get enough sleep", body: "Research: Every additional hour of sleep you get bumps up testosterone levels by 15%+, while people who don't get good sleep tend to have reduced testosterone production. \n\nThe restorative sleep cycles are when the body can prioritize things like necessary hormone production.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
 
@@ -1503,7 +1503,7 @@ let weekdayNow11to14Tip3 = Tip(header: "Stay Calm 😰", title: "The next time y
 //// TUESDAY, 11AM-1PM
 let tuesdayNow11to14Tip0 = Tip(header: "Stay Calm 😰", title: "Survey: 11:45 AM on Tuesday is the most stressful time of the workweek", body: "Tuesday is when workers are most likely to work through their lunch break and stay late at work. \n\nEating healthy foods and drinking enough water keeps your energy levels high when you're busy." , sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/news/newstopics/howaboutthat/5113653/Tuesday-at-1145-is-most-stressful-time-of-the-week-survey-suggests.html", sponsorLogo: "", sponsorURL: "")//Tuesday-specific
 let weekdayNow11to14Tip4 = Tip(header: "Improve Performance 🚰", title: "Drinking 8 to 10 cups of water per day can improve your levels of cognitive performance by 30%", body: "A dehydration level of just 1% of your body weight reduces thinking functions, so staying well-hydrated is important for your mental performance." , sourceName: "Shape", sourceURL: "https://www.shape.com/healthy-eating/healthy-drinks/6-reasons-drinking-water-helps-solve-any-problem", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let weekdayNow11to14Tip5 = Tip(header: "Improve Mood And Productivity 🎶", title: "Listen to music you like, especially songs without lyrics", body: "Research: participants who listened to music they enjoyed completed their tasks more quickly and came up with better ideas than those who didn't because the music improved their mood. \n\nMusic is also effective in raising efficiency in repetitive work." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-music-for-productivity-2015-7", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow11to14Tip5 = Tip(header: "Look Confidence", title: "When standing, imagine a string pulling your head up toward the sky:", body: "• Keep your legs aligned with your shoulders. \n• Keep your feet approximately 4-6 inches apart. \n• Distribute your weight equally on both legs. \n• Keep your shoulders back—but not way back. \n• Turn your body towards others. \n\nAvoid standing in a \"submissive position\": \n• Legs crossed \n• Hands folded in front of you \n• Weight pressed down on one hip", sourceName: "American Express", sourceURL: "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/4-ways-your-body-language-can-project-confidence/", sponsorLogo: "", sponsorURL: "")
 let weekdayNow11to14Tip6 = Tip(header: "Work Smarter 🗣", title: "Wear large, over-the-ear headphones to help block out unwanted noise", body: "Workers lose as much as 86 minutes per day due to noise distractions. \n\nEmployees should speak to an office manager or human resources director on this issue." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/03/stop-noise-from-ruining-your-open-office", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 // WED
@@ -1516,25 +1516,27 @@ let weekdayNow11to14Tip10 = Tip(header: "Be Confident", title: "Stand tall, with
 let weekdayNow11to14Tip11 = Tip(header: "Be Confident", title: "Holding eye contact while speaking denotes authority, confidence, and has an enormous impact on your ability to persuade", body: "Lack of eye contact often implies deception. When breaking eye contact, it is better to break off to the left or to the right, as looking down suggests insecurity." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/common-body-language-mistakes-employees-make-2014-4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip12 = Tip(header: "Get Some Sun ☀️", title: "Spending 20 minutes outside in good weather improves: \n• Mood \n• Memory \n• Thinking", body: "20 minutes is a short enough time to spend outside that you could fit it into your your lunch break or afternoon break." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/belle-beth-cooper/10-simple-things-to-be-happy_b_4241824.html", sponsorLogo: "", sponsorURL: "")
 let weekdayNow11to14Tip13 = Tip(header: "Reduce Distractions 📵", title: "Research: Our maximum attention span these days is 15 minutes", body: "Avoid distractions by:• Concentrating on one task for 15-30 minutes \n\n• Not checking your emails, texts, or social media \n\n• Silencing your phone and turn it facedown" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/psychologist-gives-tip-for-staying-focused-2015-11", sponsorLogo: "", sponsorURL: "")
-let weekdayNow11to14Tip14 = Tip(header: "Reduce Stress 🌬", title: "Do 45 seconds of ontrolled breathing", body: "• Take a deep breath, expanding your belly \n\n• Pause \n\n• Exhale slowly to the count of 5 \n\n• Repeat 4 times \n\nThis can: \n•Reduce your stress hormones \n• Sharpen your thinking \n• Improve your immune system" , sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip14 = Tip(header: "Reduce Stress 🌬", title: "Do 45 seconds of controlled breathing", body: "• Take a deep breath, expanding your belly \n\n• Pause \n\n• Exhale slowly to the count of 5 \n\n• Repeat 4 times \n\nThis can: \n•Reduce your stress hormones \n• Sharpen your thinking \n• Improve your immune system" , sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
 // FRI
 let weekdayNow11to14Tip15 = Tip(header: "Avoid Multitasking", title: "A decade’s worth of research found that heavy multitaskers have reduced memory", body: "If you’re multitasking while doing something significant, like an academic paper or work project, you’ll be slower to complete it and you might be less successful." , sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/2018/10/25/decade-data-reveals-heavy-multitaskers-reduced-memory-psychologist-says/", sponsorLogo: "", sponsorURL: "")
-let weekdayNow11to14Tip16 = Tip(header: "Burn Calories 🔥", title: "Burn calories while sitting by fidgeting (tapping feet and fingers, twirling hair, and gesturing while speaking)", body: "Studies show that lean people fidget for about 150 minutes a day more than obese people do. \n\nFidgeting can burn 350 calories a day, which translates into 10-30 pounds a year. \n\nLong periods of sitting increases the risk of obesity, heart disease, and cancer." , sourceName: "Lifehacker", sourceURL: "https://lifehacker.com/5323740/use-neat-activities-to-burn-more-calories", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip16 = Tip(header: "Burn Calories 🔥", title: "Burn calories while sitting by fidgeting (tapping feet and fingers, twirling hair, and gesturing while speaking)", body: "Research: Lean people fidget for about 150 minutes a day more than obese people do. \n\nFidgeting can burn 350 calories a day, which translates into 10-30 pounds a year. \n\nLong periods of sitting increases the risk of obesity, heart disease, and cancer." , sourceName: "Lifehacker", sourceURL: "https://lifehacker.com/5323740/use-neat-activities-to-burn-more-calories", sponsorLogo: "", sponsorURL: "")
 let weekdayNow11to14Tip17 = Tip(header: "Live Healthier", title: "\"Box breathing\" reduces stress and helps you keep cool under pressure", body: "Focusing on your breath is one of the simplest ways to relax. \n\n• Count to 4 as you inhale \n• Hold for 4 \n• Count to 4 as you exhale \n• Hold for 4 \n• Repeat 4x4x4x4" , sourceName: "Curiosity", sourceURL: "https://curiosity.com/topics/box-breathing-is-the-navy-seal-technique-for-reducing-stress-and-staying-calm-curiosity/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let weekdayNow11to14Tip18 = Tip(header: "Increase Happiness", title: "Research: Practicing gratitude immediately boosts your mood", body: "Quickly think of 1-3 things you're thankful for, whether its for your family and friends, your health, or the nice weather." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow11to14Tip18 = Tip(header: "Increase Confidence", title: "How to increase confidence", body: "• Sit up straight \n\n• Smile (smiling causes your brain to release endorphins which causess you to feel happy) \n\n• Nod your head up-and-down (the movement signals positive thoughts in your brain) \n\n• Visualize yourself scoring the winning goal or going through a tough workout (you first need to win in your head; only then can you win in the battleground) \n\n• Stand for 2 minutes in a wide stance with your hands in the air \n\n• Listen to heavy-bass songs \n\n• Spray on our favorite fragrance (Study: It makes you feel more confident)", sourceName: "Greatist", sourceURL: "https://greatist.com/grow/easy-confidence-boosters", sponsorLogo: "", sponsorURL: "")
+
+
 
 //WEEK 2
 //MON
 let weekdayNow11to14Tip19 = Tip(header: "Live Smarter", title: "Frequent short breaks are more effective than irregular breaks", body: "The ideal break also involves movement. \n\nStudy: 5-minute walking breaks each hour boosted energy levels, sharpened focus and improved mood throughout the day, and reduced feelings of fatigue in the late afternoon. \n\nThese \"microbursts of activity,\" as the researchers called them, were also more valuable than a single 30-minute walking break." , sourceName: "The Wall Street Journal", sourceURL: "https://www.wsj.com/articles/how-to-be-healthier-happier-and-more-productive-its-all-in-the-timing-1514560647", sponsorLogo: "", sponsorURL: "")
 let weekdayNow11to14Tip20 = Tip(header: "Increase Energy 😴", title: "In the afternoon, adenosine (sleep hormone) is high and cortisol (hormone that supports alertness) is low", body: "Some people feel less energetic for this reason and might benefit from gentle exercise, meditation or a nap. \n\nIf you feel completely wiped out in the afternoon, you should consult with your doctor because it could be a sign of underlying health issues." , sourceName: "American Council on Exercise", sourceURL: "https://www.acefitness.org/education-and-resources/professional/expert-articles/6929/when-is-the-best-time-of-day-to-exercise", sponsorLogo: "", sponsorURL: "")
-let weekdayNow11to14Tip21 = Tip(header: "Look Confident", title: "Strong eye contact is the single greatest indicator of confidence. In contrast, breaking eye contact suggests submissiveness", body: "Study: Eye contact shows a person’s social hierarchy and dominance in a conversation. \n\nPeople who are at the top of the pecking order tend to look longer at their subject. \n\nCreate an emotional connection with someone by making eye contact 60%-70% of the time.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/body-language-tricks-appear-more-confident-2016-3#-1", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip21 = Tip(header: "Look Confident", title: "Strong eye contact is the single greatest indicator of confidence. \n\nIn contrast, breaking eye contact suggests submissiveness", body: "Study: Eye contact shows a person’s social hierarchy and dominance in a conversation. \n\nPeople who are at the top of the pecking order tend to look longer at their subject. \n\nCreate an emotional connection with someone by making eye contact 60%-70% of the time.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/body-language-tricks-appear-more-confident-2016-3#-1", sponsorLogo: "", sponsorURL: "")
 let weekdayNow11to14Tip22 = Tip(header: "Lower Your Risk Of Skin Cancer ☀️", title: "Reduce sun exposure between 10 a.m. and 4 p.m.", body: "Having 5+ sunburns during your lifetime doubles your risk of melanoma, the deadliest form of skin cancer. If you have to be outside during this time: \n\n• Work in the shade \n\n• Apply (and reapply) sunscreen \n\n• Wear a wide-brimmed hat that protects your face and neck", sourceName: "Raleigh Medical Group", sourceURL: "https://www.raleighmedicalgroup.com/blog/entryid/185/skin-cancer-prevention", sponsorLogo: "", sponsorURL: "")
 
 //TUES
 let weekdayNow11to14Tip23 = Tip(header: "Live Longer", title: "Add more movement into your life by living in neighborhoods with sidewalks, commuting to places by bike, and planting a garden each spring", body: "Study of 100+ year-olds in Greece: They exercised mindlessly, but just gardening, walking to their neighbor's house, or doing their own yard work.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-let weekdayNow11to14Tip24 = Tip(header: "Look Confidence", title: "When standing, imagine a string pulling your head up toward the sky", body: "• Keep your legs aligned with your shoulders. • Keep your feet approximately 4-6 inches apart. \n• Distribute your weight equally on both legs. \n• Keep your shoulders back—but not way back. \n• Turn your body towards others. \n\nAvoid standing in a \"submissive position\": \n• Legs crossed \n• Hands folded in front of you \n• Weight pressed down on one hip", sourceName: "American Express", sourceURL: "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/4-ways-your-body-language-can-project-confidence/", sponsorLogo: "", sponsorURL: "")
-let weekdayNow11to14Tip25 = Tip(header: "Increase Confidence", title: "How to increase confidence", body: "• Sit up straight \n\n• Smile (smiling causes your brain to release endorphins which causess you to feel happy) \n\n• Nod your head up-and-down (the movement signals positive thoughts in your brain) \n\n• Visualize yourself scoring the winning goal or going through a tough workout (you first need to win in your head; only then can you win in the battleground) \n\n• Stand for 2 minutes in a wide stance with your hands in the air \n\n• Listen to heavy-bass songs \n\n• Spray on our favorite fragrance (Study: It makes you feel more confident)", sourceName: "Greatist", sourceURL: "https://greatist.com/grow/easy-confidence-boosters", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip24 = Tip(header: "Improve Mood And Productivity 🎶", title: "Listen to music you like, especially songs without lyrics", body: "Research: People who listened to music they enjoyed completed their tasks more quickly and came up with better ideas than those who didn't because the music improved their mood. \n\nMusic is also effective in raising efficiency in repetitive work." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-music-for-productivity-2015-7", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow11to14Tip25 = Tip(header: "Increase Happiness", title: "Research: Practicing gratitude immediately boosts your mood", body: "Quickly think of 1-3 things you're thankful for, whether its for your family and friends, your health, or the nice weather." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow11to14Tip26 = Tip(header: "Increase Confidence", title: "Keep your chin and head up at all times", body: "Confident people are always looking up, never down at the table, the ground, or their feet. \n\nPretend that there's a string holding the top of your head up.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/body-language-tricks-appear-more-confident-2016-3#-1", sponsorLogo: "", sponsorURL: "")
 
 //WED
@@ -1547,7 +1549,7 @@ let weekdayNow11to14Tip30 = Tip(header: "Increase Confidence", title: "Improve y
 let weekdayNow11to14Tip31 = Tip(header: "Project Confidence", title: "While sitting:", body: "• Sit with your back straight \n• Your rear toward the back of the chair \n• Your feet planted firmly on the floor \n\nThis sitting position puts the least amount of strain on supporting muscles, keeps you from back and neck pains, and helps you develop a strong core. \n\nGood posture opens your airways, which ensures proper breathing.", sourceName: "American Express", sourceURL: "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/4-ways-your-body-language-can-project-confidence/", sponsorLogo: "", sponsorURL: "")
 
 //FRI
-let weekdayNow11to14Tip35 = Tip(header: "Confidence", title: "Having an upright posture in the face of stress maintains positive self-esteem, reduces negative mood, and increases positive mood.", body: "Study: Upright participants reported higher self-esteem, better mood, and lower fear, compared to slumped participants. Sitting upright may be a simple behavioral strategy to help build resilience to stress.", sourceName: "American Psychological Association", sourceURL: "https://psycnet.apa.org/record/2014-37739-001", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip35 = Tip(header: "Confidence", title: "Having an upright posture in the face of stress maintains: \n• Positive self-esteem \n• Reduces negative mood \n• Increases positive mood", body: "Study: Upright participants reported higher self-esteem, better mood, and lower fear, compared to slumped participants. \n\nSitting upright may be a simple behavioral strategy to help build resilience to stress.", sourceName: "American Psychological Association", sourceURL: "https://psycnet.apa.org/record/2014-37739-001", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1706,7 +1708,7 @@ let weekdayNow14to16Tip15 = Tip(header: "Be Alert", title: "Receiving negative c
 
 // FRI
 let weekdayNow14to16Tip16 = Tip(header: "Reduce Health Risks", title: "Move around every 30 mintues. Long periods of sitting increases your risk of developing diabetes, cancer, and death", body: "Metabolism slows down 90% after 30 minutes of sitting. \n\nJust getting up for 5 minutes is going to get things going again." , sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/news/wonk/wp/2015/06/02/medical-researchers-have-figured-out-how-much-time-is-okay-to-spend-sitting-each-day/?utm_term=.b8239440b685", sponsorLogo: "", sponsorURL: "")
-let weekdayNow14to16Tip17 = Tip(header: "Look Confident", title: "Every time you walk through a doorway, remember to stand up, put your chin up, put your shoulders back, and smile", body: "It's called the doorway drill. \n\nDoing it through every doorway creates a habit where your default body language and non-verbal communication is: \n• Open \n• Upright \n• Positive" , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let weekdayNow14to16Tip17 = Tip(header: "Look Confident", title: "Every time you walk through a doorway, remember to: \n• Stand up \n• Put your chin up \n• Put your shoulders back \n• Smile", body: "It's called the doorway drill. \n\nDoing it through every doorway creates a habit where your default body language and non-verbal communication is: \n• Open \n• Upright \n• Positive" , sourceName: "The Unbeatable Mind Podcast", sourceURL: "https://unbeatablemind.com/jordan-harbinger/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let weekdayNow14to16Tip18 = Tip(header: "Increase Happiness", title: "Spend one minute looking for positives, 3 times a day", body: "Our brain is not designed to create happiness. Unhappy chemicals, like cortisol, are used to scan for problems and survive. \n\nRewire your brain with a positivity circuit so negativity doesn't overwhelm you." , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/womensmedia/2016/12/21/how-to-train-your-brain-to-go-positive-instead-of-negative/#404057cc5a58", sponsorLogo: "", sponsorURL: "")
 let weekdayNow14to16Tip19 = Tip(header: "Calm Down", title: "Even just 3-5 minutes of slow, rhythmic breathing can train your nervous system to be more adaptive", body: "The first thing to do when feeling stressed and anxious is to slow yourself down. \n\nThe best way to do this is to take some deep breaths: inhale to a count of five and exhale to a count of five." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/how-effectively-manage-stress-so-it-doesn-t-hurt-your-ncna815626", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -1733,7 +1735,7 @@ let weekdayNow14to16Tip29 = Tip(header: "Increase Productivity", title: "Take a 
 
 
 //FRIDAY
-let weekdayNow14to16Tip36 = Tip(header: "Prevent The Sunday Scaries", title: "Survey: 88% of people have a feeling of anxiety on Sunday when thinking about Monday morning", body: "Take action now to prevent the Sunday Scaries. \n\n• 35% of people surveyed use the end of the day Friday to get organized for Monday" , sourceName: "Medium", sourceURL: "https://medium.com/@pitch_20575/study-majority-of-americans-come-down-with-a-case-of-the-sunday-scaries-every-week-2ce405acb626", sponsorLogo: "", sponsorURL: "")
+
 
 
 
@@ -1776,8 +1778,7 @@ let weekdayNow14to16TipArray8 = [weekdayNow14to16Tip15, weekdayNow14to16Tip14, w
 let thursdayNow14to16Topic2 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray8)
 
 //FRI (WIP 3)
-let weekdayNow14to16TipArray9 = [weekdayNow14to16Tip36, weekdayNow14to16Tip18, weekdayNow14to16Tip17, weekdayNow14to16Tip16]
-let fridayNow14to16Topic2 = Topic(title: weekdayNow14to16Title, icon: weekdayNow14to16Icon, tip: weekdayNow14to16TipArray9)
+
 
 /////////////////
 //RANDOM - MON
@@ -1797,7 +1798,7 @@ let thursdayNow14to16TipArrays = [weekdayNow14to16TipArray3, weekdayNow14to16Tip
 let thursdayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: thursdayNow14to16TipArrays.random())
 
 //RANDOM - FRI
-let fridayNow14to16TipArrays = [weekdayNow14to16TipArray4, weekdayNow14to16TipArray9]
+let fridayNow14to16TipArrays = [weekdayNow14to16TipArray4]
 let fridayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: fridayNow14to16TipArrays.random())
 
 
@@ -2399,14 +2400,14 @@ let weekdayNow21to24Tip55 = Tip(header: "Successful Habit", title: "Composer Lud
 
 //FRI
 let weekdayNow21to24Tip56 = Tip(header: "Sleep Better", title: "Stop drinking liquids 60 minutes before bed", body: "This is usually the least time it takes you to pass excess fluid. \n\nThe exception here is if you have been drinking alcohol. Go ahead and continue drinking water right up to bedtime.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")//Alcohol
-let weekdayNow21to24Tip57 = Tip(header: "Prevent The Sunday Scaries", title: "Survey: 88% of people have a feeling of anxiety on Sunday when thinking about Monday morning", body: "Take action now to prevent the Sunday Scaries. \n\nTop ways to reduce the Sunday Scaries: n\n• 44% take time for myself during the weekend \n\n• 42% of people make sure to get a full night’s rest on Friday and Saturday \n\n• 21% take a “digital detox” for part of the weekend" , sourceName: "Medium", sourceURL: "https://medium.com/@pitch_20575/study-majority-of-americans-come-down-with-a-case-of-the-sunday-scaries-every-week-2ce405acb626", sponsorLogo: "", sponsorURL: "")
-let weekdayNow21to24Tip58 = Tip(header: "Millionaire Habit", title: "Arianna Huffington's tips for a night routine that ensures better sleep:", body: "• No electronic devices 30 minutes before bedtime (or remove all devices from your bedroom) \n• No working on the bed \n• Do some light stretching and deep breathing \n• Wear pajamas to send a sleep-friendly message to your body \n• Read physical books or use an e-reader that does not emit blue light \n• Drink chamomile or lavender tea \n• Write a list of things you are grateful for", sourceName: "The Mindful Company", sourceURL: "https://www.mindful-company.com/blogs/notebook/the-night-routines-of-notable-people", sponsorLogo: "", sponsorURL: "")
-let weekdayNow21to24Tip59 = Tip(header: "CEO Advice", title: "Kenneth Chenault, CEO of American Express, writes down 3 things he wants to accomplish tomorrow", body: "This helps him prioritize first thing the next morning. \n\nClearing the mind for a good night sleep is critical for a lot of successful people.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip57 = Tip(header: "Billionaire Habit", title: "Each night before bed, Microsoft billionaire Bill Gates spends an hour reading a book, ranging on topics from politics to current events.", body: "Aside from gaining new knowledge, reading daily: \n• Reduces stress \n• Improves memory \n\nStudy: Reading for as little as 6 minutes a day can reduce stress levels by up to 68%. \n\nStudy: People who stimulated their minds through activities like reading, reduced cognitive decline by an average of 32% as they got older in age.", sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/productivity/6-habits-highly-successful-people-before-bedtime.html", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip58 = Tip(header: "Millionaire Habit", title: "Arianna Huffington's tips for better sleep:", body: "• No electronic devices 30 minutes before bedtime (or remove all devices from your bedroom) \n\n• No working on the bed \n\n• Do some light stretching and deep breathing \n\n• Wear pajamas to send a sleep-friendly message to your body \n\n• Read physical books or use an e-reader that does not emit blue light \n\n• Drink chamomile or lavender tea \n\n• Write a list of things you are grateful for", sourceName: "The Mindful Company", sourceURL: "https://www.mindful-company.com/blogs/notebook/the-night-routines-of-notable-people", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip59 = Tip(header: "CEO Advice", title: "Kenneth Chenault, CEO of American Express, writes down 3 things he wants to accomplish tomorrow", body: "This helps him prioritize first thing tomorrow. \n\nClearing the mind for a good night sleep is critical for a lot of successful people.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEK 4
 //MON
-let weekdayNow21to24Tip60 = Tip(header: "Billionaire Habit", title: "Each night before bed, Microsoft billionaire Bill Gates spends an hour reading a book, ranging on topics from politics to current events.", body: "Aside from gaining new knowledge, reading daily: \n• Reduces stress \n• Improves memory \n\nStudy: Reading for as little as 6 minutes a day can reduce stress levels by up to 68%. \n\nStudy: People who stimulated their minds through activities like reading, reduced cognitive decline by an average of 32% as they got older in age.", sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/productivity/6-habits-highly-successful-people-before-bedtime.html", sponsorLogo: "", sponsorURL: "")
+
 
 
 
@@ -2499,47 +2500,7 @@ let fridayNow21to24Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to
 
 
 
-////WEEK 4
-// Monday (WIP 3)
-let weekdayNow21to24TipArray15 = [weekdayNow21to24Tip60, weekdayNow21to24Tip21, weekdayNow21to24Tip22, weekdayNow21to24Tip20]
-let mondayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray15)
 
-// Tuesday (WIP 4)
-let weekdayNow21to24TipArray16 = [tuesdayNow21to24Tip24, weekdayNow21to24Tip25, weekdayNow21to24Tip26, weekdayNow21to24Tip27]
-let tuesdayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray16)
-
-// Wednesday (WIP 4)
-let weekdayNow21to24TipArray17 = [weekdayNow21to24Tip28, weekdayNow21to24Tip29, weekdayNow21to24Tip30, weekdayNow21to24Tip31]
-let wednesdayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray17)
-
-// Thursday (WIP 4)
-let weekdayNow21to24TipArray18 = [weekdayNow21to24Tip35, weekdayNow21to24Tip33, weekdayNow21to24Tip34, weekdayNow21to24Tip32]
-let thursdayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray18)
-
-// Friday (WIP 4)
-let weekdayNow21to24TipArray19 = [weekdayNow21to24Tip36, weekdayNow21to24Tip37, weekdayNow21to24Tip38, weekdayNow21to24Tip39]
-let fridayNow21to24Topic4 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray19)
-
-////WEEK 5
-// Monday (WIP 4)
-let weekdayNow21to24TipArray20 = [weekdayNow21to24Tip40, weekdayNow21to24Tip41, weekdayNow21to24Tip42, weekdayNow21to24Tip43]
-let mondayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray20)
-
-// Tuesday (WIP 4)
-let weekdayNow21to24TipArray21 = [weekdayNow21to24Tip44, weekdayNow21to24Tip45, weekdayNow21to24Tip46, weekdayNow21to24Tip47]
-let tuesdayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray21)
-
-// Wednesday (WIP 4)
-let weekdayNow21to24TipArray22 = [weekdayNow21to24Tip48, weekdayNow21to24Tip49, weekdayNow21to24Tip50, weekdayNow21to24Tip51]
-let wednesdayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray22)
-
-// Thursday (WIP 4)
-let weekdayNow21to24TipArray23 = [weekdayNow21to24Tip52, weekdayNow21to24Tip53, weekdayNow21to24Tip54, weekdayNow21to24Tip55]
-let thursdayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray23)
-
-// Friday (WIP 4)
-let weekdayNow21to24TipArray24 = [weekdayNow21to24Tip56, weekdayNow21to24Tip57, weekdayNow21to24Tip58, weekdayNow21to24Tip59]
-let fridayNow21to24Topic5 = Topic(title: weekdayNow21to24Title, icon: weekdayNow21to24Icon, tip: weekdayNow21to24TipArray24)
 
 
 
