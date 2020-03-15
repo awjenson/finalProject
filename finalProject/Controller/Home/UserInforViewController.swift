@@ -92,7 +92,7 @@ class UserInfoViewController: UIViewController {
         downSwipe.direction = .down
         self.view.addGestureRecognizer(downSwipe)
 
-        setupUI()
+//        setupUI()
 
     }
 
@@ -100,14 +100,14 @@ class UserInfoViewController: UIViewController {
         super.viewWillAppear(animated)
         print("viewWillAppear - called everytime you come to the viewController")
         //Assign data to the ViewController or making API calls inside viewWillAppear that will call everytime when you came to that viewcontroller
-        setupUI()
+//        setupUI()
 
 
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("viewDidAppear")
+        print("HomeVC viewDidAppear")
 
     }
 
@@ -223,73 +223,7 @@ class UserInfoViewController: UIViewController {
 
         }
 
-//        func oddWeek() {
-//            switch dayOfWeek {
-//            case 1: // Sunday
-//                print("today is Sunday")
-//                sundayOdd(hour)
-//            case 2: // Monday
-//                print("today is a Monday")
-//                mondayOdd(hour)
-//            case 3: // Tuesday
-//                print("today is a Tuesday")
-//                tuesdayOdd(hour)
-//            case 4: // Wednesday
-//                print("today is a Wednesday")
-//                wednesdayOdd(hour)
-//            case 5: // Thursday
-//                print("today is Thursday")
-//                thursdayOdd(hour)
-//            case 6: // Friday
-//                print("today is Friday")
-//                fridayOdd(hour)
-//            case 7: // Saturday
-//                print("today is Saturday")
-//                saturdayOdd(hour)
-//            default:
-//                print("ERROR: error with dayAndHour")
-//            }
-//
-//        }
-//
-//        func evenWeek() {
-//            switch dayOfWeek {
-//            case 1: // Sunday
-//                print("today is Sunday")
-//                sundayEven(hour)
-//            case 2: // Monday
-//                print("today is a Monday")
-//                mondayEven(hour)
-//            case 3: // Tuesday
-//                print("today is a Tuesday")
-//                tuesdayEven(hour)
-//            case 4: // Wednesday
-//                print("today is a Wednesday")
-//                wednesdayEven(hour)
-//            case 5: // Thursday
-//                print("today is Thursday")
-//                thursdayEven(hour)
-//            case 6: // Friday
-//                print("today is Friday")
-//                fridayEven(hour)
-//            case 7: // Saturday
-//                print("today is Saturday")
-//                saturdayEven(hour)
-//            default:
-//                print("ERROR: error with dayAndHour")
-//            }
-//
-//        }
 
-
-
-//        switch weekOfMonth {
-//        case 1,3,5:
-//            oddWeek()
-//
-//        default:
-//            evenWeek()
-//        }
 
         switch hour {
         case 0...4:

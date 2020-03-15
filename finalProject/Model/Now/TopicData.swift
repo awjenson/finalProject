@@ -72,7 +72,7 @@ let breakfastTip20 = Tip(header: "", title: "Prevent Weight Gain: Don't keep cer
 
 //6
 let breakfastTip21 = Tip(header: "Feel Full For Longer", title: "Eat healthy fats", body: "Let’s look at the supposed healthy breakfast of non-fat Greek yogurt, high-fiber cereal and berries. \n\nSwitch to 2%-fat yogurt or to add some nuts." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-
+let breakfastTip22 = Tip(header: "Burn Belly Fat", title: "Study: Eating an additional 14 grams of fiber per day were linked to a reduction of harmful belly fat and weight loss of 4.5 lbs over 4 months", body: "The best way to get more fiber is to eat a lot of plant foods like vegetables and fruit. Legumes are also a good source, as well as some cereals like whole oats." , sourceName: "Healthline", sourceURL: "", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //WEEK 1
 let breakfastTipArray0 = [breakfastTip1, breakfastTip2, breakfastTip3, breakfastTip4]
@@ -90,7 +90,7 @@ let breakfastTopic3 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: bre
 let breakfastTipArray4 = [breakfastTip17, breakfastTip18, breakfastTip19, breakfastTip20]
 let breakfastTopic4 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArray4)
 //WIP
-let breakfastTipArray5 = [breakfastTip21, breakfastTip6, breakfastTip7, breakfastTip8]
+let breakfastTipArray5 = [breakfastTip21, breakfastTip22, breakfastTip7, breakfastTip8]
 let breakfastTopic5 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArray5)
 
 //
@@ -227,32 +227,18 @@ let lunchTip32 = Tip(header: "Live Longer", title: "Eat until you are 80% full",
 let lunchTip33 = Tip(header: "Increase Happiness", title: "Eat 6 servings of fruit and vegetables a day", body: "Research: People who go from no fruit or produce in their diets to 8 servings a day experienced an increase in their well-being equivalent to getting a new job.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let lunchTip34 = Tip(header: "Save Money", title: "Survey: The average person exceeds their weekly lunch budget goal by +35% when they buy lunch everyday", body: "On average, the weekly amount that people spend — not including bills like housing and utilities — is $340, or $143 more than the average $197 budgeted. \n\nThat extra spending equals roughly $7,400 each year of overspending. \n\nAlign your spending with your values and cut back in areas that don’t reflect them." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/12/26/consumers-overspend-by-7400-a-year-here-are-weekly-trouble-spots.html", sponsorLogo: "", sponsorURL: "")
 let lunchTip35 = Tip(header: "Increase Happiness", title: "A diet high in fruit, vegetables, whole grain, fish, olive oil, low-fat dairy and low intakes of animal foods was associated with a decreased risk of depression. \n\nA diet high in red and/or processed meat, refined grains, sweets, high-fat dairy products, butter, potatoes and high-fat gravy, and low intakes of fruits and vegetables is associated with an increased risk of depression.", body: "Diet is such an important component of mental health. \n\nEat lots of plants, including fruits and veggies, whole grains (in unprocessed form, ideally), seeds and nuts, with some lean proteins like fish and yogurt. \n\nAvoid things made with added sugars or flours (like breads, baked goods, cereals, and pastas), and minimize animal fats, processed meats (sorry, bacon), and butter.", sourceName: "Harvard University", sourceURL: "https://www.health.harvard.edu/blog/diet-and-depression-2018022213309", sponsorLogo: "", sponsorURL: "")
+let lunchTip36 = Tip(header: "Reduce Belly Fat", title: "Eat more protein foods: \n• Whole eggs \n• Fish \n• Seafood \n• Legumes \n• Nuts \n• Meat \n• Dairy products", body: "Study: Protein was linked to significantly reduced risk of belly fat gain over a period of 5 years. \n\nProtein has been shown to reduce cravings by 60% and help you eat up to 441 fewer calories per day.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section2", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
-let lunchTopic0 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray0)
-
 let lunchTipArray1 = [lunchTip5, lunchTip6, lunchTip7, lunchTip8]
-let lunchTopic1 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray1)
-
 let lunchTipArray2 = [lunchTip9, lunchTip10, lunchTip11, lunchTip12]
-let lunchTopic2 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray2)
-
 let lunchTipArray3 = [lunchTip13, lunchTip14, lunchTip15, lunchTip16]
-let lunchTopic3 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray3)
-
 let lunchTipArray4 = [lunchTip17, lunchTip18, lunchTip19, lunchTip20]
-let lunchTopic4 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray4)
-
 let lunchTipArray5 = [lunchTip21, lunchTip22, lunchTip23, lunchTip24]
-let lunchTopic5 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray5)
-
 let lunchTipArray6 = [lunchTip25, lunchTip26, lunchTip27, lunchTip28]
-let lunchTopic6 = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArray6)
-
 let lunchTipArray7 = [lunchTip29, lunchTip30, lunchTip31, lunchTip32]
-//WIP 1
-let lunchTipArray8 = [lunchTip33, lunchTip34, lunchTip35, lunchTip32]
+let lunchTipArray8 = [lunchTip33, lunchTip34, lunchTip35, lunchTip36]
 
 
 
@@ -502,7 +488,7 @@ let morningSnackTip8 = Tip(header: "Prevent Belly Fat", title: "DON'T: Drink die
 let morningSnackTip9 = Tip(header: "Lose Belly Fat", title: "DON'T: Eat a mid-morning snack. \nDO: Wait until the afternoon to have a snack.", body: "Study: Mid-morning snackers tended to consume more throughout the day than afternoon snackers. Afternoon snackers, on the other hand, tend to choose good snacks. \n\nAfternoon snacking was associated with a slightly higher intake of filling fiber and fruits and vegetables.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip10 = Tip(header: "Warning", title: "Study: People who drank 3.3+ extra ounces of fruit juice and other sugary drinks per day increased their risk of cancer by 18%, compared to those who drank less", body: "Sugary drinks that appear to be linked to cancer include: \n• Carbonated sodas \n • 100% fruit juices \n• Sugar-sweetened beverages \n• Milk-based sweetened beverages \n• Sports drinks \n• Energy drinks \n\nWhile fruit juices contain some vitamins, a little bit of dietary fibers, they also contain lots of sugar.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/drinking-juice-and-soda-linked-to-cancer-study-2019-7", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip11 = Tip(header: "Reduce Anxiety", title: "Snacks that reduce anxiety", body: "Oatmeal, milk, blueberries, oranges, avocado, almonds, and almond butter.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/8-spinach-2/", sponsorLogo: "", sponsorURL: "")
-
+let morningSnackTip12 = Tip(header: "Avoid Belly Fat", title: "Don't drink sugar-sweetened beverages, sugary sodas, fruit juices and high-sugar sports drinks", body: "Research: Sugar-sweetened beverages are linked to a 60% increased risk of obesity in children, for each daily serving. \n\n• Minimize the amount of sugar in your diet by reading labels and eliminate sugary drinks.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section1", sponsorLogo: "", sponsorURL: "")
 //
 
 //WEEK 1
@@ -515,7 +501,7 @@ let morningSnackTipArray1 = [morningSnackTip5, morningSnackTip6, morningSnackTip
 let morningSnackTopic1 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray1)
 
 //2
-let morningSnackTipArray2 = [morningSnackTip9, morningSnackTip10, morningSnackTip11, morningSnackTip4]//WIP
+let morningSnackTipArray2 = [morningSnackTip9, morningSnackTip10, morningSnackTip11, morningSnackTip12]
 let morningSnackTopic2 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray2)
 
 
@@ -898,8 +884,8 @@ let gymTip52 = Tip(header: "Burn More Fat", title: "Do a 20 minute high-intensit
 
 //13
 let gymTip53 = Tip(header: "Train Like Muhammad Ali", title: "To be a great champion you must believe you are the best. If you're not, pretend you are.", body: "- Muhammad Ali" , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/muhammad-ali-quotes", sponsorLogo: "", sponsorURL: "")
-let gymTip54 = Tip(header: "Increase Motivation", title: "Study: Listening to music during exercise increases enjoyment 28% more than silence and 13% more than a podcast", body: "Music rearranges the brain's electrical frequency and causes a drop in focus but enhances enjoyment. If you're not motivated to exercise then make sure to listen to music.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/listening-to-music-while-working-out-might-help-you-burn-more-calories-2018-3", sponsorLogo: "", sponsorURL: "")
-let gymTip55 = Tip(header: "Lose Weight", title: "DO: Drink water \nDON'T: Drink sports drinks", body: "Sports drinks have high amounts of sugar, which can cause weight gain rather than weight loss. \n\nUnless you are doing intense exercise where you are losing significant amounts of electrolytes, it may be more beneficial to stick with water for hydration.", sourceName: "SheFinds", sourceURL: "https://www.shefinds.com/collections/the-one-drink-you-shouldnt-have-for-weight-loss-according-to-a-nutritionist/#slide-1", sponsorLogo: "", sponsorURL: "")
+let gymTip54 = Tip(header: "Increase Motivation", title: "Study: Listening to music during exercise increases enjoyment 28% more than silence and 13% more than a podcast", body: "Music rearranges the brain's electrical frequency and causes a drop in focus but enhances enjoyment. \n\nIf you're not motivated to exercise then make sure to listen to music.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/listening-to-music-while-working-out-might-help-you-burn-more-calories-2018-3", sponsorLogo: "", sponsorURL: "")
+let gymTip55 = Tip(header: "Lose Weight", title: "DO: Drink water \nDON'T: Drink sports drinks", body: "Sports drinks have high amounts of sugar, which can cause weight gain. \n\nUnless you are doing intense exercise where you are losing significant amounts of electrolytes, it's better to stick with water for hydration.", sourceName: "SheFinds", sourceURL: "https://www.shefinds.com/collections/the-one-drink-you-shouldnt-have-for-weight-loss-according-to-a-nutritionist/#slide-1", sponsorLogo: "", sponsorURL: "")
 let gymTip56 = Tip(header: "Build Muscle", title: "Unless you’re challenging your muscles with heavy enough weights, you won’t see any physical changes", body: "“If you’re doing more than 10 reps with ease, your weight probably isn’t heavy enough,” warns personal trainer Dustin Hassard. \n\n“Vary your reps and consistently increase the amount you’re lifting to see results.” \n\nAnd after your workout, replenish your tired muscles with a protein shake.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 3
@@ -913,11 +899,11 @@ let gymTip60 = Tip(header: "Become Mentally Tough", title: "Start using positive
 let gymTip61 = Tip(header: "Train Like David Goggins", title: "I have a saying that says 'I don't stop when I'm tired, I stop when I'm done.'", body: "- David Goggins \n\nAmerican ultramarathon runner, ultra-distance cyclist, triathlete, motivational speaker and author. He is a retired US Navy SEAL and former US Air Force Tactical Air Control Party member who served in the War in Afghanistan and the Iraq War.", sourceName: "YouTube: SUCCESS CHASERS", sourceURL: "https://www.youtube.com/watch?v=3_JHcji8JEs", sponsorLogo: "", sponsorURL: "")
 let gymTip62 = Tip(header: "High Intensity Interval Training (HIIT)", title: "Study: HIIT is only effective for improving fitness when performed at 60-second intervals with 60-second rests. Whereas HIIT performed at 30-second intervals with 120-second rests aren't.", body: "Aerobic capacity increased after 6 weeks of 60HIIT but there was no difference for 30HIIT on any of the three parameters tracked: aerobic capacity, stiffness of arteries, and body composition. \n\nThis means that 60HIIT should be used over 30HIIT because the former improves fitness whereas the latter doesn't.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/12/191217105219.htm", sponsorLogo: "", sponsorURL: "")
 let gymTip63 = Tip(header: "Increase Strength", title: "Do kettlebell exercises. Study: After 8 weeks of kettlebell training, the male and female subjects' core strength increased 70% and their aerobic capacity increased 13%", body: "Kettlebell training better simulates the constantly shifting center of gravity you encounter on the field, mat, or court than most convential lifting does.", sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
-
 let gymTip64 = Tip(header: "Lift More Weight", title: "Diaphragmatic breathing helps lift more weight and exert more power with less effort", body: "With diaphragmatic breathing, just your belly should rise and fall (not your chest). \n\nSlowly breathe in through the nose or mouth (preferably the nose), filling up your abdominal area (versus your chest) with air, and then slowly exhale as the stomach collapses. \n\nDiaphragmatic breathing helps ensure core activation and that you’re breathing deeply enough to deliver enough oxygen to the muscles, which reduces muscle fatigue.", sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-breathe-during-a-workout", sponsorLogo: "", sponsorURL: "")
 
-
 //17
+let gymTip65 = Tip(header: "Burn Belly Fat", title: "Doing endless amounts of ab exercises will NOT make you lose fat from the belly", body: "Study: 6 weeks of training just the abdominal muscles had no measurable effect on waist circumference or the amount of fat in the abdominal cavity. \n\nHowever, aerobic exercise (like walking, running, swimming, etc) has been shown to cause major reductions in belly fat in numerous studies.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section5", sponsorLogo: "", sponsorURL: "")
+
 
 
 
@@ -1695,6 +1681,8 @@ let breakAMTip8 = Tip(header: "Increase Happiness", title: "Nature breaks are be
 // 2
 let breakAMTip9 = Tip(header: "Improve Mood", title: "Study: Spending time in forests and areas with tree shade is better for your mental health than spending time in open grassy areas", body: "Exposure to 30% or more tree shade, compared with 0%-9% tree shade, was associated with 31% decrease experiencing mental distress. Meanwhile, exposure to 30% or more grass was associated with 71% higher odds of mental distress. \n\nResearchers suggest that without the shade of trees: \n• Sidewalk temperatures are hotter \n• Sidewalks can seem noisier \n• Walkers themselves are exposed to more air pollution. \n\nStudies also show that people are happier in green spaces that contain more stimuli — because trees are more complex than grass, it’s likely that we enjoy being around them more.", sourceName: "Journal of the American Medical Association", sourceURL: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2739050", sponsorLogo: "", sponsorURL: "")
 
+
+
 // AM Break
 let breakTipArray0 = [breakAMTip1, breakAMTip2, breakAMTip3, breakAMTip4]
 let breakTipArray1 = [breakAMTip5, breakAMTip6, breakAMTip7, breakAMTip8]
@@ -1733,19 +1721,19 @@ let breakPMTip6 = Tip(header: "Reduce Your Risk", title: "Research: People who n
 let breakPMTip7 = Tip(header: "Increase Success 🚶‍♂️", title: "Study: A person's creative output increased by 60% when they were walking", body: "The study showed that it doesn't matter if you're outside or inside. It's the actual walking that matters, not the environment. \n\nA person who walked indoors, on a treadmill facing a blank wall, or outside all produced twice as many creative responses compared to someone sitting down. \n\nAnd creativity continued even after a person sat back down after his/her walk." , sourceName: "Inc.", sourceURL: "https://www.inc.com/laura-garnett/this-is-scientific-reason-steve-jobs-went-for-walks.html", sponsorLogo: "", sponsorURL: "")
 let breakPMTip8 = Tip(header: "Think Big", title: "What is your favorite place to think big?", body: "Microsoft founder Bill Gates said he thinks big while on walks. \n\nEvan Williams, the founder of Blogger and Medium, said he thinks big whenever he's moving: \"Walking anywhere.\"" , sourceName: "Inc.", sourceURL: "https://www.inc.com/laura-garnett/this-is-scientific-reason-steve-jobs-went-for-walks.html", sponsorLogo: "", sponsorURL: "")
 
+//2
+let breakPMTip9 = Tip(header: "Live Longer", title: "Research: People who have a quicker walking pace lived longer than those who walked more slowly", body: "Women who walked more quickly lived 15 years longer than women who walked slowly. \n\nMen who walked quickly lived 20 years longer men who walked more slowly. \n\nPeople who are fit enough to walk at a moderate pace should try to pick up the pace." , sourceName: "Healthline", sourceURL: "https://www.healthline.com/health-news/people-who-walk-faster-tend-to-live-longer", sponsorLogo: "", sponsorURL: "")
 
 // PM BREAK
 let breakPMTipArray0 = [breakPMTip1, breakPMTip2, breakPMTip3, breakPMTip4]
 let breakPMTipArray1 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
+let breakPMTipArray2 = [breakPMTip9, breakPMTip2, breakPMTip3, breakPMTip4]
+
 //
-let breakPMTipArrays = [breakPMTipArray0, breakPMTipArray1,]
+let breakPMTipArrays = [breakPMTipArray0, breakPMTipArray1, breakPMTipArray2,]
 let breakPMTopic = Topic(title: breakTitle, icon: breakIcon, tip: breakPMTipArrays.random())
 
 
-
-
-
-let breakPMTipArray2 = [breakPMTip1, breakPMTip2, breakPMTip3, breakPMTip4]
 let breakPMTipArray3 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
 let breakPMTipArray4 = [breakPMTip1, breakPMTip2, breakPMTip3, breakPMTip4]
 let breakPMTipArray5 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
