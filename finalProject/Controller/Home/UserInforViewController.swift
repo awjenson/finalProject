@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ChameleonFramework
+
 //import Firebase
 
 /*
@@ -193,9 +193,9 @@ class UserInfoViewController: UIViewController {
         print("UserVC SetupUI")
 
         // Quote View
-        let selectedGradientColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame: quoteView.frame, andColors:[UIColor.clear, UIColor.black])
-        //        self.view.backgroundColor = selectedGradientColor
-        self.quoteView.backgroundColor = selectedGradientColor
+//        let selectedGradientColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame: quoteView.frame, andColors:[UIColor.clear, UIColor.black])
+//        //        self.view.backgroundColor = selectedGradientColor
+//        self.quoteView.backgroundColor = selectedGradientColor
 
         dayOfWeekAndHour()
 
