@@ -532,7 +532,7 @@ let afternoonSnackTitle = "Afternoon Snack"
 let afternoonSnackIcon = Constants.Icon.snack
 
 //0
-let afternoonSnackTip1 = Tip(header: "Prevent Weight Gain", title: "Being thirsty can sometimes be confused with hunger", body: "The body’s thirst signal is similar to the hunger signal, meaning you could reach for a snack when you should be reaching for a drink. Drink water or tea. If you’re still hungry five minutes later, it’s probably actual hunger." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/healthy-eating/eating-when-not-hungry/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let afternoonSnackTip1 = Tip(header: "Prevent Weight Gain", title: "Being thirsty can sometimes be confused with hunger", body: "The body’s thirst signal is similar to the hunger signal, meaning you could reach for a snack when you should be reaching for a drink. Drink water or tea. \n\nIf you’re still hungry five minutes later, it’s probably actual hunger." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/healthy-eating/eating-when-not-hungry/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let afternoonSnackTip2 = Tip(header: "Healthy Choice", title: "It's perfectly normal to feel hungry at 3 p.m, just choose the right snacks: protein, healthy fats and veggies", body: "Later in the day our energy levels tend to slump due to a drop in our blood sugar levels. \n\nWhat we're craving is something to bring our sugar levels back up to normal. \n\nInstead of chips or a chocolate bar, have yogurt (protein) with fruit (fiber) or a handful of nuts (healthy fat)." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let afternoonSnackTip3 = Tip(header: "Healthy Choice", title: "If you have your healthy afternoon snack all ready to go, you're less likely to choose chips and chocolate.", body: "Have your afternoon snack prepared. \n\nCrackers and cheese, nuts, or peanut butter on wholegrain toast are great mid-afternoon snacks. \n\nThey can curb a craving without added sugar and saturated fats." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let afternoonSnackTip4 = Tip(header: "Healthy Choice", title: "Don't eat your snack while doing something else — like surfing the Internet, watching TV, or working at your desk", body: "Oftentimes we find ourselves mindlessly snacking because of certain emotions or situations (boredom, loneliness, stress). \n\nStart to notice when your emotions are fueling your eating and try to find a different outlet for those emotions." , sourceName: "Eating Bird Food", sourceURL: "https://www.eatingbirdfood.com/how-to-stop-mindless-snacking/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -1181,7 +1181,6 @@ let AMRoutine29 = Tip(header: "Make A Difference", title: "If you want to become
 
 
 //8
-
 
 
 //WEEK 1
