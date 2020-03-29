@@ -24,10 +24,10 @@ class NowTableViewCell: UITableViewCell {
 
     @IBOutlet weak var boarderColorView: UIView!
 
-    @IBOutlet weak var tipIconView: UIView!
+    @IBOutlet weak var tipIconView: UIView! //number displayed at top left
     @IBOutlet weak var tipNumberLabel: UILabel!
 
-    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var headerLabel: UILabel! //colored header at top
 
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -46,11 +46,13 @@ class NowTableViewCell: UITableViewCell {
         tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
         tipIconView.clipsToBounds = true
 //        tipIconView.layer.borderWidth = 1
-//        tipIconView.layer.borderColor = UIColor.init(hexString: "42A67A")?.cgColor
+
 
         headerLabel.text = tip.header
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
+
+
 
         //Underline effect for UIButton Title and left aligment
         let attributedString = NSMutableAttributedString(string: tip.sourceName)

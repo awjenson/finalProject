@@ -118,7 +118,7 @@ class NowViewController: UIViewController {
 
     var currentIndex:Int = -1 //initial integer since UIButton.index start at 0
 
-
+    let originalNowVCButtonColor = UIColor.init(hexString: "007AFF", withAlpha: 1)
 
 
 
@@ -1061,7 +1061,7 @@ class NowViewController: UIViewController {
             self.topic11Button.imageView?.image = UIImage(named: self.topics[11].icon)
 
 
-            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 15, left: 15 , bottom: 15, right: 15)
+            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
 
             self.topic0Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.topic1Button.imageEdgeInsets = unTappedButtonEdgeInsets
@@ -1075,6 +1075,9 @@ class NowViewController: UIViewController {
             self.topic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.topic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.topic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
+
+
+
         }
     }
 
@@ -1134,12 +1137,6 @@ class NowViewController: UIViewController {
 
 
         print("topics count \(topics.count)")
-
-
-        print("* \(self.topics[0].icon)")
-        print("* \(self.topics[1].icon)")
-        print("* \(self.topics[2].icon)")
-        print("* \(self.topics[3].icon)")
 
 //        self.topic0Button.imageView?.image = UIImage(named: topic0.icon)
 //        self.topic1Button.imageView?.image = UIImage(named: topic1.icon)
@@ -1299,7 +1296,6 @@ class NowViewController: UIViewController {
                 let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
 
 //                self.topicLabel.text = "\(replacedText) TIPS"
-
             }
 
             currentIndex = indexNumber
@@ -1397,8 +1393,6 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         let tip = tips[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
-
-
 
         // cell's bottom line UI
         cell.layoutMargins = UIEdgeInsets.zero

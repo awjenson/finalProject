@@ -229,6 +229,10 @@ let lunchTip34 = Tip(header: "Save Money", title: "Survey: The average person ex
 let lunchTip35 = Tip(header: "Increase Happiness", title: "A diet high in fruit, vegetables, whole grain, fish, olive oil, low-fat dairy and low intakes of animal foods was associated with a decreased risk of depression. \n\nA diet high in red and/or processed meat, refined grains, sweets, high-fat dairy products, butter, potatoes and high-fat gravy, and low intakes of fruits and vegetables is associated with an increased risk of depression.", body: "Diet is such an important component of mental health. \n\nEat lots of plants, including fruits and veggies, whole grains (in unprocessed form, ideally), seeds and nuts, with some lean proteins like fish and yogurt. \n\nAvoid things made with added sugars or flours (like breads, baked goods, cereals, and pastas), and minimize animal fats, processed meats (sorry, bacon), and butter.", sourceName: "Harvard University", sourceURL: "https://www.health.harvard.edu/blog/diet-and-depression-2018022213309", sponsorLogo: "", sponsorURL: "")
 let lunchTip36 = Tip(header: "Reduce Belly Fat", title: "Eat more protein foods: \n• Whole eggs \n• Fish \n• Seafood \n• Legumes \n• Nuts \n• Meat \n• Dairy products", body: "Study: Protein was linked to significantly reduced risk of belly fat gain over a period of 5 years. \n\nProtein has been shown to reduce cravings by 60% and help you eat up to 441 fewer calories per day.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section2", sponsorLogo: "", sponsorURL: "")
 
+//9
+let lunchTip37 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods associated with slowing cognitive decline — blueberries, vegetables (leafy greens — kale, spinach, broccoli), whole grains, protein from fish and legumes, and healthy unsaturated fats (olive oil) instead of saturated fats (butter).", body: "Our brains naturally decline if we do nothing to protect them. \n\nHowever, if you intervene early, you can slow the decline process. \n\nFruit and vegetables combat age-related oxidative stress that causes wear and tear on brain cells. ", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
+
+
 //WEEK 1
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
 let lunchTipArray1 = [lunchTip5, lunchTip6, lunchTip7, lunchTip8]
@@ -239,8 +243,7 @@ let lunchTipArray5 = [lunchTip21, lunchTip22, lunchTip23, lunchTip24]
 let lunchTipArray6 = [lunchTip25, lunchTip26, lunchTip27, lunchTip28]
 let lunchTipArray7 = [lunchTip29, lunchTip30, lunchTip31, lunchTip32]
 let lunchTipArray8 = [lunchTip33, lunchTip34, lunchTip35, lunchTip36]
-
-
+let lunchTipArray9 = [lunchTip37, lunchTip12, lunchTip23, lunchTip24]//WIP
 
 //
 let lunchTipArrays = [lunchTipArray0, lunchTipArray1, lunchTipArray2, lunchTipArray3, lunchTipArray4, lunchTipArray5, lunchTipArray6, lunchTipArray7, lunchTipArray8]
@@ -339,6 +342,9 @@ let dinnerTip48 = Tip(header: "Leftovers", title: "Store healthy food in clear w
 
 //12
 let dinnerTip49 = Tip(header: "Live Longer", title: "Study: Eating 2 servings of red meat or processed meat per week was associated with a 3% higher risk of all causes of death", body: "It's a small difference, but it's worth trying to reduce red meat and processed meat like pepperoni, bologna and deli meats. \n\nRed meat consumption also is linked to other health problems like cancer. \n\nWhat should we eat? \n\nFish, seafood and plant-based sources of protein such as nuts and legumes, including beans and peas, are excellent alternatives to meat." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2020/02/200203114328.htm", sponsorLogo: "", sponsorURL: "")
+let dinnerTip50 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods associated with slowing cognitive decline — blueberries, vegetables (leafy greens — kale, spinach, broccoli), whole grains, protein from fish and legumes, and healthy unsaturated fats (olive oil) instead of saturated fats (butter).", body: "Our brains naturally decline if we do nothing to protect them. \n\nHowever, if you intervene early, you can slow the decline process. \n\nFruit and vegetables combat age-related oxidative stress that causes wear and tear on brain cells. ", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
+
+
 
 //Week 1
 //0
@@ -379,7 +385,7 @@ let dinnerTopic10 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipAr
 let dinnerTipArray11 = [dinnerTip45, dinnerTip46, dinnerTip47, dinnerTip48]
 let dinnerTopic11 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray11)
 //WIP (3)
-let dinnerTipArray12 = [dinnerTip49, dinnerTip14, dinnerTip15, dinnerTip16]
+let dinnerTipArray12 = [dinnerTip49, dinnerTip50, dinnerTip15, dinnerTip16]
 let dinnerTopic12 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray12)
 
 //
@@ -1172,7 +1178,7 @@ let AMRoutine23 = Tip(header: "Billionaire Habit 🧘‍♀️", title: "Oprah p
 let AMRoutine24 = Tip(header: "Billionaire Habit 🌄", title: "Apple CEO Tim Cook wakes up at 4 a.m. to exercise", body: "Cook's morning routine includes a 1-hour workout at the gym, which he says: \n\n• Helps reduce stress \n• Prepares him for the day" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/apple-ceo-tim-cooks-daily-routine-2018-11", sponsorLogo: "", sponsorURL: "")
 let AMRoutine25 = Tip(header: "Increase Happiness", title: "Gratitude journaling has a strong positive impact on psychological well-being, self-esteem, and depression", body: "Study: participants who practiced gratitude journaling experienced a 35% reduction in depressive symptoms for as long as the journaling continued. \n\n• Think of at least one thing that you are greatful for today." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/m", sponsorLogo: "TBD", sponsorURL: "")
 let AMRoutine26 = Tip(header: "Reduce Stress", title: "Spend 10 to 15 minutes each morning doing a mindfulness or meditation practice", body: "It grounds us to an intention for how we want to show up during the day before we start worrying about what we need to get done." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/how-effectively-manage-stress-so-it-doesn-t-hurt-your-ncna815626", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let AMRoutine27 = Tip(header: "Improve Performance 🧘‍♂️", title: "80%+ of the world-class performers interviewed by Tim Ferris have some form of daily meditation or mindfulness practice", body: "The goal is to cultivate a present-state awareness when it doesn't matter (sitting on the couch for 10 minutes) so that you can be nonreactive and focus better later when it does matter (time-sensitive project at work, conversation with a loved one, etc.)." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/quora/the-most-successful-peopl_b_13607676.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let AMRoutine27 = Tip(header: "Improve Performance 🧘‍♂️", title: "80%+ of top performers Tim Ferriss interviewed for his book, “Tools of Titans,” had a mindfulness ritual in their morning routine", body: "The goal is to cultivate a present-state awareness when it doesn't matter (sitting on the couch for 10 minutes) so that you can be nonreactive and focus better later when it does matter (time-sensitive project at work, conversation with a loved one, etc.)." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/quora/the-most-successful-peopl_b_13607676.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 
 //7
@@ -2375,7 +2381,7 @@ let workAMTip16 = Tip(header: "Be A Leader / Get Into A Top MBA Program", title:
 
 ///////////// FRI
 let workAMTip17 = Tip(header: "Prevent Weight Gain", title: "Poor posture can lead to neck pain, back problems, and slowed digestion", body: "To attain a neutral, upright spine position, put your shoulders down and back, pull your head back, and engage your core muscles. \n\nBring your belly button in toward your spine, as if you're zipping up a snug pair of jeans. \n\nThis will help to engage the transverse abdominis muscle, which acts like a corset around the spine." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/staying-healthy/3-surprising-risks-of-poor-posture", sponsorLogo: "", sponsorURL: "")
-let workAMTip18 = Tip(header: "Career Advice", title: "Ask yourself these questions to determine if you should stay at your current job", body: "• Is this work meaningful to me? \n• Will I have an opportunity for recognition and achievement? \n• Am I going to learn new things? \n\nThese motivators are stable across professions and over time-giving us a sense of \"true north\" against which we can recalibrate the trajectories of our careers. \n\nWe should always remember that beyond a certain point, money, status, compensation, and job security are much more a by-product of being happy with a job rather than the cause of it. Realizing this frees us to focus on the things that really matter." , sourceName: "How Will You Measure Your Life?", sourceURL: "https://www.amazon.com/dp/B006ID0CH4/", sponsorLogo: "", sponsorURL: "")
+let workAMTip18 = Tip(header: "Career Advice", title: "Ask yourself these questions to determine if you should stay at your current job", body: "• Is this work meaningful to me? \n• Will I have an opportunity for recognition and achievement? \n• Am I going to learn new things? \n\nThese motivators are stable across professions and over time-giving us a sense of \"true north\" against which we can recalibrate the trajectories of our careers. \n\nWe should always remember that beyond a certain point, money, status, compensation, and job security are much more a by-product of being happy with a job rather than the cause of it. Realizing this frees us to focus on the things that really matter." , sourceName: "How Will You Measure Your Life? by Clayton Christensen", sourceURL: "https://www.amazon.com/dp/B006ID0CH4/", sponsorLogo: "", sponsorURL: "")
 let workAMTip19 = Tip(header: "Increase Your Influence At Work", title: "Speaking in a lower tone than you normally do", body: "People relate a low tone voice to both leadership and dominance. Speaking in a lower tone counteracts the effect of nervousness, which tends to push your tone higher.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/02/how-to-increase-your-influence-at-work", sponsorLogo: "", sponsorURL: "")
 let workAMTip20 = Tip(header: "Be A Leader / Get Into A Top MBA Program", title: "Communicate better at work", body: "Stanford's MBA application includes the rating of your leadership. \n\nHigh Performers: \"Presents views clearly; solicits opinions and concerns; discusses them openly.\" \n\nLow Performers: \"Is generally to the point and organized\" and \"Sometimes rambles or is occasionally unfocused.\"" , sourceName: "Stanford Graduate School of Business", sourceURL: "https://www.gsb.stanford.edu/sites/gsb/files/gsb-mba_leadership_form_v4.pdf", sponsorLogo: "", sponsorURL: "")
 

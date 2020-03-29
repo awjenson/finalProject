@@ -489,7 +489,7 @@ class JournalViewController: UIViewController {
 
 
 
-            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 15, left: 15 , bottom: 15, right: 15)
+            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 14, left: 14 , bottom: 14, right: 14)
 
             self.header0Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.header1Button.imageEdgeInsets = unTappedButtonEdgeInsets
