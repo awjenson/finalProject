@@ -576,7 +576,7 @@ class JournalViewController: UIViewController {
 
     @IBAction func headerButtonTapped(_ sender: CircleButton) {
 
-        if let headerNumber = headerButtons.index(of: sender) {
+        if let headerNumber = headerButtons.firstIndex(of: sender) {
 
             print("ANDREW: headerButtonTapped", headerNumber)
 

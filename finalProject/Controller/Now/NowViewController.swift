@@ -1216,7 +1216,7 @@ class NowViewController: UIViewController {
 
     @IBAction func topicButtonTapped(_ sender: CircleButton) {
         //IBAction linked to all CircleButton(s)
-        if let topicNumber = topicButtons.index(of: sender) {
+        if let topicNumber = topicButtons.firstIndex(of: sender) {
 
             flipButton(at: topicNumber, on: sender)
 

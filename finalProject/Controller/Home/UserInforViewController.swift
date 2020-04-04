@@ -1398,7 +1398,7 @@ class UserInfoViewController: UIViewController {
 
     func setNatureImage(to imageTitle: String?) {
 
-        print("imageTitle: \(imageTitle)")
+        print("imageTitle: \(String(describing: imageTitle))")
 
         if let imageToLoad = imageTitle {
             self.natureImageView.image = UIImage(named: imageToLoad)

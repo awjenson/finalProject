@@ -1196,7 +1196,7 @@ class ProfileViewController: UIViewController {
 
     @IBAction func adviceTopicButtonTapped(_ sender: CircleButton) {
         //IBAction linked to all RoundCircle Buttons
-        if let topicNumber = adviceTopicButtons.index(of: sender) {
+        if let topicNumber = adviceTopicButtons.firstIndex(of: sender) {
 
             flipButton(at: topicNumber, on: sender)
 
