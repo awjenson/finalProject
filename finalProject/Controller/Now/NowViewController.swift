@@ -286,11 +286,11 @@ class NowViewController: UIViewController {
     func dayOfWeekAndHour() {
 
 
-
-        let dayOfWeek = calendar.component(.weekday, from: date)
-        hour = calendar.component(.hour, from: date)
-        let week = calendar.component(.weekOfYear, from: date)
-        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
+//
+//        let dayOfWeek = calendar.component(.weekday, from: date)
+//        hour = calendar.component(.hour, from: date)
+//        let week = calendar.component(.weekOfYear, from: date)
+//        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
 
         //greeting
@@ -1292,8 +1292,8 @@ class NowViewController: UIViewController {
 //                button.backgroundColor = NowConstants.YvonneColor.defaultBlue
 
                 //Display selected Topic Title
-                let originalTitleText = self.topics[indexNumber].title
-                let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
+//                let originalTitleText = self.topics[indexNumber].title
+//                let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
 
 //                self.topicLabel.text = "\(replacedText) TIPS"
             }
@@ -1420,7 +1420,7 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         let tip = tips[indexPath.row]
 
         let app = UIApplication.shared
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
         if let url = tip.sourceURL {
 
             // print: true or false

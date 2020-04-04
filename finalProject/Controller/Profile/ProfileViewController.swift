@@ -272,10 +272,10 @@ class ProfileViewController: UIViewController {
 
     func dayOfWeekAndHour() {
 
-        let dayOfWeek = calendar.component(.weekday, from: date)
-        hour = calendar.component(.hour, from: date)
-        let week = calendar.component(.weekOfYear, from: date)
-        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
+//        let dayOfWeek = calendar.component(.weekday, from: date)
+//        hour = calendar.component(.hour, from: date)
+//        let week = calendar.component(.weekOfYear, from: date)
+//        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
         //Display hour for topic title
         displayHourInTopicLabel()
@@ -1275,8 +1275,8 @@ class ProfileViewController: UIViewController {
                 //                button.backgroundColor = NowConstants.YvonneColor.defaultBlue
 
                 //Display selected Topic Title
-                let originalTitleText = self.topics[indexNumber].title
-                let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
+//                let originalTitleText = self.topics[indexNumber].title
+//                let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
 
                 //                self.topicLabel.text = "\(replacedText) TIPS"
 

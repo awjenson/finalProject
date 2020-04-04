@@ -36,7 +36,7 @@ class CustomImageView: UIImageView {
 
                 self.image = imageToCache
             }
-            print("***\(imageToCache)")
+            print("***\(String(describing: imageToCache))")
 
             imageCache.setObject(imageToCache!, forKey: string as NSString)
         })
