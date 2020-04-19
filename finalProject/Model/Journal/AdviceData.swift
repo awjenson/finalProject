@@ -106,7 +106,7 @@ let personalTip12 = Tip(header: "Harvard Professor - Integrity", title: "Doing s
 //4
 let personalTip13 = Tip(header: "Millionaire Advice", title: "Most people never win because they're more afraid of losing. \n\nUnfortunately the main reason most people are not rich is because they are terrified of losing.", body: "Winners are not afraid of losing. But losers are. Failure is part of the process of success. People who avoid failure also avoid success. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let personalTip14 = Tip(header: "Quote - Les Brown", title: "Imagine if you will being on your death bed – and standing around your bed – the ghosts of the ideas, the dreams, the talents given to you by life. \n\nAnd that you for whatever reason, you never acted on those ideas, you never pursued that dream, you never used those talents, we never saw your leadership, you never used your voice, you never wrote that book.", body: "And there they are standing around your bed looking at you with large angry eyes saying ‘we came to you, and only you could have given us life! Now we must die with you forever.’ \n\nThe question is – if you die today, what ideas, what dreams, what abilities, what talents, what gifts, would die with you?", sourceName: "Fearless Motivation", sourceURL: "https://www.fearlessmotivation.com/2018/01/11/les-brown-you-have-greatness-in-you/", sponsorLogo: "", sponsorURL: "")
-let personalTip15 = Tip(header: "Les Brown", title: "Program your mind for good or your mind will be programmed for bad. Psychologists say that 86% of our self talk is negative and it goes undetected by the conscious mind.", body: "I encourage people to read at a minimum of 30 to 40 pages of something positive every day. Go on Youtube and find things that will begin to empower you and minimize the distractions in your life. \n\nThere’s an African proverb that says: \"If there’s no enemy within, the enemy outside can do us no harm.\"", sourceName: "Fearless Motivation", sourceURL: "https://www.fearlessmotivation.com/2018/01/11/les-brown-you-have-greatness-in-you/", sponsorLogo: "", sponsorURL: "")
+let personalTip15 = Tip(header: "Les Brown", title: "Program your mind for good or your mind will be programmed for bad. \n\nPsychologists say that 86% of our self talk is negative and it goes undetected by the conscious mind.", body: "I encourage people to read at a minimum of 30 to 40 pages of something positive every day. \n\nGo on YouTube and find things that will begin to empower you and minimize the distractions in your life. \n\nThere’s an African proverb that says: \"If there’s no enemy within, the enemy outside can do us no harm.\"", sourceName: "Fearless Motivation", sourceURL: "https://www.fearlessmotivation.com/2018/01/11/les-brown-you-have-greatness-in-you/", sponsorLogo: "", sponsorURL: "")
 let personalTip16 = Tip(header: "Mental Toughness", title: "Navy SEAL technique when faced with a daunting task: \"Eat the Elephant\" one bite at a time", body: "Break down any daunting ask into immediate, bite-sized objectives. Ideally, they should fit into a 24-hour window. \n\n• Focus only on completing one at a time \n\n• Avoid thinking of the whole task", sourceName: "Observer", sourceURL: "https://observer.com/2016/11/bulletproof-mind-6-secrets-of-mental-toughness-from-the-navy-seals/", sponsorLogo: "", sponsorURL: "")
 
 //5
@@ -114,7 +114,7 @@ let personalTip17 =  Tip(header: "Make This Your Mantra", title: "\"Never give u
 let personalTip18 = Tip(header: "Increase Confidence", title: "Talk to yourself positively in the second person (“you”)", body: "Study: People who spoke to themselves in the second person (“you”), rather than in the first person (“I”), reported higher levels of confidence and motivation. \n\nThis may be because the use of “you” reminds us of receiving advice and encouragement from other people.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", sponsorLogo: "", sponsorURL: "")
 
 let personalTip19 = Tip(header: "Millionaire Advice", title: "If you have little money and you want to be rich, you must first be \"focused,\" not \"balanced.\" \n\nIf you look at anyone successful, at the start they were not balanced. Balanced people go nowhere. They stay in one spot. \n\nTo make progress, you must first go unbalanced.", body: "Thomas Edison was not balanced. He was focused. Bill Gates was not balanced. He was focused. \n\nGeorge Patton did not take his tanks wide. He focused them and blew through the weak spots in the German line. \n\nIf you have any desire of being rich, you must focus. Put a lot of your eggs in a few baskets. \n\nDo not do what poor and middle class people do; put their few eggs in many baskets. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
-let personalTip20 = Tip(header: "Mental Toughness", title: "Reframe negative thoughts into positive thoughts", body: "In his book, \"Breaking BUD/S: How Regular Guys Can Become Navy SEALs\", D.H. Xavier recalls his own “Hell Week” experience — \n\n“They were kicking me while I was down. My belief could have been that they truly didn’t want me there; the consequence of that belief would have been me quitting. Instead, my belief was that I didn’t care what they said. I believed I was capable of succeeding…” \n\n• See “bad” events as a challenge for you to go out there and improve yourself.", sourceName: "Gear Patrol", sourceURL: "https://gearpatrol.com/2019/05/18/box-breathing-navy-seals/", sponsorLogo: "", sponsorURL: "")
+let personalTip20 = Tip(header: "Mental Toughness", title: "See “bad” events as a challenge for you to go out there and improve yourself", body: "D.H. Xavier recalls his own Navy SEAL “Hell Week” experience: \n\n“They were kicking me while I was down. My belief could have been that they truly didn’t want me there; the consequence of that belief would have been me quitting.“ \n\n“Instead, my belief was that I didn’t care what they said. I believed I was capable of succeeding.”", sourceName: "Gear Patrol", sourceURL: "https://gearpatrol.com/2019/05/18/box-breathing-navy-seals/", sponsorLogo: "", sponsorURL: "")
 //6
 let personalTip21 = Tip(header: "Daily Habit", title: "Our rewards in life will always match our service. \n\nIf you're not satisfied with your income then you must rethink your service.", body: "To increase your service: \n1. Read books on your specialty. \n2. Read about what has worked well for others. \n3. Think of original and creative ways of increasing your service. Ways that are unique with you and the way you are. \n\nEach day, ask yourself, \"How can I increase my service?\" If you do this every day, you will start forming one of life's most valuable habits. \n\nIf you're worried about your income or your future, you're concentrating on the wrong end of the scale. Look at the other end. \n\nConcern yourself only with increasing your service and your income and future will take care of themselves.", sourceName: "YouTube: Motivational Speeches for Success in Life", sourceURL: "https://www.youtube.com/watch?v=uDiMGHvZq5I", sponsorLogo: "", sponsorURL: "")
 let personalTip22 = Tip(header: "Chief Task In Life", title: "The chief task in life is simply this: to identify and separate matters so that I can say clearly to myself which are externals not under my control, and which have to do with the choices I actually control. \n\nWhere then do I look for good and evil? Not to uncontrollable externals, but within myself to the choices that are my own…", body: "— Epictetus \n\nWhat you can control, as always, is how you respond. What matters is not what other people are doing or have done, but what you do.", sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/remember-you-dont-control-what-happens-you-control-how-you-respond/", sponsorLogo: "", sponsorURL: "")
@@ -127,29 +127,31 @@ let personalTip26 = Tip(header: "Life Advice", title: "True leaders learn from t
 let personalTip27 = Tip(header: "Life Advice", title: "The British Special Air Service's motto is \"Who Dares Wins.\" \n\nThe motto is more than about how the British special forces operate as a unit; it is about how each of us should approach our lives.", body: "Life is a struggle and the potential for failure is ever present, but those who live in fear of failures, or hardship, or embarrassment will never achieve their potential. \n\nWithout pushing your limits, without occasionally taking a risk, without daring greatly, you will never know what is truly possible in your life.", sourceName: "Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by Admiral William H. McRaven", sourceURL: "https://www.amazon.com/Make-Your-Bed-Little-Things/dp/1455570249", sponsorLogo: "", sponsorURL: "")
 let personalTip28 = Tip(header: "Life Advice - Courage", title: "Without courage, others will define your path forward. \n\nWithout it, you are at the mercy of life's temptation. \n\nWithout it, people will be ruled by tyrants and despots. Without it, the bullies of the world rise up.", body: "With courage, you can accomplish any goal. With it, you can defy and defeat evil. \n\nIn life, to achieve your goals, you will have to be men and women of great courage. That courage is within all of us. \n\nDig deep, and you will find it in abundance.", sourceName: "Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by Admiral William H. McRaven", sourceURL: "https://www.amazon.com/Make-Your-Bed-Little-Things/dp/1455570249", sponsorLogo: "", sponsorURL: "")
 
+//8 - Memento Mori
+let personalTip29 = Tip(header: "Daily Habit", title: "“Memento Mori” is Latin for “Remember death” — The point of this ancient practice isn’t to be morbid, but to inspire you to treat each day as a gift.", body: "How much time do we waste on things that don’t matter? And why? Because we think we can afford it. \n\nMarcus Aurelius wrote that “You could leave life right now. Let that determine what you do and say and think.” \n\nThat was a personal reminder to continue living a life of integrity, honor, and moral excellence NOW, and not wait." , sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/history-of-memento-mori/", sponsorLogo: "", sponsorURL: "")
 
+let personalTip30 = Tip(header: "Daily Habit", title: "“Memento Mori” is Latin for “Remember death” — Mortality motivation is practiced today by successful entrepreneurs, artists, and athletes", body: "Steve Jobs famously said: \n\n“Remembering that I’ll be dead soon is the most important tool I’ve ever encountered to help me make the big choices in life.” \n\n”Almost everything — all external expectations, all pride, all fear of embarrassment or failure — these things just fall away in the face of death, leaving only what is truly important.” \n\n”Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.”" , sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/history-of-memento-mori/", sponsorLogo: "", sponsorURL: "")
+let personalTip31 = Tip(header: "Daily Habit", title: "“Memento Mori” is Latin for “Remember death” \n\nTony Robbins has said:", body: "“There’s something coming for all of us. It’s called death. Rather than fearing it, it can become one of our greatest counselors.” \n\n”So, if this was the last week of your life, what would you cherish most? How would you live? How would you love? What truth would you tell today?”" , sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/history-of-memento-mori/", sponsorLogo: "", sponsorURL: "")
+let personalTip32 = Tip(header: "Daily Habit", title: "“Memento Mori” is Latin for “Remember death” \n\nWhen Gary Vaynerchuk was asked to give three words of inspiration to someone, he said, “You’re gonna die.”", body: "Gary explains this by saying: \n\n“The reason I believe in it (death as motivation) is because it’s ultimately practical. It’s the guiding light and the fire and ambition that drives me toward legacy and living my best life.”" , sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/history-of-memento-mori/", sponsorLogo: "", sponsorURL: "")
 
 let personalTipArray0 = [personalTip1, personalTip2, personalTip3, personalTip4]
-let personalTopic0 = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArray0)
 
 let personalTipArray1 = [personalTip5, personalTip6, personalTip7, personalTip8]
-let personalTopic1 = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArray1)
 
 let personalTipArray2 = [personalTip9, personalTip10, personalTip11, personalTip12]
-let personalTopic2 = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArray2)
 
 let personalTipArray3 = [personalTip13, personalTip14, personalTip15, personalTip16]
-let personalTopic3 = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArray3)
 
 let personalTipArray4 = [personalTip17, personalTip18, personalTip19, personalTip20]
-let personalTopic4 = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArray4)
 
 let personalTipArray5 = [personalTip21, personalTip22, personalTip23, personalTip24]
-let personalTipArray6 = [personalTip25, personalTip26, personalTip27, personalTip24]
 
+let personalTipArray6 = [personalTip25, personalTip26, personalTip27, personalTip28]
+
+let personalTipArray7 = [personalTip29, personalTip30, personalTip31, personalTip32]
 
 // RANDOM
-let personalTipArrays = [personalTipArray0, personalTipArray1, personalTipArray2, personalTipArray3, personalTipArray4, personalTipArray5, personalTipArray6]
+let personalTipArrays = [personalTipArray0, personalTipArray1, personalTipArray2, personalTipArray3, personalTipArray4, personalTipArray5, personalTipArray6, personalTipArray7]
 let personalTopic = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArrays.random())
 
 //MARK: - Friends
@@ -376,7 +378,7 @@ let motivateAMTip73 = Tip(header: "Quote", title: "The secret to getting ahead i
 let motivateAMTip74 = Tip(header: "Quote", title: "You gotta start your journey. It may suck, but eventually you will come out the other side on top.", body: "- David Goggins \n\nRetired US Navy SEAL" , sourceName: "Inc.", sourceURL: "https://www.inc.com/peter-economy/50-wise-quotes-that-will-inspire-you-to-success-in-life.html", sponsorLogo: "", sponsorURL: "")
 
 let motivateAMTip75 = Tip(header: "Quote", title: "There is no passion to be found playing small--in settling for a life that is less than the one you are capable of living.", body: "- Nelson Mandela \n\nHe was a South African anti-apartheid revolutionary and political leader." , sourceName: "Inc.", sourceURL: "https://www.inc.com/peter-economy/50-wise-quotes-that-will-inspire-you-to-success-in-life.html", sponsorLogo: "", sponsorURL: "")
-let motivateAMTip76 = Tip(header: "Quote", title: "Every morning in our lives, we have a choice to make. You have the choice to stay in bed and say ‘Forget it, I’m not going to work out today.’ or ‘Forget it, I’m not going to work hard today.’ That’s your choice that you make every single day of your life. Make the right decision.", body: "- David Goggins \n\nRetired US Navy SEAL", sourceName: "Brilliant Read", sourceURL: "https://www.brilliantread.com/15-best-ever-david-goggins-quotes-on-success-and-failures/", sponsorLogo: "", sponsorURL: "")
+let motivateAMTip76 = Tip(header: "Quote", title: "Every morning in our lives, we have a choice to make. You have the choice to stay in bed and say ‘Forget it, I’m not going to work out today.’ or ‘Forget it, I’m not going to work hard today.’ \n\nThat’s your choice that you make every single day of your life. Make the right decision.", body: "- David Goggins \n\nRetired US Navy SEAL", sourceName: "Brilliant Read", sourceURL: "https://www.brilliantread.com/15-best-ever-david-goggins-quotes-on-success-and-failures/", sponsorLogo: "", sponsorURL: "")
 
 //20
 let motivateAMTip77 = Tip(header: "Quote", title: "You will get all you want in life, if you help enough other people get what they want.", body: "- Zig Ziglar \n\nWorld War II veteran, author and motivational speaker.", sourceName: "Brilliant Read", sourceURL: "https://www.brilliantread.com/15-best-ever-david-goggins-quotes-on-success-and-failures/", sponsorLogo: "", sponsorURL: "")
@@ -691,7 +693,7 @@ let motivateAfterTip56 = Tip(header: "Quote", title: "If you ever tell me that I
 //
 let motivateAfterTip57 = Tip(header: "Quote", title: "Musicians must make music, artists must paint, poets must write if they are ultimately to be at peace with themselves. What humans can be, they must be.", body: "- Abraham Maslow \n\nAmerican psychologist who was best known for creating Maslow's hierarchy of needs" , sourceName: "SUCCESS", sourceURL: "https://www.success.com/17-inspiring-quotes-to-help-you-live-a-life-of-purpose/", sponsorLogo: "", sponsorURL: "")
 let motivateAfterTip58 = Tip(header: "Quote", title: "Money and success don’t change people; they merely amplify what is already there.", body: "- Will Smith \n\nAmerican actor and rapper" , sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/314137/20-most-thought-provoking-quotes-about-philosophy", sponsorLogo: "", sponsorURL: "")
-let motivateAfterTip59 = Tip(header: "Love Quote", title: "The incredible thing about love is that you can’t get rid of it. If you try to give it away, you end up with twice as much, but if you try to hold onto it, it disappears. It is an extraordinary situation, where the people who just absolutely push it out, get it back tenfold.", body: "- Warren Buffett", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/08/31/billionaire-investor-warren-buffetts-best-advice.html", sponsorLogo: "", sponsorURL: "")
+let motivateAfterTip59 = Tip(header: "Love Quote", title: "The incredible thing about love is that you can’t get rid of it. \n\nIf you try to give it away, you end up with twice as much, but if you try to hold onto it, it disappears. \n\nIt is an extraordinary situation, where the people who just absolutely push it out, get it back tenfold.", body: "- Warren Buffett", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/08/31/billionaire-investor-warren-buffetts-best-advice.html", sponsorLogo: "", sponsorURL: "")
 let motivateAfterTip60 = Tip(header: "Quote", title: "We will all find ourselves neck deep in mud someday. That is the time to sing loudly, to smile broadly, to lift up those around you, and give them hope that tomorrow will be a better day. \n\nIf you want to change the world, start singing when you're up to your neck in mud.", body: "- Admiral William H. McRaven", sourceName: "Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by Admiral William H. McRaven", sourceURL: "https://www.amazon.com/Make-Your-Bed-Little-Things/dp/1455570249", sponsorLogo: "", sponsorURL: "")
 //
 let motivateAfterTip61 = Tip(header: "Quote", title: "Of all the lessons I learned in SEAL training, this was the most important. Never quit. \n\nIt doesn't sound particularly profound, but life constantly puts you in situations where quitting seems so much easier than continuing on. \n\nWhere the odds are so stacked against you that giving up seems the rational thing to do. \n\nBut, if you want to change the world, never quit.", body: "- Admiral William H. McRaven", sourceName: "Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by Admiral William H. McRaven", sourceURL: "https://www.amazon.com/Make-Your-Bed-Little-Things/dp/1455570249", sponsorLogo: "", sponsorURL: "")
@@ -1026,8 +1028,10 @@ let madIcon = Constants.Icon.mad
 
 
 //GENERAL
-let helplineTip1 = Tip(header: "Hapi App", title: "• Voice chat with a listener in a judgement-free space \n• Available 24/7 \n• First 60 minutes are free", body: "Hapi allows you to express your emotions and thoughts to a listener. \n\nHapi is anonymous and secure." , sourceName: "Hapi: Talk, Vent, Be Happy", sourceURL: "https://apps.apple.com/us/app/hapi-talk-vent-be-happy/id1466314569", sponsorLogo: "", sponsorURL: "")
+let helplineTip1 = Tip(header: "Hapi App", title: "• Talk with a caring listener in a judgement-free space \n• Available 24/7 \n• First 60 minutes are free", body: "Hapi allows you to express your thoughts to a listener. \n\n88% of people feel better after talking to a Hapi Listener. \n\nHapi is anonymous and secure. " , sourceName: "Hapi: Talk, Vent, Be Happy", sourceURL: "https://apps.apple.com/us/app/hapi-talk-vent-be-happy/id1466314569", sponsorLogo: "", sponsorURL: "")
 let helplineTip2 = Tip(header: "Crisis Text Line", title: "Free, confidential, and 24/7 support at your fingertips", body: "Text with a volunteer Crisis Counselor. \n\nThe top 3 texter issues are anxiety, depression, and relationships. \n\n• USA: Text HOME to 741741 \n• CAN: Text HOME to 686868", sourceName: "Crisis Text Line", sourceURL: "https://www.crisistextline.org/", sponsorLogo: "", sponsorURL: "")
+let helplineTip3 = Tip(header: "National Domestic Violence Hotline", title: "Free, confidential, and 24/7 support", body: "Our highly-trained advocates are available to talk confidentially with anyone experiencing domestic violence, seeking resources or information, or questioning unhealthy aspects of their relationship. \n\nYou are not alone: \n• Call 1-800-799-7233 \n• Text LOVEIS to 22522", sourceName: "National Domestic Violence Hotline", sourceURL: "https://www.thehotline.org/", sponsorLogo: "", sponsorURL: "")
+
 
 //0
 let helplineArray = [helplineTip1, helplineTip2,]
@@ -1360,9 +1364,9 @@ let madDayTopic = Topic(title: madTitle, icon: madIcon, tip: madTipDayArrays.ran
 //STRESSED
 //0
 let stressedTipPM0 = Tip(header: "Anxiety", title: "Warming your body temperature helps to lower anxiety", body: "• Eat and drink warm foods: soups, stews, and tea. Avoid foods that aggravate anxiety: sugar, caffeine, and alcohol. \n\n• Use a heating pad or get your whole body under a blanket. \n\n• Take warm or hot showers and baths.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/anxiety-warm-body-temperature_us_5baa7ad2e4b0f143d10e0ef1", sponsorLogo: "", sponsorURL: "")
-let stressedTipPM1 = Tip(header: "Stressed", title: "Journaling helps to reduce stress and be more present", body: "Writing about anger, sadness and other painful emotions helps to release the intensity of these feelings. By doing so you will feel calmer and better able to stay in the present.", sourceName: "Psych Central", sourceURL: "https://psychcentral.com/lib/the-health-benefits-of-journaling/", sponsorLogo: "", sponsorURL: "")
+let stressedTipPM1 = Tip(header: "Stressed", title: "Journaling helps to reduce stress and be more present", body: "Writing about anger, sadness and other painful emotions helps to release the intensity of these feelings. \n\nBy doing so you will feel calmer and better able to stay in the present.", sourceName: "Psych Central", sourceURL: "https://psychcentral.com/lib/the-health-benefits-of-journaling/", sponsorLogo: "", sponsorURL: "")
 let stressedTipPM2 = Tip(header: "Stressed", title: "Survey results reveal most effective ways to reduce stress tonight", body: "• Go to a religious service (77%) \n• Play sports (73%)\n• Pray (73%)\n• Massage or spa (71%)\n• Meditage or do yoga (70%)\n• See mental health professional (68%)\n• Exercise or walk (62%)\n• Listen to music (56%)\n• Read (49%)\n\nLess effective ways to reduce stress:\n• Watch TV or movie (33%)\n• Surf the Internet (29%)" , sourceName: "American Psychological Association", sourceURL: "https://www.apa.org/news/press/releases/stress/2013/snapshot.aspx", sponsorLogo: "", sponsorURL: "")
-let stressedTipPM3 = Tip(header: "Stressed", title: "13-Year Study: Psychotherapy improves your mental health and future income", body: "Men who reported having had stress and mental problems, and consulting a psychotherapist, experienced a 13% income increase in the subsequent year. \n\nWomen experienced an 8% income increase. \n\nThe study found gender discrimination to partially explain the difference in income increase. \n\nHowever, consulting a psychotherapist helps women nearly twice as much as men in terms of mental health.", sourceName: "The Conversation", sourceURL: "https://theconversation.com/psychotherapy-can-make-you-richer-especially-if-you-are-a-man-107628", sponsorLogo: "", sponsorURL: "")
+let stressedTipPM3 = Tip(header: "Stressed", title: "Study: Psychotherapy improves your mental health and future income", body: "Men who reported having had stress and mental problems, and consulting a psychotherapist, experienced a 13% income increase in the subsequent year. \n\nWomen experienced an 8% income increase. \n\nThe study found gender discrimination to partially explain the difference in income increase. \n\nHowever, consulting a psychotherapist helps women nearly twice as much as men in terms of mental health.", sourceName: "The Conversation", sourceURL: "https://theconversation.com/psychotherapy-can-make-you-richer-especially-if-you-are-a-man-107628", sponsorLogo: "", sponsorURL: "")
 
 //1
 let stressedTipPM4 =  Tip(header: "Stressed", title: "Reduce stress now:", body: "• Breathe deeply \n\n• Visualize a peaceful forest or beach \n\n • List to classical music \n\n• Watch a funny video \n\n• Call a friend \n\n •Turn off your phone • Go for a walk", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2015/09/06/stress-relief-that-works_n_3842511.html", sponsorLogo: "", sponsorURL: "")
@@ -1478,13 +1482,8 @@ let madPMTopic = Topic(title: madTitle, icon: madIcon, tip: madPMArrays.random()
 
 
 
-
-
-
-
-
 //MARK: - Wealth
-let wealthTitle = "Wealth"
+let wealthTitle = "Build \nWealth"
 let wealthIcon = Constants.Icon.wealth
 
 //0
@@ -1543,7 +1542,7 @@ let wealth30 = Tip(header: "Millionaire Advice", title: "Smart investors don't t
 let wealth31 = Tip(header: "Warning", title: "Becoming wealthy can make you less friendly and less generous", body: "In one study, participants were paired to play a game of Monopoly. \n\nThe game was rigged so that one of the participants quickly became far wealthier than the other. \n\nIt turned out that the wealthier a participant grew, the meaner he/she progressively became. \n\nFor example, the wealthier participants started assuming more dominant postures and began talking down to their \"poorer\" counterparts. \n\nThey also consumed a greater share of a bowl of pretzels meant to be shared equally.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/06/why-rich-people-arent-as-happy-as-they-could-be", sponsorLogo: "", sponsorURL: "")
 
 //
-let wealth32 = Tip(header: "Quote", title: "Forcing myself to think about how to make extra money is like going to the gym and working out with weights.", body: "The more I work my mental money muscles out, the stronger I get. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let wealth32 = Tip(header: "Quote", title: "Forcing myself to think about how to make extra money is like going to the gym and working out with weights. \n\nThe more I work my mental money muscles out, the stronger I get.", body: "- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let wealth33 = Tip(header: "Millionaire Advice", title: "The middle class is a constant state of financial struggle because their primary income is through wages, and as their wages increase, so do their expenses.", body: "They treat their home as their primary asset, instead on investing in income-producing assets. \n\nTreating your home as an investment and the philosophy that a pay raise means you can buy a larger home or spend more is the foundation of today's debt-ridden society. \n\nThis is high risk living caused by weak financial education. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let wealth34 = Tip(header: "Millionaire Advice", title: "The sonner you forget about needing a paycheck, the easier your adult life will be.", body: "Keep using your brain, work for free, and soon your mind will show you ways to making money far beyond what I could every pay you. \n\nYou will see things that other people never see. Opportunities right in front of their noses. \n\nMost people never see these opportunities because they're looking for money and security, so that's all they get. \n\nThe moment you see one opportunity, you will see them for the rest of your life. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let wealth35 = Tip(header: "Warning", title: "Becoming wealthy can make you more isolated – and isolation makes us less happy", body: "Psychologically, the acquisition of wealth—and more generally, possessions that signal high status—makes us want to distance ourselves from others. \n\nThis may be due to a feeling of competition and selfishness that sets in with the acquisition of wealth or status. \n\nIt may also be because, quite simply, we don’t need other people to survive the way we did when we were poorer. \n\nAs for the physical element, it’s quite straightforward: the wealthier we become, the more likely we are to erect boundaries between ourselves and others—for example, by living in a bigger house with a fence around it.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/06/why-rich-people-arent-as-happy-as-they-could-be", sponsorLogo: "", sponsorURL: "")
@@ -2658,10 +2657,10 @@ let relationshipAM6 = Tip(header: "Happy Relationship Habit", title: "Kiss your 
 
 //WEEK 1
 //0
-let relationshipAMTipArray0 = [relationshipAM0, relationshipAM1, relationshipAM2, relationshipAM3]
+let relationshipAMTipArray0 = [relationshipAM0, relationshipAM1, relationshipAM2, relationshipAM3, ]
 let relationshipAMTopic0 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray0)
 //(WIP 1)
-let relationshipAMTipArray1 = [relationshipAM4, relationshipAM5, relationshipAM6, relationshipAM3]
+let relationshipAMTipArray1 = [relationshipAM4, relationshipAM5, relationshipAM6, relationshipAM3, ]
 let relationshipAMTopic1 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray1)
 
 
@@ -2671,25 +2670,7 @@ let relationshipAMTopic = Topic(title: relationshipTitle, icon: relationshipIcon
 
 
 
-//(WIP 4)
-let relationshipAMTipArray2 = [relationshipAM1, relationshipAM0, relationshipAM2, relationshipAM3]
-let relationshipAMTopic2 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray2)
 
-//(WIP 4)
-let relationshipAMTipArray3 = [relationshipAM5, relationshipAM4, relationshipAM6, relationshipAM3]
-let relationshipAMTopic3 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray3)
-
-//(WIP 4)
-let relationshipAMTipArray4 = [relationshipAM0, relationshipAM1, relationshipAM2, relationshipAM3]
-let relationshipAMTopic4 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray4)
-
-//(WIP 4)
-let relationshipAMTipArray5 = [relationshipAM4, relationshipAM5, relationshipAM6, relationshipAM1]
-let relationshipAMTopic5 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray5)
-
-//(WIP 4)
-let relationshipAMTipArray6 = [relationshipAM2, relationshipAM3, relationshipAM5, relationshipAM6]
-let relationshipAMTopic6 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipAMTipArray6)
 
 
 //MARK: Relationships Day
@@ -2715,42 +2696,20 @@ let relationshipDay11 = Tip(header: "Harvard Professor Advice", title: "Understa
 
 //WEEK 1
 //0
-let relationshipDayTipArray0 = [relationshipDay0, relationshipDay1, relationshipDay2, relationshipDay3]
+let relationshipDayTipArray0 = [relationshipDay0, relationshipDay1, relationshipDay2, relationshipDay3, ]
 let relationshipDayTopic0 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray0)
 
 //1
-let relationshipDayTipArray1 = [relationshipDay4, relationshipDay5, relationshipDay6, relationshipDay7]
+let relationshipDayTipArray1 = [relationshipDay4, relationshipDay5, relationshipDay6, relationshipDay7, ]
 let relationshipDayTopic1 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray1)
 
 //2
-let relationshipDayTipArray2 = [relationshipDay8, relationshipDay9, relationshipDay10, relationshipDay11]
+let relationshipDayTipArray2 = [relationshipDay8, relationshipDay9, relationshipDay10, relationshipDay11, ]
 let relationshipDayTopic2 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray2)
 
 // RANDOM
 let relationshipDayArrays = [relationshipDayTipArray0, relationshipDayTipArray1, relationshipDayTipArray2,]
 let relationshipDayTopic = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayArrays.random())
-
-
-
-//3 WIP-4
-let relationshipDayTipArray3 = [relationshipDay5, relationshipDay4, relationshipDay6, relationshipDay7]
-let relationshipDayTopic3 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray3)
-
-//3 WIP-4
-let relationshipDayTipArray4 = [relationshipDay0, relationshipDay1, relationshipDay2, relationshipDay3]
-let relationshipDayTopic4 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray4)
-
-//3 WIP-4
-let relationshipDayTipArray5 = [relationshipDay4, relationshipDay5, relationshipDay6, relationshipDay7]
-let relationshipDayTopic5 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray5)
-
-//3 WIP-4
-let relationshipDayTipArray6 = [relationshipDay8, relationshipDay9, relationshipDay7, relationshipDay6]
-let relationshipDayTopic6 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipDayTipArray6)
-
-
-
-
 
 
 
@@ -2787,23 +2746,23 @@ let relationshipPM17 = Tip(header: "Happy Relationship Habit", title: "Talk abou
 
 //WEEK 1
 //0
-let relationshipPMTipArray0 = [relationshipPM0, relationshipPM1, relationshipPM2, relationshipPM3]
+let relationshipPMTipArray0 = [relationshipPM0, relationshipPM1, relationshipPM2, relationshipPM3, ]
 let relationshipPMTopic0 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray0)
 
 //1
-let relationshipPMTipArray1 = [relationshipPM4, relationshipPM5, relationshipPM6, relationshipPM7]
+let relationshipPMTipArray1 = [relationshipPM4, relationshipPM5, relationshipPM6, relationshipPM7, ]
 let relationshipPMTopic1 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray1)
 
 //2
-let relationshipPMTipArray2 = [relationshipPM8, relationshipPM9, relationshipPM10, relationshipPM11]
+let relationshipPMTipArray2 = [relationshipPM8, relationshipPM9, relationshipPM10, relationshipPM11, ]
 let relationshipPMTopic2 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray2)
 
 //3
-let relationshipPMTipArray3 = [relationshipPM12, relationshipPM13, relationshipPM14, relationshipPM15]
+let relationshipPMTipArray3 = [relationshipPM12, relationshipPM13, relationshipPM14, relationshipPM15, ]
 let relationshipPMTopic3 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray3)
 
 //3 (WIP: 1)
-let relationshipPMTipArray4 = [relationshipPM16, relationshipPM17, relationshipPM2, relationshipPM3]
+let relationshipPMTipArray4 = [relationshipPM16, relationshipPM17, relationshipPM2, relationshipPM3, ]
 let relationshipPMTopic4 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray4)
 
 // RANDOM
@@ -2812,13 +2771,6 @@ let relationshipPMTopic = Topic(title: relationshipTitle, icon: relationshipIcon
 
 
 
-//3 (WIP: 4)
-let relationshipPMTipArray5 = [relationshipPM15, relationshipPM5, relationshipPM6, relationshipPM7]
-let relationshipPMTopic5 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray5)
-
-//3 (WIP: 4)
-let relationshipPMTipArray6 = [relationshipPM11, relationshipPM15, relationshipPM16, relationshipPM17]
-let relationshipPMTopic6 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipPMTipArray6)
 
 
 //MARK: Relationships, Bedtime
@@ -2830,8 +2782,8 @@ let relationshipBed3 = Tip(header: "Relationship Tip", title: "Praising and than
 
 //1
 let relationshipBed4 = Tip(header: "Improve Your Relationship", title: "Go to bed at the same time if possible. It builds connection and provides an opportunity for more intimate connecting.", body: "Too many couples go to bed at different times, leading disconnected lives in the evening after already having spent all day apart. \n\nHappy couples, however, are intentional about coming back together at bedtime and reconnecting, if only for the few minutes of brushing teeth and getting under the covers.", sourceName: "Huffington Post", sourceURL: "https://www.huffpost.com/entry/happiest-couples-do-before-bed_n_591f3d6be4b034684b0c3ff5", sponsorLogo: "", sponsorURL: "")
-let relationshipBed5 = Tip(header: "Relationship Tip", title: "Kiss goodnight every night.", body: "Some people don't like to sleep close together—maybe they like their space, or they get too hot—but a kiss goodnight is one of the simplest ways to connect at the end of the day.  \n\nClose out your day with a combination of physical and emotional intimacy. ", sourceName: "SELF", sourceURL: "https://www.self.com/story/6-things-to-do-before-bed-in-a-relationship", sponsorLogo: "", sponsorURL: "")
-let relationshipBed6 = Tip(header: "Improve Your Relationship", title: "Get more sleep. Not getting enough sleep reduces your self-control which can negatively affect your relationship", body: "• People with higher self-control are more able to respond in constructive ways to their partners. \n• The more self-control couples have, the higher their relationship quality tends to be.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/meet-catch-and-keep/201501/7-simple-ways-you-can-become-better-partner", sponsorLogo: "", sponsorURL: "")
+let relationshipBed5 = Tip(header: "Relationship Tip", title: "Kiss goodnight every night", body: "Some people don't like to sleep close together—maybe they like their space, or they get too hot—but a kiss goodnight is one of the simplest ways to connect at the end of the day.  \n\nClose out your day with a combination of physical and emotional intimacy. ", sourceName: "SELF", sourceURL: "https://www.self.com/story/6-things-to-do-before-bed-in-a-relationship", sponsorLogo: "", sponsorURL: "")
+let relationshipBed6 = Tip(header: "Improve Your Relationship", title: "Get more sleep. Not getting enough sleep reduces your self-control which can negatively affect your relationship", body: "• People with higher self-control are more able to respond in constructive ways to their partners. \n\n• The more self-control couples have, the higher their relationship quality tends to be.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/meet-catch-and-keep/201501/7-simple-ways-you-can-become-better-partner", sponsorLogo: "", sponsorURL: "")
 let relationshipBed7 = Tip(header: "Improve Your Relationship", title: "Leave technology out of the bedroom. \n\nStudy: 46% of the respondents reported being phone snubbed or ignored by their partner.", body: "This created conflict and led to lower levels of relationship satisfaction and lower levels of life satisfaction. \n\nIf you like to check your phone or watch TV, do it after you’ve connected as a couple.", sourceName: "Focus On The Family", sourceURL: "https://www.focusonthefamily.com/marriage/better-bedtime-better-marriage/", sponsorLogo: "", sponsorURL: "")
 
 //2
@@ -2842,38 +2794,21 @@ let relationshipBed8 = Tip(header: "Improve Your Relationship", title: "Listen t
 //BED
 //WEEK 1
 //0
-let relationshipBedTipArray0 = [relationshipBed0, relationshipBed1, relationshipBed2, relationshipBed3]
+let relationshipBedTipArray0 = [relationshipBed0, relationshipBed1, relationshipBed2, relationshipBed3,]
 let relationshipBedTopic0 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray0)
 
 //1
-let relationshipBedTipArray1 = [relationshipBed4, relationshipBed5, relationshipBed6, relationshipBed7]
+let relationshipBedTipArray1 = [relationshipBed4, relationshipBed5, relationshipBed6, relationshipBed7,]
 let relationshipBedTopic1 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray1)
 
 //2 WIP-3
-let relationshipBedTipArray2 = [relationshipBed8, relationshipBed5, relationshipBed6, relationshipBed2]
+let relationshipBedTipArray2 = [relationshipBed8, relationshipBed5, relationshipBed6, relationshipBed2,]
 let relationshipBedTopic2 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray2)
 
 // RANDOM
 let relationshipBedArrays = [relationshipBedTipArray0, relationshipBedTipArray1, relationshipBedTipArray2,]
 let relationshipBedTopic = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedArrays.random())
 
-
-
-//3 WIP-4
-let relationshipBedTipArray3 = [relationshipBed7, relationshipBed6, relationshipBed5, relationshipBed4]
-let relationshipBedTopic3 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray3)
-
-//4 WIP-4
-let relationshipBedTipArray4 = [relationshipBed3, relationshipBed2, relationshipBed1, relationshipBed0]
-let relationshipBedTopic4 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray4)
-
-//5 WIP-4
-let relationshipBedTipArray5 = [relationshipBed4, relationshipBed5, relationshipBed6, relationshipBed8]
-let relationshipBedTopic5 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray5)
-
-//6 WIP-4
-let relationshipBedTipArray6 = [relationshipBed4, relationshipBed5, relationshipBed6, relationshipBed7]
-let relationshipBedTopic6 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray6)
 
 // MARK: - Widow
 //TODO: WIP
@@ -3234,9 +3169,9 @@ let passion14 = Tip(header: "Discover Your Passion", title: "Ask yourself this q
 
 let passion15 = Tip(header: "Discover Your Passion", title: "Ask yourself this question:", body: "• What lights a spark in you? \n\nSince it is our emotions, not our knowledge, that drive our actions, you simply have to care enough about something that it triggers an emotional response in you – creative expression, compassion, or curiosity. \n\nEvery great human endeavor can be traced back to someone who cared deeply." , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/margiewarrell/2017/05/30/feeling-stuck-take-zuckerbergs-advice-and-commit-to-a-purpose-bigger-than-yourself/", sponsorLogo: "", sponsorURL: "")
 
-let passion16 = Tip(header: "PASSION - TED Talk Speaker Advice", title: "If you want to reach your potential and live meaningfully and make a contribution to the world, then:", body: "n• Find something you care about; \n\n• Surround yourself with supportive people who will give you honest feedback; and \n\n• Practice, practice, through all the daily, small deaths. \n\n- Angela Lee Duckworth" , sourceName: "National Geographic", sourceURL: "https://www.nationalgeographic.com/news/2014/10/141015-angela-duckworth-success-grit-psychology-self-control-science-nginnovators/", sponsorLogo: "", sponsorURL: "")
+let passion16 = Tip(header: "PASSION - TED Talk Advice", title: "If you want to reach your potential and live meaningfully and make a contribution to the world, then:", body: "• Find something you care about; \n\n• Surround yourself with supportive people who will give you honest feedback; and \n\n• Practice, practice, through all the daily, small deaths. \n\n- Angela Lee Duckworth" , sourceName: "National Geographic", sourceURL: "https://www.nationalgeographic.com/news/2014/10/141015-angela-duckworth-success-grit-psychology-self-control-science-nginnovators/", sponsorLogo: "", sponsorURL: "")
 
-let passion17 = Tip(header: "Discover Your Passion - Navy SEAL Advice", title: "Clarifying what you’re passionate about lets you put energy toward more of it. Your passions answer the question, Who am I at my deepest level? Ask yourself:", body: "• What books, movies, art, or music gets me pumped? \n\n• Who inspires me, and why? \n\n• What characteristics do I have that make me feel great about myself? \n\n• What activities would I do if I had more time and no barriers? \n\n• What is meaningful about them? \n\n• What benefit to others do these activities or characteristics provide? \n\n• Could I make the world even a tiny bit better by focusing more on these? \n\n• What would it take to get me to step into the arena of just one of these activities? \n\nIf you find your answers skewing negatively—for example, if you see no benefit to others in your activities or don’t see yourself effecting change in the world in even a small way—you’ve stumbled upon an opportunity for deep reflection." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/work-career/discover-your-passion-navy-seal-secrets/", sponsorLogo: "", sponsorURL: "")
+let passion17 = Tip(header: "PASSION - Navy SEAL Advice", title: "Clarify what you’re passionate about. Ask yourself:", body: "• What books, movies, art, or music gets me pumped? \n\n• Who inspires me, and why? \n\n• What characteristics do I have that make me feel great about myself? \n\n• What activities would I do if I had more time and no barriers? \n\n• What is meaningful about them? \n\n• What benefit to others do these activities or characteristics provide? \n\n• Could I make the world even a tiny bit better by focusing more on these? \n\n• What would it take to get me to step into the arena of just one of these activities? \n\nClarifying your passions allow you to answer the question, \"Who am I at my deepest level?\"" , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/work-career/discover-your-passion-navy-seal-secrets/", sponsorLogo: "", sponsorURL: "")
 
 
 let passion18 = Tip(header: "Define Your Values - Navy SEAL Advice", title: "Values answer the question, What do I want more—or less—of in my life? Clarifying them helps you stand your ground every day. Leadership, teamwork, family, and faith are a given. Focus on intimate traits that will make you a better, stronger person.", body: "To guide you, here are mine: \n\nI WANT TO BE MORE: \n• Healthy and positive \n• Loving and passionate \n• Wise and authentic \n• Grateful and truthful \n• Playful and fun \n• Learning and growing \n• Bold and decisive \n• Contributive to others \n\nI WANT TO BE LESS: \n• Negative and judgmental \n• Attached and cluttered \n• Selfish \n\nI move toward “healthy and positive” whenever I eat well, hydrate, think of my health, meditate, or train. Such small steps make it easy for me to turn values into a habit, thus forging new character traits." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/work-career/discover-your-passion-navy-seal-secrets/", sponsorLogo: "", sponsorURL: "")
@@ -3278,7 +3213,7 @@ let goals4 = Tip(header: "Goals", title: "A goal properly set is halfway reached
 
 let goals5 = Tip(header: "Goals", title: "Denzel Washington", body: "Don’t be afraid to fail big, to dream big. But remember, dreams, without goals, are just dreams. They ultimately fuel disappointment. \n\nSo have dreams, but have goals, life goals, yearly goals, monthly goals, daily goals. I try to give myself a goal every day. \n\nUnderstand that to achieve these goals you must apply discipline and consistency. You have to work at it every day. \n\nYou have to plan every day. You’ve heard the saying “We don’t plan to fail, we fail to plan.” \n\nContinue to strive, continue to have goals, continue to progress and anything you want good, you can have. \n\nClaim it, work hard to get it, when you get it reach back, pull someone else up. Each one teach one. \n\nDon’t just aspire to make a living. Aspire to make a difference.", sourceName: "Fearless Motivation", sourceURL: "https://www.fearlessmotivation.com/2018/09/23/denzel-washington-speech/", sponsorLogo: "", sponsorURL: "")
 
-let goals6 = Tip(header: "Increase Happiness", title: "Research: Setting goals was identified as one of the most powerful things anyone can do to achieve happiness", body: "Set quarterly and annual goals for yourself - both for your professional and personal life. \n\nWrite them down or share them with someone who will support you and help you be accountable. \n\nMonitor your progress and see what you have achieved at the end of each quarter, and also plan to meet with your goals partner at least 2-3 times a year. \n\nIf you can afford it, consider a life coach - someone trained professionally to help you shape your life choices and meet your life goals." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
+let goals6 = Tip(header: "Increase Happiness", title: "Research: Setting goals is one of the best things you can do to achieve happiness", body: "• Set quarterly and annual goals for yourself - both for your professional and personal life. \n\n• Write them down or share them with someone who will support you and help you be accountable. \n\n• Monitor your progress and see what you have achieved at the end of each quarter, and also meet with your goals partner at least 2-3 times a year. \n\n• If you can afford it, hire a life coach - someone trained professionally to help you meet your life goals." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let goals7 = Tip(header: "GOALS", title: "Research: People who set goals and monitor them are happier in the long run", body: "This may be because they're more likely to get what they want out of life (though research shows they mis-predict more than half of the time)." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
 let goals8 = Tip(header: "GOALS", title: "David Goggins: Before you even set any goals, you have slow down, find a quiet space, and turn off your phone. This will allow you time and space to think", body: "To understand your “why” and what motivates you, “you first have to spend time alone. How are you going to figure out your purpose if you haven’t figured out, first, what you need to do? \n\nSlow down, minimize distractions, and gain control. Then you’ll be able to think about your goals." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/25/retired-navy-seal-use-this-5-step-strategy-to-achieve-any-goal.html", sponsorLogo: "", sponsorURL: "")

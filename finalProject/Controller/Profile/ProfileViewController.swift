@@ -246,24 +246,24 @@ class ProfileViewController: UIViewController {
 
         let hourOfDay = calendar.component(.hour, from: date)
 
-        switch hourOfDay {
-        case 0...4:
-            adviceTitleLabel.text = "Late Night Advice"
-        case 5...8:
-            adviceTitleLabel.text = "Morning Advice"
-        case 9...10:
-            adviceTitleLabel.text = "Mid-Morning Advice"
-        case 11...13:
-            adviceTitleLabel.text = "Day Advice"
-        case 14...17:
-            adviceTitleLabel.text = "Afternoon Advice"
-        case 18...21:
-            adviceTitleLabel.text = "Evening Advice"
-        case 22...23:
-            adviceTitleLabel.text = "Night Advice"
-        default:
-            adviceTitleLabel.text = "Advice"
-        }
+//        switch hourOfDay {
+//        case 0...4:
+//            adviceTitleLabel.text = "Late Night Advice"
+//        case 5...8:
+//            adviceTitleLabel.text = "Morning Advice"
+//        case 9...10:
+//            adviceTitleLabel.text = "Mid-Morning Advice"
+//        case 11...13:
+//            adviceTitleLabel.text = "Day Advice"
+//        case 14...17:
+//            adviceTitleLabel.text = "Afternoon Advice"
+//        case 18...21:
+//            adviceTitleLabel.text = "Evening Advice"
+//        case 22...23:
+//            adviceTitleLabel.text = "Night Advice"
+//        default:
+//            adviceTitleLabel.text = "Advice"
+//        }
     }
 
 

@@ -65,6 +65,7 @@
 		DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898882051E8EC005046D8 /* ProfileDataResults.swift */; };
 		DA78988D2052EFA1005046D8 /* NowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988C2052EFA1005046D8 /* NowViewController.swift */; };
 		DA78988F2053102E005046D8 /* NowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988E2053102E005046D8 /* NowTableViewCell.swift */; };
+		DA87B7952439478500A8EFF0 /* LawOfSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87B7942439478500A8EFF0 /* LawOfSuccess.swift */; };
 		DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */; };
 		DA8DC6FB21F66F1B00663DB4 /* BottomCornersRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */; };
 		DA97663323D3B7D4000FC1B0 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */; };
@@ -164,6 +165,7 @@
 		DA7898882051E8EC005046D8 /* ProfileDataResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataResults.swift; sourceTree = "<group>"; };
 		DA78988C2052EFA1005046D8 /* NowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowViewController.swift; sourceTree = "<group>"; };
 		DA78988E2053102E005046D8 /* NowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowTableViewCell.swift; sourceTree = "<group>"; };
+		DA87B7942439478500A8EFF0 /* LawOfSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawOfSuccess.swift; sourceTree = "<group>"; };
 		DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCornersRoundedView.swift; sourceTree = "<group>"; };
 		DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCornersRoundedView.swift; sourceTree = "<group>"; };
 		DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 				DA272D0C20BCE72B00137039 /* CounterAdvice.swift */,
 				DACA911B20FBD09200475CE5 /* HabitFact.swift */,
 				DACA911D20FBD0B700475CE5 /* HabitQuote.swift */,
+				DA87B7942439478500A8EFF0 /* LawOfSuccess.swift */,
 			);
 			path = Habits;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				DA015BF42073E36300A0342F /* UIViewControllerExtension.swift in Sources */,
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
+				DA87B7952439478500A8EFF0 /* LawOfSuccess.swift in Sources */,
 				DA6D721420B4FD75002FCD1D /* MasterJournalViewController.swift in Sources */,
 				DA0EDE0E2104EF6D00B9363F /* Hint.swift in Sources */,
 				DA9CC27920FD5413001A89B7 /* UIView+Extension.swift in Sources */,

@@ -258,24 +258,24 @@ class NowViewController: UIViewController {
 //        titleLabel.text = "\(hourString) Tips"
 //        titleLabel.text = "Good Afternoon"
 
-        switch hourOfDay {
-        case 0...4:
-            titleLabel.text = "Late Night Tips"
-        case 5...8:
-            titleLabel.text = "Morning Tips"
-        case 9...10:
-            titleLabel.text = "Mid-Morning Tips"
-        case 11...13:
-            titleLabel.text = "Day Tips"
-        case 14...17:
-            titleLabel.text = "Afternoon Tips"
-        case 18...21:
-            titleLabel.text = "Evening Tips"
-        case 22...23:
-            titleLabel.text = "Night Tips"
-        default:
-            titleLabel.text = "Tips"
-        }
+//        switch hourOfDay {
+//        case 0...4:
+//            titleLabel.text = "Late Night Tips"
+//        case 5...8:
+//            titleLabel.text = "Morning Tips"
+//        case 9...10:
+//            titleLabel.text = "Mid-Morning Tips"
+//        case 11...13:
+//            titleLabel.text = "Day Tips"
+//        case 14...17:
+//            titleLabel.text = "Afternoon Tips"
+//        case 18...21:
+//            titleLabel.text = "Evening Tips"
+//        case 22...23:
+//            titleLabel.text = "Night Tips"
+//        default:
+//            titleLabel.text = "Tips"
+//        }
 
     }
 
@@ -285,13 +285,10 @@ class NowViewController: UIViewController {
 
     func dayOfWeekAndHour() {
 
-
-//
-//        let dayOfWeek = calendar.component(.weekday, from: date)
-//        hour = calendar.component(.hour, from: date)
-//        let week = calendar.component(.weekOfYear, from: date)
-//        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
-
+        let dayOfWeek = calendar.component(.weekday, from: date)
+        hour = calendar.component(.hour, from: date)
+        let week = calendar.component(.weekOfYear, from: date)
+        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
         //greeting
 //        switch hour {
@@ -359,8 +356,6 @@ class NowViewController: UIViewController {
                 print("ERROR: error with dayAndHour")
             }
         }
-
-
 
 
         switch weekOfMonth {

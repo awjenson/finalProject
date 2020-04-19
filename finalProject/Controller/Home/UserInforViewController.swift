@@ -22,10 +22,13 @@ import UIKit
 class UserInfoViewController: UIViewController {
 
     // MARK: - IBOutlets
-    
-    @IBOutlet weak var natureImageView: UIImageView!
-    @IBOutlet weak var greetingLabel: UILabel!
 
+
+    @IBOutlet weak var touchButton: UIButton!
+
+    @IBOutlet weak var natureImageView: UIImageView!
+
+    @IBOutlet weak var greetingLabel: UILabel!
 
     @IBOutlet weak var arrowButton: UIButton!
     @IBOutlet weak var quoteLabel: ShadowLabel!
@@ -159,7 +162,6 @@ class UserInfoViewController: UIViewController {
 
     @IBAction func tapAction(_ sender: Any) {
         segueToNextVC()
-
     }
 
     func segueToNextVC() {
