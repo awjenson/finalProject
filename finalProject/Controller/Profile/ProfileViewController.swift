@@ -87,8 +87,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var feedbackYouButton: UIButton!
     
 
-
-
     // MARK: - Properties
 
     let formatter = DateFormatter()
@@ -102,11 +100,6 @@ class ProfileViewController: UIViewController {
     var headers: [Header] = [] // array of headers used for QUOTES
 
     var currentIndex:Int = -1 //initial integer since UIButton.index start at 0
-
-
-
-
-
 
     // Tips and Topics
     var topic0: Topic!
@@ -130,7 +123,6 @@ class ProfileViewController: UIViewController {
     //    var cellHeaderColor: [UIColor] = []
     //    var topicColor: UIColor?
 
-
     // MARK: - Lifecycle Methods
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -147,7 +139,6 @@ class ProfileViewController: UIViewController {
 
         setupUI()
 
-
         //Used to refresh app when re-entering from background
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.adviceVC = self
@@ -161,7 +152,6 @@ class ProfileViewController: UIViewController {
     }
 
 
-
     var selectedTopicTitle = ""
 
     func refreshUI() {
@@ -170,28 +160,9 @@ class ProfileViewController: UIViewController {
     }
 
 
-
-
-
-
-
-
-
-
-
     // MARK: - Methods
 
     func setupUI() {
-
-    
-
-
-        //        self.view.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
-//        self.view.backgroundColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
-        //        self.view.backgroundColor = UIColor.red
-
-
-
 
         // place 8 buttons in desired order (excludes Now tips)
         adviceTopicButtons = [adviceTopic0Button, adviceTopic1Button, adviceTopic2Button, adviceTopic3Button,
@@ -210,9 +181,7 @@ class ProfileViewController: UIViewController {
         dayOfWeekAndHour()
 
         profileTableViewSetup()
-
     }
-
 
 
     // MARK: - Refresh Control
@@ -235,37 +204,13 @@ class ProfileViewController: UIViewController {
     }
 
 
-
     func displayHourInTopicLabel() {
         formatter.dateFormat = "h a" // "a" prints "pm" or "am"
         formatter.amSymbol = "AM"
         formatter.pmSymbol = "PM"
 
-//        let hourString = formatter.string(from: Date()) // "12 AM"
-//        adviceTitleLabel.text = "\(hourString) Advice"
-
         let hourOfDay = calendar.component(.hour, from: date)
-
-//        switch hourOfDay {
-//        case 0...4:
-//            adviceTitleLabel.text = "Late Night Advice"
-//        case 5...8:
-//            adviceTitleLabel.text = "Morning Advice"
-//        case 9...10:
-//            adviceTitleLabel.text = "Mid-Morning Advice"
-//        case 11...13:
-//            adviceTitleLabel.text = "Day Advice"
-//        case 14...17:
-//            adviceTitleLabel.text = "Afternoon Advice"
-//        case 18...21:
-//            adviceTitleLabel.text = "Evening Advice"
-//        case 22...23:
-//            adviceTitleLabel.text = "Night Advice"
-//        default:
-//            adviceTitleLabel.text = "Advice"
-//        }
     }
-
 
 
     // MARK: - Time-based Functions
@@ -404,630 +349,6 @@ class ProfileViewController: UIViewController {
     }
 
 
-
-
-
-
-//    //MARK: - WEEK 1
-//
-//    func sunday1(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicPM0, relationshipBedTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingBedtimeTopic0,
-//                             studyTopic0, stressedPMTopic0, depressedPMTopic0, madPMTopic0,
-//                             motivateAMTopic0)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicAM0, relationshipAMTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingAMTopic0,
-//                             studyTopic0, stressedAMTopic0, depressedAMTopic0, madAMTopic0,
-//                             motivateAMTopic0)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicDay0, relationshipDayTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingDayTopic0,
-//                             studyTopic0, stressedDayTopic0, depressedDayTopic0, madDayTopic0,
-//                             motivateDayTopic0)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicPM0, relationshipDayTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingPMTopic0,
-//                             studyTopic0, stressedDayTopic0, depressedDayTopic0, madDayTopic0, motivateAfterTopic0)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicPM0, relationshipBedTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingBedtimeTopic0,
-//                             studyTopic0, stressedPMTopic0, depressedPMTopic0, madPMTopic0,
-//                             motivatePMTopic0)
-//
-//        default:
-//            print("Weekend,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Monday (2)
-//
-//    // More people Google 'diet' and go to the gym at the start of the week, month year
-//    // Same with starting a new job or new semester, they give us a fresh start
-//    func monday1(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicPM1, relationshipBedTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingBedtimeTopic1,
-//                             studyTopic1, stressedPMTopic1, depressedPMTopic1, madPMTopic1,
-//                             motivateAMTopic1)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicAM1, relationshipAMTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingAMTopic1,
-//                             studyTopic1, stressedAMTopic1, depressedAMTopic1, madAMTopic1,
-//                             motivateAMTopic1)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicDay1, relationshipDayTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingDayTopic1,
-//                             studyTopic1, stressedDayTopic1, depressedDayTopic1, madDayTopic1,
-//                             motivateDayTopic1)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicPM1, relationshipDayTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingPMTopic1,
-//                             studyTopic1, stressedDayTopic1, depressedDayTopic1, madDayTopic1, motivateAfterTopic1)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicPM1, relationshipBedTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingBedtimeTopic1,
-//                             studyTopic1, stressedPMTopic1, depressedPMTopic1, madPMTopic1,
-//                             motivatePMTopic1)
-//
-//        default:
-//            print("Weekday,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Tuesday (3)
-//
-//    func tuesday1(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicPM2, relationshipBedTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingBedtimeTopic2,
-//                             studyTopic2, stressedPMTopic2, depressedPMTopic2, madPMTopic2,
-//                             motivateAMTopic2)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicAM2, relationshipAMTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingAMTopic2,
-//                             studyTopic2, stressedAMTopic2, depressedAMTopic2, madAMTopic2,
-//                             motivateAMTopic2)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicDay2, relationshipDayTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingDayTopic2,
-//                             studyTopic2, stressedDayTopic2, depressedDayTopic2, madDayTopic2,
-//                             motivateDayTopic2)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicPM2, relationshipDayTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingPMTopic2,
-//                             studyTopic2, stressedDayTopic2, depressedDayTopic2, madDayTopic2, motivateAfterTopic2)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicPM2, relationshipBedTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingBedtimeTopic2,
-//                             studyTopic2, stressedPMTopic2, depressedPMTopic2, madPMTopic2,
-//                             motivatePMTopic2)
-//
-//        default:
-//            print("Weekday,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Wednesday (4)
-//
-//    func wednesday1(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicPM3, relationshipBedTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingBedtimeTopic3,
-//                             studyTopic3, stressedPMTopic3, depressedPMTopic3, madPMTopic3,
-//                             motivateAMTopic3)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicAM3, relationshipAMTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingAMTopic3,
-//                             studyTopic3, stressedAMTopic3, depressedAMTopic3, madAMTopic3,
-//                             motivateAMTopic3)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicDay3, relationshipDayTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingDayTopic3,
-//                             studyTopic3, stressedDayTopic3, depressedDayTopic3, madDayTopic3,
-//                             motivateDayTopic3)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicPM3, relationshipDayTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingPMTopic3,
-//                             studyTopic3, stressedDayTopic3, depressedDayTopic3, madDayTopic3, motivateAfterTopic3)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicPM3, relationshipBedTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingBedtimeTopic3,
-//                             studyTopic3, stressedPMTopic3, depressedPMTopic3, madPMTopic3,
-//                             motivatePMTopic3)
-//
-//        default:
-//            print("Weekday,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Thursday (5)
-//
-//    func thursday1(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicPM4, relationshipBedTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingBedtimeTopic4,
-//                             studyTopic4, stressedPMTopic4, depressedPMTopic4, madPMTopic4,
-//                             motivateAMTopic4)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicAM4, relationshipAMTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingAMTopic4,
-//                             studyTopic4, stressedAMTopic4, depressedAMTopic4, madAMTopic4,
-//                             motivateAMTopic4)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicDay4, relationshipDayTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingDayTopic4,
-//                             studyTopic4, stressedDayTopic4, depressedDayTopic4, madDayTopic4,
-//                             motivateDayTopic4)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicPM4, relationshipDayTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingPMTopic4,
-//                             studyTopic4, stressedDayTopic4, depressedDayTopic4, madDayTopic4, motivateAfterTopic4)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicPM4, relationshipBedTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingBedtimeTopic4,
-//                             studyTopic4, stressedPMTopic4, depressedPMTopic4, madPMTopic4,
-//                             motivatePMTopic4)
-//
-//        default:
-//            print("weekdayTF,INVALID HOUR!")
-//
-//        }
-//    }
-//
-//    //Friday (6)
-//
-//    func friday1(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicPM5, relationshipBedTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingBedtimeTopic5,
-//                             studyTopic5, stressedPMTopic5, depressedPMTopic5, madPMTopic5,
-//                             motivateAMTopic5)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicAM5, relationshipAMTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingAMTopic5,
-//                             studyTopic5, stressedAMTopic5, depressedAMTopic5, madAMTopic5,
-//                             motivateAMTopic5)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicDay5, relationshipDayTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingDayTopic5,
-//                             studyTopic5, stressedDayTopic5, depressedDayTopic5, madDayTopic5,
-//                             motivateDayTopic5)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicPM5, relationshipDayTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingPMTopic5,
-//                             studyTopic5, stressedDayTopic5, depressedDayTopic5, madDayTopic5, motivateAfterTopic5)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicPM5, relationshipBedTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingBedtimeTopic5,
-//                             studyTopic5, stressedPMTopic5, depressedPMTopic5, madPMTopic5,
-//                             motivatePMTopic5)
-//
-//        default:
-//            print("weekdayTF,INVALID HOUR!")
-//        }
-//    }
-//
-//    //Saturday (7)
-//
-//    func saturday1(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicPM6, relationshipBedTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingBedtimeTopic6,
-//                             studyTopic6, stressedPMTopic6, depressedPMTopic6, madPMTopic6,
-//                             motivateAMTopic6)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicAM6, relationshipAMTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingAMTopic6,
-//                             studyTopic6, stressedAMTopic6, depressedAMTopic6, madAMTopic6,
-//                             motivateAMTopic6)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicDay6, relationshipDayTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingDayTopic6,
-//                             studyTopic6, stressedDayTopic6, depressedDayTopic6, madDayTopic6,
-//                             motivateDayTopic6)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicPM6, relationshipDayTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingPMTopic6,
-//                             studyTopic6, stressedDayTopic6, depressedDayTopic6, madDayTopic6, motivateAfterTopic6)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicPM6, relationshipBedTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingBedtimeTopic6,
-//                             studyTopic6, stressedPMTopic6, depressedPMTopic6, madPMTopic6,
-//                             motivatePMTopic6)
-//
-//
-//        default:
-//            print("Weekend,INVALID HOUR!")
-//        }
-//    }
-//
-//
-//    //MARK: - WEEK 2
-//
-//    func sunday2(_ hour: Int) {
-//        switch hour {
-//// 7
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicPM0, relationshipBedTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingBedtimeTopic0,
-//                             studyTopic0, stressedPMTopic0, depressedPMTopic0, madPMTopic0,
-//                             motivateAMTopic7)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicAM0, relationshipAMTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingAMTopic0,
-//                             studyTopic0, stressedAMTopic0, depressedAMTopic0, madAMTopic0,
-//                             motivateAMTopic7)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicDay0, relationshipDayTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingDayTopic0,
-//                             studyTopic0, stressedDayTopic0, depressedDayTopic0, madDayTopic0,
-//                             motivateDayTopic7)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicPM0, relationshipDayTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingPMTopic0,
-//                             studyTopic0, stressedDayTopic0, depressedDayTopic0, madDayTopic0, motivateAfterTopic7)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic0, adviceTopic0, singleTopicPM0, relationshipBedTopic0, jobSearchTopic0, wealthTopic0, friendsTopic0, parentingBedtimeTopic0,
-//                             studyTopic0, stressedPMTopic0, depressedPMTopic0, madPMTopic0,
-//                             motivatePMTopic7)
-//
-//        default:
-//            print("Weekend,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Monday (2)
-//
-//    // More people Google 'diet' and go to the gym at the start of the week, month year
-//    // Same with starting a new job or new semester, they give us a fresh start
-//    func monday2(_ hour: Int) {
-//        switch hour {
-//// 8
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicPM1, relationshipBedTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingBedtimeTopic1,
-//                             studyTopic1, stressedPMTopic1, depressedPMTopic1, madPMTopic1,
-//                             motivateAMTopic8)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicAM1, relationshipAMTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingAMTopic1,
-//                             studyTopic1, stressedAMTopic1, depressedAMTopic1, madAMTopic1,
-//                             motivateAMTopic8)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicDay1, relationshipDayTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingDayTopic1,
-//                             studyTopic1, stressedDayTopic1, depressedDayTopic1, madDayTopic1,
-//                             motivateDayTopic8)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicPM1, relationshipDayTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingPMTopic1,
-//                             studyTopic1, stressedDayTopic1, depressedDayTopic1, madDayTopic1, motivateAfterTopic8)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic1, adviceTopic1, singleTopicPM1, relationshipBedTopic1, jobSearchTopic1, wealthTopic1, friendsTopic1, parentingBedtimeTopic1,
-//                             studyTopic1, stressedPMTopic1, depressedPMTopic1, madPMTopic1,
-//                             motivatePMTopic8)
-//
-//        default:
-//            print("Weekday,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Tuesday (3)
-//
-//    func tuesday2(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicPM2, relationshipBedTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingBedtimeTopic2,
-//                             studyTopic2, stressedPMTopic2, depressedPMTopic2, madPMTopic2,
-//                             motivateAMTopic9)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicAM2, relationshipAMTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingAMTopic2,
-//                             studyTopic2, stressedAMTopic2, depressedAMTopic2, madAMTopic2,
-//                             motivateAMTopic9)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicDay2, relationshipDayTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingDayTopic2,
-//                             studyTopic2, stressedDayTopic2, depressedDayTopic2, madDayTopic2,
-//                             motivateDayTopic9)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicPM2, relationshipDayTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingPMTopic2,
-//                             studyTopic2, stressedDayTopic2, depressedDayTopic2, madDayTopic2, motivateAfterTopic9)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic2, adviceTopic2, singleTopicPM2, relationshipBedTopic2, jobSearchTopic2, wealthTopic2, friendsTopic2, parentingBedtimeTopic2,
-//                             studyTopic2, stressedPMTopic2, depressedPMTopic2, madPMTopic2,
-//                             motivatePMTopic9)
-//
-//        default:
-//            print("Weekday,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Wednesday (4)
-//
-//    func wednesday2(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicPM3, relationshipBedTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingBedtimeTopic3,
-//                             studyTopic3, stressedPMTopic3, depressedPMTopic3, madPMTopic3,
-//                             motivateAMTopic10)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicAM3, relationshipAMTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingAMTopic3,
-//                             studyTopic3, stressedAMTopic3, depressedAMTopic3, madAMTopic3,
-//                             motivateAMTopic10)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicDay3, relationshipDayTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingDayTopic3,
-//                             studyTopic3, stressedDayTopic3, depressedDayTopic3, madDayTopic3,
-//                             motivateDayTopic10)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicPM3, relationshipDayTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingPMTopic3,
-//                             studyTopic3, stressedDayTopic3, depressedDayTopic3, madDayTopic3, motivateAfterTopic10)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic3, adviceTopic3, singleTopicPM3, relationshipBedTopic3, jobSearchTopic3, wealthTopic3, friendsTopic3, parentingBedtimeTopic3,
-//                             studyTopic3, stressedPMTopic3, depressedPMTopic3, madPMTopic3,
-//                             motivatePMTopic10)
-//
-//        default:
-//            print("Weekday,INVALID HOUR!")
-//        }
-//    }
-//
-//    // Thursday (5)
-//
-//    func thursday2(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicPM4, relationshipBedTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingBedtimeTopic4,
-//                             studyTopic4, stressedPMTopic4, depressedPMTopic4, madPMTopic4,
-//                             motivateAMTopic11)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicAM4, relationshipAMTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingAMTopic4,
-//                             studyTopic4, stressedAMTopic4, depressedAMTopic4, madAMTopic4,
-//                             motivateAMTopic11)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicDay4, relationshipDayTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingDayTopic4,
-//                             studyTopic4, stressedDayTopic4, depressedDayTopic4, madDayTopic4,
-//                             motivateDayTopic11)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicPM4, relationshipDayTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingPMTopic4,
-//                             studyTopic4, stressedDayTopic4, depressedDayTopic4, madDayTopic4, motivateAfterTopic11)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic4, adviceTopic4, singleTopicPM4, relationshipBedTopic4, jobSearchTopic4, wealthTopic4, friendsTopic4, parentingBedtimeTopic4,
-//                             studyTopic4, stressedPMTopic4, depressedPMTopic4, madPMTopic4,
-//                             motivatePMTopic11)
-//
-//        default:
-//            print("weekdayTF,INVALID HOUR!")
-//
-//        }
-//    }
-//
-//    //Friday (6)
-//
-//    func friday2(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicPM5, relationshipBedTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingBedtimeTopic5,
-//                             studyTopic5, stressedPMTopic5, depressedPMTopic5, madPMTopic5,
-//                             motivateAMTopic12)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicAM5, relationshipAMTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingAMTopic5,
-//                             studyTopic5, stressedAMTopic5, depressedAMTopic5, madAMTopic5,
-//                             motivateAMTopic12)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicDay5, relationshipDayTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingDayTopic5,
-//                             studyTopic5, stressedDayTopic5, depressedDayTopic5, madDayTopic5,
-//                             motivateDayTopic12)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicPM5, relationshipDayTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingPMTopic5,
-//                             studyTopic5, stressedDayTopic5, depressedDayTopic5, madDayTopic5, motivateAfterTopic12)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic5, adviceTopic5, singleTopicPM5, relationshipBedTopic5, jobSearchTopic5, wealthTopic5, friendsTopic5, parentingBedtimeTopic5,
-//                             studyTopic5, stressedPMTopic5, depressedPMTopic5, madPMTopic5,
-//                             motivatePMTopic12)
-//
-//        default:
-//            print("weekdayTF,INVALID HOUR!")
-//        }
-//    }
-//
-//    //Saturday (7)
-//
-//    func saturday2(_ hour: Int) {
-//        switch hour {
-//
-//        case 0...4:
-//            print("Weekend, Very Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicPM6, relationshipBedTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingBedtimeTopic6,
-//                             studyTopic6, stressedPMTopic6, depressedPMTopic6, madPMTopic6,
-//                             motivateAMTopic13)
-//
-//        case 5...9:
-//            print("Weekend, Early Morning")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicAM6, relationshipAMTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingAMTopic6,
-//                             studyTopic6, stressedAMTopic6, depressedAMTopic6, madAMTopic6,
-//                             motivateAMTopic13)
-//
-//        case 10...14:
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicDay6, relationshipDayTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingDayTopic6,
-//                             studyTopic6, stressedDayTopic6, depressedDayTopic6, madDayTopic6,
-//                             motivateDayTopic13)
-//
-//        case 15...19:
-//            print("Weekend, Early Evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicPM6, relationshipDayTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingPMTopic6,
-//                             studyTopic6, stressedDayTopic6, depressedDayTopic6, madDayTopic6, motivateAfterTopic13)
-//
-//        case 20..<24:
-//            print("Weekend, Late evening")
-//            // call function to display 9 time-based topics
-//            appendNineTopics(personalTopic6, adviceTopic6, singleTopicPM6, relationshipBedTopic6, jobSearchTopic6, wealthTopic6, friendsTopic6, parentingBedtimeTopic6,
-//                             studyTopic6, stressedPMTopic6, depressedPMTopic6, madPMTopic6,
-//                             motivatePMTopic13)
-//
-//        default:
-//            print("Weekend,INVALID HOUR!")
-//        }
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private func sizeFooterToFit() {
         if let footerView = profileTableView.tableFooterView {
             footerView.setNeedsLayout()
@@ -1041,9 +362,6 @@ class ProfileViewController: UIViewController {
             profileTableView.tableFooterView = footerView
         }
     }
-
-
-
 
     private func resetTopicButtonOriginalStyle(button: CircleButton) {
 
@@ -1181,10 +499,6 @@ class ProfileViewController: UIViewController {
     }
 
 
-
-
-
-
     //    // Call this inside UIButton to scroll to top
     func scrollToTop(){
         DispatchQueue.main.async {
@@ -1310,9 +624,6 @@ class ProfileViewController: UIViewController {
     }
 
 
-
-
-
 } // End of Home2ViewController
 
 // MARK: - Table View Methods
@@ -1389,9 +700,5 @@ extension ProfileViewController: AdviceTableViewCellDelegate {
         safariVC.preferredBarTintColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
         safariVC.preferredControlTintColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
         present(safariVC, animated: true, completion: nil)
-
-
-
-
     }
 }

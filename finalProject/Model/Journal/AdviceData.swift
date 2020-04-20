@@ -1467,17 +1467,9 @@ let madTipPMArray2 = [madTipPM8, madTipPM9, madTipPM10, madTipPM11, helplineArra
 let madPMTopic2 = Topic(title: madTitle, icon: madIcon, tip: madTipPMArray2)
 
 
-
-
 // RANDOM
 let madPMArrays = [madTipPMArray0, madTipPMArray1, madTipPMArray2,]
 let madPMTopic = Topic(title: madTitle, icon: madIcon, tip: madPMArrays.random())
-
-
-
-
-
-
 
 
 
