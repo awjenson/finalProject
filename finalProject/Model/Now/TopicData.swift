@@ -33,15 +33,21 @@ import Foundation
 //Add 'Friendship' or 'Hangout' tips
 //
 
-//
+// MARK: - Citizen Duty
+/*
+We need to come together. Just get together. Don't stop at pity because pity burns out.
+What can I do in my personal life? You might be able to mentor somebody. Don't forget how much you know not from a book. How much you know because somebody sat down and talked to you. One of the problems of being black is it's hard to find a person who'll talk to you, honestly. You know the conversation gets stiff or tense or whatever or it just doesn't happen because you don't even know that the building you're driving past is a club or a country club, it's just a building that you've never been invited in there and so are the people you can mentor, the people who, and the the thing about mentorship is you always get more out of it than what you give. It's not charity. You wind up so much smarter and so much more interesting and now you're the most interesting person at Thanksgiving. You always get more than you give. But those are the things that I would ask people to do. If we start changing who's in our cell phone, who are we texting with every couple of days. That's really where the change has got to start happening because then, you know suddenly, you know somebody says something in a conversation, and you say, hey, hold on a second, that's not funny. I know a guy who's black and I've learned the hard way,that can wind up killing somebody and people are, what, we didn't know. And suddenly you start wiping this stuff out at the social level long before it ever gets to the legal and I think that's important.
 
+Van Jones On George Floyd, Police Brutality, & What Comes Next - CONAN on TBS
+https://www.youtube.com/watch?v=62opaXeyWZY
+*/
 
 // MARK: - Breakfast
 
 let breakfastTitle = "Breakfast"
 let breakfastIcon = Constants.Icon.food
 
-let breakfastTip1 = Tip(header: "Feel Fuller For Longer", title: "Consume at least 30 grams of protein for breakfast", body: "Protein keeps you full longer than other foods because it takes longer to digest and leave the stomach. Also, protein keeps blood-sugar levels steady, which prevent spikes in hunger." , sourceName: "Benjamin P. Hardy, author of Willpower Doesn't Work", sourceURL: "https://medium.com/personal-growth/this-morning-routine-will-save-you-20-hours-per-week-409f8acbde1", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip1 = Tip(header: "Feel Fuller For Longer", title: "Consume 30+ grams of protein for breakfast", body: "Protein keeps you full longer than other foods because it takes longer to digest and leave the stomach. Also, protein keeps blood-sugar levels steady, which prevent spikes in hunger." , sourceName: "Benjamin P. Hardy, author of Willpower Doesn't Work", sourceURL: "https://medium.com/personal-growth/this-morning-routine-will-save-you-20-hours-per-week-409f8acbde1", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip2 = Tip(header: "Reduce Your Risk", title: "Reduce your odds of having an afternoon slump today by eating a healthy breakfast", body: "Eating breakfast reduces your risk of eating an unhealthy snack later in the day. We can also crave extra calories if we have not eaten enough during the day or if we have skipped lunch. \n\nWhen you don't eat regularly, your body starts to crave high calorie, comfort type food. We're less likely to have a slump and eat unhealthy if we've fuelled our bodies well beforehand." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com.au/2016/08/02/this-is-why-you-crave-junk-food-later-in-the-day_a_21443885/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip3 = Tip(header: "Healthy Choice", title: "Cereal: There should always be at least 5 grams of fiber, and there should always be more fiber than sugar", body: "The more sugar in your breakfast cereal, the faster it digests, and the hungrier you’ll be. \n\nConversely, more fiber will keep you fuller longer. For extra fiber, add: \n• Chia seeds \n• Flax seeds" , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip4 = Tip(header: "Live Longer", title: "DO: Drink skim or 1% milk \nDON'T: Drink 2% or whole milk", body: "Study: People who drink low-fat milk (skim and 1%) experience several years LESS biological aging than those who drink 2% and whole milk. \n\nExample: Drinking 1% rather than 2% milk accounts for 4.5 years of less biological aging in adults. \n\nSomewhat surprisingly, the study also found that milk abstainers had MORE biological aging than adults who consumed low-fat milk.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2020/01/200115120634.htm", sponsorLogo: "", sponsorURL: "")
@@ -49,7 +55,7 @@ let breakfastTip4 = Tip(header: "Live Longer", title: "DO: Drink skim or 1% milk
 //2
 let breakfastTip5 = Tip(header: "Feel Fuller For Longer", title: "Healthy breakfast foods that give you energy and makes you feel full", body: "• Protein: Eggs, Greek Yogurt, Protein Shake, Cottage Cheese \n\n• Fiber: Oatmeal, Chia Seeds, Flaxseeds \n\n• Vitamins: Berries and Citrus Fruit \n\n• Healthy Fats: Nuts, Avocado, Peanut Butter \n\n• Caffeine: Coffee or Green Tea" , sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/12-best-foods-to-eat-in-morning#section4", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip6 = Tip(header: "Worst Foods to Eat For Breakfast", title: "The list below contain little nutrients and high amounts of sugar, refined grains, and trans fats:", body: "• Fruit Juice and Smoothies \n\n• Cereal, Bagels, Breads, Granola Bars, Muffins, Toaster Pastries, Pancakes, and Waffles \n\n• Butter, Flavored Yogurt, and Cream Cheese \n\n• Bacon and Sausage \n\n• Jelly, Syrup, Flavored Creamers, and Ketchup" , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/worst-breakfast-foods/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let breakfastTip7 = Tip(header: "Live Longer", title: "A healthy breakfast includes lean protein, whole-grain carbohydrates, healthy fat, and fresh fruit", body: "Try low-fat Greek yogurt topped with fresh berries and a handful of nuts; a whole-wheat English muffin spread with a dollop of peanut butter; or an egg scrambled in extra-virgin olive oil along with some spinach, mushrooms, or other vegetables." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/nutrition/breakfast-and-beyond-the-case-for-a-healthy-morning-meal", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let breakfastTip7 = Tip(header: "Live Longer", title: "A healthy breakfast includes: \n• Lean protein \n• Whole-grain carbohydrates \n• Healthy fat \n• Fresh fruit", body: "• Low-fat Greek yogurt with fresh berries and nuts. \n\n• Whole-wheat English muffin with peanut butter. \n\n• Scrambled eggs in extra-virgin olive oil along with some spinach, mushrooms, or other vegetables." , sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/nutrition/breakfast-and-beyond-the-case-for-a-healthy-morning-meal", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let breakfastTip8 = Tip(header: "Prevent Weight Gain", title: "Eat a protein-rich breakfast to reduce food cravings, prevent overeating later today", body: "Compared to breakfast-skippers, brain scans of protein-rich breakfast-eaters showed less activity in the brain's regions controlling food motivation prior to lunch. \n\nEating a healthy, protein-rich breakfast helps people be less prone to snacking between meals. Convenient snack foods are almost always high in sugar and fat and add a substantial amount of calories to the diet." , sourceName: "University of Missouri", sourceURL: "https://munews.missouri.edu/news-releases/2011/0518-eat-a-protein-rich-breakfast-to-reduce-food-cravings-prevent-overeating-later-mu-researcher-finds/", sponsorLogo: "", sponsorURL: "")
 
 //3
@@ -97,7 +103,7 @@ let breakfastTopic5 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: bre
 let breakfastTipArrays = [breakfastTipArray0, breakfastTipArray1, breakfastTipArray2, breakfastTipArray3, breakfastTipArray4, breakfastTipArray5]
 
 let breakfastTopic = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArrays.random())
-
+let breakfastTopics = Topics(title: breakfastTitle, icon: breakfastIcon, topics: [breakfastTopic,])
 
 
 
@@ -147,26 +153,13 @@ let brunchTopic2 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArr
 //
 let brunchTipArrays = [brunchTipArray0, brunchTipArray1, brunchTipArray2,]
 let brunchTopic = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArrays.random())
+let brunchTopics = Topics(title: "Food", icon: brunchIcon, topics: [morningSnackTopic, brunchTopic, restaurantTopic])
 
 
 
 
 
 
-
-
-
-let brunchTipArray3 = [brunchTip5, brunchTip6, brunchTip7, brunchTip8]
-let brunchTopic3 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray3)
-
-let brunchTipArray4 = [brunchTip1, brunchTip2, brunchTip3, brunchTip4]
-let brunchTopic4 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray4)
-
-let brunchTipArray5 = [brunchTip9, brunchTip6, brunchTip7, brunchTip8]
-let brunchTopic5 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray5)
-
-let brunchTipArray6 = [brunchTip5, brunchTip8, brunchTip3, brunchTip4]
-let brunchTopic6 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArray6)
 
 // MARK: - Lunch
 
@@ -248,7 +241,7 @@ let lunchTipArray9 = [lunchTip37, lunchTip12, lunchTip23, lunchTip24]//WIP
 //
 let lunchTipArrays = [lunchTipArray0, lunchTipArray1, lunchTipArray2, lunchTipArray3, lunchTipArray4, lunchTipArray5, lunchTipArray6, lunchTipArray7, lunchTipArray8]
 let lunchTopic = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArrays.random())
-
+let lunchTopics = Topics(title: lunchTitle, icon: lunchIcon, topics: [lunchTopic, restaurantTopic])
 
 
 
@@ -286,7 +279,7 @@ let dinnerTip12 = Tip(header: "Improve Digestion", title: "Drink water during or
 let dinnerTip13 = Tip(header: "Lose Weight", title: "Drink 16 ounces of water before every meal", body: "Study: Over the course of 12 weeks, dieters who drank 16 ounces of water before meals, 3 times per day, lost about 5 pounds more than dieters who did not increase their water intake. \n\nWater promotes weight loss because it fills up the stomach with a substance that has zero calories. People feel fuller as a result, and eat less calorie-containing food during the meal.", sourceName: "Virginia Polytechnic Institute and State University", sourceURL: "https://vtnews.vt.edu/articles/2010/08/082310-cals-davy.html", sponsorLogo: "", sponsorURL: "")
 let dinnerTip14 = Tip(header: "Live Longer", title: "Eat 2+ vegetable servings at each meal", body: "A study of the longest living people in the world found that they all eat at least 2 vegetables at each meal. They ate the what they produced in their gardens and avoided meat (except for special occasions), processed foods, soda pop, and salty snacks.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 let dinnerTip15 = Tip(header: "Live Longer", title: "Focus only on your food when you're eating", body: "A guaranteed way to eat mindlessly is to do so while watching your favorite show on TV or while emailing a friend at the computer. If you're going to eat, just eat. You'll eat more slowly, consume less, and savor your food more.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-let dinnerTip16 = Tip(header: "Live Longer", title: "Eat a lean, plant-based diet accented with meat", body: "A study of people who lived to 100+ years old in Sardinia, Italy, found that their diet consists of whole-grain bread, beans, garden vegetables, and fruits. Meat is largely reserved for Sundays and special occasions.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+let dinnerTip16 = Tip(header: "Live Longer", title: "Eat a lean, plant-based diet accented with meat", body: "A study of people who lived to 100+ years old in Sardinia, Italy, found that their diet consists of whole-grain bread, beans, garden vegetables, and fruits. \n\nMeat is largely reserved for Sundays and special occasions.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 //4
 let dinnerTip17 = Tip(header: "Prevent Weight Gain", title: "Drink 2 cups of water before eating", body: "Study: People who drank 2 cups of water before eating consumed 75 to 90 fewer calories over the course of a meal than they would otherwise. \n\nThis may simply be because water is filling, but researchers note the added water may well be displacing calories otherwise spent on high-calorie beverages such as sodas, sports drinks, and fruit drinks.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", sponsorLogo: "", sponsorURL: "")
@@ -306,7 +299,7 @@ let dinnerTip24 = Tip(header: "Prevent Weight Gain", title: "Study: Chewing more
 //6
 let dinnerTip25 = Tip(header: "Prevent Weight Gain", title: "Slow down and chew your food more", body: "Study: People who focused on doubling the number of times they chewed before swallowing ate 15% less food and 112 fewer calories over the course of a meal.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
 let dinnerTip26 = Tip(header: "Prevent Weight Gain", title: "Don't watch TV or videos while eating dinner", body: "Study: People who never watched TV during meals had 37% lower odds of being obese than those who always watched TV or videos during family meals.", sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-health-obesity-meals-tv/home-cooked-meals-hold-the-tv-linked-to-less-obesity-idUSKBN16928E", sponsorLogo: "", sponsorURL: "")
-let dinnerTip27 = Tip(header: "Reduce Acid Reflux", title: "Foods that cause acid reflux:", body: "\nFried & Spicy Foods \nBeef & Eggs \nDairy Products \nTomatoes \nPeanut Butter \nJam & Jelly \nChocolate & Sugar \nAlcohol, Carbonated Drinks, and Coffee \n\nFoods that prevent acid reflux: \nKale & Raw Spinach \nBroccoli & Celery \nLentils \nBone Broth \nGinger \nPineapple & Watermelon \nOatmeal \nAlmond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
+let dinnerTip27 = Tip(header: "Reduce Heartburn Risk", title: "Foods That Cause Acid Reflux:", body: "• Fried & Spicy Foods \n• Beef & Eggs \n• Dairy Products \n• Tomatoes \n• Peanut Butter \n• Jam & Jelly \n• Chocolate & Sugar \n• Alcohol, Carbonated Drinks, and Coffee \n\nFoods That Prevent Acid Reflux: \n• Kale & Raw Spinach \n• Broccoli & Celery \n• Lentils \n• Bone Broth \n• Ginger \n• Pineapple & Watermelon \n• Oatmeal \n• Almond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
 let dinnerTip28 = Tip(header: "Prevent Weight Gain", title: "Study: People who ate slower consumed 66 fewer calories per meal than their fast-eating counterparts and felt fuller after their meal", body: "It takes about 20 minutes for your brain to recognize that your body is full. \n\nTake your time and eat mindfully to avoid overeating, avoid weight gain, and reduce feeling hungry later.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/surprising-habits-affecting-health/", sponsorLogo: "", sponsorURL: "")
 
 //7
@@ -329,8 +322,8 @@ let dinnerTip39 = Tip(header: "Healthy Choice", title: "The best time for eating
 let dinnerTip40 = Tip(header: "Reduce Risk", title: "Eat slowly. Study: Fast eaters are up to 115% more likely to be obese", body: "Another study: People who ate \"very fast\" tended to be heavier and had gained the most bodyweight since age 20. \n\nPut simply, overweight people chew less than normal-weight people, because when you chew more, you tend to eat less - 15% less, in one study." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //10
-let dinnerTip41 = Tip(header: "Warning", title: "Analysis of the 'Joy of Cooking' recipes found that recipes in the 2006 edition have 44% more calories than recipes in the 1937 edition", body: "• One-third of the extra calories is due to bigger servings. \n\n• Two-thirds of the extra calories is due to more fat, sugar, meat, and goodies like nutes and raisins. \n\nSolution: When you follow a recipe, plan on dividing the finished dish and storing half in the fridge for tomorrow, before you sit down to eat." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let dinnerTip42 = Tip(header: "Prevent Weight Gain", title: "Eat with smaller plates, bowls, cups, and silverware", body: "Reduce extra calories by eating with: \n• 9-to-10 inch plate: 22% less \n• Smaller bowl: 17% less \n• Smaller spoon: 14% less \n• Small or tall cup: 30% less \n• White wineglass: 12% less \n\nLarger tableware equals larger waistline." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip41 = Tip(header: "Warning", title: "Analysis of the 'Joy of Cooking' recipes found that recipes in the 2006 edition have 44% more calories than recipes in the 1937 edition", body: "• One-third of the extra calories is due to bigger servings. \n\n• Two-thirds of the extra calories is due to more fat, sugar, meat, and goodies like nuts and raisins. \n\nSolution: When you follow a recipe, plan on dividing the finished dish and storing half in the fridge for tomorrow, before you sit down to eat." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let dinnerTip42 = Tip(header: "Prevent Weight Gain", title: "Eat with smaller: \n• Plates \n• Bowls \n• Cups \n• Silverware", body: "Reduce calories consumed by eating with: \n• 9-to-10 inch plate: 22% less calories \n• Smaller bowl: 17% less calories \n• Smaller spoon: 14% less calories \n• Small or tall cup: 30% less calories \n• White wineglass: 12% less calories \n\nLarger tableware = larger waistline" , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let dinnerTip43 = Tip(header: "Prevent Weight Gain", title: "People who served from the stove or counter ate 19% less food compared to those serving themselves right off the table", body: "Having to get up and walk another 6 feet for the food was enough for people to ask, \"Am I really that hungry?\" The answer's usually \"No.\" \n\nBut, if you want to eat more salad, put that salad bowl right in the middle of the table." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let dinnerTip44 = Tip(header: "Prevent Overeating", title: "Don't watch TV, listen to radio, or read a book while eating", body: "Anything distracting and enjoyable increases overeating. \n\nSolution: Put the food back in the cuboard or refrigerator or on the stove. You can have seconds, but you'll have to walk for it." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -391,14 +384,11 @@ let dinnerTopic12 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipAr
 //
 let dinnerTipArrays = [dinnerTipArray0, dinnerTipArray1, dinnerTipArray2, dinnerTipArray3, dinnerTipArray4, dinnerTipArray5, dinnerTipArray6, dinnerTipArray7, dinnerTipArray8, dinnerTipArray9, dinnerTipArray10, dinnerTipArray11, dinnerTipArray12]
 let dinnerTopic = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArrays.random())
+let dinnerTopics = Topics(title: dinnerTitle, icon: dinnerIcon, topics: [dinnerTopic, restaurantTopic])
 
 
 
 
-
-//WIP (4)
-let dinnerTipArray13 = [dinnerTip17, dinnerTip18, dinnerTip19, dinnerTip20]
-let dinnerTopic13 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray13)
 
 
 
@@ -407,7 +397,7 @@ let dinnerTopic13 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipAr
 
 // 0
 let dinnerAfter9PM1 = Tip(header: "Late Dinners", title: "Avoid large portions, greasy, fatty, spicy, and fried foods, and high-sugar, high-carbohydrate treats like cookies or ice cream", body: "These foods can cause indigestion (feeling bloated and gassy), heartburn, and even acid reflux before bedtime. The result is poor sleep and poor health.", sourceName: "Life Hacker", sourceURL: "https://lifehacker.com/the-late-night-snacks-that-wont-upset-your-stomach-and-1717594825", sponsorLogo: "text", sponsorURL: "text")
-let dinnerAfter9PM2 = Tip(header: "Sleep Better", title: "Drink a glass of milk before bed", body: "Milk supports sleep because it has tryptophan, which raises melatonin and serotonin levels in the body, both of which induce sleep. Plus, milk has calcium, and recent research has found that calcium deficiency in the diet can cause disturbed sleep patterns.", sourceName: "Cooking Light", sourceURL: "http://www.cookinglight.com/healthy-living/health/foods-that-help-you-sleep", sponsorLogo: "text", sponsorURL: "text")
+let dinnerAfter9PM2 = Tip(header: "Sleep Better", title: "Drink a glass of milk before bed", body: "Milk supports sleep because it has tryptophan, which raises melatonin and serotonin levels in the body, both of which induce sleep. \n\nPlus, milk has calcium, and recent research has found that calcium deficiency in the diet can cause disturbed sleep patterns.", sourceName: "Cooking Light", sourceURL: "http://www.cookinglight.com/healthy-living/health/foods-that-help-you-sleep", sponsorLogo: "text", sponsorURL: "text")
 let dinnerAfter9PM3 = Tip(header: "Prevent Weight Gain", title: "Don't eat large amounts of carbohydrates-heavy food like pasta, bread, and fried foods before bed", body: "Carbohydrates turns into sugar in your blood and you get a rise in insulin. Since you are just going to bed, you aren't using that sugar for energy, so you're more likely to store it as fat. \n\nIf you do go for whole-grain carbs, make sure to pair it with protein and healthy fats (avocado, salmon, olive oil, or nuts).", sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "test", sponsorURL: "test")
 let dinnerAfter9PM4 = Tip(header: "Prevent Acid-Reflux", title: "Don't eat a large dinner, especially if you plan to go to bed in the next 3 hours", body: "Study: Eating dinner within 3 hours of bedtime was positively linked with a risk of developing acid-reflux symptoms, a common condition that causes heartburn, indigestion, and coughing.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/why-eating-late-bad-unhealthy-2018-1", sponsorLogo: "", sponsorURL: "")
 
@@ -415,7 +405,7 @@ let dinnerAfter9PM4 = Tip(header: "Prevent Acid-Reflux", title: "Don't eat a lar
 let dinnerAfter9PM5 = Tip(header: "Reduce Your Risk", title: "Eating a late dinner or going to sleep shortly after dinner increases your risk of cancer", body: "Researchers found an association between eating earlier (before 9 p.m.) and a 20% lower risk for breast and prostate cancers compared to people who ate a late dinner (after 10 p.m.) or went to bed right after eating.", sourceName: "USA Today", sourceURL: "https://www.usatoday.com/story/news/nation-now/2018/07/18/early-dinner-time-linked-lower-risk-cancer-says-study/795819002/", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM6 = Tip(header: "Reduce Weight Loss", title: "Don't make dinner your largest meal of day", body: "A study found that \"Late Eaters,\" people classified as eating their biggest meal after 3 p.m., lost significantly less weight — and took longer to lose it — than \"Early Eaters,\" those who ate their main meal before 3 p.m.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/why-eating-late-bad-unhealthy-2018-1", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM7 = Tip(header: "Build Muscle", title: "Eat protein for dinner so your body can build muscle while you sleep", body: "The body rebuilds muscle through a process called protein synthesis. If you go to bed without eating enough protein your body can’t produce enough protein synthesis to rebuild the muscle. \n\nProtein-based snacks like string cheese a handful of almonds, whole-grain crackers with a bit of guacamole, greek yogurt, and almond butter with an apple can stabilize your blood sugar when you sleep. Make sure to allow an hour for staying upright before going to sleep for good digestion.", sourceName: "Elle", sourceURL: "https://www.elle.com/beauty/health-fitness/news/a45387/dinner-time-health-myths-facts/", sponsorLogo: "", sponsorURL: "")
-let dinnerAfter9PM8 = Tip(header: "Prevent Heartburn 🔥", title: "After eating, staying upright because gravity helps keep the contents in the stomach", body: "Reflux is the result of acid spilling out of the stomach, and lying down with a full stomach makes reflux much more likely.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2014/10/26/opinion/sunday/the-dangers-of-eating-late-at-night.html", sponsorLogo: "", sponsorURL: "")
+let dinnerAfter9PM8 = Tip(header: "Prevent Heartburn 🔥", title: "After eating, stay upright because gravity helps keep the contents in the stomach", body: "Reflux is the result of acid spilling out of the stomach, and lying down with a full stomach makes reflux much more likely.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2014/10/26/opinion/sunday/the-dangers-of-eating-late-at-night.html", sponsorLogo: "", sponsorURL: "")
 //2
 let dinnerAfter9PM9 = Tip(header: "Reduce Heartburn Risk", title: "Eat 2 hours before sleep", body: "Eating close to bedtime can trigger heartburn symptoms you have not allowed enough time for the food to pass out of the stomach and into the small intestine. Lying down in bed makes digestion difficult and makes heartburn more likely.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/heartburn-gerd/triggers#1", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM10 = Tip(header: "Reduce Heartburn Risk 🍅", title: "Avoid tomatoes and tomato sauce", body: "While they might be chockfull of healthy nutrients, tomatoes are also highly acidic and likely to cause heartburn in those who are prone to it.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/heartburn-gerd/features/top-10-heartburn-foods#1", sponsorLogo: "", sponsorURL: "")
@@ -431,55 +421,51 @@ let dinnerAfter9PM16 = Tip(header: "Reduce Heartburn Risk", title: "Stop eating 
 //4
 let dinnerAfter9PM17 = Tip(header: "Improve Digestion", title: "Drink water during or after a meal", body: "Water helps break down food so that your body can absorb the nutrients. Water also softens stool, which helps prevent constipation." , sourceName: "Mayo Clinic", sourceURL: "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/digestion/faq-20058348", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM18 = Tip(header: "Prevent Weight Gain", title: "Don't watch TV or videos while eating dinner", body: "Study: People who never watched TV during meals had 37% lower odds of being obese than those who always watched TV or videos during family meals.", sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-health-obesity-meals-tv/home-cooked-meals-hold-the-tv-linked-to-less-obesity-idUSKBN16928E", sponsorLogo: "", sponsorURL: "")
-let dinnerAfter9PM19 = Tip(header: "Reduce Heartburn Risk", title: "Foods that cause acid reflux:", body: "Fried & Spicy Foods \nBeef & Eggs \nDairy Products \nTomatoes \nPeanut Butter \nJam & Jelly \nChocolate & Sugar \nAlcohol, Carbonated Drinks, and Coffee \n\nFoods that prevent acid reflux: \nKale & Raw Spinach \nBroccoli & Celery \nLentils \nBone Broth \nGinger \nPineapple & Watermelon \nOatmeal \nAlmond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
+let dinnerAfter9PM19 = Tip(header: "Reduce Heartburn Risk", title: "Foods That Cause Acid Reflux:", body: "• Fried & Spicy Foods \n• Beef & Eggs \n• Dairy Products \n• Tomatoes \n• Peanut Butter \n• Jam & Jelly \n• Chocolate & Sugar \n• Alcohol, Carbonated Drinks, and Coffee \n\nFoods That Prevent Acid Reflux: \n• Kale & Raw Spinach \n• Broccoli & Celery \n• Lentils \n• Bone Broth \n• Ginger \n• Pineapple & Watermelon \n• Oatmeal \n• Almond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM20 = Tip(header: "Prevent Weight Gain", title: "Eat slowly. Study: Fast eaters are up to 115% more likely to be obese", body: "Another study: People who ate \"very fast\" tended to be heavier and had gained the most body weight since age 20. \n\nPut simply, overweight people chew less than normal-weight people, because when you chew more, you tend to eat less - 15% less, in one study." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //5
 let dinnerAfter9PM21 = Tip(header: "Prevent Weight Gain", title: "Choosing plate colors that contrast the color of your food helps you eat 18% less", body: "Study: If you're plate's the same color as your food, you'll put 18% more food on your plate. \n\n• Use darker plates for rice, potatoes, and pasta with Alfredo sause. \n\nUse lighter plates for meat and pasta with marinara sauce.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM22 = Tip(header: "Prevent Weight Gain", title: "Slim people chew each bite an average of 15 times - 3 chews more than heavy people", body: "Study: On average, the number of times people chewed for each bite: \n\n• Slim people: 15 chews \n• Heavy people: 12 chews", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 
-
+let lateDinnerTitle = "Late Dinner"
 //0
 let dinnerAfter9PMTipArray0 = [dinnerAfter9PM1, dinnerAfter9PM2, dinnerAfter9PM3, dinnerAfter9PM4]
-let dinnerAfter9PMTopic0 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray0)
+let dinnerAfter9PMTopic0 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray0)
 //1
 let dinnerAfter9PMTipArray1 = [dinnerAfter9PM5, dinnerAfter9PM6, dinnerAfter9PM7, dinnerAfter9PM8]
-let dinnerAfter9PMTopic1 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray1)
+let dinnerAfter9PMTopic1 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray1)
 //2
 let dinnerAfter9PMTipArray2 = [dinnerAfter9PM9, dinnerAfter9PM10, dinnerAfter9PM11, dinnerAfter9PM12]
-let dinnerAfter9PMTopic2 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray2)
+let dinnerAfter9PMTopic2 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray2)
 //3
 let dinnerAfter9PMTipArray3 = [dinnerAfter9PM13, dinnerAfter9PM14, dinnerAfter9PM15, dinnerAfter9PM16]
-let dinnerAfter9PMTopic3 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray3)
+let dinnerAfter9PMTopic3 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray3)
 //4
 let dinnerAfter9PMTipArray4 = [dinnerAfter9PM17, dinnerAfter9PM18, dinnerAfter9PM19, dinnerAfter9PM20]
-let dinnerAfter9PMTopic4 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray4)
+let dinnerAfter9PMTopic4 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray4)
 
 //5 (WIP 2)
 let dinnerAfter9PMTipArray5 = [dinnerAfter9PM21, dinnerAfter9PM22, dinnerAfter9PM7, dinnerAfter9PM8]
-let dinnerAfter9PMTopic5 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray5)
+let dinnerAfter9PMTopic5 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray5)
 
 //
 let dinnerAfter9PMTipArrays = [dinnerAfter9PMTipArray0, dinnerAfter9PMTipArray1, dinnerAfter9PMTipArray2, dinnerAfter9PMTipArray3, dinnerAfter9PMTipArray4, dinnerAfter9PMTipArray5,]
-let dinnerAfter9PMTopic = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArrays.random())
+let dinnerAfter9PMTopic = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArrays.random())
+let dinnerAfter9PMTopics = Topics(title: lateDinnerTitle, icon: dinnerIcon, topics: [dinnerAfter9PMTopic, restaurantTopic])
 
 
-
-
-
-//6
-let dinnerAfter9PMTipArray6 = [dinnerAfter9PM9, dinnerAfter9PM10, dinnerAfter9PM11, dinnerAfter9PM12]
-let dinnerAfter9PMTopic6 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray6)
 
 
 // MARK: - Morning Snack
 
-let morningSnackTitle = "Morning Snack"
+let morningSnackTitle = "Snack"
 let morningSnackIcon = Constants.Icon.snack
+
 
 //0
 let morningSnackTip1 = Tip(header: "Prevent Weight Gain", title: "Being thirsty can sometimes be confused with hunger", body: "The body’s thirst signal is similar to the hunger signal, meaning you could reach for a snack when you should be reaching for a drink. \n\nDrink water or tea. \n\nIf you’re still hungry five minutes later, it’s probably actual hunger." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/healthy-eating/eating-when-not-hungry/", sponsorLogo: "", sponsorURL: "")
-let morningSnackTip2 = Tip(header: "Missed Breakfast?", title: "Improve memory and reduce anxiety by eating a cereal bar", body: "Study: When participants ate a cereal bar as a midmorning snack, especially if they hadn’t eaten breakfast, they became much more alert and less anxious than those who didn’t snack. \n\nCheck the label, because most prepackaged cereal bars — even fiber and protein-packed ones — contain more sugar than your dietician would recommend." , sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+let morningSnackTip2 = Tip(header: "Missed Breakfast?", title: "Improve memory and reduce anxiety by eating a cereal bar", body: "Study: When participants ate a cereal bar as a midmorning snack, especially if they hadn’t eaten breakfast, they became much more alert and less anxious than those who didn’t snack. \n\nCheck the label, because most prepackaged cereal bars — even fiber and protein-packed ones — contain more sugar than your dietician would recommend." , sourceName: "National Center for Biotechnology Information", sourceURL: "https://pubmed.ncbi.nlm.nih.gov/19184761/", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip3 = Tip(header: "Prevent Weight Gain", title: "Study: People who regularly ate almonds as a mid-morning snack reported feeling less hungry at lunch and at dinner and ate fewer calories daily than non-almond eaters", body: "While the amount, frequency, and types of snacks consumed throughout the world continues to contribute to the obesity epidemic, some snacks, such as almonds, nuts, and other high-fiber snacks, may limit overall daily food consumption." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2013/07/130716115723.htm", sponsorLogo: "", sponsorURL: "")
 let morningSnackTip4 = Tip(header: "Prevent Weight Gain", title: "DON'T: Eat your snack while doing something else — like surfing the Internet, watching TV, or working at your desk", body: "Oftentimes we find ourselves mindlessly snacking because of certain emotions or situations (boredom, loneliness, stress). \n\nStart to notice when your emotions are fueling your eating and try to find a different outlet for those emotions." , sourceName: "Eating Bird Food", sourceURL: "https://www.eatingbirdfood.com/how-to-stop-mindless-snacking/", sponsorLogo: "", sponsorURL: "")
 
@@ -514,27 +500,15 @@ let morningSnackTopic2 = Topic(title: morningSnackTitle, icon: morningSnackIcon,
 //
 let morningSnackTipArrays = [morningSnackTipArray0, morningSnackTipArray1, morningSnackTipArray2,]
 let morningSnackTopic = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArrays.random())
+let morningSnackTopics = Topics(title: morningSnackTitle, icon: morningSnackIcon, topics: [morningSnackTopic])
 
 
 
-//3
-let morningSnackTipArray3 = [morningSnackTip1, morningSnackTip2, morningSnackTip3, morningSnackTip4]
-let morningSnackTopic3 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray3)
 
-//4
-let morningSnackTipArray4 = [morningSnackTip5, morningSnackTip6, morningSnackTip7, morningSnackTip8]
-let morningSnackTopic4 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray4)
-
-//5
-let morningSnackTipArray5 = [morningSnackTip9, morningSnackTip10, morningSnackTip11, morningSnackTip4]
-let morningSnackTopic5 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray5)
-//6
-let morningSnackTipArray6 = [morningSnackTip5, morningSnackTip6, morningSnackTip7, morningSnackTip8]
-let morningSnackTopic6 = Topic(title: morningSnackTitle, icon: morningSnackIcon, tip: morningSnackTipArray6)
 
 // MARK: - AfternoonSnack
 
-let afternoonSnackTitle = "Afternoon Snack"
+let afternoonSnackTitle = "Snack"
 let afternoonSnackIcon = Constants.Icon.snack
 
 //0
@@ -556,6 +530,7 @@ let afternoonSnackTip12 = Tip(header: "Prevent Weight Gain", title: "You only ne
 
 //3
 let afternoonSnackTip13 = Tip(header: "Healthy Habit", title: "You can only have an indulgent afternoon snack if you first eat a piece of fruit", body: "Since finding a piece of fruit (and perhaps cutting it) is a hassle, and since eating it might fill you up, you'll probably also snack less - and certainly less on the indulgent snacks.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
+let afternoonSnackTip14 = Tip(header: "Warning", title: "GOOD: Moderate coffee consumption \n\nBAD: Excessive coffee consumption increases your risk of developing: obesity, osteoarthritis, and arthropathy.", body: "Although the study's authors are confident that there are no adverse health effects caused by moderate coffee consumption, they believe people with a family history of osteoarthritis or arthritis should be mindful of their daily coffee intake." , sourceName: "Ladders", sourceURL: "https://www.theladders.com/career-advice/if-you-drink-this-many-cups-of-coffee-a-day-you-raise-your-risk-for-these-three-serious-disease", sponsorLogo: "", sponsorURL: "")
 
 //0
 let afternoonSnackTipArray0 = [afternoonSnackTip1, afternoonSnackTip2, afternoonSnackTip3, afternoonSnackTip4]
@@ -568,14 +543,14 @@ let afternoonSnackTipArray2 = [afternoonSnackTip9, afternoonSnackTip10, afternoo
 let afternoonSnackTopic2 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray2)
 
 //3
-let afternoonSnackTipArray3 = [afternoonSnackTip13, afternoonSnackTip2, afternoonSnackTip3, afternoonSnackTip4]
+let afternoonSnackTipArray3 = [afternoonSnackTip13, afternoonSnackTip14, afternoonSnackTip3, afternoonSnackTip4]
 let afternoonSnackTopic3 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray3)
 
-//
+//RANDOM
 let afternoonSnackTipArrays = [afternoonSnackTipArray0, afternoonSnackTipArray1, afternoonSnackTipArray2, afternoonSnackTipArray3,]
 let afternoonSnackTopic = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArrays.random())
 
-
+let afternoonSnackTopics = Topics(title: afternoonSnackTitle, icon: afternoonSnackIcon, topics: [afternoonSnackTopic])
 
 
 
@@ -594,7 +569,7 @@ let afternoonSnackTopic6 = Topic(title: afternoonSnackTitle, icon: afternoonSnac
 
 // MARK: - LateNightSnack
 
-let lateNightSnackTitle = "Evening Snack"
+let lateNightSnackTitle = "Snack"
 let lateNightSnackIcon = Constants.Icon.snack
 
 //0
@@ -609,7 +584,7 @@ let lateNightSnackTip4 = Tip(header: "Healthy Choice 🥑", title: "Eating healt
 //1
 let lateNightSnackTip5 = Tip(header: "Reduce Your Risk", title: "Late-night eating is associated with a higher risk of diabetes", body: "Glucose tolerance is how well your body can take sugar from your bloodstream into your tissues. \n\nResearchers found that our glucose tolerance becomes relatively impaired in the evening compared to the morning. Impaired glucose tolerance is a risk factor for diabetes." , sourceName: "Vox", sourceURL: "https://www.vox.com/2016/2/17/11034546/eating-late-night-bad-diet", sponsorLogo: "", sponsorURL: "")
 let lateNightSnackTip6 = Tip(header: "Prevent Weight Gain", title: "Don't eat after 11 p.m.", body: "Study: Participants who ate between 11 p.m. and 5 a.m. gained more weight than those who did not eat during those hours. \n\nIf you need to eat at night, reach for a healthy protein-packed snack: almonds, low-fat cottage cheese, Greek yogurt, or vegetables dipped in hummus or guacamole." , sourceName: "U.S. News", sourceURL: "https://health.usnews.com/health-news/health-wellness/articles/2015/06/26/will-eating-at-night-really-make-you-gain-weight", sponsorLogo: "", sponsorURL: "")
-let lateNightSnackTip7 = Tip(header: "Prevent Acid Reflux", title: "Foods That Cause Acid Reflux:", body: "• Fried & Spicy Foods \n• Beef & Eggs \n• Dairy Products \n• Tomatoes \n• Peanut Butter \n• Jam & Jelly \n• Chocolate & Sugar \n• Alcohol, Carbonated Drinks, and Coffee \n\nFoods That Prevent Acid Reflux: \n• Kale & Raw Spinach \n• Broccoli & Celery \n• Lentils \n• Bone Broth \n• Ginger \n• Pineapple & Watermelon \n• Oatmeal \n• Almond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
+let lateNightSnackTip7 = Tip(header: "Reduce Heartburn Risk", title: "Foods That Cause Acid Reflux:", body: "• Fried & Spicy Foods \n• Beef & Eggs \n• Dairy Products \n• Tomatoes \n• Peanut Butter \n• Jam & Jelly \n• Chocolate & Sugar \n• Alcohol, Carbonated Drinks, and Coffee \n\nFoods That Prevent Acid Reflux: \n• Kale & Raw Spinach \n• Broccoli & Celery \n• Lentils \n• Bone Broth \n• Ginger \n• Pineapple & Watermelon \n• Oatmeal \n• Almond Butter", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
 let lateNightSnackTip8 = Tip(header: "Reduce Anxiety", title: "Bedtime snacks that reduce anxiety", body: "• Turkey \n• Milk \n• Blueberries \n• Oranges \n• Almonds \n• Almond butter", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/8-spinach-2/", sponsorLogo: "", sponsorURL: "")
 
 //2
@@ -633,25 +608,12 @@ let lateNightSnackTopic2 = Topic(title: lateNightSnackTitle, icon: lateNightSnac
 let lateNightSnackTipArrays = [lateNightSnackTipArray0, lateNightSnackTipArray1, lateNightSnackTipArray2,]
 let lateNightSnackTopic = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArrays.random())
 
-
-
-
-let lateNightSnackTipArray3 = [lateNightSnackTip1, lateNightSnackTip2, lateNightSnackTip3, lateNightSnackTip4]
-let lateNightSnackTopic3 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray3)
-
-let lateNightSnackTipArray4 = [lateNightSnackTip5, lateNightSnackTip6, lateNightSnackTip7, lateNightSnackTip8]
-let lateNightSnackTopic4 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray4)
-
-let lateNightSnackTipArray5 = [lateNightSnackTip9, lateNightSnackTip10, lateNightSnackTip11, lateNightSnackTip7]
-let lateNightSnackTopic5 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray5)
-
-let lateNightSnackTipArray6 = [lateNightSnackTip8, lateNightSnackTip7, lateNightSnackTip6, lateNightSnackTip5]
-let lateNightSnackTopic6 = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArray6)
+let lateNightSnackTopics = Topics(title: lateNightSnackTitle, icon: lateNightSnackTitle, topics: [lateNightSnackTopic])
 
 
 // MARK: - Restaurant
 
-let restaurantTitle = "Restaurant"
+let restaurantTitle = "Dinner"
 let restaurantIcon = Constants.Icon.restaurant
 
 //0
@@ -750,7 +712,7 @@ let restaurantTopic8 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: 
 //
 let restaurantTipArrays = [restaurantTipArray0, restaurantTipArray1, restaurantTipArray2, restaurantTipArray3, restaurantTipArray4, restaurantTipArray5, restaurantTipArray6, restaurantTipArray7, restaurantTipArray8]
 let restaurantTopic = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArrays.random())
-
+let restaurantTopics = Topics(title: restaurantTitle, icon: restaurantIcon, topics: [restaurantTopic,])
 
 
 
@@ -797,212 +759,193 @@ let meditationIcon = Constants.Icon.meditate
 
 // MARK: - Gym
 
-let gymTitle = "Gym"
+let gymTitle = "Workout"
 let gymIcon = Constants.Icon.gym
 
 //WEEK 1
-// 0
-let gymTip1 = Tip(header: "Improve Performance", title: "Drink 20 ounces of water 2 hours before exercise and drink throughout your workout", body: "During exercise, drink water early, and drink at regular intervals to prevent muscle fatigue by replacing water lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let gymTip2 = Tip(header: "Improve Performance 🎵", title: "Study: Runners who listened to music during a cardiac stress test ran 50 seconds longer and burned more calories than runners who ran in silence", body: "This provides evidence that music: \n• helps to motivate you \n• helps you exercise longer \n• helps you burn more calories", sourceName: "American College of Cardiology", sourceURL: "https://www.acc.org/about-acc/press-releases/2018/02/27/12/01/music-boosts-exercise-time-during-cardiac-stress-testing", sponsorLogo: "", sponsorURL: "")
-let gymTip3 = Tip(header: "Navy SEAL Advice", title: "When your mind is telling you you're done, you're only 40% done", body: "The 40% Rule: \n\n• When you're exercising and you think you need to stop, don't. You’re only actually 40% done. \n\n• Next time you think you've reached your limit, do 1 more." , sourceName: "Inc.", sourceURL: "https://www.inc.com/jeff-haden/develop-tremendous-mental-toughness-a-navy-seal-explains-the-40-percent-rule.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let gymTip4 = Tip(header: "Improve Performance", title: "Research: People who practiced positive self-talk were able to push harder for longer", body: "You can go a lot harder than you think you can. When you're tired, tell yourself empowering phrases like: \n\n• \"I got this!\" \n• \"I am strong!\"" , sourceName: "Time", sourceURL: "https://time.com/4606637/exercise-motivational-skills-training/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+
+//PRE WORKOUT
+
+let preGymTip0 = Tip(header: "Train like Muhammad Ali", title: "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.", body: "- Muhammad Ali", sourceName: "Inc.", sourceURL: "https://www.inc.com/gordon-tredgold/muhammad-ali-50-inspiring-thoughts-from-the-greatest-of-all-time.html", sponsorLogo: "", sponsorURL: "")
+let preGymTip1 = Tip(header: "Improve Performance", title: "Drink 20 ounces of water 2 hours before exercise and drink throughout your workout", body: "During exercise, drink water early, and drink at regular intervals to prevent muscle fatigue by replacing water lost by sweating." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let preGymTip2 = Tip(header: "Burn More Fat", title: "Don't only do cardio. Weight training helps you get and maintain a lean physique", body: "The more muscle mass you have the faster your metabolism. \n\nWeight training causes you to burn more calories per workout than cardio sessions, and you continue to burn them post workout.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
+let preGymTip3 = Tip(header: "Improve Performance 🎵", title: "Study: Runners who listened to music during a cardiac stress test ran 50 seconds longer and burned more calories than runners who ran in silence", body: "This provides evidence that music: \n• helps to motivate you \n• helps you exercise longer \n• helps you burn more calories", sourceName: "American College of Cardiology", sourceURL: "https://www.acc.org/about-acc/press-releases/2018/02/27/12/01/music-boosts-exercise-time-during-cardiac-stress-testing", sponsorLogo: "", sponsorURL: "")
 
 
-// 1
-let gymTip5 = Tip(header: "Train like Muhammad Ali", title: "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.", body: "- Muhammad Ali", sourceName: "Inc.", sourceURL: "https://www.inc.com/gordon-tredgold/muhammad-ali-50-inspiring-thoughts-from-the-greatest-of-all-time.html", sponsorLogo: "", sponsorURL: "")
-let gymTip6 = Tip(header: "Navy SEAL Advice", title: "Do box breathing before each workout", body: "With your nose: \n• Inhale for a count of 5 \n• Hold for a count of 5 \n• Exhale for a count of 5 \n• Hold for a count of 5 \n\nRepeat for at least 5 minutes. This leads to a calm, steady mindstate.", sourceName: "SEALFIT", sourceURL: "https://sealfit.com/box-breathing/", sponsorLogo: "ABC", sponsorURL: "URL")
-let gymTip7 = Tip(header: "Enjoy Cardio?", title: "Skip the hours on the treadmill or bike and do high-intensity interval training (HIIT) workouts", body: "They're the most effective type of cardio proven to target belly fat. It not only works, but it saves you time at the gym.", sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45270438/image/45345719/Do-Add-Exercise", sponsorLogo: "", sponsorURL: "")
-let gymTip8 = Tip(header: "Navy SEAL Advice", title: "Positive internal dialogue improves perforance", body: "Override negative thoughts with positive ones. Repeat a power statement to yourself like: \n\n• Let's go! \n\n• I got this! \n\n• Feeling good, looking good, oughta be in Hollywood! \n\n• Day by day, in every way, I am getting better and better.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
+let preGymTip4 = Tip(header: "Train like Arnold Schwarzenegger", title: "The last three or four reps is what makes the muscle grow. This area of pain divides the champion from someone else who is not a champion. \n\nThat’s what most people lack, having the guts to go on and just say they’ll go through the pain no matter what happens.", body: "- Arnold Schwarzenegger", sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/arnold-schwarzenegger-quotes/", sponsorLogo: "", sponsorURL: "")
+let preGymTip5 = Tip(header: "Lose Belly Fat", title: "Don't eat before your workout", body: "Study: Exercising in a fasted state can burn almost 20% more fat compared with exercising with fuel in your belly. \n\nIf you must eat before a workout, make sure it’s a light snack.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
+let preGymTip6 = Tip(header: "Navy SEAL Advice", title: "Do box breathing before each workout", body: "With your nose: \n• Inhale for a count of 5 \n• Hold for a count of 5 \n• Exhale for a count of 5 \n• Hold for a count of 5 \n\nRepeat for at least 5 minutes. This leads to a calm, steady mindstate.", sourceName: "SEALFIT", sourceURL: "https://sealfit.com/box-breathing/", sponsorLogo: "ABC", sponsorURL: "URL")
+let preGymTip7 = Tip(header: "Enjoy Cardio?", title: "Skip the hours on the treadmill or bike and do high-intensity interval training (HIIT) workouts", body: "They're the most effective type of cardio proven to target belly fat. It not only works, but it saves you time at the gym.", sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45270438/image/45345719/Do-Add-Exercise", sponsorLogo: "", sponsorURL: "")
+
+
+let preGymTip8 = Tip(header: "Train like Bruce Lee", title: "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.", body: "- Bruce Lee", sourceName: "Inc.", sourceURL: "https://www.inc.com/ilan-mochari/bruce-lee-learning.html", sponsorLogo: "", sponsorURL: "")
+let preGymTip9 = Tip(header: "Increase Performance", title: "Get pumped up by reminding yourself why you are working out", body: "When you’re feeling lazy or like you want to quit, remind yourself why you are working out. \n\nIf you have a powerful reason why, you can get through anything.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/health-fitness/mental-toughness-training/", sponsorLogo: "", sponsorURL: "")
+let preGymTip10 = Tip(header: "How To Stretch", title: "DON'T do static stretching, DO dynamic stretching", body: "Static stretching, in which you hold a stretch for 5-10 seconds, reduces performance and does not protect you against injury. \n\nIn contrast, dynamic stretching can improve performance, power, and strength. \n\nGood pre-workout dynamic stretches: \n\n• Arm circles \n• Hip circles \n• Leg swings \n• Walking lunges \n• Bodyweight squats", sourceName: "Quick And Dirty Tips", sourceURL: "https://www.quickanddirtytips.com/health-fitness/exercise/what-is-the-best-way-to-warm-up", sponsorLogo: "", sponsorURL: "")
+let preGymTip11 = Tip(header: "Train Like Olympic Athletes", title: "90% of Olympic athletes use visualization, and 97% of them claim it helped their performance", body: "• Visualize your personal victory. \n• See yourself performing; sense your movement, emotions; hear the sounds of success; feel the actual air, water, handshake, etc. \n\nVisualized events, if vivid and empowered with positive thoughts and emotion, stimulate and program your nervous and muscular system as if you are actually practicing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+
+
+let preGymTip12 = Tip(header: "Train like Arnold Schwarzenegger", title: "There are no shortcuts—everything is reps, reps, reps. \n\nIf you don’t find the time, if you don’t do the work, you don’t get the results.", body: "- Arnold Schwarzenegger", sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/arnold-schwarzenegger-quotes/", sponsorLogo: "", sponsorURL: "")
+let preGymTip13 = Tip(header: "Get Better Results", title: "Study: Choosing a partner who you perceive to be a better performer than you could increase your workout time and intensity by as much as 200%", body: "When you're performing with someone who you perceive as a little better than you, you tend to give more effort than you normally would [when exercising] alone. \n\nThis motivation gain is even greater when individuals are put in a team setting and the outcome of the performance is dependent on the weaker individual. ", sourceName: "American Council on Exercise", sourceURL: "https://www.acefitness.org/education-and-resources/lifestyle/blog/3014/does-working-out-with-a-partner-affect-performance", sponsorLogo: "", sponsorURL: "")
+let preGymTip14 = Tip(header: "Perform Better", title: "Controlling your breath is a great tool for exercise (and life)", body: "It's a secret practice of ancient yogis and martial artists use to develop more power, presence, and mental control. \n\nBefore your workout, perform the box breathing exercise for 5 minutes.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
+let preGymTip15 = Tip(header: "Improve Performance", title: "Wear orange clothes during exercise", body: "Orange is a color of stimulation and enthusiasm. \n\nResearch: Seeing orange increases oxygen supply to the brain, produces an energizing effect, and stimulates brain activity.", sourceName: "Science of People", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+
+
+let preGymTip16 = Tip(header: "Train like Conor Mcgregor", title: "There’s no talent here, this is hard work. This is an obsession. Talent does not exist, we are all human beings. You could be anyone if you put in the time.", body: "- Conor Mcgregor", sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/conor-mcgregor-quotes-to-make-you-a-champion/", sponsorLogo: "", sponsorURL: "")
+let preGymTip17 = Tip(header: "Pre-workout", title: "Warmup 5-15 minutes to raise your heart rate and body temperature", body: "Make sure you break a sweat. \n\nGood warmups: Yoga poses, walking slowing and then gradually building into a jog, or cycling at a low intensity and building up to a moderate effort over a few minutes.", sourceName: "Quick And Dirty Tips", sourceURL: "https://www.quickanddirtytips.com/health-fitness/exercise/why-pre-workout-static-stretching-is-actually-dangerous", sponsorLogo: "", sponsorURL: "")
+let preGymTip18 = Tip(header: "Get Better Results", title: "Research: Shorter but more intensive exercise is more effective than longer drawn-out exercise", body: "Most of the growth actually comes during the recovery process. \n\nHowever, the only way to truly recover is by actually pushing yourself to exhaustion during the workout." , sourceName: "ACSM", sourceURL: "https://www.acsm.org/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let preGymTip19 = Tip(header: "Improve Performance 🌬", title: "Elite athletes and Navy SEALs utilize breath control to prepare for missions and events, and you should too", body: "The breathing doesn't need to be fancy or esoteric - simple, long inhale holds followed by powerful forced exhale and short exhale hold will do the trick. \n\nRepeat it 20x while visualizing your ideal performance and repeating positive affirmations and mantras to psych yourself up physically and mentally.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+
+
+let preGymTip20 = Tip(header: "Train Like Muhammad Ali", title: "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.'", body: "- Muhammad Ali" , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/muhammad-ali-quotes", sponsorLogo: "", sponsorURL: "")
+let preGymTip21 = Tip(header: "Decrease Belly Fat", title: "Strength train 3 times a week", body: "Many experts agree that cardio shouldn't be your main focus. \n\nIncorporate strength training to increase your muscle mass to burn more calories and speed up your metabolism.", sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45405356/image/45407154/You-Dont-Strength-Train", sponsorLogo: "", sponsorURL: "")
+let preGymTip22 = Tip(header: "Eat Healthier", title: "Framing exercise as \"fun\" instead of \"exercise\" reduces the number of unhealthy foods consumed afterward", body: "Study: When we view exercise as something we do for fun, we’re better at resisting unhealthy foods afterward. \n\nBut when the same physical activity is perceived as a chore, we have a much harder time saying no to fattening foods.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/10/regular-exercise-is-part-of-your-job", sponsorLogo: "", sponsorURL: "")
+let preGymTip23 = Tip(header: "Train Like A Navy SEAL", title: "Prepare for your workout with the same warrior mindset techniques that Navy SEALs use before a dangerous mission", body: "You must first win the battle-in your mind-to win every other battle in life. \n\n1. Find a quiet place where you won't be distracted. Clear your mind. Eliminate distractions and develop a deep, positive concentration of the task ahead of you. \n\n2. Review your workout. Understand all exercises before beginning. Have your towel, water bottle, journal, and pencil ready. \n\n3. Know your \"why\" and remind yourself why you're committed to training. \n\n4. Visualize yourself performing the workout. See success in your mind. Rehearse the whole thing with perfect form. \n\n5. Activate deep breathing and charge your body with positive energy and emotions for optimal performance. \n\n6. Begin a positive internal dialogue, which you will maintain throughout your workout.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+
+
+let preGymTip24 = Tip(header: "Train Like Muhammad Ali", title: "To be a great champion you must believe you are the best. If you're not, pretend you are.", body: "- Muhammad Ali" , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/muhammad-ali-quotes", sponsorLogo: "", sponsorURL: "")
+let preGymTip25 = Tip(header: "Navy SEAL Advice", title: "DON'T: Just \"workout\" \nDO: Develop a disciplined habit of training", body: "Training is a lifelong growth of your physical, mental, emotional, and spiritual skills to become a better person. \n\nDon't skip a training session without serious thought. When its cold, you train. When it rains, you train. If you must, make it up.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
+let preGymTip26 = Tip(header: "Lose Weight", title: "DO: Drink water \nDON'T: Drink sports drinks", body: "Sports drinks have high amounts of sugar, which can cause weight gain. \n\nUnless you are doing intense exercise where you are losing significant amounts of electrolytes, it's better to stick with water for hydration.", sourceName: "SheFinds", sourceURL: "https://www.shefinds.com/collections/the-one-drink-you-shouldnt-have-for-weight-loss-according-to-a-nutritionist/#slide-1", sponsorLogo: "", sponsorURL: "")
+let preGymTip27 = Tip(header: "Get Better Results", title: "Work out with weights first and cardio last", body: "Your body is better able to handle weight training early in the workout because you're fresh and have the energy you need. \n\nCardio exercise should be last because it helps your body recover by increasing blood flow to the muscles, and flushing out lactic acid that was built up from weight lifting. \n\nThe lactic acid is what makes your muscles feel stiff and sore.", sourceName: "Health24", sourceURL: "https://www.health24.com/Medical/Flu/Health-tips/45-best-health-tips-ever-20120721", sponsorLogo: "", sponsorURL: "")
+
+
+let preGymTip28 = Tip(header: "Train Like David Goggins", title: "I have a saying that says 'I don't stop when I'm tired, I stop when I'm done.'", body: "- David Goggins \n\nAmerican ultramarathon runner, ultra-distance cyclist, triathlete, motivational speaker and author. He is a retired US Navy SEAL and former US Air Force Tactical Air Control Party member who served in the War in Afghanistan and the Iraq War.", sourceName: "YouTube: SUCCESS CHASERS", sourceURL: "https://www.youtube.com/watch?v=3_JHcji8JEs", sponsorLogo: "", sponsorURL: "")
+let preGymTip29 = Tip(header: "Lose Weight", title: "DON'T: Bring bottled water to the gym. \nDO: Bring a reusable, BPA-free water bottle.", body: "Not only does bottled water drain your wallet, it may also slow your weight loss progress, due to the BPA in the plastic. \n\nBPA is a chemical that’s been linked to obesity and belly fat, according to a Harvard study. \n\nTrade in your throw-away bottle for the reusable, BPA-free variety.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
+let preGymTip30 = Tip(header: "Navy Seal Advice", title: "Visualize your workout before you start", body: "True warriors through the ages have discovered this secret: you first need to win in your mind; only then can you win in the battleground. \n\nVisualize the whole workout with perfect form. Navy SEALs do this before each mission.", sourceName: "8 Weeks to Sealfit", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
+let preGymTip31 = Tip(header: "Burn More Fat", title: "Do a 20 minute high-intensity interval training (HIIT) workout instead of a 40 minute steady pace workout", body: "Study: When women performed a 20-minute HIIT workout 3 times per week, they shed nearly 6 pounds more than those who exercised for 40 minutes 3 times a week at a steady pace. \n\nWhile HIIT is of shorter duration than a regular cardio workout, it results in greater post-exercise oxygen consumption, meaning that you continue burning calories for a period of time afterward.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
+
+
+let preGymTip32 = Tip(header: "Train like Muhammad Ali", title: "I don't count the sit-ups. I only start counting when it starts hurting because they're the only ones that count. That's what makes you a champion.", body: "- Muhammad Ali", sourceName: "Inc.", sourceURL: "https://www.inc.com/gordon-tredgold/muhammad-ali-50-inspiring-thoughts-from-the-greatest-of-all-time.html", sponsorLogo: "", sponsorURL: "")
+let preGymTip33 = Tip(header: "Increase Success", title: "What is your favorite place to think big?", body: "Facebook COO Sheryl Sandberg said she did her best thinking on the treadmill.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/mark-zuckerberg-bill-gates-best-place-to-think-2018-11", sponsorLogo: "", sponsorURL: "")
+let preGymTip34 = Tip(header: "Improve Performance", title: "Drink 16 ounces of extra water before you exercise", body: "The American College of Sports Medicine: \n• Drink 16 ounces of extra water before you exercise \n• Sip on 4-8 ounces during exercise \n• Drink another 16 ounces after exercise \n\nJust a 2% dehydration in the body can negatively impact athletic performance.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
+let preGymTip35 = Tip(header: "Develop Grit", title: "Start each workout with intensity", body: "Grit is earned. The more you lean into the hard things, the grittier your character becomes. \n\nIf you slack off, you lose it. If you don't possess passion for your training, fake it 'til you make it.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+
+
+
+let preGymTipArray0 = [preGymTip0, preGymTip1, preGymTip2, preGymTip3]
+let preGymTipArray1 = [preGymTip4, preGymTip5, preGymTip6, preGymTip7]
+let preGymTipArray2 = [preGymTip8, preGymTip9, preGymTip10, preGymTip11]
+let preGymTipArray3 = [preGymTip12, preGymTip13, preGymTip14, preGymTip15]
+let preGymTipArray4 = [preGymTip16, preGymTip17, preGymTip18, preGymTip19]
+let preGymTipArray5 = [preGymTip20, preGymTip21, preGymTip22, preGymTip23]
+let preGymTipArray6 = [preGymTip24, preGymTip25, preGymTip26, preGymTip27]
+let preGymTipArray7 = [preGymTip28, preGymTip29, preGymTip30, preGymTip31]
+let preGymTipArray8 = [preGymTip32, preGymTip33, preGymTip34, preGymTip35]
+
+//
+let preGymTipArrays = [preGymTipArray0, preGymTipArray1, preGymTipArray2, preGymTipArray3, preGymTipArray4, preGymTipArray5, preGymTipArray6, preGymTipArray7, preGymTipArray8]
+
+let preGymTitle = "Pre Workout"
+let preGymTopic = Topic(title: preGymTitle, icon: gymIcon, tip: preGymTipArrays.random())
 
 
 
 
 
-// 2
-let gymTip9 = Tip(header: "Pre-workout", title: "Warmup 5-15 minutes to raise your heart rate and body temperature", body: "Make sure you break a sweat. \n\nGood warmups: Yoga poses, walking slowing and then gradually building into a jog, or cycling at a low intensity and building up to a moderate effort over a few minutes.", sourceName: "Quick And Dirty Tips", sourceURL: "https://www.quickanddirtytips.com/health-fitness/exercise/why-pre-workout-static-stretching-is-actually-dangerous?utm_source=sciam&utm_campaign=sciam", sponsorLogo: "", sponsorURL: "")
-let gymTip10 = Tip(header: "Post-workout", title: "Step 1: Stretch to prevent injury", body: "Stretch before your muscles have time to cool down, which takes 30-40 minutes. \n\nFor proper recovery, do 5 minutes of stretching followed by 5 minutes of ironing out the kinks with a foam roller.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
-let gymTip11 = Tip(header: "Post-workout", title: "Step 2: Shower or change your clothes", body: "Don't wait longer than 30 minutes to shower or change your clothes. \n\nWet clothes trap moisture that encourages the growth of germs, bacteria, fungus and yeast, which could invite a skin infection or cause breakouts.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
-let gymTip12 = Tip(header: "Post-workout", title: "Step 3: Eat carbs and protein", body: "Eating within 30-minutes after a workout: \n\n• Optimizes recovery; \n• Reduces soreness; and \n• Helps you perform better during your next workout.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
-
-// 3
-let gymTip13 = Tip(header: "Train like Arnold Schwarzenegger", title: "The last three or four reps is what makes the muscle grow. This area of pain divides the champion from someone else who is not a champion. \n\nThat’s what most people lack, having the guts to go on and just say they’ll go through the pain no matter what happens.", body: "- Arnold Schwarzenegger", sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/arnold-schwarzenegger-quotes/", sponsorLogo: "", sponsorURL: "")
-let gymTip14 = Tip(header: "How To Stretch", title: "DON'T do static stretching, DO dynamic stretching", body: "Static stretching, in which you hold a stretch for 5-10 seconds, reduces performance and does not protect you against injury. \n\nIn contrast, dynamic stretching can improve performance, power, and strength. \n\nGood pre-workout dynamic stretches: \n\n• Arm circles \n• Hip circles \n• Leg swings \n• Walking lunges \n• Bodyweight squats", sourceName: "Quick And Dirty Tips", sourceURL: "https://www.quickanddirtytips.com/health-fitness/exercise/what-is-the-best-way-to-warm-up", sponsorLogo: "", sponsorURL: "")
-let gymTip15 = Tip(header: "Increase Performance", title: "Get pumped up by reminding yourself why you are working out", body: "When you’re feeling lazy or like you want to quit, remind yourself why you are working out. \n\nIf you have a powerful reason why, you can get through anything.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/health-fitness/mental-toughness-training/", sponsorLogo: "", sponsorURL: "")
-let gymTip16 = Tip(header: "Perform Better", title: "Controlling your breath is a great tool for exercise (and life)", body: "It's a secret practice of ancient yogis and martial artists use to develop more power, presence, and mental control. \n\nBefore your workout, perform the box breathing exercise for 5 minutes.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
-// 4
-let gymTip17 = Tip(header: "Train like Bruce Lee", title: "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.", body: "- Bruce Lee", sourceName: "Inc.", sourceURL: "https://www.inc.com/ilan-mochari/bruce-lee-learning.html", sponsorLogo: "", sponsorURL: "")
-let gymTip18 = Tip(header: "Get Better Results", title: "Study: Choosing a partner who you perceive to be a better performer than you could increase your workout time and intensity by as much as 200%", body: "When you're performing with someone who you perceive as a little better than you, you tend to give more effort than you normally would [when exercising] alone. \n\nThis motivation gain is even greater when individuals are put in a team setting and the outcome of the performance is dependent on the weaker individual. ", sourceName: "American Council on Exercise", sourceURL: "https://www.acefitness.org/education-and-resources/lifestyle/blog/3014/does-working-out-with-a-partner-affect-performance", sponsorLogo: "", sponsorURL: "")
-
-let gymTip19 = Tip(header: "Get Better Results", title: "Breathe through your nose", body: "It allows for more deeper breaths into your diaphragm. \n\nIf you feel you're not getting air, use your mouth to take a few extra gulps of air, and then go back to nostril breathing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
-let gymTip20 = Tip(header: "Build Muscle", title: "Consume 20 grams of protein after your workout", body: "Compared to the 0-gram and 10-gram doses, the 20-gram and 40-gram doses more effectively stimulated muscle protein synthesis—the process that helps promote the muscle repair and growth after exercise. \n\nHowever, the 40-gram dose didn’t produce any added benefit compared to the 20-gram dose. \n\nGood post-workout options are: \n• Whey protein powder \n• Milk \n• Yogurt", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/fitness/a19520629/how-much-post-workout-protein-do-you-really-need/", sponsorLogo: "", sponsorURL: "")
-
-//5
-let gymTip21 = Tip(header: "Train like Arnold Schwarzenegger", title: "There are no shortcuts—everything is reps, reps, reps. \n\nIf you don’t find the time, if you don’t do the work, you don’t get the results.", body: "- Arnold Schwarzenegger", sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/arnold-schwarzenegger-quotes/", sponsorLogo: "", sponsorURL: "")
-let gymTip22 = Tip(header: "Get Better Results", title: "Research: Shorter but more intensive exercise is more effective than longer drawn-out exercise", body: "Most of the growth actually comes during the recovery process. \n\nHowever, the only way to truly recover is by actually pushing yourself to exhaustion during the workout." , sourceName: "ACSM", sourceURL: "https://www.acsm.org/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let gymTip23 = Tip(header: "Decrease Belly Fat", title: "Strength train 3 times a week", body: "Many experts agree that cardio shouldn't be your main focus. \n\nIncorporate strength training to increase your muscle mass to burn more calories and speed up your metabolism.", sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45405356/image/45407154/You-Dont-Strength-Train", sponsorLogo: "", sponsorURL: "")
-let gymTip24 = Tip(header: "Eat Healthier", title: "Framing exercise as \"fun\" instead of \"exercise\" reduces the number of unhealthy foods consumed afterward", body: "Study: When we view exercise as something we do for fun, we’re better at resisting unhealthy foods afterward. \n\nBut when the same physical activity is perceived as a chore, we have a much harder time saying no to fattening foods.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/10/regular-exercise-is-part-of-your-job", sponsorLogo: "", sponsorURL: "")
-
-//6
-let gymTip25 = Tip(header: "Train like Muhammad Ali", title: "I don't count the sit-ups. I only start counting when it starts hurting because they're the only ones that count. That's what makes you a champion.", body: "- Muhammad Ali", sourceName: "Inc.", sourceURL: "https://www.inc.com/gordon-tredgold/muhammad-ali-50-inspiring-thoughts-from-the-greatest-of-all-time.html", sponsorLogo: "", sponsorURL: "")
-let gymTip26 = Tip(header: "Navy SEAL Advice", title: "DON'T: Just \"workout.\" \nDO: Develop a disciplined habit of training", body: "Training is a lifelong growth of your physical, mental, emotional, and spiritual skills to become a better person. \n\nDon't skip a training session without serious thought. When its cold, you train. When it rains, you train. If you must, make it up.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
-let gymTip27 = Tip(header: "Get Better Results", title: "Work out with weights first and cardio last", body: "Your body is better able to handle weight training early in the workout because you're fresh and have the energy you need. \n\nCardio exercise should be last because it helps your body recover by increasing blood flow to the muscles, and flushing out lactic acid that was built up from weight lifting. \n\nThe lactic acid is what makes your muscles feel stiff and sore.", sourceName: "Health24", sourceURL: "https://www.health24.com/Medical/Flu/Health-tips/45-best-health-tips-ever-20120721", sponsorLogo: "", sponsorURL: "")
-let gymTip28 = Tip(header: "Increase Performance", title: "Exercise to music", body: "Study: Athletes' endurance increased by 20% when running in sync with the rhythms of the music, compared with trials when they exercised in silence. \n\nMoving in sync to music can increase the release of endorphins, which helps increase your pain threshold.", sourceName: "BBC News", sourceURL: "http://www.bbc.com/culture/story/20190729-what-songs-make-you-work-out-harder", sponsorLogo: "", sponsorURL: "")
 
 
 
-//WEEK 2
-//7
-let gymTip29 = Tip(header: "Navy Seal Advice", title: "Visualize your workout before you start", body: "True warriors through the ages have discovered this secret: you first need to win in your mind; only then can you win in the battleground. \n\nVisualize the whole workout with perfect form. Navy SEALs do this before each mission.", sourceName: "8 Weeks to Sealfit", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
-let gymTip30 = Tip(header: "Lose Weight", title: "Don't bring bottled water to the gym. Instead, bring a reusable, BPA-free water bottle", body: "Not only does bottled water drain your wallet, it may also slow your weight loss progress, due to the BPA in the plastic. \n\nBPA is a chemical that’s been linked to obesity and belly fat, according to a Harvard study. \n\nTrade in your throw-away bottle for the reusable, BPA-free variety.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
-let gymTip31 = Tip(header: "Increase Success", title: "What is your favorite place to think big?", body: "Facebook COO Sheryl Sandberg said she did her best thinking on the treadmill.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/mark-zuckerberg-bill-gates-best-place-to-think-2018-11", sponsorLogo: "", sponsorURL: "")
-let gymTip32 = Tip(header: "Improve Performance", title: "During your entire workout keep your breathing deep and diaphragmatic, even when winded", body: "Press air deep into your lungs at the end of each inhale by pressing your belly out. \n\nIn through your nose and out through your nose. \n\nYou can exhale through the mouth if you need to speed up the rate of breathing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-
-//8
-let gymTip33 = Tip(header: "Improve Performance", title: "Exercise to music. Study: When listening to music, people tend to underestimate their exertion by about 10%, meaning the whole workout ends up feeling much less difficult than it would have without the music", body: "Music helps to direct your attention outwards rather than inwards, and drowns out the feelings of fatigue in our bodies. \n\nThis should increase your overall endurance, helping you to exercise harder for longer.", sourceName: "BBC News", sourceURL: "http://www.bbc.com/culture/story/20190729-what-songs-make-you-work-out-harder", sponsorLogo: "", sponsorURL: "")
-let gymTip34 = Tip(header: "Improve Performance", title: "Drink fresh water before, during, and after a workout. Eat a protein-laden snack within 30 minutes of a workout", body: "Dehydration and undernourishment will lead to a declining performance, low motivation, and possible injury. \n\nHydrating and refueling must become a discipline.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-let gymTip35 = Tip(header: "Improve Performance", title: "During high-intensity training try to not inhale through your mouth", body: "Unlike breathing through your mouth, breathing through your nose stimulates the arousal control response. \n\nIt cleanses and warms the air and also allows deeper, more penetrating breaths into your diaphragm.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-let gymTip36 = Tip(header: "Develop Grit", title: "Start each workout with intensity", body: "Grit is earned. The more you lean into the hard things, the grittier your character becomes. \n\nIf you slack off, you lose it. If you don't possess passion for your training, fake it 'til you make it.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-
-//9
-let gymTip37 = Tip(header: "Train like Conor Mcgregor", title: "There’s no talent here, this is hard work. This is an obsession. Talent does not exist, we are all human beings. You could be anyone if you put in the time.", body: "- Conor Mcgregor", sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/conor-mcgregor-quotes-to-make-you-a-champion/", sponsorLogo: "", sponsorURL: "")
-let gymTip38 = Tip(header: "Train Like A Navy SEAL", title: "Prepare for your workout with the same warrior mindset techniques that Navy SEALs use before a dangerous mission", body: "You must first win the battle-in your mind-to win every other battle in life. \n\n1. Find a quiet place where you won't be distracted. Clear your mind. Eliminate distractions and develop a deep, positive concentration of the task ahead of you. \n\n2. Review your workout. Understand all exercises before beginning. Have your towel, water bottle, journal, and pencil ready. \n\n3. Know your \"why\" and remind yourself why you're committed to training. \n\n4. Visualize yourself performing the workout. See success in your mind. Rehearse the whole thing with perfect form. \n\n5. Activate deep breathing and charge your body with positive energy and emotions for optimal performance. \n\n6. Begin a positive internal dialogue, which you will maintain throughout your workout.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-let gymTip39 = Tip(header: "Improve Performance 🌬", title: "Elite athletes and Navy SEALs utilize breath control to prepare for missions and events, and you should too", body: "The breathing doesn't need to be fancy or esoteric - simple, long inhale holds followed by powerful forced exhale and short exhale hold will do the trick. \n\nRepeat it 20x while visualizing your ideal performance and repeating positive affirmations and mantras to psych yourself up physically and mentally.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-let gymTip40 = Tip(header: "Navy SEAL Advice", title: "One technique for embracing the suck of a difficult workout is to change your state of mind by focusing on something else that is positive... and then smiling or even laughing", body: "Former Navy SEAL, Mark Divine, explains: \n\n\"This worked wonders during SEAL training. Some of my funniest and fondest memories are of the most difficult events. Because I put on a happy face and found humor in some oddity of the moment, the pain disappeared, replaced by growing confidence and courage.\"", sourceName: "The WAY OF THE SEAL", sourceURL: "https://www.amazon.com/dp/B00IUP7CC6", sponsorLogo: "", sponsorURL: "")
-
-//10
-let gymTip41 = Tip(header: "Improve Performance", title: "Wear orange clothes during exercise", body: "Orange is a color of stimulation and enthusiasm. \n\nResearch: Seeing orange increases oxygen supply to the brain, produces an energizing effect, and stimulates brain activity.", sourceName: "Science of People", sourceURL: "", sponsorLogo: "", sponsorURL: "")
-let gymTip42 = Tip(header: "Train Like Olympic Athletes", title: "90% of Olympic athletes use visualization, and 97% of them claim it helped their performance", body: "• Visualize your personal victory. \n• See yourself performing; sense your movement, emotions; hear the sounds of success; feel the actual air, water, handshake, etc. \n\nVisualized events, if vivid and empowered with positive thoughts and emotion, stimulate and program your nervous and muscular system as if you are actually practicing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-let gymTip43 = Tip(header: "Improve Performance", title: "Drink 16 ounces of extra water before you exercise", body: "The American College of Sports Medicine: \n• Drink 16 ounces of extra water before you exercise \n• Sip on 4-8 ounces during exercise \n• Drink another 16 ounces after exercise \n\nJust a 2% dehydration in the body can negatively impact athletic performance.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/drink-water-lose-weight/", sponsorLogo: "", sponsorURL: "")
-let gymTip44 = Tip(header: "Eat Healthier", title: "Think of exericse as \"toning\" and not as \"burning calories.\" You'll eat less later on", body: "Survey: The majority of gym-goers who reframed exercise as \"getting tone\" said that it made them less likely to reward themselves with extra calories afterward.", sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
 
 
-//11
-let gymTip45 = Tip(header: "Lose Belly Fat", title: "Don't eat before your workout", body: "Though fasted cardio isn’t suitable for everyone, a study found that exercising in a fasted state can burn almost 20% more fat compared with exercising with fuel in your belly. \n\nIf you must eat before a workout, make sure it’s a light snack.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
-let gymTip46 = Tip(header: "Improve Performance", title: "When resting between sets, commit to 5 deep breaths", body: "As you breathe, bring total relaxation awareness into your body. \n\nTurn your attention inward, not worrying about anyone else, and just visualize slowing your heart rate and regulating your systems.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-let gymTip47 = Tip(header: "Improve Performance", title: "Exercise to fast tempo music. Study: Fast tempo music causes our heart’s rhythm to increase by 5-15 beats per minute", body: "It also triggers the release of adrenaline that helps prime the body for greater physical effort. \n\nCombined with motivational lyrics, the physiological response could put you in the perfect physical and mental state to exercise harder and get into a state of flow.", sourceName: "BBC News", sourceURL: "http://www.bbc.com/culture/story/20190729-what-songs-make-you-work-out-harder", sponsorLogo: "", sponsorURL: "")
-let gymTip48 = Tip(header: "Burn More Fat", title: "Don't only do cardio. Weight training helps you get and maintain a lean physique", body: "The more muscle mass you have the faster your metabolism. \n\nWeight training causes you to burn more calories per workout than cardio sessions, and you continue to burn them post workout.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
 
-//12
-let gymTip49 = Tip(header: "Train Like Muhammad Ali", title: "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.'", body: "- Muhammad Ali" , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/muhammad-ali-quotes", sponsorLogo: "", sponsorURL: "")
-let gymTip50 = Tip(header: "Lift More Weight", title: "Proper breathing can help you lift heavier; give you more muscular endurance; and help you recover more quickly", body: "Breathe out on the concentric phase of the lift (when you’re doing a bicep curl, the concentric portion is when you lift the weight toward your shoulder, and the eccentric portion is when you lower it back toward the ground). \n\nWhen you exhale and squeeze the air out, you increase core engagement. \n\nA tight core equals more power and more stability—and you want to have that extra help on the most challenging part, the lift.", sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-breathe-during-a-workout", sponsorLogo: "", sponsorURL: "")
-let gymTip51 = Tip(header: "Train Like A Navy SEAL", title: "\"You’re capable of 20 times more than you think you are.\" \n\n- Mark Divine", body: "Everyone is capable of accomplishing at least 20 times what they perceive themselves capable of accomplishing. Have a strong “Why” or purpose for your training and never give up.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
-let gymTip52 = Tip(header: "Burn More Fat", title: "Do a 20 minute high-intensity interval training (HIIT) workout instead of a 40 minute steady pace workout", body: "Study: When women performed a 20-minute HIIT workout 3 times per week, they shed nearly 6 pounds more than those who exercised for 40 minutes 3 times a week at a steady pace. \n\nWhile HIIT is of shorter duration than a regular cardio workout, it results in greater post-exercise oxygen consumption, meaning that you continue burning calories for a period of time afterward.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
+//DURING WORKOUT
 
-//13
-let gymTip53 = Tip(header: "Train Like Muhammad Ali", title: "To be a great champion you must believe you are the best. If you're not, pretend you are.", body: "- Muhammad Ali" , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/muhammad-ali-quotes", sponsorLogo: "", sponsorURL: "")
-let gymTip54 = Tip(header: "Increase Motivation", title: "Study: Listening to music during exercise increases enjoyment 28% more than silence and 13% more than a podcast", body: "Music rearranges the brain's electrical frequency and causes a drop in focus but enhances enjoyment. \n\nIf you're not motivated to exercise then make sure to listen to music.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/listening-to-music-while-working-out-might-help-you-burn-more-calories-2018-3", sponsorLogo: "", sponsorURL: "")
-let gymTip55 = Tip(header: "Lose Weight", title: "DO: Drink water \nDON'T: Drink sports drinks", body: "Sports drinks have high amounts of sugar, which can cause weight gain. \n\nUnless you are doing intense exercise where you are losing significant amounts of electrolytes, it's better to stick with water for hydration.", sourceName: "SheFinds", sourceURL: "https://www.shefinds.com/collections/the-one-drink-you-shouldnt-have-for-weight-loss-according-to-a-nutritionist/#slide-1", sponsorLogo: "", sponsorURL: "")
-let gymTip56 = Tip(header: "Build Muscle", title: "Unless you’re challenging your muscles with heavy enough weights, you won’t see any physical changes", body: "“If you’re doing more than 10 reps with ease, your weight probably isn’t heavy enough,” warns personal trainer Dustin Hassard. \n\n“Vary your reps and consistently increase the amount you’re lifting to see results.” \n\nAnd after your workout, replenish your tired muscles with a protein shake.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
+let gymTip0 = Tip(header: "Navy SEAL Advice", title: "When your mind is telling you you're done, you're only 40% done", body: "The 40% Rule: \n\n• When you're exercising and you think you need to stop, don't. You’re only actually 40% done. \n\n• Next time you think you've reached your limit, do 1 more." , sourceName: "Inc.", sourceURL: "https://www.inc.com/jeff-haden/develop-tremendous-mental-toughness-a-navy-seal-explains-the-40-percent-rule.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let gymTip1 = Tip(header: "Improve Performance", title: "Research: People who practiced positive self-talk were able to push harder for longer", body: "You can go a lot harder than you think you can. When you're tired, tell yourself empowering phrases like: \n\n• \"I got this!\" \n• \"I am strong!\"" , sourceName: "Time", sourceURL: "https://time.com/4606637/exercise-motivational-skills-training/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let gymTip2 = Tip(header: "Navy SEAL Advice", title: "Positive internal dialogue improves perforance", body: "Override negative thoughts with positive ones. Repeat a power statement to yourself like: \n\n• Let's go! \n\n• I got this! \n\n• Feeling good, looking good, oughta be in Hollywood! \n\n• Day by day, in every way, I am getting better and better.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
+let gymTip3 = Tip(header: "Get Better Results", title: "Breathe through your nose", body: "It allows for more deeper breaths into your diaphragm. \n\nIf you feel you're not getting air, use your mouth to take a few extra gulps of air, and then go back to nostril breathing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "ABC", sponsorURL: "URL")
 
-//WEEK 3
-//14
-let gymTip57 = Tip(header: "Improve Performance", title: "Listen to music with heavy bass", body: "Study: After listening to music with heavy bass, people said they felt more powerful, dominant and determined.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", sponsorLogo: "", sponsorURL: "")
-let gymTip58 = Tip(header: "Practice Visualization", title: "Research: Weight lifters who visualized their workouts were nearly 2 times stronger than those who did nothing at all", body: "Basically, you're helping your brain establish patterns for success. \n\n• Close your eyes \n• Run through your workout in your head \n• Open your eyes \n• Attack your workout", sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "", sponsorURL: "")
-let gymTip59 = Tip(header: "Increase Testosterone", title: "Lift heavyweight or run sprints", body: "Lifting heavy weights sends signals to the body that you need to produce testosterone to flourish. \n\nLarger muscles contribute to higher testosterone.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
-let gymTip60 = Tip(header: "Become Mentally Tough", title: "Start using positive self-talk", body: "Stop negative thoughts by standing tall and shouting power statements used in the US Navy like: \n• “Easy day” \n• “Piece of cake” \n• “Could be worse” \n\nTough workouts can become effortless with mantras like: \n\n• “Day by day, I’m getting better and better.” \n\n• “Have courage. You can do this.” \n\n• “Quit now and you’ll quit everything for the rest of your life.”", sourceName: "SEALFIT", sourceURL: "https://sealfit.com/navy-seal-commanders-advice-developing-mental-toughness/", sponsorLogo: "", sponsorURL: "")
 
-//15
-let gymTip61 = Tip(header: "Train Like David Goggins", title: "I have a saying that says 'I don't stop when I'm tired, I stop when I'm done.'", body: "- David Goggins \n\nAmerican ultramarathon runner, ultra-distance cyclist, triathlete, motivational speaker and author. He is a retired US Navy SEAL and former US Air Force Tactical Air Control Party member who served in the War in Afghanistan and the Iraq War.", sourceName: "YouTube: SUCCESS CHASERS", sourceURL: "https://www.youtube.com/watch?v=3_JHcji8JEs", sponsorLogo: "", sponsorURL: "")
-let gymTip62 = Tip(header: "High Intensity Interval Training (HIIT)", title: "Study: HIIT is only effective for improving fitness when performed at 60-second intervals with 60-second rests. Whereas HIIT performed at 30-second intervals with 120-second rests aren't.", body: "Aerobic capacity increased after 6 weeks of 60HIIT but there was no difference for 30HIIT on any of the three parameters tracked: aerobic capacity, stiffness of arteries, and body composition. \n\nThis means that 60HIIT should be used over 30HIIT because the former improves fitness whereas the latter doesn't.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/12/191217105219.htm", sponsorLogo: "", sponsorURL: "")
-let gymTip63 = Tip(header: "Increase Strength", title: "Do kettlebell exercises. Study: After 8 weeks of kettlebell training, the male and female subjects' core strength increased 70% and their aerobic capacity increased 13%", body: "Kettlebell training better simulates the constantly shifting center of gravity you encounter on the field, mat, or court than most convential lifting does.", sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
-let gymTip64 = Tip(header: "Lift More Weight", title: "Diaphragmatic breathing helps lift more weight and exert more power with less effort", body: "With diaphragmatic breathing, just your belly should rise and fall (not your chest). \n\nSlowly breathe in through the nose or mouth (preferably the nose), filling up your abdominal area (versus your chest) with air, and then slowly exhale as the stomach collapses. \n\nDiaphragmatic breathing helps ensure core activation and that you’re breathing deeply enough to deliver enough oxygen to the muscles, which reduces muscle fatigue.", sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-breathe-during-a-workout", sponsorLogo: "", sponsorURL: "")
 
-//17
-let gymTip65 = Tip(header: "Burn Belly Fat", title: "Doing endless amounts of ab exercises will NOT make you lose fat from the belly", body: "Study: 6 weeks of training just the abdominal muscles had no measurable effect on waist circumference or the amount of fat in the abdominal cavity. \n\nHowever, aerobic exercise (like walking, running, swimming, etc) has been shown to cause major reductions in belly fat in numerous studies.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section5", sponsorLogo: "", sponsorURL: "")
+let gymTip4 = Tip(header: "Increase Performance", title: "Exercise to music", body: "Study: Athletes' endurance increased by 20% when running in sync with the rhythms of the music, compared with trials when they exercised in silence. \n\nMoving in sync to music can increase the release of endorphins, which helps increase your pain threshold.", sourceName: "BBC News", sourceURL: "http://www.bbc.com/culture/story/20190729-what-songs-make-you-work-out-harder", sponsorLogo: "", sponsorURL: "")
+let gymTip5 = Tip(header: "Improve Performance", title: "During your entire workout keep your breathing deep and diaphragmatic, even when winded", body: "Press air deep into your lungs at the end of each inhale by pressing your belly out. \n\nIn through your nose and out through your nose. \n\nYou can exhale through the mouth if you need to speed up the rate of breathing.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+let gymTip6 = Tip(header: "Improve Performance", title: "Exercise to music. Study: When listening to music, people tend to underestimate their exertion by about 10%, meaning the whole workout ends up feeling much less difficult than it would have without the music", body: "Music helps to direct your attention outwards rather than inwards, and drowns out the feelings of fatigue in our bodies. \n\nThis should increase your overall endurance, helping you to exercise harder for longer.", sourceName: "BBC News", sourceURL: "http://www.bbc.com/culture/story/20190729-what-songs-make-you-work-out-harder", sponsorLogo: "", sponsorURL: "")
+let gymTip7 = Tip(header: "Improve Performance", title: "Drink fresh water before, during, and after a workout. Eat a protein-laden snack within 30 minutes of a workout", body: "Dehydration and undernourishment will lead to a declining performance, low motivation, and possible injury. \n\nHydrating and refueling must become a discipline.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+
+
+
+let gymTip8 = Tip(header: "Improve Performance", title: "During high-intensity training try to not inhale through your mouth", body: "Unlike breathing through your mouth, breathing through your nose stimulates the arousal control response. \n\nIt cleanses and warms the air and also allows deeper, more penetrating breaths into your diaphragm.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+let gymTip9 = Tip(header: "Navy SEAL Advice", title: "One technique for embracing the suck of a difficult workout is to change your state of mind by focusing on something else that is positive... and then smiling or even laughing", body: "Former Navy SEAL, Mark Divine, explains: \n\n\"This worked wonders during SEAL training. Some of my funniest and fondest memories are of the most difficult events. Because I put on a happy face and found humor in some oddity of the moment, the pain disappeared, replaced by growing confidence and courage.\"", sourceName: "The WAY OF THE SEAL", sourceURL: "https://www.amazon.com/dp/B00IUP7CC6", sponsorLogo: "", sponsorURL: "")
+let gymTip10 = Tip(header: "Improve Performance", title: "When resting between sets, commit to 5 deep breaths", body: "As you breathe, bring total relaxation awareness into your body. \n\nTurn your attention inward, not worrying about anyone else, and just visualize slowing your heart rate and regulating your systems.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+let gymTip11 = Tip(header: "Improve Performance", title: "Exercise to fast tempo music. Study: Fast tempo music causes our heart’s rhythm to increase by 5-15 beats per minute", body: "It also triggers the release of adrenaline that helps prime the body for greater physical effort. \n\nCombined with motivational lyrics, the physiological response could put you in the perfect physical and mental state to exercise harder and get into a state of flow.", sourceName: "BBC News", sourceURL: "http://www.bbc.com/culture/story/20190729-what-songs-make-you-work-out-harder", sponsorLogo: "", sponsorURL: "")
+
+
+
+let gymTip12 = Tip(header: "Lift More Weight", title: "Proper breathing can help you lift heavier; give you more muscular endurance; and help you recover more quickly", body: "Breathe out on the concentric phase of the lift (when you’re doing a bicep curl, the concentric portion is when you lift the weight toward your shoulder, and the eccentric portion is when you lower it back toward the ground). \n\nWhen you exhale and squeeze the air out, you increase core engagement. \n\nA tight core equals more power and more stability—and you want to have that extra help on the most challenging part, the lift.", sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-breathe-during-a-workout", sponsorLogo: "", sponsorURL: "")
+let gymTip13 = Tip(header: "Train Like A Navy SEAL", title: "\"You’re capable of 20 times more than you think you are.\" \n\n- Mark Divine", body: "Everyone is capable of accomplishing at least 20 times what they perceive themselves capable of accomplishing. Have a strong “Why” or purpose for your training and never give up.", sourceName: "8 Weeks to SEALFIT", sourceURL: "https://www.amazon.com/Weeks-SEALFIT-Unconventional-Training-Toughness/dp/125004054X", sponsorLogo: "", sponsorURL: "")
+let gymTip14 = Tip(header: "Increase Motivation", title: "Study: Listening to music during exercise increases enjoyment 28% more than silence and 13% more than a podcast", body: "Music rearranges the brain's electrical frequency and causes a drop in focus but enhances enjoyment. \n\nIf you're not motivated to exercise then make sure to listen to music.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/listening-to-music-while-working-out-might-help-you-burn-more-calories-2018-3", sponsorLogo: "", sponsorURL: "")
+let gymTip15 = Tip(header: "Build Muscle", title: "Unless you’re challenging your muscles with heavy enough weights, you won’t see any physical changes", body: "“If you’re doing more than 10 reps with ease, your weight probably isn’t heavy enough,” warns personal trainer Dustin Hassard. \n\n“Vary your reps and consistently increase the amount you’re lifting to see results.” \n\nAnd after your workout, replenish your tired muscles with a protein shake.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
+
+
+
+let gymTip16 = Tip(header: "Improve Performance", title: "Listen to music with heavy bass", body: "Study: After listening to music with heavy bass, people said they felt more powerful, dominant and determined.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", sponsorLogo: "", sponsorURL: "")
+let gymTip17 = Tip(header: "Practice Visualization", title: "Research: Weight lifters who visualized their workouts were nearly 2 times stronger than those who did nothing at all", body: "Basically, you're helping your brain establish patterns for success. \n\n• Close your eyes \n• Run through your workout in your head \n• Open your eyes \n• Attack your workout", sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "", sponsorURL: "")
+let gymTip18 = Tip(header: "Increase Testosterone", title: "Lift heavyweight or run sprints", body: "Lifting heavy weights sends signals to the body that you need to produce testosterone to flourish. \n\nLarger muscles contribute to higher testosterone.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
+let gymTip19 = Tip(header: "Become Mentally Tough", title: "Start using positive self-talk", body: "Stop negative thoughts by standing tall and shouting power statements used in the US Navy like: \n• “Easy day” \n• “Piece of cake” \n• “Could be worse” \n\nTough workouts can become effortless with mantras like: \n\n• “Day by day, I’m getting better and better.” \n\n• “Have courage. You can do this.” \n\n• “Quit now and you’ll quit everything for the rest of your life.”", sourceName: "SEALFIT", sourceURL: "https://sealfit.com/navy-seal-commanders-advice-developing-mental-toughness/", sponsorLogo: "", sponsorURL: "")
+
+
+
+let gymTip20 = Tip(header: "High Intensity Interval Training (HIIT)", title: "Study: HIIT is only effective for improving fitness when performed at 60-second intervals with 60-second rests. Whereas HIIT performed at 30-second intervals with 120-second rests aren't.", body: "Aerobic capacity increased after 6 weeks of 60HIIT but there was no difference for 30HIIT on any of the three parameters tracked: aerobic capacity, stiffness of arteries, and body composition. \n\nThis means that 60HIIT should be used over 30HIIT because the former improves fitness whereas the latter doesn't.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/12/191217105219.htm", sponsorLogo: "", sponsorURL: "")
+let gymTip21 = Tip(header: "Increase Strength", title: "Do kettlebell exercises. Study: After 8 weeks of kettlebell training, the male and female subjects' core strength increased 70% and their aerobic capacity increased 13%", body: "Kettlebell training better simulates the constantly shifting center of gravity you encounter on the field, mat, or court than most convential lifting does.", sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
+let gymTip22 = Tip(header: "Lift More Weight", title: "Diaphragmatic breathing helps lift more weight and exert more power with less effort", body: "With diaphragmatic breathing, just your belly should rise and fall (not your chest). \n\nSlowly breathe in through the nose or mouth (preferably the nose), filling up your abdominal area (versus your chest) with air, and then slowly exhale as the stomach collapses. \n\nDiaphragmatic breathing helps ensure core activation and that you’re breathing deeply enough to deliver enough oxygen to the muscles, which reduces muscle fatigue.", sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-breathe-during-a-workout", sponsorLogo: "", sponsorURL: "")
+let gymTip23 = Tip(header: "Burn Belly Fat", title: "Doing endless amounts of ab exercises will NOT make you lose fat from the belly", body: "Study: 6 weeks of training just the abdominal muscles had no measurable effect on waist circumference or the amount of fat in the abdominal cavity. \n\nHowever, aerobic exercise (like walking, running, swimming, etc) has been shown to cause major reductions in belly fat in numerous studies.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section5", sponsorLogo: "", sponsorURL: "")
+
+let gymTipArray0 = [gymTip0, gymTip1, gymTip2, gymTip3]
+let gymTipArray1 = [gymTip4, gymTip5, gymTip6, gymTip7]
+let gymTipArray2 = [gymTip8, gymTip9, gymTip10, gymTip11]
+let gymTipArray3 = [gymTip12, gymTip13, gymTip14, gymTip15]
+let gymTipArray4 = [gymTip16, gymTip17, gymTip18, gymTip19]
+let gymTipArray5 = [gymTip20, gymTip21, gymTip22, gymTip23]
+
+
+
+//
+let gymTipArrays = [gymTipArray0, gymTipArray1, gymTipArray2, gymTipArray3, gymTipArray4, gymTipArray5]
+let gymTopic = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArrays.random())
+
+
+//POST WORKOUT
+let postGymTip0 = Tip(header: "Post-workout", title: "Step 1: Stretch to prevent injury", body: "Stretch before your muscles have time to cool down, which takes 30-40 minutes. \n\nFor proper recovery, do 5 minutes of stretching followed by 5 minutes of ironing out the kinks with a foam roller.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
+let postGymTip1 = Tip(header: "Post-workout", title: "Step 2: Shower or change your clothes", body: "Don't wait longer than 30 minutes to shower or change your clothes. \n\nWet clothes trap moisture that encourages the growth of germs, bacteria, fungus and yeast, which could invite a skin infection or cause breakouts.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
+let postGymTip2 = Tip(header: "Post-workout", title: "Step 3: Eat carbs and protein", body: "Eating within 30-minutes after a workout: \n\n• Optimizes recovery; \n• Reduces soreness; and \n• Helps you perform better during your next workout.", sourceName: "Shape", sourceURL: "https://www.shape.com/fitness/tips/3-things-you-need-do-immediately-after-workout", sponsorLogo: "", sponsorURL: "")
+
+let postGymTip3 = Tip(header: "Build Muscle", title: "Consume 20 grams of protein after your workout", body: "Compared to the 0-gram and 10-gram doses, the 20-gram and 40-gram doses more effectively stimulated muscle protein synthesis—the process that helps promote the muscle repair and growth after exercise. \n\nHowever, the 40-gram dose didn’t produce any added benefit compared to the 20-gram dose. \n\nGood post-workout options are: \n• Whey protein powder \n• Milk \n• Yogurt", sourceName: "Men's Health", sourceURL: "https://www.menshealth.com/fitness/a19520629/how-much-post-workout-protein-do-you-really-need/", sponsorLogo: "", sponsorURL: "")
+let postGymTip4 = Tip(header: "Eat Healthier", title: "Think of exericse as \"toning\" and not as \"burning calories.\" You'll eat less later on", body: "Survey: The majority of gym-goers who reframed exercise as \"getting tone\" said that it made them less likely to reward themselves with extra calories afterward.", sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", sponsorLogo: "", sponsorURL: "")
+
+let postGymTipArray0 = [postGymTip0, postGymTip1, postGymTip2]
+let postGymTipArray1 = [postGymTip3, postGymTip4]
+
+let  postGymTipArrays = [postGymTipArray0, postGymTipArray1]
+let  postGymTitle = "Post Workout"
+let  postGymTopic = Topic(title: postGymTitle, icon: gymIcon, tip: postGymTipArrays.random())
+
+let gymTopics = Topics(title: gymTitle, icon: gymIcon, topics: [preGymTopic, gymTopic, postGymTopic])
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 //https://www.businessinsider.com/listening-to-music-while-working-out-might-help-you-burn-more-calories-2018-3
-//WEEK 1
-let gymTipArray0 = [gymTip1, gymTip2, gymTip3, gymTip4]
-let gymTipArray1 = [gymTip5, gymTip6, gymTip7, gymTip8]
-let gymTipArray2 = [gymTip9, gymTip10, gymTip11, gymTip12]
-let gymTipArray3 = [gymTip13, gymTip14, gymTip15, gymTip16]
-let gymTipArray4 = [gymTip17, gymTip18, gymTip19, gymTip20]
-let gymTipArray5 = [gymTip21, gymTip22, gymTip23, gymTip24]
-let gymTipArray6 = [gymTip25, gymTip26, gymTip27, gymTip28]
-//WEEK 2
-let gymTipArray7 = [gymTip29, gymTip30, gymTip31, gymTip32]
-let gymTipArray8 = [gymTip33, gymTip34, gymTip35, gymTip36]
-let gymTipArray9 = [gymTip37, gymTip38, gymTip39, gymTip40]
-let gymTipArray10 = [gymTip41, gymTip42, gymTip43, gymTip44]
-let gymTipArray11 = [gymTip45, gymTip46, gymTip47, gymTip48]
-let gymTipArray12 = [gymTip49, gymTip50, gymTip51, gymTip52]
-let gymTipArray13 = [gymTip53, gymTip54, gymTip55, gymTip56]
-//WEEK 3
-let gymTipArray14 = [gymTip57, gymTip58, gymTip59, gymTip60]
-let gymTipArray15 = [gymTip61, gymTip62, gymTip63, gymTip64]
 
 
 
 
-//
-let gymTipArrays = [gymTipArray0, gymTipArray1, gymTipArray2, gymTipArray3, gymTipArray4, gymTipArray5, gymTipArray6, gymTipArray7, gymTipArray8, gymTipArray9, gymTipArray10, gymTipArray11, gymTipArray12, gymTipArray13, gymTipArray14, gymTipArray15,]
-
-let gymTopic = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArrays.random())
-
-
-let gymTopic0 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray0)
-let gymTopic1 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray1)
-let gymTopic2 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray2)
-let gymTopic3 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray3)
-let gymTopic4 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray4)
-let gymTopic5 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray5)
-let gymTopic6 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray6)
-//WEEK 2
-let gymTopic7 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray7)
-let gymTopic8 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray8)
-let gymTopic9 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray9)
-let gymTopic10 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray10)
-let gymTopic11 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray11)
-let gymTopic12 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray12)
-let gymTopic13 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray13)
-//WEEK 3
-let gymTopic14 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray14)
-let gymTopic15 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray15)
-//let gymTopic16 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray16)
-//let gymTopic17 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray17)
-//let gymTopic18 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray18)
-//let gymTopic19 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray19)
-//let gymTopic20 = Topic(title: gymTitle, icon: gymIcon, tip: gymTipArray20)
 
 
 
 
-// Output: Marvin
 
 
 // . \"Do today what others won’t so you can do tomorrow what others can’t.\" - Smoke Jumper Creed
 
-
-
-//Morning
-let gymAMTip1 = Tip(header: "☕️", title: "Complete your workout in the morning before you consume caffeine", body: "In an ideal circadian rhythm, cortisol rises in the morning and remains level throughout the day to support alertness and energy. Because cortisol is like caffeine and is ideally rising in the morning, you may not need both. In fact, caffeine could suppress cortisol, making it tough to feel awake without caffeine. Even if you still need or want caffeine later, you’ve given your body a natural chance at producing its own state of wakefulness.", sourceName: "American Council on Exercise", sourceURL: "http://www.aimspress.com/article/10.3934/publichealth.2017.2.189/fulltext.html", sponsorLogo: "", sponsorURL: "")
-
-let gymAMTipArray0 = [gymAMTip1, gymTip58, gymTip59, gymTip60]
-let gymAMTopic0 = Topic(title: gymTitle, icon: gymIcon, tip: gymAMTipArray0)
-
-//Workweek, Mid-day
-let gymWorkWeekDayTip1 = Tip(header: "🤷‍♂️", title: "Working out during the workday may be less effective than after-work workouts", body: "Researchers found that compared the performance of in-work participants to after-work participants. In-work participants attended only 26% of the group sessions, while after-work participants attended 70% of the group sessions. In-work participants exercised fewer minutes per week, exercised less vigorously, and, as a result, lost less weight than after-work participants.", sourceName: "American Institute of Mathematics Sciences (AIMS) Press", sourceURL: "http://www.aimspress.com/article/10.3934/publichealth.2017.2.189/fulltext.html", sponsorLogo: "", sponsorURL: "")
-
-let gymWorkWeekDayTipArray0 = [gymWorkWeekDayTip1, gymTip54, gymTip55, gymTip56]
-let gymWorkWeekDayTopic0 = Topic(title: gymTitle, icon: gymIcon, tip: gymWorkWeekDayTipArray0)
-
-
-// After work
-//1
-let gymAfternoonTip0 = Tip(header: "🌅", title: "Burn 20% more fat by exercising in the morning, before breakfast", body: "When we first wake up, having not eaten for at least 8 hours, our blood sugar is low. Since we need blood sugar to fuel a run, morning exercise will use the fat stored in our tissues to supply the energy we need. (When we exercise after eating, we use the energy from the food we've just consumed.) In many cases, morning exercise may burn 20% more fat than later, post-food workouts.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", sponsorLogo: "", sponsorURL: "")
-let gymAfternoonTip1 = Tip(header: "☀️", title: "Some studies suggest that we're more likely to stick to our workout routine when we do it in the morning", body: "So if you find yourself struggling to stick with an exercise plan, morning exercise, especially if you enlist a regular partner, can help you form a habit.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", sponsorLogo: "", sponsorURL: "")
-let gymAfternoonTip2 = Tip(header: "🏃‍♀️", title: "Afternoon/early evening workouts help you sprint faster and lift more weight", body: "Lung function is highest this time of the day, so your circulation system can distribute more oxygen and nutrients. This is also the time of day when strength peaks, reaction time quickens, hand-eye coordination sharpens, and heart rate and blood pressure drop. These factors make it a great time to put on your best athletic performance. \n\nIn fact, a disproportionate number of Olympic records, especially in running and swimming, are set in the late afternoon and early evening.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", sponsorLogo: "", sponsorURL: "")
-let gymAfternoonTip3 = Tip(header: "🤕", title: "Working out in the late afternoon and early evening helps to prevent injuries", body: "Our body temperature is low when we first wake up, rises steadily throughout the day, and peaks in the late afternoon. \n\nThat means that in later-in-the-day workouts our muscles are warmer and injuries are less common.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", sponsorLogo: "", sponsorURL: "")
-
-
-
-
-
-//Evening Workout
 
 
 
@@ -1038,7 +981,7 @@ let runningTip4 = Tip(header: "Improve Performance", title: "Take short effectiv
 //2
 let runningTip5 = Tip(header: "Prevent Injury", title: "Avoid stress fractures by taking rest days and running slow on recovery days", body: "Running is great for your bones—the impact increases cell turnover and forces the bone to remodel with stronger structures. \n\nBut, if you don't take rest days then you're bones never have time to fully repair. \n\nThe key to a recovery run is to do it at a recovery pace—the more you push the speed, the more shock your bones absorb, and the weaker they’ll be when you try to go fast again.", sourceName: "Runner's World", sourceURL: "https://www.runnersworld.com/health-injuries/a20864022/why-rest-days-are-important/", sponsorLogo: "", sponsorURL: "")
 let runningTip6 = Tip(header: "Prevent Injury", title: "If you’re training for and running half/full marathons, don’t do it in cheap shoes. Invest in a custom-fit pair of running shoes", body: "When you're training for half/full marathons, the difference with custom-fit shoes and cheap shoes will be noticeable. \n\nCustom-fit shoes will reduce callouses and help reduce soreness in your feet and knees.", sourceName: "Medium", sourceURL: "https://medium.com/runners-life/should-i-buy-expensive-running-shoes-9bb60af20df5", sponsorLogo: "", sponsorURL: "")
-let runningTip7 = Tip(header: "Prevent Abdominal Cramps", title: "DO: Diaphragmatic breathing. \n•DON'T Take short, shallow breaths that begin and end in the chest", body: "With diaphragmatic breathing, just the belly should rise and fall. Breathe through your nose, filling up your abdominal area (versus your chest) with air. \n\nBreathing deeply from your abdominal area can help you avoid mid-workout abdominal cramps which are typically the result of using the wrong muscles to drive respiration.", sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-breathe-during-a-workout", sponsorLogo: "", sponsorURL: "")
+let runningTip7 = Tip(header: "Prevent Abdominal Cramps", title: "DO: Diaphragmatic breathing. \nDON'T: Take short, shallow breaths that begin and end in the chest", body: "With diaphragmatic breathing, just the belly should rise and fall. Breathe through your nose, filling up your abdominal area (versus your chest) with air. \n\nBreathing deeply from your abdominal area can help you avoid mid-workout abdominal cramps which are typically the result of using the wrong muscles to drive respiration.", sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-breathe-during-a-workout", sponsorLogo: "", sponsorURL: "")
 let runningTip8 = Tip(header: "Improve Performance", title: "Depending on the length and intensity of your workout, the body needs a minimum of 36 to 48 hours to recover and rebuild", body: "When you run, you create microscopic tears in your muscle fibers. \n\nYour body responds by rebuilding your muscles stronger, in preparation for the next session. \n\nBut, if you don't rest then you're body has no opportunity to rebuild and strengthen muscles.", sourceName: "Runner's World", sourceURL: "https://www.runnersworld.com/health-injuries/a20864022/why-rest-days-are-important/", sponsorLogo: "", sponsorURL: "")
 
 //3
@@ -1129,7 +1072,7 @@ let yogaTopic6 = Topic(title: yogaTitle, icon: yogaIcon, tip: yogaTipArray6)
 
 // MARK: - Morning Routine, AM
 
-let AMRoutineTitle = "Morning Routine"
+let AMRoutineTitle = "AM Routine"
 let AMRoutineIcon = Constants.Icon.routineAM
 
 
@@ -1171,7 +1114,7 @@ let AMRoutine19 = Tip(header: "Prevent Weight Gain", title: "Pack a lunch", body
 //5
 let AMRoutine20 = Tip(header: "Healthy Choice", title: "I wake up every morning at 5 a.m., and the very first thing I do is hydrate and exercise", body: "\"I drink a large glass of water with Himalayan salt and lemon juice to replace the electrolytes, minerals, and vitamins I've lost overnight. I then head straight to the gym. I have around 45 minutes to work out, so I can be home before my son wakes up.\" \n\n\"My workouts are largely a combination of rowing and weights. These morning workouts are non-negotiable for me. They reduce my stress, make me feel more alert for the day, and help me get to sleep at night.\" \n\n- Matt Schiffman, VP of brand management at RSP Nutrition", sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", sponsorLogo: "", sponsorURL: "")
 let AMRoutine21 = Tip(header: "Improve Performance 📝", title: "Benjamin Franklin, a founding father of America, stared his day with writing in his journal", body: "His morning routine included setting a plan for the rest of his day and asking himself, \"What good shall I do today?\"" , sourceName: "FastCompany", sourceURL: "https://www.fastcompany.com/3033652/the-morning-routines-of-the-most-successful-people", sponsorLogo: "", sponsorURL: "")
-let AMRoutine22 = Tip(header: "Increase Happiness", title: "Practice gratitude because it's strongly associated with greater happiness and health", body: "Thank someone, count your blessings, pray, keep a gratitude journal. \n\nStudy: People who wrote about gratitude were more optimistic and felt better about their lives.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier", sponsorLogo: "", sponsorURL: "")
+let AMRoutine22 = Tip(header: "Increase Happiness", title: "Practice gratitude because it's associated with greater happiness and health", body: "Thank someone, count your blessings, pray, keep a gratitude journal. \n\nStudy: People who wrote about gratitude were more optimistic and felt better about their lives.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier", sponsorLogo: "", sponsorURL: "")
 let AMRoutine23 = Tip(header: "Billionaire Habit 🧘‍♀️", title: "Oprah practices sitting still for 20 minutes - twice a day", body: "The weekends can often be busier than weekdays with attempting to cram in chores, exercise, family commitments, social engagements and more into a 48-hour period. \n\nThe most successful people take daily time outs for stillness." , sourceName: "LifeHack.org", sourceURL: "https://www.lifehack.org/articles/productivity/12-weekend-habits-highly-successful-people.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //6
@@ -1203,7 +1146,7 @@ let AMRoutineTipArray7 = [AMRoutine28, AMRoutine29, AMRoutine10, AMRoutine19]
 //RANDOM
 let AMRoutineTipArrays = [AMRoutineTipArray0, AMRoutineTipArray1, AMRoutineTipArray2, AMRoutineTipArray3, AMRoutineTipArray4, AMRoutineTipArray5, AMRoutineTipArray6, AMRoutineTipArray7,]
 let AMRoutineTopic = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArrays.random())
-
+let AMRoutineTopics = Topics(title: AMRoutineTitle, icon: AMRoutineIcon, topics: [AMRoutineTopic])
 
 
 let AMRoutineTipArray8 = [AMRoutine0, AMRoutine1, AMRoutine2, AMRoutine3]
@@ -1234,7 +1177,7 @@ let AMRoutineTopic13 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AM
 
 // MARK: - Getting Ready AM
 
-let AMGetReadyTitle = "Getting \nReady"
+let AMGetReadyTitle = "Getting Ready"
 let AMGetReadyIcon = Constants.Icon.gettingReady
 
 //0
@@ -1275,7 +1218,7 @@ let getReadyAMTipArray4 = [getReadyAM16, getReadyAM17, getReadyAM2, getReadyAM3]
 //
 let getReadyAMTipArrays = [getReadyAMTipArray0, getReadyAMTipArray1, getReadyAMTipArray2, getReadyAMTipArray3, getReadyAMTipArray4,]
 let getReadyAMTopic = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArrays.random())
-
+let getReadyAMTopics = Topics(title: AMGetReadyTitle, icon: AMGetReadyIcon, topics: [getReadyAMTopic,])
 
 
 
@@ -1294,7 +1237,7 @@ let getReadyAMTopic6 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: 
 
 // MARK: - Going Out, PM
 
-let goingOutTitle = "Going \nOut"
+let goingOutTitle = "Going Out"
 let goingOutIcon = Constants.Icon.goingOut
 
 //0
@@ -1337,6 +1280,7 @@ let goingOutTipArray4 = [goingOutTip17, goingOutTip18, goingOutTip19, goingOutTi
 //
 let goingOutTipArrays = [goingOutTipArray0, goingOutTipArray1, goingOutTipArray2, goingOutTipArray3, goingOutTipArray4,]
 let goingOutTopic = Topic(title: goingOutTitle, icon: goingOutIcon, tip: goingOutTipArrays.random())
+let goingOutTopics = Topics(title: goingOutTitle, icon: goingOutIcon, topics: [goingOutTopic,])
 
 
 
@@ -1373,7 +1317,7 @@ let safetyTip4 = Tip(header: "Cell Phones 📱", title: "Always be aware of your
 //2
 let safetyTip5 = Tip(header: "Headphones 🎧", title: "Avoid wearing headphones", body: "Sure, listening to music on your way to the bar may get you in the mood, but it will also keep you from hearing an incoming car — or someone approaching you from behind. \n\nIf still desire to walk with headphones, then only put in one earbud and keep the volume low enough to hear any off-putting sounds." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
 let safetyTip6 = Tip(header: "Walking 🚶‍♂️", title: "Always walk like you're on a mission with confidence", body: "Have good posture, walk with your feet planted firmly to the ground, and look straight ahead. \n\nThis notion can help deter possible attackers from targetting you." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
-let safetyTip7 = Tip(header: "Uber/Lyft", title: "Always double-check the license plate before getting in", body: "Be careful of people posing as Uber/Lyft drivers." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
+let safetyTip7 = Tip(header: "Uber/Lyft 🚖", title: "Always double-check the license plate before getting in", body: "Be careful of people posing as Uber/Lyft drivers." , sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/women/going-out-safety-tips/1195263", sponsorLogo: "", sponsorURL: "")
 let safetyTip8 = Tip(header: "Keys 🔑", title: "When walking up to your home, carry your house keys in your hand", body: "Don’t stand in a doorway and fumble in your purse or pocket for your keys. \n\nHave them ready to open the door." , sourceName: "Security Today", sourceURL: "https://securitytoday.com/articles/2010/04/15/tips-street-smart.aspx?m=1", sponsorLogo: "", sponsorURL: "")
 
 //3
@@ -1409,7 +1353,7 @@ let safetyTipArray5 = [safetyTip21, safetyTip22, safetyTip23, safetyTip24, helpl
 //
 let safetyTipArrays = [safetyTipArray0, safetyTipArray1, safetyTipArray2, safetyTipArray3, safetyTipArray4, safetyTipArray5,]
 let safetyTopic = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArrays.random())
-
+let safetyTopics = Topics(title: safetyTitle, icon: safetyIcon, topics: [safetyTopic,])
 
 
 let safetyTopic0 = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArray0)
@@ -1423,14 +1367,14 @@ let safetyTopic5 = Topic(title: safetyTitle, icon: safetyIcon, tip: safetyTipArr
 
 // MARK: - Bar
 
-let barTitle = "Bar"
+let barTitle = "Drinks"
 let barIcon = Constants.Icon.bar
 
 //0
 let barTip1 = Tip(header: "First Impressions", title: "People know within one second whether someone’s physically attractive or not", body: "Both males and females find people with available body language the most attractive. \n\nAvailable body language is smiling, uncrossed arms, uncrossed legs and upward gazing (not looking down at shoes or phones).", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/body-language-attraction/", sponsorLogo: "", sponsorURL: "")
 let barTip2 = Tip(header: "Warning", title: "Alcohol will help you fall asleep, but it will reduce the quality of your sleep", body: "Drinking within 3 hours of bedtime helps you fall asleep — alcohol is a depressant. \n\nBut once the alcohol is metabolized hours later, you’re more likely to wake up or start tossing and turning." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/12/14/bedtime-rituals_n_6309564.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let barTip3 = Tip(header: "Warning", title: "Drinking once a day or 5 to 10 alcoholic drinks a week is likely to shorten your life by up to 6 months", body: "While non-fatal heart attacks are less likely in people who drink alcohol, scientists say this benefit is swamped by the increase of other forms of heart disease including fatal heart attacks and stroke. \n\nIf you already drink, drinking less may help you live longer and lower your risk of several cardiovascular conditions." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/health-43738644", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let barTip4 = Tip(header: "Reduce Your Risk ☕️", title: "After a night of drinking, drink coffee in the morning because it can protect your liver from damage caused by too much alcohol", body: "Studies show that drinking 2 to 3 cups a day can protect your liver from damage caused by too much alcohol or an unhealthy diet. Some research suggests it may lower your risk of liver cancer." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver?ecd=wnl_spr_120616_REMAIL&ctr=wnl-spr-120616-REMAIL_nsl-ld-stry_1&mb=aT%2fNo%2fMfdXIeXdniBtn11BXFE73IOX1chB5LGA9kRyM%3d", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let barTip4 = Tip(header: "Reduce Your Risk ☕️", title: "After a night of drinking, drink coffee in the morning because it can protect your liver from damage caused by too much alcohol", body: "Studies show that drinking 2 to 3 cups a day can protect your liver from damage caused by too much alcohol or an unhealthy diet. Some research suggests it may lower your risk of liver cancer." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/hepatitis/ss/slideshow-best-and-worst-foods-for-your-liver", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //1
 let barTip5 = Tip(header: "Warning 🍋", title: "Avoid lemon and lime slices and other garnishes added to your drink", body: "A study of 76 lemons at 21 different restaurants in The Journal of Environmental Health found that 70% of them contained microbial growth. \n\nOf the positive culture results, 13% were E. coli.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/menu-items-never-order/", sponsorLogo: "", sponsorURL: "")
@@ -1505,7 +1449,7 @@ let barTopic6 = Topic(title: barTitle, icon: barIcon, tip: barTipArray6)
 //
 let barTipArrays = [barTipArray0, barTipArray1, barTipArray2, barTipArray3, barTipArray4, barTipArray5, barTipArray6,]
 let barTopic = Topic(title: barTitle, icon: barIcon, tip: barTipArrays.random())
-
+let barTopics = Topics(title: barTitle, icon: barIcon, topics: [barTopic,])
 
 
 // MARK: - Happy Hour
@@ -1528,25 +1472,10 @@ let happyHourTipArray1 = [happyHourTip5, happyHourTip6, happyHourTip3, happyHour
 //
 let happyHourTipArrays = [happyHourTipArray0, happyHourTipArray1,]
 let happyHourTopic = Topic(title: happyHourTitle, icon: happyHourIcon, tip: barTipArrays.random())
+let happyHourTopics = Topics(title: happyHourTitle, icon: happyHourIcon, topics: [happyHourTopic, cafePMTopic])
 
 
 
-
-
-let happyHourTipArray2 = [happyHourTip1, happyHourTip2, happyHourTip3, happyHourTip4]
-let happyHourTipArray3 = [happyHourTip5, happyHourTip6, happyHourTip3, happyHourTip2]
-let happyHourTipArray4 = [happyHourTip1, happyHourTip2, happyHourTip3, happyHourTip4]
-let happyHourTipArray5 = [happyHourTip5, happyHourTip6, happyHourTip3, happyHourTip2]
-let happyHourTipArray6 = [happyHourTip3, happyHourTip2, happyHourTip6, happyHourTip5]
-
-
-let happyHourTopic0 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray0)
-let happyHourTopic1 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray0)
-let happyHourTopic2 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray2)
-let happyHourTopic3 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray3)
-let happyHourTopic4 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray4)
-let happyHourTopic5 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray5)
-let happyHourTopic6 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: happyHourTipArray6)
 
 
 
@@ -1554,7 +1483,7 @@ let happyHourTopic6 = Topic(title: happyHourTitle, icon: happyHourIcon, tip: hap
 
 // MARK: - Cafe
 
-let cafeTitle = "Coffee"
+let cafeTitle = "Cafe"
 let cafeIcon = Constants.Icon.cafe
 
 //0
@@ -1579,7 +1508,7 @@ let cafeTip12 = Tip(header: "Reduce Your Risk ☕️", title: "Drinking coffee i
 
 // 3
 let cafeTip13 = Tip(header: "Make Kindness A Habit", title: "Hold the door for people behind you when you enter and exit", body: "The opportunity to do a good deed pops up every day. The thing that will surprise you the most is how good you'll feel about it." , sourceName: "Canadian Living", sourceURL: "https://www.canadianliving.com/health/mind-and-spirit/article/50-good-deeds-for-50-days", sponsorLogo: "", sponsorURL: "")
-let cafeTip14 = Tip(header: "Burn Belly Fat", title: "Green tea boosts your metabolism and helps burn belly fat", body: "12-week study: Participants who combined a daily habit of 4-5 cups of green tea with a 25-minute workout lost an average of 2 more pounds and more belly fat than the non tea-drinking exercisers. /n/nGreen tea contains catechins, a type of antioxidant that triggers the release of fat from fat cells and helps speed the liver’s capacity for turning fat into energy." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
+let cafeTip14 = Tip(header: "Burn Belly Fat", title: "Green tea boosts your metabolism and helps burn belly fat", body: "12-Week Study: People who combined a daily habit of 4-5 cups of green tea with a 25-minute workout lost an average of 2 more pounds and more belly fat than the non tea-drinking exercisers. \n\nGreen tea contains catechins, a type of antioxidant that triggers the release of fat from fat cells and helps speed the liver’s capacity for turning fat into energy." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-you-did-today-to-slow-your-metabolism/", sponsorLogo: "", sponsorURL: "")
 let cafeTip15 = Tip(header: "Warning 🥛", title: "Unless you specify your milk preference, Starbucks will automatically give you 2% milk, and most other cafes will give you whole milk", body: "When ordering a \"fancy\" coffee, consider nonfat milk. \n\nFor example, a tall nonfat latte at Starbucks is 100 calories, whereas the same drink with 2% milk is 150 calories. 50 calories adds up over time." , sourceName: "U.S. News & World Report", sourceURL: "https://health.usnews.com/health-news/blogs/eat-run/2014/02/26/how-to-order-a-healthy-cup-of-coffee", sponsorLogo: "", sponsorURL: "")
 let cafeTip16 = Tip(header: "Cancer Risk 🔥", title: "Wait until very hot beverages cool down before drinking. Drinking very hot beverages increases the risk of esophageal cancer", body: "Esophageal cancer is the eighth most common cancer and is often fatal. It is possible that the trauma from drinking very hot beverages leads to cell changes and hence to cancer." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2019/03/20/health/hot-tea-linked-to-higher-cancer-risk-study-intl/index.html", sponsorLogo: "", sponsorURL: "")
 
@@ -1599,7 +1528,7 @@ let cafeTipArray4 = [cafeTip17, cafeTip18, cafeTip19, cafeTip20]
 //
 let cafeTipArrays = [cafeTipArray0, cafeTipArray1, cafeTipArray2, cafeTipArray3, cafeTipArray4,]
 let cafeTopic = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArrays.random())
-
+let cafeTopics = Topics(title: cafeTitle, icon: cafeIcon, topics: [cafeTopic,])
 
 
 
@@ -1637,16 +1566,17 @@ let cafePMTip9 = Tip(header: "Sleep Better", title: "Don’t consume caffeine 6 
 
 //4
 let cafePMTip13 = Tip(header: "Sleep Better", title: "Cut down on caffeine in tea, coffee, energy drinks or colas, especially in the evening", body: "Caffeine interferes with the process of falling asleep, and also prevents deep sleep. Instead, have a warm, milky drink or herbal tea." , sourceName: "NHS", sourceURL: "https://www.nhs.uk/live-well/sleep-and-tiredness/10-tips-to-beat-insomnia/", sponsorLogo: "", sponsorURL: "")
+let cafePMTip14 = Tip(header: "Warning", title: "GOOD: Moderate coffee consumption \n\nBAD: Excessive coffee consumption increases your risk of developing: obesity, osteoarthritis, and arthropathy.", body: "Although the study's authors are confident that there are no adverse health effects caused by moderate coffee consumption, they believe people with a family history of osteoarthritis or arthritis should be mindful of their daily coffee intake." , sourceName: "Ladders", sourceURL: "https://www.theladders.com/career-advice/if-you-drink-this-many-cups-of-coffee-a-day-you-raise-your-risk-for-these-three-serious-disease", sponsorLogo: "", sponsorURL: "")
 
 
 let cafePMTipArray0 = [cafePMTip1, cafePMTip2, cafePMTip3, cafePMTip4]
 let cafePMTipArray1 = [cafePMTip5, cafePMTip6, cafePMTip7, cafePMTip8]
 let cafePMTipArray2 = [cafePMTip9, cafePMTip2, cafePMTip3, cafePMTip4]
-let cafePMTipArray3 = [cafePMTip13, cafePMTip6, cafePMTip7, cafePMTip8]
+let cafePMTipArray3 = [cafePMTip13, cafePMTip14, cafePMTip7, cafePMTip8]
 //
 let cafePMTipArrays = [cafePMTipArray0, cafePMTipArray1, cafePMTipArray2, cafePMTipArray3,]
 let cafePMTopic = Topic(title: cafeTitle, icon: cafeIcon, tip: cafePMTipArrays.random())
-
+let cafePMTopics = Topics(title: cafeTitle, icon: cafeIcon, topics: [cafePMTopic,])
 
 
 
@@ -1662,7 +1592,7 @@ let cafePMTopic4 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray4)
 let cafePMTopic5 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray5)
 let cafePMTopic6 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray6)
 
-// MARK: - CAFE, NIGHT
+
 
 
 // MARK: - BREAKS
@@ -1695,7 +1625,7 @@ let breakTipArray2 = [breakAMTip9, breakAMTip2, breakAMTip3, breakAMTip4]
 //
 let breakTipArrays = [breakTipArray0, breakTipArray1, breakTipArray2,]
 let breakTopic = Topic(title: breakTitle, icon: breakIcon, tip: breakTipArrays.random())
-
+let breakTopics = Topics(title: breakTitle, icon: breakIcon, topics: [breakTopic,])
 
 
 
@@ -1734,10 +1664,10 @@ let breakPMTipArray0 = [breakPMTip1, breakPMTip2, breakPMTip3, breakPMTip4]
 let breakPMTipArray1 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
 let breakPMTipArray2 = [breakPMTip9, breakPMTip2, breakPMTip3, breakPMTip4]
 
-//
+//RANDOM
 let breakPMTipArrays = [breakPMTipArray0, breakPMTipArray1, breakPMTipArray2,]
 let breakPMTopic = Topic(title: breakTitle, icon: breakIcon, tip: breakPMTipArrays.random())
-
+let breakPMTopics = Topics(title: breakTitle, icon: breakIcon, topics: [breakPMTopic,])
 
 let breakPMTipArray3 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
 let breakPMTipArray4 = [breakPMTip1, breakPMTip2, breakPMTip3, breakPMTip4]
@@ -1820,7 +1750,7 @@ let networkingTopic5 = Topic(title: networkingTitle, icon: networkingIcon, tip: 
 //
 let networkingTipArrays = [networkingTipArray0, networkingTipArray1, networkingTipArray2, networkingTipArray3, networkingTipArray4, networkingTipArray5,]
 let networkingTopic = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArrays.random())
-
+let networkingTopics = Topics(title: networkingTitle, icon: networkingIcon, topics: [networkingTopic])
 
 
 
@@ -1881,7 +1811,7 @@ let dateTipArray5 = [dateTip21, dateTip22, dateTip23, dateTip20]
 //
 let dateTipArrays = [dateTipArray0, dateTipArray1, dateTipArray2, dateTipArray3, dateTipArray4, dateTipArray5,]
 let dateTopic = Topic(title: dateTitle, icon: dateIcon, tip: dateTipArrays.random())
-
+let dateTopics = Topics(title: dateTitle, icon: dateIcon, topics: [dateTopic,])
 
 
 
@@ -2023,7 +1953,7 @@ let groceryStoreTipArray11 = [groceryStoreTip45, groceryStoreTip46, groceryStore
 //
 let groceryStoreTipArrays = [groceryStoreTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10, groceryStoreTipArray11]
 let groceryStoreTopic = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrays.random())
-
+let groceryStoreTopics = Topics(title: groceryStoreTitle, icon: groceryStoreIcon, topics: [groceryStoreTopic,])
 
 
 let groceryStoreTipArray12 = [groceryStoreTip21, groceryStoreTip22, groceryStoreTip23, groceryStoreTip24]
@@ -2055,7 +1985,7 @@ let groceryStoreAMTopic0 = Topic(title: groceryStoreTitle, icon: groceryStoreIco
 let groceryStoreAMTipArrays = [groceryStoreAMTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10,]
 
 let groceryStoreAMTopic = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreAMTipArrays.random())
-
+let groceryStoreAMTopics = Topics(title: groceryStoreTitle, icon: groceryStoreIcon, topics: [groceryStoreAMTopic,])
 
 
 
@@ -2065,7 +1995,7 @@ let groceryStoreWENDTopic0 = Topic(title: groceryStoreTitle, icon: groceryStoreI
 //
 let groceryStoreWENDTipArrays = [groceryStoreWENDTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10,]
 let groceryStoreWENDTopic = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreWENDTipArrays.random())
-
+let groceryStoreWENDTopics = Topics(title: groceryStoreTitle, icon: groceryStoreIcon, topics: [groceryStoreWENDTopic,])
 
 
 // Weekday
@@ -2074,7 +2004,7 @@ let groceryStoreWDAYTopic0 = Topic(title: groceryStoreTitle, icon: groceryStoreI
 //
 let groceryStoreWDAYTipArrays = [groceryStoreWDAYTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10, groceryStoreTipArray11]
 let groceryStoreWDAYTopic = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreWDAYTipArrays.random())
-
+let groceryStoreWDAYTopics = Topics(title: groceryStoreTitle, icon: groceryStoreIcon, topics: [groceryStoreWDAYTopic,])
 
 
 // MARK: - SHOPPING, Clothes
@@ -2084,7 +2014,7 @@ let shoppingClothesIcon = Constants.Icon.shopping
 
 //0
 let shoppingClothesTip1 = Tip(header: "Healthy Choice", title: "Shop healthier by getting exercise", body: "Park far away from the entrance and build a few extra, calorie-burning steps into your day. \n\nVisit stores on different levels and take the stairs, not the escalator. " , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2012/08/11/healthy-weekend_n_1760981.html?slideshow=true#gallery/243861/2", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let shoppingClothesTip2 = Tip(header: "Save Money", title: "Harvard professor says 95% of purchasing decisions are subconscious", body: "Emotion is what really drives the purchasing behaviors. \n\nTo achieve the highest emotional response, marketers target you through many different senses, including colors and scents in stores." , sourceName: "Inc.", sourceURL: "https://www.inc.com/logan-chierotti/harvard-professor-says-95-of-purchasing-decisions-are-subconscious.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let shoppingClothesTip2 = Tip(header: "Save Money", title: "Harvard professor says 95% of purchasing decisions are subconscious", body: "Emotion is what really drives the purchasing behaviors. \n\nTo achieve the highest emotional response, marketers target you through many different senses, including colors and scents in stores." , sourceName: "Inc.", sourceURL: "https://www.inc.com/logan-chierotti/harvard-professor-says-95-of-purchasing-decisions-are-subconscious.html", sponsorLogo: "Shop Online Store", sponsorURL: "www.test.com")
 let shoppingClothesTip3 = Tip(header: "Save Money", title: "People stay 40% longer in businesses that smell good, resulting in more purchases", body: "Scents evoke an emotional response and people spend more time in places when they feel good. Scent’s main role is to make the customer feel comfortable, happy and put them at ease so they will spend more time in the store, spend more money and ultimately make them more likely to return." , sourceName: "American Marketing Association", sourceURL: "https://www.ama.org/publications/eNewsletters/Pages/good-smells-good-marketing-how-use-scent-advantage.aspx", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let shoppingClothesTip4 = Tip(header: "Save Money", title: "Slow music and cool colors like blues and greens encourage them to spend more", body: "Studies show that slow music makes people shop leisurely and spend more. \n\nClassical music encourages more expensive purchases." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/tricks-stores-use-to-make-you-spend-more-money-2015-10#-12", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -2117,7 +2047,7 @@ let shoppingClothesTip20 = Tip(header: "Increase Happiness", title: "Studies sho
 //5
 let shoppingClothesTip21 = Tip(header: "Simplify Your Day And Reduce Decision Fatigue", title: "Buy a work uniform", body: "Steve Jobs, Mark Zuckerberg, and Dr. Dre all use work uniforms. \n\nHaving a regular uniform makes it quick and easy to get dressed. \n\nYou can conserve all that decision-making power directly towards more important decisions. \n\nA go-to work uniform saves you time shopping. \n\nYou know what you're looking for and can get right to your favorite store. \n\nOr, if you know your size, style, and color, you can order everything online." , sourceName: "Inc.", sourceURL: "https://www.inc.com/craig-bloem/this-1-unusual-habit-helped-make-mark-zuckerberg-steve-jobs-dr-dre-successful.html", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let shoppingClothesTip22 = Tip(header: "Save Money", title: "Survey: The average person exceeds their weekly shopping budget goal by +40% because of online shopping", body: "If online shopping is a weakness, one trick is to leave the item in your cart for at least 24 hours. \n\nChances are it’s an impulse purchase. \n\nBy delaying it a day or longer, you give time for that impulse to cool off." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/12/26/consumers-overspend-by-7400-a-year-here-are-weekly-trouble-spots.html", sponsorLogo: "", sponsorURL: "")
-let shoppingClothesTip23 = Tip(header: "Increase Happiness", title: "Gift experiences, not things", body: "Rethink your definition of gifts - both those given to loved ones and those you provide yourself. \n\nConsider offering experiences instead of physical objects, for example: \n\n• Cooking classes \n• A weekend vacation \n• Concert tickets \n• A dinner out on the town", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
+let shoppingClothesTip23 = Tip(header: "Increase Happiness", title: "Gift experiences, not things", body: "Rethink your definition of gifts - both those given to loved ones and those you provide yourself. \n\nConsider offering experiences instead of physical objects, for example: \n\n• Cooking classes \n• A weekend vacation \n• Concert tickets \n• A dinner out on the town", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "Buy Cooking Class", sponsorURL: "TBD")
 let shoppingClothesTip24 = Tip(header: "Millionaire Advice", title: "An important distinction is that rich people buy luxuries last, while the poor and middle class tend to buy luxuries first.", body: "The poor and the middle class often buy luxury items such as big houses, diamonds, furs, jewelry or boats because they want to look rich. \n\nThey look rich, but in reality they just get deeper in debt on credit. \n\nThe long-term rich acquired income-generating assets first. Then, the income generated from their assets bought their luxuries. \n\nThe poor and middle class buy luxuries with their own sweat, blood, and children's inheritance.", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 
 let shoppingClothesTip25 = Tip(header: "Quote", title: "Too many people spend money they haven’t earned to buy things they don’t want, to impress people they don’t like.", body: "- Will Smith \n\nAmerican actor and rapper" , sourceName: "Motivation Grid", sourceURL: "https://motivationgrid.com/inspirational-quotes-by-will-smith/", sponsorLogo: "", sponsorURL: "")
@@ -2148,6 +2078,7 @@ let shoppingClothesTopic6 = Topic(title: shoppingClothesTitle, icon: shoppingClo
 //
 let shoppingClothesTipArrays = [shoppingClothesTipArray0, shoppingClothesTipArray1, shoppingClothesTipArray2, shoppingClothesTipArray3, shoppingClothesTipArray4, shoppingClothesTipArray5, shoppingClothesTipArray6,]
 let shoppingClothesTopic = Topic(title: shoppingClothesTitle, icon: shoppingClothesIcon, tip: shoppingClothesTipArrays.random())
+let shoppingClothesTopics = Topics(title: shoppingClothesTitle, icon: shoppingClothesIcon, topics: [shoppingClothesTopic,])
 
 //WEEK 2
 
@@ -2177,11 +2108,11 @@ let commuteAMTip11 = Tip(header: "Increase Happiness", title: "The morning commu
 ///// THU
 let commuteAMTip12 = Tip(header: "Increase Success", title: "Getting into a good mood now may improve your job performance by 10%", body: "Employees who were in a positive mood provided higher-quality service: they were more articulate on the phone with fewer \"ums\" and used more proper grammar. \n\nEmployees who were in a negative mood tended to take more frequent breaks from their duties to cope with the stress. These small breaks piled up, leading to a 10% loss of productivity.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2016/07/how-your-morning-mood-affects-your-whole-workday", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip13 = Tip(header: "Healthy Choice 🚘", title: "Breathe in cleaner air by driving with the windows up and the A/C on", body: "In cases where the A/C was used, the indoor cabin air had 20%-34% fewer pollutants. And keeping the windows closed offered a protective boost between 8%-44%. \n\nIt’s important to note that the fan doesn’t offer the same protection as the A/C. \n\nWhen the A/C is on, you have a cold evaporator that is cooling the air as it passes. This cold surface attracts the pollutant particles, and they deposit there, as opposed to being diffused into the air you’re breathing.", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/wellness/banish-pollution-during-commute/", sponsorLogo: "", sponsorURL: "")
-let commuteAMTip14 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Carry these items with you on your commute:", body: "• Antibacterial hand sanitizer or wipes \n\n• Sunscreen \n\n• A relaxing playlist, podcast, or book to reduce stress \n\n• A helmet, and other protective gear, if you bike or ride a scooter", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip14 = Tip(header: "Reduce Your Risk 🤒", title: "Carry these items with you on your commute:", body: "• Antibacterial hand sanitizer or wipes \n\n• Sunscreen \n\n• A relaxing playlist, podcast, or book to reduce stress \n\n• A helmet, and other protective gear, if you bike or ride a scooter", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip15 = Tip(header: "Reduce Your Risk", title: "If you are sitting in a car, train, or bus for long periods of time every workday, you are putting yourself at risk for heart disease, diabetes, and premature death", body: "Sitting for long periods can increase the risk of blood clots. \n\nGet off of the bus or train a stop or two early to get blood flowing, park your car farther away from the office, or remind yourself to take a walk at lunch.", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
 
 ///// FRI
-let commuteAMTip16 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Avoid touching your face, use hand sanitizer after touching a public service, and wash your hands as soon as you get to work", body: "Just touching something does nothing. \n\nYou get sick when you introduce germs to your mouth, eyes, or nose. \n\nIt’s OK to get germs on your hands if you wash them or use antibacterial gel and don’t touch your face.", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip16 = Tip(header: "Reduce Your Risk 🤒", title: "Avoid touching your face, use hand sanitizer after touching a public service, and wash your hands as soon as you get to work", body: "Just touching something does nothing. \n\nYou get sick when you introduce germs to your mouth, eyes, or nose. \n\nIt’s OK to get germs on your hands if you wash them or use antibacterial gel and don’t touch your face.", sourceName: "Readers Digest", sourceURL: "https://www.rd.com/health/conditions/commute-making-you-sick/", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip17 = Tip(header: "Reduce Your Risk", title: "Commuting long distances is associated with decreased cardio fitness, increased weight, and high blood pressure", body: "The more time spent commuting means less time to exercise. \n\n1. Park away from your office to get extra steps in, take the stairs instead of the elevator, and try to move as much as possible. \n\n2. Wake up 20 minutes earlier to take a walk or exercise before you get in the car or on the bus, train or plane.", sourceName: "Shape", sourceURL: "https://www.shape.com/blogs/shape-your-life/your-long-commute-causing-you-gain-weight", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip18 = Tip(header: "Reduce Your Risk", title: "Taking a side street route when walking and cycling [to work] through a city cuts a person’s air pollution exposure by half", body: "The average reduction in overall pollution exposure for those taking the side street routes was 53%, with the cuts ranging from 30-60%. \n\nAir pollution is the world’s largest environmental health risk, according to the World Health Organisation.", sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/environment/2017/jun/14/side-street-routes-avoid-city-pollution-cut-exposure-by-half", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip19 = Tip(header: "Millionaire Habit", title: "A 5-year study of rich and poor people found that rich people listen to audiobooks during the commute to work", body: "63% of rich people vs. 5% of poor people listen to audiobooks during the commute to work. \n\nYou can borrow audiobooks for free from your local public library." , sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/article/235228", sponsorLogo: "", sponsorURL: "")
@@ -2191,7 +2122,7 @@ let commuteAMTip19 = Tip(header: "Millionaire Habit", title: "A 5-year study of 
 let commuteAMTip20 = Tip(header: "Increase Happiness 🌻", title: "Improve your mood by taking the scenic route for your morning commute", body: "Research: Simply seeing beautiful flowers increases happiness. \n\nThe happiness boost is greatest for night owls who have a hard time getting going in the morning, the researchers found." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip21 = Tip(header: "Long-Distance Commuters", title: "Improve health, happiness, and relationships by commuting before or after rush-hour (and try to work from home at least one day a week)", body: "Commuting puts stress on the human mind and body and on family relationships. \n\nEach added travel minute correlates with an increase in health problems. \n\nPeople with longer commutes experience more headaches, backaches, digestive problems, higher blood pressure, sleep disturbances, and concentration problems compared to those with shorter commutes.", sourceName: "Thrive Global", sourceURL: "https://www.scientificamerican.com/article/commuting-takes-its-toll/", sponsorLogo: "", sponsorURL: "")
 let commuteAMTip22 = Tip(header: "Lose Weight", title: "Use the stairs instead of the elevator, and you’ll burn twice as many calories as you do walking", body: "Study: A 150-pound person could lose about 6 pounds per year just by climbing up 2 flights of stairs every day. \n\nIncrease that up to 6 flights, and you could lose 18 pounds without ever hitting the gym.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/easy-ways-to-burn-calories/", sponsorLogo: "", sponsorURL: "")
-let commuteAMTip23 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Study: Elevator buttons in public spaces like office buildings could be harboring more germs than toilet seats", body: "Clean it: Maybe you don’t want to stand around your office building and wipe down the elevator buttons. \n\nBut you’ll probably want to wash, or at least sanitize, your hands once you’ve reached your floor.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
+let commuteAMTip23 = Tip(header: "Reduce Your Risk 🤒", title: "Study: Elevator buttons in public spaces like office buildings could be harboring more germs than toilet seats", body: "Clean it: Maybe you don’t want to stand around your office building and wipe down the elevator buttons. \n\nBut you’ll probably want to wash, or at least sanitize, your hands once you’ve reached your floor.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
 
 //TUE
 let commuteAMTip24 = Tip(header: "Save Money", title: "Speeding, rapid acceleration and braking can lower your gas mileage by 33% at highway speeds and by 5% around town", body: "Anticipate traffic situations and maintain adequate spacing between vehicles to avoid unnecessary braking and acceleration. \n\nWhen you do accelerate, accelerate smoothly at a moderate rate. \n\nFuel Economy Benefit: 5–33% \nFuel Cost Savings: $0.18–$1.18/gallon", sourceName: "U.S. Department of Energy", sourceURL: "https://afdc.energy.gov/files/u/publication/10_G00888_savings_WEB.pdf", sponsorLogo: "", sponsorURL: "")
@@ -2217,7 +2148,12 @@ let commuteAMTopic0 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: com
 
 // TUES (*Tuesday-specific)
 let commuteTuesdayAMTipArray0 = [commuteTuesdayAMTip0, commuteAMTip5, commuteAMTip6, commuteAMTip7]
-let commuteTuesdayAMTopic0 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray0)
+let commuteTuesdayAMTipArray1 = [commuteTuesdayAMTip0, commuteAMTip15, commuteAMTip16, commuteAMTip17]
+let commuteTuesdayAMTipArray2 = [commuteTuesdayAMTip0, commuteAMTip25, commuteAMTip26, commuteAMTip27]
+
+
+let commuteTuesdayAMTipArrays = [commuteTuesdayAMTipArray0, commuteTuesdayAMTipArray1, commuteTuesdayAMTipArray2]
+let commuteTuesdayAMTopic = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteTuesdayAMTipArrays.random())
 
 // WED
 let commuteAMTipArray2 = [commuteAMTip8, commuteAMTip9, commuteAMTip10, commuteAMTip11]
@@ -2240,7 +2176,7 @@ let commuteAMTopic5 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: com
 let commuteAMTipArray6 = [commuteAMTip24, commuteAMTip25, commuteAMTip26, commuteAMTip27]
 let commuteAMTopic6 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray6)
 
-//WED (1 WIP)
+//WED
 let commuteAMTipArray7 = [commuteAMTip28, commuteAMTip29, commuteAMTip30, commuteAMTip31]
 let commuteAMTopic7 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray7)
 
@@ -2289,9 +2225,9 @@ let commutePMTip11 = Tip(header: "Warning", title: "The more time we spend commu
 let commutePMTip12 = Tip(header: "Healthy Choice", title: "Drink water before you drive. Being dehydrated can cause as many driving errors as drunk driving", body: "Researchers set up an experiment in which normally hydrated and dehydrated people drove in a simulator for 2 hours. \n\nThe normally hydrated drivers made an average of 47 errors; the dehydrated drivers 101 errors. \n\nThus the dehydrated drivers made more than twice the number of errors of normally hydrated drivers – a failure rate similar to drunk drivers.", sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/uk-news/shortcuts/2015/apr/20/want-to-be-safe-driver-drink-water-before-you-drive", sponsorLogo: "", sponsorURL: "")
 
 //THUR
-let commutePMTip13 = Tip(header: "Warning", title: "Every 10 minutes of commuting results in 10% fewer social connections", body: "Over the past 25 years, Americans have experienced a 58% attendance drop in club meetings, a 43% decrease in family dinners, and a 35% decline in having friends over. Commuting reduces social connections, which causes unhappiness.", sourceName: "Personal Capital", sourceURL: "https://www.personalcapital.com/blog/financial-planning-2/surprising-costs-commute/", sponsorLogo: "Sponsor", sponsorURL: "sponsorURL")
+let commutePMTip13 = Tip(header: "Warning", title: "Every 10 minutes of commuting results in 10% fewer social connections", body: "Over the past 25 years, Americans have experienced: \n• 58% attendance drop in club meetings, \n• 43% decrease in family dinners, and \n• 35% decline in having friends over. \n\nCommuting reduces social connections, which causes unhappiness.", sourceName: "Personal Capital", sourceURL: "https://www.personalcapital.com/blog/financial-planning-2/surprising-costs-commute/", sponsorLogo: "Sponsor", sponsorURL: "sponsorURL")
 let commutePMTip14 = Tip(header: "Be Kind To Others 🚘", title: "Allow someone into your lane. They're probably in a rush - just like you.", body: "Engaging in kindness can actually make you healthier. \n\nStudy: 50% of participants reported feeling stronger and having more energy after helping others, with reports of greater feelings of calmness and enhanced self-esteem.", sourceName: "Inc.", sourceURL: "https://www.inc.com/scott-mautz/science-says-random-acts-of-kindness-week-has-astonishing-health-benefits.html", sponsorLogo: "", sponsorURL: "")
-let commutePMTip15 = Tip(header: "Warning 🍕", title: "A long commute after work reduces your willpower to exercise or eat right", body: "People who spend more time commuting spend less time exercising, sleeping, and making food at home. And are more likely to buy \"non-grocery food purchases\" (i.e., fast food or takeout). As a result, they are more likely to be obese." , sourceName: "Vox", sourceURL: "https://www.vox.com/2015/5/20/8629881/commuting-health-happiness", sponsorLogo: "", sponsorURL: "")
+let commutePMTip15 = Tip(header: "Warning 🍕", title: "A long commute after work reduces your willpower to exercise or eat right", body: "People who spend more time commuting spend less time exercising, sleeping, and making food at home. \n\nAnd are more likely to buy \"non-grocery food purchases\" (i.e., fast food or takeout). As a result, they are more likely to be obese." , sourceName: "Vox", sourceURL: "https://www.vox.com/2015/5/20/8629881/commuting-health-happiness", sponsorLogo: "", sponsorURL: "")
 let commutePMTip16 = Tip(header: "Warning", title: "The highest amount of road rage occurs from 4:00 p.m. to 7:00 p.m. each day", body: "Analysis of Instagram Posts Hashtagged #RoadRage: Drivers felt the most aggravated during the evening commute. \n\nAllow for extra time in case you run into delays, adjust your schedule to avoid driving through the worst traffic, and listen to music while you drive. \n\nIf you start to feel angry, it’s vital to relax, breathe deeply, and consider taking a break to stretch your legs or sip some water." , sourceName: "Auto Insurance Center", sourceURL: "https://www.autoinsurancecenter.com/roadrage-instagram-posts.htm", sponsorLogo: "", sponsorURL: "")
 
 //
@@ -2419,7 +2355,7 @@ let workAMTip40 = Tip(header: "Increase Success ☀️", title: "Natural light i
 
 // WEEK 3
 // MON
-let workAMTip41 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Stay home when you are sick. \n\n• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Avoid touching your eyes, nose, and mouth." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let workAMTip41 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Stay home when you are sick. \n\n• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Avoid touching your eyes, nose, and mouth." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 let workAMTip42 = Tip(header: "Increase Success", title: "The best time to take a break from work is midmorning", body: "Your mental resources are generally at their highest soon after you wake up, and they gradually diminish throughout the day. It's easier to restore those resources when you take a midmorning break.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/the-best-time-of-day-to-do-everything-2016-5#-5", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 let workAMTip43 = Tip(header: "Harvard Advice", title: "Mentor in hindsight. Employees learn much less when advice is given on the front end than they do when they have the opportunity to experience their own successes and failures and discuss them with their boss later.", body: "Mentoring helps to groom employees to advance within the organization. \n\nAsk your staff, \"What problems or challenges did you face this week, and how did you deal with them? And how well did that work out for you?\"", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/07/4-ways-leaders-can-protect-their-time-and-empower-their-teams", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let workAMTip44 = Tip(header: "Prevent Weight Gain", title: "Put a lid on an office's candy dish cut down on how many Hershey's Kisses people by about 1/3", body: "When food is out of sight, it's out of mind." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
@@ -2611,7 +2547,7 @@ let workPMTip56 = Tip(header: "Career Advice", title: "When to look for a new jo
 //FRI
 let workPMTip57 = Tip(header: "Quote", title: "You're not going to get rich renting out your time. You must own equity - a piece of a business - to gain your financial freedom.", body: "- Naval Ravikant \n\nCEO and a co-founder of AngelList." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/naval-ravikant-quotes", sponsorLogo: "", sponsorURL: "")
 let workPMTip58 = Tip(header: "Sign It's Time To Quit Your Job", title: "You've started doing bad work because you're angry or frustrated", body: "You always want to leave your job on a high note. You never know when you'll need to tap an old boss or coworker for a reference or some career advice." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/top-sign-its-time-to-quit-your-job-2017-7", sponsorLogo: "", sponsorURL: "")
-let workPMTip59 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Researchers swabbed 33 keyboards in an office and found that they harbored up to 5 times the germs of a toilet seat", body: "Why? The survey found that most users cleaned their keyboards infrequently (if at all). \n\nClean it: Use a soft, damp microfiber cloth to wipe the screen and keyboard at least once every other week." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
+let workPMTip59 = Tip(header: "Reduce Your Risk 🤒", title: "Researchers swabbed 33 keyboards in an office and found that they harbored up to 5 times the germs of a toilet seat", body: "Why? The survey found that most users cleaned their keyboards infrequently (if at all). \n\nClean it: Use a soft, damp microfiber cloth to wipe the screen and keyboard at least once every other week." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
 let workPMTip60 = Tip(header: "Increase Happiness", title: "Use all your vacation time and negotiate for more until you're getting about 6 weeks off", body: "After 6 weeks of vacation, you'll actually feel more satisfied to get back to work. \n\nDon't be lured by the notion that you'll take your dream vacation later in life." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 4
@@ -2830,10 +2766,10 @@ let workLateTip7 = Tip(header: "FYI", title: "For early birds, late afternoon/ea
 let workLateTip8 = Tip(header: "Work Smarter", title: "Study: In the long-run, working 60+ hour weeks results in the same productivity levels as working 40 hour weeks", body: "By working 60 hour weeks you can get a lot done. \n\nBut, when you work that hard for too long, your productivity drops off. \n\nAfter 2 months of 60 hours a week you'll actually accomplish less than if you had only been working 40 hours a week." , sourceName: "The Week", sourceURL: "https://theweek.com/articles/601111/5-daily-rituals-that-make-happy", sponsorLogo: "", sponsorURL: "")
 
 //3 WIP
-let workLateTip9 = Tip(header: "Don't Work Too Late", title: "\"I wish I hadn't worked so hard\" is a common deathbed regret", body: "Bronnie Ware, a palliative care nurse, wrote a book about the top 5 deathbed regrets. These are people who lived an entire life, accumulated wisdom, and had a chance to look back and say what they would have done differently. \n\n\"I wish I hadn't worked so hard\" came from every single male patient she cared for. Every single one.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
+let workLateTip9 = Tip(header: "Don't Work Too Late", title: "\"I wish I hadn't worked so hard\" is a common deathbed regret", body: "Bronnie Ware, a palliative care nurse, wrote a book about the top 5 deathbed regrets. \n\n\"I wish I hadn't worked so hard\" came from every single male patient she cared for. Every single one.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
 
 let workLateTip10 = Tip(header: "Warning", title: "Burnout is a medical condition caused by recurring workplace stress that has not been properly managed", body: "Signs of burnout include: \n• Feelings of energy depletion or exhaustion. \n• Reduced professional efficacy. \n• Increased mental distance from one's job, or feelings of negativism or cynicism related to one's job. \n\nDoctors and people working in other high-stress professions are burning out twice as fast as the average American worker." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/burnout-is-now-a-clinical-syndrome-2019-5", sponsorLogo: "", sponsorURL: "")
-let workLateTip11 = Tip(header: "Increase Happiness", title: "If you’re given the choice between overtime and free time, unless you absolutely need the money, you’ll be happier choosing the free time", body: "Researchers found that after you have enough money to cover the basic necessities of life then an increase in salary provided little to no additional happiness. But having more time to do a hobby or be with loved ones made people much happier." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
+let workLateTip11 = Tip(header: "Increase Happiness", title: "If you’re given the choice between overtime and free time, unless you absolutely need the money, you’ll be happier choosing the free time", body: "Research: Once people had enough money to cover the basic necessities of life then an increase in salary provided little to no additional happiness. \n\nBut having more time to do a hobby or be with loved ones made people much happier." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 
 
 /*
@@ -2936,7 +2872,7 @@ let homeAMTip12 = Tip(header: "Prevent Weight Gain", title: "Rearrange your refr
 //3
 let homeAMTip13 = Tip(header: "Healthy Choice", title: "Put fruit in a fruit bowl and place it within a 2-foot reach of where everyone walks when they go to the kitchen", body: "Study: The average time fruit lasted in a fruit bowl was 8 days. \n\nThe average time it lasted in the refrigerator was 17 days.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 let homeAMTip14 = Tip(header: "Healthy Choice", title: "Do a 15-minute kitchen makeover", body: "\n• Clear the counters of any food other than a fruit bowl \n• Put the healthiest food out front and center in your cupboards and pantry \n• Put cut fruit and veggies in plastic bags on the eye-level shelf of your fridge \n• Wrap less healthy leftovers in aluminum foil or put in non-clear containers \n• Have a seperate, hard-to-reach snack cupboard and consider a child's lock for it", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
-let homeAMTip15 = Tip(header: "Prevent Weight Gain", title: "Fat-proof your dinner table", body: "\n• Use dinner plates that are 9-10 inches in diameter \n• Sever food onto plates from the counter or stove \n• Use either tall or small glasses for anything that isn't water \n• Use smaller serving bowls and teaspoons as serviing spoons \n• Use the Half Plate Rule - Fill half the plate with fruit or veggies and fill the other half with anything you want", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
+let homeAMTip15 = Tip(header: "Prevent Weight Gain", title: "Fat-proof your dinner table", body: "• Use dinner plates that are 9-10 inches in diameter \n• Sever food onto plates from the counter or stove \n• Use either tall or small glasses for anything that isn't water \n• Use smaller serving bowls and teaspoons as serviing spoons \n• Use the Half Plate Rule - Fill half the plate with fruit or veggies and fill the other half with anything you want", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 let homeAMTip16 = Tip(header: "Increase Happiness", title: "Create one electronics-free room in your house where your family can sit together, pursue hobbies, play games, read, play an instrument, or study", body: "Create one cozy room: •\n\nRemove TVs, electronic games, and clocks. •\n\nLine the room with books or shelves holding pictures and objects that inspire you to pursue your passions. •\n\nPut a table in the middle that will accommodate your entire family.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
 //4
@@ -2947,7 +2883,7 @@ let homeAMTip20 = Tip(header: "Increase Happiness", title: "Create a \"pride shr
 
 //5
 let homeAMTip21 = Tip(header: "Warning", title: "Study: Living less than 50 meters from a major road or less than 150 meters from a highway is associated with a higher risk of developing dementia, Parkinson's, Alzheimer's and multiple sclerosis (MS) -- likely due to increased exposure to air pollution", body: "The researchers also found that living near green spaces, like parks, has protective effects against developing these neurological disorders. \n\nFor people who are exposed to a higher level of green space, they are more likely to be physically active and may also have more social interactions. \n\nThere may even be benefits from just the visual aspects of vegetation.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2020/01/200123152616.htm", sponsorLogo: "", sponsorURL: "")
-let homeAMTip22 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let homeAMTip22 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEK 1
@@ -3006,7 +2942,7 @@ let homePMTip12 = Tip(header: "Warning", title: "Sitting on the couch watching T
 
 //3
 let homePMTip13 = Tip(header: "Increase Happiness", title: "Do a hobby or play a sport \n• Don't watch TV", body: "Study: Compared to watching TV, teenagers are 2.5 times more likely to experience happiness when doing a hobby and 3.0 times more likely to experience happiness when playing a sport." , sourceName: "The Week", sourceURL: "https://theweek.com/articles/601111/5-daily-rituals-that-make-happy", sponsorLogo: "", sponsorURL: "")
-let homePMTip14 = Tip(header: "Warning", title: "People who binge-watch TV tend to be among the most depressed and lonely", body: "Binge-watching is classified as viewing 2+ episodes of the same TV show in one sitting. In addition, watching television is a sedentary activity that frequently goes hand-in-hand with eating, which means it can put a person at risk for obesity, diabetes, heart disease, and other chronic health conditions." , sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/depression-loneliness-linked-to-binge-watching-television/", sponsorLogo: "", sponsorURL: "")
+let homePMTip14 = Tip(header: "Warning", title: "People who binge-watch TV tend to be among the most depressed and lonely", body: "Binge-watching is classified as viewing 2+ episodes of the same TV show in one sitting. \n\nIn addition, watching television is a sedentary activity that frequently goes hand-in-hand with eating, which means it can put a person at risk for obesity, diabetes, heart disease, and other chronic health conditions." , sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/depression-loneliness-linked-to-binge-watching-television/", sponsorLogo: "", sponsorURL: "")
 let homePMTip15 = Tip(header: "Millionaire Habit", title: "A 5-year study of rich and poor people found that rich people don't watch TV, they read", body: "67% of rich people vs. 23% of poor people watch TV one hour or less per day. And only 6% of rich people watch reality shows, compared to 78% of the poor.\n\n86% of rich people vs. 25% of poor people love reading. Further, rich people tend to read non-fiction — in particular, self-improvement books. 88% of them read for self-improvement for 30 minutes each day, compared to 2% of poor people." , sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/article/235228", sponsorLogo: "", sponsorURL: "")
 let homePMTip16 = Tip(header: "Reduce Your Risk", title: "Scientists recommend washing your sinks daily", body: "Even if they look clean, sinks can get really gross. \n\nBathroom sink: accumulates fecal matter from washing your hands after you use the bathroom. \n\nKitchen sink:  bacteria from food, like E.Coli and Salmonella, can contaminate the kitchen sink." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -3017,9 +2953,9 @@ let homePMTip19 = Tip(header: "Lose Weight", title: "If you watch TV for 3 hours
 let homePMTip20 = Tip(header: "Warning", title: "Clutter in your home makes you more stressed and lowers your ability to process information", body: "Research: When your environment is cluttered, the chaos restricts your ability to focus. \n\nClutter makes you distracted and unable to process information as well as you do in an uncluttered and organized environment. \n\nIf you want to have less stress and process information as effectively as possible, you need to clear the clutter from your home and work." , sourceName: "Stanford BeWell", sourceURL: "https://bewell.stanford.edu/a-clean-well-lighted-place/", sponsorLogo: "", sponsorURL: "")
 
 //5
-let homePMTip21 = Tip(header: "Warning", title: "People who binge-watch TV tend to have problems with self-control", body: "Binge-watching is classified as viewing 2+ episodes of the same TV show in one sitting. Research is showing that the habit of binge-watching is driven by the same impulse as other addictions, such as drugs and alcohol, which involve firing up the dopamine receptors, the reward center of the brain." , sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/depression-loneliness-linked-to-binge-watching-television/", sponsorLogo: "", sponsorURL: "")
+let homePMTip21 = Tip(header: "Warning", title: "People who binge-watch TV tend to have problems with self-control", body: "Binge-watching is classified as viewing 2+ episodes of the same TV show in one sitting. \n\nResearch is showing that the habit of binge-watching is driven by the same impulse as other addictions, such as drugs and alcohol, which involve firing up the dopamine receptors, the reward center of the brain." , sourceName: "CBS News", sourceURL: "https://www.cbsnews.com/news/depression-loneliness-linked-to-binge-watching-television/", sponsorLogo: "", sponsorURL: "")
 let homePMTip22 = Tip(header: "Increase Happiness", title: "Going for a walk outside reduces blood pressure, while increasing brain activity responsible for relaxation", body: "Research: Going for a deliberate stroll helped reduce the effects of depression. \n\nKnown as \"forest bathing,\" is the Japanese practice of simply being in nature. \n\nPro tip: Leave your earbuds at home and just take in the sounds of your neighborhood." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let homePMTip23 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Clean your kitchen sponges every fews days because they collect billions of bacteria", body: "Best ways to clean sponges: drop them into boiling water for 2 minutes, put them in the microwave for 2 minutes while damp, and replace them when they deteriorate." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let homePMTip23 = Tip(header: "Reduce Your Risk 🤒", title: "Clean your kitchen sponges every fews days because they collect billions of bacteria", body: "Best ways to clean sponges: drop them into boiling water for 2 minutes, put them in the microwave for 2 minutes while damp, and replace them when they deteriorate." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let homePMTip24 = Tip(header: "Live Longer", title: "Put family first. Establish one room where family members gather daily", body: "Larger homes make it easier for family members to isolate themselves from the group. Smaller homes make it easier for families to bond and spend time together. \n\nSuccessful families make a point of eating at least one meal a day together, spending family time, and taking annual vacations.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 //6
@@ -3030,10 +2966,10 @@ let homePMTip28 = Tip(header: "Increase Happiness", title: "Volunteering 2+ hour
 
 //WEEK 2
 //7
-let homePMTip29 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Change your pillowcase and sheets once a week. Study: Your pillowcase has more bacteria than your toilet seat", body: "The longer you wait between washes, the more acne you will have from oil that gets transferred from your body to your sheets. \n\nIn addition, dust mites live and reproduce in your sheets. Dust mites cause red and itchy eyes, runny noses, and other cold-like symptoms in people who are allergic. \n\nExperts Recommend: \n• Wash your sheets once a week with the hottest water possible." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com.au/bed-how-often-should-wash-sheets-dust-mites-fungi-bacteria-2019-5", sponsorLogo: "", sponsorURL: "")
+let homePMTip29 = Tip(header: "Reduce Your Risk 🤒", title: "Change your pillowcase and sheets once a week. Study: Your pillowcase has more bacteria than your toilet seat", body: "The longer you wait between washes, the more acne you will have from oil that gets transferred from your body to your sheets. \n\nIn addition, dust mites live and reproduce in your sheets. Dust mites cause red and itchy eyes, runny noses, and other cold-like symptoms in people who are allergic. \n\nExperts Recommend: \n• Wash your sheets once a week with the hottest water possible." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com.au/bed-how-often-should-wash-sheets-dust-mites-fungi-bacteria-2019-5", sponsorLogo: "", sponsorURL: "")
 let homePMTip30 = Tip(header: "Warning", title: "Each square inch of carpet has nearly 700 times more bacteria than on your toilet seat", body: "• Vacuum your carpets. \n\nAnd since your vacuum cleaner can’t reach to the bottom of the carpet, hire a company to deep clean at least once a year." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
 let homePMTip31 = Tip(header: "Increase Happiness", title: "30-year study: Unhappy people watched 20% more TV in their spare time than very happy people", body: "The researchers believe that TV may provide viewers with short-run pleasure but at the expense of long-term unhappiness. \n\nThe researchers found that happy people: \n\n• Socialize more \n• Read more newspapers \n• Attend more religious services" , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2008/11/081113080006.htm", sponsorLogo: "", sponsorURL: "")
-let homePMTip32 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Wipe down doorknobs once a week (in some rooms)", body: "Doorknobs in the bathroom and the kitchen are bound to catch a lot more bacteria, so disinfecting them at least once a week might be a good idea, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271#anchor-Disinfectthesinks", sponsorLogo: "", sponsorURL: "")
+let homePMTip32 = Tip(header: "Reduce Your Risk 🤒", title: "Wipe down doorknobs once a week (in some rooms)", body: "Doorknobs in the bathroom and the kitchen are bound to catch a lot more bacteria, so disinfecting them at least once a week might be a good idea, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271#anchor-Disinfectthesinks", sponsorLogo: "", sponsorURL: "")
 
 //8
 let homePMTip33 = Tip(header: "Save The Environment", title: "Limit your washing machine usage. Every time we wash our clothes an average of 9 million [plastic] microfibres are released into the environment", body: "If your clothes have a stain, try spot-cleaning them with water rather than washing the whole garment. \n\nWhen you do wash: \n\n• Set the machine to a lower temperature \n\n• Use liquid detergent: Powder detergent creates more friction between the clothes [during washing], so more fibers are released, whereas liquid is smoother. The less friction there is, the fewer fibers are released. \n\n• Avoid overloading washing machines - fewer clothes in the drum means there's less friction." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/world-48908413", sponsorLogo: "", sponsorURL: "")
@@ -3055,7 +2991,7 @@ let homePMTip44 = Tip(header: "Increase Happiness", title: "Survey: The happiest
 
 //11
 let homePMTip45 = Tip(header: "Increase Happiness", title: "DO: Watch a good-natured humor comedy show \nDON'T: Watch a mean-spirited humor comedy show", body: "Study: Positive humor was more successful at reducing negative emotions and increasing positive emotions than negative humor.", sourceName: "Inc.", sourceURL: "https://www.inc.com/amy-morin/5-simple-ways-to-turn-around-a-bad-mood-fast.html", sponsorLogo: "", sponsorURL: "")
-let homePMTip46 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let homePMTip46 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEK 1
@@ -3115,29 +3051,29 @@ let bathroomIcon = Constants.Icon.bathroom
 
 //0
 let bathroomTip1 = Tip(header: "Reduce Your Risk", title: "Are you hydrated when you go to the bathroom? Staying hydrated reduces your risk for kidney stones.", body: "When you're getting enough water, urine flows freely, is light in color and free of odor. \n\nWhen your body is not getting enough fluids, urine concentration, color, and odor increases because the kidneys trap extra fluid for bodily functions. \n\nIf you chronically drink too little, you may be at higher risk for kidney stones, especially in warm climates." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#1", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let bathroomTip2 = Tip(header: "Millionaire Habit", title: "Floss every day", body: "Study of what rich people and poor people do every day: \"I floss every day.\" \n• Rich people who agree: 62% \n• Poor people who agree: 16%", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-daily-habits-2014-6", sponsorLogo: "", sponsorURL: "")
+let bathroomTip2 = Tip(header: "Millionaire Habit", title: "Floss every day", body: "Study of what rich people and poor people do every day: \"I floss every day.\" \n\n• Rich people who agree: 62% \n• Poor people who agree: 16%", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-daily-habits-2014-6", sponsorLogo: "", sponsorURL: "")
 
-let bathroomTip3 = Tip(header: "Prevent Illness", title: "Scientists recommend cleaning your bathroom door knobs once a week", body: "Disinfect bathroom doorknobs at least once a week, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomTip3 = Tip(header: "Prevent Illness 🤒", title: "Scientists recommend: Clean your bathroom door knobs once a week", body: "Disinfect bathroom doorknobs at least once a week, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let bathroomTip4 = Tip(header: "Live Longer", title: "Weighing yourself daily helps you to reduce your weight and keep it off in the long run", body: "One study followed women who were trying to lose weight. \n\nAfter two years, women who weighed themselves daily lost an average of 12 pounds. \n\nWomen who never weighed themselves actually gained an average of 5 pounds. \n\nIn other words, at the end of 2 years, women who weighed themselves every day were (on average) about 17 pounds lighter than the women who never weighed themselves.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 
 //1
 let bathroomTip5 = Tip(header: "Live Longer", title: "Weigh yourself often — not in an obsessive way, of course", body: "Study: Those who monitored their weight more frequently were less likely to gain weight. \n\nA healthy weight reduces your risk of: \n• High blood pressure \n• High cholesterol \n• Diabetes \n• Cancer" , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/04/09/harvard-study-says-these-5-habits-may-help-you-live-10-years-longer.html", sponsorLogo: "", sponsorURL: "")
 let bathroomTip6 = Tip(header: "Warning", title: "Colon and rectal cancer is on the rise for people as young as 20 years old", body: "Talk to your doctor if any of the following symptoms don't go away: \n\n• Rectal Bleeding: This includes blood coming from the rectum, or blood in the stool or in the toilet after a bowel movement. \n\n• Dark Or Black Stools: This may indicate bleeding from a tumor. \n\n• Narrow, Thin Or Ribbon-Like Stool: This may signal that a tumor is obstructing your bowels or rectum. \n\n• Diarrhea Or Constipation (Less Than 3 Bowel Movements A Week): See a doctor if the changes in bowel movements last 2 weeks or more. \n\nDon’t be afraid of the tests. A colonoscopy is the gold standard for diagnosing colorectal cancers, and it saves lives.", sourceName: "Yale Medicine", sourceURL: "https://www.yalemedicine.org/stories/colorectal-cancer-in-young-people/", sponsorLogo: "", sponsorURL: "")
 let bathroomTip7 = Tip(header: "Reduce Your Risk", title: "Drinking water reduces your chances of getting constipation", body: "When you don't get enough liquid, your colon pulls water from stools to maintain hydration -- and the result is constipation. \n\nAdequate liquid and fiber is the perfect combination, because the liquid pumps up the fiber and acts like a broom to keep your bowel functioning properly." , sourceName: "WebMD", sourceURL: "https://www.webmd.com/diet/features/6-reasons-to-drink-water#3", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let bathroomTip8 = Tip(header: "Prevent Illness", title: "Wash your hands and dry them with paper towels, not jet air dryers", body: "Not drying your hands after washing them helps bacteria to survive on your hands. \n\nA study found that paper towels are the most hygienic way to dry your hands. \n\nAvoid jet air dryers, which have also been associated with the spread of germs in bathrooms.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/blog/the-bacterial-horror-of-the-hot-air-hand-dryer-2018051113823", sponsorLogo: "", sponsorURL: "")
+let bathroomTip8 = Tip(header: "Prevent Illness 🤒", title: "Wash your hands and dry them with paper towels, not jet air dryers", body: "Not drying your hands after washing them helps bacteria to survive on your hands. \n\nA study found that paper towels are the most hygienic way to dry your hands. \n\nAvoid jet air dryers, which have also been associated with the spread of germs in bathrooms.", sourceName: "Harvard Health Publishing", sourceURL: "https://www.health.harvard.edu/blog/the-bacterial-horror-of-the-hot-air-hand-dryer-2018051113823", sponsorLogo: "", sponsorURL: "")
 
 //3
 let bathroomTip9 = Tip(header: "Warning", title: "Study: Smartphones are more than 6 times dirtier than toilet seats", body: "“A smartphone which is brought into a washroom will invariably end up with invisible traces of feces and urine on it,” hygiene expert Lisa Ackerley said. “These will then transfer to the owner’s hands.” \n\nClean it: Reduce your exposure to germs by cleaning your electronic screens with screen wipes or a damp, soft cloth—and leaving them out of the bathroom in the first place.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
 
 let bathroomTip10 = Tip(header: "Warning", title: "Your bathroom faucet handle can have 21 times the bacteria of your toilet seat", body: "One study found that drug-resistant bacteria like E. coli can spread from the pipes to your sink and hands. \n\nClean it: Disinfect and clean regularly along with the rest of your sink to make sure washing your hands isn’t making you dirtier.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", sponsorLogo: "", sponsorURL: "")
-let bathroomTip11 = Tip(header: "Millionaire Habit", title: "Take care of your smile like supermodel Christie Brinkley", body: "\"I brush my teeth morning and night, alternating toothpaste brands. In addition to flossing I use a Water Pik to massage my gums and remove food particles. I love the toothpicks with a bottle-brush-like cleaner on one end and carry them with me.\" \n\n- Christie Brinkley \n\nModel, actress and entrepreneur.", sourceName: "Los Angeles Times", sourceURL: "https://www.latimes.com/health/la-he-christie-brinkley-interview-20151226-story.html", sponsorLogo: "", sponsorURL: "")
-let bathroomTip12 = Tip(header: "Prevent Illness", title: "Scientists recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. Disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks. \n\nYour shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomTip11 = Tip(header: "Millionaire Habit", title: "Take care of your smile like Christie Brinkley", body: "\"I brush my teeth morning and night, alternating toothpaste brands. In addition to flossing I use a Water Pik to massage my gums and remove food particles. I love the toothpicks with a bottle-brush-like cleaner on one end and carry them with me.\" \n\n- Christie Brinkley \n\nModel, actress and entrepreneur", sourceName: "Los Angeles Times", sourceURL: "https://www.latimes.com/health/la-he-christie-brinkley-interview-20151226-story.html", sponsorLogo: "", sponsorURL: "")
+let bathroomTip12 = Tip(header: "Prevent Illness 🤒", title: "Scientists recommend: Wipe down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. Disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks. \n\nYour shower curtains should be disinfected weekly to avoid mildew, which can cause skin, eye and throat irritation in some people." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 //4
-let bathroomTip13 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Research: To remove harmful germs, wash your hands for at least 20 seconds in cold or warm water", body: "Rub your hands together \"vigorously\", and covering all surfaces: the back of the hands, wrists, between the fingers, and under fingernails where grime gets stuck. \n\nAvoid using hot water to wash your hands because it can dry them out and potentially damage the skin." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-long-should-you-wash-your-hands", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomTip13 = Tip(header: "Reduce Your Risk 🤒", title: "Research: To remove harmful germs, wash your hands for at least 20 seconds in cold or warm water", body: "Rub your hands together \"vigorously\", and covering all surfaces: the back of the hands, wrists, between the fingers, and under fingernails where grime gets stuck. \n\nAvoid using hot water to wash your hands because it can dry them out and potentially damage the skin." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-long-should-you-wash-your-hands", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let bathroomTip14 = Tip(header: "Bowel Inspection", title: "If you see pieces of food in your bowels, it means you didn't digest it, which usually means you ate too fast", body: "Slow down your eating to allow for proper digestion. \n\nStudy: fast eaters are up to 115% more likely to be obese." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let bathroomTip15 = Tip(header: "", title: "Ginger has the ability to speed up the time it takes your stomach to pass food to your digestive tract by up to 50%", body: "Add ginger to your meal or tea whenever you need to speed up digestion." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let bathroomTip16 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let bathroomTip16 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 let bathroomTipArray0 = [bathroomTip1, bathroomTip2, bathroomTip3, bathroomTip4]
 let bathroomTopic0 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray0)
@@ -3153,20 +3089,12 @@ let bathroomTopic3 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathro
 // RANDOM
 let bathroomTipArrays = [bathroomTipArray0, bathroomTipArray1, bathroomTipArray2, bathroomTipArray3,]
 let bathroomTopic = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArrays.random())
+let bathroomAMTopics = Topics(title: bathroomPMTitle, icon: bathroomPMIcon, topics: [bathroomTopic])
 
 
 
 
 
-
-let bathroomTipArray4 = [bathroomTip5, bathroomTip6, bathroomTip7, bathroomTip8]
-let bathroomTopic4 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray4)
-
-let bathroomTipArray5 = [bathroomTip9, bathroomTip10, bathroomTip11, bathroomTip12]
-let bathroomTopic5 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray5)
-
-let bathroomTipArray6 = [bathroomTip8, bathroomTip8, bathroomTip6, bathroomTip5]
-let bathroomTopic6 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray6)
 
 
 // MARK: - Bathroom PM
@@ -3175,23 +3103,23 @@ let bathroomPMTitle = "Bathroom"
 let bathroomPMIcon = Constants.Icon.bathroom
 
 // 0
-let bathroomPMTip1 = Tip(header: "Avoid Bad Breath", title: "Clean your tongue", body: "Brush your tongue with a toothbrush or tongue scraper after brushing your teeth. \n\nYou'll know your tongue is clean when it looks like a fleshy pink color. \n\nIf it looks like any other color besides pink, you probably have debris buildup to clean off." , sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-clean-your-tongue", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomPMTip1 = Tip(header: "Avoid Bad Breath 😛", title: "Clean your tongue", body: "Brush your tongue with a toothbrush or tongue scraper after brushing your teeth. \n\nYou'll know your tongue is clean when it looks like a fleshy pink color. \n\nIf it looks like any other color besides pink, you probably have debris buildup to clean off." , sourceName: "SELF", sourceURL: "https://www.self.com/story/how-to-clean-your-tongue", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bathroomPMTip2 = Tip(header: "Reduce Your Risk", title: "Scientist recommend changing your bathroom towels every other day", body: "Bath towels become loaded with bacteria (including staph and fecal) and if your towel doesn’t fully dry, that bacteria can grow. \n\nPlus, dandruff-causing fungi can also grow in them." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomPMTip2 = Tip(header: "Reduce Your Risk 🤒", title: "Scientists recommend: Change your bathroom towels every other day", body: "Bath towels become loaded with bacteria (including staph and fecal) and if your towel doesn’t fully dry, that bacteria can grow. \n\nPlus, dandruff-causing fungi can also grow in them." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
-let bathroomPMTip3 = Tip(header: "Sleep Better", title: "Tonight, trade your shower for a bath to reduce stress, sleep better, and lose weight", body: "When you take a hot bath your body temperature rises, and then quickly cools down, which relaxes your body, burns calories, and primes it for sleep." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/5-science-backed-ways-have-healthier-weekend-ncna782761", sponsorLogo: "", sponsorURL: "")
+let bathroomPMTip3 = Tip(header: "Sleep Better 🛁", title: "Tonight, take a bath to reduce stress, sleep better, and lose weight", body: "When you take a hot bath your body temperature rises, and then quickly cools down, which relaxes your body, burns calories, and primes it for sleep." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/5-science-backed-ways-have-healthier-weekend-ncna782761", sponsorLogo: "", sponsorURL: "")
 
-let bathroomPMTip4 = Tip(header: "Reduce Your Risk", title: "Scientist recommend wiping down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. \n\nTo keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomPMTip4 = Tip(header: "Reduce Your Risk 🤒", title: "Scientists recommend: Wipe down your bathroom at least once a week", body: "Your bathroom is the ultimate bacteria host; E.coli can be found within 6 feet of the toilet and in the sink. \n\nTo keep it at bay, disinfect the toilet and sink at least once weekly, and the bathtub every 2 weeks." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
 // 1
 
-let bathroomPMTip5 = Tip(header: "Save The Planet", title: "Throw contacts away in the trash. NOT down the toilet or sink. ", body: "Contacts don’t decompose, and as a result, nearly 50 tons of contacts could end up in American water supplies each year. \n\nTiny bits of plastic from many sources have also been spotted in the oceans and other bodies of water, where they may be ingested by fish, corals and other animals." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/health/archive/2018/08/contacts-down-the-drain/567850/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
+let bathroomPMTip5 = Tip(header: "Save The Planet 🗑", title: "Throw contacts away in the trash. NOT down the toilet or sink. ", body: "Contacts don’t decompose, and as a result, nearly 50 tons of contacts could end up in American water supplies each year. \n\nTiny bits of plastic from many sources have also been spotted in the oceans and other bodies of water, where they may be ingested by fish, corals and other animals." , sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/health/archive/2018/08/contacts-down-the-drain/567850/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let bathroomPMTip6 = Tip(header: "Healthy Choice", title: "Improve your balance by standing on one foot when brushing your teeth", body: "Balance is important since falls are common cause of injuries and death among seniors (in the US, about 1/3 adults over age 65 falls each year.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
-let bathroomPMTip7 = Tip(header: "Millionaire Habit", title: "Take care of your smile like supermodel Christie Brinkley", body: "\"Caring for your lips and gums is important. I brush my teeth morning and night, alternating toothpaste brands. In addition to flossing, I use a Water Pik to massage my gums and remove food particles. I love the toothpicks with a bottle-brush-like cleaner on one end and carry them with me.\" \n\nChristie Brinkley is an American model, actress and entrepreneur.", sourceName: "Los Angeles Times", sourceURL: "https://www.latimes.com/health/la-he-christie-brinkley-interview-20151226-story.html", sponsorLogo: "", sponsorURL: "")
-let bathroomPMTip8 = Tip(header: "Millionaire Habit", title: "Floss every day", body: "Study of what rich people and poor people every day: \"I floss every day.\" \n• Rich people who agree: 62% \n• Poor people who agree: 16%", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-daily-habits-2014-6", sponsorLogo: "", sponsorURL: "")
+let bathroomPMTip7 = Tip(header: "Millionaire Habit 😁", title: "Take care of your smile like Christie Brinkley", body: "\"I brush my teeth morning and night, alternating toothpaste brands. In addition to flossing, I use a Water Pik to massage my gums and remove food particles. I love the toothpicks with a bottle-brush-like cleaner on one end and carry them with me.\" \n\n- Christie Brinkley \nAmerican model, actress and entrepreneur", sourceName: "Los Angeles Times", sourceURL: "https://www.latimes.com/health/la-he-christie-brinkley-interview-20151226-story.html", sponsorLogo: "", sponsorURL: "")
+let bathroomPMTip8 = Tip(header: "Millionaire Habit", title: "Floss every day", body: "Study of what rich people and poor people every day: \"I floss every day.\" \n\n• Rich people who agree: 62% \n• Poor people who agree: 16%", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-daily-habits-2014-6", sponsorLogo: "", sponsorURL: "")
 
 //2
-let bathroomPMTip9 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let bathroomPMTip9 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -3204,24 +3132,10 @@ let bathroomPMTipArray2 = [bathroomPMTip9, bathroomPMTip2, bathroomPMTip3, bathr
 //RANDOM
 let bathroomPMTipArrays = [bathroomPMTipArray0, bathroomPMTipArray1,]
 let bathroomPMTopic = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArrays.random())
+let bathroomPMTopics = Topics(title: bathroomPMTitle, icon: bathroomPMIcon, topics: [bathroomPMTopic])
 
 
-let bathroomPMTopic0 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray0)
-let bathroomPMTopic1 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray1)
-let bathroomPMTopic2 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray2)
 
-
-let bathroomPMTipArray3 = [bathroomPMTip5, bathroomPMTip6, bathroomPMTip7, bathroomPMTip8]
-let bathroomPMTopic3 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray3)
-
-let bathroomPMTipArray4 = [bathroomPMTip1, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
-let bathroomPMTopic4 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray4)
-
-let bathroomPMTipArray5 = [bathroomPMTip5, bathroomPMTip6, bathroomPMTip7, bathroomPMTip8]
-let bathroomPMTopic5 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray5)
-
-let bathroomPMTipArray6 = [bathroomPMTip8, bathroomPMTip7, bathroomPMTip6, bathroomPMTip5]
-let bathroomPMTopic6 = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArray6)
 
 
 // MARK: - Bedtime
@@ -3245,12 +3159,12 @@ let bedtimeTip8 = Tip(header: "Increase Confidence", title: "Before you even get
 // TUE
 let bedtimeTip9 = Tip(header: "Healthy Choice", title: "Use mouthwash before bed to give your mouth an extra layer of protection from cavity-causing acids", body: "Saliva prevents cavity-causing acids from building up. But we produce less saliva when we sleep. That can dry out your mouth, leaving teeth and gums vulnerable to things like tooth decay and gingivitis.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", sponsorLogo: "sponsor", sponsorURL: "sponsorURL")
 let bedtimeTip10 = Tip(header: "Increase Success 📵", title: "Put your phone in another room or somewhere across the bedroom, far away from your arms' reach, so you're not tempted to check it first thing in the morning", body: "Immediately checking your phone when you wake up is more likely to increase stress and leave you feeling overwhelmed. \n\nThe information overload that hits you before you're fully awake also interferes with your ability to priority tasks during the day.", sourceName: "Elite Daily", sourceURL: "https://www.elitedaily.com/p/is-it-bad-to-look-at-your-phone-right-when-you-wake-up-it-might-be-sabotaging-your-day-8437383", sponsorLogo: "", sponsorURL: "")
-let bedtimeTip11 = Tip(header: "Increase Happiness", title: "Sleep more - you’ll be less sensitive to negative emotions", body: "In one experiment, sleep-deprived college students tried to memorize a list of words. They could remember 81% of the words with a negative connotation, like \"cancer.\" But they could remember only 31% of the words with a positive or neutral connotation, like \"sunshine\" or \"basket.\"", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/belle-beth-cooper/10-simple-things-to-be-happy_b_4241824.html", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip11 = Tip(header: "Increase Happiness", title: "Sleep more - you’ll be less sensitive to negative emotions", body: "In one experiment, sleep-deprived college students tried to memorize a list of words. \n\nThey could remember 81% of the words with a negative connotation, like \"cancer.\" \n\nBut they could remember only 31% of the words with a positive or neutral connotation, like \"sunshine\" or \"basket.\"", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/belle-beth-cooper/10-simple-things-to-be-happy_b_4241824.html", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip12 = Tip(header: "Millionaire Habit 🌅", title: "Serial entrepreneur Gary Vaynerchuk wakes up at 6 AM every day and follows the same morning routine", body: "Consistency and routine are helpful for starting the day in a proactive mode. \n\nHe reads the news, checks his social media, exercises for 45 minutes, spends times with his kids before they go to school, calls a friend or family member while he commutes to work, and then gets into the office at 9 AM.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/gary-vaynerchuks-morning-routine-2015-3", sponsorLogo: "", sponsorURL: "")
 
 // WED
 let bedtimeTip13 = Tip(header: "Millionaire Habit", title: "Virgin Group founder Richard Branson wakes up at 5 AM every day and exercises", body: "You can’t be productive if you’re not healthy. \"I definitely can achieve twice as much by keeping fit,\" Branson said. \"It keeps the brain functioning well.\"", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3066982/why-the-most-productive-people-do-these-six-things-every-day", sponsorLogo: "", sponsorURL: "")
-let bedtimeTip14 = Tip(header: "Reduce Your Risk Of Getting Sick", title: "Getting 7 to 8 hours of sleep each night is associated with the lowest risk of missing work because of sickness", body: "People sleeping 5 hours or less, or 10 hours or more, reported 5 to 9 more sick days each year, as compared to those who slept between 7 and 8 hours per night. \n\nSleep deficiency causes sickness, decline in cognitive functioning, and accidents while commuting.", sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-sleep-disturbance-workers-absence/sleeping-seven-to-eight-hours-a-night-linked-to-taking-fewer-sick-days-idUSKBN0H62BM20140911", sponsorLogo: "", sponsorURL: "")
+let bedtimeTip14 = Tip(header: "Reduce Your Risk 🤒", title: "Getting 7 to 8 hours of sleep each night is associated with the lowest risk of missing work because of sickness", body: "People sleeping 5 hours or less, or 10 hours or more, reported 5 to 9 more sick days each year, as compared to those who slept between 7 and 8 hours per night. \n\nSleep deficiency causes sickness, decline in cognitive functioning, and accidents while commuting.", sourceName: "Reuters", sourceURL: "https://www.reuters.com/article/us-sleep-disturbance-workers-absence/sleeping-seven-to-eight-hours-a-night-linked-to-taking-fewer-sick-days-idUSKBN0H62BM20140911", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip15 = Tip(header: "Increase Success 📝", title: "Reflect on or write down one positive moment that happened today", body: "Celebrate the successes, even if they were few and far between, because the last thing you do before bed tends to impact your mood the next day. \n\nBenjamin Franklin famously asked himself the same question every night: \"What good have I done today?\"" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-before-bed-2016-6#7-they-reflect-on-the-good-things-from-the-day-7", sponsorLogo: "", sponsorURL: "")
 let bedtimeTip16 = Tip(header: "Lose Weight ☀️", title: "Wake up earlier tomorrow and make time to get sunlight between 8am-noon", body: "Research: 20-30 minutes of early morning sun exposure is enough for you to lower your Body Mass Index (BMI) and lower your waistline. \n\nNot getting sufficient sunlight in the morning could de-synchronize your internal body clock, which can affect your metabolism and can lead to weight gain." , sourceName: "Pop Sugar", sourceURL: "https://www.popsugar.com.au/fitness/Sunlight-Helps-Weight-Loss-34543871", sponsorLogo: "", sponsorURL: "")
 
@@ -3361,6 +3275,10 @@ let bedtimeTopic9 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTi
 let bedtimeTipArray10 = [bedtimeTip45, bedtimeTip46, bedtimeTip47, bedtimeTip48]
 let bedtimeTopic10 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray10)
 
+
+
+
+
 //SAT (WIP)
 let bedtimeTipArray11 = [bedtimeTip53, bedtimeTip54, bedtimeTip55, bedtimeTip56]
 let bedtimeTopic11 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray11)
@@ -3375,6 +3293,9 @@ let bedtimeTipArrays = [bedtimeTipArray0, bedtimeTipArray1, bedtimeTipArray2, be
 let bedtimeTopic = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArrays.random())
 
 
+let bedtimeTopics = Topics(title: bedtimeTitle, icon: bedtimeIcon, topics: [bedtimeTopic])
+
+
 //FRIDAY Tips
 let bedtimeFridayTip1 = Tip(header: "Sleep Better", title: "Take a warm bath or shower an hour before bed", body: "Our body temperature lowers around 4 a.m. to preserve our energy while we sleep. Taking a warm bath or shower and hour before bed lowers your body temperature, which helps you fall asleep." , sourceName: "Verywell", sourceURL: "https://www.verywellhealth.com/the-importance-of-your-sleep-environment-3014944", sponsorLogo: "", sponsorURL: "")//FRI
 let bedtimeFridayTip2 = Tip(header: "Increase Success 🌅", title: "Successful people wake up early on the weekend too", body: "Former Navy SEAL Jocko Willink noticed the highest performers he served with were the ones who woke up earliest, beginning their days while others were sleeping. \"Don't sleep in on the weekends or else you'll ruin any progress you've made optimizing your schedule.\"" , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/former-navy-seal-jocko-willink-daily-routines-to-change-your-life-2017-11", sponsorLogo: "", sponsorURL: "")
@@ -3385,7 +3306,8 @@ let bedtimeFridayTip4 = Tip(header: "Sleep Better", title: "Sleep in a quiet pla
 //FRI
 let bedtimeFridayTip5 = Tip(header: "Reduce Your Risk", title: "Study: Don't drink alcohol before bed because it increases your risk of sleep apnoea by 25%", body: "Sleep apnea is a potentially serious sleep disorder in which breathing repeatedly stops and starts. If you snore loudly and feel tired even after a full night's sleep, you might have sleep apnea.", sourceName: "National Center for Biotechnology Information, U.S. National Library of Medicine", sourceURL: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5840512/", sponsorLogo: "", sponsorURL: "")
 let bedtimeFridayTip6 = Tip(header: "Fall Asleep Faster", title: "Take a bath or shower before bed", body: "Taking a bath or shower artificially raises your body temperature, but when you climb out of the tub or shower, your body temperature abruptly drops and sends a signal to your body that you are ready for sleep." , sourceName: "The Guardian", sourceURL: "https://www.theguardian.com/lifeandstyle/2016/jan/31/12-rules-good-nights-sleep", sponsorLogo: "", sponsorURL: "")
-let bedtimeFridayTip7 = Tip(header: "Increase Happiness", title: "Research: A good night's sleep improves mental well-being, while a consistent lack of sleep has been linked to obesity, memory impairment, and depression", body: "After you turn of the lights, take a look around your bedroom. \n\nDo you see glowing clocks, blinking lights, cable box displays? \n\n• Make your bedroom a no-electronic zone (no TV, computer, or cell phone). \n\n• Put up light-blocking window shades or drapes to make the room dark for sleeping. \n\n• Turn down the thermostat to about 65℉ to make it cool.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
+let bedtimeFridayTip7 = Tip(header: "Increase Happiness", title: "Research: A good night's sleep improves mental well-being, while a consistent lack of sleep has been linked to obesity, memory impairment, and depression", body: "After you turn of the lights, take a look around your bedroom. Do you see glowing clocks, blinking lights, cable box displays? \n\n• Make your bedroom a no-electronic zone (no TV, computer, or cell phone). \n\n• Put up light-blocking window shades or drapes to make the room dark for sleeping. \n\n• Turn down the thermostat to about 65℉ to make it cool.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
+
 let bedtimeFridayTip8 = Tip(header: "Millionaire Habit", title: "Each night before bed, Arianna Huffington puts her phone in another room so she’s not distracted by it before bed", body: "The bright lights produced by our cell phone screens disrupt our bodies natural sleep rhythm causing us to have a much harder time falling asleep. \n\nAs she details in her book, \"Thrive,\" she also has banned all electronics from the bedroom, including: \n• iPads \n• Kindles \n• laptops", sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/productivity/6-habits-highly-successful-people-before-bedtime.html", sponsorLogo: "", sponsorURL: "")
 
 
@@ -3469,7 +3391,7 @@ let cantSleepTip8 = Tip(header: "Warning", title: "If you’ve had trouble sleep
 let cantSleepTip9 = Tip(header: "Sleep Better 🎵", title: "DO: Listen to relaxing classical music. DON'T: Listen to an audiobook or nothing at all", body: "Researchers found that listening to classical music statistically significantly improved sleep quality. \n\nSleep quality did not improve statistically significantly for participants listening to an audiobook or no music at all." , sourceName: "National Center for Biotechnology Information, U.S. National Library of Medicine", sourceURL: "https://www.ncbi.nlm.nih.gov/pubmed/18426457", sponsorLogo: "", sponsorURL: "")
 let cantSleepTip10 = Tip(header: "Sleep Better 📝", title: "Write down your thoughts. Keep a pen and paper next to your bed", body: "Thinking about something you have to do the next day can keep you from falling asleep. \n\nWriting it all down helps to physically \"dump out\" your thoughts onto paper so you don’t have to keep thinking about them over and over." , sourceName: "Medium", sourceURL: "https://betterhumans.coach.me/how-to-fall-asleep-quickly-and-wake-up-ready-to-be-productive-cd7eadad010d", sponsorLogo: "", sponsorURL: "")
 let cantSleepTip11 = Tip(header: "Sleep Tip", title: "Go into another room and do something relaxing until you feel tired", body: "It is best to take work materials, computers and televisions out of the sleeping environment. Use your bed only for sleep and romance to strengthen the association between bed and sleep." , sourceName: "National Sleep Foundation", sourceURL: "https://www.sleepfoundation.org/articles/healthy-sleep-tips", sponsorLogo: "", sponsorURL: "")
-let cantSleepTip12 = Tip(header: "💤", title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for. Participants of a 2-week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", sponsorLogo: "TBD", sponsorURL: "")
+let cantSleepTip12 = Tip(header: "💤", title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for. \n\nParticipants of a 2-week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", sponsorLogo: "TBD", sponsorURL: "")
 
 
 
@@ -3486,7 +3408,7 @@ let cantSleepTopic2 = Topic(title: cantSleepTitle, icon: cantSleepIcon, tip: can
 //
 let cantSleepTipArrays = [cantSleepTipArray0, cantSleepTipArray1, cantSleepTipArray2,]
 let cantSleepTopic = Topic(title: cantSleepTitle, icon: cantSleepIcon, tip: cantSleepTipArrays.random())
-
+let cantSleepTopics = Topics(title: cantSleepTitle, icon: cantSleepIcon, topics: [cantSleepTopic,])
 
 
 
@@ -3645,7 +3567,7 @@ let travelTipArray4 = [travelTip16, travelTip17, travelTip18, travelTip19]
 //
 let travelTipArrays = [travelTipArray0, travelTipArray1, travelTipArray2, travelTipArray3, travelTipArray4,]
 let travelTopic = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArrays.random())
-
+let travelTopics = Topics(title: travelTitle, icon: travelIcon, topics: [travelTopic,])
 
 
 

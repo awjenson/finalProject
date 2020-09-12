@@ -94,10 +94,15 @@ class JournalTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    //MARK: - IBAction
+
+
     @IBAction func sourceButtonTapped(_ sender: Any) {
         print("Hint sounce button tapped")
 
         delegate?.goToSourceURL(url: tipItem.sourceURL!)
     }
+
+    
 
 }

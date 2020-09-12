@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 //import Firebase
 
@@ -28,7 +29,7 @@ class UserInfoViewController: UIViewController {
 
     @IBOutlet weak var natureImageView: UIImageView!
 
-    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var greetingLabel: ShadowLabel!
 
     @IBOutlet weak var arrowButton: UIButton!
     @IBOutlet weak var quoteLabel: ShadowLabel!
@@ -47,6 +48,10 @@ class UserInfoViewController: UIViewController {
     var week = 0
     var weekOfMonth = 0
 
+    let arrowIcon = "icons8-collapse_arrow-1"
+    let authorText = "Relax"
+    let quoteText = "Inhale deeply, exhale slowly"
+
 
     var selectedImage: String?
 
@@ -63,7 +68,6 @@ class UserInfoViewController: UIViewController {
 
     // MARK: - Life Cycle Methods
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
@@ -76,6 +80,8 @@ class UserInfoViewController: UIViewController {
         //detect when your app moves to the background
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
         //detect when your app returns from background
+        //MARK: - Call SetupUI()
+        //Calling setupUI in appReturnedFromBackground
         notificationCenter.addObserver(self, selector: #selector(appReturnedFromBackground), name: UIApplication.didBecomeActiveNotification, object: nil)
 
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
@@ -94,7 +100,6 @@ class UserInfoViewController: UIViewController {
         downSwipe.direction = .down
         self.view.addGestureRecognizer(downSwipe)
 
-//        setupUI()
 
     }
 
@@ -102,12 +107,13 @@ class UserInfoViewController: UIViewController {
         super.viewWillAppear(animated)
         print("viewWillAppear - called everytime you come to the viewController")
         //Assign data to the ViewController or making API calls inside viewWillAppear that will call everytime when you came to that viewcontroller
-//        setupUI()
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("HomeVC viewDidAppear")
+        beginAnimation()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -153,18 +159,19 @@ class UserInfoViewController: UIViewController {
     }
 
     func segueToNextVC() {
-
         performSegue(withIdentifier: "swipe", sender: self)
-
         arrowButton.imageView?.removeFromSuperview()
-        quoteLabel.removeFromSuperview()
+
         authorLabel.text = ""
+        quoteLabel.text = ""
+        removeAnimation()
     }
 
     func removeAnimation() {
-        self.quoteLabel.layer.removeAllAnimations()
+        self.quoteLabel.layer.removeAllAnimations() //stop the animation
         self.view.layer.removeAllAnimations()
         self.view.layoutIfNeeded()
+
     }
 
 
@@ -176,19 +183,15 @@ class UserInfoViewController: UIViewController {
 
     func setupUI() {
         print("UserVC SetupUI")
-
-        // Quote View
-//        let selectedGradientColor = UIColor(gradientStyle:UIGradientStyle.topToBottom, withFrame: quoteView.frame, andColors:[UIColor.clear, UIColor.black])
-//        //        self.view.backgroundColor = selectedGradientColor
-//        self.quoteView.backgroundColor = selectedGradientColor
-
         dayOfWeekAndHour()
+        arrowButton.setImage(UIImage(named: arrowIcon), for: .normal)
+        authorLabel.text = authorText
+        quoteLabel.text = quoteText
+        quoteLabel.transform = quoteLabel.transform.scaledBy(x: 0.9, y: 0.9)
     }
 
     func dayOfWeekAndHour() {
 
-        //reset natureIamgeView.image so when it's in the background for a while it doesn't display an old image
-        self.natureImageView.image = UIImage(named: "")
         greetingLabel.text = ""
 
         dayOfWeek = calendar.component(.weekday, from: date)
@@ -197,16 +200,6 @@ class UserInfoViewController: UIViewController {
         day = Int.random(in: 1...31)
         week = calendar.component(.weekOfYear, from: date)
         weekOfMonth = calendar.component(.weekOfMonth, from: date)
-
-        if week % 2 == 0 {
-            print("Week: \(week) is even")
-
-        } else {
-            print("Week: \(week) is odd")
-
-        }
-
-
 
         switch hour {
         case 0...4:
@@ -258,96 +251,25 @@ class UserInfoViewController: UIViewController {
         default:
             greetingLabel.text = "Hello"
         }
+
+
     }
 
 
-    //Animation
-    //https://medium.com/livefront/animating-font-size-in-uilabels-fb6fd273a5f3
-    let duration = 1.0
-    let enlargeDuration = 0.7
-    let shrinkDuration = 1.8
-    let fontSizeSmall: CGFloat = 18
-    let fontSizeBig: CGFloat = 34
-    var isSmall: Bool = true
+    func beginAnimation() {
+        print("beginAnimation")
 
-    func reset(_ sender: Any) {
 
-        print("quoteLabel.font.pointSize \(quoteLabel.font.pointSize)")
 
-        var bounds = quoteLabel.bounds
-        quoteLabel.font = quoteLabel.font.withSize(fontSizeSmall)
-        bounds.size = quoteLabel.intrinsicContentSize
-        quoteLabel.bounds = bounds
 
-        isSmall = true
+        UIView.animate(withDuration: 4.9, delay: 0, options: [.repeat, .autoreverse, .beginFromCurrentState], animations: {
 
-        enlarge()
+            self.quoteLabel.transform = self.quoteLabel.transform.scaledBy(x: 1.3, y: 1.3)
 
-        isSmall = !isSmall
+        }, completion: nil)
+
     }
 
-    func enlarge() {
-        print("enlarge")
-        print("quoteLabel.font.pointSize \(quoteLabel.font.pointSize)")
-
-
-        var biggerBounds = quoteLabel.bounds
-
-        quoteLabel.font = quoteLabel.font.withSize(fontSizeBig)
-        biggerBounds.size = quoteLabel.intrinsicContentSize
-
-        quoteLabel.transform = scaleTransform(from: biggerBounds.size, to: quoteLabel.bounds.size)
-
-        quoteLabel.bounds = biggerBounds
-
-        UIView.animate(withDuration: enlargeDuration) {
-
-            guard self.quoteLabel != nil else {
-                print("False (enlarge): quoteLabel is nil")
-                return
-            }
-            self.quoteLabel.transform = .identity
-            self.quoteLabel.bounds = biggerBounds
-            self.shrink()
-        }
-    }
-
-
-
-    func shrink() {
-        print("shrink")
-        print("quoteLabel.font.pointSize \(quoteLabel.font.pointSize)")
-
-        let labelCopy = quoteLabel.copyLabel()
-        var smallerBounds = labelCopy.bounds
-        print("quoteLabel.bounds in shrink \(quoteLabel.bounds)")
-        labelCopy.font = quoteLabel.font.withSize(fontSizeSmall)
-        smallerBounds.size = labelCopy.intrinsicContentSize
-
-        let shrinkTransform = scaleTransform(from: quoteLabel.bounds.size, to: smallerBounds.size)
-
-        UIView.animate(withDuration: shrinkDuration, animations: {
-            self.quoteLabel.transform = shrinkTransform
-        }, completion: { done in
-
-            guard self.quoteLabel != nil else {
-                print("False (shrink): quoteLabel is nil")
-                return
-            }
-            self.quoteLabel.font = labelCopy.font
-            self.quoteLabel.transform = .identity
-            self.quoteLabel.bounds = smallerBounds
-            self.enlarge()
-        })
-    }
-
-    private func scaleTransform(from: CGSize, to: CGSize) -> CGAffineTransform {
-
-        var scaleX = to.width / from.width
-        var scaleY = to.height / from.height
-
-        return CGAffineTransform(scaleX: scaleX, y: scaleY)
-    }
 
 
 ////////////////////////////////////////////////////////////////

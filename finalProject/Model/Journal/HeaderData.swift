@@ -158,7 +158,7 @@ let stressedHeader1 = Header(title: stressedTitle, icon: Constants.Icon.good, qu
 
 // MARK: - ANXIOUS
 
-let anxiousTitle = "Anxious"
+
 
 let anxiousQuote1 = Quote(quote: "\"Nothing diminishes anxiety faster than action.\"", source: "Walter Anderson", bio: "Was an author, editor, and CEO")
 

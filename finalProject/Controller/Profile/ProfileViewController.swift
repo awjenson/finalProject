@@ -115,33 +115,58 @@ class ProfileViewController: UIViewController {
     var topic10: Topic!
     var topic11: Topic!
 
-
     var topics: [Topic] = [] // array of topics
     var tips: [Tip] = []
 
+    //Row 1
+     var topicArray0: [Topic]!
+     var topicArray1: [Topic]!
+     var topicArray2: [Topic]!
+     var topicArray3: [Topic]!
+     //Row 2
+     var topicArray4: [Topic]!
+     var topicArray5: [Topic]!
+     var topicArray6: [Topic]!
+     var topicArray7: [Topic]!
 
-    //    var cellHeaderColor: [UIColor] = []
-    //    var topicColor: UIColor?
+     var topicsArrays: [Topics] = [] // Array of [array of topics]
+
+     //NOT USED
+     var twoDimensionalArray: [Topic] = []
+
+     var topic0ButtonArray: [Topic]!
+     var topic1ButtonArray: [Topic]!
+     var topic2ButtonArray: [Topic]!
+     var topic3ButtonArray: [Topic]!
+
+     var topic4ButtonArray: [Topic]!
+     var topic5ButtonArray: [Topic]!
+     var topic6ButtonArray: [Topic]!
+     var topic7ButtonArray: [Topic]!
+
+     var topicNowButtonArray: [Topic]!
+
+    //User Defaults
+    let defaults = UserDefaults.standard
+    let relationshipKey = "Relationship"
+    let jobKey = "Job"
+    let parentKey = "Parent"
+
 
     // MARK: - Lifecycle Methods
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear")
-
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupUI()
-
         //Used to refresh app when re-entering from background
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.adviceVC = self
+
+        setupUI()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -150,6 +175,12 @@ class ProfileViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
 
     }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+
+    
 
 
     var selectedTopicTitle = ""
@@ -166,12 +197,10 @@ class ProfileViewController: UIViewController {
 
         // place 8 buttons in desired order (excludes Now tips)
         adviceTopicButtons = [adviceTopic0Button, adviceTopic1Button, adviceTopic2Button, adviceTopic3Button,
-                              adviceTopic4Button, adviceTopic5Button, adviceTopic6Button, adviceTopic7Button,
-                              adviceTopic8Button, adviceTopic9Button, adviceTopic10Button, adviceTopic11Button]
+                              adviceTopic4Button, adviceTopic5Button, adviceTopic6Button, adviceTopic7Button,]
 
         adviceTopicLabels = [adviceTopic0Label, adviceTopic1Label, adviceTopic2Label, adviceTopic3Label,
-                       adviceTopic4Label, adviceTopic5Label, adviceTopic6Label, adviceTopic7Label,
-        adviceTopic8Label, adviceTopic9Label, adviceTopic10Label, adviceTopic11Label]
+                       adviceTopic4Label, adviceTopic5Label, adviceTopic6Label, adviceTopic7Label,]
 
         // set footer
         profileTableViewFooter.frame.size.height = 250
@@ -217,10 +246,10 @@ class ProfileViewController: UIViewController {
 
     func dayOfWeekAndHour() {
 
-//        let dayOfWeek = calendar.component(.weekday, from: date)
-//        hour = calendar.component(.hour, from: date)
-//        let week = calendar.component(.weekOfYear, from: date)
-//        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
+        let dayOfWeek = calendar.component(.weekday, from: date)
+        hour = calendar.component(.hour, from: date)
+        let week = calendar.component(.weekOfYear, from: date)
+        let weekOfMonth = calendar.component(.weekOfMonth, from: date)
 
         //Display hour for topic title
         displayHourInTopicLabel()
@@ -313,35 +342,46 @@ class ProfileViewController: UIViewController {
 
         case 0...4:
             print("Weekend, Very Early Morning")
+            print("hour: \(hour)")
             // call function to display 9 time-based topics
-            appendNineTopics(personalTopic, adviceTopic, singlePMTopic, relationshipBedTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingBedtimeTopic,
-                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
-                             motivateAMTopic)
+//            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipBedTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingBedtimeTopic,
+//                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
+//                             motivateAMTopic)
+
+            appendNineTopics(adviceTopics, sideHustle(), relationshipNight(), personalTopics, sideHustle(), stressedPMTopics, depressedPMTopics, madPMTopics, topicsNow: motivateAMTopics)
 
         case 5...9:
             print("Weekend, Early Morning")
             // call function to display 9 time-based topics
-            appendNineTopics(personalTopic, adviceTopic, singleAMTopic, relationshipAMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingAMTopic,
-                             studyTopic, stressedAMTopic, depressedAMTopic, madAMTopic,
-                             motivateAMTopic)
+//            append13Topics(personalTopic, adviceTopic, singleAMTopic, relationshipAMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingAMTopic,
+//                             studyTopic, stressedAMTopic, depressedAMTopic, madAMTopic,
+//                             motivateAMTopic)
+
+            appendNineTopics(adviceTopics, sideHustle(), relationshipAM(), personalTopics, anxiousAMTopics, stressedAMTopics, depressedAMTopics, madAMTopics, topicsNow: motivateAMTopics)
 
         case 10...14:
-            appendNineTopics(personalTopic, adviceTopic, singleDayTopic, relationshipDayTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingDayTopic,
-                             studyDayTopic, stressedDayTopic, depressedDayTopic, madDayTopic,
-                             motivateDayTopic)
+//            append13Topics(personalTopic, adviceTopic, singleDayTopic, relationshipDayTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingDayTopic,
+//                             studyDayTopic, stressedDayTopic, depressedDayTopic, madDayTopic,
+//                             motivateDayTopic)
+
+            appendNineTopics(adviceTopics, sideHustle(), relationshipDay(), personalTopics, anxiousDayTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
 
         case 15...19:
             print("Weekend, Early Evening")
             // call function to display 9 time-based topics
-            appendNineTopics(personalTopic, adviceTopic, singlePMTopic, relationshipDayTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingPMTopic,
-                             studyTopic, stressedDayTopic, depressedDayTopic, madDayTopic, motivateAfterTopic)
+//            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipPMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingPMTopic,
+//                             studyTopic, stressedDayTopic, depressedDayTopic, madDayTopic, motivateAfterTopic)
+
+            appendNineTopics(adviceTopics, sideHustle(), relationshipPM(), personalTopics, anxiousDayTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateAfterTopics)
 
         case 20..<24:
             print("Weekend, Late evening")
             // call function to display 9 time-based topics
-            appendNineTopics(personalTopic, adviceTopic, singlePMTopic, relationshipBedTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingBedtimeTopic,
-                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
-                             motivatePMTopic)
+//            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipBedTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingBedtimeTopic,
+//                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
+//                             motivatePMTopic)
+
+            appendNineTopics(adviceTopics, sideHustle(), relationshipNight(), personalTopics, anxiousPMTopics, stressedPMTopics, depressedPMTopics, madPMTopics, topicsNow: motivatePMTopics)
 
         default:
             print("Weekend,INVALID HOUR!")
@@ -372,20 +412,20 @@ class ProfileViewController: UIViewController {
             //            button.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
 
             //row1
-            self.adviceTopic0Button.imageView?.image = UIImage(named: self.topics[0].icon)
-            self.adviceTopic1Button.imageView?.image = UIImage(named: self.topics[1].icon)
-            self.adviceTopic2Button.imageView?.image = UIImage(named: self.topics[2].icon)
-            self.adviceTopic3Button.imageView?.image = UIImage(named: self.topics[3].icon)
+            self.adviceTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
+            self.adviceTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
+            self.adviceTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
+            self.adviceTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
             //row2
-            self.adviceTopic4Button.imageView?.image = UIImage(named: self.topics[4].icon)
-            self.adviceTopic5Button.imageView?.image = UIImage(named: self.topics[5].icon)
-            self.adviceTopic6Button.imageView?.image = UIImage(named: self.topics[6].icon)
-            self.adviceTopic7Button.imageView?.image = UIImage(named: self.topics[7].icon)
-            //row3
-            self.adviceTopic8Button.imageView?.image = UIImage(named: self.topics[8].icon)
-            self.adviceTopic9Button.imageView?.image = UIImage(named: self.topics[9].icon)
-            self.adviceTopic10Button.imageView?.image = UIImage(named: self.topics[10].icon)
-            self.adviceTopic11Button.imageView?.image = UIImage(named: self.topics[11].icon)
+            self.adviceTopic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
+            self.adviceTopic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
+            self.adviceTopic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
+            self.adviceTopic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
+//            //row3
+//            self.adviceTopic8Button.imageView?.image = UIImage(named: self.topics[8].icon)
+//            self.adviceTopic9Button.imageView?.image = UIImage(named: self.topics[9].icon)
+//            self.adviceTopic10Button.imageView?.image = UIImage(named: self.topics[10].icon)
+//            self.adviceTopic11Button.imageView?.image = UIImage(named: self.topics[11].icon)
 
 
 
@@ -400,15 +440,15 @@ class ProfileViewController: UIViewController {
             self.adviceTopic5Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.adviceTopic6Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.adviceTopic7Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            //row3
-            self.adviceTopic8Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            //row3
+//            self.adviceTopic8Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
         }
     }
 
-    func setupButtonIcons(_ topics: [Topic]) {
+    func setupButtonIcons(_ topics: [Topics]) {
 
         //https://stackoverflow.com/questions/1469474/setting-an-image-for-a-uibutton-in-code
         print("topics: \(topics)")
@@ -425,54 +465,76 @@ class ProfileViewController: UIViewController {
         self.adviceTopic7Button.setImage(UIImage(named: topics[7].icon) , for: UIControl.State.normal)
 
         //row3
-        self.adviceTopic8Button.setImage(UIImage(named: topics[8].icon) , for: UIControl.State.normal)
-        self.adviceTopic9Button.setImage(UIImage(named: topics[9].icon) , for: UIControl.State.normal)
-        self.adviceTopic10Button.setImage(UIImage(named: topics[10].icon) , for: UIControl.State.normal)
-        self.adviceTopic11Button.setImage(UIImage(named: topics[11].icon) , for: UIControl.State.normal)
+//        self.adviceTopic8Button.setImage(UIImage(named: topics[8].icon) , for: UIControl.State.normal)
+//        self.adviceTopic9Button.setImage(UIImage(named: topics[9].icon) , for: UIControl.State.normal)
+//        self.adviceTopic10Button.setImage(UIImage(named: topics[10].icon) , for: UIControl.State.normal)
+//        self.adviceTopic11Button.setImage(UIImage(named: topics[11].icon) , for: UIControl.State.normal)
     }
 
 
 
-    func appendNineTopics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic, _ topic4: Topic, _ topic5: Topic, _ topic6: Topic, _ topic7: Topic, _ topic8: Topic, _ topic9: Topic, _ topic10: Topic, _ topic11: Topic, _ topic12Now: Topic) {
+//    func append13Topics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic, _ topic4: Topic, _ topic5: Topic, _ topic6: Topic, _ topic7: Topic, _ topic8: Topic, _ topic9: Topic, _ topic10: Topic, _ topic11: Topic, _ topic12Now: Topic) {
+//
+//        topics = [topic0, topic1, topic2, topic3,
+//                  topic4, topic5, topic6, topic7,
+//                  topic8, topic9, topic10, topic11,
+//                  topic12Now]
+//
+//        setupButtonIcons(topics)
+//        //row1
+//        self.adviceTopic0Label.text = topic0.title
+//        self.adviceTopic1Label.text = topic1.title
+//        self.adviceTopic2Label.text = topic2.title
+//        self.adviceTopic3Label.text = topic3.title
+//        //row2
+//        self.adviceTopic4Label.text = topic4.title
+//        self.adviceTopic5Label.text = topic5.title
+//        self.adviceTopic6Label.text = topic6.title
+//        self.adviceTopic7Label.text = topic7.title
+//        //row3
+//        self.adviceTopic8Label.text = topic8.title
+//        self.adviceTopic9Label.text = topic9.title
+//        self.adviceTopic10Label.text = topic10.title
+//        self.adviceTopic11Label.text = topic11.title
+//
+//        // set 4 'Now' tips to be displayed in initial table view
+//        appendAdviceTips()
+//    }
 
-        topics = [topic0, topic1, topic2, topic3,
-                  topic4, topic5, topic6, topic7,
-                  topic8, topic9, topic10, topic11,
-                  topic12Now]
+//    func appendAdviceTips() {
+//        // for display in table view at launch
+//        //12th item in array (topic12Now)
+//        tips = [topics[12].tip[0],
+//                topics[12].tip[1],
+//                topics[12].tip[2],
+//                topics[12].tip[3]]
+//
+//        print("tips array count: \(tips.count)")
+//    }
 
-        setupButtonIcons(topics)
-        //row1
-        self.adviceTopic0Label.text = topic0.title
-        self.adviceTopic1Label.text = topic1.title
-        self.adviceTopic2Label.text = topic2.title
-        self.adviceTopic3Label.text = topic3.title
-        //row2
-        self.adviceTopic4Label.text = topic4.title
-        self.adviceTopic5Label.text = topic5.title
-        self.adviceTopic6Label.text = topic6.title
-        self.adviceTopic7Label.text = topic7.title
-        //row3
-        self.adviceTopic8Label.text = topic8.title
-        self.adviceTopic9Label.text = topic9.title
-        self.adviceTopic10Label.text = topic10.title
-        self.adviceTopic11Label.text = topic11.title
+    func appendNineTopics(_ topics0: Topics, _ topics1: Topics, _ topics2: Topics, _ topics3: Topics, _ topics4: Topics, _ topics5: Topics, _ topics6: Topics, _ topics7: Topics, topicsNow: Topics) {
 
-        // set 4 'Now' tips to be displayed in initial table view
-        appendAdviceTips()
+        topicsArrays = [topics0, topics1, topics2, topics3,
+                        topics4, topics5, topics6, topics7, topicsNow]
 
+        setupButtonIcons(topicsArrays)
 
+            //row1
+            self.adviceTopic0Label.text = topics0.title
+            self.adviceTopic1Label.text = topics1.title
+            self.adviceTopic2Label.text = topics2.title
+            self.adviceTopic3Label.text = topics3.title
+            //row2
+            self.adviceTopic4Label.text = topics4.title
+            self.adviceTopic5Label.text = topics5.title
+            self.adviceTopic6Label.text = topics6.title
+            self.adviceTopic7Label.text = topics7.title
+
+       //set array that displays in initial tableview
+        twoDimensionalArray = topicsNow.topics
     }
 
-    func appendAdviceTips() {
-        // for display in table view at launch
-        //12th item in array (topic12Now)
-        tips = [topics[12].tip[0],
-                topics[12].tip[1],
-                topics[12].tip[2],
-                topics[12].tip[3]]
 
-        print("tips array count: \(tips.count)")
-    }
 
     func scrollToTopTableView() {
         performUIUpdatesOnMain {
@@ -537,11 +599,7 @@ class ProfileViewController: UIViewController {
         resetTopicButtonOriginalStyle(button: adviceTopic5Button)
         resetTopicButtonOriginalStyle(button: adviceTopic6Button)
         resetTopicButtonOriginalStyle(button: adviceTopic7Button)
-        //row3
-        resetTopicButtonOriginalStyle(button: adviceTopic8Button)
-        resetTopicButtonOriginalStyle(button: adviceTopic9Button)
-        resetTopicButtonOriginalStyle(button: adviceTopic10Button)
-        resetTopicButtonOriginalStyle(button: adviceTopic11Button)
+
 
         // Identify what button was tapped
 
@@ -551,7 +609,10 @@ class ProfileViewController: UIViewController {
 
             // Selected button previously tapped, return to Now Tips
             // Check if this button has been tapped just prior
-            appendAdviceTips()
+            twoDimensionalArray = []
+
+            //NOW Topics are located in the 8th position of topicsArrays
+            twoDimensionalArray = topicsArrays[8].topics
 
             // Unselected
             performUIUpdatesOnMain {
@@ -574,8 +635,12 @@ class ProfileViewController: UIViewController {
             // select button NOT previously tapped
             // gray out selected button
             // display selected topic tips
+            twoDimensionalArray = []
 
-            appendTipsArrayBasedOnTopicSelected(indexNumber)
+            print("Print:")
+            print(topicsArrays)
+            print(currentIndex)
+            twoDimensionalArray = topicsArrays[indexNumber].topics
 
             // Selected
             performUIUpdatesOnMain {
@@ -606,9 +671,10 @@ class ProfileViewController: UIViewController {
 
     func appendTipsArrayBasedOnTopicSelected(_ index: Int) {
         tips = []
+        twoDimensionalArray = []
 
         // Take selected index in topics array and subtract 1 because we start with zero
-        let counter = (topics[index].tip.count - 1)
+        let counter = (topicsArrays[index].topics.count - 1)
 
         print("counter: \(counter)")
 
@@ -630,13 +696,66 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 
+    //SECTION HEADER
+    //https://www.hackingwithswift.com/example-code/uikit/how-to-add-a-section-header-to-a-table-view
+
+    func titleColor(number: Int) -> UIColor {
+        switch number {
+        case 0:
+            return UIColor.flatRed()
+        case 1:
+            return UIColor.blue
+        case 2:
+            return UIColor.flatMint()
+        case 3:
+            return UIColor.flatPlum()
+        case 4:
+            return UIColor.flatTeal()
+        case 5:
+            return UIColor.flatMaroon()
+        default:
+            return UIColor.black
+        }
+    }
+
+    //SECTION
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 20))
+        headerView.backgroundColor = UIColor.init(hexString: "FFF4E9")
+
+        let label = UILabel()
+        //Display section title text
+        label.text = twoDimensionalArray[section].title.uppercased()
+        label.frame = CGRect.init(x: 26, y: 15, width: headerView.frame.width-10, height: headerView.frame.height)
+        label.layer.cornerRadius = 8
+
+        label.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        label.textColor = titleColor(number: section).darker()
+        headerView.addSubview(label)
+
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print("twoDimensionalArray.count: \(twoDimensionalArray.count)")
+        return twoDimensionalArray.count
+    }
+
+
+    //CELL
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tips.count
+        return twoDimensionalArray[section].tip.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -645,47 +764,49 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
          https://www.makeschool.com/online-courses/utorials/build-a-photo-sharing-app-9f153781-8df0-4909-8162-bb3b3a2f7a81/improving-the-ui */
 
         // Whatever tip is at each row
-        let tip = tips[indexPath.row]
+        let tip = twoDimensionalArray[indexPath.section].tip[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AdviceTableViewCell
 
         // cell's bottom line UI
         cell.layoutMargins = UIEdgeInsets.zero
 
-        cell.adviceTipNumberLabel.text = "\(indexPath.row + 1)"
-
         // configure cell in UITableViewCell file
         cell.configureCell(tip: tip)
+
+        cell.headerLabel.textColor = titleColor(number: indexPath.section)
 
         //Tell UITableViewCell who it's delegate is
         //Give the boss the intern
         cell.delegate = self  //self is the ProfileVC
 
+
+
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         profileTableView.deselectRow(at: indexPath, animated: true)
 
-//        let tip = tips[indexPath.row]
-//
-//        let app = UIApplication.shared
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AdviceTableViewCell
-//        if let url = tip.sourceURL {
-//
-//            // print: true or false
-//            print("verifyURL in 'Now' VC: \(verifyUrl(urlString: url))")
-//
-//            if verifyUrl(urlString: url) == true {
-//                app.open(URL(string:url)!)
-//            } else {
-//                performUIUpdatesOnMain {
-//                    self.createAlert(title: "Could not open URL", message: "Check your Internet connection and try again.")
-//                }
-//            }
-//        }
-    }
+        let tip = tips[indexPath.row]
 
+        let app = UIApplication.shared
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AdviceTableViewCell
+        if let url = tip.sourceURL {
+
+            // print: true or false
+            print("verifyURL in 'Now' VC: \(verifyUrl(urlString: url))")
+
+            if verifyUrl(urlString: url) == true {
+                app.open(URL(string:url)!)
+            } else {
+                performUIUpdatesOnMain {
+                    self.createAlert(title: "Could not open URL", message: "Check your Internet connection and try again.")
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Table View Cell Methods
@@ -700,5 +821,14 @@ extension ProfileViewController: AdviceTableViewCellDelegate {
         safariVC.preferredBarTintColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
         safariVC.preferredControlTintColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
         present(safariVC, animated: true, completion: nil)
+    }
+
+    func goToActivityView(header: String, title: String, body: String) {
+        let rizeLogo = UIImage(named: "AppIcon")
+
+        let activityVC = UIActivityViewController(activityItems: ["Tip: \(header)\n\n","\(title)\n\n", "\(body)\n\n","For more tips, download the Rize App on Apple's App Store", rizeLogo], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+
+        self.present(activityVC, animated: true, completion: nil)
     }
 }

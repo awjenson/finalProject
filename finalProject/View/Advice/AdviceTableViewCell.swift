@@ -18,6 +18,8 @@ protocol AdviceTableViewCellDelegate {
     // Implement these functions in the NowViewController
     func goToSourceURL(url: String)
     //add a delegate variable below, assign it to the VC
+
+    func goToActivityView(header: String, title: String, body: String)
 }
 
 class AdviceTableViewCell: UITableViewCell {
@@ -42,12 +44,6 @@ class AdviceTableViewCell: UITableViewCell {
 
         //set tipItem to tip so you can use it in other methods
         tipItem = tip
-
-        adviceTipIconView.layer.cornerRadius = adviceTipIconView.frame.size.width/2
-        adviceTipIconView.clipsToBounds = true
-//        adviceTipIconView.layer.borderWidth = 1
-//        adviceTipIconView.layer.borderColor = UIColor.init(hexString: "42A67A")?.cgColor
-
 
         headerLabel.text = tip.header
         adviceTitleLabel.text = tip.title
@@ -108,6 +104,11 @@ class AdviceTableViewCell: UITableViewCell {
         delegate?.goToSourceURL(url: tipItem.sourceURL!)
     }
 
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        //create activity view controller
+        //activityItems is what you want to share (a tip)
+        delegate?.goToActivityView(header: tipItem.header, title: tipItem.title, body: tipItem.body)
+    }
 
 
 }

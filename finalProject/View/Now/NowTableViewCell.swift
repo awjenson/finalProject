@@ -18,14 +18,16 @@ protocol NowTableViewCellDelegate {
     // Implement these functions in the NowViewController
     func goToSourceURL(url: String)
     //add a delegate variable below, assign it to the VC
+
+    func goToActivityView(header: String, title: String, body: String)
 }
 
 class NowTableViewCell: UITableViewCell {
 
     @IBOutlet weak var boarderColorView: UIView!
 
-    @IBOutlet weak var tipIconView: UIView! //number displayed at top left
-    @IBOutlet weak var tipNumberLabel: UILabel!
+//    @IBOutlet weak var tipIconView: UIView! //number displayed at top left
+//    @IBOutlet weak var tipNumberLabel: UILabel!
 
     @IBOutlet weak var headerLabel: UILabel! //colored header at top
 
@@ -33,6 +35,10 @@ class NowTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var sourceButton: UIButton!
+
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var buyButton: UIButton!
+
 
     // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
     var delegate: NowTableViewCellDelegate?
@@ -43,17 +49,17 @@ class NowTableViewCell: UITableViewCell {
 
         tipItem = tip
 
-        tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
-        tipIconView.clipsToBounds = true
+//        tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
+//        tipIconView.clipsToBounds = true
 //        tipIconView.layer.borderWidth = 1
 
 
-        headerLabel.text = tip.header
+        headerLabel.text? = tip.header
+
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
-
-
-
+        sourceButton.setTitle(tip.sourceName, for: .normal)
+        
         //Underline effect for UIButton Title and left aligment
         let attributedString = NSMutableAttributedString(string: tip.sourceName)
         attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
@@ -101,9 +107,22 @@ class NowTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func sourceButtonTapped(_ sender: Any) {
+    //MARK: - IBActions
 
+    @IBAction func sourceButtonTapped(_ sender: Any) {
         delegate?.goToSourceURL(url: tipItem.sourceURL!)
+    }
+
+
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        //create activity view controller
+        //activityItems is what you want to share (a tip)
+        delegate?.goToActivityView(header: tipItem.header, title: tipItem.title, body: tipItem.body)
+    }
+
+
+    @IBAction func buyButtonTapped(_ sender: Any) {
+        delegate?.goToSourceURL(url: tipItem.sponsorURL!)
     }
 
 
