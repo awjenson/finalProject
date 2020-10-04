@@ -205,7 +205,7 @@ let lunchTip24 = Tip(header: "Live Longer", title: "Make beans or tofu the cente
 
 //6
 let lunchTip25 = Tip(header: "Prevent Weight Gain", title: "Eat slowly. Study: Fast eaters are up to 115% more likely to be obese", body: "Another study: People who ate \"very fast\" tended to be heavier and had gained the most bodyweight since age 20. \n\nPut simply, overweight people chew less than normal-weight people, because when you chew more, you tend to eat less - 15% less, in one study." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "TBD", sponsorURL: "www.test.com")
-let lunchTip26 = Tip(header: "", title: "Prevent Weight Gain: Slim people chew each bite an average of 15 times - 3 chews more than heavy people", body: "Study: On average, the number of times people chewed for each bite: \n\n• Slim people: 15 chews \n• Heavy people: 12 chews", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
+let lunchTip26 = Tip(header: "Prevent Weight Gain", title: "Slim people chew each bite an average of 15 times - 3 chews more than heavy people", body: "Study: On average, the number of times people chewed for each bite: \n\n• Slim people: 15 chews \n• Heavy people: 12 chews", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 let lunchTip27 = Tip(header: "Live Better", title: "Bread: The best time for eating bread is dinner, after your glycogen stores have been depleted by exercise, and you're about to head sleep", body: "So if bread and butter is your thing, eat it at dinner, with grass-fed button on sprouted or sourdough.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
 let lunchTip28 = Tip(header: "Healthy Choice", title: "Study: People who went for a walk after eating had lower blood sugar levels than people who didn't walk after eating", body: "Another study shows that 15 minutes of low-intensity walking is enough to significantly drop blood sugar levels.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
 
@@ -223,8 +223,8 @@ let lunchTip35 = Tip(header: "Increase Happiness", title: "A diet high in fruit,
 let lunchTip36 = Tip(header: "Reduce Belly Fat", title: "Eat more protein foods: \n• Whole eggs \n• Fish \n• Seafood \n• Legumes \n• Nuts \n• Meat \n• Dairy products", body: "Study: Protein was linked to significantly reduced risk of belly fat gain over a period of 5 years. \n\nProtein has been shown to reduce cravings by 60% and help you eat up to 441 fewer calories per day.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section2", sponsorLogo: "", sponsorURL: "")
 
 //9
-let lunchTip37 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods associated with slowing cognitive decline — blueberries, vegetables (leafy greens — kale, spinach, broccoli), whole grains, protein from fish and legumes, and healthy unsaturated fats (olive oil) instead of saturated fats (butter).", body: "Our brains naturally decline if we do nothing to protect them. \n\nHowever, if you intervene early, you can slow the decline process. \n\nFruit and vegetables combat age-related oxidative stress that causes wear and tear on brain cells. ", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
-
+let lunchTip37 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods associated with slowing cognitive decline — blueberries, vegetables (leafy greens — kale, spinach, broccoli), whole grains, protein from fish and legumes, and healthy unsaturated fats (olive oil) instead of saturated fats (butter).", body: "Our brains naturally decline if we do nothing to protect them. \n\nHowever, if you intervene early, you can slow the decline process. \n\nFruit and vegetables combat age-related oxidative stress that causes wear and tear on brain cells.", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
+let lunchTip38 = Tip(header: "Burn Belly Fat", title: "Eat an avocado or guacamole", body: "Study: People who ate half a fresh avocado with lunch reported a 40% decreased desire to eat for hours afterwards. \n\nAnd, healthy fats like the unsaturated fats found in avocados seem to prevent the storage of belly fat.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
@@ -236,7 +236,7 @@ let lunchTipArray5 = [lunchTip21, lunchTip22, lunchTip23, lunchTip24]
 let lunchTipArray6 = [lunchTip25, lunchTip26, lunchTip27, lunchTip28]
 let lunchTipArray7 = [lunchTip29, lunchTip30, lunchTip31, lunchTip32]
 let lunchTipArray8 = [lunchTip33, lunchTip34, lunchTip35, lunchTip36]
-let lunchTipArray9 = [lunchTip37, lunchTip12, lunchTip23, lunchTip24]//WIP
+let lunchTipArray9 = [lunchTip37, lunchTip38, lunchTip23, lunchTip24]//WIP
 
 //
 let lunchTipArrays = [lunchTipArray0, lunchTipArray1, lunchTipArray2, lunchTipArray3, lunchTipArray4, lunchTipArray5, lunchTipArray6, lunchTipArray7, lunchTipArray8]
@@ -613,7 +613,7 @@ let lateNightSnackTopics = Topics(title: lateNightSnackTitle, icon: lateNightSna
 
 // MARK: - Restaurant
 
-let restaurantTitle = "Dinner"
+let restaurantTitle = "Restaurant"
 let restaurantIcon = Constants.Icon.restaurant
 
 //0
@@ -1597,7 +1597,7 @@ let cafePMTopic6 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray6)
 
 // MARK: - BREAKS
 
-let breakTitle = "Work Break"
+let breakTitle = "Break"
 let breakIcon = Constants.Icon.relax
 
 // AM Break
@@ -1754,11 +1754,6 @@ let networkingTopics = Topics(title: networkingTitle, icon: networkingIcon, topi
 
 
 
-
-
-//6
-let networkingTipArray6 = [networking13, networking14, networking15, networking11]
-let networkingTopic6 = Topic(title: networkingTitle, icon: networkingIcon, tip: networkingTipArray6)
 
 // MARK: - Date
 
@@ -1925,7 +1920,12 @@ let groceryStoreTip46 = Tip(header: "Live Longer", title: "DO: Buy skim or 1% mi
 let groceryStoreTip47 = Tip(header: "Save Money", title: "Study: The average American household wastes 31.9% of the food they buy, costing the average household about $1,866 per year", body: "• Households with higher income generate more waste. \n\n• People with healthier diets that include more perishable fruits and vegetables also generate more waste. \n\n• People who use a shopping list when visiting the supermarket waste less food.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2020/01/200123095853.htm", sponsorLogo: "", sponsorURL: "")
 let groceryStoreTip48 = Tip(header: "Depression Linked To Diet", title: "A diet high in fruit, vegetables, whole grain, fish, olive oil, low-fat dairy and low intakes of animal foods was associated with a decreased risk of depression. \n\nA diet high in red and/or processed meat, refined grains, sweets, high-fat dairy products, butter, potatoes and high-fat gravy, and low intakes of fruits and vegetables is associated with an increased risk of depression.", body: "Diet is such an important component of mental health. \n\n• BUY: Lots of plants, including fruits and veggies, whole grains (in unprocessed form, ideally), seeds and nuts, with some lean proteins like fish and yogurt. \n\n• DON'T BUY: Foods made with added sugars or flours (like breads, baked goods, cereals, and pastas), and minimize animal fats, processed meats (sorry, bacon), and butter.", sourceName: "Harvard University", sourceURL: "https://www.health.harvard.edu/blog/diet-and-depression-2018022213309", sponsorLogo: "", sponsorURL: "")
 
-//
+//12
+let groceryStoreTip49 = Tip(header: "Burn Belly Fat", title: "Choose red fruit over green fruit", body: "That means Pink Lady over Granny Smith, watermelon over honeydew, red grapes over green ones. \n\nThe higher levels of nutrients called flavonoids—particularly anthocyanins, compounds that give red fruits their color—calm the action of fat-storage genes.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip50 = Tip(header: "Burn Belly Fat", title: "Buy wild salmon, not farmed salmon", body: "Salmon is a great way to fight fat and boost your metabolism. \n\nWild salmon has plenty of heart-healthy omega 3 fatty acids—1,253 mg of the good stuff, and only 114 mg of unhealthy omega-6s. \n\nBut the farmed salmon packs a whopping 1,900 mg of unhealthy omega-6s.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
+let groceryStoreTip51 = Tip(header: "Burn Belly Fat", title: "Buy real peanut butter which is made with two ingredients: peanuts, and maybe some salt.", body: "Peanuts are high in both genistein and resveratrol, two nutrients that help diminish the action of your fat-storage genes. \n\nBe careful of the brand you buy: if you see ingredients like sugar, palm oil, or anything you can't pronounce, put it back. They'll undermine any good the peanuts might do.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
+
+
 // Morning
 let groceryStoreAMTip1 = Tip(header: "🌅", title: "Shop in the morning if you want the best selection", body: "Early to mid-morning is the best time of day for the finest selection. \n\nThat’s when dairy, bakery goods, produce, meat and seafood are newly stocked and freshest.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
 
@@ -1950,14 +1950,16 @@ let groceryStoreTipArray8 = [groceryStoreTip33, groceryStoreTip34, groceryStoreT
 let groceryStoreTipArray9 = [groceryStoreTip37, groceryStoreTip38, groceryStoreTip39, groceryStoreTip40]
 let groceryStoreTipArray10 = [groceryStoreTip41, groceryStoreTip42, groceryStoreTip43, groceryStoreTip44]
 let groceryStoreTipArray11 = [groceryStoreTip45, groceryStoreTip46, groceryStoreTip47, groceryStoreTip48]
+//WIP
+let groceryStoreTipArray12 = [groceryStoreTip49, groceryStoreTip50, groceryStoreTip51, groceryStoreTip24]
 //
-let groceryStoreTipArrays = [groceryStoreTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10, groceryStoreTipArray11]
+let groceryStoreTipArrays = [groceryStoreTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10, groceryStoreTipArray11, groceryStoreTipArray12]
 let groceryStoreTopic = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrays.random())
 let groceryStoreTopics = Topics(title: groceryStoreTitle, icon: groceryStoreIcon, topics: [groceryStoreTopic,])
 
 
-let groceryStoreTipArray12 = [groceryStoreTip21, groceryStoreTip22, groceryStoreTip23, groceryStoreTip24]
-let groceryStoreTipArray13 = [groceryStoreTip25, groceryStoreTip26, groceryStoreTip27, groceryStoreTip28]
+
+
 
 //WEEK 1
 let groceryStoreTopic0 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray0)
@@ -1975,7 +1977,7 @@ let groceryStoreTopic9 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon,
 let groceryStoreTopic10 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray10)
 let groceryStoreTopic11 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray11)
 let groceryStoreTopic12 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray12)
-let groceryStoreTopic13 = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArray13)
+
 
 
 //Morning
@@ -2146,14 +2148,16 @@ let commuteAMTip31 = Tip(header: "Quote", title: "\"In the mornings on my drive 
 let commuteAMTipArray0 = [commuteAMTip1, commuteAMTip2, commuteAMTip3, commuteAMTip4]
 let commuteAMTopic0 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray0)
 
+
 // TUES (*Tuesday-specific)
 let commuteTuesdayAMTipArray0 = [commuteTuesdayAMTip0, commuteAMTip5, commuteAMTip6, commuteAMTip7]
 let commuteTuesdayAMTipArray1 = [commuteTuesdayAMTip0, commuteAMTip15, commuteAMTip16, commuteAMTip17]
 let commuteTuesdayAMTipArray2 = [commuteTuesdayAMTip0, commuteAMTip25, commuteAMTip26, commuteAMTip27]
 
-
 let commuteTuesdayAMTipArrays = [commuteTuesdayAMTipArray0, commuteTuesdayAMTipArray1, commuteTuesdayAMTipArray2]
 let commuteTuesdayAMTopic = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteTuesdayAMTipArrays.random())
+let commuteTuesdayAMTopics = Topics(title: commuteAMTitle, icon: commuteAMIcon, topics: [commuteTuesdayAMTopic])
+
 
 // WED
 let commuteAMTipArray2 = [commuteAMTip8, commuteAMTip9, commuteAMTip10, commuteAMTip11]
@@ -2183,7 +2187,11 @@ let commuteAMTopic7 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: com
 // no commuteAMTipArray1 because we have tuesday specific tips
 let commuteAMTipArrays = [commuteAMTipArray0, commuteAMTipArray2, commuteAMTipArray3, commuteAMTipArray4, commuteAMTipArray5, commuteAMTipArray6, commuteAMTipArray7,]
 let commuteAMTopic = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArrays.random())
+let commuteAMTopics = Topics(title: commuteAMTitle, icon: commuteAMIcon, topics: [commuteAMTopic,])
 
+//WEEKEND AM - Driving
+let commuteWeekendAMTitle = "Driving"
+let commuteWeekendAMTopics = Topics(title: commuteWeekendAMTitle, icon: commuteAMIcon, topics: [commuteAMTopic,])
 
 
 
@@ -2238,7 +2246,7 @@ let commutePMTip19 = Tip(header: "Increase Happiness", title: "Live closer to wo
 
 //FRI
 let commuteFridayPMTip0 = Tip(header: "Warning", title: "Friday from 4:00 p.m. to 8:00 p.m. is the most dangerous day and time to drive during the workweek", body: "An analysis of US car crash-related fatalities in 2016 found that Friday during rush-hour had the most fatal car crashes compared to any other day and time during the workweek. \n\nBe aware of what other drivers around you are doing, and expect the unexpected tonight." , sourceName: "Avvo", sourceURL: "https://www.avvo.com/fatal-car-accidents", sponsorLogo: "", sponsorURL: "")
-let commuteFridayPMTip1 = Tip(header: "Warning", title: "Friday from 4:00 p.m. to 7:00 p.m. is the day and time when the most road rage occurs during the week", body: "An analysis of Instagram posts hashtagged #RoadRage found that road rage mentions peak on Friday from 4:00 p.m to 7:00 p.m. \n\nNever challenge fellow motorists. Try to use your horn only when necessary as it can anger other drivers. \n\nIf you’re concerned about an aggressive driver, immediately report the situation to law enforcement." , sourceName: "Auto Insurance Center", sourceURL: "https://www.autoinsurancecenter.com/roadrage-instagram-posts.htm", sponsorLogo: "", sponsorURL: "")
+let commuteFridayPMTip1 = Tip(header: "Warning", title: "Friday from 4:00 p.m. to 7:00 p.m. is when the most road rage occurs during the week", body: "An analysis of Instagram posts hashtagged #RoadRage found that road rage mentions peak on Friday from 4:00 p.m to 7:00 p.m. \n\nNever challenge fellow motorists. Try to use your horn only when necessary as it can anger other drivers. \n\nIf you’re concerned about an aggressive driver, immediately report the situation to law enforcement." , sourceName: "Auto Insurance Center", sourceURL: "https://www.autoinsurancecenter.com/roadrage-instagram-posts.htm", sponsorLogo: "", sponsorURL: "")
 let commuteFridayPMTip2 = Tip(header: "Reduce Stress", title: "Listen to classical and pop music", body: "According to a survey of 2,000 drivers, those who listen to classical and pop music are more relaxed drivers, whereas those who listen to rock and metal are more prone to road rage.", sourceName: "Huffington Post", sourceURL: "https://www.huffpost.com/entry/commuting-stress_n_3530124", sponsorLogo: "", sponsorURL: "")
 let commuteFridayPMTip3 = Tip(header: "Increase Success", title: "Identify an area in your life that you want to improve and use your commute to fix it", body: "EXERCISE: Bike or walk to work, even if it’s just partway. Or park far away from your office and walk an extra minute. \n\nRELAX: Do nothing, or read a fun book, or take a quick walk around your office before you leave for home. \n\nLEARN: Read about it or, if you have internet access, watch a video or participate in an online course. \n\nRELATIONSHIPS: Call, text, or email people you cherish." , sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2015/01/get-more-done-during-your-commute", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 
@@ -2267,15 +2275,22 @@ let commutePMTopic3 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: com
 let commutePMTipArray4 = [commutePMTip17, commutePMTip18, commutePMTip19, commutePMTip4]
 let commutePMTopic4 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commutePMTipArray4)
 
-//*** FRI ONLY TIPS
+//*** FRI PM ONLY TIPS
 let commuteFridayPMTipArray0 = [commuteFridayPMTip0, commuteFridayPMTip1, commuteFridayPMTip2, commuteFridayPMTip3]
-let commuteFridayPMTopic = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commuteFridayPMTipArray0)
-//*** RANDOM: MON-THURS
+
+let commuteFridayPMTipArrays = [commuteFridayPMTipArray0]
+let commuteFridayPMTopic = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commuteFridayPMTipArrays.random())
+let commuteFridayPMTopics = Topics(title: commutePMTitle, icon: commutePMIcon, topics: [commuteFridayPMTopic])
+
+//*** RANDOM: MON-THURS PM
 let commutePMTipArrays = [commutePMTipArray0, commutePMTipArray1, commutePMTipArray2, commutePMTipArray3, commutePMTipArray4,]
 let commutePMTopic = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commutePMTipArrays.random())
+let commutePMTopics = Topics(title: commutePMTitle, icon: commutePMIcon, topics: [commutePMTopic,])
 
 
-
+//WEEKEND PM - Driving
+let commuteWeekendPMTitle = "Driving"
+let commuteWeekendPMTopics = Topics(title: commuteWeekendPMTitle, icon: commutePMIcon, topics: [commutePMTopic,])
 
 
 

@@ -128,14 +128,17 @@ class NowViewController: UIViewController {
 
 
     // Tips and Topics
+    //Row 1
     var topic0: Topic!
     var topic1: Topic!
     var topic2: Topic!
     var topic3: Topic!
+    //Row 2
     var topic4: Topic!
     var topic5: Topic!
     var topic6: Topic!
     var topic7: Topic!
+    //Row 3
     var topic8: Topic!
     var topic9: Topic!
     var topic10: Topic!
@@ -432,9 +435,8 @@ class NowViewController: UIViewController {
 //                             sunday0to4Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: sunday0to4Topics)
 
         case 5...8:
@@ -444,11 +446,10 @@ class NowViewController: UIViewController {
 //                             sundayNow5to8Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics,
+            cafeTopics, restaurantTopics, networkingTopics, bathroomAMTopics,
+            homeAMTopics,  groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
             topicsNow: sundayNow5to8Topics)
-
 
         case 9:
             print("Weekend, Early Morning")
@@ -457,9 +458,9 @@ class NowViewController: UIViewController {
 //                             sundayNow9to10Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
             topicsNow: sundayNow9to10Topics)
 
         case 10:
@@ -471,10 +472,9 @@ class NowViewController: UIViewController {
 //                sundayNow9to10Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            brunchTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
-
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
             topicsNow: sundayNow9to10Topics)
 
         case 11:
@@ -485,9 +485,9 @@ class NowViewController: UIViewController {
         //                             sundayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            brunchTopics, cafeTopics, morningSnackTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
             topicsNow: sundayNow11to13Topics)
 
         case 12...13:
@@ -498,9 +498,9 @@ class NowViewController: UIViewController {
 //                             sundayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
+            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
             topicsNow: sundayNow11to13Topics)
 
         case 14...15:
@@ -509,18 +509,18 @@ class NowViewController: UIViewController {
 //            append12Topics(homePMTopic, gymTopic, runningTopic, yogaTopic, afternoonSnackTopic, cafePMTopic, barTopic, networkingTopic, dateTopic, shoppingClothesTopic, groceryStoreWENDTopic, travelTopic, sundayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
             topicsNow: sundayNow14to16Topics)
 
         case 16:
 //           append12Topics(homePMTopic, gymTopic, runningTopic, yogaTopic, afternoonSnackTopic, cafePMTopic, barTopic, networkingTopic, dateTopic, shoppingClothesTopic, groceryStoreWENDTopic, travelTopic, sundayNow14to16Topic)
 
            appendNineTopics(
-           gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-           lunchTopics, happyHourTopics, afternoonSnackTopics, bathroomPMTopics,
-           breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+           exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+           happyHourTopics, networkingTopics,  bathroomPMTopics, commuteWeekendPMTopics,
+           groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
            topicsNow: sundayNow14to16Topics)
 
         case 17...18:
@@ -530,10 +530,9 @@ class NowViewController: UIViewController {
 //                             sundayNow17to18Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, happyHourTopics, goingOutTopics, homePMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
-
+            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
+            restaurantTopics, happyHourTopics, networkingTopics, commuteWeekendPMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
             topicsNow: sundayNow17to18Topics)
 
         case 19...20:
@@ -544,9 +543,9 @@ class NowViewController: UIViewController {
 
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, barTopics, goingOutTopics, safetyTopics,
-            homePMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics,
+            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
             topicsNow: sundayNow19to20Topics)
 
         case 21:
@@ -559,9 +558,9 @@ class NowViewController: UIViewController {
 
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            homePMTopics, bathroomPMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: sunday21to24Topics)
 
         case 22..<24:
@@ -573,9 +572,9 @@ class NowViewController: UIViewController {
 //                             sunday21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+            barTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: sunday21to24Topics)
 
         default:
@@ -598,21 +597,20 @@ class NowViewController: UIViewController {
 //                             mondayNow0to4Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: mondayNow0to4Topics)
 
-        case 5...7:
+        case 5...8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
 //            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
 //                             mondayNow5to8Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
             topicsNow: mondayNow5to8Topics)
             //
             //NOW
@@ -627,27 +625,6 @@ class NowViewController: UIViewController {
             // meditate, journal,
             // work, networking
 
-        case 8:
-            print("weekdayMTW, arly Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic,
-//                             getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic,
-//                             cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
-//                             mondayNow5to8Topic)
-
-            appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
-            topicsNow: mondayNow5to8Topics)
-
-            //NOW
-            //AMRoutine
-            //GettingReady
-            //Bathroom? NO
-            //Commute NO
-            //Work/School NO
-
 
         case 9:
             print("weekdayMTW, mid Morning")
@@ -656,9 +633,9 @@ class NowViewController: UIViewController {
 //                             getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, schoolAMTopic, mondayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
             topicsNow: mondayNow9to11Topics)
 
             //NOW
@@ -674,9 +651,9 @@ class NowViewController: UIViewController {
 //            append12Topics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic, mondayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            brunchTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: mondayNow9to11Topics)
 
             //NOW
@@ -695,9 +672,9 @@ class NowViewController: UIViewController {
 
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            brunchTopics, cafeTopics, morningSnackTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: mondayNow11to13Topics)
 
             //snackTopics, cafeTopics
@@ -714,9 +691,9 @@ class NowViewController: UIViewController {
 //                             mondayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
+            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
             topicsNow: mondayNow11to13Topics)
 
         case 14...15:
@@ -726,9 +703,9 @@ class NowViewController: UIViewController {
 //                             mondayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: mondayNow14to16Topics)
 
         case 16:
@@ -738,9 +715,9 @@ class NowViewController: UIViewController {
 //                             mondayNow14to16Topic)
 
            appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            lunchTopics, happyHourTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
            topicsNow: mondayNow14to16Topics)
 
         case 17...18:
@@ -750,9 +727,9 @@ class NowViewController: UIViewController {
 //                             mondayNow17to18Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, happyHourTopics, goingOutTopics, homePMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
+            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
             topicsNow: mondayNow17to18Topics)
 
         case 19...20:
@@ -762,9 +739,9 @@ class NowViewController: UIViewController {
 //                             mondayNow19to20Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, barTopics, goingOutTopics, safetyTopics,
-            homePMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics,
+            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
             topicsNow: mondayNow19to20Topics)
 
         case 21:
@@ -777,9 +754,8 @@ class NowViewController: UIViewController {
 
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            homePMTopics, bathroomPMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: mondayNow21to24Topics)
 
         case 22..<24:
@@ -791,9 +767,9 @@ class NowViewController: UIViewController {
 //                             mondayNow21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+            barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: mondayNow21to24Topics)
 
         default:
@@ -813,34 +789,22 @@ class NowViewController: UIViewController {
 //                             tuesdayNow0to4Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: tuesdayNow0to4Topics)
 
-        case 5...7:
+        case 5...8:
             print("weekdayMTW, Early Morning")
             // call function to display 9 time-based topics
 //            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteTuesdayAMTopic0, workAMTopic, schoolAMTopic,
 //                             tuesdayNow5to8Topic) //TUESDAY COMMUTE
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteTuesdayAMTopics, workSchoolAMTopics(),
             topicsNow: tuesdayNow5to8Topics)
 
-        case 8:
-            print("weekdayMTW, Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteTuesdayAMTopic0, workAMTopic, schoolAMTopic,
-//                             tuesdayNow5to8Topic) //*
-
-            appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
-            topicsNow: tuesdayNow5to8Topics)
 
         case 9:
             print("weekdayMTW, Mid Morning")
@@ -849,9 +813,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow9to11Topic) //*
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteTuesdayAMTopics, workSchoolAMTopics(),
             topicsNow: tuesdayNow9to11Topics)
 
         case 10:
@@ -861,9 +825,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            brunchTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: tuesdayNow9to11Topics)
 
         case 11:
@@ -873,9 +837,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            brunchTopics, cafeTopics, morningSnackTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: tuesdayNow11to13Topics)
 
         case 12...13:
@@ -884,9 +848,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow11to13Topic) // Tues specific tips
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
+            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
             topicsNow: tuesdayNow11to13Topics)
 
         case 14...15:
@@ -896,9 +860,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: tuesdayNow14to16Topics)
 
         case 16:
@@ -908,9 +872,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            lunchTopics, happyHourTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
                        topicsNow: tuesdayNow14to16Topics)
 
         case 17...18:
@@ -919,9 +883,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow17to18Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, happyHourTopics, goingOutTopics, homePMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
+            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
             topicsNow: tuesdayNow17to18Topics)
 
 
@@ -932,9 +896,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow19to20Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, barTopics, goingOutTopics, safetyTopics,
-            homePMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics,
+            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
             topicsNow: tuesdayNow19to20Topics)
 
         case 21:
@@ -946,9 +910,8 @@ class NowViewController: UIViewController {
         //                             tuesdayNow21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            homePMTopics, bathroomPMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: tuesdayNow21to24Topics)
 
         case 22..<24:
@@ -960,9 +923,9 @@ class NowViewController: UIViewController {
 //                             tuesdayNow21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+            barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: tuesdayNow21to24Topics)
 
         default:
@@ -981,9 +944,8 @@ class NowViewController: UIViewController {
 //                             wednesdayNow0to4Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: wednesdayNow0to4Topics)
 
         case 5...8:
@@ -992,9 +954,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow5to8Topic) //*
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
             topicsNow: wednesdayNow5to8Topics)
 
 
@@ -1005,9 +967,9 @@ class NowViewController: UIViewController {
 
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
             topicsNow: wednesdayNow9to11Topics)
 
         case 10:
@@ -1016,9 +978,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            brunchTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: wednesdayNow9to11Topics)
 
 
@@ -1027,9 +989,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            brunchTopics, cafeTopics, morningSnackTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: wednesdayNow11to13Topics)
 
 
@@ -1039,9 +1001,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
+            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
             topicsNow: wednesdayNow11to13Topics)
 
 
@@ -1051,9 +1013,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: wednesdayNow14to16Topics)
 
         case 16:
@@ -1062,9 +1024,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            lunchTopics, happyHourTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: wednesdayNow14to16Topics)
 
 
@@ -1074,9 +1036,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow17to18Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, happyHourTopics, goingOutTopics, homePMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
+            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
             topicsNow: wednesdayNow17to18Topics)
 
         case 19...20:
@@ -1085,9 +1047,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow19to20Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, barTopics, goingOutTopics, safetyTopics,
-            homePMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics,
+            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
             topicsNow: wednesdayNow19to20Topics)
 
         case 21:
@@ -1098,10 +1060,8 @@ class NowViewController: UIViewController {
         //                             wednesdayNow21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            homePMTopics, bathroomPMTopics, groceryStoreTopics, travelTopics,
-
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: wednesdayNow21to24Topics)
 
         case 22..<24:
@@ -1112,10 +1072,9 @@ class NowViewController: UIViewController {
 //                             wednesdayNow21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
-
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+            barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: wednesdayNow21to24Topics)
 
         default:
@@ -1135,9 +1094,8 @@ class NowViewController: UIViewController {
 //                             thursdayNow0to4Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: thursdayNow0to4Topics)
 
         case 5...8:
@@ -1146,9 +1104,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow5to8Topic)
 
         appendNineTopics(
-         gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-         breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-         getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+         exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+         restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+         groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
         topicsNow: thursdayNow5to8Topics)
 
 
@@ -1157,9 +1115,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
             topicsNow: thursdayNow9to11Topics)
 
         case 10:
@@ -1168,9 +1126,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            brunchTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: thursdayNow9to11Topics)
 
 
@@ -1180,9 +1138,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            brunchTopics, cafeTopics, morningSnackTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: thursdayNow11to13Topics)
 
         case 12...13:
@@ -1191,9 +1149,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
+            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
             topicsNow: thursdayNow11to13Topics)
 
 
@@ -1204,9 +1162,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: thursdayNow14to16Topics)
 
 
@@ -1216,9 +1174,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            lunchTopics, happyHourTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: thursdayNow14to16Topics)
 
 
@@ -1228,9 +1186,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow17to18Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, happyHourTopics, goingOutTopics, homePMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
+            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
             topicsNow: thursdayNow17to18Topics)
 
 
@@ -1240,9 +1198,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow19to20Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, barTopics, goingOutTopics, safetyTopics,
-            homePMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics,
+            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
             topicsNow: thursdayNow19to20Topics)
 
         case 21:
@@ -1254,9 +1212,8 @@ class NowViewController: UIViewController {
         //                             thursdayNow21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            homePMTopics, bathroomPMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: thursdayNow21to24Topics)
 
         case 22..<24:
@@ -1268,9 +1225,9 @@ class NowViewController: UIViewController {
 //                             thursdayNow21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+            barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: thursdayNow21to24Topics)
 
         default:
@@ -1291,12 +1248,11 @@ class NowViewController: UIViewController {
 
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: fridayNow0to4Topics)
 
-        case 5...7:
+        case 5...8:
             print("weekday Fri, Early Morning")
 //            append12Topics(AMRoutineTopic, gymTopic, yogaTopic, runningTopic,
 //                             getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic,
@@ -1304,23 +1260,9 @@ class NowViewController: UIViewController {
 //                             fridayNow5to8Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
-            topicsNow: fridayNow5to8Topics)
-
-
-        case 8:
-            print("weekday Fri, Late Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic,
-//                             getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic,
-//                             cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
-//                             fridayNow5to8Topic)
-
-            appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
             topicsNow: fridayNow5to8Topics)
 
         case 9:
@@ -1330,9 +1272,9 @@ class NowViewController: UIViewController {
 //                             fridayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
             topicsNow: fridayNow9to11Topics)
 
 
@@ -1344,9 +1286,9 @@ class NowViewController: UIViewController {
 //                             fridayNow9to11Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            brunchTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: fridayNow9to11Topics)
 
 
@@ -1358,9 +1300,9 @@ class NowViewController: UIViewController {
 //                             fridayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            brunchTopics, cafeTopics, morningSnackTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: fridayNow11to13Topics)
 
 
@@ -1372,9 +1314,9 @@ class NowViewController: UIViewController {
 //                             fridayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
+            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
             topicsNow: fridayNow11to13Topics)
 
         case 14...15:
@@ -1386,22 +1328,24 @@ class NowViewController: UIViewController {
 //                             fridayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, commuteFridayPMTopics, travelTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: fridayNow14to16Topics)
 
 
         case 16:
-            ////FRIDAY ONLY COMMUTE
+
+            ////FRIDAY ONLY COMMUTE **
+
             print("weekday Fri, Afternoon")
 //            append12Topics(afternoonSnackTopic, cafePMTopic, workPMTopic, breakPMTopic, commuteFridayPMTopic, gymTopic, runningTopic, happyHourTopic, networkingTopic, groceryStoreTopic, shoppingClothesTopic, travelTopic,
 //                             fridayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            lunchTopics, happyHourTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, commuteFridayPMTopics, travelTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
             topicsNow: fridayNow14to16Topics)
 
 
@@ -1413,9 +1357,9 @@ class NowViewController: UIViewController {
 //                             fridayNow17to18Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, happyHourTopics, goingOutTopics, homePMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
+            restaurantTopics, happyHourTopics, networkingTopics, commuteFridayPMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
             topicsNow: fridayNow17to18Topics)
 
         case 19...20:
@@ -1425,9 +1369,9 @@ class NowViewController: UIViewController {
 //                             fridayNow19to20Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, barTopics, goingOutTopics, safetyTopics,
-            homePMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics,
+            safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
             topicsNow: fridayNow19to20Topics)
 
         case 21:
@@ -1439,9 +1383,8 @@ class NowViewController: UIViewController {
         //                fridayNow21to24Topic)
 
            appendNineTopics(
-           gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-           dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-           homePMTopics, bathroomPMTopics, groceryStoreTopics, travelTopics,
+           exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
+           groceryStoreTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: fridayNow21to24Topics)
 
         case 22..<24:
@@ -1453,9 +1396,9 @@ class NowViewController: UIViewController {
 //                fridayNow21to24Topic)
 
            appendNineTopics(
-           gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-           dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-           bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+           exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+           barTopics, networkingTopics, dateTopics, safetyTopics,
+           groceryStoreTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: fridayNow21to24Topics)
 
         default:
@@ -1475,9 +1418,8 @@ class NowViewController: UIViewController {
 //                             saturday0to4Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: saturday0to4Topics)
 
         case 5...8:
@@ -1486,9 +1428,9 @@ class NowViewController: UIViewController {
 //                             saturdayNow5to8Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics,
+            cafeTopics, restaurantTopics, networkingTopics, bathroomAMTopics,
+            homeAMTopics,  groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
             topicsNow: saturdayNow5to8Topics)
 
         case 9:
@@ -1497,9 +1439,9 @@ class NowViewController: UIViewController {
 //                             saturdayNow9to10Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            breakfastTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            getReadyAMTopics, homeAMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
             topicsNow: saturdayNow9to10Topics)
 
         case 10:
@@ -1509,9 +1451,9 @@ class NowViewController: UIViewController {
 //                saturdayNow9to10Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipAM(), socializeParentAM(),
-            brunchTopics, cafeTopics, AMRoutineTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
             topicsNow: saturdayNow9to10Topics)
 
         case 11:
@@ -1521,9 +1463,9 @@ class NowViewController: UIViewController {
 //                             saturdayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            brunchTopics, cafeTopics, morningSnackTopics, bathroomAMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
+            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
             topicsNow: saturdayNow11to13Topics)
 
         case 12...13:
@@ -1533,9 +1475,9 @@ class NowViewController: UIViewController {
 //                             saturdayNow11to13Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
+            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
             topicsNow: saturdayNow11to13Topics)
 
         case 14...15:
@@ -1544,9 +1486,9 @@ class NowViewController: UIViewController {
 //            append12Topics(homePMTopic, gymTopic, runningTopic, yogaTopic, afternoonSnackTopic, cafePMTopic, barTopic, networkingTopic, dateTopic, shoppingClothesTopic, groceryStoreTopic, travelTopic,                            saturdayNow14to16Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipDay(), socializeParentDay(),
-            lunchTopics, cafeTopics, afternoonSnackTopics, bathroomPMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
             topicsNow: saturdayNow14to16Topics)
 
 
@@ -1557,9 +1499,9 @@ class NowViewController: UIViewController {
 
 
            appendNineTopics(
-           gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-           lunchTopics, happyHourTopics, afternoonSnackTopics, bathroomPMTopics,
-           breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+           exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
+           happyHourTopics, networkingTopics,  bathroomPMTopics, commuteWeekendPMTopics,
+           groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
            topicsNow: saturdayNow14to16Topics)
 
         case 17...18:
@@ -1569,9 +1511,9 @@ class NowViewController: UIViewController {
 //                             saturdayNow17to18Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, happyHourTopics, goingOutTopics, homePMTopics,
-            breakPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
+            restaurantTopics, happyHourTopics, networkingTopics, commuteWeekendPMTopics,
+            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
             topicsNow: saturdayNow17to18Topics)
 
         case 19...20:
@@ -1581,9 +1523,9 @@ class NowViewController: UIViewController {
 //                             saturdayNow19to20Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipPM(), socializeParentPM(),
-            dinnerTopics, barTopics, goingOutTopics, safetyTopics,
-            homePMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
+            restaurantTopics, barTopics, networkingTopics, dateTopics,
+            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
             topicsNow: saturdayNow19to20Topics)
 
         case 21:
@@ -1595,9 +1537,9 @@ class NowViewController: UIViewController {
         //                             saturday21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            homePMTopics, bathroomPMTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+            barTopics, networkingTopics, dateTopics, safetyTopics,
+            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
             topicsNow: saturday21to24Topics)
 
         case 22..<24:
@@ -1609,9 +1551,9 @@ class NowViewController: UIViewController {
 //                             saturday21to24Topic)
 
             appendNineTopics(
-            gymTopics, runYoga(), relationshipNight(), socializeParentNight(),
-            dinnerAfter9PMTopics, barTopics, lateNightSnackTopics, safetyTopics,
-            bathroomPMTopics, bedtimeTopics, groceryStoreTopics, travelTopics,
+            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
+            barTopics, networkingTopics, safetyTopics, groceryStoreTopics,
+            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
             topicsNow: saturday21to24Topics)
 
         default:
@@ -1653,6 +1595,7 @@ class NowViewController: UIViewController {
 
             let unTappedButtonEdgeInsets = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
 
+            //row1
             self.topic0Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.topic1Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.topic2Button.imageEdgeInsets = unTappedButtonEdgeInsets
@@ -1662,7 +1605,13 @@ class NowViewController: UIViewController {
             self.topic5Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.topic6Button.imageEdgeInsets = unTappedButtonEdgeInsets
             self.topic7Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            //row3
+            self.topic8Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.topic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.topic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
+            self.topic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
 
+            //row1
             self.topic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
             self.topic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
             self.topic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
@@ -1672,6 +1621,12 @@ class NowViewController: UIViewController {
             self.topic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
             self.topic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
             self.topic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
+            //row3
+            self.topic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
+            self.topic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
+            self.topic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
+            self.topic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
+
         }
     }
 
@@ -1681,9 +1636,9 @@ class NowViewController: UIViewController {
         print("topics: \(topics)")
 
         //BUTTON ICONS
+
             //row 1
         self.topic0Button.setImage(UIImage(named: topics[0].icon) , for: UIControl.State.normal)
-
             self.topic1Button.setImage(UIImage(named: topics[1].icon) , for: UIControl.State.normal)
             self.topic2Button.setImage(UIImage(named: topics[2].icon) , for: UIControl.State.normal)
             self.topic3Button.setImage(UIImage(named: topics[3].icon) , for: UIControl.State.normal)
@@ -1693,7 +1648,15 @@ class NowViewController: UIViewController {
             self.topic6Button.setImage(UIImage(named: topics[6].icon) , for: UIControl.State.normal)
             self.topic7Button.setImage(UIImage(named: topics[7].icon) , for: UIControl.State.normal)
 
+        //row3
+        self.topic8Button.setImage(UIImage(named: topics[8].icon) , for: UIControl.State.normal)
+            self.topic9Button.setImage(UIImage(named: topics[9].icon) , for: UIControl.State.normal)
+            self.topic10Button.setImage(UIImage(named: topics[10].icon) , for: UIControl.State.normal)
+            self.topic11Button.setImage(UIImage(named: topics[11].icon) , for: UIControl.State.normal)
+
+
         //BUTTON LABELS
+
         //row1
         self.topic0Label.text = topics[0].title
         self.topic1Label.text = topics[1].title
@@ -1706,6 +1669,11 @@ class NowViewController: UIViewController {
         self.topic6Label.text = topics[6].title
         self.topic7Label.text = topics[7].title
 
+        //row2
+        self.topic8Label.text = topics[8].title
+        self.topic9Label.text = topics[9].title
+        self.topic10Label.text = topics[10].title
+        self.topic11Label.text = topics[11].title
     }
 
 
@@ -1885,10 +1853,6 @@ class NowViewController: UIViewController {
         }
     }
 
-    @IBAction func sourceButtonTapped(_ sender: Any) {
-        print("go to source")
-
-    }
 
     @IBAction func feedbackNowButtonTapped(_ sender: Any) {
         goToSourceURL(url: Constants.Webiste.rizeFormURL)
@@ -2002,34 +1966,6 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         cell.delegate = self //self is the NowVC
 
         return cell
-    }
-
-
-
-
-
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        nowTableView.deselectRow(at: indexPath, animated: true)
-
-        let tip = tips[indexPath.row]
-
-        let app = UIApplication.shared
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NowTableViewCell
-        if let url = tip.sourceURL {
-
-            // print: true or false
-            print("verifyURL in 'Now' VC: \(verifyUrl(urlString: url))")
-
-            if verifyUrl(urlString: url) == true {
-                app.open(URL(string:url)!)
-            } else {
-                performUIUpdatesOnMain {
-                    self.createAlert(title: "Could not open URL", message: "Check your Internet connection and try again.")
-                }
-            }
-        }
     }
 }
 

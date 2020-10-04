@@ -14,7 +14,7 @@ import Foundation
 /*
 
  //ROW 1: Motivation, Life Goals, Single, Relationship
- //ROW 2: Career Growth, Wealth, Friends, Parenting
+ //ROW 2: Career Growth, Wealth, Friends, Family/Parenting
  //ROW 3: Studying, Stressed, Depressed, Mad
 
 mental toughness, personal development, motivation, character, integrity, ambition, motivation (other than quotes)
@@ -73,78 +73,79 @@ Wealth
 
 //MARK: Socialize OR Parenting
 
-func socializeParentAM() -> Topics {
+
+func familyParentAM() -> Topics {
     var selectedTopic: Topics!
-    let socializing = Topics(title: networkingTitle, icon: networkingIcon, topics: [networkingTopic,])
-    let parenting = Topics(title: parentingTitle, icon: parentingIcon, topics: [parentingAMTopic,])
+    let family = Topics(title: familyTitle, icon: familyIcon, topics: [networkingTopic,])
+    let familyParenting = Topics(title: familyTitle, icon: familyIcon, topics: [parentingAMTopic,])
 
     switch defaults.integer(forKey: parentKey)
     {
     case 0:
         //friend
-        selectedTopic = socializing
+        selectedTopic = family
     case 1:
         //parent
-        selectedTopic = parenting
+        selectedTopic = familyParenting
     default:
-        selectedTopic = socializing
+        selectedTopic = family
     }
     return selectedTopic
 }
 
-func socializeParentDay() -> Topics {
+func familyParentDay() -> Topics {
     var selectedTopic: Topics!
-    let socializing = Topics(title: networkingTitle, icon: networkingIcon, topics: [networkingTopic,])
-    let parenting = Topics(title: parentingTitle, icon: parentingIcon, topics: [parentingDayTopic,])
+    let family = Topics(title: familyTitle, icon: familyIcon, topics: [networkingTopic,])
+    let familyParenting = Topics(title: familyTitle, icon: familyIcon, topics: [parentingDayTopic,])
 
     switch defaults.integer(forKey: parentKey)
     {
     case 0:
         //friend
-        selectedTopic = socializing
+        selectedTopic = family
     case 1:
         //parent
-        selectedTopic = parenting
+        selectedTopic = familyParenting
     default:
-        selectedTopic = socializing
+        selectedTopic = family
     }
     return selectedTopic
 }
 
-func socializeParentPM() -> Topics {
+func familyParentPM() -> Topics {
     var selectedTopic: Topics!
-    let socializing = Topics(title: networkingTitle, icon: networkingIcon, topics: [networkingTopic,])
-    let parenting = Topics(title: parentingTitle, icon: parentingIcon, topics: [parentingPMTopic,])
+    let family = Topics(title: familyTitle, icon: familyIcon, topics: [networkingTopic,])
+    let familyParenting = Topics(title: familyTitle, icon: familyIcon, topics: [parentingPMTopic,])
 
     switch defaults.integer(forKey: parentKey)
     {
     case 0:
         //friend
-        selectedTopic = socializing
+        selectedTopic = family
     case 1:
         //parent
-        selectedTopic = parenting
+        selectedTopic = familyParenting
     default:
-        selectedTopic = socializing
+        selectedTopic = family
     }
     return selectedTopic
 }
 
-func socializeParentNight() -> Topics {
+func familyParentNight() -> Topics {
     var selectedTopic: Topics!
-    let socializing = Topics(title: networkingTitle, icon: networkingIcon, topics: [networkingTopic,])
-    let parenting = Topics(title: parentingTitle, icon: parentingIcon, topics: [parentingBedtimeTopic,])
+    let family = Topics(title: familyTitle, icon: familyIcon, topics: [networkingTopic,])
+    let familyParenting = Topics(title: familyTitle, icon: familyIcon, topics: [parentingBedtimeTopic,])
 
     switch defaults.integer(forKey: parentKey)
     {
     case 0:
         //friend
-        selectedTopic = socializing
+        selectedTopic = family
     case 1:
         //parent
-        selectedTopic = parenting
+        selectedTopic = familyParenting
     default:
-        selectedTopic = socializing
+        selectedTopic = family
     }
     return selectedTopic
 }
@@ -271,6 +272,11 @@ let personalTipArrays = [personalTipArray0, personalTipArray1, personalTipArray2
 let personalTopic = Topic(title: personalTitle, icon: personalIcon, tip: personalTipArrays.random())
 let personalTopics = Topics(title: personalTitle, icon: personalIcon, topics: [personalTopic,])
 
+//MARK: - Family
+let familyTitle = "Family"
+let familyIcon = Constants.Icon.family
+
+
 //MARK: - Friends
 
 let friendsTitle = "Friends"
@@ -336,11 +342,8 @@ let friendsTopic5 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTi
 // RANDOM
 let friendsTipArrays = [friendsTipArray0, friendsTipArray1, friendsTipArray2, friendsTipArray3, friendsTipArray4, friendsTipArray5,]
 let friendsTopic = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArrays.random())
+let friendTopics = Topics(title: friendsTitle, icon: friendsIcon, topics: [friendsTopic])
 
-
-// WIP
-let friendsTipArray6 = [friendsTip9, friendsTip10, friendsTip11, friendsTip12]
-let friendsTopic6 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArray6)
 
 
 
@@ -1697,6 +1700,7 @@ let wealthTopic8 = Topic(title: wealthTitle, icon: wealthIcon, tip: wealthTipArr
 // RANDOM
 let wealthArrays = [wealthTipArray0, wealthTipArray1, wealthTipArray2, wealthTipArray3, wealthTipArray4, wealthTipArray5, wealthTipArray6, wealthTipArray7, wealthTipArray8]
 let wealthTopic = Topic(title: wealthTitle, icon: wealthIcon, tip: wealthArrays.random())
+let wealthTopics = Topics(title: wealthTitle, icon: wealthIcon, topics: [wealthTopic,])
 
 
 

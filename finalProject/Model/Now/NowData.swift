@@ -41,163 +41,154 @@ let commuteKey = "Commute"
 
 //TODO: - Fix ordering of tips for SAT and SUN (currently some are reversed)
 
-    func runYoga() -> Topics {
-          var selectedTopic: Topics!
-          switch defaults.integer(forKey: exerciseKey)
-          {
-            case 0:
-              //running
-              selectedTopic = Topics(title: "Running", icon: Constants.Icon.running, topics: [runningTopic,])
-            case 1:
-              //yoga
-            selectedTopic = Topics(title: "Yoga", icon: Constants.Icon.yoga, topics: [yogaTopic,])
+func exerciseTopics() -> Topics {
+      var selectedTopic: Topics!
+      switch defaults.integer(forKey: exerciseKey)
+      {
+        case 0:
+          //work out
+          selectedTopic = Topics(title: "Workout", icon: Constants.Icon.gym, topics: [preGymTopic, gymTopic, postGymTopic])
+        case 1:
+          //running
+          selectedTopic = Topics(title: "Running", icon: Constants.Icon.running, topics: [runningTopic, postGymTopic])
 
-            default:
-              selectedTopic = Topics(title: "Running", icon: Constants.Icon.running, topics: [runningTopic,])
-          }
-          return selectedTopic
+        case 2:
+          //yoga
+        selectedTopic = Topics(title: "Yoga", icon: Constants.Icon.yoga, topics: [yogaTopic, postGymTopic])
+
+        default:
+          selectedTopic = Topics(title: "Running", icon: Constants.Icon.running, topics: [preGymTopic, gymTopic, postGymTopic])
       }
+      return selectedTopic
+  }
+
+// Work OR School
+
+func workSchoolAMTopics() -> Topics {
+    var selectedTopic: Topics!
+    switch defaults.integer(forKey: jobKey)
+    {
+    case 0:
+        //Work
+        selectedTopic = Topics(title: workTitle, icon: workAMIcon, topics: [workAMTopic,])
+    case 1:
+        //School
+        selectedTopic = Topics(title: schoolTitle, icon: schoolIcon, topics: [schoolAMTopic,])
+    default:
+        selectedTopic = Topics(title: workTitle, icon: workAMIcon, topics: [workAMTopic,])
+    }
+    return selectedTopic
+}
+
+func workSchoolPMTopics() -> Topics {
+    var selectedTopic: Topics!
+    switch defaults.integer(forKey: jobKey)
+    {
+    case 0:
+        //Work
+            selectedTopic = Topics(title: workTitle, icon: workAMIcon, topics: [workPMTopic,])
+        case 1:
+            //School
+            selectedTopic = Topics(title: schoolTitle, icon: schoolIcon, topics: [schoolPMTopic,])
+        default:
+            selectedTopic = Topics(title: workTitle, icon: workAMIcon, topics: [workPMTopic,])
+    }
+    return selectedTopic
+}
+
+func workSchoolLateTopics() -> Topics {
+    var selectedTopic: Topics!
+    switch defaults.integer(forKey: jobKey)
+    {
+    case 0:
+        //school
+        selectedTopic = Topics(title: workTitle, icon: workAMIcon, topics: [workLateTopic,])
+    case 1:
+        //School
+        selectedTopic = Topics(title: schoolTitle, icon: schoolIcon, topics: [schoolPMTopic,])
+
+    default:
+        selectedTopic = Topics(title: workTitle, icon: workAMIcon, topics: [workLateTopic,])
+    }
+    return selectedTopic
+}
+
+
 
 
 // Studying OR Career Growth
 
 func studyCareerAM() -> Topics {
     var selectedTopic: Topics!
-    switch defaults.integer(forKey: relationshipKey)
+    switch defaults.integer(forKey: jobKey)
     {
     case 0:
-        //single
-        selectedTopic = Topics(title: "Studying", icon: Constants.Icon.relationship, topics: [studyTopic,])
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     case 1:
-        //relationship
-        selectedTopic = Topics(title: "Career", icon: Constants.Icon.jobSearch, topics: [jobSearchTopic,])
+        //study
+        selectedTopic = Topics(title: studyTitle, icon: studyIcon, topics: [studyTopic,])
     default:
-        break
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     }
     return selectedTopic
 }
 
 func studyCareerDay() -> Topics {
     var selectedTopic: Topics!
-    switch defaults.integer(forKey: relationshipKey)
+    switch defaults.integer(forKey: jobKey)
     {
     case 0:
-        //single
-        selectedTopic = Topics(title: "Studying", icon: Constants.Icon.study, topics: [studyDayTopic,])
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     case 1:
-        //relationship
-        selectedTopic = Topics(title: "Career", icon: Constants.Icon.jobSearch, topics: [jobSearchTopic,])
+        //study
+        selectedTopic = Topics(title: studyTitle, icon: studyIcon, topics: [studyDayTopic,])
     default:
-        break
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     }
     return selectedTopic
 }
 
 func studyCareerPM() -> Topics {
     var selectedTopic: Topics!
-    switch defaults.integer(forKey: relationshipKey)
+    switch defaults.integer(forKey: jobKey)
     {
     case 0:
-        //school
-        selectedTopic = Topics(title: "Studying", icon: Constants.Icon.study, topics: [studyTopic, ])
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     case 1:
-        //work
-        selectedTopic = Topics(title: "Career", icon: Constants.Icon.jobSearch, topics: [jobSearchTopic,])
+        //school
+        selectedTopic = Topics(title: studyTitle, icon: studyIcon, topics: [studyTopic,])
     default:
-        break
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     }
     return selectedTopic
 }
 
 func studyCareerNight() -> Topics {
     var selectedTopic: Topics!
-    switch defaults.integer(forKey: relationshipKey)
+    switch defaults.integer(forKey: jobKey)
     {
     case 0:
-        //school
-        selectedTopic = Topics(title: "Studying", icon: Constants.Icon.study, topics: [studyPMTopic,])
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     case 1:
         //work
-        selectedTopic = Topics(title: "Career", icon: Constants.Icon.jobSearch, topics: [jobSearchTopic,])
+        //school
+        selectedTopic = Topics(title: studyTitle, icon: studyIcon, topics: [studyPMTopic,])
     default:
-        break
-    }
-    return selectedTopic
-}
-
-//6. Commute
-let emptyTopic = Topic(title: "", icon: "", tip: [])
-
-func commuteAM() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: commuteKey)
-    {
-    case 0:
-        //commute
-        selectedTopic = commuteAMTopic
-    case 1:
-        //NO commute
-        selectedTopic = emptyTopic
-    default:
-        break
+        //career
+        selectedTopic = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
     }
     return selectedTopic
 }
 
 
 
-
-func commuteAMTuesday() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: commuteKey)
-    {
-    case 0:
-        //commute
-        selectedTopic = commuteTuesdayAMTopic
-    case 1:
-        //NO commute
-        selectedTopic = emptyTopic
-    default:
-        break
-    }
-    return selectedTopic
-}
-
-
-
-
-
-func commuteFridayPM() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: commuteKey)
-    {
-    case 0:
-        //commute
-        selectedTopic = commuteFridayPMTopic
-    case 1:
-        //commute
-        selectedTopic = emptyTopic
-    default:
-        break
-    }
-    return selectedTopic
-}
-
-func commutePM() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: commuteKey)
-    {
-    case 0:
-        //commute
-        selectedTopic = commutePMTopic
-    case 1:
-        //commute
-        selectedTopic = emptyTopic
-    default:
-        break
-    }
-    return selectedTopic
-}
 
 //5. Relationships (Single, Relationship, Date)
 
@@ -205,6 +196,7 @@ func commutePM() -> Topic {
 
        func relationshipAM() -> Topics {
            var selectedTopic: Topics!
+
            switch defaults.integer(forKey: relationshipKey)
            {
            case 0:
@@ -214,7 +206,7 @@ func commutePM() -> Topic {
                //relationship
                selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipAMTopic,])
            default:
-               break
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleAMTopic,])
            }
            return selectedTopic
        }
@@ -230,7 +222,7 @@ func commutePM() -> Topic {
                //relationship
                selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipDayTopic,])
            default:
-               break
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic, dateTopic])
            }
            return selectedTopic
        }
@@ -240,13 +232,13 @@ func commutePM() -> Topic {
            switch defaults.integer(forKey: relationshipKey)
            {
            case 0:
-               //school
+               //single
                selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
            case 1:
-               //work
+               //relationship
                selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipPMTopic,])
            default:
-               break
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
            }
            return selectedTopic
        }
@@ -256,81 +248,22 @@ func commutePM() -> Topic {
            switch defaults.integer(forKey: relationshipKey)
            {
            case 0:
-               //school
+               //single
                selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
            case 1:
-               //work
+               //relationship
                selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipBedTopic,])
            default:
-               break
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
            }
            return selectedTopic
        }
 
 
-func schoolWorkAM() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: jobKey)
-    {
-    case 0:
-        //school
-        selectedTopic = schoolAMTopic
-    case 1:
-        //work
-        selectedTopic = workAMTopic
-    default:
-        break
-    }
-    return selectedTopic
-}
 
-func schoolWorkPM() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: jobKey)
-    {
-    case 0:
-        //school
-        selectedTopic = schoolPMTopic
-    case 1:
-        //work
-        selectedTopic = workPMTopic
-    default:
-        break
-    }
-    return selectedTopic
-}
 
-func schoolWorkLate() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: jobKey)
-    {
-    case 0:
-        //school
-        selectedTopic = studyTopic
-    case 1:
-        //work
-        selectedTopic = workLateTopic
-    default:
-        break
-    }
-    return selectedTopic
-}
 
-func schoolWorkNight() -> Topic {
-    var selectedTopic: Topic!
-    switch defaults.integer(forKey: jobKey)
-    {
-    case 0:
-        //school
-        selectedTopic = studyPMTopic
-    case 1:
-        //work
-        selectedTopic = jobSearchTopic
-    default:
-        break
-    }
-    return selectedTopic
-}
+
 
 
 
@@ -402,69 +335,69 @@ let nowTitle = "Now"
 let nowIcon = Constants.Icon.gym
 
 
-let sunday0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sunday0to4Topic, bedtimeTopic])
-let sundayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow5to8Topic, getReadyAMTopic, bathroomTopic,])
-let sundayNow9to10Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow9to10Topic, getReadyAMTopic, breakTopic, homeAMTopic, bathroomTopic, ])
-let sundayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow11to13Topic, breakTopic, homeAMTopic])
-let sundayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow14to16Topic, breakPMTopic, homePMTopic])
-let sundayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow17to18Topic, homePMTopic])
-let sundayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow19to20Topic, homePMTopic])
-let sunday21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sunday21to24Topic, bedtimeTopic, bathroomPMTopic])
+let sunday0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sunday0to4Topic])
+let sundayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow5to8Topic])
+let sundayNow9to10Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow9to10Topic])
+let sundayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow11to13Topic])
+let sundayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow14to16Topic])
+let sundayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow17to18Topic])
+let sundayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sundayNow19to20Topic])
+let sunday21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [sunday21to24Topic])
 
-let mondayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow0to4Topic, bedtimeTopic])
-let mondayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow5to8Topic, getReadyAMTopic, bathroomTopic, commuteAM(), schoolWorkAM()])
-let mondayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow9to11Topic, bathroomTopic, schoolWorkAM(), breakTopic])
-let mondayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow11to13Topic, schoolWorkPM(), breakTopic])
-let mondayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow14to16Topic, schoolWorkPM(), breakPMTopic, commutePM()])
-let mondayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow17to18Topic, schoolWorkLate(), commutePM(), homePMTopic])
-let mondayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow19to20Topic, schoolWorkNight(), homePMTopic])
-let mondayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow21to24Topic, bedtimeTopic, bathroomPMTopic])
+let mondayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow0to4Topic])
+let mondayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow5to8Topic])
+let mondayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow9to11Topic])
+let mondayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow11to13Topic])
+let mondayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow14to16Topic])
+let mondayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow17to18Topic])
+let mondayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow19to20Topic])
+let mondayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [mondayNow21to24Topic])
 
-let tuesdayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow0to4Topic, bedtimeTopic])
-let tuesdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow5to8Topic, getReadyAMTopic, bathroomTopic, commuteAMTuesday(), schoolWorkAM(),])
-let tuesdayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow9to11Topic, breakTopic])
-let tuesdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow11to13Topic, bathroomTopic, schoolWorkPM(), breakTopic])
-let tuesdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow14to16Topic, schoolWorkPM(), breakPMTopic, commutePM()])
-let tuesdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow17to18Topic, schoolWorkLate(), commutePM(), homePMTopic])
-let tuesdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow19to20Topic, schoolWorkNight(), homePMTopic])
-let tuesdayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow21to24Topic, bedtimeTopic, bathroomPMTopic])
+let tuesdayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow0to4Topic])
+let tuesdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow5to8Topic])
+let tuesdayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow9to11Topic])
+let tuesdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow11to13Topic])
+let tuesdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow14to16Topic])
+let tuesdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow17to18Topic])
+let tuesdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow19to20Topic])
+let tuesdayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [tuesdayNow21to24Topic])
 
-let wednesdayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow0to4Topic, bedtimeTopic])
-let wednesdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow5to8Topic, getReadyAMTopic, bathroomTopic, commuteAM(), schoolWorkAM(),])
-let wednesdayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow9to11Topic, bathroomTopic, schoolWorkAM(), breakTopic])
-let wednesdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow11to13Topic, schoolWorkPM(), breakTopic])
-let wednesdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow14to16Topic, schoolWorkPM(), breakPMTopic, commutePM()])
-let wednesdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow17to18Topic, schoolWorkLate(), commutePM(), homePMTopic])
-let wednesdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow19to20Topic, schoolWorkNight(), homePMTopic])
-let wednesdayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow21to24Topic, bedtimeTopic, bathroomPMTopic])
+let wednesdayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow0to4Topic])
+let wednesdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow5to8Topic])
+let wednesdayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow9to11Topic])
+let wednesdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow11to13Topic])
+let wednesdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow14to16Topic])
+let wednesdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow17to18Topic])
+let wednesdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow19to20Topic])
+let wednesdayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [wednesdayNow21to24Topic])
 
-let thursdayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow0to4Topic, bedtimeTopic])
-let thursdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow5to8Topic, getReadyAMTopic, bathroomTopic, commuteAM(), schoolWorkAM(),])
-let thursdayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow9to11Topic, bathroomTopic, schoolWorkAM(), breakTopic])
-let thursdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow11to13Topic, schoolWorkPM(), breakTopic])
-let thursdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow14to16Topic, schoolWorkPM(), breakPMTopic, commutePM()])
-let thursdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow17to18Topic, schoolWorkLate(), commutePM(), homePMTopic])
-let thursdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow19to20Topic, schoolWorkNight(), homePMTopic])
-let thursdayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow21to24Topic, bedtimeTopic, bathroomPMTopic])
+let thursdayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow0to4Topic])
+let thursdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow5to8Topic])
+let thursdayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow9to11Topic])
+let thursdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow11to13Topic])
+let thursdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow14to16Topic])
+let thursdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow17to18Topic])
+let thursdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow19to20Topic])
+let thursdayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [thursdayNow21to24Topic])
 
 
-let fridayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow0to4Topic, bedtimeTopic])
-let fridayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow5to8Topic, getReadyAMTopic, bathroomTopic, commuteAM(), schoolWorkAM(),])
-let fridayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow9to11Topic, bathroomTopic, schoolWorkAM(), breakTopic])
-let fridayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow11to13Topic, schoolWorkPM(), breakTopic])
-let fridayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow14to16Topic, schoolWorkPM(), breakPMTopic, commuteFridayPM()])
-let fridayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow17to18Topic, schoolWorkLate(), commuteFridayPM(), homePMTopic])
-let fridayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow19to20Topic, homePMTopic])
-let fridayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow21to24Topic, bedtimeTopic, bathroomPMTopic])
+let fridayNow0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow0to4Topic])
+let fridayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow5to8Topic])
+let fridayNow9to11Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow9to11Topic])
+let fridayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow11to13Topic])
+let fridayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow14to16Topic])
+let fridayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow17to18Topic])
+let fridayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow19to20Topic])
+let fridayNow21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [fridayNow21to24Topic])
 
-let saturday0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturday0to4Topic, bedtimeTopic])
-let saturdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow5to8Topic, getReadyAMTopic, bathroomTopic,])
-let saturdayNow9to10Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow9to10Topic, breakTopic, homeAMTopic, bathroomTopic,])
-let saturdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow11to13Topic, breakTopic, homeAMTopic ])
-let saturdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow14to16Topic, breakPMTopic, homePMTopic ])
-let saturdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow17to18Topic, homePMTopic ])
-let saturdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow19to20Topic, homePMTopic])
-let saturday21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturday21to24Topic, bedtimeTopic, bathroomPMTopic])
+let saturday0to4Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturday0to4Topic])
+let saturdayNow5to8Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow5to8Topic])
+let saturdayNow9to10Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow9to10Topic])
+let saturdayNow11to13Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow11to13Topic])
+let saturdayNow14to16Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow14to16Topic])
+let saturdayNow17to18Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow17to18Topic])
+let saturdayNow19to20Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturdayNow19to20Topic])
+let saturday21to24Topics = Topics(title: nowTitle, icon: nowIcon, topics: [saturday21to24Topic])
 
 
 
@@ -608,14 +541,19 @@ let weekendNow5to8Tip19 = Tip(header: "🌅", title: "Burn 20% more fat by exerc
 
 //SAT
 let weekendNow5to8Tip20 = Tip(header: "Billionaire Habit", title: "Have a regular exercise routine", body: "You need to be physically fit to perform at the highest levels. \n\n• Richard Branson wakes up early to exercise. \n\n• Mark Cuban does 60 minutes of cardio at least 6 days a week.", sourceName: "Market Watch", sourceURL: "https://www.marketwatch.com/story/4-habits-that-self-made-billionaires-practice-nearly-every-day-2019-07-11", sponsorLogo: "", sponsorURL: "")
-let weekendNow5to8Tip21 = Tip(header: "Daily Habit", title: "Journal each morning to prepare, plan, and meditate on how you will act today. \n• Don’t wing it. \n• Don’t be reactionary. \n• Have a plan.", body: "Marcus Aurelius rose in the morning and did his journaling — preparing himself for what he was likely to face in the hours ahead. \n\nHe thought about the people he was likely to face, difficulties he might encounter, and what he knew about how to respond. \n\nIf you do the tough planning in the morning, you'll set yourself up for a successful day." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
+let weekendNow5to8Tip21 = Tip(header: "Lose Belly Fat", title: "Start each day by making a large pitcher of \"spa water\"—that's detox water filled with sliced whole lemons, oranges or grapefruits", body: "Citrus fruits are rich in the antioxidant D-limonene, a powerful compound found in the peel that help flush toxins from the body and gives sluggish bowels a kick. \n\nDrink 8+ glasses per day.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
+
 let weekendNow5to8Tip22 = Tip(header: "☕️", title: "Complete your workout in the morning before you consume caffeine", body: "In an ideal circadian rhythm, cortisol rises in the morning and remains level throughout the day to support alertness and energy. Because cortisol is like caffeine and is ideally rising in the morning, you may not need both. In fact, caffeine could suppress cortisol, making it tough to feel awake without caffeine. Even if you still need or want caffeine later, you’ve given your body a natural chance at producing its own state of wakefulness.", sourceName: "American Council on Exercise", sourceURL: "http://www.aimspress.com/article/10.3934/publichealth.2017.2.189/fulltext.html", sponsorLogo: "", sponsorURL: "")
 let weekendNow5to8Tip23 = Tip(header: "Daily Habit", title: "You must make time — preferably an hour or more a day — for what Cal Newport calls the “deep work.”", body: "The type of intense concentration and cognitive focus is where real progress is made — on whatever it is that you happen to do, be it writing or thinking or designing or creating. Great work takes deep work. \n\nIt starts by closing your browser or phone and getting to it. If you don’t make time for an hour of deep work each day it won’t happen." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
 
 
 //WEEK 4
 //SUN
-let weekendNow5to8Tip24 = Tip(header: "☀️", title: "Some studies suggest that we're more likely to stick to our workout routine when we do it in the morning", body: "So if you find yourself struggling to stick with an exercise plan, morning exercise, especially if you enlist a regular partner, can help you form a habit.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", sponsorLogo: "", sponsorURL: "")
+let weekendNow5to8Tip24 = Tip(header: "Lose Belly Fat", title: "Take a brisk walk before breakfast", body: "A study found that exposure to sunlight in between the hours of 8 a.m. and noon reduced your risk of weight gain. \n\nAnd burning calories before you eat means you're exercising in a fasted state—the energy you burn comes right from your fat stores, instead of the food you ate. ", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
+let weekendNow5to8Tip25 = Tip(header: "Healthy Habit", title: "Studies suggest that we're more likely to stick to our workout routine when we do it in the morning", body: "So if you find yourself struggling to stick with an exercise plan, morning exercise, especially if you enlist a regular partner, can help you form a habit.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", sponsorLogo: "", sponsorURL: "")
+
+let weekendNow5to8Tip26 = Tip(header: "Daily Habit", title: "Journal each morning to prepare, plan, and meditate on how you will act today. \n• Don’t wing it. \n• Don’t be reactionary. \n• Have a plan.", body: "Marcus Aurelius rose in the morning and did his journaling — preparing himself for what he was likely to face in the hours ahead. \n\nHe thought about the people he was likely to face, difficulties he might encounter, and what he knew about how to respond. \n\nIf you do the tough planning in the morning, you'll set yourself up for a successful day." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
+
 
 
 
@@ -644,9 +582,8 @@ var saturdayNow5to8TipArray5 = [weekendNow5to8Tip20, weekendNow5to8Tip21, weeken
 let saturdayNow5to8Topic3 = Topic(title: weekendNow5to8Title, icon: weekendNow5to8Icon, tip: saturdayNow5to8TipArray5)//SAT
 
 //WEEK 4
-//SUN
-let sundayNow5to8TipArray6 = [weekendNow5to8Tip24, weekendNow5to8Tip17, weekendNow5to8Tip18, weekendNow5to8Tip19]
-
+//SUN (WIP)
+let sundayNow5to8TipArray6 = [weekendNow5to8Tip24, weekendNow5to8Tip25, weekendNow5to8Tip26, weekendNow5to8Tip19]//SUN
 
 
 //SAT

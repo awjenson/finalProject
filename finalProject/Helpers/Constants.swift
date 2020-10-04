@@ -19,12 +19,15 @@ struct Constants {
         static let rizeFormURL = "https://forms.gle/BLoHBW61ZLnxoQiW8"
     }
 
+    
+
     struct Icon {
         static let cancel = "icons8-ok" //"icons8-cancel"
         static let undo = "icons8-undo"
 
         static let anxious = "icons8-confused"
 
+        static let family = "icons8-full_family"
         static let snack = "icons8-apple"
         static let job = "icons8-commercial_development_management"
         static let date = "icons8-champagne"

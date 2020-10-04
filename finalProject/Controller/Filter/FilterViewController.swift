@@ -14,8 +14,6 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var exerciseControl: UISegmentedControl!
     @IBOutlet weak var jobControl: UISegmentedControl!
     @IBOutlet weak var parentControl: UISegmentedControl!
-
-    @IBOutlet weak var commuteControl: UISegmentedControl!
     @IBOutlet weak var sideHustleControl: UISegmentedControl!
 
 
@@ -30,7 +28,7 @@ class FilterViewController: UIViewController {
         relationshipControl.selectedSegmentIndex = defaultIndex
         parentControl.selectedSegmentIndex = defaultIndex
         jobControl.selectedSegmentIndex = defaultIndex
-        commuteControl.selectedSegmentIndex = defaultIndex
+        
         exerciseControl.selectedSegmentIndex = defaultIndex
         sideHustleControl.selectedSegmentIndex = defaultIndex
 
@@ -38,7 +36,7 @@ class FilterViewController: UIViewController {
         relationshipControl.selectedSegmentIndex = defaults.integer(forKey: relationshipKey)
         parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
         jobControl.selectedSegmentIndex = defaults.integer(forKey: jobKey)
-        commuteControl.selectedSegmentIndex = defaults.integer(forKey: commuteKey)
+
         exerciseControl.selectedSegmentIndex = defaults.integer(forKey: exerciseKey)
         sideHustleControl.selectedSegmentIndex = defaults.integer(forKey: sideHustleKey)
 
@@ -67,7 +65,6 @@ class FilterViewController: UIViewController {
 
     let relationshipKey = "Relationship"
     let jobKey = "Job"
-    let commuteKey = "Commute"
     let parentKey = "Parent"
     let exerciseKey = "Exercise"
     let sideHustleKey = "SideHustle"
@@ -97,17 +94,20 @@ class FilterViewController: UIViewController {
         switch exerciseControl.selectedSegmentIndex
         {
         case 0:
-            //running
+            //workout
             defaults.set(0, forKey: exerciseKey)
             print(defaults.integer(forKey: exerciseKey))
         case 1:
             //running
             defaults.set(1, forKey: exerciseKey)
             print(defaults.integer(forKey: exerciseKey))
+        case 2:
+            //yoga
+            defaults.set(2, forKey: exerciseKey)
+            print(defaults.integer(forKey: exerciseKey))
         default:
             //running
             defaults.set(0, forKey: exerciseKey)
-
         }
     }
 
@@ -125,23 +125,6 @@ class FilterViewController: UIViewController {
         default:
             //school
             defaults.set(0, forKey: jobKey)
-        }
-
-    }
-
-
-    @IBAction func commuteControlTapped(_ sender: Any) {
-        switch commuteControl.selectedSegmentIndex
-        {
-        case 0:
-            //commute
-            defaults.set(0, forKey: commuteKey)
-        case 1:
-            //NO commute
-            defaults.set(1, forKey: commuteKey)
-        default:
-            //commute
-            defaults.set(0, forKey: commuteKey)
         }
 
     }
