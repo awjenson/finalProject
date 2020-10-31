@@ -16,6 +16,7 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var parentControl: UISegmentedControl!
     @IBOutlet weak var sideHustleControl: UISegmentedControl!
 
+    @IBOutlet weak var ageControl: UISegmentedControl!
 
     let defaultIndex = 0
 
@@ -28,17 +29,22 @@ class FilterViewController: UIViewController {
         relationshipControl.selectedSegmentIndex = defaultIndex
         parentControl.selectedSegmentIndex = defaultIndex
         jobControl.selectedSegmentIndex = defaultIndex
-        
         exerciseControl.selectedSegmentIndex = defaultIndex
         sideHustleControl.selectedSegmentIndex = defaultIndex
+        ageControl.selectedSegmentIndex = defaultIndex
 
         //Check for user data
         relationshipControl.selectedSegmentIndex = defaults.integer(forKey: relationshipKey)
+
         parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
+
         jobControl.selectedSegmentIndex = defaults.integer(forKey: jobKey)
 
         exerciseControl.selectedSegmentIndex = defaults.integer(forKey: exerciseKey)
+
         sideHustleControl.selectedSegmentIndex = defaults.integer(forKey: sideHustleKey)
+
+        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
 
         // Do any additional setup after loading the view.
     }
@@ -68,7 +74,7 @@ class FilterViewController: UIViewController {
     let parentKey = "Parent"
     let exerciseKey = "Exercise"
     let sideHustleKey = "SideHustle"
-
+    let ageKey = "Age"
 
     @IBAction func relationshipControlTapped(_ sender: Any) {
 
@@ -164,6 +170,34 @@ class FilterViewController: UIViewController {
             defaults.set(0, forKey: sideHustleKey)
         }
     }
+
+    @IBAction func ageControlTapped(_ sender: Any) {
+        switch ageControl.selectedSegmentIndex
+        {
+        case 0:
+            //Teens
+            defaults.set(0, forKey: ageKey)
+        case 1:
+            //20s
+            defaults.set(1, forKey: ageKey)
+        case 2:
+            //30s
+            defaults.set(2, forKey: ageKey)
+        case 3:
+            //40s
+            defaults.set(2, forKey: ageKey)
+        case 4:
+            //50s
+            defaults.set(2, forKey: ageKey)
+        case 5:
+            //60s+
+            defaults.set(2, forKey: ageKey)
+        default:
+            //Startup
+            defaults.set(0, forKey: ageKey)
+        }
+    }
+
 
 
 

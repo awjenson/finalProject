@@ -220,11 +220,15 @@ let lunchTip32 = Tip(header: "Live Longer", title: "Eat until you are 80% full",
 let lunchTip33 = Tip(header: "Increase Happiness", title: "Eat 6 servings of fruit and vegetables a day", body: "Research: People who go from no fruit or produce in their diets to 8 servings a day experienced an increase in their well-being equivalent to getting a new job.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 let lunchTip34 = Tip(header: "Save Money", title: "Survey: The average person exceeds their weekly lunch budget goal by +35% when they buy lunch everyday", body: "On average, the weekly amount that people spend — not including bills like housing and utilities — is $340, or $143 more than the average $197 budgeted. \n\nThat extra spending equals roughly $7,400 each year of overspending. \n\nAlign your spending with your values and cut back in areas that don’t reflect them." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/12/26/consumers-overspend-by-7400-a-year-here-are-weekly-trouble-spots.html", sponsorLogo: "", sponsorURL: "")
 let lunchTip35 = Tip(header: "Increase Happiness", title: "A diet high in fruit, vegetables, whole grain, fish, olive oil, low-fat dairy and low intakes of animal foods was associated with a decreased risk of depression. \n\nA diet high in red and/or processed meat, refined grains, sweets, high-fat dairy products, butter, potatoes and high-fat gravy, and low intakes of fruits and vegetables is associated with an increased risk of depression.", body: "Diet is such an important component of mental health. \n\nEat lots of plants, including fruits and veggies, whole grains (in unprocessed form, ideally), seeds and nuts, with some lean proteins like fish and yogurt. \n\nAvoid things made with added sugars or flours (like breads, baked goods, cereals, and pastas), and minimize animal fats, processed meats (sorry, bacon), and butter.", sourceName: "Harvard University", sourceURL: "https://www.health.harvard.edu/blog/diet-and-depression-2018022213309", sponsorLogo: "", sponsorURL: "")
-let lunchTip36 = Tip(header: "Reduce Belly Fat", title: "Eat more protein foods: \n• Whole eggs \n• Fish \n• Seafood \n• Legumes \n• Nuts \n• Meat \n• Dairy products", body: "Study: Protein was linked to significantly reduced risk of belly fat gain over a period of 5 years. \n\nProtein has been shown to reduce cravings by 60% and help you eat up to 441 fewer calories per day.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat#section2", sponsorLogo: "", sponsorURL: "")
+let lunchTip36 = Tip(header: "Lose Weight Faster", title: "Walk for 10 minutes after each meal", body: "Study: Walking for 10 minutes after each meal helps to lower blood sugar levels in those with Type 2 diabetes more than walking for 30 consecutive minutes at any other time throughout the day. \n\nPost-meal exercise also increases calorie burn, and it helps manage blood sugar levels that support overall health.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/best-time-to-walk-to-lose-weight/", sponsorLogo: "", sponsorURL: "")
+
+
 
 //9
 let lunchTip37 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods associated with slowing cognitive decline — blueberries, vegetables (leafy greens — kale, spinach, broccoli), whole grains, protein from fish and legumes, and healthy unsaturated fats (olive oil) instead of saturated fats (butter).", body: "Our brains naturally decline if we do nothing to protect them. \n\nHowever, if you intervene early, you can slow the decline process. \n\nFruit and vegetables combat age-related oxidative stress that causes wear and tear on brain cells.", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
 let lunchTip38 = Tip(header: "Burn Belly Fat", title: "Eat an avocado or guacamole", body: "Study: People who ate half a fresh avocado with lunch reported a 40% decreased desire to eat for hours afterwards. \n\nAnd, healthy fats like the unsaturated fats found in avocados seem to prevent the storage of belly fat.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
+
+let lunchTip39 = Tip(header: "Reduce Belly Fat", title: "Eat more protein foods: \n• Whole eggs \n• Fish \n• Seafood \n• Legumes \n• Nuts \n• Meat \n• Dairy products", body: "Study: Protein was linked to significantly reduced risk of belly fat gain over a period of 5 years. \n\nProtein has been shown to reduce cravings by 60% and help you eat up to 441 fewer calories per day.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
@@ -236,7 +240,7 @@ let lunchTipArray5 = [lunchTip21, lunchTip22, lunchTip23, lunchTip24]
 let lunchTipArray6 = [lunchTip25, lunchTip26, lunchTip27, lunchTip28]
 let lunchTipArray7 = [lunchTip29, lunchTip30, lunchTip31, lunchTip32]
 let lunchTipArray8 = [lunchTip33, lunchTip34, lunchTip35, lunchTip36]
-let lunchTipArray9 = [lunchTip37, lunchTip38, lunchTip23, lunchTip24]//WIP
+let lunchTipArray9 = [lunchTip37, lunchTip38, lunchTip39, lunchTip24]//WIP
 
 //
 let lunchTipArrays = [lunchTipArray0, lunchTipArray1, lunchTipArray2, lunchTipArray3, lunchTipArray4, lunchTipArray5, lunchTipArray6, lunchTipArray7, lunchTipArray8]
@@ -335,8 +339,9 @@ let dinnerTip48 = Tip(header: "Leftovers", title: "Store healthy food in clear w
 
 //12
 let dinnerTip49 = Tip(header: "Live Longer", title: "Study: Eating 2 servings of red meat or processed meat per week was associated with a 3% higher risk of all causes of death", body: "It's a small difference, but it's worth trying to reduce red meat and processed meat like pepperoni, bologna and deli meats. \n\nRed meat consumption also is linked to other health problems like cancer. \n\nWhat should we eat? \n\nFish, seafood and plant-based sources of protein such as nuts and legumes, including beans and peas, are excellent alternatives to meat." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2020/02/200203114328.htm", sponsorLogo: "", sponsorURL: "")
-let dinnerTip50 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods associated with slowing cognitive decline — blueberries, vegetables (leafy greens — kale, spinach, broccoli), whole grains, protein from fish and legumes, and healthy unsaturated fats (olive oil) instead of saturated fats (butter).", body: "Our brains naturally decline if we do nothing to protect them. \n\nHowever, if you intervene early, you can slow the decline process. \n\nFruit and vegetables combat age-related oxidative stress that causes wear and tear on brain cells. ", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
-
+let dinnerTip50 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods associated with slowing cognitive decline — blueberries, vegetables (leafy greens — kale, spinach, broccoli), whole grains, protein from fish and legumes, and healthy unsaturated fats (olive oil) instead of saturated fats (butter).", body: "Our brains naturally decline if we do nothing to protect them. \n\nHowever, if you intervene early, you can slow the decline process. \n\nFruit and vegetables combat age-related oxidative stress that causes wear and tear on brain cells.", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
+let dinnerTip51 = Tip(header: "Prevent Weight Gain", title: "Study: Slow eaters took in 66 fewer calories per meal. Eating 66 fewer calories at every meal results in losing more than 20 pounds a year!", body: "It takes 20 minutes for your stomach to tell your brain that it's had enough. \n\nEat slower and double the number of times you chew.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
+let dinnerTip52 = Tip(header: "Live Longer", title: "Research: Walking after a meal may be the best time to gain the most benefits from your walks", body: "It can aid digestion, increase satiety after eating, and help to lower blood sugar. \n\nThis is particularly helpful for those with diabetes, as the increased movement is able to remove some of the excess sugar in the blood and put it to work in muscle tissue.", sourceName: "Ladders", sourceURL: "https://www.theladders.com/career-advice/if-you-walk-at-this-time-every-day-you-could-add-years-to-your-life", sponsorLogo: "", sponsorURL: "")
 
 
 //Week 1
@@ -377,8 +382,8 @@ let dinnerTopic10 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipAr
 
 let dinnerTipArray11 = [dinnerTip45, dinnerTip46, dinnerTip47, dinnerTip48]
 let dinnerTopic11 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray11)
-//WIP (3)
-let dinnerTipArray12 = [dinnerTip49, dinnerTip50, dinnerTip15, dinnerTip16]
+//WIP
+let dinnerTipArray12 = [dinnerTip49, dinnerTip50, dinnerTip51, dinnerTip52]
 let dinnerTopic12 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray12)
 
 //
@@ -428,7 +433,7 @@ let dinnerAfter9PM20 = Tip(header: "Prevent Weight Gain", title: "Eat slowly. St
 let dinnerAfter9PM21 = Tip(header: "Prevent Weight Gain", title: "Choosing plate colors that contrast the color of your food helps you eat 18% less", body: "Study: If you're plate's the same color as your food, you'll put 18% more food on your plate. \n\n• Use darker plates for rice, potatoes, and pasta with Alfredo sause. \n\nUse lighter plates for meat and pasta with marinara sauce.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 let dinnerAfter9PM22 = Tip(header: "Prevent Weight Gain", title: "Slim people chew each bite an average of 15 times - 3 chews more than heavy people", body: "Study: On average, the number of times people chewed for each bite: \n\n• Slim people: 15 chews \n• Heavy people: 12 chews", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 
-let lateDinnerTitle = "Late Dinner"
+let lateDinnerTitle = "Dinner"
 //0
 let dinnerAfter9PMTipArray0 = [dinnerAfter9PM1, dinnerAfter9PM2, dinnerAfter9PM3, dinnerAfter9PM4]
 let dinnerAfter9PMTopic0 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray0)
@@ -608,7 +613,7 @@ let lateNightSnackTopic2 = Topic(title: lateNightSnackTitle, icon: lateNightSnac
 let lateNightSnackTipArrays = [lateNightSnackTipArray0, lateNightSnackTipArray1, lateNightSnackTipArray2,]
 let lateNightSnackTopic = Topic(title: lateNightSnackTitle, icon: lateNightSnackIcon, tip: lateNightSnackTipArrays.random())
 
-let lateNightSnackTopics = Topics(title: lateNightSnackTitle, icon: lateNightSnackTitle, topics: [lateNightSnackTopic])
+let lateNightSnackTopics = Topics(title: lateNightSnackTitle, icon: lateNightSnackIcon, topics: [lateNightSnackTopic])
 
 
 // MARK: - Restaurant
@@ -674,7 +679,7 @@ let restaurantTip32 = Tip(header: "Bread Basket", title: "Butter or Olive Oil?",
 //8
 let restaurantTip33 = Tip(header: "Healthy Choice", title: "High-calorie menu words", body: "According to preliminary research, on average, menu items with the words: \n\n• \"Buttery\" have 102+ calories in it \n\n• \"Crispy\" have 131 calories more than their non-\"crispy\" counterpart.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", sponsorLogo: "", sponsorURL: "")
 let restaurantTip34 = Tip(header: "Increase Happiness", title: "Be the first to pick up the check at meals or overtip", body: "Researchers found that when they gave people $100, people were happier when they gave it away than when they spent it on themselves. \n\nMost of us will die with money, so share it now.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
-
+let restaurantTip35 = Tip(header: "Prevent Weight Gain", title: "When we eat with other people, we consume, on average, 44% more food than we do when dining alone", body: "A meal eaten with one or two friends was 33% and 47% larger than a meal savored alone, respectively. \n\nDining with four, six, or 8+ friends was associated with meal increases of 69%, 70%, and 96%, respectively. \n\nYou can still hang out with your friends. Just vary the activity once in a while, and include short runs or walk-and-talks. You'll save money and calories that are inflating your belly.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 //0
@@ -706,7 +711,7 @@ let restaurantTopic6 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: 
 let restaurantTipArray7 = [restaurantTip29, restaurantTip30, restaurantTip31, restaurantTip32]
 let restaurantTopic7 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray7)
 //8 WIP
-let restaurantTipArray8 = [restaurantTip33, restaurantTip34, restaurantTip7, restaurantTip8]
+let restaurantTipArray8 = [restaurantTip33, restaurantTip34, restaurantTip35, restaurantTip8]
 let restaurantTopic8 = Topic(title: restaurantTitle, icon: restaurantIcon, tip: restaurantTipArray8)
 
 //
@@ -1518,6 +1523,9 @@ let cafeTip18 = Tip(header: "Healthy Choice", title: "Study suggests that dark r
 let cafeTip19 = Tip(header: "Prevent Weight Gain", title: "For the least amount of calories, order a cup of plain, black coffee", body: "Researchers found that one cup of certain kinds of specialty coffee drinks contain up to half your daily requirement of calories, plus all of your sugar and fat for the day. \n\nIf you like sweetness or a little milk, add it yourself so that you know exactly what's going in your cup of coffee." , sourceName: "Shape", sourceURL: "https://www.shape.com/healthy-eating/healthy-drinks/3-tips-lighten-your-coffee-order", sponsorLogo: "TBD", sponsorURL: "www.test.com")
 let cafeTip20 = Tip(header: "Save Money", title: "Survey: The average person exceeds their weekly coffee budget goal by +32%", body: "On average, the weekly amount that people spend — not including bills like housing and utilities — is $340, or $143 more than the average $197 budgeted. \n\nThat extra spending equals roughly $7,400 each year of overspending. \n\nAlign your spending with your values and cut back in areas that don’t reflect them." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/12/26/consumers-overspend-by-7400-a-year-here-are-weekly-trouble-spots.html", sponsorLogo: "", sponsorURL: "")
 
+//5
+let cafeTip21 = Tip(header: "Lose Weight", title: "Green tea one of the best drinks for weight loss", body: "• Drink 1+ cups per day \n\nResearchers believe that green tea can increase fat oxidation, boost metabolism, decrease appetite, and may even block your cells from storing sugar as fat. Plus, the caffeine in green tea stimulates the breakdown of fat." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/best-drink-weight-loss/", sponsorLogo: "", sponsorURL: "")
+
 
 
 let cafeTipArray0 = [cafeTip1, cafeTip2, cafeTip3, cafeTip4]
@@ -1525,24 +1533,13 @@ let cafeTipArray1 = [cafeTip5, cafeTip6, cafeTip7, cafeTip8]
 let cafeTipArray2 = [cafeTip9, cafeTip10, cafeTip11, cafeTip12]
 let cafeTipArray3 = [cafeTip13, cafeTip14, cafeTip15, cafeTip16]
 let cafeTipArray4 = [cafeTip17, cafeTip18, cafeTip19, cafeTip20]
+//WIP (3)
+let cafeTipArray5 = [cafeTip21, cafeTip18, cafeTip19, cafeTip20]
 //
-let cafeTipArrays = [cafeTipArray0, cafeTipArray1, cafeTipArray2, cafeTipArray3, cafeTipArray4,]
+let cafeTipArrays = [cafeTipArray0, cafeTipArray1, cafeTipArray2, cafeTipArray3, cafeTipArray4, cafeTipArray5]
 let cafeTopic = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArrays.random())
 let cafeTopics = Topics(title: cafeTitle, icon: cafeIcon, topics: [cafeTopic,])
 
-
-
-
-let cafeTipArray5 = [cafeTip1, cafeTip2, cafeTip3, cafeTip4]
-let cafeTipArray6 = [cafeTip13, cafeTip14, cafeTip15, cafeTip16]
-
-let cafeTopic0 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray0)
-let cafeTopic1 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray1)
-let cafeTopic2 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray2)
-let cafeTopic3 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray3)
-let cafeTopic4 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray4)
-let cafeTopic5 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray5)
-let cafeTopic6 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray6)
 
 // MARK: - PM Cafe
 
@@ -1583,14 +1580,6 @@ let cafePMTopics = Topics(title: cafeTitle, icon: cafeIcon, topics: [cafePMTopic
 let cafePMTipArray4 = [cafePMTip1, cafePMTip2, cafePMTip3, cafePMTip4]
 let cafePMTipArray5 = [cafePMTip5, cafePMTip6, cafePMTip7, cafePMTip8]
 let cafePMTipArray6 = [cafePMTip13, cafePMTip4, cafePMTip7, cafePMTip8]
-
-let cafePMTopic0 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray0)
-let cafePMTopic1 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray1)
-let cafePMTopic2 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray2)
-let cafePMTopic3 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray3)
-let cafePMTopic4 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray4)
-let cafePMTopic5 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray5)
-let cafePMTopic6 = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArray6)
 
 
 
@@ -1724,7 +1713,7 @@ let networking22 = Tip(header: "Be More Interesting", title: "Stop Asking About 
 
 
 
-let networkingTitle = "Socializing"
+let networkingTitle = "Social"
 let networkingIcon = Constants.Icon.event
 
 //WEEK 1

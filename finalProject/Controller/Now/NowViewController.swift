@@ -216,8 +216,38 @@ class NowViewController: UIViewController {
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.nowVC = self
 
+
         setupUI()
+
+
+
+        let notificationCenter = NotificationCenter.default
+
+        notificationCenter.addObserver(self, selector: #selector(self.appBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil )
+
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.NSExtensionHostWillEnterForeground, object: nil)
+
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.NSExtensionHostDidEnterBackground, object: nil)
+
     }
+
+    @objc func appBecomeActive() {
+        //reload your Tableview here
+
+
+    }
+
+    @objc func appMovedToBackground() {
+        print("App moved to Background!")
+    }
+
+    @objc func appMovedToForeground() {
+        print("App moved to ForeGround!")
+
+
+    }
+
+
 
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -249,6 +279,8 @@ class NowViewController: UIViewController {
         topicLabels = [topic0Label, topic1Label, topic2Label, topic3Label,
                        topic4Label, topic5Label, topic6Label, topic7Label,
                         topic8Label, topic9Label, topic10Label, topic11Label]
+
+        
 
         // set footer
         footerView.frame.size.height = 250
@@ -1593,23 +1625,23 @@ class NowViewController: UIViewController {
 
         performUIUpdatesOnMain {
 
-            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
-
-            //row1
-            self.topic0Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic1Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic2Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic3Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            //row2
-            self.topic4Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic5Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic6Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic7Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            //row3
-            self.topic8Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.topic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
+//
+//            //row1
+//            self.topic0Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic1Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic2Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic3Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            //row2
+//            self.topic4Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic5Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic6Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic7Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            //row3
+//            self.topic8Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.topic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
 
             //row1
             self.topic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
@@ -1812,8 +1844,10 @@ class NowViewController: UIViewController {
             // Selected
             performUIUpdatesOnMain {
 
-                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
                 button.imageView?.image = UIImage(named: Constants.Icon.cancel)
+//                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
+
+
                 // button title
 
 
@@ -1879,17 +1913,11 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             return UIColor.systemBlue
         case 1:
-            return UIColor.flatMint()
+            return UIColor.flatBlue()
         case 2:
-            return UIColor.flatPurple()
-        case 3:
-            return UIColor.systemGreen
-        case 4:
-            return UIColor.flatPlum()
-        case 5:
-            return UIColor.systemTeal
+            return UIColor.blue
         default:
-            return UIColor.black
+            return UIColor.systemBlue
         }
     }
 

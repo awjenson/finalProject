@@ -320,11 +320,7 @@ let workPMTopics = Topics(title: "Career", icon: Constants.Icon.jobSearch, topic
 
 
 //3. Bad Mood (anxious, sad, angry, lonely)
-let moodAMTopics = Topics(title: "Mood", icon: Constants.Icon.neutral, topics: [stressedAMTopic, depressedAMTopic, madAMTopic,])
 
-let moodDayTopics = Topics(title: "Mood", icon: Constants.Icon.neutral, topics: [stressedDayTopic, depressedDayTopic, madDayTopic,])
-
-let moodPMTopics = Topics(title: "Mood", icon: Constants.Icon.neutral, topics: [stressedPMTopic, depressedPMTopic, madPMTopic,])
 
 
 //NOW (Friends, Quotes, Routine, Getting Ready, Breakfast, Lunch, Dinner, Snack, Bedtime, Can't Sleep
@@ -552,8 +548,12 @@ let weekendNow5to8Tip23 = Tip(header: "Daily Habit", title: "You must make time 
 let weekendNow5to8Tip24 = Tip(header: "Lose Belly Fat", title: "Take a brisk walk before breakfast", body: "A study found that exposure to sunlight in between the hours of 8 a.m. and noon reduced your risk of weight gain. \n\nAnd burning calories before you eat means you're exercising in a fasted state—the energy you burn comes right from your fat stores, instead of the food you ate. ", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
 let weekendNow5to8Tip25 = Tip(header: "Healthy Habit", title: "Studies suggest that we're more likely to stick to our workout routine when we do it in the morning", body: "So if you find yourself struggling to stick with an exercise plan, morning exercise, especially if you enlist a regular partner, can help you form a habit.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", sponsorLogo: "", sponsorURL: "")
 
-let weekendNow5to8Tip26 = Tip(header: "Daily Habit", title: "Journal each morning to prepare, plan, and meditate on how you will act today. \n• Don’t wing it. \n• Don’t be reactionary. \n• Have a plan.", body: "Marcus Aurelius rose in the morning and did his journaling — preparing himself for what he was likely to face in the hours ahead. \n\nHe thought about the people he was likely to face, difficulties he might encounter, and what he knew about how to respond. \n\nIf you do the tough planning in the morning, you'll set yourself up for a successful day." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
+let weekendNow5to8Tip26 = Tip(header: "Reduce Your Risk ☕️", title: "Drink coffee after breakfast, not before", body: "Study: Strong black coffee consumed before breakfast substantially increased the blood glucose response to breakfast by around 50%. This could limit your body's ability to tolerate the sugar in your breakfast, increasing your risk for developing diabetes and heart disease." , sourceName: "University of Bath", sourceURL: "https://www.bath.ac.uk/announcements/drink-coffee-after-breakfast-not-before-for-better-metabolic-control/", sponsorLogo: "", sponsorURL: "")
 
+let weekendNow5to8Tip27 = Tip(header: "Daily Habit", title: "Journal each morning to prepare, plan, and meditate on how you will act today. \n• Don’t wing it. \n• Don’t be reactionary. \n• Have a plan.", body: "Marcus Aurelius rose in the morning and did his journaling — preparing himself for what he was likely to face in the hours ahead. \n\nHe thought about the people he was likely to face, difficulties he might encounter, and what he knew about how to respond. \n\nIf you do the tough planning in the morning, you'll set yourself up for a successful day." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
+
+//WEEK 5
+let weekendNow5to8Tip28 = Tip(header: "Reduce Your Risk", title: "Study: Exercising in the morning linked to lower cancer risk", body: "Participants who regularly exercised between 8:00 a.m. and 10:00 a.m. enjoyed the highest risk decreases for prostate cancer and breast cancer. \n\nExercising early in the day appears to disrupt the overproduction of hormones associated with various forms of cancer." , sourceName: "Ladders", sourceURL: "https://www.theladders.com/career-advice/exercising-at-this-specific-time-of-day-linked-to-lower-cancer-risk", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -582,12 +582,12 @@ var saturdayNow5to8TipArray5 = [weekendNow5to8Tip20, weekendNow5to8Tip21, weeken
 let saturdayNow5to8Topic3 = Topic(title: weekendNow5to8Title, icon: weekendNow5to8Icon, tip: saturdayNow5to8TipArray5)//SAT
 
 //WEEK 4
-//SUN (WIP)
-let sundayNow5to8TipArray6 = [weekendNow5to8Tip24, weekendNow5to8Tip25, weekendNow5to8Tip26, weekendNow5to8Tip19]//SUN
+//SUN
+let sundayNow5to8TipArray6 = [weekendNow5to8Tip24, weekendNow5to8Tip25, weekendNow5to8Tip26, weekendNow5to8Tip27]//SUN
 
 
 //SAT
-
+let saturdayNow5to8TipArray7 = [weekendNow5to8Tip28, weekendNow5to8Tip21, weekendNow5to8Tip22, weekendNow5to8Tip23]//SAT
 
 
 //////////
@@ -595,7 +595,7 @@ let sundayNow5to8TipArray6 = [weekendNow5to8Tip24, weekendNow5to8Tip25, weekendN
 let sundayNow5to8TipArrays = [sundayNow5to8TipArray0, sundayNow5to8TipArray2, sundayNow5to8TipArray4, sundayNow5to8TipArray6]
 let sundayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow5to8TipArrays.random())
 //RANDOM
-let saturdayNow5to8TipArrays = [saturdayNow5to8TipArray1, saturdayNow5to8TipArray3,]
+let saturdayNow5to8TipArrays = [saturdayNow5to8TipArray1, saturdayNow5to8TipArray3, saturdayNow5to8TipArray5, saturdayNow5to8TipArray7]
 let saturdayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow5to8TipArrays.random())
 
 

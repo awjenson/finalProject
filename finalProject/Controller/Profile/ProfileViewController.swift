@@ -167,6 +167,21 @@ class ProfileViewController: UIViewController {
         appDelegate.adviceVC = self
 
         setupUI()
+
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.NSExtensionHostWillEnterForeground, object: nil)
+
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.NSExtensionHostDidEnterBackground, object: nil)
+    }
+
+
+    @objc func appMovedToBackground() {
+        print("App moved to Background!")
+    }
+
+    @objc func appMovedToForeground() {
+        print("App moved to ForeGround!")
+        setupUI()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -348,9 +363,9 @@ class ProfileViewController: UIViewController {
 //                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
 //                             motivateAMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustle(), studyCareerNight(), relationshipNight(), familyParentNight(), friendTopics,
-
-                anxiousPMTopics, stressedPMTopics, depressedPMTopics, madPMTopics, topicsNow: motivateAMTopics)
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustlePM(), jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
+                             friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
+                             topicsNow: motivateAMTopics)
 
         case 5...9:
             print("Weekend, Early Morning")
@@ -359,17 +374,17 @@ class ProfileViewController: UIViewController {
 //                             studyTopic, stressedAMTopic, depressedAMTopic, madAMTopic,
 //                             motivateAMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustle(), studyCareerAM(), relationshipAM(), familyParentAM(), friendTopics,
-
-                             anxiousAMTopics, stressedAMTopics, depressedAMTopics, madAMTopics, topicsNow: motivateAMTopics)
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleAM(), jobSearchTopics, studyTopics, relationshipAM(), parentingAMTopics,
+                             friendTopics, anxiousAMTopics, depressedAMTopics, madAMTopics,
+                             topicsNow: motivateAMTopics) //Anxious
 
         case 10...14:
 //            append13Topics(personalTopic, adviceTopic, singleDayTopic, relationshipDayTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingDayTopic,
 //                             studyDayTopic, stressedDayTopic, depressedDayTopic, madDayTopic,
 //                             motivateDayTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustle(), studyCareerDay(), relationshipDay(), familyParentDay(), friendTopics,
-                             anxiousDayTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleDay(), jobSearchTopics, studyDayTopics, relationshipDay(), parentingDayTopics,
+                             friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
 
         case 15...19:
             print("Weekend, Early Evening")
@@ -377,9 +392,8 @@ class ProfileViewController: UIViewController {
 //            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipPMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingPMTopic,
 //                             studyTopic, stressedDayTopic, depressedDayTopic, madDayTopic, motivateAfterTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustle(), studyCareerPM(),
-                             relationshipPM(), familyParentPM(), friendTopics,
-                             anxiousDayTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateAfterTopics)
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleDay(), jobSearchTopics, studyTopics, relationshipPM(), parentingPMTopics,
+                             friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateAfterTopics)
 
         case 20..<24:
             print("Weekend, Late evening")
@@ -388,8 +402,9 @@ class ProfileViewController: UIViewController {
 //                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
 //                             motivatePMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustle(), studyCareerNight(), relationshipNight(), familyParentNight(), friendTopics,
-                             anxiousPMTopics, stressedPMTopics, depressedPMTopics, madPMTopics, topicsNow: motivatePMTopics)
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustlePM(), jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
+                             friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
+                             topicsNow: motivatePMTopics)
 
         default:
             print("Weekend,INVALID HOUR!")
@@ -414,10 +429,6 @@ class ProfileViewController: UIViewController {
     private func resetTopicButtonOriginalStyle(button: CircleButton) {
 
         performUIUpdatesOnMain {
-            // reset to original color display
-            //            button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
-            //            button.setTitleColor(NowConstants.YvonneColor.defaultBlue, for: .normal)
-            //            button.backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
 
             //row1
             self.adviceTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
@@ -430,29 +441,28 @@ class ProfileViewController: UIViewController {
             self.adviceTopic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
             self.adviceTopic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
             //row3
-            self.adviceTopic8Button.imageView?.image = UIImage(named: self.topics[8].icon)
-            self.adviceTopic9Button.imageView?.image = UIImage(named: self.topics[9].icon)
-            self.adviceTopic10Button.imageView?.image = UIImage(named: self.topics[10].icon)
-            self.adviceTopic11Button.imageView?.image = UIImage(named: self.topics[11].icon)
+            self.adviceTopic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
+            self.adviceTopic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
+            self.adviceTopic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
+            self.adviceTopic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
 
 
-
-            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
-            //row1
-            self.adviceTopic0Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic1Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic2Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic3Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            //row2
-            self.adviceTopic4Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic5Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic6Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic7Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            //row3
-            self.adviceTopic8Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
-            self.adviceTopic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
+//            //row1
+//            self.adviceTopic0Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic1Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic2Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic3Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            //row2
+//            self.adviceTopic4Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic5Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic6Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic7Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            //row3
+//            self.adviceTopic8Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic9Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
+//            self.adviceTopic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
         }
     }
 
@@ -656,19 +666,16 @@ class ProfileViewController: UIViewController {
             // display selected topic tips
             twoDimensionalArray = []
 
-            print("Print:")
-            print(topicsArrays)
-            print(currentIndex)
             twoDimensionalArray = topicsArrays[indexNumber].topics
 
             // Selected
             performUIUpdatesOnMain {
 
-                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
                 button.imageView?.image = UIImage(named: Constants.Icon.cancel)
+
+//                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
+
                 // button title
-
-
                 //                button.setTitleColor(.white, for: .normal)
                 //                button.backgroundColor = NowConstants.YvonneColor.defaultBlue
 
@@ -721,19 +728,13 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func titleColor(number: Int) -> UIColor {
         switch number {
         case 0:
-            return UIColor.flatRed()
-        case 1:
-            return UIColor.blue
-        case 2:
             return UIColor.flatMint()
-        case 3:
-            return UIColor.flatPlum()
-        case 4:
-            return UIColor.flatTeal()
-        case 5:
-            return UIColor.flatMaroon()
+        case 1:
+            return UIColor.flatGreen()
+        case 2:
+            return UIColor.flatForestGreen()
         default:
-            return UIColor.black
+            return UIColor.flatMint()
         }
     }
 

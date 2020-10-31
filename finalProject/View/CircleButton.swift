@@ -36,7 +36,7 @@ class CircleButton: UIButton {
 
 
 //        layer.masksToBounds = true
-        imageEdgeInsets = UIEdgeInsets(top: 14, left: 14, bottom: 14, right: 14)
+        imageEdgeInsets = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
         imageView?.contentMode = .scaleAspectFit
 
 
