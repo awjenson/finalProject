@@ -27,16 +27,16 @@ class FilterViewController: UIViewController {
         super.viewDidLoad()
 
         relationshipControl.selectedSegmentIndex = defaultIndex
-        parentControl.selectedSegmentIndex = defaultIndex
+//        parentControl.selectedSegmentIndex = defaultIndex
         jobControl.selectedSegmentIndex = defaultIndex
         exerciseControl.selectedSegmentIndex = defaultIndex
         sideHustleControl.selectedSegmentIndex = defaultIndex
-        ageControl.selectedSegmentIndex = defaultIndex
+//        ageControl.selectedSegmentIndex = defaultIndex
 
         //Check for user data
         relationshipControl.selectedSegmentIndex = defaults.integer(forKey: relationshipKey)
 
-        parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
+//        parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
 
         jobControl.selectedSegmentIndex = defaults.integer(forKey: jobKey)
 
@@ -44,7 +44,19 @@ class FilterViewController: UIViewController {
 
         sideHustleControl.selectedSegmentIndex = defaults.integer(forKey: sideHustleKey)
 
-        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
+//        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
+
+        //selectedSegmentTintColor
+        //https://medium.com/flawless-app-stories/ios-13-uisegmentedcontrol-3-important-changes-d3a94fdd6763
+        if #available(iOS 13.0, *) {
+            relationshipControl.selectedSegmentTintColor = .black
+            jobControl.selectedSegmentTintColor = .black
+            exerciseControl.selectedSegmentTintColor = .black
+            sideHustleControl.selectedSegmentTintColor = .black
+        } else {
+            // Fallback on earlier versions
+        }
+
 
         // Do any additional setup after loading the view.
     }

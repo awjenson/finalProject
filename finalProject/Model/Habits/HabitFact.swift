@@ -12,7 +12,7 @@ import Foundation
 
 "Research from Duke University found that more than 40% of the actions people performed each day weren't actual decisions, but habits." - excerpt from "The Power Of Habit" (Prologue)
 
-"Understanding habits is the most important thing I've learned. It's changed everythnig about how I see the world. YOu want to fall asleep fast and wake up feeling good? Pay attention to your nighttime patterns and what you automatically do when you get up. Once you see everything as a bunch of habits, it's like someone gave you a flashlight and a crowbar and you can get to work. There's nothing you can't do if you get the habits right." - excerpt from "The Power Of Habit" (Prologue)
+"Understanding habits is the most important thing I've learned. It's changed everythnig about how I see the world. You want to fall asleep fast and wake up feeling good? Pay attention to your nighttime patterns and what you automatically do when you get up. Once you see everything as a bunch of habits, it's like someone gave you a flashlight and a crowbar and you can get to work. There's nothing you can't do if you get the habits right." - excerpt from "The Power Of Habit" (Prologue)
 
 "Habits, scientists say, emerge because the brain is constantly looking for ways to save effort. Left to its own devices, the brain will try to make almost any routine into a habit, because habits allow our minds to ramp down more often. This effort-saving instince is a huge advantage. An efficient brain allows us to stop thinking constantly about basic behaviors, such as walking and choosing what to eat, so we can devote mental energy to inventing spears, irrigation systems, and eventually, airplanes and video games." - excerpt from "The Power Of Habit" (p. 17)
 
