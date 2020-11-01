@@ -801,7 +801,6 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         cell.delegate = self  //self is the ProfileVC
 
 
-
         return cell
     }
 
