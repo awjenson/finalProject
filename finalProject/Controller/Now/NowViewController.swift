@@ -1736,14 +1736,22 @@ class NowViewController: UIViewController {
         }
     }
 
-    // MARK: - IBActions
+    // MARK: - IB ACTIONS
+
+    //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
+    @objc func tapped() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
 
     @IBAction func goToYouTabTapped(_ sender: Any) {
+        tapped()
         scrollToTopTableView()
         tabBarController?.selectedIndex = 1
     }
 
     @IBAction func returnToTopTapped(_ sender: Any) {
+        tapped()
         scrollToTopTableView()
 
     }
@@ -1758,7 +1766,11 @@ class NowViewController: UIViewController {
 
     //MARK: - IB ACTIONS
 
+
+
     @IBAction func topicButtonTapped(_ sender: CircleButton) {
+
+        tapped()
 
         // reset buttons to original UI display
         //row1
@@ -1889,6 +1901,7 @@ class NowViewController: UIViewController {
 
 
     @IBAction func feedbackNowButtonTapped(_ sender: Any) {
+        tapped()
         goToSourceURL(url: Constants.Webiste.rizeFormURL)
 
     }

@@ -1260,13 +1260,14 @@ let anxiousTip11 = Tip(header: "Reduce Anxiety", title: "Warming your body tempe
 
 
 let anxiousTip12 = Tip(header: "Quote", title: "Anxiety happens when you think you have to figure out everything all at once. Breathe. You’re strong. You got this. Take it day by day.", body: "- Karen Salmansohn", sourceName: "Parade", sourceURL: "https://parade.com/951718/parade/anxiety-quotes/", sponsorLogo: "", sponsorURL: "")
-let anxiousTip13 = Tip(header: "Restless Night Or Stress Dream?", title: "Write down what the dreams were about. Over time you might be able to identify recurring patterns and be able to trace the root cause of it", body: "Getting these anxious thoughts and worries out of your mind now will help prevent them from ruining your day.", sourceName: "Well+Good", sourceURL: "https://www.wellandgood.com/good-advice/waking-up-angry-solutions/", sponsorLogo: "", sponsorURL: "")
+let anxiousTip13 = Tip(header: "Anxiety", title: "Moving your body reduces anxiety", body: "Change the message you tell yourself from \"this is a stressful situation/task\" to \"this is a challenging but rewarding opportunity to learn.\" \n\nRe-reframing it as learning opportunity shifts your mindset and better prepares you to approach the task.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/to-cope-with-stress-try-learning-something-new", sponsorLogo: "", sponsorURL: "")
+let anxiousTip14 = Tip(header: "Restless Night Or Stress Dream?", title: "Write down what the dreams were about. Over time you might be able to identify recurring patterns and be able to trace the root cause of it", body: "Getting these anxious thoughts and worries out of your mind now will help prevent them from ruining your day.", sourceName: "Well+Good", sourceURL: "https://www.wellandgood.com/good-advice/waking-up-angry-solutions/", sponsorLogo: "", sponsorURL: "")
 
 
 let anxiousTipAMArray0 = [anxiousTip0, anxiousTip1, anxiousTip2, anxiousTip3]
 let anxiousTipAMArray1 = [anxiousTip4, anxiousTip5, anxiousTip6, anxiousTip7]
 let anxiousTipAMArray2 = [anxiousTip8, anxiousTip9, anxiousTip10, anxiousTip11]
-let anxiousTipAMArray3 = [anxiousTip12, anxiousTip13, anxiousTip7, anxiousTip11]
+let anxiousTipAMArray3 = [anxiousTip12, anxiousTip13, anxiousTip14, anxiousTip11]
 
 let anxiousAMTipArrays = [anxiousTipAMArray0, anxiousTipAMArray1, anxiousTipAMArray2, anxiousTipAMArray3,]
 // RANDOM
@@ -1451,20 +1452,19 @@ let stressedDayTopics = Topics(title: stressedTitle, icon: stressedIcon, topics:
 
 //DEPRESSED
 //0
-let depressedTipDay0 = Tip(header: "Depressed", title: "Taking walks in nature lowers depression while boosting mood and well-being", body: "“Forest bathing” is a popular practice in many East Asian countries because the impact of even a few minutes in nature can improve our physical health and mental well-being. \n\nEven just the sounds of nature trigger a relaxation response in the brain.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/", sponsorLogo: "", sponsorURL: "")
+let depressedTipDay0 = Tip(header: "Quote", title: "The struggle you're in today is developing the strength you need for tomorrow. Don´t give up.", body: "- Robert Tew \n\nBritish former rugby league footballer", sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/author/quotes/13848712.Robert_Tew?page=2", sponsorLogo: "", sponsorURL: "")
 let depressedTipDay1 = Tip(header: "Increase Happiness", title: "Get some sun. Sunlight boosts your Vitamin D levels which are known to increase mood", body: "Sunlight decreases the risk of depression in those at risk of seasonal affective disorder (SAD) during the winter months.", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/nomanazish/2018/02/28/why-sunlight-is-actually-good-for-you/#5944743c5cd9", sponsorLogo: "", sponsorURL: "")
 let depressedTipDay2 = Tip(header: "Depressed", title: "Too much social media increases envy which increases depression", body: "If you tend to compare yourself with others or get envious easily, you might consider limiting your time spent on social networking sites. \n\nResearch found that when Facebook evoked envy, it increased symptoms of depression.", sourceName: "Scientific American", sourceURL: "https://www.scientificamerican.com/article/green-with-facebook-envy-red-with-twitter-rage/", sponsorLogo: "", sponsorURL: "")
 let depressedTipDay3 = Tip(header: "Depressed", title: "Participate in yoga and deep (coherent) breathing classes at least twice weekly plus practice at home", body: "Depression is globally responsible for more years lost to disability than any other disease. \n\nOne study supports the use of a yoga and coherent breathing intervention in major depressive disorder in people who are not on antidepressants and in those who have been on a stable dose of antidepressants and have not achieved a resolution of their symptoms." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", sponsorLogo: "", sponsorURL: "")
 
 //1
 let depressedTipDay4 = Tip(header: "Quote", title: "It's not possible to experience constant euphoria, but if you're grateful, you can find happiness in everything.", body: "- Pharrell Williams \n\nRapper, singer, songwriter, entrepreneur, and fashion designer", sourceName: "Brainy Quote", sourceURL: "https://www.brainyquote.com/quotes/pharrell_williams_737825", sponsorLogo: "", sponsorURL: "")
-let depressedTipDay5 = Tip(header: "Anxiety", title: "Moving your body reduces anxiety", body: "Change the message you tell yourself from \"this is a stressful situation/task\" to \"this is a challenging but rewarding opportunity to learn.\" \n\nRe-reframing it as learning opportunity shifts your mindset and better prepares you to approach the task.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/to-cope-with-stress-try-learning-something-new", sponsorLogo: "", sponsorURL: "")
+let depressedTipDay5 = Tip(header: "Depressed", title: "Taking walks in nature lowers depression while boosting mood and well-being", body: "“Forest bathing” is a popular practice in many East Asian countries because the impact of even a few minutes in nature can improve our physical health and mental well-being. \n\nEven just the sounds of nature trigger a relaxation response in the brain.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/", sponsorLogo: "", sponsorURL: "")
 let depressedTipDay6 = Tip(header: "Sad", title: "How to reduce sadness", body: "• Cry. \n• Talk to someone. \n• Get out in nature. \n• Listen to upbeat music. \n• Watch a funny TV show. \n• Remember, it will get better. \n• Focus on the good and move on.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/maria-rodale/21-ways-to-deal-with-sadn_b_5803672.html", sponsorLogo: "", sponsorURL: "")
 let depressedTipDay7 = Tip(header: "Reduce Time Online", title: "Teens who spent 5+ hours a day online were twice as likely to be unhappy as those who spent less than 1 hour a day", body: "In one experiment, people who were randomly assigned to give up Facebook for a week ended that time happier, less lonely and less depressed than those who continued to use Facebook.", sourceName: "Quartz", sourceURL: "https://qz.com/1190151/why-am-i-unhappy-a-new-study-explains-americas-unhappiness-epidemic/", sponsorLogo: "", sponsorURL: "")
 
 //2
 let depressedTipDay8 = Tip(header: "Quote", title: "If you’re going through hell keep going.", body: "- Sir Winston Churchill \n\nPrime Minister of the UK who led Britain to victory in World War II.", sourceName: "The Mighty", sourceURL: "https://themighty.com/2016/09/anxiety-depression-quotes/", sponsorLogo: "", sponsorURL: "")
-let depressedTipDay9 = Tip(header: "Quote", title: "The struggle you're in today is developing the strength you need for tomorrow. Don´t give up.", body: "- Robert Tew \n\nBritish former rugby league footballer", sourceName: "Good Reads", sourceURL: "https://www.goodreads.com/author/quotes/13848712.Robert_Tew?page=2", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1478,7 +1478,7 @@ let depressedTipDayArray1 = [depressedTipDay4, depressedTipDay5, depressedTipDay
 let depressedDayTopic1 = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedTipDayArray1)
 
 //2
-let depressedTipDayArray2 = [depressedTipDay8, depressedTipDay9, depressedTipDay2, depressedTipDay3, helplineArray.random()]
+let depressedTipDayArray2 = [depressedTipDay8, depressedTipDay7, depressedTipDay2, depressedTipDay3, helplineArray.random()]
 let depressedDayTopic2 = Topic(title: depressedTitle, icon: depressedIcon, tip: depressedTipDayArray2)
 
 

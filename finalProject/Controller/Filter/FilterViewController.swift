@@ -107,8 +107,18 @@ class FilterViewController: UIViewController {
 
     }
 
+    //MARK: - IB ACTIONS
+
+    //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
+    @objc func tapped() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
+
 
     @IBAction func exerciseControlTapped(_ sender: Any) {
+
+        tapped()
         switch exerciseControl.selectedSegmentIndex
         {
         case 0:
@@ -132,6 +142,7 @@ class FilterViewController: UIViewController {
 
     @IBAction func jobControlTapped(_ sender: Any) {
 
+        tapped()
         switch jobControl.selectedSegmentIndex
         {
         case 0:
@@ -150,6 +161,7 @@ class FilterViewController: UIViewController {
 
     @IBAction func parentControlTapped(_ sender: Any) {
 
+        tapped()
         switch parentControl.selectedSegmentIndex
         {
         case 0:
@@ -166,6 +178,8 @@ class FilterViewController: UIViewController {
 
 
     @IBAction func sideHustleControlTapped(_ sender: Any) {
+
+        tapped()
         switch sideHustleControl.selectedSegmentIndex
         {
         case 0:
@@ -184,6 +198,8 @@ class FilterViewController: UIViewController {
     }
 
     @IBAction func ageControlTapped(_ sender: Any) {
+
+        tapped()
         switch ageControl.selectedSegmentIndex
         {
         case 0:

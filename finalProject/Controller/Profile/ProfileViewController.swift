@@ -570,18 +570,27 @@ class ProfileViewController: UIViewController {
 
     // MARK: - IBActions
 
+    //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
+    @objc func tapped() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
+
     @IBAction func goToNowTabTapped(_ sender: Any) {
+        tapped()
         scrollToTopTableView()
         tabBarController?.selectedIndex = 0
     }
 
 
     @IBAction func returnToTopTapped(_ sender: Any) {
+        tapped()
         scrollToTopTableView()
     }
 
 
     @IBAction func feedbackYouButtonTapped(_ sender: Any) {
+        tapped()
         goToSourceURL(url: Constants.Webiste.rizeFormURL)
     }
 
@@ -596,6 +605,9 @@ class ProfileViewController: UIViewController {
 
 
     @IBAction func adviceTopicButtonTapped(_ sender: CircleButton) {
+
+        tapped()
+        
         //IBAction linked to all RoundCircle Buttons
         if let topicNumber = adviceTopicButtons.firstIndex(of: sender) {
 
