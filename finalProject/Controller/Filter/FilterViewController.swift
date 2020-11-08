@@ -46,16 +46,7 @@ class FilterViewController: UIViewController {
 
 //        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
 
-        //selectedSegmentTintColor
-        //https://medium.com/flawless-app-stories/ios-13-uisegmentedcontrol-3-important-changes-d3a94fdd6763
-        if #available(iOS 13.0, *) {
-            relationshipControl.selectedSegmentTintColor = .black
-            jobControl.selectedSegmentTintColor = .black
-            exerciseControl.selectedSegmentTintColor = .black
-            sideHustleControl.selectedSegmentTintColor = .black
-        } else {
-            // Fallback on earlier versions
-        }
+        
 
 
         // Do any additional setup after loading the view.

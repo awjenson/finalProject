@@ -781,20 +781,20 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U7u-5t-fch">
                                                             <rect key="frame" x="15" y="25" width="364" height="231"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z08-IU-Hnm">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="28.666666666666668"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z08-IU-Hnm">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="27.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuk-go-VOv">
-                                                                    <rect key="frame" x="0.0" y="48.666666666666671" width="364" height="26.333333333333329"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                    <rect key="frame" x="0.0" y="47.666666666666671" width="364" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <color key="textColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Body Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-B2-E2H" userLabel="BodyLabel">
-                                                                    <rect key="frame" x="0.0" y="95" width="364" height="47.666666666666657"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Body Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-B2-E2H" userLabel="BodyLabel">
+                                                                    <rect key="frame" x="0.0" y="91.666666666666671" width="364" height="51.000000000000014"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="textColor" systemColor="darkTextColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -1084,7 +1084,7 @@
                                             <segment title="In Relationship"/>
                                         </segments>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                         <connections>
                                             <action selector="relationshipControlTapped:" destination="soj-Yc-jSH" eventType="valueChanged" id="gbG-zS-InR"/>
                                         </connections>
@@ -1096,7 +1096,7 @@
                                             <segment title="School"/>
                                         </segments>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                         <connections>
                                             <action selector="jobControlTapped:" destination="soj-Yc-jSH" eventType="valueChanged" id="XsR-MB-fWu"/>
                                         </connections>
@@ -1109,7 +1109,7 @@
                                             <segment title="Yoga"/>
                                         </segments>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                         <connections>
                                             <action selector="exerciseControlTapped:" destination="soj-Yc-jSH" eventType="valueChanged" id="brF-nH-iex"/>
                                         </connections>
@@ -1122,7 +1122,7 @@
                                             <segment title="Writer"/>
                                         </segments>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                         <connections>
                                             <action selector="sideHustleControlTapped:" destination="soj-Yc-jSH" eventType="valueChanged" id="d2Y-7C-eej"/>
                                         </connections>
@@ -1888,20 +1888,20 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-bt-JhU">
                                                             <rect key="frame" x="15" y="25" width="364" height="231"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aEt-eI-ZnZ">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aEt-eI-ZnZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="364" height="27.666666666666668"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                                                    <color key="textColor" red="0.25882352939999997" green="0.65098039220000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.15294117647058825" green="0.56862745098039214" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mga-vc-CyU">
-                                                                    <rect key="frame" x="0.0" y="47.666666666666671" width="364" height="26.333333333333329"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mga-vc-CyU">
+                                                                    <rect key="frame" x="0.0" y="47.666666666666671" width="364" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <color key="textColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Body Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzj-nG-QmS" userLabel="BodyLabel">
-                                                                    <rect key="frame" x="0.0" y="94" width="364" height="48.666666666666657"/>
+                                                                    <rect key="frame" x="0.0" y="91.666666666666671" width="364" height="51.000000000000014"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="textColor" systemColor="darkTextColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -2067,7 +2067,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="plY-Yb-L7y"/>
+        <segue reference="IfO-Oe-jIe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="clock" catalog="system" width="128" height="121"/>

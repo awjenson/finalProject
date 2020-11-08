@@ -381,6 +381,8 @@ let friendsTip22 = Tip(header: "Find Your Tribe", title: "Humans are social crea
 let friendsTip23 = Tip(header: "Eliminate Negative People From Your Life", title: "Les Brown: Upgrade your relationships. You earn within $2,000 to $3,000 of your closest friends. You got to look at the people in your life and ask, \"what is this relationship doing to me?\"", body: "There are many people, because of the toxic negative energy draining people in their lives they will never be successful, because those toxic relationships will compromise their power. \n\nNow some people might say Les, can we change them? No! It’s a full time job changing yourself.", sourceName: "Fearless Motivation", sourceURL: "https://www.fearlessmotivation.com/2018/01/11/les-brown-you-have-greatness-in-you/", sponsorLogo: "", sponsorURL: "")
 let friendsTip24 = Tip(header: "Increase Happiness", title: "Study: Belonging to multiple group memberships that are important to you boosts your self-esteem much more than having friends alone", body: "The researcher believes that group memberships provide benefits that friends alone do not; namely, meaning, connection, support and a sense of control over our lives. \n\nFor example, religious groups or organizations striving toward a goal such as reducing poverty can provide a greater sense of purpose.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2015/06/150615162617.htm", sponsorLogo: "", sponsorURL: "")
 
+//7
+let friendsTip25 = Tip(header: "Live Longer", title: "The next time your friend asks to meet for lunch, do it.", body: "Loneliness increases risk of early death by 45%, increases chances of a heart attack or stroke, and decreases immune function. \n\nHaving good social relationships are linked to positive emotions and may even increase immune function.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 
 let friendsTipArray0 = [friendsTip1, friendsTip2, friendsTip3, friendsTip4]
@@ -399,10 +401,12 @@ let friendsTipArray4 = [friendsTip17, friendsTip18, friendsTip19, friendsTip20]
 let friendsTopic4 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArray4)
 
 let friendsTipArray5 = [friendsTip21, friendsTip22, friendsTip23, friendsTip24]
-let friendsTopic5 = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArray5)
+
+let friendsTipArray6 = [friendsTip25, friendsTip16, friendsTip20, friendsTip24]
+
 
 // RANDOM
-let friendsTipArrays = [friendsTipArray0, friendsTipArray1, friendsTipArray2, friendsTipArray3, friendsTipArray4, friendsTipArray5,]
+let friendsTipArrays = [friendsTipArray0, friendsTipArray1, friendsTipArray2, friendsTipArray3, friendsTipArray4, friendsTipArray5, friendsTipArray6]
 let friendsTopic = Topic(title: friendsTitle, icon: friendsIcon, tip: friendsTipArrays.random())
 let friendTopics = Topics(title: friendsTitle, icon: friendsIcon, topics: [friendsTopic])
 
@@ -2637,6 +2641,8 @@ let singleAM7 = Tip(header: "Increase Happiness", title: "Commit to someone comp
 
 //2
 let singleAM8 = Tip(header: "Signs Your Crush Likes You", title: "If your crush texts you in the morning, this is a good sign—it means you’re one of the first things they think of when they wake up.", body: "If your crush only texts you late at night or when they’re bored, they might not be as interested as you are.", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Tell-That-Your-Crush-Likes-You-Back", sponsorLogo: "", sponsorURL: "")
+let singleAM9 = Tip(header: "Live Longer", title: "Don't live alone. Social isolation is a significant risk for early death and heart disease.", body: "Study: Marriage is associated with longer lifespans. The researchers concluded \"never having never been married is a better predictor of poor health outcomes than either divorce or widowhood.\"", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
 
 //WEEK 1
 let singleTipAMArray0 = [singleAM0, singleAM1, singleAM2, singleAM3]
@@ -2645,24 +2651,14 @@ let singleTopicAM0 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipA
 let singleTipAMArray1 = [singleAM4, singleAM5, singleAM6, singleAM7]
 let singleTopicAM1 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray1)
 
-let singleTipAMArray2 = [singleAM8, singleAM1, singleAM2, singleAM6]
+let singleTipAMArray2 = [singleAM8, singleAM9, singleAM2, singleAM6]
 let singleTopicAM2 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray2)
 
 // RANDOM
 let singleTipAMArrays = [singleTipAMArray0, singleTipAMArray1, singleTipAMArray2,]
 let singleAMTopic = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArrays.random())
 
-let singleTipAMArray3 = [singleAM3, singleAM4, singleAM5, singleAM1]
-let singleTopicAM3 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray3)
 
-let singleTipAMArray4 = [singleAM0, singleAM1, singleAM2, singleAM3]
-let singleTopicAM4 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray4)
-
-let singleTipAMArray5 = [singleAM4, singleAM5, singleAM6, singleAM1]
-let singleTopicAM5 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray5)
-
-let singleTipAMArray6 = [singleAM5, singleAM3, singleAM4, singleAM6]
-let singleTopicAM6 = Topic(title: singleTitle, icon: singleIcon, tip: singleTipAMArray6)
 
 
 // MARK: Single, Day
@@ -2989,7 +2985,7 @@ let relationshipBed7 = Tip(header: "Improve Your Relationship", title: "Leave te
 
 //2
 let relationshipBed8 = Tip(header: "Improve Your Relationship", title: "Listen to music with your partner at bedtime", body: "Study: Couples who listened to music at bedtime reported a 40% increase in intimacy.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
-
+let relationshipBed9 = Tip(header: "Live Longer", title: "Having an active sex life can help you live longer", body: "Study: Men between the ages of 45 to 59 who reported at least 2 orgasms per week were half as likely to die from coronary heart disease than their abstinent counterparts. \n\nOther studies have shown that sexual activity is linked to health benefits like lower stress lower cancer risk.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 
 //BED
@@ -3003,7 +2999,7 @@ let relationshipBedTipArray1 = [relationshipBed4, relationshipBed5, relationship
 let relationshipBedTopic1 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray1)
 
 //2 WIP-3
-let relationshipBedTipArray2 = [relationshipBed8, relationshipBed5, relationshipBed6, relationshipBed2,]
+let relationshipBedTipArray2 = [relationshipBed8, relationshipBed9, relationshipBed6, relationshipBed2,]
 let relationshipBedTopic2 = Topic(title: relationshipTitle, icon: relationshipIcon, tip: relationshipBedTipArray2)
 
 // RANDOM

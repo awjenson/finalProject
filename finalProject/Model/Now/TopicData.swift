@@ -153,7 +153,7 @@ let brunchTopic2 = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArr
 //
 let brunchTipArrays = [brunchTipArray0, brunchTipArray1, brunchTipArray2,]
 let brunchTopic = Topic(title: brunchTitle, icon: brunchIcon, tip: brunchTipArrays.random())
-let brunchTopics = Topics(title: "Food", icon: brunchIcon, topics: [morningSnackTopic, brunchTopic, restaurantTopic])
+let brunchTopics = Topics(title: "Brunch", icon: brunchIcon, topics: [brunchTopic])
 
 
 
@@ -230,6 +230,10 @@ let lunchTip38 = Tip(header: "Burn Belly Fat", title: "Eat an avocado or guacamo
 
 let lunchTip39 = Tip(header: "Reduce Belly Fat", title: "Eat more protein foods: \n• Whole eggs \n• Fish \n• Seafood \n• Legumes \n• Nuts \n• Meat \n• Dairy products", body: "Study: Protein was linked to significantly reduced risk of belly fat gain over a period of 5 years. \n\nProtein has been shown to reduce cravings by 60% and help you eat up to 441 fewer calories per day.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat", sponsorLogo: "", sponsorURL: "")
 
+let lunchTip40 = Tip(header: "Live Longer", title: "Eat more fruits and vegetables. The CDC recommends 2 cups of fruit and 3 cups of vegetables per day for adults", body: "According to an 8-year study, those who ate the most fruits and vegetables had a \"robust reduction\" in risk for cancer and cardiovascular disease.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
+
+
 //WEEK 1
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
 let lunchTipArray1 = [lunchTip5, lunchTip6, lunchTip7, lunchTip8]
@@ -240,12 +244,12 @@ let lunchTipArray5 = [lunchTip21, lunchTip22, lunchTip23, lunchTip24]
 let lunchTipArray6 = [lunchTip25, lunchTip26, lunchTip27, lunchTip28]
 let lunchTipArray7 = [lunchTip29, lunchTip30, lunchTip31, lunchTip32]
 let lunchTipArray8 = [lunchTip33, lunchTip34, lunchTip35, lunchTip36]
-let lunchTipArray9 = [lunchTip37, lunchTip38, lunchTip39, lunchTip24]//WIP
+let lunchTipArray9 = [lunchTip37, lunchTip38, lunchTip39, lunchTip40]
 
 //
-let lunchTipArrays = [lunchTipArray0, lunchTipArray1, lunchTipArray2, lunchTipArray3, lunchTipArray4, lunchTipArray5, lunchTipArray6, lunchTipArray7, lunchTipArray8]
+let lunchTipArrays = [lunchTipArray0, lunchTipArray1, lunchTipArray2, lunchTipArray3, lunchTipArray4, lunchTipArray5, lunchTipArray6, lunchTipArray7, lunchTipArray8, lunchTipArray9]
 let lunchTopic = Topic(title: lunchTitle, icon: lunchIcon, tip: lunchTipArrays.random())
-let lunchTopics = Topics(title: lunchTitle, icon: lunchIcon, topics: [lunchTopic, restaurantTopic])
+let lunchTopics = Topics(title: lunchTitle, icon: lunchIcon, topics: [lunchTopic])
 
 
 
@@ -343,6 +347,7 @@ let dinnerTip50 = Tip(header: "Reduce Cognitive Decline", title: "Eat foods asso
 let dinnerTip51 = Tip(header: "Prevent Weight Gain", title: "Study: Slow eaters took in 66 fewer calories per meal. Eating 66 fewer calories at every meal results in losing more than 20 pounds a year!", body: "It takes 20 minutes for your stomach to tell your brain that it's had enough. \n\nEat slower and double the number of times you chew.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/bad-habits-that-give-you-belly-fat/", sponsorLogo: "", sponsorURL: "")
 let dinnerTip52 = Tip(header: "Live Longer", title: "Research: Walking after a meal may be the best time to gain the most benefits from your walks", body: "It can aid digestion, increase satiety after eating, and help to lower blood sugar. \n\nThis is particularly helpful for those with diabetes, as the increased movement is able to remove some of the excess sugar in the blood and put it to work in muscle tissue.", sourceName: "Ladders", sourceURL: "https://www.theladders.com/career-advice/if-you-walk-at-this-time-every-day-you-could-add-years-to-your-life", sponsorLogo: "", sponsorURL: "")
 
+let dinnerTip53 = Tip(header: "Live Longer", title: "Eat a Mediterranean diet: Fruits, vegetables, nuts, fish, and whole grains, low in red meat, and free of refined foods and added sugars.", body: "People live longer in Monaco than anywhere else on earth. \n\nWith a combo of their Mediterranean diet, fresh sea air, ample sunshine and wealth, it's no wonder.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 //Week 1
 //0
@@ -382,14 +387,16 @@ let dinnerTopic10 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipAr
 
 let dinnerTipArray11 = [dinnerTip45, dinnerTip46, dinnerTip47, dinnerTip48]
 let dinnerTopic11 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray11)
-//WIP
+
 let dinnerTipArray12 = [dinnerTip49, dinnerTip50, dinnerTip51, dinnerTip52]
 let dinnerTopic12 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray12)
+//WIP
+let dinnerTipArray13 = [dinnerTip53, dinnerTip40, dinnerTip41, dinnerTip36]
 
 //
-let dinnerTipArrays = [dinnerTipArray0, dinnerTipArray1, dinnerTipArray2, dinnerTipArray3, dinnerTipArray4, dinnerTipArray5, dinnerTipArray6, dinnerTipArray7, dinnerTipArray8, dinnerTipArray9, dinnerTipArray10, dinnerTipArray11, dinnerTipArray12]
+let dinnerTipArrays = [dinnerTipArray0, dinnerTipArray1, dinnerTipArray2, dinnerTipArray3, dinnerTipArray4, dinnerTipArray5, dinnerTipArray6, dinnerTipArray7, dinnerTipArray8, dinnerTipArray9, dinnerTipArray10, dinnerTipArray11, dinnerTipArray12, dinnerTipArray13]
 let dinnerTopic = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArrays.random())
-let dinnerTopics = Topics(title: dinnerTitle, icon: dinnerIcon, topics: [dinnerTopic, restaurantTopic])
+let dinnerTopics = Topics(title: dinnerTitle, icon: dinnerIcon, topics: [dinnerTopic])
 
 
 
@@ -457,7 +464,7 @@ let dinnerAfter9PMTopic5 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: 
 //
 let dinnerAfter9PMTipArrays = [dinnerAfter9PMTipArray0, dinnerAfter9PMTipArray1, dinnerAfter9PMTipArray2, dinnerAfter9PMTipArray3, dinnerAfter9PMTipArray4, dinnerAfter9PMTipArray5,]
 let dinnerAfter9PMTopic = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArrays.random())
-let dinnerAfter9PMTopics = Topics(title: lateDinnerTitle, icon: dinnerIcon, topics: [dinnerAfter9PMTopic, restaurantTopic])
+let dinnerAfter9PMTopics = Topics(title: lateDinnerTitle, icon: dinnerIcon, topics: [dinnerAfter9PMTopic])
 
 
 
@@ -1413,7 +1420,8 @@ let barTip22 = Tip(header: "Live Longer", title: "Drinking 1-2 glasses of alcoho
 let barTip23 = Tip(header: "Reduce Your Risk", title: "Alcohol increases your risk of acid reflux", body: "Because alcohol has been shown to slow the rate at which your food flows through your digestive system. This means your food is not being broken down as rapidly as it should, and it sits in your stomach, which increases your risk of acid reflux. ", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/foods-and-acid-reflux/", sponsorLogo: "", sponsorURL: "")
 let barTip24 = Tip(header: "Anti-Aging Tip", title: "Avoid too much alcohol", body: "Having a drink with a friend or savoring a glass of wine with dinner is fine. But drinking too much alcohol dehydrates your skin and dilates your blood vessels. \n\nIf you drink too much, you could develop broken blood vessels and rosacea, a skin disorder marked by redness and tiny pimples.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/beauty/features/wrinkles-skin#1", sponsorLogo: "", sponsorURL: "")
 //6
-let barTip25 = Tip(header: "Start With Humor", title: "Avoid pickup lines. Focus on making the other person laugh. Study: The more times two strangers laughed together, the higher level of attraction they reported.", body: "Study: When two strangers meet, the more times a man tries to be funny and the more a woman laughs at those attempts, the more likely it is for the woman to be interested in dating. \n\nIf you meet someone who you can laugh with, it might mean your future relationship is going to be fun and filled with good cheer.", sourceName: "The University of Kansas", sourceURL: "https://news.ku.edu/2015/08/27/first-comes-laughter-then-love-study-finds-out-why-humor-important-romantic-attraction", sponsorLogo: "", sponsorURL: "")
+let barTip25 = Tip(header: "Live Longer", title: "Drinking too much alcohol—more than 1 drink per day for women, or 2 for men—can lead to a shorter lifespan.", body: "Heavy alcohol consumption is also linked to liver, heart, and other chronic diseases—and it can lead to weight gain from all those extra calories you're drinking. \n\nAnd patients who are hospitalized due to excessive alcohol use die 24 years earlier than the general population.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+let barTip26 = Tip(header: "Start With Humor", title: "Avoid pickup lines. Focus on making the other person laugh. Study: The more times two strangers laughed together, the higher level of attraction they reported.", body: "Study: When two strangers meet, the more times a man tries to be funny and the more a woman laughs at those attempts, the more likely it is for the woman to be interested in dating. \n\nIf you meet someone who you can laugh with, it might mean your future relationship is going to be fun and filled with good cheer.", sourceName: "The University of Kansas", sourceURL: "https://news.ku.edu/2015/08/27/first-comes-laughter-then-love-study-finds-out-why-humor-important-romantic-attraction", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1448,7 +1456,7 @@ let barTopic4 = Topic(title: barTitle, icon: barIcon, tip: barTipArray4)
 let barTipArray5 = [barTip21, barTip22, barTip23, barTip24]
 let barTopic5 = Topic(title: barTitle, icon: barIcon, tip: barTipArray5)
 //WIP
-let barTipArray6 = [barTip25, barTip16, barTip15, barTip14]
+let barTipArray6 = [barTip25, barTip26, barTip15, barTip14]
 let barTopic6 = Topic(title: barTitle, icon: barIcon, tip: barTipArray6)
 
 //
@@ -1471,9 +1479,12 @@ let happyHourTip4 = Tip(header: "Reduce Your Risk", title: "Study: People who dr
 //2
 let happyHourTip5 = Tip(header: "FYI", title: "'Happy Hour' drinks can affect sleep too", body: "Studies have found that alcohol consumed even 6 hours before bedtime can increase wakefulness during the second half of sleep, even though the alcohol consumed has already been eliminated from the body.", sourceName: "Very Well Mind", sourceURL: "https://www.verywellmind.com/alcohol-and-sleep-66571", sponsorLogo: "", sponsorURL: "")
 let happyHourTip6 = Tip(header: "Anti-Aging Tip", title: "Avoid too much alcohol", body: "Having a drink with a friend or savoring a glass of wine with dinner is fine. But drinking too much alcohol dehydrates your skin and dilates your blood vessels. \n\nIf you drink too much, you could develop broken blood vessels and rosacea, a skin disorder marked by redness and tiny pimples.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/beauty/features/wrinkles-skin#1", sponsorLogo: "", sponsorURL: "")
+let happyHourTip7 = Tip(header: "Live Longer", title: "According to the National Institutes of Health, those who drink moderately have a slightly longer life expectancy compared to nondrinkers, so raising a glass is probably okay. Make it red wine.", body: "But, drinking too much alcohol—more than 1 drink per day for women, or 2 for men—can lead to a shorter lifespan.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
+
 
 let happyHourTipArray0 = [happyHourTip1, happyHourTip2, happyHourTip3, happyHourTip4]
-let happyHourTipArray1 = [happyHourTip5, happyHourTip6, happyHourTip3, happyHourTip2]
+let happyHourTipArray1 = [happyHourTip5, happyHourTip6, happyHourTip7, happyHourTip2]
 //
 let happyHourTipArrays = [happyHourTipArray0, happyHourTipArray1,]
 let happyHourTopic = Topic(title: happyHourTitle, icon: happyHourIcon, tip: barTipArrays.random())
@@ -1913,7 +1924,7 @@ let groceryStoreTip48 = Tip(header: "Depression Linked To Diet", title: "A diet 
 let groceryStoreTip49 = Tip(header: "Burn Belly Fat", title: "Choose red fruit over green fruit", body: "That means Pink Lady over Granny Smith, watermelon over honeydew, red grapes over green ones. \n\nThe higher levels of nutrients called flavonoids—particularly anthocyanins, compounds that give red fruits their color—calm the action of fat-storage genes.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
 let groceryStoreTip50 = Tip(header: "Burn Belly Fat", title: "Buy wild salmon, not farmed salmon", body: "Salmon is a great way to fight fat and boost your metabolism. \n\nWild salmon has plenty of heart-healthy omega 3 fatty acids—1,253 mg of the good stuff, and only 114 mg of unhealthy omega-6s. \n\nBut the farmed salmon packs a whopping 1,900 mg of unhealthy omega-6s.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
 let groceryStoreTip51 = Tip(header: "Burn Belly Fat", title: "Buy real peanut butter which is made with two ingredients: peanuts, and maybe some salt.", body: "Peanuts are high in both genistein and resveratrol, two nutrients that help diminish the action of your fat-storage genes. \n\nBe careful of the brand you buy: if you see ingredients like sugar, palm oil, or anything you can't pronounce, put it back. They'll undermine any good the peanuts might do.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", sponsorLogo: "", sponsorURL: "")
-
+let groceryStoreTip52 = Tip(header: "Live Longer", title: "Buy Mediterranean diet foods: Fruits, vegetables, nuts, fish, and whole grains, low in red meat, and free of refined foods and added sugars.", body: "People live longer in Monaco than anywhere else on earth. \n\nWith a combo of their Mediterranean diet, fresh sea air, ample sunshine and wealth, it's no wonder.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 // Morning
 let groceryStoreAMTip1 = Tip(header: "🌅", title: "Shop in the morning if you want the best selection", body: "Early to mid-morning is the best time of day for the finest selection. \n\nThat’s when dairy, bakery goods, produce, meat and seafood are newly stocked and freshest.", sourceName: "Today", sourceURL: "https://www.today.com/food/best-time-go-grocery-store-worst-t108655", sponsorLogo: "", sponsorURL: "")
@@ -1939,8 +1950,7 @@ let groceryStoreTipArray8 = [groceryStoreTip33, groceryStoreTip34, groceryStoreT
 let groceryStoreTipArray9 = [groceryStoreTip37, groceryStoreTip38, groceryStoreTip39, groceryStoreTip40]
 let groceryStoreTipArray10 = [groceryStoreTip41, groceryStoreTip42, groceryStoreTip43, groceryStoreTip44]
 let groceryStoreTipArray11 = [groceryStoreTip45, groceryStoreTip46, groceryStoreTip47, groceryStoreTip48]
-//WIP
-let groceryStoreTipArray12 = [groceryStoreTip49, groceryStoreTip50, groceryStoreTip51, groceryStoreTip24]
+let groceryStoreTipArray12 = [groceryStoreTip49, groceryStoreTip50, groceryStoreTip51, groceryStoreTip52]
 //
 let groceryStoreTipArrays = [groceryStoreTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10, groceryStoreTipArray11, groceryStoreTipArray12]
 let groceryStoreTopic = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrays.random())
@@ -2888,6 +2898,9 @@ let homeAMTip20 = Tip(header: "Increase Happiness", title: "Create a \"pride shr
 //5
 let homeAMTip21 = Tip(header: "Warning", title: "Study: Living less than 50 meters from a major road or less than 150 meters from a highway is associated with a higher risk of developing dementia, Parkinson's, Alzheimer's and multiple sclerosis (MS) -- likely due to increased exposure to air pollution", body: "The researchers also found that living near green spaces, like parks, has protective effects against developing these neurological disorders. \n\nFor people who are exposed to a higher level of green space, they are more likely to be physically active and may also have more social interactions. \n\nThere may even be benefits from just the visual aspects of vegetation.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2020/01/200123152616.htm", sponsorLogo: "", sponsorURL: "")
 let homeAMTip22 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let homeAMTip23 = Tip(header: "Increase Home Value", title: "According to Zillow, painting your front door in shades of black — from charcoal to jet — can boost your home's value by $6200", body: "Pops of color are especially important for front doors. It often forms the first impression in a prospective home buyer’s mind and can determine how they will view the rest of the property when touring a home." , sourceName: "MarketWatch", sourceURL: "https://www.marketwatch.com/story/paint-your-bathroom-this-color-and-boost-your-homes-selling-price-by-5400-2017-06-01", sponsorLogo: "", sponsorURL: "")
+let homeAMTip24 = Tip(header: "Live Longer", title: "Live in Hawaii, California, New York, or Minnesota", body: "Hawaii has the longest life expectancy at 81 years, followed by California, New York, and Minnesota. \n\nKentucky, Alabama, West Virginia and Mississippi have the shortest life spans (less than 75 years)." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
 
 
 //WEEK 1
@@ -2905,8 +2918,8 @@ let homeAMTopic3 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArr
 
 let homeAMTipArray4 = [homeAMTip17, homeAMTip18, homeAMTip19, homeAMTip20]
 let homeAMTopic4 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray4)
-//WIP (2)
-let homeAMTipArray5 = [homeAMTip21, homeAMTip22, homeAMTip7, homeAMTip8]
+
+let homeAMTipArray5 = [homeAMTip21, homeAMTip22, homeAMTip23, homeAMTip24]
 let homeAMTopic5 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray5)
 
 //RANDOM
@@ -2914,11 +2927,6 @@ let homeAMTipArrays = [homeAMTipArray0, homeAMTipArray1, homeAMTipArray2, homeAM
 let homeAMTopic = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArrays.random())
 
 
-
-
-
-let homeAMTipArray6 = [homeAMTip9, homeAMTip10, homeAMTip11, homeAMTip12]
-let homeAMTopic6 = Topic(title: homeAMTitle, icon: homeAMIcon, tip: homeAMTipArray6)
 
 // MARK: - Home, PM
 
@@ -2995,7 +3003,9 @@ let homePMTip44 = Tip(header: "Increase Happiness", title: "Survey: The happiest
 
 //11
 let homePMTip45 = Tip(header: "Increase Happiness", title: "DO: Watch a good-natured humor comedy show \nDON'T: Watch a mean-spirited humor comedy show", body: "Study: Positive humor was more successful at reducing negative emotions and increasing positive emotions than negative humor.", sourceName: "Inc.", sourceURL: "https://www.inc.com/amy-morin/5-simple-ways-to-turn-around-a-bad-mood-fast.html", sponsorLogo: "", sponsorURL: "")
-let homePMTip46 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let homePMTip46 = Tip(header: "Live Longer", title: "Check Your Smoke Alarms More Often", body: "A study found that 30% didn't work when tested due to malfunctions or dead batteries. \n\nWhen a home catches fire, you may have only minutes to get out safely." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+let homePMTip47 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+
 
 
 //WEEK 1
@@ -3032,20 +3042,11 @@ let homePMTopic9 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArr
 let homePMTipArray10 = [homePMTip41, homePMTip42, homePMTip43, homePMTip44]
 let homePMTopic10 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray10)
 
-let homePMTipArray11 = [homePMTip45, homePMTip46, homePMTip11, homePMTip12]
+let homePMTipArray11 = [homePMTip45, homePMTip46, homePMTip47, homePMTip12]
 let homePMTopic11 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray11)
 //
 let homePMTipArrays = [homePMTipArray0, homePMTipArray1, homePMTipArray2, homePMTipArray3, homePMTipArray4, homePMTipArray5, homePMTipArray6, homePMTipArray7, homePMTipArray8, homePMTipArray9, homePMTipArray10, homePMTipArray11,]
 let homePMTopic = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArrays.random())
-
-
-
-
-let homePMTipArray12 = [homePMTip13, homePMTip14, homePMTip15, homePMTip16]
-let homePMTopic12 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray12)
-
-let homePMTipArray13 = [homePMTip25, homePMTip26, homePMTip27, homePMTip28]
-let homePMTopic13 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray13)
 
 
 // MARK: - Bathroom AM
@@ -3123,18 +3124,20 @@ let bathroomPMTip7 = Tip(header: "Millionaire Habit 😁", title: "Take care of 
 let bathroomPMTip8 = Tip(header: "Millionaire Habit", title: "Floss every day", body: "Study of what rich people and poor people every day: \"I floss every day.\" \n\n• Rich people who agree: 62% \n• Poor people who agree: 16%", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/rich-people-daily-habits-2014-6", sponsorLogo: "", sponsorURL: "")
 
 //2
-let bathroomPMTip9 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let bathroomPMTip9 = Tip(header: "Live Longer", title: "Brush your teeth twice a day and floss once daily", body: "There is a link between gum disease and heart disease. Sore, swollen gums are a sign of inflammation. \n\nYour gums are full of blood vessels, and when you have a mouth full of bacteria, a tiny sore can let that bacteria into your bloodstream and trigger inflammation throughout your body." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
+let bathroomPMTip10 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 
 
 
 let bathroomPMTipArray0 = [bathroomPMTip1, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
 let bathroomPMTipArray1 = [bathroomPMTip5, bathroomPMTip6, bathroomPMTip7, bathroomPMTip8]
-//WIP (3)
-let bathroomPMTipArray2 = [bathroomPMTip9, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
+//WIP (2)
+let bathroomPMTipArray2 = [bathroomPMTip9, bathroomPMTip10, bathroomPMTip3, bathroomPMTip4]
 
 //RANDOM
-let bathroomPMTipArrays = [bathroomPMTipArray0, bathroomPMTipArray1,]
+let bathroomPMTipArrays = [bathroomPMTipArray0, bathroomPMTipArray1, bathroomPMTipArray2]
 let bathroomPMTopic = Topic(title: bathroomPMTitle, icon: bathroomPMIcon, tip: bathroomPMTipArrays.random())
 let bathroomPMTopics = Topics(title: bathroomPMTitle, icon: bathroomPMIcon, topics: [bathroomPMTopic])
 
@@ -3639,6 +3642,9 @@ let nineteen2 = Tip(header: "👫", title: "The chance of cheating on your spous
 let sixty1 = Tip(header: "📉", title: "After age 60, your number of friendships and social network decreases", body: "As we get older, when we become conscious of the ultimate ending, we edit our friends. We choose to spend our remaining years with networks that are small and populated with those who satisfy higher needs.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 let sixty2 = Tip(header: "", title: "Live longer: Seniors who live with their families are healthier and stay sharper longer than those who live alone or in a nursing home", body: "Studies have shown that seniors who live with their children are less susceptible to disease, eat healthier diets, have lower levels of stress, and have a much lower incidence of serious accidents.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
 let sixty3 = Tip(header: "", title: "Live longer: Maintain social networks and have frequent visitors", body: "A study of successful 100+ year-olds found that they have a wonderful support group. They also tended to get frequent visits from neighbors and friends, which is both a physical and psychological safety net.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", sponsorLogo: "", sponsorURL: "")
+
+let sixty4 = Tip(header: "Live Longer", title: "If you retire early, keep working on something—if not a job, then a hobby. Early retirement can be a risk factor for dying earlier.", body: "Study: Healthy people who delayed retirement by just one year past age 65 had an 11% lower risk of death from all causes. \n\nThe same was found to be true in unhealthy people who retired a year later.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
 
 // MARK: Income Level
 // $80K+

@@ -572,7 +572,7 @@ class ProfileViewController: UIViewController {
 
     //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
     @objc func tapped() {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
+        let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
 

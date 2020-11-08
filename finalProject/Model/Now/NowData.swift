@@ -217,12 +217,12 @@ func studyCareerNight() -> Topics {
            {
            case 0:
                //single
-               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic, dateTopic])
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic])
            case 1:
                //relationship
                selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipDayTopic,])
            default:
-               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic, dateTopic])
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic])
            }
            return selectedTopic
        }
@@ -233,12 +233,12 @@ func studyCareerNight() -> Topics {
            {
            case 0:
                //single
-               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
            case 1:
                //relationship
                selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipPMTopic,])
            default:
-               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
            }
            return selectedTopic
        }
@@ -249,12 +249,12 @@ func studyCareerNight() -> Topics {
            {
            case 0:
                //single
-               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
            case 1:
                //relationship
                selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipBedTopic,])
            default:
-               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateTopic])
+               selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
            }
            return selectedTopic
        }
@@ -788,7 +788,8 @@ let weekendNow11to13Tip31 = Tip(header: "Increase Happiness", title: "Socialize 
 
 //WEEK 5
 //SUN
-let weekendNow11to13Tip32 = Tip(header: "Be More Interesting", title: "Stop doing uninteresting things", body: "DON'T: \n• Watch TV every day \n• Eat at the same restaurants over and over again \n• Go to the same vacation spot every year \n• Only read the books that were assigned in high school \n• Spend hours checking social media feeds \n• Talk about the weather \n• Expect other people to do all the talking \n\nDO: \n• Try a new restaurant you have driven by a million times but never tried \n• Create a bucket list and pledge to do one activity every month \n• Go to the movie theater and watch a movie that you would never normally choose \n• Sign up for a workout class that you have never done before \n• Pick up a magazine you would never normally read and explore it cover to cover \n• Learn a new skill", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/interesting/", sponsorLogo: "", sponsorURL: "")
+let weekendNow11to13Tip32 = Tip(header: "Live Longer", title: "Get a dog. Dog owners have lower blood pressure, tend to be more physically active, and walk significantly more than those who do not own dogs.", body: "Studies have shown that dog owners walk more—because dogs need walking every day—which improved cardiovascular health. \n\nStudies have also linked pet ownership to lower risk of anxiety and depression." , sourceName: "Eat This, Not That!", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let weekendNow11to13Tip33 = Tip(header: "Be More Interesting", title: "Stop doing uninteresting things", body: "DON'T: \n• Watch TV every day \n• Eat at the same restaurants over and over again \n• Go to the same vacation spot every year \n• Only read the books that were assigned in high school \n• Spend hours checking social media feeds \n• Talk about the weather \n• Expect other people to do all the talking \n\nDO: \n• Try a new restaurant you have driven by a million times but never tried \n• Create a bucket list and pledge to do one activity every month \n• Go to the movie theater and watch a movie that you would never normally choose \n• Sign up for a workout class that you have never done before \n• Pick up a magazine you would never normally read and explore it cover to cover \n• Learn a new skill", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/interesting/", sponsorLogo: "", sponsorURL: "")
 
 //SAT
 let weekendNow11to13Tip36 = Tip(header: "Daily Habit: Exercise", title: "Scientists consider exercise to be the ‘single thing that comes close to a magic bullet, in terms of its strong and universal benefits’", body: "Exercise is Richard Branson’s #1 piece of advice to entrepreneurs. \n\nHave goals with your exercise so that no matter what happens that day — at work, at home, in the economy — you can have something that went well today. \n\n• You improved your mile time \n• You swam 3 more laps than usual \n• You squatted a new weight" , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
@@ -828,8 +829,8 @@ let saturdayNow11to13TipArray7 = [weekendNow11to13Tip28, weekendNow11to13Tip29, 
 
 
 //WEEK 5
-//SUN (3 WIP)
-let sundayNow11to13TipArray8 = [weekendNow11to13Tip32, weekendNow11to13Tip26, weekendNow11to13Tip25, weekendNow11to13Tip20]
+//SUN (2 WIP)
+let sundayNow11to13TipArray8 = [weekendNow11to13Tip32, weekendNow11to13Tip33, weekendNow11to13Tip25, weekendNow11to13Tip20]
 
 //SAT (3 WIP)
 let saturdayNow11to13TipArray9 = [weekendNow11to13Tip36, weekendNow11to13Tip37, weekendNow11to13Tip14, weekendNow11to13Tip18]
@@ -2632,7 +2633,7 @@ let weekdayNow21to24Tip42 = Tip(header: "Millionaire Habit", title: "Wake up 3 h
 let weekdayNow21to24Tip43 = Tip(header: "Prevent Weight Gain", title: "Getting 8.5 hours of sleep each night can drop cravings for junk food by 62% and decrease overall appetite by 14%", body: "Mayo Clinic researchers note similar findings: In their study, adults who slept 80 minutes less than a control group consumed an average of 549 additional calories daily. \n\nThat’s more calories than you’ll find in a Big Mac!", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/weight-loss-lifestyle/", sponsorLogo: "", sponsorURL: "")
 
 //TUES
-let weekdayNow21to24Tip44 = Tip(header: "Billionaire Habit", title: "Wake up between 5 a.m. and 6 a.m and religiously follow a morning routine", body: "It’s important to get up early so your can have time for yourself — when you aren’t distracted by calls and other people. \n\nMorning routines of billionaires include: \n• Reading \n• Exercise \n• Meditation \n• Walking their kids to school", sourceName: "Market Watch", sourceURL: "https://www.marketwatch.com/story/4-habits-that-self-made-billionaires-practice-nearly-every-day-2019-07-11", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip44 = Tip(header: "Billionaire Habit", title: "Wake up between 5 a.m. and 6 a.m and follow a morning routine", body: "It’s important to get up early so your can have time for yourself — when you aren’t distracted by calls and other people. \n\nMorning routines of billionaires include: \n• Reading \n• Exercise \n• Meditation \n• Walking their kids to school", sourceName: "Market Watch", sourceURL: "https://www.marketwatch.com/story/4-habits-that-self-made-billionaires-practice-nearly-every-day-2019-07-11", sponsorLogo: "", sponsorURL: "")
 let weekdayNow21to24Tip45 = Tip(header: "Stay Healthy", title: "Research on the amount of sleep you need per day: \n• Teens need 8-10 hours \n• Adults need 7-9 hours", body: "A lack of sleep: \n\n• Increases your risk of high blood pressure and heart attack. \n\n• Decreases cognitive functioning and increases your risk of depression. \n\n• Increases your risk of diabetes and obesity.", sourceName: "The Ladders", sourceURL: "https://www.theladders.com/career-advice/top-8-sleep-myths-that-can-harm-your-health", sponsorLogo: "", sponsorURL: "")
 let weekdayNow21to24Tip46 = Tip(header: "Increase IQ", title: "8 hours of sleep tonight = higher IQ tomorrow", body: "Study: Each hour less of 8 hours of sleep tonight could decrease one point from you IQ tomorrow.", sourceName: "Inc.", sourceURL: "https://www.inc.com/melanie-curtin/7-scientifically-backed-ways-to-boost-your-iq-in-30-days-or-less.html", sponsorLogo: "", sponsorURL: "")
 let weekdayNow21to24Tip47 = Tip(header: "Healthy Habit", title: "Quality sleep is a key ingredient to your health", body: "Sleep helps combat obesity; it improves the immune system; it's vital for optimal mental function and improves all markers of physical performance. \n\nDon't let anyone - not your boss, not your spouse, not your inner critic - make you feel bad for getting sleep.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
@@ -2658,11 +2659,11 @@ let weekdayNow21to24Tip59 = Tip(header: "CEO Advice", title: "Kenneth Chenault, 
 
 //WEEK 4
 //MON
-let weekdayNow21to24Tip60 = Tip(header: "Have A Better Tomorrow", title: "Write down the things you have to do for the next day before going to bed. It puts your mind at ease", body: "The two main benefits are: \n\n• You stop thinking about it, letting you fall asleep easier. \n\n• When you wake up, you get clarity on what you wrote down.", sourceName: "Medium", sourceURL: "https://medium.com/swlh/how-to-build-a-strong-morning-routine-the-essential-guide-2f8b50fc505", sponsorLogo: "", sponsorURL: "")
-let weekdayNow21to24Tip61 = Tip(header: "Daily Habit", title: "Get 8 Hours of Sleep — Your body needs its rest.", body: "German philosopher Arthur Schopenhauer said that sleep is the interest we pay on the loan of life. Be glad to pay it. It’s what keeps us alive. \n\nGuard your sleep carefully, it’s an obligation. All the other goals and habits become irrelevant if you don’t have the energy and clarity to do them." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip60 = Tip(header: "Live Longer", title: "Get 7 to 9 hours each night—no more, no less", body: "Study: Sleeping less than 7 hours per night can decrease your lifespan by 12%. Sleeping more than 9 hours is linked to a 30% greater risk of early death. \n\nShort sleep is also associated with low-grade inflammation, which increases risk for cancer, cardiovascular disease and other chronic conditions." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip61 = Tip(header: "Have A Better Tomorrow", title: "Write down the things you have to do for the next day before going to bed. It puts your mind at ease", body: "The two main benefits are: \n\n• You stop thinking about it, letting you fall asleep easier. \n\n• When you wake up, you get clarity on what you wrote down.", sourceName: "Medium", sourceURL: "https://medium.com/swlh/how-to-build-a-strong-morning-routine-the-essential-guide-2f8b50fc505", sponsorLogo: "", sponsorURL: "")
+let weekdayNow21to24Tip62 = Tip(header: "Daily Habit", title: "Get 8 Hours of Sleep — Your body needs its rest.", body: "German philosopher Arthur Schopenhauer said that sleep is the interest we pay on the loan of life. Be glad to pay it. It’s what keeps us alive. \n\nGuard your sleep carefully, it’s an obligation. All the other goals and habits become irrelevant if you don’t have the energy and clarity to do them." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
 
-//let weekdayNow5to8Tip62
-//let weekdayNow5to8Tip63
+//let weekdayNow21to24Tip62
 
 
 //TUES
@@ -2742,7 +2743,7 @@ let fridayNow21to24Topic3 = Topic(title: weekdayNow21to24Title, icon: weekdayNow
 
 //WEEK 4
 //MONDAY
-let weekdayNow21to24TipArray15 = [weekdayNow21to24Tip60, weekdayNow21to24Tip61, weekdayNow21to24Tip22, weekdayNow21to24Tip23]//WIP
+let weekdayNow21to24TipArray15 = [weekdayNow21to24Tip60, weekdayNow21to24Tip61, weekdayNow21to24Tip62, weekdayNow21to24Tip23]//WIP1
 //TUESDAY
 let weekdayNow21to24TipArray16 = [weekdayNow21to24Tip64, weekdayNow21to24Tip65, weekdayNow21to24Tip46, weekdayNow21to24Tip47]//WIP
 //WEDNESDAY

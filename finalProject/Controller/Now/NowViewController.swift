@@ -1740,7 +1740,7 @@ class NowViewController: UIViewController {
 
     //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
     @objc func tapped() {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
+        let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
 
@@ -1935,17 +1935,21 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
 
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        //http://swiftquickstart.blogspot.com/2016/10/custom-tableview-section-headers.html
 
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 20))
         headerView.backgroundColor = UIColor.init(hexString: "FFF4E9")
+
 
         let label = UILabel()
         //Display section title text
         label.text = twoDimensionalArray[section].title.uppercased()
         label.frame = CGRect.init(x: 26, y: 15, width: headerView.frame.width-10, height: headerView.frame.height)
-        label.layer.cornerRadius = 8
 
+        label.layer.cornerRadius = 8
         label.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
         label.textColor = titleColor(number: section).darker()
         headerView.addSubview(label)
