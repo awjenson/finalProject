@@ -1796,6 +1796,8 @@ let jobSearch17 = Tip(header: "Warren Buffett", title: "Try to work for whomever
 let jobSearch18 = Tip(header: "Millionaire Advice", title: "I recommend to young people to seek work for what they will learn, more than what they will earn.", body: "Look down the road at what skills they want to acquire before choosing a specific profession and before getting trapped in the \"Rat Race.\" \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let jobSearch19 = Tip(header: "Warning", title: "A large portion of one's lifetime wage growth occurs in the first 10 years of a career", body: "Starting with a higher salary puts people on a higher initial trajectory.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
+//6
+let jobSearch20 = Tip(header: "Live Longer 🎓", title: "Go to College", body: "Higher education is associated with less financial stress, fewer traumatic events like divorce or assault, and better odds of having health insurance and owning a home. \n\nThe odds of dying for women with the lowest education levels is 66% higher than for their more educated counterparts, according to a Harvard study.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -1824,20 +1826,16 @@ let jobSearchTipArray3 = [jobSearch12, jobSearch13, jobSearch14, jobSearch15]
 let jobSearchTopic3 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchTipArray3)
 
 let jobSearchTipArray4 = [jobSearch16, jobSearch17, jobSearch18, jobSearch19]
-let jobSearchTopic4 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchTipArray4)
+
+//WIP
+let jobSearchTipArray5 = [jobSearch20, jobSearch3, jobSearch7, jobSearch19]
 
 // RANDOM
-let jobSearchArrays = [jobSearchTipArray0, jobSearchTipArray1, jobSearchTipArray2, jobSearchTipArray3, jobSearchTipArray4,]
+let jobSearchArrays = [jobSearchTipArray0, jobSearchTipArray1, jobSearchTipArray2, jobSearchTipArray3, jobSearchTipArray4, jobSearchTipArray5]
 let jobSearchTopic = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchArrays.random())
 let jobSearchTopics = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics: [jobSearchTopic,])
 
 
-// (WIP 4)
-let jobSearchTipArray5 = [jobSearch5, jobSearch6, jobSearch14, jobSearch8]
-let jobSearchTopic5 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchTipArray5)
-// (WIP 4)
-let jobSearchTipArray6 = [jobSearch12, jobSearch10, jobSearch11, jobSearch13]
-let jobSearchTopic6 = Topic(title: jobSearchTitle, icon: jobSearchIcon, tip: jobSearchTipArray6)
 
 
 

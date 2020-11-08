@@ -216,10 +216,7 @@ class NowViewController: UIViewController {
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.nowVC = self
 
-
         setupUI()
-
-
 
         let notificationCenter = NotificationCenter.default
 
@@ -258,7 +255,12 @@ class NowViewController: UIViewController {
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        if #available(iOS 13.0, *) {
+            return .darkContent
+        } else {
+            // Fallback on earlier versions
+            return .default
+        }
     }
 
     

@@ -668,6 +668,8 @@ let saturdayNow9to11Tip15 = Tip(header: "Increase Happiness", title: "Research f
 
 //WEEK 5
 let sundayNow9to11Tip16 = Tip(header: "Rich Habit", title: "The richest 1% spend time reading every day", body: "Warren Buffett recommends reading 500 pages every day. \n\nLeave television and social networks aside in favour of reading." , sourceName: "Medium", sourceURL: "https://medium.com/swlh/10-mindset-differences-between-the-richest-1-and-the-other-99-6490c227fe82", sponsorLogo: "", sponsorURL: "") 
+let sundayNow9to11Tip17 = Tip(header: "Live Longer", title: "Study: People who drink 3 to 5 cups of coffee every day have a 15% lower risk of early death compared to those who do not", body: "But, consuming more than 400 mg of caffeine can make you feel uneasy and keep you awake at night. Luckily, researchers also found similar benefits in decaf coffee. \n\nAvoid anything that starts with \"frap.\" That's not coffee. It's dessert." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
 
 //WEEK 1
 //SUN
@@ -703,28 +705,22 @@ let sundayNow9to10Topic3 = Topic(title: weekendNow9to11Title, icon: weekendNow9t
 let saturdayNow9to10Array3 = [saturdayNow9to11Tip12, saturdayNow9to11Tip13, saturdayNow9to11Tip14, saturdayNow9to11Tip15]
 let saturdayNow9to10Topic3 = Topic(title: weekendNow9to11Title, icon: weekendNow9to11Icon, tip: saturdayNow9to10Array3)
 
+//WEEK5
+//SUN - WIP 2
+let sundayNow9to10Array4 = [sundayNow9to11Tip16, sundayNow9to11Tip17, sundayNow9to11Tip11, sundayNow9to11Tip15]
+
+//SAT - TODO
+
+
+
 //////////
 //RANDOM
-let sundayNow9to10TipArrays = [sundayNow9to10Array0, sundayNow9to10Array1, sundayNow9to10Array2, sundayNow9to10Array3,]
+let sundayNow9to10TipArrays = [sundayNow9to10Array0, sundayNow9to10Array1, sundayNow9to10Array2, sundayNow9to10Array3, sundayNow9to10Array4]
 let sundayNow9to10Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow9to10TipArrays.random())
 //RANDOM
 let saturdayNow9to10TipArrays = [saturdayNow9to10Array0, saturdayNow9to10Array1, saturdayNow9to10Array2, saturdayNow9to10Array3,]
 let saturdayNow9to10Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow9to10TipArrays.random())
 
-
-
-
-
-
-//WEEK 5
-//SUN (WIP 4)
-let sundayNow9to10Array4 = [sundayNow9to11Tip4, sundayNow9to11Tip5, sundayNow9to11Tip10, sundayNow9to11Tip11]
-let sundayNow9to10Topic4 = Topic(title: weekendNow9to11Title, icon: weekendNow9to11Icon, tip: sundayNow9to10Array4)
-
-//SAT
-//WIP (WIP 4)
-let saturdayNow9to10Array4 = [saturdayNow9to11Tip4, saturdayNow9to11Tip5, saturdayNow9to11Tip10, saturdayNow9to11Tip11]
-let saturdayNow9to10Topic4 = Topic(title: weekendNow9to11Title, icon: weekendNow9to11Icon, tip: saturdayNow9to10Array4)
 
 
 
@@ -794,7 +790,7 @@ let weekendNow11to13Tip33 = Tip(header: "Be More Interesting", title: "Stop doin
 //SAT
 let weekendNow11to13Tip36 = Tip(header: "Daily Habit: Exercise", title: "Scientists consider exercise to be the ‘single thing that comes close to a magic bullet, in terms of its strong and universal benefits’", body: "Exercise is Richard Branson’s #1 piece of advice to entrepreneurs. \n\nHave goals with your exercise so that no matter what happens that day — at work, at home, in the economy — you can have something that went well today. \n\n• You improved your mile time \n• You swam 3 more laps than usual \n• You squatted a new weight" , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", sponsorLogo: "", sponsorURL: "")
 let weekendNow11to13Tip37 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
-
+let weekendNow11to13Tip38 = Tip(header: "Live Longer", title: "Research: People who play on team sports have a longer life expectancy compared to those who exercise solo", body: "Leisure-time sports that encourage friendships and social interactions were associated with the best longevity. \n\nYou don't have to be on the same team. Playing social sports like golf, tennis, or soccer could add years to your life." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 1
 //SUN
@@ -832,8 +828,8 @@ let saturdayNow11to13TipArray7 = [weekendNow11to13Tip28, weekendNow11to13Tip29, 
 //SUN (2 WIP)
 let sundayNow11to13TipArray8 = [weekendNow11to13Tip32, weekendNow11to13Tip33, weekendNow11to13Tip25, weekendNow11to13Tip20]
 
-//SAT (3 WIP)
-let saturdayNow11to13TipArray9 = [weekendNow11to13Tip36, weekendNow11to13Tip37, weekendNow11to13Tip14, weekendNow11to13Tip18]
+//SAT (1 WIP)
+let saturdayNow11to13TipArray9 = [weekendNow11to13Tip36, weekendNow11to13Tip37, weekendNow11to13Tip38, weekendNow11to13Tip18]
 
 
 //RANDOM
@@ -1661,7 +1657,9 @@ let thursdayNow9to11Tip4 = Tip(header: "Be More Likable", title: "People like be
 let fridayNow9to11Tip1 = Tip(header: "Increase Happiness", title: "Happiness and unhappiness are contagious, and they both start with you", body: "We like people who care about us, who really listen to us, and who are generous with their time and resources. \n\n• Give at least 3 positive comments for each negative comment you speak.", sourceName: "The Blue Zones of Happiness: Lessons From the World's Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
 let fridayNow9to11Tip2 = Tip(header: "Improve Health", title: "DO: Breathe through your nose \nDON'T: Breath through your mouth", body: "Nose breathing is a major line of defense against airborne pathogens. The nostrils, hair and nasal passageways are designed to assist in filtering allergens and foreign bodies from entering the lungs. \n\nThe mouth has no defense system. \n\nBy nose breathing you may experience decreasing allergies or colds." , sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/wellness/when-it-comes-to-breathing-during-exercise-youre-probably-doing-it-wrong/2019/01/23/b4d3c338-1e59-11e9-8b59-0a28f2191131_story.html", sponsorLogo: "", sponsorURL: "")
-let fridayNow9to11Tip3 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let fridayNow9to11Tip3 = Tip(header: "Live Longer", title: "Study: People who drink 3 to 5 cups of coffee every day have a 15% lower risk of early death compared to those who do not", body: "But, consuming more than 400 mg of caffeine can make you feel uneasy and keep you awake at night. Luckily, researchers also found similar benefits in decaf coffee. \n\nAvoid anything that starts with \"frap.\" That's not coffee. It's dessert." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
+let fridayNow9to11Tip4 = Tip(header: "Prevent Illness", title: "Reduce the spread of respiratory diseases:", body: "• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 //WEEK 3
 
@@ -1698,7 +1696,7 @@ let wednesdayNow9to11Topic2 = Topic(title: weekdayNow9to11Title, icon: weekdayNo
 let weekdayNow9to11TipArray8 = [thursdayNow9to11Tip1, thursdayNow9to11Tip2, thursdayNow9to11Tip3, thursdayNow9to11Tip4]
 let thursdayNow9to11Topic2 = Topic(title: weekdayNow9to11Title, icon: weekdayNow9to11Icon, tip: weekdayNow9to11TipArray8)
 // FRI (WIP - 1)
-let weekdayNow9to11TipArray9 = [fridayNow9to11Tip1, fridayNow9to11Tip2, fridayNow9to11Tip3, weekdayNow9to11Tip19]
+let weekdayNow9to11TipArray9 = [fridayNow9to11Tip1, fridayNow9to11Tip2, fridayNow9to11Tip3, fridayNow9to11Tip4]
 
 
 /////////////////
@@ -1848,7 +1846,9 @@ let weekdayNow11to14Tip30 =  Tip(header: "In a bad mood today? 😤", title: "It
 
 //THUR
 let weekdayNow11to14Tip31 = Tip(header: "Project Confidence", title: "While sitting:", body: "• Sit with your back straight \n• Your rear toward the back of the chair \n• Your feet planted firmly on the floor \n\nThis sitting position puts the least amount of strain on supporting muscles, keeps you from back and neck pains, and helps you develop a strong core. \n\nGood posture opens your airways, which ensures proper breathing.", sourceName: "American Express", sourceURL: "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/4-ways-your-body-language-can-project-confidence/", sponsorLogo: "", sponsorURL: "")
-let weekdayNow11to14Tip32 = Tip(header: "🤷‍♂️", title: "Working out during the workday may be less effective than after-work workouts", body: "Researchers found that compared the performance of in-work participants to after-work participants. In-work participants attended only 26% of the group sessions, while after-work participants attended 70% of the group sessions. In-work participants exercised fewer minutes per week, exercised less vigorously, and, as a result, lost less weight than after-work participants.", sourceName: "American Institute of Mathematics Sciences (AIMS) Press", sourceURL: "http://www.aimspress.com/article/10.3934/publichealth.2017.2.189/fulltext.html", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip32 = Tip(header: "Exercise", title: "Working out during the workday may be less effective than after-work workouts", body: "Researchers found that compared the performance of in-work participants to after-work participants. In-work participants attended only 26% of the group sessions, while after-work participants attended 70% of the group sessions. In-work participants exercised fewer minutes per week, exercised less vigorously, and, as a result, lost less weight than after-work participants.", sourceName: "American Institute of Mathematics Sciences (AIMS) Press", sourceURL: "http://www.aimspress.com/article/10.3934/publichealth.2017.2.189/fulltext.html", sponsorLogo: "", sponsorURL: "")
+let weekdayNow11to14Tip33 = Tip(header: "Live Longer", title: "Call your doctor and schedule your yearly checkup", body: "Study: Life expectancy decreases by 2 years for each chronic condition a person has. \n\nMost insurances cover a yearly physical. If you're not going, you're wasting free money, and putting yourself in danger.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
+
 
 //FRI
 let weekdayNow11to14Tip35 = Tip(header: "Confidence", title: "Having an upright posture in the face of stress maintains: \n\n• Positive self-esteem \n• Reduces negative mood \n• Increases positive mood", body: "Study: Upright participants reported higher self-esteem, better mood, and lower fear, compared to slumped participants. \n\nSitting upright may be a simple behavioral strategy to help build resilience to stress.", sourceName: "American Psychological Association", sourceURL: "https://psycnet.apa.org/record/2014-37739-001", sponsorLogo: "", sponsorURL: "")
@@ -1887,8 +1887,8 @@ let tuesdayNow11to13Topic2 = Topic(title: weekdayNow11to14Title, icon: weekdayNo
 //WED
 let weekdayNow11to13TipArray7 = [weekdayNow11to14Tip27, weekdayNow11to14Tip28, weekdayNow11to14Tip29, weekdayNow11to14Tip30]
 let wednesdayNow11to13Topic2 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to13TipArray7)
-//THUR (WIP 2)
-let weekdayNow11to13TipArray8 = [weekdayNow11to14Tip31, weekdayNow11to14Tip32, weekdayNow11to14Tip13, weekdayNow11to14Tip12]
+//THUR (WIP 1)
+let weekdayNow11to13TipArray8 = [weekdayNow11to14Tip31, weekdayNow11to14Tip32, weekdayNow11to14Tip33, weekdayNow11to14Tip12]
 let thursdayNow11to13Topic2 = Topic(title: weekdayNow11to14Title, icon: weekdayNow11to14Icon, tip: weekdayNow11to13TipArray8)
 //FRI (WIP 3)
 let weekdayNow11to13TipArray9 = [weekdayNow11to14Tip35, weekdayNow11to14Tip17, weekdayNow11to14Tip16, weekdayNow11to14Tip14]

@@ -2183,7 +2183,7 @@ let commuteAMTopic6 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: com
 let commuteAMTipArray7 = [commuteAMTip28, commuteAMTip29, commuteAMTip30, commuteAMTip31]
 let commuteAMTopic7 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray7)
 
-// no commuteAMTipArray1 because we have tuesday specific tips
+// no commuteAMTipArray1 because we have Tuesday specific tips
 let commuteAMTipArrays = [commuteAMTipArray0, commuteAMTipArray2, commuteAMTipArray3, commuteAMTipArray4, commuteAMTipArray5, commuteAMTipArray6, commuteAMTipArray7,]
 let commuteAMTopic = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArrays.random())
 let commuteAMTopics = Topics(title: commuteAMTitle, icon: commuteAMIcon, topics: [commuteAMTopic,])
@@ -2568,6 +2568,7 @@ let workPMTip60 = Tip(header: "Increase Happiness", title: "Use all your vacatio
 //MON
 let workPMTip61 = Tip(header: "Increase Happiness", title: "Having a best friend at work is one of the most powerful contributors to work satisfaction and productivity", body: "Research: Friends work better together than acquaintances, both in collaborative decision-making and unskilled labor. \n\nIf you have someone at work with whom you sometimes collaborate, for example, escalate the friendship by going out together after work, by inviting that person to your home, and by sharing more of your personal life. \n\nIf you don't have someone like this already, see if you can recruit a friend to your workplace - or join a friend by being recruited to theirs." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", sponsorLogo: "", sponsorURL: "")
 
+let workPMTip62 = Tip(header: "Live Longer", title: "Study: Sitting 11+ hours a day increases your risk of death over the next 3 years", body: "Look into getting a stand-up desk. Or stand up from your desk and walk around every 30 minutes." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 
 // Male CEOs with lower-pitched voices tended to manage large companies, make $187,000 a year more than their higher-pitched peers, and last in political office on average five months longer.
@@ -2639,8 +2640,8 @@ let workPMTipArray14 = [workPMTip57, workPMTip58, workPMTip59, workPMTip60]
 let workPMTopic14 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray14)
 
 //WEEK 4
-// MON (WIP 3)
-let workPMTipArray15 = [workPMTip61, workPMTip22, workPMTip23, workPMTip24]
+// MON (WIP 2)
+let workPMTipArray15 = [workPMTip61, workPMTip62, workPMTip23, workPMTip24]
 let workPMTopic15 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray15)
 
 //
@@ -2854,7 +2855,10 @@ let leadershipPMTip1 = Tip(header: "🤝", title: "Volunteer to help others", bo
 let newJob1 = Tip(header: "👫", title: "Many individuals assert themselves too quickly and too soon. Let your results do the talking", body: "Research: Over time extroverts lose status in groups. So, at the outset, concentrate on accomplishing a few meaningful achievements, and once you've gained status by demonstrating excellence, feel free to be more assertive.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/ref=oh_aui_d_detailpage_o00_?ie=UTF8&psc=1", sponsorLogo: "", sponsorURL: "")
 
 //MARK: - Unemployed
-let unemployed1 = Tip(header: "", title: "", body: "Research: Nearly half of unemployed working-age men are addicted to opiate painkillers.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
+
+let unemployedTEST = Tip(header: "", title: "", body: "Research: Nearly half of unemployed working-age men are addicted to opiate painkillers.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", sponsorLogo: "", sponsorURL: "")
+
+let unemployed1 = Tip(header: "Warning", title: "Study: Being unemployed can increase a person's risk of early death by 63%", body: "Studies found a potential link between stress and increased likelihood of cardiovascular disease, alcohol use, and other health problems.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -3004,7 +3008,8 @@ let homePMTip44 = Tip(header: "Increase Happiness", title: "Survey: The happiest
 //11
 let homePMTip45 = Tip(header: "Increase Happiness", title: "DO: Watch a good-natured humor comedy show \nDON'T: Watch a mean-spirited humor comedy show", body: "Study: Positive humor was more successful at reducing negative emotions and increasing positive emotions than negative humor.", sourceName: "Inc.", sourceURL: "https://www.inc.com/amy-morin/5-simple-ways-to-turn-around-a-bad-mood-fast.html", sponsorLogo: "", sponsorURL: "")
 let homePMTip46 = Tip(header: "Live Longer", title: "Check Your Smoke Alarms More Often", body: "A study found that 30% didn't work when tested due to malfunctions or dead batteries. \n\nWhen a home catches fire, you may have only minutes to get out safely." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", sponsorLogo: "", sponsorURL: "")
-let homePMTip47 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
+let homePMTip47 = Tip(header: "Live Longer", title: "Study: Every hour spent watching television shortened life expectancy by 22 minutes—the same effect of smoking two cigarettes", body: "And watching 6 hours of TV per day cuts your life expectancy by 5 years. \n\nA Harvard study linked watching 2 hours of TV per day to a 20% greater risk of Type 2 diabetes and 15% increase in risk of heart disease. \n\nTV not only shortens your life, but can prevent you from living life to its fullest." , sourceName: "", sourceURL: "", sponsorLogo: "", sponsorURL: "")
+let homePMTip48 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Avoid close contact with people who are sick. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", sponsorLogo: "", sponsorURL: "")
 
 
 
@@ -3042,8 +3047,8 @@ let homePMTopic9 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArr
 let homePMTipArray10 = [homePMTip41, homePMTip42, homePMTip43, homePMTip44]
 let homePMTopic10 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray10)
 
-let homePMTipArray11 = [homePMTip45, homePMTip46, homePMTip47, homePMTip12]
-let homePMTopic11 = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArray11)
+let homePMTipArray11 = [homePMTip45, homePMTip46, homePMTip47, homePMTip48]
+
 //
 let homePMTipArrays = [homePMTipArray0, homePMTipArray1, homePMTipArray2, homePMTipArray3, homePMTipArray4, homePMTipArray5, homePMTipArray6, homePMTipArray7, homePMTipArray8, homePMTipArray9, homePMTipArray10, homePMTipArray11,]
 let homePMTopic = Topic(title: homePMTitle, icon: homePMIcon, tip: homePMTipArrays.random())
@@ -3488,14 +3493,14 @@ let schoolPMTip11 = Tip(header: "Increase Success", title: "Study: Students who 
 let schoolPMTip12 = Tip(header: "Increase Your GPA", title: "Study of 4th-6th graders ages 10-12 revealed that children who napped 3+ times per week benefit from a 7.6% increase in academic performance in Grade 6", body: "Midday napping correlated with greater happiness, self-control, and grit; fewer behavioral problems; and higher IQ. \n\nThe more students sleep during the day, the greater the benefit of naps on many of these measures." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/05/190531135828.htm", sponsorLogo: "", sponsorURL: "")
 
 //3
-let schoolPMTip13 = Tip(header: "⛹️‍♀️", title: "Girls who play team sports are more likely to graduate from college, find a job, and be employed in male-dominated industries", body: "There’s even a direct link between playing sports in high school and earning a bigger salary as an adult. \n\nLearning to own victory and survive defeat in sports is apparently good training for owning triumphs and surviving setbacks at work.", sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2014/05/the-confidence-gap/359815/", sponsorLogo: "", sponsorURL: "")
-
+let schoolPMTip13 = Tip(header: "Increase Success 🎓⛹️‍♀️", title: "Girls who play team sports are more likely to graduate from college, find a job, and be employed in male-dominated industries", body: "There’s even a direct link between playing sports in high school and earning a bigger salary as an adult. \n\nLearning to own victory and survive defeat in sports is apparently good training for owning triumphs and surviving setbacks at work.", sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2014/05/the-confidence-gap/359815/", sponsorLogo: "", sponsorURL: "")
+let schoolPMTip14 = Tip(header: "Live Longer", title: "The average smoker loses 25 years of life expectancy.", body: "For every pack of cigarettes you smoke, you take 28 minutes off your life. \n\n\"Vaping\" is likely no better, although E-cigs are so new there's no research yet. E-cigs have been known to cause abdominal pain, seizures, cancer and death.", sourceName: "The Atlantic", sourceURL: "https://www.theatlantic.com/magazine/archive/2014/05/the-confidence-gap/359815/", sponsorLogo: "", sponsorURL: "")
 
 
 let schoolPMTipArray0 = [schoolPMTip1, schoolPMTip2, schoolPMTip3, schoolPMTip4]
 let schoolPMTipArray1 = [schoolPMTip5, schoolPMTip6, schoolPMTip7, schoolPMTip8]
 let schoolPMTipArray2 = [schoolPMTip9, schoolPMTip10, schoolPMTip11, schoolPMTip12]
-let schoolPMTipArray3 = [schoolPMTip13, schoolPMTip10, schoolPMTip4, schoolPMTip12]
+let schoolPMTipArray3 = [schoolPMTip13, schoolPMTip14, schoolPMTip4, schoolPMTip12]
 
 //
 let schoolPMTipArrays = [schoolPMTipArray0, schoolPMTipArray1, schoolPMTipArray2, schoolPMTipArray3,]
