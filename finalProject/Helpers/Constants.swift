@@ -86,9 +86,6 @@ struct Constants {
         static let filmmaking = "icons8-documentary"
 
 
-
-
-
     }
 
 
@@ -133,6 +130,17 @@ struct Constants {
         static let quote = "QUOTE"
         static let research = "RESEARCH"
         static let watch = "Tap to Watch ▶️"
+
+        static let preventIllness = "Prevent Illness 🤒"
+        static let lookYounger = "Look Younger 🙂"
+        static let millionaireHabit = "Millionaire Habit 💰"
+        static let liveLonger = "Live Longer 👍"
+        static let healthySkin = "Healthy Skin 🧴"
+        static let liveSmarter = "Live Smarter 🤓"
+        static let sleepBetter = "Sleep Better 😴"
+        static let healthyChoice = "Healthy Choice 💪"
+        static let increaseHappiness = "Increase Happiness 🙂"
+        static let increaseSuccess = "Increase Success 🙌"
     }
 
     struct SelectedMood {

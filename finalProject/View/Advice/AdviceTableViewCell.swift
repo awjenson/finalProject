@@ -35,6 +35,8 @@ class AdviceTableViewCell: UITableViewCell {
     @IBOutlet weak var adviceBodyLabel: UILabel!
     @IBOutlet weak var adviceSourceButton: UIButton!
 
+    @IBOutlet weak var buyButton: UIButton!
+
     // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
     var delegate: AdviceTableViewCellDelegate?
 
@@ -82,10 +84,27 @@ class AdviceTableViewCell: UITableViewCell {
         adviceTitleLabel.attributedText = attributedStringTitle
         adviceBodyLabel.attributedText = attributedStringBody
 
-       
+        //Buy Button
+        if verifyUrl(urlString: tip.sponsorURL) == true {
+            //Sponsor URL exists, display buy button
+            buyButton.isHidden = false
+
+        } else {
+            //Sponsor URL does not exists
+            buyButton.isHidden = true
+        }
 
     }
 
+    // Swift 5
+     func verifyUrl (urlString: String?) -> Bool {
+        if let urlString = urlString {
+            if let url = NSURL(string: urlString) {
+                return UIApplication.shared.canOpenURL(url as URL)
+            }
+        }
+        return false
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -104,11 +123,18 @@ class AdviceTableViewCell: UITableViewCell {
         delegate?.goToSourceURL(url: tipItem.sourceURL!)
     }
 
+
+    @IBAction func buyButtonTapped(_ sender: Any) {
+        delegate?.goToSourceURL(url: tipItem.sponsorURL!)
+    }
+
     @IBAction func shareButtonTapped(_ sender: Any) {
         //create activity view controller
         //activityItems is what you want to share (a tip)
         delegate?.goToActivityView(header: tipItem.header, title: tipItem.title, body: tipItem.body)
     }
+
+
 
 
 }

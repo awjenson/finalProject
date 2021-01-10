@@ -21,6 +21,9 @@ import SafariServices // to display webview
 
 class ProfileViewController: UIViewController {
 
+
+
+
     // MARK: - IBOutlets
 
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -827,6 +830,9 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Table View Cell Methods
 
 extension ProfileViewController: AdviceTableViewCellDelegate {
+
+
+
 
     func goToSourceURL(url: String) {
         // get the URL from the delegate and presents in Safari VC

@@ -1339,7 +1339,6 @@ class NowViewController: UIViewController {
             groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
             topicsNow: fridayNow11to13Topics)
 
-
         case 12...13:
             print("weekday Fri, Midday")
 //            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic,
@@ -1948,6 +1947,7 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 
         let label = UILabel()
         //Display section title text
+        label.text = ""
         label.text = twoDimensionalArray[section].title.uppercased()
         label.frame = CGRect.init(x: 26, y: 15, width: headerView.frame.width-10, height: headerView.frame.height)
 

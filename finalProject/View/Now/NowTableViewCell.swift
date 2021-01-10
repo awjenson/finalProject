@@ -67,6 +67,18 @@ class NowTableViewCell: UITableViewCell {
         sourceButton.contentHorizontalAlignment = .left
         sourceButton.setTitle(tip.sourceName, for: .normal)
         sourceButton.titleLabel?.attributedText = attributedString
+
+        //Buy Button
+        if verifyUrl(urlString: tip.sponsorURL) == true {
+            //Sponsor URL exists, display buy button
+            buyButton.isHidden = false
+
+        } else {
+            //Sponsor URL does not exists
+            buyButton.isHidden = true
+        }
+
+
         // Display UI of CELL Boarder
 
         // Increase-line-spacing-in-uilabel
@@ -93,6 +105,16 @@ class NowTableViewCell: UITableViewCell {
         titleLabel.attributedText = attributedStringTitle
         bodyLabel.attributedText = attributedStringBody
 
+    }
+
+    // Swift 5
+     func verifyUrl (urlString: String?) -> Bool {
+        if let urlString = urlString {
+            if let url = NSURL(string: urlString) {
+                return UIApplication.shared.canOpenURL(url as URL)
+            }
+        }
+        return false
     }
 
 

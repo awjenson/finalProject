@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dI1-zL-jwA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dI1-zL-jwA">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -826,13 +826,26 @@
                                                                             <rect key="frame" x="0.0" y="8.3333333333333428" width="364" height="60"/>
                                                                             <subviews>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KVG-xI-oso">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="294" height="60"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="60"/>
                                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                                                                     <state key="normal" title="Source">
                                                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
                                                                                     <connections>
                                                                                         <action selector="sourceButtonTapped:" destination="7wg-oe-qfm" eventType="touchUpInside" id="vUX-4E-mpK"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-fz-BTt">
+                                                                                    <rect key="frame" x="244" y="0.0" width="50" height="60"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="50" id="1Ni-HS-qai"/>
+                                                                                        <constraint firstAttribute="height" constant="60" id="Kon-qa-bTH"/>
+                                                                                    </constraints>
+                                                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                                                    <state key="normal" image="cart" catalog="system"/>
+                                                                                    <connections>
+                                                                                        <action selector="buyButtonTapped:" destination="7wg-oe-qfm" eventType="touchUpInside" id="n2r-rN-fdS"/>
+                                                                                        <action selector="shareButtonTapped:" destination="7wg-oe-qfm" eventType="touchUpInside" id="qQf-VG-HpB"/>
                                                                                     </connections>
                                                                                 </button>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzZ-UX-iCK">
@@ -874,6 +887,7 @@
                                         <connections>
                                             <outlet property="boarderColorView" destination="hU4-Du-btO" id="Al2-1f-eZM"/>
                                             <outlet property="bodyLabel" destination="MOP-B2-E2H" id="Ipl-22-HIt"/>
+                                            <outlet property="buyButton" destination="uxb-fz-BTt" id="LBK-gl-hS3"/>
                                             <outlet property="contentView" destination="Qsp-rf-yMD" id="8O4-rf-sCk"/>
                                             <outlet property="headerLabel" destination="z08-IU-Hnm" id="GN4-He-f1D"/>
                                             <outlet property="shareButton" destination="QzZ-UX-iCK" id="2jz-AR-iSA"/>
@@ -971,8 +985,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="              " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQj-Kc-hHB" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                <rect key="frame" x="172" y="53.999999999999993" width="70.333333333333314" height="27.666666666666664"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <rect key="frame" x="170.66666666666666" y="53.999999999999993" width="72.666666666666657" height="28.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -995,13 +1009,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="q21-Hj-W9W"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4kg-rr-d0j" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="89" width="50" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1933,13 +1947,26 @@
                                                                             <rect key="frame" x="0.0" y="8.3333333333333428" width="364" height="60"/>
                                                                             <subviews>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-AN-YdS">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="294" height="60"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="60"/>
                                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                                                                     <state key="normal" title="Source">
                                                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </state>
                                                                                     <connections>
                                                                                         <action selector="sourceButtonTapped:" destination="r3U-82-mqI" eventType="touchUpInside" id="Exj-5X-HZZ"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26e-NW-Xus">
+                                                                                    <rect key="frame" x="244" y="0.0" width="50" height="60"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="50" id="bzv-xA-FfI"/>
+                                                                                        <constraint firstAttribute="height" constant="60" id="cvx-mz-O9m"/>
+                                                                                    </constraints>
+                                                                                    <color key="tintColor" systemColor="systemGrayColor"/>
+                                                                                    <state key="normal" image="cart" catalog="system"/>
+                                                                                    <connections>
+                                                                                        <action selector="buyButtonTapped:" destination="r3U-82-mqI" eventType="touchUpInside" id="MEk-vF-EBb"/>
+                                                                                        <action selector="shareButtonTapped:" destination="r3U-82-mqI" eventType="touchUpInside" id="Wre-cT-Lym"/>
                                                                                     </connections>
                                                                                 </button>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzC-8U-N6e">
@@ -1984,6 +2011,7 @@
                                             <outlet property="adviceSourceButton" destination="NtC-AN-YdS" id="2ef-GV-nMr"/>
                                             <outlet property="adviceTitleLabel" destination="mga-vc-CyU" id="hlx-kB-GUt"/>
                                             <outlet property="boarderColorView" destination="inM-bX-qMO" id="irV-pn-ffG"/>
+                                            <outlet property="buyButton" destination="26e-NW-Xus" id="kiK-k2-MT5"/>
                                             <outlet property="headerLabel" destination="aEt-eI-ZnZ" id="iRW-bh-oY4"/>
                                         </connections>
                                     </tableViewCell>
@@ -2070,6 +2098,7 @@
         <segue reference="plY-Yb-L7y"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="icons8-forward_arrow" width="100" height="100"/>
@@ -2080,18 +2109,6 @@
         <image name="person.crop.square" catalog="system" width="128" height="114"/>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
