@@ -39,6 +39,8 @@
 		DA388FA620F2957000AC5EDC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA388FA520F2957000AC5EDC /* CardView.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
 		DA40D4A2246767F3005E2CC4 /* MainTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40D4A1246767F3005E2CC4 /* MainTopicTableViewCell.swift */; };
+		DA49DF3E25BCC00B0099F229 /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49DF3D25BCC00B0099F229 /* HobbyViewController.swift */; };
+		DA49DF4325BCC3CE0099F229 /* HobbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49DF4225BCC3CE0099F229 /* HobbyTableViewCell.swift */; };
 		DA4B8923226EDCB1007671B0 /* BlueZones.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B8922226EDCB1007671B0 /* BlueZones.swift */; };
 		DA511DE3213F171B0056949B /* MoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511DE2213F171B0056949B /* MoodData.swift */; };
 		DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */; };
@@ -135,6 +137,8 @@
 		DA388FA520F2957000AC5EDC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		DA40D4A1246767F3005E2CC4 /* MainTopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopicTableViewCell.swift; sourceTree = "<group>"; };
+		DA49DF3D25BCC00B0099F229 /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
+		DA49DF4225BCC3CE0099F229 /* HobbyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyTableViewCell.swift; sourceTree = "<group>"; };
 		DA4B8922226EDCB1007671B0 /* BlueZones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueZones.swift; sourceTree = "<group>"; };
 		DA511DE2213F171B0056949B /* MoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodData.swift; sourceTree = "<group>"; };
 		DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorneredButton.swift; sourceTree = "<group>"; };
@@ -359,6 +363,7 @@
 		DA359C7820437225000190AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA49DF4125BCC3A70099F229 /* Hobby */,
 				DA40D4A0246767CA005E2CC4 /* MainTopic */,
 				DAA1022620537D5200A25EFC /* Journal */,
 				DA78987D2050DBB6005046D8 /* Now */,
@@ -389,6 +394,7 @@
 		DA359C792043722A000190AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA49DF3C25BCBFCB0099F229 /* Hobby */,
 				DA1AC1A1247B339200FF8B70 /* Filter */,
 				DA197B3B2467619E00EE324B /* MainTopic */,
 				DAC6384E20B3A9C60004891D /* MainTabBar */,
@@ -425,6 +431,22 @@
 				DA40D4A1246767F3005E2CC4 /* MainTopicTableViewCell.swift */,
 			);
 			path = MainTopic;
+			sourceTree = "<group>";
+		};
+		DA49DF3C25BCBFCB0099F229 /* Hobby */ = {
+			isa = PBXGroup;
+			children = (
+				DA49DF3D25BCC00B0099F229 /* HobbyViewController.swift */,
+			);
+			path = Hobby;
+			sourceTree = "<group>";
+		};
+		DA49DF4125BCC3A70099F229 /* Hobby */ = {
+			isa = PBXGroup;
+			children = (
+				DA49DF4225BCC3CE0099F229 /* HobbyTableViewCell.swift */,
+			);
+			path = Hobby;
 			sourceTree = "<group>";
 		};
 		DA5AEDA02076831D0094AA57 /* Supporting Files */ = {
@@ -686,6 +708,7 @@
 				DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */,
 				DA05F7842336E19000FEB154 /* RoundCorneredImageView.swift in Sources */,
 				DAE95B3321E30B6300F01848 /* Thread+Extension.swift in Sources */,
+				DA49DF3E25BCC00B0099F229 /* HobbyViewController.swift in Sources */,
 				DAB931052204129800808018 /* UIImageView+Extension.swift in Sources */,
 				DA78987620507C86005046D8 /* ProfileTableViewCell.swift in Sources */,
 				DACA911E20FBD0B700475CE5 /* HabitQuote.swift in Sources */,
@@ -718,6 +741,7 @@
 				DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */,
 				DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */,
 				DA015BF72073E3FC00A0342F /* GCDBlackBox.swift in Sources */,
+				DA49DF4325BCC3CE0099F229 /* HobbyTableViewCell.swift in Sources */,
 				DA78988D2052EFA1005046D8 /* NowViewController.swift in Sources */,
 				DA272D0B20BCE62200137039 /* AdviceData.swift in Sources */,
 				DA5EE4C020918CBE00B54438 /* JournalAdvice.swift in Sources */,
