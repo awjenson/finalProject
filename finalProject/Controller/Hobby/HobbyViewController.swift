@@ -15,6 +15,10 @@ import SafariServices // to display webview
 // Row 2 - 4: Studying, Startup, Filmmaking, Screenwriting
 // Row 3 - 3: Job Search (Career Growth), Confidence (Mental Toughness), Bad Mood (Anxiety, Depression, Loneliness)
 
+//filmmakingHabitTopics,firstDraftTopics,pitchingTopics,castingTopics,setsLocationTopics,setDesignTopics,hiringCrewTopics,filmingTopics,directingTopics,lightingTopics,directingActorsTopics,filmPostTopics,filmAdviceTopics
+
+//startupHabitTopics,earlyStageTopics,betaVersionTopics,avoidFailureTopics,ventureCapitalTopics,cofoundersTopics,startupFounderTopics,startupRevenueTopics,startupOperatingTopics,startupHiringTopics,startupPartnershipsTopics,startupCompetitionTopics,startupQuoteTopics
+
 // Currently Excluded: Investing, Journal, Meditation
 
 class HobbyViewController: UIViewController {
@@ -355,56 +359,18 @@ class HobbyViewController: UIViewController {
     func day(_ hour: Int) {
         switch hour {
 
-        case 0...4:
+        case 0...24:
             print("Weekend, Very Early Morning")
             print("hour: \(hour)")
+
             // call function to display 9 time-based topics
-//            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipBedTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingBedtimeTopic,
-//                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
-//                             motivateAMTopic)
+            appendNineTopics(startupHabitTopics,earlyStageTopics,betaVersionTopics,startupCustomersTopics,avoidFailureTopics, startupProductMarketTopics,ventureCapitalTopics,cofoundersTopics,startupFounderTopics,startupRevenueTopics,startupOperatingTopics,startupHiringTopics,
+                             topicsNow: startupQuoteTopics)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustlePM(), jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
-                             friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
-                             topicsNow: motivateAMTopics)
+//            appendNineTopics(filmmakingHabitTopics,firstDraftTopics,pitchingTopics,castingTopics,setsLocationTopics,setDesignTopics,hiringCrewTopics,filmingTopics,directingTopics,lightingTopics,directingActorsTopics,filmPostTopics,
+//                             topicsNow: filmAdviceTopics)
 
-        case 5...9:
-            print("Weekend, Early Morning")
-            // call function to display 9 time-based topics
-//            append13Topics(personalTopic, adviceTopic, singleAMTopic, relationshipAMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingAMTopic,
-//                             studyTopic, stressedAMTopic, depressedAMTopic, madAMTopic,
-//                             motivateAMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleAM(), jobSearchTopics, studyTopics, relationshipAM(), parentingAMTopics,
-                             friendTopics, anxiousAMTopics, depressedAMTopics, madAMTopics,
-                             topicsNow: motivateAMTopics) //Anxious
-
-        case 10...14:
-//            append13Topics(personalTopic, adviceTopic, singleDayTopic, relationshipDayTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingDayTopic,
-//                             studyDayTopic, stressedDayTopic, depressedDayTopic, madDayTopic,
-//                             motivateDayTopic)
-
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleDay(), jobSearchTopics, studyDayTopics, relationshipDay(), parentingDayTopics,
-                             friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
-
-        case 15...19:
-            print("Weekend, Early Evening")
-            // call function to display 9 time-based topics
-//            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipPMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingPMTopic,
-//                             studyTopic, stressedDayTopic, depressedDayTopic, madDayTopic, motivateAfterTopic)
-
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleDay(), jobSearchTopics, studyTopics, relationshipPM(), parentingPMTopics,
-                             friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateAfterTopics)
-
-        case 20..<24:
-            print("Weekend, Late evening")
-            // call function to display 9 time-based topics
-//            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipBedTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingBedtimeTopic,
-//                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
-//                             motivatePMTopic)
-
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustlePM(), jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
-                             friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
-                             topicsNow: motivatePMTopics)
 
         default:
             print("Weekend,INVALID HOUR!")

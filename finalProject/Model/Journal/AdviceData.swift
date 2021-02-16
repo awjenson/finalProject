@@ -155,68 +155,68 @@ func familyParentNight() -> Topics {
 
 let sideHustleKey = "SideHustle"
 
-func sideHustleAM() -> Topics {
-    var selectedTopic: Topics!
-    switch defaults.integer(forKey: sideHustleKey)
-    {
-      case 0:
-        //startup
-        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
-      case 1:
-        //film
-        selectedTopic = Topics(title: filmmakingTitle, icon: Constants.Icon.filmmaking, topics: [filmPreTopic,])
-      case 2:
-      //writing
-      selectedTopic = Topics(title: screenwritingTitle, icon: Constants.Icon.screenwriting, topics: [screenwritingTopic,])
-
-    default:
-        //startup
-        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
-    }
-    return selectedTopic
-}
-
-func sideHustleDay() -> Topics {
-    var selectedTopic: Topics!
-    switch defaults.integer(forKey: sideHustleKey)
-    {
-      case 0:
-        //startup
-        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
-      case 1:
-        //film
-        selectedTopic = Topics(title: filmmakingTitle, icon: Constants.Icon.filmmaking, topics: [filmProdTopic,])
-      case 2:
-      //writing
-      selectedTopic = Topics(title: screenwritingTitle, icon: Constants.Icon.screenwriting, topics: [screenwritingTopic,])
-
-    default:
-        //startup
-        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
-    }
-    return selectedTopic
-}
-
-func sideHustlePM() -> Topics {
-    var selectedTopic: Topics!
-    switch defaults.integer(forKey: sideHustleKey)
-    {
-      case 0:
-        //startup
-        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
-      case 1:
-        //film
-        selectedTopic = Topics(title: filmmakingTitle, icon: Constants.Icon.filmmaking, topics: [filmPostTopic,])
-      case 2:
-      //writing
-      selectedTopic = Topics(title: screenwritingTitle, icon: Constants.Icon.screenwriting, topics: [screenwritingTopic,])
-
-    default:
-        //startup
-        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
-    }
-    return selectedTopic
-}
+//func sideHustleAM() -> Topics {
+//    var selectedTopic: Topics!
+//    switch defaults.integer(forKey: sideHustleKey)
+//    {
+//      case 0:
+//        //startup
+//        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
+//      case 1:
+//        //film
+//        selectedTopic = Topics(title: filmmakingTitle, icon: Constants.Icon.filmmaking, topics: [filmPreTopic,])
+//      case 2:
+//      //writing
+//      selectedTopic = Topics(title: screenwritingTitle, icon: Constants.Icon.screenwriting, topics: [screenwritingTopic,])
+//
+//    default:
+//        //startup
+//        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
+//    }
+//    return selectedTopic
+//}
+//
+//func sideHustleDay() -> Topics {
+//    var selectedTopic: Topics!
+//    switch defaults.integer(forKey: sideHustleKey)
+//    {
+//      case 0:
+//        //startup
+//        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
+//      case 1:
+//        //film
+//        selectedTopic = Topics(title: filmmakingTitle, icon: Constants.Icon.filmmaking, topics: [filmProdTopic,])
+//      case 2:
+//      //writing
+//      selectedTopic = Topics(title: screenwritingTitle, icon: Constants.Icon.screenwriting, topics: [screenwritingTopic,])
+//
+//    default:
+//        //startup
+//        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
+//    }
+//    return selectedTopic
+//}
+//
+//func sideHustlePM() -> Topics {
+//    var selectedTopic: Topics!
+//    switch defaults.integer(forKey: sideHustleKey)
+//    {
+//      case 0:
+//        //startup
+//        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
+//      case 1:
+//        //film
+//        selectedTopic = Topics(title: filmmakingTitle, icon: Constants.Icon.filmmaking, topics: [filmPostTopic,])
+//      case 2:
+//      //writing
+//      selectedTopic = Topics(title: screenwritingTitle, icon: Constants.Icon.screenwriting, topics: [screenwritingTopic,])
+//
+//    default:
+//        //startup
+//        selectedTopic = Topics(title: sideHustleTitle, icon: Constants.Icon.sideHustle, topics: [sideHustleTopic,])
+//    }
+//    return selectedTopic
+//}
 
 
 
@@ -235,9 +235,9 @@ let personalTip3 = Tip(header: "Be A Leader", title: "Take Extreme Ownership: Le
 let personalTip4 = Tip(header: "Be A Leader", title: "You must explain not just what to do, but WHY. It's your responsibility to to reach out and ask if you or others do not understand", body: "If you ever get a task that you don’t understand or believe in... \n\nDON'T: Sit back and accept it. \n\nDO: Be a leader. Ask questions until you understand why so you can believe in what you are doing and you can pass that information down the chain to your team with confidence, so they can get out and execute the mission.", sourceName: "Extreme Ownership: How U.S. Navy SEALs Lead and Win", sourceURL: "https://www.amazon.com/Extreme-Ownership-U-S-Navy-SEALs/dp/1250067057", sponsorLogo: "", sponsorURL: "")
 
 //1
-let personalTip5 = Tip(header: "Be A Leader", title: "Leading up the command: DON'T ask your leader what you should do, tell them what you are going to do", body: "If your boss isn’t making a decision in a timely manner or providing necessary support for you and your team... \n\nDON'T: Blame the boss. \n\nDO: First, blame yourself. Leaders must own everything in their world. \n\nSecond, examine what you can do to better convey the critical information for decisions to be made and support allocated.", sourceName: "Extreme Ownership: How U.S. Navy SEALs Lead and Win", sourceURL: "https://www.amazon.com/Extreme-Ownership-U-S-Navy-SEALs/dp/1250067057", sponsorLogo: "", sponsorURL: "")
+let personalTip5 = Tip(header: "Be A Leader ", title: "Leading up the command: \n• DON'T: Ask your leader what you should do. \n• DO: Tell them what you are going to do", body: "If your boss isn’t making a decision in a timely manner or providing necessary support for you and your team... \n\nDON'T: Blame the boss. \n\nDO: First, blame yourself. Leaders must own everything in their world. \n\nSecond, examine what you can do to better convey the critical information for decisions to be made and support allocated.", sourceName: "Extreme Ownership: How U.S. Navy SEALs Lead and Win", sourceURL: "https://www.amazon.com/Extreme-Ownership-U-S-Navy-SEALs/dp/1250067057", sponsorLogo: "", sponsorURL: "")
 
-let personalTip6 = Tip(header: "Millionaire Habit", title: "Not every thought needs to come out of your mouth. Not every emotion needs to be expressed.", body: "Loose lips are a bad habit for 69% of those who struggle financially. \n\nOppositely, 94% of wealthy people filter their emotions. Wealthy people understand that letting emotions control them can destroy relationships at work and at home. \n\nWait to say what’s on your mind until you’re calm and have had time to look at the situation neutrally.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", sponsorLogo: "", sponsorURL: "")
+let personalTip6 = Tip(header: "Millionaire Habit 💰", title: "• Not every thought needs to come out of your mouth. \n• Not every emotion needs to be expressed.", body: "Loose lips are a bad habit for 69% of those who struggle financially. \n\nOppositely, 94% of wealthy people filter their emotions. Wealthy people understand that letting emotions control them can destroy relationships at work and at home. \n\nWait to say what’s on your mind until you’re calm and have had time to look at the situation neutrally.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", sponsorLogo: "", sponsorURL: "")
 
 let personalTip7 = Tip(header: "Millionaire Advice", title: "Stop doing what you're doing. In other words, take a break and assess what is working and what is not working.", body: "The definition of insanity is doing the same thing and expecting different a result. Stop doing what is not working and look for something new to do. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let personalTip8 = Tip(header: "Harvard Professor - Integrity", title: "100% of the time is easier than 98% of the time. Decide What You Stand For. And Then Stand for it all the time.", body: "Many of us have convinced ourselves that we are able to break our own personal rules \"just this once.\" In our minds, we can justify these small choices. \n\nNone of those things, when they first happen, feels like a life-changing decision. These decision always seem insignificant. \n\nBut each of those decisions can roll up into a much bigger picture, turning you into the kind of person you never wanted to be. \n\nThe first step down that path is taken with a small decision. You justify all the small decisions that lead up to the big one and then you get to the big one and it doesn't seem so enormous anymore. \n\nYou don't realize the road you are on until you look up and see you've arrived at a destination you would have once considered unthinkable. \n\nResist the temptation of \"in this one minor circumstance, just this once, it's okay.\" Life is just one unending stream of minor circumstances. \n\nIf you cross the line once, it will be easier to do it over and over going forward. If you give in to \"just this once,\" you'll regret where you end up. \n\nIt's easier to hold to your principles 100% of the time. The boundary-your personal moral line- is powerful, because you don't cross it; if you have justified doing it once, there's nothing to stop you doing it again. \n\nThe only way to avoid the consequences of uncomfortable moral concessions in your life is to never start making them in the first place. When the first step down that path presents itself, turn around and walk the other way.", sourceName: "How Will You Measure Your Life? by Clayton Christensen", sourceURL: "https://www.amazon.com/dp/B006ID0CH4/", sponsorLogo: "", sponsorURL: "")
@@ -276,8 +276,8 @@ let personalTip27 = Tip(header: "Life Advice - US Navy SEAL", title: "The Britis
 let personalTip28 = Tip(header: "Daily Habit", title: "“Memento Mori” is Latin for “Remember death” — Mortality motivation is practiced today by successful entrepreneurs, artists, and athletes", body: "Steve Jobs famously said: \n\n“Remembering that I’ll be dead soon is the most important tool I’ve ever encountered to help me make the big choices in life.” \n\n”Almost everything — all external expectations, all pride, all fear of embarrassment or failure — these things just fall away in the face of death, leaving only what is truly important.” \n\n”Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.”" , sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/history-of-memento-mori/", sponsorLogo: "", sponsorURL: "")
 
 //7
-let personalTip29 = Tip(header: "Daily Habit", title: "“Memento Mori” is Latin for “Remember death” — The point of this ancient practice isn’t to be morbid, but to inspire you to treat each day as a gift.", body: "How much time do we waste on things that don’t matter? And why? Because we think we can afford it. \n\nMarcus Aurelius wrote that “You could leave life right now. Let that determine what you do and say and think.” \n\nThat was a personal reminder to continue living a life of integrity, honor, and moral excellence NOW, and not wait." , sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/history-of-memento-mori/", sponsorLogo: "", sponsorURL: "")
-let personalTip30 = Tip(header: "Life Advice - Courage", title: "Without courage, others will define your path forward. \n\nWithout it, you are at the mercy of life's temptation. \n\nWithout it, people will be ruled by tyrants and despots. Without it, the bullies of the world rise up.", body: "With courage, you can accomplish any goal. With it, you can defy and defeat evil. \n\nIn life, to achieve your goals, you will have to be men and women of great courage. That courage is within all of us. \n\nDig deep, and you will find it in abundance.", sourceName: "Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by Admiral William H. McRaven", sourceURL: "https://www.amazon.com/Make-Your-Bed-Little-Things/dp/1455570249", sponsorLogo: "", sponsorURL: "")
+let personalTip29 = Tip(header: "Daily Habit", title: "“Remember death” — The point of this ancient practice isn’t to be morbid, but to inspire you to treat each day as a gift.", body: "How much time do we waste on things that don’t matter? And why? Because we think we can afford it. \n\nMarcus Aurelius wrote that “You could leave life right now. Let that determine what you do and say and think.” \n\nThat was a personal reminder to continue living a life of integrity, honor, and moral excellence NOW, and not wait." , sourceName: "Daily Stoic", sourceURL: "https://dailystoic.com/history-of-memento-mori/", sponsorLogo: "", sponsorURL: "")
+let personalTip30 = Tip(header: "Navy SEAL - Courage", title: "Without courage: \n• Others will define your path forward. \n• You're at the mercy of life's temptation. \n• The bullies of the world rise up and people will be ruled by tyrants.", body: "With courage: \n• You can accomplish any goal. \n• You can defy and defeat evil. \n\nIn life, to achieve your goals, you will have to be men and women of great courage. That courage is within all of us. Dig deep, and you will find it in abundance.", sourceName: "Make Your Bed: Little Things That Can Change Your Life...And Maybe the World, by Admiral William H. McRaven", sourceURL: "https://www.amazon.com/Make-Your-Bed-Little-Things/dp/1455570249", sponsorLogo: "", sponsorURL: "")
 let personalTip31 = Tip(header: "Quote", title: "The illiterate of the 21st century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.", body: "- Alvin Toffler, a writer, futurist, and businessman \n\nThe ability to keep an open-mind, acquire better knowledge and apply it when necessary can significantly improve your life and career.", sourceName: "Medium", sourceURL: "https://medium.com/personal-growth/6-habits-of-super-learners-63d466a254fd", sponsorLogo: "", sponsorURL: "")
 let personalTip32 = Tip(header: "Quote from a MLK 1967 speech", title: "What is in your life’s blueprint? \n\nYou’re going to be deciding as the days and the years unfold what you will do in life, what your life’s work will be. Once you discover what it will be, set out to do it and to do it well… Be a bush if you can’t be a tree. If you can’t be a highway, just be a trail. If you can’t be the sun, be a star, for it isn’t by size that you win or you fail. Be the best of whatever you are.", body: "- Dr. Martin Luther King Jr.", sourceName: "Medium", sourceURL: "https://medium.com/@lucaswonders/finding-your-lifes-blueprint-template-for-reflection-based-on-mlk-s-1967-speech-aec875ceacd9", sponsorLogo: "", sponsorURL: "")
 
@@ -371,20 +371,20 @@ let friendsTip11 = Tip(header: "Sign Of A Toxic Friend", title: "They let you do
 let friendsTip12 = Tip(header: "Sign Of A Toxic Friend", title: "They peer pressure you", body: "If there's one thing that's not cool — especially from a friend — it is peer pressure. \n\nA real friend doesn’t push you to act dangerously or unhealthfully. \n\nMaybe they push you to smoke when you’re trying to quit or to have that extra drink when they know you have to drive home. \n\nWhatever it is, it's definitely not OK.", sourceName: "Bustle", sourceURL: "https://www.bustle.com/articles/177766-11-subtle-signs-your-friendship-isnt-healthy-how-to-deal-with-it", sponsorLogo: "", sponsorURL: "")
 
 //4
-let friendsTip13 = Tip(header: "Be A Better Friend", title: "Communicate expectations when life gets busy", body: "If there are certain days or weeks where you are going to be less available, giving your friend a heads up can go a long way toward minimizing misunderstandings or conflicts where somebody feels left out or like they’re being ignored. \n\nTell your friends how long you expect to be off the radar, how to communicate with you best during this time (“I’m drowning in emails; texts are better!”), and when your schedule is expected to go back to normal.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
-let friendsTip14 = Tip(header: "Be A Better Friend", title: "Never just say “I’m too busy.” It can make your friend feel like you're blowing them off", body: "Instead of offering vague statements about your busy schedule, qualify your busyness: “I’m busy for the rest of the month,” or “I’m tied up until the end of the year.” \n\nThen make a counter offer. If you can’t meet face-to-face anytime soon, suggest a phone date, Skype session, or other way to connect so your friend doesn’t feel abandoned.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
-let friendsTip15 = Tip(header: "Be A Better Friend", title: "Personalized, thoughtful text messages are a low-effort way to keep up connections when you’re short on time", body: "DO: Ask questions that invite reveals (“How was your vacation?“ or “How’s your new job going?”) \n\nDON'T: Text statements (“I hope you’re having a great day!” or “You’re in my thoughts”), which don’t tend to prompt meaningful back-and-forth exchanges.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
-let friendsTip16 = Tip(header: "Choose Friends Carefully", title: "Don't listen to poor or frightened people. When it comes to money, especially investments, they will always tell you why something won't work.", body: "You want to have rich friends who are close to the inside because that is where the money is made. It's made on information. \n\nYou want to hear about the next boom, get in and get out before the next bust. \n\nI'm not saying doing it illegally, but the sooner you know, the better your chances for profits with minimal risk. \n\nThat is what friends are for. And that is financial intelligence. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
+let friendsTip13 = Tip(header: "Be A Better Friend 👫", title: "Communicate expectations when life gets busy", body: "If there are certain days or weeks where you are going to be less available, giving your friend a heads up can go a long way toward minimizing misunderstandings or conflicts where somebody feels left out or like they’re being ignored. \n\nTell your friends how long you expect to be off the radar, how to communicate with you best during this time (“I’m drowning in emails; texts are better!”), and when your schedule is expected to go back to normal.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
+let friendsTip14 = Tip(header: "Be A Better Friend 👫", title: "Never just say “I’m too busy.” It can make your friend feel like you're blowing them off", body: "Instead of offering vague statements about your busy schedule, qualify your busyness: “I’m busy for the rest of the month,” or “I’m tied up until the end of the year.” \n\nThen make a counter offer. If you can’t meet face-to-face anytime soon, suggest a phone date, Skype session, or other way to connect so your friend doesn’t feel abandoned.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
+let friendsTip15 = Tip(header: "Be A Better Friend 👫", title: "Personalized, thoughtful text messages are a low-effort way to keep up connections when you’re short on time", body: "DO: Ask questions that invite reveals (“How was your vacation?“ or “How’s your new job going?”) \n\nDON'T: Text statements (“I hope you’re having a great day!” or “You’re in my thoughts”), which don’t tend to prompt meaningful back-and-forth exchanges.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
+let friendsTip16 = Tip(header: "Choose Friends Carefully 💰", title: "Don't listen to poor or frightened people. When it comes to money, especially investments, they will always tell you why something won't work.", body: "You want to have rich friends who are close to the inside because that is where the money is made. It's made on information. \n\nYou want to hear about the next boom, get in and get out before the next bust. \n\nI'm not saying doing it illegally, but the sooner you know, the better your chances for profits with minimal risk. \n\nThat is what friends are for. And that is financial intelligence. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 
 //5
-let friendsTip17 = Tip(header: "Be A Better Friend", title: "Once in a while, do a big gesture for the friends you really care about because it will strengthen the friendship for a while, even if you’re too busy to see each other every week", body: "Being that person who comes through will make that person feel loved and taken care of even if you’re not in constant contact. \n\nThere aren’t too many chances to make an impact in someone’s life, but if you move mountains and carve out time for your friend’s event, it’ll sustain a friendship for a long time.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
-let friendsTip18 = Tip(header: "Be A Better Friend", title: "Be aware that a healthy friendship needs 3 things:", body: "1. Positivity: laughter, affirmation, gratitude and any acts of service. \n\n2. Consistency, or having interactions on a continual basis, which makes people feel safe and close to each other. \n\n3. Vulnerability, which is the revealing and the sharing of our lives. \n\nIf you’re noticing a cooling with a friend, usually one of these areas needs special consideration.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
+let friendsTip17 = Tip(header: "Be A Better Friend 👫", title: "Once in a while, do a big gesture for the friends you really care about because it will strengthen the friendship for a while, even if you’re too busy to see each other every week", body: "Being that person who comes through will make that person feel loved and taken care of even if you’re not in constant contact. \n\nThere aren’t too many chances to make an impact in someone’s life, but if you move mountains and carve out time for your friend’s event, it’ll sustain a friendship for a long time.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
+let friendsTip18 = Tip(header: "Be A Better Friend 👫", title: "Be aware that a healthy friendship needs 3 things:", body: "1. Positivity: laughter, affirmation, gratitude and any acts of service. \n\n2. Consistency, or having interactions on a continual basis, which makes people feel safe and close to each other. \n\n3. Vulnerability, which is the revealing and the sharing of our lives. \n\nIf you’re noticing a cooling with a friend, usually one of these areas needs special consideration.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
 let friendsTip19 = Tip(header: "Choose Friends Carefully", title: "I've noticed that my friends with money talk about money. And I do not mean brag. They're interested in the subject.", body: "So I learn from them, and they learn from me. My friends, whom I know are in dire straits financially, do not like talking about money, business, or investing. They often think it's rude or unintellectual. \n\nSo I also learn from my friends who struggle financially. I find out what not to do. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
-let friendsTip20 = Tip(header: "Be A Better Friend", title: "Set regular hangout routines with your friends. It takes the guesswork out of scheduling quality time", body: "Schedule a weekly meal or movie night. \n\nOr, ask a friend to come to your favorite exercise class, join your book club, or accompany you to a volunteer gig. \n\nThe more things you can do together, potentially the more often you’ll be able to see each other. These repeated interactions are so important for keeping a friendship going.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
+let friendsTip20 = Tip(header: "Be A Better Friend 👫", title: "Set regular hangout routines with your friends. It takes the guesswork out of scheduling quality time", body: "Schedule a weekly meal or movie night. \n\nOr, ask a friend to come to your favorite exercise class, join your book club, or accompany you to a volunteer gig. \n\nThe more things you can do together, potentially the more often you’ll be able to see each other. These repeated interactions are so important for keeping a friendship going.", sourceName: "The New York Times", sourceURL: "https://www.nytimes.com/2018/01/18/smarter-living/how-to-maintain-friends.html", sponsorLogo: "", sponsorURL: "")
 
 //6
 let friendsTip21 = Tip(header: "Harvard Professor", title: "Continue to invest in your relationships even when they are going well", body: "The relationships you have with family and close friends are going to be the most important sources of happiness in your life. But you have to be careful. \n\nWhen it seems like everything at home is going well, you will be lulled into believing that you can put your investments in these relationships onto the back burner. \n\nThat would be an enormous mistake. By the time serious problems arise in those relationships, it often is too late to repair them. \n\nThis means, almost paradoxically, that the time when it is most important to invest in building strong families and close friendships is when it appears, at the surface, as if it's not necessary." , sourceName: "How Will You Measure Your Life? by Clayton Christensen", sourceURL: "https://www.amazon.com/dp/B006ID0CH4/", sponsorLogo: "", sponsorURL: "")
-let friendsTip22 = Tip(header: "Find Your Tribe", title: "Humans are social creatures that crave meaning (in a world that sometimes seems all too meaningless)", body: "In his book, Tribe, Sebastian Junger writes: “Humans don’t mind hardship, in fact, they thrive on it; what they mind is not feeling necessary. Modern society has perfected the art of making people not feel necessary. It’s time for that to end.” \n\nThink about what brings meaning to your life. That’s the first step to finding your tribe — your group of people that share similar vision and values.", sourceName: "Observer", sourceURL: "https://observer.com/2016/11/bulletproof-mind-6-secrets-of-mental-toughness-from-the-navy-seals/", sponsorLogo: "", sponsorURL: "")
+let friendsTip22 = Tip(header: "Find Your Tribe 👫", title: "Humans are social creatures that crave meaning (in a world that sometimes seems all too meaningless)", body: "In his book, Tribe, Sebastian Junger writes: “Humans don’t mind hardship, in fact, they thrive on it; what they mind is not feeling necessary. Modern society has perfected the art of making people not feel necessary. It’s time for that to end.” \n\nThink about what brings meaning to your life. That’s the first step to finding your tribe — your group of people that share similar vision and values.", sourceName: "Observer", sourceURL: "https://observer.com/2016/11/bulletproof-mind-6-secrets-of-mental-toughness-from-the-navy-seals/", sponsorLogo: "", sponsorURL: "")
 let friendsTip23 = Tip(header: "Eliminate Negative People From Your Life", title: "Les Brown: Upgrade your relationships. You earn within $2,000 to $3,000 of your closest friends. You got to look at the people in your life and ask, \"what is this relationship doing to me?\"", body: "There are many people, because of the toxic negative energy draining people in their lives they will never be successful, because those toxic relationships will compromise their power. \n\nNow some people might say Les, can we change them? No! It’s a full time job changing yourself.", sourceName: "Fearless Motivation", sourceURL: "https://www.fearlessmotivation.com/2018/01/11/les-brown-you-have-greatness-in-you/", sponsorLogo: "", sponsorURL: "")
 let friendsTip24 = Tip(header: "Increase Happiness", title: "Study: Belonging to multiple group memberships that are important to you boosts your self-esteem much more than having friends alone", body: "The researcher believes that group memberships provide benefits that friends alone do not; namely, meaning, connection, support and a sense of control over our lives. \n\nFor example, religious groups or organizations striving toward a goal such as reducing poverty can provide a greater sense of purpose.", sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2015/06/150615162617.htm", sponsorLogo: "", sponsorURL: "")
 
@@ -1734,7 +1734,7 @@ let wealth35 = Tip(header: "Warning 🚨", title: "Becoming wealthy can make you
 let wealth36 = Tip(header: "Ray Dalio (2020)", title: "DON'T: Own bonds or cash \n\nDO: Diversify between currencies, asset classes, and countries because it's the best way to reduce risk without reducing opportunity", body: "Dalio's advice to stay out of bonds comes as interest rates remain at historic lows and investors raise doubts over the traditional 60/40 portfolio composition. \n\nAccording to 2020 report from JPMorgan Asset Management, a portfolio with 60% global equities and 40% bonds is projected to provide an annual return of just 4.2% over the next 10 to 15 years. A year earlier, returns on the same portfolio were projected at 5.4%. \n\nBeyond diversification, Dalio said that liquidity and differentiation should guide investor portfolios right now. Liquidity allows an investor flexibility to change as circumstances change.", sourceName: "Business Insider", sourceURL: "https://markets.businessinsider.com/news/stocks/billionaire-ray-dalio-dont-own-bonds-cash-investing-stock-market-outlook-2020-11-1029821971", sponsorLogo: "", sponsorURL: "")
 let wealth37 = Tip(header: "Investing In Individual Stocks", title: "DON'T: Base your choice on which companies are performing well right now. \nDO: Invest in businesses that you think have long-term staying power.", body: "“Put together a portfolio of companies whose aggregate earnings march upward over the years, and so also will the portfolio’s market value.“ \n\n“If you aren’t willing to own a stock for 10 years, don’t even think about owning it for 10 minutes.“ \n\n- Billionaire Warren Buffett", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2020/08/31/billionaire-warren-buffetts-best-life-and-investing-advice.html", sponsorLogo: "", sponsorURL: "")
 let wealth38 = Tip(header: "When The Market Tanks 📉😬", title: "DON'T: Panic and sell off your investments just because of the latest news cycle. \n\nDO: Stay the course and trust that you’ve invested in companies that will stand the test of time.", body: "Don’t watch the market closely. Investors need an ability to both disregard mob fears or enthusiasms and to focus on a few simple fundamentals. \n\nThe markets are always going to be volatile, and the best thing any investor can do, regardless of experience, is keep a level head. \n\n- Billionaire Warren Buffett", sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2020/08/31/billionaire-warren-buffetts-best-life-and-investing-advice.html", sponsorLogo: "", sponsorURL: "")
-let wealth39 = Tip(header: "Billionaire Warren Buffett 💰", title: "Consistently buy Vanguard's S&P 500 low-cost index fund (VFIAX)", body: "In his 2013 letter to Berkshire Hathaway shareholders, Mr. Buffett described how he has advised trustees to manage the money he will leave to his wife: “Put 10% of the cash in short-term government bonds and 90% in a very low-cost S&P 500 index fund. (I suggest Vanguard’s.) I believe the trust’s long-term results from this policy will be superior to those attained by most investors – whether pension funds, institutions or individuals – who employ high-fee managers.” \n\nInvestors can implement the above portfolio with just two Vanguard funds: \n• Vanguard 500 Index Fund Admiral Shares (VFIAX) \n• Vanguard Short-Term Treasury Index Fund Admiral Shares (VSBSX)", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/robertberger/2020/11/24/how-to-invest-money-based-on-advice-from-warren-buffett/?sh=27b743ee526c", sponsorLogo: "", sponsorURL: "https://investor.vanguard.com/mutual-funds/profile/VFIAX")
+let wealth39 = Tip(header: "Billionaire Warren Buffett 💰", title: "Consistently buy Vanguard's S&P 500 low-cost index fund (VFIAX)", body: "In his 2013 letter to Berkshire Hathaway shareholders, Mr. Buffett described how he has advised trustees to manage the money he will leave to his wife: \n\n“Put 10% of the cash in short-term government bonds and 90% in a very low-cost S&P 500 index fund. (I suggest Vanguard’s.) I believe the trust’s long-term results from this policy will be superior to those attained by most investors – whether pension funds, institutions or individuals – who employ high-fee managers.” \n\nInvestors can implement the above portfolio with just two Vanguard funds: \n• Vanguard 500 Index Fund Admiral Shares (VFIAX) \n• Vanguard Short-Term Treasury Index Fund Admiral Shares (VSBSX)", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/robertberger/2020/11/24/how-to-invest-money-based-on-advice-from-warren-buffett/?sh=27b743ee526c", sponsorLogo: "", sponsorURL: "https://investor.vanguard.com/mutual-funds/profile/VFIAX")
 let wealth40 = Tip(header: "Chamath Palihapitiya on Bitcoin 💰", title: "Everyone should have 1% of their assets in Bitcoin. Buy it, hold it, put it away, and hope that you never need it.", body: "He's argued bitcoin serves as a long-term store of value. \"I think of this as the \"insurance policy\" I use to sleep soundly at night just in case the central banks and governments of the world step on a landmine.\" \n\nPalihapitiya warned against the buying and selling of bitcoin for short-term profit, advising investors to hold it and \"hope that you never need it because the amount of actual chaos that will drive bitcoin appreciation is not something we actually really want to see.\"", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/billybambrough/2020/10/11/neither-trump-nor-biden-will-help-the-us-dollar-warns-early-facebook-exec-calls-bitcoin-an-insurance-policy/", sponsorLogo: "", sponsorURL: "")
 
 
@@ -1871,7 +1871,10 @@ let jobSearchTopics = Topics(title: jobSearchTitle, icon: jobSearchIcon, topics:
 
 // MARK: - Filmmaking
 
-let filmmakingTitle = "Filmmaking"
+
+
+
+let filmmakingTitle = "Film Advice"
 let filmmakingIcon = Constants.Icon.filmmaking
 
 //MARK: Filmmaking Advice
@@ -2020,11 +2023,11 @@ let filmmakingHabit4 = Tip(header: "Quote", title: "“A writer who waits for id
 let filmmakingHabit5 = Tip(header: "Daily Habit", title: "Pulitzer prize winner, WH Auden rose shortly after 6:00 a.m., made himself coffee, and settled down to work", body: "His mind was sharpest from 7:00 until 11:30 a.m., and he rarely failed to take advantage of these hours. \n\nAuden usually resumed his work after lunch and continued into the late afternoon. \n\nAuden went to bed early, never later than 11:00 and, as he grew older, closer to 9:30." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
 let filmmakingHabit6 = Tip(header: "Daily Habit", title: "“I write every morning as soon after first light as possible. There is no one to disturb you.”", body: "- Ernest Hemingway \nNobel Prize winner and novelist" , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
 let filmmakingHabit7 = Tip(header: "Quote", title: "Write. Rewrite. When not writing or rewriting, read. I know of no shortcuts.", body: "- Larry L. King" , sourceName: "SCREENCRAFT", sourceURL: "https://screencraft.org/2013/01/23/50-great-screenwriting-quotes/", sponsorLogo: "", sponsorURL: "")
-let filmmakingHabit8 = Tip(header: "Daily Habit", title: "Stephen King: “I try to get 6 pages a day”", body: "Stephen King’s morning routine: “I have a glass of water or a cup of tea. I sit down, from 8:00 to 8:30, every morning. I have my vitamin pill and my music, sit in the same seat, and the papers are all arranged in the same places…“ \n\n“The cumulative purpose of doing these things the same way every day seems to be a way of saying to the mind, you’re going to be dreaming soon.”" , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
-let filmmakingHabit9 = Tip(header: "Daily Habit", title: "Haruki Murakami: “The repetition itself becomes the important thing.”", body: "When I’m in writing mode for a novel, I get up at four a.m. and work for five to six hours. In the afternoon, I run for ten kilometers or swim for fifteen hundred meters (or do both), then I read a bit and listen to some music. I go to bed at nine p.m. \n\nI keep to this routine every day without variation. The repetition itself becomes the important thing; it’s a form of mesmerism. I mesmerize myself to reach a deeper state of mind. \n\nBut to hold to such repetition for so long — six months to a year — requires a good amount of mental and physical strength. In that sense, writing a long novel is like survival training. Physical strength is as necessary as artistic sensitivity." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
-let filmmakingHabit10 = Tip(header: "Daily Habit", title: "Susan Sontag's resolutions that helped her stick to her daily writing habits", body: "I will get up every morning no later than eight. \n\nI will write in the Notebook every day. \n\nI will tell people not to call in the morning, or not answer the phone. \n\n I will try to confine my reading to the evening. \n\nI will answer letters once a week." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
-let filmmakingHabit11 = Tip(header: "Daily Habit", title: "Maya Angelou: “I get up at about 5:30, and I’m ready to have coffee by 6, usually with my husband. He goes off to his work around 6:30, and I go off to mine.”", body: "I keep a hotel room in which I do my work — I try to get there around 7, and I work until 2 in the afternoon. \n\nIf the work is going badly, I stay until 12:30. If it’s going well, I’ll stay as long as it’s going well. \n\nWhen I come home at 2, I read over what I’ve written that day, and then try to put it out of my mind. \n\nMaybe after dinner I’ll read to my husband what I’ve written that day. He doesn’t comment, but hearing it aloud is good." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
-let filmmakingHabit12 = Tip(header: "Daily Habit", title: "Ray Bradbury: “The best hygiene for beginning writers or intermediate writers is to write a hell of a lot of short stories. If you can write one short story a week — it doesn’t matter what the quality is to start — but at least you’re practicing and at the end of the year you have 52 short stories and I defy you to write 52 bad ones. It can’t be done.”", body: "The problem with novels is that you can spend a whole year writing one and it might not turn out well because you haven’t learned to write yet. \n\nI’ll give you a programme to follow every night. Very simple programme. For the next thousand nights, before you go to bed every night, read one short story. That will take you ten minutes, fifteen minutes…for the next 1,000 nights." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
+let filmmakingHabit8 = Tip(header: "AM Routine", title: "Stephen King: “I try to get 6 pages a day”", body: "• 🍵 Pours a cup of water or tea. \n• 🪑 Sits down in the same chair every morning from 8:00 to 8:30. \n• 📝 Has his papers arranged in the same places. \n• 🎶 Plays music. \n\n“The cumulative purpose of doing these things the same way every day seems to be a way of saying to the mind, you’re going to be dreaming soon.”" , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
+let filmmakingHabit9 = Tip(header: "Daily Habit", title: "Haruki Murakami: When I’m writing a novel, I get up at 4:00am and work for 5-6 hours. In the afternoon, I run 10 kilometers or swim 1,500 meters (or do both), then I read and listen to music. I go to bed at 9:00pm.", body: "I keep to this routine every day without variation. The repetition itself becomes the important thing; it’s a form of mesmerism. I mesmerize myself to reach a deeper state of mind. \n\nBut to hold to such repetition for so long — six months to a year — requires a good amount of mental and physical strength. In that sense, writing a long novel is like survival training. Physical strength is as necessary as artistic sensitivity." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
+let filmmakingHabit10 = Tip(header: "Daily Habit", title: "Susan Sontag's resolutions that helped her stick to her daily writing habits", body: "• 🌅 I will get up every morning no later than 8:00. \n\n•📓 I will write in the Notebook every day. \n\n•🙅‍♀️ I will tell people not to call in the morning, or not answer the phone. \n\n•📚 I will try to confine my reading to the evening. \n\n•✉️ I will answer letters once a week." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
+let filmmakingHabit11 = Tip(header: "Daily Habit", title: "Maya Angelou: “I get up at 5:30, and I’m ready to have coffee by 6:00, usually with my husband. He goes off to his work around 6:30, and I go off to mine.”", body: "I keep a hotel room in which I do my work — I try to get there around 7:00, and I work until 2:00 in the afternoon. \n\nIf the work is going badly, I stay until 12:30. If it’s going well, I’ll stay as long as it’s going well. \n\nWhen I come home at 2:00, I read over what I’ve written that day, and then try to put it out of my mind. \n\nMaybe after dinner I’ll read to my husband what I’ve written that day. He doesn’t comment, but hearing it aloud is good." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
+let filmmakingHabit12 = Tip(header: "Daily Habit", title: "Ray Bradbury: “The best hygiene for beginning writers or intermediate writers is to write a hell of a lot of short stories. If you can write one short story a week — it doesn’t matter what the quality is to start — but at least you’re practicing and at the end of the year you have 52 short stories and I defy you to write 52 bad ones. It can’t be done.”", body: "The problem with novels is that you can spend a whole year writing one and it might not turn out well because you haven’t learned to write yet. \n\nI’ll give you a programme to follow every night. Very simple programme. For the next thousand nights, before you go to bed every night, read one short story. That will take you 10 minutes, 15 minutes…for the next 1,000 nights." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
 
 let filmmakingHabit13 = Tip(header: "Daily Habit", title: "Ray Bradbury: “The best hygiene for beginning writers or intermediate writers is to write a hell of a lot of short stories. If you can write one short story a week — it doesn’t matter what the quality is to start — but at least you’re practicing and at the end of the year you have 52 short stories and I defy you to write 52 bad ones. It can’t be done.”", body: "The problem with novels is that you can spend a whole year writing one and it might not turn out well because you haven’t learned to write yet. \n\nI’ll give you a programme to follow every night. Very simple programme. For the next thousand nights, before you go to bed every night, read one short story. That will take you ten minutes, fifteen minutes…for the next 1,000 nights." , sourceName: "Medium: The Daily Routine of 20 Famous Writers", sourceURL: "https://medium.com/the-mission/the-daily-routine-of-20-famous-writers-and-how-you-can-use-them-to-succeed-1603f52fbb77", sponsorLogo: "", sponsorURL: "")
 
@@ -2043,8 +2046,12 @@ let filmmakingHabitTipArray4 = [filmmakingHabit16, filmmakingHabit17, filmmaking
 
 let filmmakingHabitTipArrays = [filmmakingHabitTipArray0, filmmakingHabitTipArray1, filmmakingHabitTipArray2, filmmakingHabitTipArray3, filmmakingHabitTipArray4]
 
-let filmmakingHabitTopic = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmmakingHabitTipArrays.random())
-let filmmakingHabitTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon, topics: [filmmakingHabitTopic,])
+let filmmakingHabitTitle = "Filmmaker Habits"
+let filmmakingHabitIcon = Constants.Icon.routine
+
+let filmmakingHabitTopic = Topic(title: filmmakingHabitTitle, icon: filmmakingHabitIcon, tip: filmmakingHabitTipArrays.random())
+let filmmakingHabitTopics = Topics(title: filmmakingHabitTitle, icon: filmmakingHabitIcon, topics: [filmmakingHabitTopic,])
+
 
 
 
@@ -2056,25 +2063,50 @@ let filmmakingHabitTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon,
 
 
 //SETS & LOCATIONS
-let filmPre2 = Tip(header: "Sets vs. Real Locations", title: "Guilermo del Toro:", body: "\"In Hellboy 2, we built the entire New York street. We built it in Budapest. I hate shooting in real locations. I hate shooting in daylight. I really like complete control.\"" , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmPre4 = Tip(header: "Set and Location Scouting", title: "Guilermo del Toro: ", body: "The first time I'm building a set or the first time I'm visiting a location, I should already know where the camera should be 3 months later [when production begins]. \n\nBecause when you're building a set, you need to say well this is the ramp for the techno to go in and I need this wall to move for the techno to be able to arm to the left and I can extend this much, etc." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmPre5 = Tip(header: "Set Design", title: "Guilermo del Toro:", body: "Every set that I design is designed to fit in 185 which is the format that I prefer. \n\nIf I build a wall and I don’t photograph it I’m not doing my job right. For example, I’ll tell my set designer we need to move the entire set 20 feet deeper into the stage so that it all fits in my lens." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmPre7 = Tip(header: "Location Scouting", title: "Francis Ford Coppola:", body: "One of the biggest costs of making a film when you fly to a far away location is the cost of plane tickets, hotels, and housing the families of the people on your crew." , sourceName: "Francis Ford Coppola Explained His Current \"Film Student\" Mentality at Tribeca 2016", sourceURL: "https://www.youtube.com/watch?v=WdISYjTmqek", sponsorLogo: "", sponsorURL: "")
-let filmPre13 = Tip(header: "Location Scouting", title: "David O. Russell:", body: "Search in person and online." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let setsLocation0 = Tip(header: "Sets vs. Real Locations", title: "Guilermo del Toro:", body: "\"In Hellboy 2, we built the entire New York street. We built it in Budapest. I hate shooting in real locations. I hate shooting in daylight. I really like complete control.\"" , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let setsLocation1 = Tip(header: "Set and Location Scouting", title: "Guilermo del Toro: ", body: "The first time I'm building a set or the first time I'm visiting a location, I should already know where the camera should be 3 months later [when production begins]. \n\nBecause when you're building a set, you need to say well this is the ramp for the techno to go in and I need this wall to move for the techno to be able to arm to the left and I can extend this much, etc." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let setsLocation2 = Tip(header: "Set Design", title: "Guilermo del Toro:", body: "Every set that I design is designed to fit in 185 which is the format that I prefer. \n\nIf I build a wall and I don’t photograph it I’m not doing my job right. For example, I’ll tell my set designer we need to move the entire set 20 feet deeper into the stage so that it all fits in my lens." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let setsLocation3 = Tip(header: "Location Scouting", title: "Francis Ford Coppola:", body: "One of the biggest costs of making a film when you fly to a far away location is the cost of plane tickets, hotels, and housing the families of the people on your crew." , sourceName: "Francis Ford Coppola Explained His Current \"Film Student\" Mentality at Tribeca 2016", sourceURL: "https://www.youtube.com/watch?v=WdISYjTmqek", sponsorLogo: "", sponsorURL: "")
+let setsLocation4 = Tip(header: "Location Scouting", title: "David O. Russell:", body: "Search in person and online." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+
+let setsLocationTipArray0 = [setsLocation0, setsLocation1, setsLocation2, setsLocation3]
+let setsLocationTipArray1 = [setsLocation4, setsLocation3, setsLocation2, setsLocation1]
+let setLocationTitle = "Set & Location"
+let setLocationIcon = Constants.Icon.setLocation
+let setsLocationTipArrays = [setsLocationTipArray0, setsLocationTipArray1]
+let setsLocationTopic = Topic(title: setLocationTitle, icon: setLocationIcon, tip: setsLocationTipArrays.random())
+let setsLocationTopics = Topics(title: setLocationTitle, icon: setLocationIcon, topics: [setsLocationTopic,])
 
 
 
 //SET DESIGN
-let filmPre6 = Tip(header: "Costume Design", title: "Guilermo del Toro:", body: "Wardrobe is character. It's the way we present ourselves to the rest of the world. \n\nThe way you design a character's wardrobe should not be a visual cue only. It should should also be articulating what the character is." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmPre12 = Tip(header: "David O. Russell:", title: "The Production Designer's First Meeting With The Director", body: "The production designer should bring ideas to the meeting, bring a book the contains ideas, and demonstrate to the director that they've read the script in advance." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmPre19 = Tip(header: "Pre-Production Design", title: "Guilermo del Toro:", body: "I start design before the production designer shows up. I start with 4-6 designers and myself (the director), and we start designing elaborate ideas. \n\nSo when the production designer and wardrobe design come in, we already have 40-60 drawings of sets, characters, and a color palette. \n\nI do this because I want them to know that there's thought before they come in that unifies everything. Because people think in terms of different disciplines. But cinematography, production design, production wardrobe, make-up, hair are a single thing. They need to articulate in harmony. \n\nWhen people are saying great cinematography, they are saying great production design. When they say great production design, they are saying great wardrobe. Because everything is of a piece." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let setDesign0 = Tip(header: "Costume Design", title: "Guilermo del Toro:", body: "Wardrobe is character. It's the way we present ourselves to the rest of the world. \n\nThe way you design a character's wardrobe should not be a visual cue only. It should should also be articulating what the character is." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let setDesign1 = Tip(header: "David O. Russell:", title: "The Production Designer's First Meeting With The Director", body: "The production designer should bring ideas to the meeting, bring a book the contains ideas, and demonstrate to the director that they've read the script in advance." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let setDesign2 = Tip(header: "Pre-Production Design", title: "Guilermo del Toro:", body: "I start design before the production designer shows up. I start with 4-6 designers and myself (the director), and we start designing elaborate ideas. \n\nSo when the production designer and wardrobe design come in, we already have 40-60 drawings of sets, characters, and a color palette. \n\nI do this because I want them to know that there's thought before they come in that unifies everything. Because people think in terms of different disciplines. But cinematography, production design, production wardrobe, make-up, hair are a single thing. They need to articulate in harmony. \n\nWhen people are saying great cinematography, they are saying great production design. When they say great production design, they are saying great wardrobe. Because everything is of a piece." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let setDesign3 = Tip(header: "Set Design", title: "Guilermo del Toro:", body: "\"The floor of the set needs to be darker than the rest of the set because it anchors the set. This is something I'm absolutely sure of. \n\nIf the floor is light, the whole set goes down in visual value.\"" , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+
+let setDesignTipArray0 = [setDesign0, setDesign1, setDesign2, setDesign3]
+let setDesignTipArrays = [setDesignTipArray0]
+let setDesignTitle = "Design"
+let setDesignIcon = Constants.Icon.setDesign
+let setDesignTopic = Topic(title: setDesignTitle, icon: setDesignIcon, tip: setDesignTipArrays.random())
+let setDesignTopics = Topics(title: setDesignTitle, icon: setDesignIcon, topics: [setDesignTopic,])
+
 
 
 //CASTING
-let filmPre3 = Tip(header: "Casting Child Actors", title: "Guilermo del Toro: ", body: "With children, I cast their eyes. Are they seeing me? Do they make eye contact? \n\nI ask them to look around. If their eyes are curious and present then I cast them. \n\nThe ratio for finding a good child actor is 1 out of 100." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmPre11 = Tip(header: "Casting Actors", title: "David O. Russell:", body: "For smaller roles, I read with them on Skype or Facetime. \n\nI'll ask them to read multiple times. I'll see how they take direction, if they're going to take direction or not. I'll see if they can do it 4-5 ways. \n\nI'll see if they have the rhythm that I have in my head for the character or if they have something more exciting." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmPre15 = Tip(header: "Casting Actors", title: "Orson Welles:", body: "I think that a performance, when it deserves to be great or important, is always entirely made-up of the actor themself. And entirely achieved by what they have left in the dressing room before they came out in front of the camera. \n\nIn other words, it's what you take away from yourself, to reveal the truth of what you're doing that makes a performance. And if an actor doesn't have the ability to do that then I only use them if they have a good face for a few lines. \n\nI think, essentially, there is no such thing as becoming another character by putting on a lot of make-up. You may need to put the make-up on, but what you're really doing is undressing yourself. And even tearing yourself apart. And presenting to the public, that part of you, which corresponds to what you are playing. \n\nThere is a villain in each of us, a murderer in each of us, a fascist in each of us, and a saint in each of us. And the actor is the man or woman who can eliminate from themself those things that will interfere with that truth. \n\nSo, I look for those kinds of people. And I look for the right face. Because, after all, the camera makes pictures and it likes people and dislikes people. And you have to guess which ones it will like and which ones it won't." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
-let filmPre18 = Tip(header: "Casting Child Actors", title: "David O. Russell:", body: "Always cast identical twins or triplets so you can get more hours. \n\nAnd it's good to have your adult actors test with the child actors to see if they will work well together." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let casting0 = Tip(header: "Casting Child Actors", title: "Guilermo del Toro: ", body: "With children, I cast their eyes. Are they seeing me? Do they make eye contact? \n\nI ask them to look around. If their eyes are curious and present then I cast them. \n\nThe ratio for finding a good child actor is 1 out of 100." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let casting1 = Tip(header: "Casting Actors", title: "David O. Russell:", body: "For smaller roles, I read with them on Skype or Facetime. \n\nI'll ask them to read multiple times. I'll see how they take direction, if they're going to take direction or not. I'll see if they can do it 4-5 ways. \n\nI'll see if they have the rhythm that I have in my head for the character or if they have something more exciting." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let casting2 = Tip(header: "Casting Actors", title: "Orson Welles:", body: "I think that a performance, when it deserves to be great or important, is always entirely made-up of the actor themself. And entirely achieved by what they have left in the dressing room before they came out in front of the camera. \n\nIn other words, it's what you take away from yourself, to reveal the truth of what you're doing that makes a performance. And if an actor doesn't have the ability to do that then I only use them if they have a good face for a few lines. \n\nI think, essentially, there is no such thing as becoming another character by putting on a lot of make-up. You may need to put the make-up on, but what you're really doing is undressing yourself. And even tearing yourself apart. And presenting to the public, that part of you, which corresponds to what you are playing. \n\nThere is a villain in each of us, a murderer in each of us, a fascist in each of us, and a saint in each of us. And the actor is the man or woman who can eliminate from themself those things that will interfere with that truth. \n\nSo, I look for those kinds of people. And I look for the right face. Because, after all, the camera makes pictures and it likes people and dislikes people. And you have to guess which ones it will like and which ones it won't." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
+let casting3 = Tip(header: "Casting Child Actors", title: "David O. Russell:", body: "Always cast identical twins or triplets so you can get more hours. \n\nAnd it's good to have your adult actors test with the child actors to see if they will work well together." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+
+let castingTipArray0 = [casting0, casting1, casting2, casting3]
+
+let castingTipArrays = [castingTipArray0]
+let castingTitle = "Casting"
+let castingIcon = Constants.Icon.casting
+let castingTopic = Topic(title: castingTitle, icon: castingIcon, tip: castingTipArrays.random())
+let castingTopics = Topics(title: castingTitle, icon: castingIcon, topics: [castingTopic,])
 
 
 //REHEARSING
@@ -2083,16 +2115,31 @@ let filmPre17 = Tip(header: "Rehearsing With Actors", title: "David O. Russell:"
 
 
 //PITCHING
-let filmPre8 = Tip(header: "Pitching Your Film", title: "David O. Russell:", body: "I go into a studio, and not only tell them what they're getting, but I'm also going to act out the trailer for them. \n\nI do that for them and they feel a little better. I'm also trying to make a trailer that's exciting which helps me as a storyteller. It helps me to imagine a trailer. \n\nWhat would an exciting trailer be like when I'm in a movie theater and I see a trailer and I say, \"Oh shit that looks exciting.\" What is that? I want to make that!" , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmPre10 = Tip(header: "Pitching Your Film", title: "David O. Russell:", body: "I tell my story idea to anybody who I trust. You have to find good listeners. \n\nI learned 25 years ago that there are listeners who will try to crush your ideas. You need to find very safe people." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let screenwriting9 = Tip(header: "Advice", title: "David O. Russell: Pitch the script as you write", body: "I find it useful to talk to actors about the story I’m writing. It helps me get the story out of my head. \n\nI tell them the story. It's like I'm auditioning for them." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let pitching0 = Tip(header: "Pitching Your Film", title: "David O. Russell:", body: "I go into a studio, and not only tell them what they're getting, but I'm also going to act out the trailer for them. \n\nI do that for them and they feel a little better. I'm also trying to make a trailer that's exciting which helps me as a storyteller. It helps me to imagine a trailer. \n\nWhat would an exciting trailer be like when I'm in a movie theater and I see a trailer and I say, \"Oh shit that looks exciting.\" What is that? I want to make that!" , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let pitching1 = Tip(header: "Pitching Your Film", title: "David O. Russell:", body: "I tell my story idea to anybody who I trust. You have to find good listeners. \n\nI learned 25 years ago that there are listeners who will try to crush your ideas. You need to find very safe people." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let pitching2 = Tip(header: "Advice", title: "David O. Russell: Pitch the script as you write", body: "I find it useful to talk to actors about the story I’m writing. It helps me get the story out of my head. \n\nI tell them the story. It's like I'm auditioning for them." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+
+let pitchingTipArray0 = [pitching0, pitching1, pitching2,]
+
+let pitchingTipArrays = [pitchingTipArray0]
+let pitchingTitle = "Pitching"
+let pitchingIcon = Constants.Icon.pitching
+let pitchingTopic = Topic(title: pitchingTitle, icon: pitchingIcon, tip: pitchingTipArrays.random())
+let pitchingTopics = Topics(title: pitchingTitle, icon: pitchingIcon, topics: [pitchingTopic,])
+
 
 
 //HIRING CREW
-let filmPre14 = Tip(header: "Picking A Cinematographer", title: "David O. Russell: ", body: "I really learned how to pick cinematographers after my first 3 films. \n\nI learned that I had to pick somebody that when I'm in a room with them alone it felt like we were really listening to each other and getting along great. \n\nIt's good if they're an artist too but that they will still take your direction. \n\nThey should be excited about cinema and will argue for a shot. But if they are shut down 7/10 times they're not going to stop their enthusiasm for the film and for pitching new ideas." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let hiringCrew0 = Tip(header: "Picking A Cinematographer", title: "David O. Russell: ", body: "I really learned how to pick cinematographers after my first 3 films. \n\nI learned that I had to pick somebody that when I'm in a room with them alone it felt like we were really listening to each other and getting along great. \n\nIt's good if they're an artist too but that they will still take your direction. \n\nThey should be excited about cinema and will argue for a shot. But if they are shut down 7/10 times they're not going to stop their enthusiasm for the film and for pitching new ideas." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
 
 //4
+let hiringCrewTipArray0 = [hiringCrew0, ]
 
+let hiringCrewTipArrays = [hiringCrewTipArray0]
+let hiringCrewTitle = "Hiring Crew"
+let hiringCrewIcon = Constants.Icon.hiringCrew
+let hiringCrewTopic = Topic(title: hiringCrewTitle, icon: hiringCrewIcon, tip: hiringCrewTipArrays.random())
+let hiringCrewTopics = Topics(title: hiringCrewTitle, icon: hiringCrewIcon, topics: [hiringCrewTopic,])
 
 
 
@@ -2107,104 +2154,138 @@ let filmPre16 = Tip(header: "Storyboarding", title: "David O. Russell:", body: "
 
 
 //WEEK 1
-//0
-let filmPreTipArray0 = [filmPre0, filmPre1, filmPre2, filmPre3]
-let filmPreTopic0 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray0)
-
-//1
-let filmPreTipArray1 = [filmPre4, filmPre5, filmPre6, filmPre7]
-let filmPreTopic1 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray1)
-
-//2
-let filmPreTipArray2 = [filmPre8, filmPre9, filmPre10, filmPre11]
-let filmPreTopic2 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray2)
-
-//3
-let filmPreTipArray3 = [filmPre12, filmPre13, filmPre14, filmPre15]
-let filmPreTopic3 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray3)
-
-//4
-let filmPreTipArray4 = [filmPre16, filmPre17, filmPre18, filmPre19]
-let filmPreTopic4 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray4)
-
-//5 WIP
-let filmPreTipArray5 = [filmPre7, filmPre6, filmPre5, filmPre4]
-let filmPreTopic5 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray5)
-
-//6 WIP
-let filmPreTipArray6 = [filmPre11, filmPre10, filmPre9, filmPre8]
-let filmPreTopic6 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray6)
-
-//7 WIP
-let filmPreTipArray7 = [filmPre14, filmPre18, filmPre17, filmPre16]
-let filmPreTopic7 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray7)
-
-let filmPreTipArrays = [filmPreTipArray0, filmPreTipArray1, filmPreTipArray2, filmPreTipArray3, filmPreTipArray4, filmPreTipArray5, filmPreTipArray6, filmPreTipArray7]
-
-let filmPreTopic = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArrays.random())
-let filmPreTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon, topics: [filmPreTopic,])
+////0
+//let filmPreTipArray0 = [filmPre0, filmPre1, filmPre2, filmPre3]
+//let filmPreTopic0 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray0)
+//
+////1
+//let filmPreTipArray1 = [filmPre4, filmPre5, filmPre6, filmPre7]
+//let filmPreTopic1 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray1)
+//
+////2
+//let filmPreTipArray2 = [filmPre8, filmPre9, filmPre10, filmPre11]
+//let filmPreTopic2 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray2)
+//
+////3
+//let filmPreTipArray3 = [filmPre12, filmPre13, filmPre14, filmPre15]
+//let filmPreTopic3 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray3)
+//
+////4
+//let filmPreTipArray4 = [filmPre16, filmPre17, filmPre18, filmPre19]
+//let filmPreTopic4 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray4)
+//
+////5 WIP
+//let filmPreTipArray5 = [filmPre7, filmPre6, filmPre5, filmPre4]
+//let filmPreTopic5 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray5)
+//
+////6 WIP
+//let filmPreTipArray6 = [filmPre11, filmPre10, filmPre9, filmPre8]
+//let filmPreTopic6 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray6)
+//
+////7 WIP
+//let filmPreTipArray7 = [filmPre14, filmPre18, filmPre17, filmPre16]
+//let filmPreTopic7 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArray7)
+//
+//let filmPreTipArrays = [filmPreTipArray0, filmPreTipArray1, filmPreTipArray2, filmPreTipArray3, filmPreTipArray4, filmPreTipArray5, filmPreTipArray6, filmPreTipArray7]
+//
+//let filmPreTopic = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPreTipArrays.random())
+//let filmPreTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon, topics: [filmPreTopic,])
 
 //MARK: Production
 //WEEK 1
 //0
 
 //DIRECTING
-let filmProd0 = Tip(header: "Directing On Set", title: "Quentin Tarantino:", body: "One of the best things a director can do for an actor is sit right by the camera. It helps you get the best performance from your actors. \n\nIf you watch the acting right by the camera, right in front of the actors, it’s as if they are acting just, and solely, and utterly only for you." , sourceName: "IndieWire", sourceURL: "https://www.indiewire.com/gallery/directing-tips-filmmakers-christopher-nolan-wes-anderson-quentin-tarantino-advice/moncler-a-tribute-to-new-york-city-new-york-usa-16-nov-2016-2/", sponsorLogo: "", sponsorURL: "")
-let filmProd13 = Tip(header: "Directing", title: "Francis Ford Coppola:", body: "In film, you always have problems and part of your job as a director is to see how you can make the problem be an advantage." , sourceName: "Apocalypse Now - 2001 Cannes Film Festival Francis Ford Coppola", sourceURL: "https://www.youtube.com/watch?v=4JxK6wLHbPs", sponsorLogo: "", sponsorURL: "")
-let filmProd31 = Tip(header: "Production", title: "Steven Spielberg:", body: "I've gotten some of my best ideas from assistant directors." , sourceName: "Bridge of Spies DGA Q&A with Steven Spielberg and Martin Scorsese", sourceURL: "https://www.youtube.com/watch?v=ufRw6bT7CL0", sponsorLogo: "", sponsorURL: "")
+let directing0 = Tip(header: "Directing On Set", title: "Quentin Tarantino:", body: "One of the best things a director can do for an actor is sit right by the camera. It helps you get the best performance from your actors. \n\nIf you watch the acting right by the camera, right in front of the actors, it’s as if they are acting just, and solely, and utterly only for you." , sourceName: "IndieWire", sourceURL: "https://www.indiewire.com/gallery/directing-tips-filmmakers-christopher-nolan-wes-anderson-quentin-tarantino-advice/moncler-a-tribute-to-new-york-city-new-york-usa-16-nov-2016-2/", sponsorLogo: "", sponsorURL: "")
+let directing1 = Tip(header: "Directing", title: "Francis Ford Coppola:", body: "In film, you always have problems and part of your job as a director is to see how you can make the problem be an advantage." , sourceName: "Apocalypse Now - 2001 Cannes Film Festival Francis Ford Coppola", sourceURL: "https://www.youtube.com/watch?v=4JxK6wLHbPs", sponsorLogo: "", sponsorURL: "")
+let directing2 = Tip(header: "Production", title: "Steven Spielberg:", body: "I've gotten some of my best ideas from assistant directors." , sourceName: "Bridge of Spies DGA Q&A with Steven Spielberg and Martin Scorsese", sourceURL: "https://www.youtube.com/watch?v=ufRw6bT7CL0", sponsorLogo: "", sponsorURL: "")
+
+let directingTipArray0 = [directing0, directing1, directing2, ]
+
+let directingTipArrays = [directingTipArray0]
+let directingTitle = "Directing"
+let directingIcon = Constants.Icon.directing
+let directingTopic = Topic(title: directingTitle, icon: directingIcon, tip: directingTipArrays.random())
+let directingTopics = Topics(title: directingTitle, icon: directingIcon, topics: [directingTopic,])
 
 
 
 //FILMING
-let filmProd1 = Tip(header: "Depth of Field", title: "Orson Welles:", body: "You never get the same depth of field in color as you do in black and white. Secondly, a lot of the depth of field in Citizen Kane was fake. It was split-screen. Whenever the shot become impossible we used split-screen." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
-let filmProd3 = Tip(header: "Shooting a Scene", title: "Guilermo del Toro:", body: "I do this counter movement with all my movies which you discover the space with a character. I think it's great to discover the space first with the character. \n\nFor example, in Chinatown, everytime you enter a new space you have Jack Nicholson in the foreground. You're discovering the space with the character." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd10 = Tip(header: "Production", title: "Guilermo del Toro:", body: "I always like to have something going on in the background and something going on in the foreground that tells you something about the scene." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd11 = Tip(header: "Single or Multiple Cameras", title: "Guilermo del Toro:", body: "I use multiple cameras only when it's necessary for the actor or the action coverage. \n\nFor actors who like to live in the moment, it's helpful to have multiple cameras. \n\nFor action coverage, if it's an expensive shot to re-shoot or a complicated physical stunt, it's helpful to have multiple cameras." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd12 = Tip(header: "Filming Table Scenes", title: "Guilermo del Toro:", body: "Table scenes are the scenes that I dread. I would only cover a dialogue scene around a table because you have to. Whatever the actors are eating, the next day the food is going to smell." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd15 = Tip(header: "Day 1 of Filming", title: "David O. Russell:", body: "I always like to shoot with a small unit and the main actors the day before the official day of shooting. Because you just feel good. You feel loose. \n\nYou don't have the pressure of the whole crew, you just feel like you're doing something that really cool and passionate. And on day 1, you're ahead of the schedule." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd16 = Tip(header: "Day 1 of Filming", title: "David O. Russell:", body: "I always like to shoot with a small unit and the main actors the day before the official day of shooting. Because you just feel good. You feel loose. \n\nYou don't have the pressure of the whole crew, you just feel like you're doing something really cool. And on day 1, you're ahead of the schedule." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd20 = Tip(header: "Before Filmming Begins", title: "David O. Russell:", body: "Before the day begins, I like to gather the whole team in a small, closed space (e.g. van or small room). It's very important that it's in a closed space because closed spaces are very powerful. All of the power is right there and your attention is not distracted. \n\nI’ll go through the entire day with all of the keys, and sometimes the actors are there too. I'll go through the whole day. I'll tell everyone what I want to do with each thing on the schedule. \n\nAnd then everybody feels like they have their mission. They heard it from me and we’re united. Their not off doing their department's work, that's broken off from the other departments/director. They all feel connected from the same heart. We're all in it together." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd21 = Tip(header: "Before Filmming Begins", title: "David O. Russell:", body: "Before the day begins, I like to rehearse the scene intimately with the actors in a little room on set. We'll go to a little room because they're always lighting the room were going to shoot in. \n\nI say, \"This is the movie. It's not out there. It’s right here. So we should feel it right here.\" \n\nAnd then we start to ease in that room. We rehearse, we rehearse, and we rehearse, and everybody's sweating because it's 11PM and we haven't shot any of the film and the studio is calling and they're freaking out. \n\nBut, once we go, we go. It just takes off like a rocket. So you have to have faith in that rehearsal to do it and then walk onto the set with confidence." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd23 = Tip(header: "Long Takes", title: "Orson Welles:", body: "A long take, for me, depends on 2 things: a very good technical crew and very good actors. I believe that it's an enormous help to a cast, if they're good enough, to play the rhythm of an entire sequence rather than leaving it to the director entirely. Because actors keep showing us things we never suspected. Any good directors are constantly astonished by something their cast is giving them." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
-let filmProd24 = Tip(header: "Playing Music On Set", title: "David O. Russell:", body: "Sometimes, I play a beautiful music in between sets-ups that's inspiring and related to the story. And I will play music that is in the scene as they walk to scene, so the actors have a feeling of rhythm. \n\nRhythm is everything. Rhythm is character. Dustin Hoffman taught me that that is a legitimate fashion of direction. The actors can get into character just as easily through rhythm. \n\nSometimes I'll direct the actors to have a rhythm in their head to let them know what energy level their character has in the scene." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd26 = Tip(header: "Producers On Set", title: "David O. Russell:", body: "I love producers who work on set. I want them to help make stuff happen and solve problems. And to sometimes help with creative input." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd32 = Tip(header: "Ban Phones on Set 📵", title: "Directors Quentin Tarantino, Noah Baumbach, and Greta Gerwig ban phones on set", body: "Tarantino has a booth that the crew must use to check in their phones. \n\nGerwig said, \"I like everyone feeling like they're there all together at once in this special bubble. If you're an actor and you're baring your soul, I don't want you to have to look over and see a PA on a cellphone.\"" , sourceName: "The Hollywood Reporter", sourceURL: "https://www.hollywoodreporter.com/news/why-quentin-tarantino-more-directors-are-banning-cell-phones-set-1265308", sponsorLogo: "", sponsorURL: "")
-let filmProd33 = Tip(header: "Filming On Set", title: "David O. Russell:", body: "Don't get stuck on one idea. Cover yourself with other ideas." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd35 = Tip(header: "Camera Coverage", title: "Orson Welles:", body: "Orson was asked about his coverage of scenes, specifically for the long takes he used in Citizen Kane and The Trial. Orson replied, \"I cover nothing. I never cover. I was taught that by Jack Ford.\" \"When Ford finished a movie, he never cut it. He had nothing to do with the editing. He never saw a rough cut. And the way he would protect himself was to give them nothing to go to. So, if he wanted the girl to say, \"Yes, Duke.\" That was all she got to say. She didn't get to listen to all the rest of the scene or say the dialogue that he expected her not to say. That's all that he shot. And he told me to do it and I followed his instructions.\"" , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
-let filmProd36 = Tip(header: "Quote", title: "Before you say cut, wait 5 seconds", body: "- Wim Wenders \n\nOscar-nominated German filmmaker" , sourceName: "Film Crux", sourceURL: "https://www.filmcrux.com/blog/best-filmmaking-quotes", sponsorLogo: "", sponsorURL: "")
-let filmProd37 = Tip(header: "Opening Shots", title: "Make sure the first three shots in your film hook your audience", body: "Sven Pape, creator of This Guy Edits explains: \n\nThe opening shot of a great film is often noteworthy. It's a kind of strong choice that lets you know you're in good hands. \n\nSteven Soderbergh talks about the 3-shot rule, what he pays attention to in someone else's work. He says: \"After the first three shots, I know whether this person knows what they’re doing or they don’t.\"" , sourceName: "This Guy Edits (YouTube)", sourceURL: "https://www.youtube.com/watch?v=Pr-YtQlSU_I", sponsorLogo: "", sponsorURL: "")
-let filmProd38 = Tip(header: "Filming Comedies", title: "The worst thing you can do in comedy is only shoot the script because I can almost guarantee all the stuff you think is going to be hilarious, is not going to be funny. \n\nI cross shoot it so that I always have a camera on both of us. If an improv happens, I’m not missing one side of it and you just start throwing curve balls. ", body: "- Paul Feig (“Ghostbusters”)" , sourceName: "IndieWire", sourceURL: "https://www.indiewire.com/2018/05/screenwriting-advice-paul-thomas-anderson-greta-gerwig-1201962599/", sponsorLogo: "", sponsorURL: "")
+let filming0 = Tip(header: "Depth of Field", title: "Orson Welles:", body: "You never get the same depth of field in color as you do in black and white. Secondly, a lot of the depth of field in Citizen Kane was fake. It was split-screen. Whenever the shot become impossible we used split-screen." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
+let filming1 = Tip(header: "Shooting a Scene", title: "Guilermo del Toro:", body: "I do this counter movement with all my movies which you discover the space with a character. I think it's great to discover the space first with the character. \n\nFor example, in Chinatown, everytime you enter a new space you have Jack Nicholson in the foreground. You're discovering the space with the character." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let filming2 = Tip(header: "Production", title: "Guilermo del Toro:", body: "I always like to have something going on in the background and something going on in the foreground that tells you something about the scene." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let filming3 = Tip(header: "Single or Multiple Cameras", title: "Guilermo del Toro:", body: "I use multiple cameras only when it's necessary for the actor or the action coverage. \n\nFor actors who like to live in the moment, it's helpful to have multiple cameras. \n\nFor action coverage, if it's an expensive shot to re-shoot or a complicated physical stunt, it's helpful to have multiple cameras." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let filming4 = Tip(header: "Filming Table Scenes", title: "Guilermo del Toro:", body: "Table scenes are the scenes that I dread. I would only cover a dialogue scene around a table because you have to. Whatever the actors are eating, the next day the food is going to smell." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let filming5 = Tip(header: "Day 1 of Filming", title: "David O. Russell:", body: "I always like to shoot with a small unit and the main actors the day before the official day of shooting. Because you just feel good. You feel loose. \n\nYou don't have the pressure of the whole crew, you just feel like you're doing something that really cool and passionate. And on day 1, you're ahead of the schedule." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let filming6 = Tip(header: "Day 1 of Filming", title: "David O. Russell:", body: "I always like to shoot with a small unit and the main actors the day before the official day of shooting. Because you just feel good. You feel loose. \n\nYou don't have the pressure of the whole crew, you just feel like you're doing something really cool. And on day 1, you're ahead of the schedule." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let filming7 = Tip(header: "Before Filmming Begins", title: "David O. Russell:", body: "Before the day begins, I like to gather the whole team in a small, closed space (e.g. van or small room). It's very important that it's in a closed space because closed spaces are very powerful. All of the power is right there and your attention is not distracted. \n\nI’ll go through the entire day with all of the keys, and sometimes the actors are there too. I'll go through the whole day. I'll tell everyone what I want to do with each thing on the schedule. \n\nAnd then everybody feels like they have their mission. They heard it from me and we’re united. Their not off doing their department's work, that's broken off from the other departments/director. They all feel connected from the same heart. We're all in it together." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let filming8 = Tip(header: "Before Filmming Begins", title: "David O. Russell:", body: "Before the day begins, I like to rehearse the scene intimately with the actors in a little room on set. We'll go to a little room because they're always lighting the room were going to shoot in. \n\nI say, \"This is the movie. It's not out there. It’s right here. So we should feel it right here.\" \n\nAnd then we start to ease in that room. We rehearse, we rehearse, and we rehearse, and everybody's sweating because it's 11PM and we haven't shot any of the film and the studio is calling and they're freaking out. \n\nBut, once we go, we go. It just takes off like a rocket. So you have to have faith in that rehearsal to do it and then walk onto the set with confidence." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let filming9 = Tip(header: "Long Takes", title: "Orson Welles:", body: "A long take, for me, depends on 2 things: a very good technical crew and very good actors. I believe that it's an enormous help to a cast, if they're good enough, to play the rhythm of an entire sequence rather than leaving it to the director entirely. Because actors keep showing us things we never suspected. Any good directors are constantly astonished by something their cast is giving them." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
+let filming10 = Tip(header: "Playing Music On Set", title: "David O. Russell:", body: "Sometimes, I play a beautiful music in between sets-ups that's inspiring and related to the story. And I will play music that is in the scene as they walk to scene, so the actors have a feeling of rhythm. \n\nRhythm is everything. Rhythm is character. Dustin Hoffman taught me that that is a legitimate fashion of direction. The actors can get into character just as easily through rhythm. \n\nSometimes I'll direct the actors to have a rhythm in their head to let them know what energy level their character has in the scene." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let filming11 = Tip(header: "Producers On Set", title: "David O. Russell:", body: "I love producers who work on set. I want them to help make stuff happen and solve problems. And to sometimes help with creative input." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let filming12 = Tip(header: "Ban Phones on Set 📵", title: "Directors Quentin Tarantino, Noah Baumbach, and Greta Gerwig ban phones on set", body: "Tarantino has a booth that the crew must use to check in their phones. \n\nGerwig said, \"I like everyone feeling like they're there all together at once in this special bubble. If you're an actor and you're baring your soul, I don't want you to have to look over and see a PA on a cellphone.\"" , sourceName: "The Hollywood Reporter", sourceURL: "https://www.hollywoodreporter.com/news/why-quentin-tarantino-more-directors-are-banning-cell-phones-set-1265308", sponsorLogo: "", sponsorURL: "")
+let filming13 = Tip(header: "Filming On Set", title: "David O. Russell:", body: "Don't get stuck on one idea. Cover yourself with other ideas." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let filming14 = Tip(header: "Camera Coverage", title: "Orson Welles:", body: "Orson was asked about his coverage of scenes, specifically for the long takes he used in Citizen Kane and The Trial. Orson replied, \"I cover nothing. I never cover. I was taught that by Jack Ford.\" \"When Ford finished a movie, he never cut it. He had nothing to do with the editing. He never saw a rough cut. And the way he would protect himself was to give them nothing to go to. So, if he wanted the girl to say, \"Yes, Duke.\" That was all she got to say. She didn't get to listen to all the rest of the scene or say the dialogue that he expected her not to say. That's all that he shot. And he told me to do it and I followed his instructions.\"" , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
+let filming15 = Tip(header: "Quote", title: "Before you say cut, wait 5 seconds", body: "- Wim Wenders \n\nOscar-nominated German filmmaker" , sourceName: "Film Crux", sourceURL: "https://www.filmcrux.com/blog/best-filmmaking-quotes", sponsorLogo: "", sponsorURL: "")
+let filming16 = Tip(header: "Opening Shots", title: "Make sure the first three shots in your film hook your audience", body: "Sven Pape, creator of This Guy Edits explains: \n\nThe opening shot of a great film is often noteworthy. It's a kind of strong choice that lets you know you're in good hands. \n\nSteven Soderbergh talks about the 3-shot rule, what he pays attention to in someone else's work. He says: \"After the first three shots, I know whether this person knows what they’re doing or they don’t.\"" , sourceName: "This Guy Edits (YouTube)", sourceURL: "https://www.youtube.com/watch?v=Pr-YtQlSU_I", sponsorLogo: "", sponsorURL: "")
+let filming17 = Tip(header: "Filming Comedies", title: "The worst thing you can do in comedy is only shoot the script because I can almost guarantee all the stuff you think is going to be hilarious, is not going to be funny. \n\nI cross shoot it so that I always have a camera on both of us. If an improv happens, I’m not missing one side of it and you just start throwing curve balls. ", body: "- Paul Feig (“Ghostbusters”)" , sourceName: "IndieWire", sourceURL: "https://www.indiewire.com/2018/05/screenwriting-advice-paul-thomas-anderson-greta-gerwig-1201962599/", sponsorLogo: "", sponsorURL: "")
+let filming18 = Tip(header: "Guilermo del Toro:", title: "Camera Shots and Costume Design", body: "When you're in a wide-shot, the set frames the characters and the wardrobe is a compositional element. The wardrobe should display a certain set of information (color and shape). \n\nWhen you're in a close-up, the wardrobe is the set. So you build the wardrobe to have different values. The wardrobe should display a different set of information (texture, color, sheen, and detailing)." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+
+let filmingTipArray0 = [filming0, filming1, filming2, filming3]
+let filmingTipArray1 = [filming4, filming5, filming6, filming7]
+let filmingTipArray2 = [filming8, filming9, filming10, filming11]
+let filmingTipArray3 = [filming12, filming13, filming14, filming15]
+let filmingTipArray4 = [filming16, filming17, filming18, filming7]
+
+let filmingTipArrays = [filmingTipArray0, filmingTipArray1, filmingTipArray2, filmingTipArray3, filmingTipArray4]
+let filmingTitle = "Filming"
+let filmingTopic = Topic(title: filmingTitle, icon: filmmakingIcon, tip: filmingTipArrays.random())
+let filmingTopics = Topics(title: filmingTitle, icon: filmmakingIcon, topics: [filmingTopic,])
 
 
 
-//SET DESIGN
-let filmProd2 = Tip(header: "Set Design", title: "Guilermo del Toro:", body: "\"The floor of the set needs to be darker than the rest of the set because it anchors the set. This is something I'm absolutely sure of. \n\nIf the floor is light, the whole set goes down in visual value.\"" , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd9 = Tip(header: "Guilermo del Toro:", title: "Camera Shots and Costume Design", body: "When you're in a wide-shot, the set frames the characters and the wardrobe is a compositional element. The wardrobe should display a certain set of information (color and shape). \n\nWhen you're in a close-up, the wardrobe is the set. So you build the wardrobe to have different values. The wardrobe should display a different set of information (texture, color, sheen, and detailing)." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+
 
 
 //DIRECTING ACTORS
-let filmProd4 = Tip(header: "Directing Child Actors", title: "Guilermo del Toro:", body: "Never talk to a kid actor like a kid. Talk to a kid actor like an actor. You don't condescend. \n\nTell them what you are looking for and this is what I need." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd5 = Tip(header: "Directing Child Actors", title: "Guilermo del Toro:", body: "For child actors only, the one thing I find useful is that I have them do breathing exercises to hyper and hypo oxygenate in order to get agitated or calm before shooting a scene." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd6 = Tip(header: "Directing Actors", title: "Guilermo del Toro:", body: "How to you adjust an actor in a scene? Be short and sweet, and always use a verb. Give them something to do. \n\nDo not talk to them about the history of the character or the psychology, \"Remember that your mother hit with you a hot poker when you were five. No.\" \n\nInstead, say, try it this way, look at her, don't look at her, wait for this line to turn around. Things that are practical and you have a reason for it." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd7 = Tip(header: "Directing Actors", title: "Guilermo del Toro:", body: "How to you adjust an actor in a scene? Be short and sweet. Always give them something to do. Do not talk to them about the history of the character or the psychology, \"Remember that your mother hit with you a hot poker when you were five. No.\"  \n\nInstead, say, try it this way, don't look at her, look at her, wait for this line to turn around. Things that are practical. And you have a reason for it." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd8 = Tip(header: "Guilermo del Toro:", title: "Directing Actors and Camera Movements", body: "If the actor will benefit from knowing how the camera will move during the scene then tell them. \n\nOtherwise, don't because it's noise. The actor needs to carry the least amount of weight because they are an explorer. \n\nDon't put things in their backpack that they don't need." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
-let filmProd14 = Tip(header: "Working With Actors", title: "Francis Ford Coppola:", body: "When an actor has a problem with the script, the director and the actor should talk about it. Many of the talks leads to new ideas." , sourceName: "Apocalypse Now - 2001 Cannes Film Festival Francis Ford Coppola", sourceURL: "https://www.youtube.com/watch?v=4JxK6wLHbPs", sponsorLogo: "", sponsorURL: "")
-let filmProd19 = Tip(header: "Directing Actors", title: "David O. Russell:", body: "You have to carry your authority in the right way. You're like a poker player. Even if you're scared out of your fucking mind, you have to act like everything's great. Especially in front of the actors. \n\nIt's a rule I've made with the writers. Do not debate anything in front of the actors. It's like spooking the horses. Do not spook the actors. Because the actors are already anxious. Everything has to be like a-okay." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd22 = Tip(header: "Working With Child Actors", title: "David O. Russell:", body: "The adult actor hopefully takes a parental role with the child actor and then is pateralistally helping the child actor through the scene." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd29 = Tip(header: "Directing Actors", title: "David O. Russell:", body: "It makes some actors more comfortable if you tell them exactly how you want to do a scene. I make sure to choreograph exactly what I want the actors to do. \n\nI'm willing to act out a scene and embarrass myself as a director in front of the crew which takes the stigma away from an uncomfortable act in a scene. I'll cry, dance, and act out a sex scene in front of my crew to help the actors feel more comfortable in front of the crew." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd30 = Tip(header: "Directing Actors", title: "David O. Russell:", body: "The most important thing is to know what you want. " , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd34 = Tip(header: "On Set With Lots Of Extras", title: "David O. Russell:", body: "When you have a lot of extras it's always my least favorite days of shooting because there are all these strangers on set. And there's all this chaos and noise and it's really hard to hold everyone's attention, to keep the magic. \n\nYou have to keep huddling the energy. Scenes with lots of people always feels like, \"We didn't get it.\"" , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd28 = Tip(header: "Filming With Lots Of Extras", title: "David O. Russell:", body: "You have to protect yourself. You have to give yourself a lot of choices. So it's good to have something to cut to." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let directingActors0 = Tip(header: "Directing Child Actors", title: "Guilermo del Toro:", body: "Never talk to a kid actor like a kid. Talk to a kid actor like an actor. You don't condescend. \n\nTell them what you are looking for and this is what I need." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let directingActors1 = Tip(header: "Directing Child Actors", title: "Guilermo del Toro:", body: "For child actors only, the one thing I find useful is that I have them do breathing exercises to hyper and hypo oxygenate in order to get agitated or calm before shooting a scene." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let directingActors2 = Tip(header: "Directing Actors", title: "Guilermo del Toro:", body: "How to you adjust an actor in a scene? Be short and sweet, and always use a verb. Give them something to do. \n\nDo not talk to them about the history of the character or the psychology, \"Remember that your mother hit with you a hot poker when you were five. No.\" \n\nInstead, say, try it this way, look at her, don't look at her, wait for this line to turn around. Things that are practical and you have a reason for it." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let directingActors3 = Tip(header: "Directing Actors", title: "Guilermo del Toro:", body: "How to you adjust an actor in a scene? Be short and sweet. Always give them something to do. Do not talk to them about the history of the character or the psychology, \"Remember that your mother hit with you a hot poker when you were five. No.\"  \n\nInstead, say, try it this way, don't look at her, look at her, wait for this line to turn around. Things that are practical. And you have a reason for it." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let directingActors4 = Tip(header: "Guilermo del Toro:", title: "Directing Actors and Camera Movements", body: "If the actor will benefit from knowing how the camera will move during the scene then tell them. \n\nOtherwise, don't because it's noise. The actor needs to carry the least amount of weight because they are an explorer. \n\nDon't put things in their backpack that they don't need." , sourceName: "The Craft of the Director: Guillermo del Toro, Directors Guild of America", sourceURL: "https://www.youtube.com/watch?v=FjR5bT5YYU0", sponsorLogo: "", sponsorURL: "")
+let directingActors5 = Tip(header: "Working With Actors", title: "Francis Ford Coppola:", body: "When an actor has a problem with the script, the director and the actor should talk about it. Many of the talks leads to new ideas." , sourceName: "Apocalypse Now - 2001 Cannes Film Festival Francis Ford Coppola", sourceURL: "https://www.youtube.com/watch?v=4JxK6wLHbPs", sponsorLogo: "", sponsorURL: "")
+let directingActors6 = Tip(header: "Directing Actors", title: "David O. Russell:", body: "You have to carry your authority in the right way. You're like a poker player. Even if you're scared out of your fucking mind, you have to act like everything's great. Especially in front of the actors. \n\nIt's a rule I've made with the writers. Do not debate anything in front of the actors. It's like spooking the horses. Do not spook the actors. Because the actors are already anxious. Everything has to be like a-okay." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let directingActors7 = Tip(header: "Working With Child Actors", title: "David O. Russell:", body: "The adult actor hopefully takes a parental role with the child actor and then is pateralistally helping the child actor through the scene." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let directingActors8 = Tip(header: "Directing Actors", title: "David O. Russell:", body: "It makes some actors more comfortable if you tell them exactly how you want to do a scene. I make sure to choreograph exactly what I want the actors to do. \n\nI'm willing to act out a scene and embarrass myself as a director in front of the crew which takes the stigma away from an uncomfortable act in a scene. I'll cry, dance, and act out a sex scene in front of my crew to help the actors feel more comfortable in front of the crew." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let directingActors9 = Tip(header: "Directing Actors", title: "David O. Russell:", body: "The most important thing is to know what you want. " , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let directingActors10 = Tip(header: "On Set With Lots Of Extras", title: "David O. Russell:", body: "When you have a lot of extras it's always my least favorite days of shooting because there are all these strangers on set. And there's all this chaos and noise and it's really hard to hold everyone's attention, to keep the magic. \n\nYou have to keep huddling the energy. Scenes with lots of people always feels like, \"We didn't get it.\"" , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let directingActors11 = Tip(header: "Filming With Lots Of Extras", title: "David O. Russell:", body: "You have to protect yourself. You have to give yourself a lot of choices. So it's good to have something to cut to." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
 
+let directingActorsTipArray0 = [directingActors0, directingActors1, directingActors2, directingActors3]
+let directingActorsTipArray1 = [directingActors4, directingActors5, directingActors6, directingActors7]
+let directingActorsTipArray2 = [directingActors8, directingActors9, directingActors10, directingActors11]
+
+let directingActorsTipArrays = [directingActorsTipArray0, directingActorsTipArray1, directingActorsTipArray2]
+let directingActorsTitle = "Directing Actors"
+let directingActorsIcon = Constants.Icon.directingActors
+let directingActorsTopic = Topic(title: directingActorsTitle, icon: directingActorsIcon, tip: directingActorsTipArrays.random())
+let directingActorsTopics = Topics(title: directingActorsTitle, icon: directingActorsIcon, topics: [directingActorsTopic,])
 
 
 //LIGHTING
-let filmProd17 = Tip(header: "Lighting the Set", title: "Orson Welles:", body: "I'm the only director that I know of who does this particular thing. Which is probably the worst way to go about it. I didn't begin this way but I developed this way. \n\nI light a set, with the cinematographer, before I decide where anybody will go. And then when the set looks right to me I put the actors where I think they ought to be. I don't put the actors in and then light the set. It's the exact opposite. \n\nBecause the set is all we have besides the actors and it ought to have a chance. And the only way to give it a chance is to begin with the set. That's my theory anyway." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
-let filmProd18 = Tip(header: "Lighting", title: "David O. Russell:", body: "A famous gaffer said to me, \"After 3 lights I get confused. It's too complicated after 3 lights. Just light it simply, but beautifully.\" \n\nI'd also like to say that I want my gaffers to be fast because I learned on my first 3 films that lighting would eat up my whole day. \n\nI'd tell the gaffers we're not going to light for 2 hours and shoot for 30 minutes. We're going light for 30 minutes and shoot for 2 hours. You have to flip the ratio." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
-let filmProd25 = Tip(header: "Working With Actors", title: "David O. Russell:", body: "I'll always try things both ways. And I say that to actors and the DP. \n\nIn the time that it takes us to debate this why don't we just do this both ways. And then we can decide in the cutting room." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let lighting0 = Tip(header: "Lighting the Set", title: "Orson Welles:", body: "I'm the only director that I know of who does this particular thing. Which is probably the worst way to go about it. I didn't begin this way but I developed this way. \n\nI light a set, with the cinematographer, before I decide where anybody will go. And then when the set looks right to me I put the actors where I think they ought to be. I don't put the actors in and then light the set. It's the exact opposite. \n\nBecause the set is all we have besides the actors and it ought to have a chance. And the only way to give it a chance is to begin with the set. That's my theory anyway." , sourceName: "Filming 'The Trial' [1981] (Unedited) - Rare Orson Welles Documentary", sourceURL: "https://www.youtube.com/watch?v=RbUe-bM6bXg", sponsorLogo: "", sponsorURL: "")
+let lighting1 = Tip(header: "Lighting", title: "David O. Russell:", body: "A famous gaffer said to me, \"After 3 lights I get confused. It's too complicated after 3 lights. Just light it simply, but beautifully.\" \n\nI'd also like to say that I want my gaffers to be fast because I learned on my first 3 films that lighting would eat up my whole day. \n\nI'd tell the gaffers we're not going to light for 2 hours and shoot for 30 minutes. We're going light for 30 minutes and shoot for 2 hours. You have to flip the ratio." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
+let lighting2 = Tip(header: "Working With Actors", title: "David O. Russell:", body: "I'll always try things both ways. And I say that to actors and the DP. \n\nIn the time that it takes us to debate this why don't we just do this both ways. And then we can decide in the cutting room." , sourceName: "The Craft of the Director: David O. Russell", sourceURL: "https://www.youtube.com/watch?v=_wDrklwynLo", sponsorLogo: "", sponsorURL: "")
 
 
+let lightingTipArray0 = [lighting0, lighting1, lighting2,]
 
+
+let lightingTipArrays = [lightingTipArray0, ]
+let lightingTitle = "Lighting"
+let lightingIcon = Constants.Icon.lighting
+let lightingTopic = Topic(title: lightingTitle, icon: lightingIcon, tip: lightingTipArrays.random())
+let lightingTopics = Topics(title: lightingTitle, icon: lightingIcon, topics: [lightingTopic,])
 
 
 //5
@@ -2237,49 +2318,49 @@ let filmProd25 = Tip(header: "Working With Actors", title: "David O. Russell:", 
 
 //WEEK 1
 //0
-let filmProdTipArray0 = [filmProd0, filmProd1, filmProd2, filmProd3]
-let filmProdTopic0 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray0)
-
-//1
-let filmProdTipArray1 = [filmProd4, filmProd5, filmProd6, filmProd7]
-let filmProdTopic1 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray1)
-
-//2
-let filmProdTipArray2 = [filmProd8, filmProd9, filmProd10, filmProd11]
-let filmProdTopic2 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray2)
-
-//3
-let filmProdTipArray3 = [filmProd12, filmProd13, filmProd14, filmProd15]
-let filmProdTopic3 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray3)
-
-//4
-let filmProdTipArray4 = [filmProd16, filmProd17, filmProd18, filmProd19]
-let filmProdTopic4 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray4)
-
-//5
-let filmProdTipArray5 = [filmProd20, filmProd21, filmProd22, filmProd23]
-let filmProdTopic5 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray5)
-
-//6
-let filmProdTipArray6 = [filmProd24, filmProd25, filmProd26, filmProd27]
-let filmProdTopic6 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray6)
-
-//WEEK 2
-//7
-let filmProdTipArray7 = [filmProd28, filmProd29, filmProd30, filmProd31]
-let filmProdTopic7 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray7)
-
-let filmProdTipArray8 = [filmProd32, filmProd33, filmProd34, filmProd35]
-let filmProdTopic8 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray8)
-
-//(WIP 1)
-let filmProdTipArray9 = [filmProd36, filmProd37, filmProd38, filmProd35]
-let filmProdTopic9 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray9)
-
-let filmProdTipArrays = [filmProdTipArray0, filmProdTipArray1, filmProdTipArray2, filmProdTipArray3, filmProdTipArray4, filmProdTipArray5, filmProdTipArray6, filmProdTipArray7, filmProdTipArray8, filmProdTipArray9]
-
-let filmProdTopic = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArrays.random())
-let filmProdTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon, topics: [filmProdTopic,])
+//let filmProdTipArray0 = [filmProd0, filmProd1, filmProd2, filmProd3]
+//let filmProdTopic0 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray0)
+//
+////1
+//let filmProdTipArray1 = [filmProd4, filmProd5, filmProd6, filmProd7]
+//let filmProdTopic1 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray1)
+//
+////2
+//let filmProdTipArray2 = [filmProd8, filmProd9, filmProd10, filmProd11]
+//let filmProdTopic2 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray2)
+//
+////3
+//let filmProdTipArray3 = [filmProd12, filmProd13, filmProd14, filmProd15]
+//let filmProdTopic3 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray3)
+//
+////4
+//let filmProdTipArray4 = [filmProd16, filmProd17, filmProd18, filmProd19]
+//let filmProdTopic4 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray4)
+//
+////5
+//let filmProdTipArray5 = [filmProd20, filmProd21, filmProd22, filmProd23]
+//let filmProdTopic5 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray5)
+//
+////6
+//let filmProdTipArray6 = [filmProd24, filmProd25, filmProd26, filmProd27]
+//let filmProdTopic6 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray6)
+//
+////WEEK 2
+////7
+//let filmProdTipArray7 = [filmProd28, filmProd29, filmProd30, filmProd31]
+//let filmProdTopic7 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray7)
+//
+//let filmProdTipArray8 = [filmProd32, filmProd33, filmProd34, filmProd35]
+//let filmProdTopic8 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray8)
+//
+////(WIP 1)
+//let filmProdTipArray9 = [filmProd36, filmProd37, filmProd38, filmProd35]
+//let filmProdTopic9 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArray9)
+//
+//let filmProdTipArrays = [filmProdTipArray0, filmProdTipArray1, filmProdTipArray2, filmProdTipArray3, filmProdTipArray4, filmProdTipArray5, filmProdTipArray6, filmProdTipArray7, filmProdTipArray8, filmProdTipArray9]
+//
+//let filmProdTopic = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmProdTipArrays.random())
+//let filmProdTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon, topics: [filmProdTopic,])
 
 //MARK: Post-Production
 //WEEK 1
@@ -2299,31 +2380,21 @@ let filmPost9 = Tip(header: "The First Cut", title: "Martin Scorsese:", body: "G
 
 
 let filmPostTipArray0 = [filmPost0, filmPost1, filmPost2, filmPost3]
-let filmPostTopic0 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPostTipArray0)
-
-//1
 let filmPostTipArray1 = [filmPost4, filmPost5, filmPost6, filmPost7]
-let filmPostTopic1 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPostTipArray1)
-
 //2 WIP-2
 let filmPostTipArray2 = [filmPost8, filmPost9, filmPost2, filmPost3]
-let filmPostTopic2 = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPostTipArray2)
+
 
 let filmPostTipArrays = [filmPostTipArray0, filmPostTipArray1, filmPostTipArray2]
-let filmPostTopic = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: filmPostTipArrays.random())
-let filmPostTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon, topics: [filmPostTopic,])
+let filmPostTitle = "Editing"
+let filmPostIcon = Constants.Icon.editing
+let filmPostTopic = Topic(title: filmPostTitle, icon: filmPostIcon, tip: filmPostTipArrays.random())
+let filmPostTopics = Topics(title: filmPostTitle, icon: filmPostIcon, topics: [filmPostTopic,])
 
 
 // MARK: - Screenwriting
 let screenwritingTitle = "Writer"
 let screenwritingIcon = Constants.Icon.screenwriting
-
-//WEEK 1
-
-
-
-
-//WRITING ADVICE
 
 
 
@@ -2377,8 +2448,10 @@ let firstDraftTipArray6 = [firstDraft24, firstDraft25, firstDraft26, firstDraft2
 let firstDraftTipArray7 = [firstDraft28, firstDraft29, firstDraft30, firstDraft31]
 
 let firstDraftTipArrays = [firstDraftTipArray0, firstDraftTipArray1, firstDraftTipArray2, firstDraftTipArray3, firstDraftTipArray4, firstDraftTipArray5, firstDraftTipArray6, firstDraftTipArray7]
-let firstDraftTopic = Topic(title: filmmakingTitle, icon: filmmakingIcon, tip: firstDraftTipArrays.random())
-let firstDraftTopics = Topics(title: filmmakingTitle, icon: filmmakingIcon, topics: [firstDraftTopic,])
+let firstDraftTitle = "First Draft"
+let firstDraftIcon = Constants.Icon.firstDraft
+let firstDraftTopic = Topic(title: firstDraftTitle, icon: firstDraftIcon, tip: firstDraftTipArrays.random())
+let firstDraftTopics = Topics(title: firstDraftTitle, icon: firstDraftIcon, topics: [firstDraftTopic,])
 
 
 
@@ -2391,137 +2464,66 @@ let screenwriting3 = Tip(header: "", title: "Screenwriting a TV Show: Create a \
 
 
 
-
-//3
-
-
-
-
-//5
-
-
-
-
-
-
-
-//6
-
-
-
-
-
-
-//WEEK 2
-//7
-
-
-
-
-
-//8
-
-
-
-
-
-
-//9
-
-
-
-
-//10
-
-
-
-
-
-//11
-
-
-
-//12
-
-
-
-
-//13
-
-
-//WEEK 3
-//14
-
-
-//15
-
-
-//16
-
-
-
-//17
-
-
-
-
-
-
-
-
-let screenwritingTipArray1 = [screenwriting4, screenwriting5, screenwriting6, screenwriting7]
-let screenwritingTopic1 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray1)
-
-let screenwritingTipArray2 = [screenwriting8, screenwriting9, screenwriting10, screenwriting11]
-let screenwritingTopic2 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray2)
-
-let screenwritingTipArray3 = [screenwriting12, screenwriting13, screenwriting14, screenwriting15]
-let screenwritingTopic3 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray3)
-
-let screenwritingTipArray4 = [screenwriting16, screenwriting17, screenwriting18, screenwriting19]
-let screenwritingTopic4 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray4)
-
-let screenwritingTipArray5 = [screenwriting20, screenwriting21, screenwriting22, screenwriting23]
-let screenwritingTopic5 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray5)
-
-let screenwritingTipArray6 = [screenwriting24, screenwriting25, screenwriting26, screenwriting27]
-let screenwritingTopic6 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray6)
-
-//WEEK 2
-let screenwritingTipArray7 = [screenwriting28, screenwriting29, screenwriting30, screenwriting31]
-let screenwritingTopic7 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray7)
-
-let screenwritingTipArray8 = [screenwriting32, screenwriting33, screenwriting34, screenwriting35]
-let screenwritingTopic8 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray8)
-
-let screenwritingTipArray9 = [screenwriting36, screenwriting9, screenwriting10, screenwriting11]
-let screenwritingTopic9 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray9)
-
-let screenwritingTipArray10 = [screenwriting36, screenwriting37, screenwriting38, screenwriting39]
-let screenwritingTopic10 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray10)
-
-let screenwritingTipArray11 = [screenwriting40, screenwriting41, screenwriting42, screenwriting43]
-let screenwritingTopic11 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray11)
-
-let screenwritingTipArray12 = [screenwriting44, screenwriting45, screenwriting46, screenwriting47]
-let screenwritingTopic12 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray12)
-//WIP
-let screenwritingTipArray13 = [screenwriting48, screenwriting19, screenwriting10, screenwriting8]
-let screenwritingTopic13 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray13)
-
-
-let screenwritingTipArrays = [screenwritingTipArray0, screenwritingTipArray1, screenwritingTipArray2, screenwritingTipArray3, screenwritingTipArray4, screenwritingTipArray5, screenwritingTipArray6, screenwritingTipArray7, screenwritingTipArray8, screenwritingTipArray9, screenwritingTipArray10, screenwritingTipArray11, screenwritingTipArray12, screenwritingTipArray13]
-let screenwritingTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArrays.random())
-let screenwritingTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [screenwritingTopic,])
+//let screenwritingTipArray1 = [screenwriting4, screenwriting5, screenwriting6, screenwriting7]
+//let screenwritingTopic1 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray1)
+//
+//let screenwritingTipArray2 = [screenwriting8, screenwriting9, screenwriting10, screenwriting11]
+//let screenwritingTopic2 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray2)
+//
+//let screenwritingTipArray3 = [screenwriting12, screenwriting13, screenwriting14, screenwriting15]
+//let screenwritingTopic3 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray3)
+//
+//let screenwritingTipArray4 = [screenwriting16, screenwriting17, screenwriting18, screenwriting19]
+//let screenwritingTopic4 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray4)
+//
+//let screenwritingTipArray5 = [screenwriting20, screenwriting21, screenwriting22, screenwriting23]
+//let screenwritingTopic5 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray5)
+//
+//let screenwritingTipArray6 = [screenwriting24, screenwriting25, screenwriting26, screenwriting27]
+//let screenwritingTopic6 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray6)
+//
+////WEEK 2
+//let screenwritingTipArray7 = [screenwriting28, screenwriting29, screenwriting30, screenwriting31]
+//let screenwritingTopic7 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray7)
+//
+//let screenwritingTipArray8 = [screenwriting32, screenwriting33, screenwriting34, screenwriting35]
+//let screenwritingTopic8 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray8)
+//
+//let screenwritingTipArray9 = [screenwriting36, screenwriting9, screenwriting10, screenwriting11]
+//let screenwritingTopic9 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray9)
+//
+//let screenwritingTipArray10 = [screenwriting36, screenwriting37, screenwriting38, screenwriting39]
+//let screenwritingTopic10 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray10)
+//
+//let screenwritingTipArray11 = [screenwriting40, screenwriting41, screenwriting42, screenwriting43]
+//let screenwritingTopic11 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray11)
+//
+//let screenwritingTipArray12 = [screenwriting44, screenwriting45, screenwriting46, screenwriting47]
+//let screenwritingTopic12 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray12)
+////WIP
+//let screenwritingTipArray13 = [screenwriting48, screenwriting19, screenwriting10, screenwriting8]
+//let screenwritingTopic13 = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArray13)
+//
+//
+//let screenwritingTipArrays = [screenwritingTipArray0, screenwritingTipArray1, screenwritingTipArray2, screenwritingTipArray3, screenwritingTipArray4, screenwritingTipArray5, screenwritingTipArray6, screenwritingTipArray7, screenwritingTipArray8, screenwritingTipArray9, screenwritingTipArray10, screenwritingTipArray11, screenwritingTipArray12, screenwritingTipArray13]
+//let screenwritingTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: screenwritingTipArrays.random())
+//let screenwritingTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [screenwritingTopic,])
 
 // MARK: - Side Hustle
+
+
+
 
 //PM Tips: Mental Health, Physical Health Tips for founders. 
 
 
 //let sideHustleX = Tip(header: "⏳", title: "Elite performers practice roughly the same amount every day, including weekends", body: "Most successful people average 10 years of practice before becoming great. Even child-prodigies generally work at it for a decade or more. \n\nTiger Woods had been working on his golf game for 15 years when he became the youngest-ever winner of the U.S. Amateur Championship." , sourceName: "UC Berkeley", sourceURL: "https://greatergood.berkeley.edu/article/item/a_new_theory_of_elite_performance", sponsorLogo: "", sponsorURL: "")
 
-//GENERAL QUOTES
+
+//MARK: IDEA
+let startupIdea0 = Tip(header: "Increase Sucess", title: "Y Combinator invests in startups that solve PROBLEMS that: \n• A lot of people have. \n• Are urgent, ones that people are trying to solve right now, quickly. \n• Are frequent, ones that people are going to encounter over and over again, and often in a frequent time interval", body: "• Give people a lot of opportunities to convert. \n• Are expensive to solve because if you're able to solve it, then you can charge a lot of money. \n• Are growing faster than other problems, in markets growing 20% a year. \n• Will add up to some billion-dollar total addressable market." , sourceName: "Y Combinator - How to Evaluate Startup Ideas", sourceURL: "https://www.ycombinator.com/library/6e-how-to-evaluate-startup-ideas", sponsorLogo: "", sponsorURL: "")
+
+//MARK: GENERAL QUOTES
 
 let startupQuote0 = Tip(header: "Quote", title: "No matter how brilliant your mind or strategy, if you're playing a solo game, you'll always lose out to a team.", body: "- Reid Hoffman \n\nCo-founder of LinkedIn" , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/danschawbel/2012/02/14/10-memorable-quotes-from-the-start-up-of-you/", sponsorLogo: "", sponsorURL: "")
 let startupQuote1 = Tip(header: "Quote", title: "If we tried to think of a good idea, we wouldn't have been able to think of a good idea. You just have to find the solution for a problem in your own life.", body: "- Brian Chesky, co-founder of Airbnb" , sourceName: "Inc.", sourceURL: "https://www.inc.com/melanie-curtin/21-quotes-about-entrepreneurship-thatll-make-you-think-and-some-thatll-make-you-laugh.html", sponsorLogo: "", sponsorURL: "")
@@ -2554,52 +2556,141 @@ let startupQuoteArray0 = [startupQuote0, startupQuote1, startupQuote2, startupQu
 let startupQuoteArray1 = [startupQuote4, startupQuote5, startupQuote6, startupQuote7]
 let startupQuoteArray2 = [startupQuote8, startupQuote9, startupQuote10, startupQuote11]
 let startupQuoteArray3 = [startupQuote12, startupQuote13, startupQuote14, startupQuote15]
-let startupQuoteArray4 = [startupQuote16, startupQuote17, startupQuote18, startupQuote19]
+let startupQuoteArray4 = [startupQuote16, startupQuote17, startupQuote18, startupQuote11]
 
 let startupQuoteTipArrays = [startupQuoteArray0, startupQuoteArray1, startupQuoteArray2, startupQuoteArray3, startupQuoteArray4]
-let startupQuoteTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: startupQuoteTipArrays.random())
-let startupQuoteTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [startupQuoteTopic,])
+let startupQuoteTitle = "Startup Advice"
+let startupQuoteTopic = Topic(title: startupQuoteTitle, icon: screenwritingIcon, tip: startupQuoteTipArrays.random())
+let startupQuoteTopics = Topics(title: startupQuoteTitle, icon: screenwritingIcon, topics: [startupQuoteTopic,])
 
 
 
-//DAILY HABITS
+//MARK: DAILY HABITS
 let startupHabit0 = Tip(header: "Mark Zuckerberg", title: "I make sure I work out at least 3 times a week — usually first thing when I wake up.", body: "Staying in shape is very important. Doing anything well requires energy, and you just have a lot more energy when you’re fit." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/05/28/mark-zuckerberg-and-richard-branson-exercise-is-key-to-success.html", sponsorLogo: "", sponsorURL: "")
 let startupHabit1 = Tip(header: "VC Brad Feld:", title: "Successful founders work on their startup in their spare time and on the weekends", body: "\"What do you do on the weekends?\" is a question that Feld asks founders of starups he's looking at investing in \n\nFormer Y Combinator partner Harj Taggar: \"The surest sign of coming success was what a potential founder did in their spare time.\" \n\nAndreessen Horowitz investor Chris Dixon: \"What the smartest people do on the weekend is what everyone else will do during the week in 10 years.\"" , sourceName: "Inc.", sourceURL: "https://www.inc.com/jessica-stillman/this-is-number-1-sign-a-founder-will-succeed-according-to-a-former-y-combinator-partner.html", sponsorLogo: "", sponsorURL: "")//WEEEKEND ONLY
 let startupHabit2 = Tip(header: "Don't Multi-Task", title: "Just spotting an email mid-task is enough to reduce your IQ by 10 points as your mind wanders", body: "Multitasking prevents deep, creative thought as we switch back and forth, backtracking, constantly starting from scratch each time. \n\nOur limited cognitive capacity to multi-task means we are never fully focussed on either task.", sourceName: "The Telegraph", sourceURL: "https://www.telegraph.co.uk/health-fitness/mind/7-everyday-ways-you-are-ruining-your-iq/", sponsorLogo: "", sponsorURL: "")
-let startupHabit3 = Tip(header: "Y Combinator:", title: "Get sleep and exercise – take care of yourself", body: "It is also important to stay sane during the inevitable craziness of startup life. Y Combinator tells founders to make sure they take breaks, spend time with friends and family, get enough sleep and exercise in between bouts of extraordinarily intense, focused work.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
+let startupHabit3 = Tip(header: "Y Combinator", title: "Take care of yourself - get sleep 🛌 and exercise 🏃‍♀️", body: "It is also important to stay sane during the inevitable craziness of startup life. \n\nY Combinator tells founders to make sure they take breaks, spend time with friends and family, get enough sleep and exercise in between bouts of extraordinarily intense, focused work.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
 //
-let startupHabit4 = Tip(header: "Richard Branson", title: "He explains, “I seriously doubt that I would have been as successful in my career (and happy in my personal life) if I hadn’t always placed importance on my health and fitness.”", body: "Branson likes to play tennis, go biking, run and kite surf." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/05/28/mark-zuckerberg-and-richard-branson-exercise-is-key-to-success.html", sponsorLogo: "", sponsorURL: "")
+let startupHabit4 = Tip(header: "Richard Branson", title: "“I seriously doubt that I would have been as successful in my career (and happy in my personal life) if I hadn’t always placed importance on my health and fitness.”", body: "Branson likes to: \n• 🎾 Play tennis \n• 🚴‍♂️ Bike \n• 🏃‍♂️ Run \n• 🏄‍♂️ Kite surf" , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/05/28/mark-zuckerberg-and-richard-branson-exercise-is-key-to-success.html", sponsorLogo: "", sponsorURL: "")
+let startupHabit5 = Tip(header: "Y Combinator", title: "We tell founders to make sure they take breaks, spend time with friends and family, get enough sleep and exercise in between bouts of extraordinarily intense, focused work.", body: "It is important to stay sane during the inevitable craziness of startup life." , sourceName: "YC’s Essential Startup Advice", sourceURL: "https://www.ycombinator.com/library/4D-yc-s-essential-startup-advice", sponsorLogo: "", sponsorURL: "")
 
-let startupHabitArray0 = [startupQuote0, startupQuote1, startupQuote2, startupQuote3]
-let startupHabitArray1 = [startupQuote4, startupQuote3, startupQuote2, startupQuote1]
+let startupHabitArray0 = [startupHabit0, startupHabit1, startupHabit2, startupHabit3]
+let startupHabitArray1 = [startupHabit4, startupHabit5, startupHabit2, startupHabit3]
 
 
 let startupHabitTipArrays = [startupHabitArray0, startupHabitArray1,]
-let startupHabitTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: startupHabitTipArrays.random())
-let startupHabitTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [startupHabitTopic,])
+let startupHabitTitle = "Founder Habits"
+let startupHabitIcon = Constants.Icon.routine
+let startupHabitTopic = Topic(title: startupHabitTitle, icon: startupHabitIcon, tip: startupHabitTipArrays.random())
+let startupHabitTopics = Topics(title: startupHabitTitle, icon: startupHabitIcon, topics: [startupHabitTopic,])
 
 
-//WEEK 1
-//BETA VERSION
-let betaVersion0 = Tip(header: "Harvard Innovation Labs", title: "1st: Find a problem worth solving. It's great if you have the problem because it will help you understand it more.", body: "2nd: Deeply understand your customer. \n\n3rd: Find a solution that resonates with your customers. \n\n4th: Launch when you have what Paul Graham calls a quantum of utility. This means you want to launch, not when you have the biggest, best product that has every feature in the world, but when you have a product that is sufficently better than some of the options out there and that some people are going to be really excited about.", sourceName: "Harvard Innovation Labs", sourceURL: "https://www.youtube.com/watch?v=MiEdsK2zv8U", sponsorLogo: "", sponsorURL: "")
-let betaVersion1 = Tip(header: "Quote", title: "If you are not embarrassed by the first version of your product, you've launched too late.", body: "- Reid Hoffman \n\nCo-founder of LinkedIn and partner at the venture capital firm Greylock" , sourceName: "Inc.", sourceURL: "https://www.inc.com/melanie-curtin/21-quotes-about-entrepreneurship-thatll-make-you-think-and-some-thatll-make-you-laugh.html", sponsorLogo: "", sponsorURL: "")
-let betaVersion2 = Tip(header: "Early Stage Advice", title: "Before you build the product, validate it by creating a landing page", body: "In your landing page: \n\n1. Allow people to insert email addresses (to see if people are interested in your product) \n\n2. Allow people to choose pricing options (to see if people are willing to pay for your product)", sourceName: "Harvard i-lab | Discovering the Right Product for Your Startup", sourceURL: "https://www.youtube.com/watch?v=MiEdsK2zv8U", sponsorLogo: "", sponsorURL: "")
-let betaVersion3 = Tip(header: "Founder Advice", title: "• Before you build a prototype, articulate your vision very clearly. It will help you articulate your vision in order to acquire the best people and potential investors.", body: "• Start small and create a working prototype in order to prove to customers and investors that you can do the job and that your product works. \n\n• Focus on getting a few early adopters/users that like your product and will share with their friends. \n\n• Write down all of the risks in your company and then come up with solutions to those risks, this will help you make a better product and when you are talking to potential investors. \n\n• Don’t try to start a company unless you’re ready to work really hard, in the end, it’s winner takes all. You have to be obsessed with the product. \n\n- Lars Buttler, Founder and CEO of Trion World Network", sourceName: "Stanford Graduate School of Business", sourceURL: "https://www.youtube.com/watch?v=Jq6NvA7eKCM&list=WLwWe2KlwPhYxvPhbuXZSH0wF4vtOq1MMp", sponsorLogo: "", sponsorURL: "")
+
+//MARK: BETA VERSION
+let betaVersion0 = Tip(header: "Quote", title: "If you are not embarrassed by the first version of your product, you've launched too late.", body: "- Reid Hoffman \n\nCo-founder of LinkedIn and partner at Greylock" , sourceName: "Inc.", sourceURL: "https://www.inc.com/melanie-curtin/21-quotes-about-entrepreneurship-thatll-make-you-think-and-some-thatll-make-you-laugh.html", sponsorLogo: "", sponsorURL: "")
+
+let betaVersion1 = Tip(header: "Harvard Innovation Labs", title: "1st: Find a problem worth solving. It's great if you have the problem because it will help you understand it more.", body: "2nd: Deeply understand your customer. \n\n3rd: Find a solution that resonates with your customers. \n\n4th: You want to launch, not when you have the biggest, best product that has every feature in the world, but when you have a product that is sufficently better than some of the options out there and that some people are going to be really excited about.", sourceName: "Harvard Innovation Labs", sourceURL: "https://www.youtube.com/watch?v=MiEdsK2zv8U", sponsorLogo: "", sponsorURL: "")
+let betaVersion2 = Tip(header: "Harvard Innovation Labs", title: "Before you build the product, validate it by creating a landing page", body: "In your landing page: \n\n1. Allow people to insert email addresses (to see if people are interested in your product) \n\n2. Allow people to choose pricing options (to see if people are willing to pay for your product)", sourceName: "Harvard i-lab | Discovering the Right Product for Your Startup", sourceURL: "https://www.youtube.com/watch?v=MiEdsK2zv8U", sponsorLogo: "", sponsorURL: "")
+let betaVersion3 = Tip(header: "Founder Advice", title: "• Before you build a prototype, articulate your vision clearly. It will help you articulate your vision in order to acquire the best people and potential investors.", body: "• Start small and create a working prototype in order to prove to customers and investors that you can do the job and that your product works. \n\n• Focus on getting a few early adopters/users that like your product and will share with their friends. \n\n• Write down all of the risks in your company and then come up with solutions to those risks, this will help you make a better product and when you are talking to potential investors. \n\n• Don’t try to start a company unless you’re ready to work really hard. In the end, it’s winner takes all. You have to be obsessed with the product. \n\n- Lars Buttler, Founder and CEO of Trion World Network", sourceName: "Stanford Graduate School of Business", sourceURL: "https://www.youtube.com/watch?v=Jq6NvA7eKCM&list=WLwWe2KlwPhYxvPhbuXZSH0wF4vtOq1MMp", sponsorLogo: "", sponsorURL: "")
 
 let betaVersion4 = Tip(header: "Y Combinator", title: "In the beginning, if you can find someone with a problem that needs solving and you can solve it manually, go ahead and do that for as long as you can, and then gradually automate the bottlenecks.", body: "When you only have a small number of users, you can sometimes get away with doing by hand things that you plan to automate later. This lets you launch faster, and when you do finally automate yourself out of the loop, you'll know exactly what to build because you'll have muscle memory from doing it yourself. \n\nFor example, the way Stripe delivered \"instant\" merchant accounts to its first users was that the founders manually signed them up for traditional merchant accounts behind the scenes. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
 let betaVersion5 = Tip(header: "Lean Startup Technique", title: "In the beginning, don't try to build an amazing product but try to see if the product is feasible", body: "• Avoid writing code (this costs time and money). See if you can do it cheaply/quickly (i.e. emails). \n\n• Speak to users of competition, influencers (ie bloggers…). Listen to customers not advisors. Always talk about their previous experiences. \n\n• Focus on building value for users. \n\n• Make sure you understand your startup’s vision and why your startup exists. People don’t buy what your selling, they buy why you do it. \n\n- Ben Hall, Founder of Katacoda", sourceName: "NDC Conferences - Events for Software Developers", sourceURL: "https://vimeo.com/68383318", sponsorLogo: "", sponsorURL: "")
 let betaVersion6 = Tip(header: "Don't Have A Big Launch", title: "The idea of creating initial buzz is a lazy way to onboard users, and usually doesn't work", body: "It's easy to see how little launches matter. Think of some successful startups. How many of their launches do you remember? \n\nHow well you're doing a few months later will depend more on how happy you made those users than how many there were of them. \n\nRecruit users manually and give them an overwhelmingly good experience. Even if what you're building is great, getting users will always be a gradual process. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
+let betaVersion7 = Tip(header: "Launch Quickly", title: "Build a lean MVP: In most cases, you should launch within weeks, not months", body: "Your MVP should have very limited functionality. We've seen startups start with a landing page and a spreadsheet. \n\nDO: Condense down what your initial user needs based and their highest order of problems. Ignore other users and features until later. \n\nDON'T: Try to address all of your potential users and all of their problems.", sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+
+//
+let betaVersion8 = Tip(header: "Launch Quickly", title: "Airbnb's initial webiste was not perfect", body: "Airbnb's MVP was a landing page that allowed users to search by city and date. \n\nThe person who was writing all of the code, Nate, worked part-time and their initial website did not have a map view or payment processing. Users had to pay cash in-person.", sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+let betaVersion9 = Tip(header: "Heavy MVP (In Very Few Cases)", title: "If your startup is in insurance, banking, hardtech, biotech, Moonshot, etc., then your MVP can be a simple website that explains what you do", body: "It's helpful when you talk to people that they can refer back to something. This is how you can get started in weeks, rather than months.", sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+
+let betaVersion10 = Tip(header: "Your Launch Date", title: "Launch as early as possible because launch dates are NOT important", body: "No one rembembers the launch dates of Google, Facebook, and Twitter. \n\nDO: Get your first customer(s) ASAP. \n\nDON'T: Wait for a special, press launch. This can happen later.", sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+
+let betaVersion11 = Tip(header: "Launch Quickly", title: "Learning from customers is easier with an MVP than without.", body: "You can talk to users all day but you won't get a true answer on whether the thing you want to build solves their problem until you build something, put it in your users hands, and see if it solves their problem. \n\nSpending all your time on research and a pitch deck is not as valuable as spending your time building anything that you can give to a customer.", sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+
+
+
+//Hacks for building an MVP quickly
+//Time box your spec. Your spec is a list of stuff you need to build before you launch.
+    //What happens if I want to build an MVP in 3 weeks? Ok, the only thing on your spec are things that you can build in 3 weeks. That makes your life simplier. It allows you to remove all of the features you can't build in 3 weeks.
+//Writ your spec. It's really easy to change your spec before you launch if you don't write it down, especially if you get new ideas from potential users or investors. And so your 3 week plans turns into a 3 month month plan.
+//Cut your spec. A week into your 3 week sprint, you'll realize that you added too many things into your spec and you're not going to make your deadline. That's okay, just cut the stuff that clearly isn't important. The goal here is to get anything out into the world. Once you get anything out into the world you have momentum to keep going. If you don't have anything out in the world then it's very easy to just delay, delay, and delay.
+//Don't fall in love with your MVP. Most people fall in love with the vision in their head. Don't fall in love with your MVP. It's just step one in your journey. Be prepared to pivot to another idea after testing it with your customers.
+
+//Write your spec list and include a due date. Then, revise your spec list down to only the most important feature(s).
+
+//Time box your spec.
+//Your spec is a list of stuff you need to build before you launch.
+    //To build an MVP in 3 weeks, the only thing on your spec will be things you can build in 3 weeks and remove all other features.
+//Write your spec. It's really easy to change your spec before you launch if you don't write it down, especially if you get new ideas from potential users. And so your 3 week plans turns into a 3 month plan.
+//Cut your spec. A week into your 3 week sprint, you'll realize that you added too many things into your spec and you're not going to make your deadline. That's okay, just cut the stuff that clearly isn't important. The goal here is to get anything out into the world. Once you get anything out into the world you have momentum to keep going. If you don't have anything out in the world then it's very easy to just delay, delay, and delay.
+
+
+//Don't fall in love with your MVP. Most people fall in love with the vision in their head. Don't fall in love with your MVP. It's just step one in your journey. Be prepared to pivot to another idea after testing it with your customers so you can correctly solve their problem.
+
 
 let betaVersionArray0 = [betaVersion0, betaVersion1, betaVersion2, betaVersion3]
-let betaVersionArray1 = [betaVersion4, betaVersion5, betaVersion6, betaVersion3]
-
+let betaVersionArray1 = [betaVersion4, betaVersion5, betaVersion6, betaVersion7]
+let betaVersionArray2 = [betaVersion8, betaVersion9, betaVersion10, betaVersion7]
 
 let betaVersionTipArrays = [betaVersionArray0, betaVersionArray1,]
-let betaVersionTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: betaVersionTipArrays.random())
-let betaVersionTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [betaVersionTopic,])
+let betaVersionTitle = "Beta Version"
+let betaVersionIcon = Constants.Icon.betaVersion
+let betaVersionTopic = Topic(title: betaVersionTitle, icon: betaVersionIcon, tip: betaVersionTipArrays.random())
+let betaVersionTopics = Topics(title: betaVersionTitle, icon: betaVersionIcon, topics: [betaVersionTopic,])
+
+//Lauch something bad, quickly.
+//Talk to your users before you write code. Understanding the problem is very helpful when coming up with ideas to solve and building an MVP. It's even more helpful if you're your own user so you can tell if your product is working for you.
 
 
-//SUCESSFUL FOUNDERS???
+//MARK: TALKING TO USERS
+let startupUsers0 = Tip(header: "Avoid Feature Death", title: "Never ask users for features. Never ask users to tell you what they want.", body: "It's not the user's job to come up with features. That's your job. The user's job is to give you problems. Your goal is to find some continuity in the problems that the users have. \n\nDO: Spend a lot of time talking to users about what their problem is. \n• How often do they experience it? \n• How intense is it? \n• Are they willing to pay for a solution? \n• Do they know other people who have the problem? \n\nThose are the questions you're trying to get out of someone.", sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+
+let startupUsers1 = Tip(header: "MVP User Feedback 🔑", title: "Key thing you want to learn when you get feedback on your MVP: \n• Does it solve the problem that you wanted it to solve?", body: "If you clearly understand the problem that you're trying to solve then the answer will be clear. \n\nOften times you won't have to ask, you just look if the user is using your MVP correctly. \n\nIf it's a product that they have everyday and you introduce the user to your MVP, did they come back the next day?", sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+
+
+//MARK: PRODUCT MARKET FIT
+let startupProductMarket0 = Tip(header: "Y Combinator", title: "You have reached product/market fit when you are overwhelmed with usage—usually to the point where you can’t even make major changes to your product because you are swamped just keeping it up and running.", body: "As an investor, I look for is a frantic founding team trying to deal with ever-growing numbers of happy, loyal, and ideally paying customers. \n\nUntil then, stay lean, keep burn low, and resemble a Navy SEAL team instead of an Army battalion.", sourceName: "Y Combinator's Michael Seibel", sourceURL: "https://www.michaelseibel.com/blog/the-real-product-market-fit", sponsorLogo: "", sponsorURL: "")
+let startupProductMarket1 = Tip(header: "Product Market Fit", title: "At Sequoia, they talk about finding customers who “have their hair on fire”.", body: "If your friend was standing next to you and their hair was on fire, that fire would be the only thing they really cared about in this world. \n\nIt wouldn’t matter if they were hungry, just suffered a bad breakup, or were running late to a meeting—they’d prioritize putting the fire out. If you handed them a hose—the perfect product/solution—they would put the fire out immediately and go on their way. If you handed them a brick they would still grab it and try to hit themselves on the head to put out the fire. \n\nYou need to find problems so dire that users are willing try half-baked, v1, imperfect solutions.", sourceName: "Y Combinator's Michael Seibel", sourceURL: "https://www.michaelseibel.com/blog/the-real-product-market-fit", sponsorLogo: "", sponsorURL: "")
+
+let startupProductMarket2 = Tip(header: "Product Market Fit", title: "Your unique and special v1 idea on how to solve that problem is usually wrong and only through launching, talking to customers, and iterating will you actually find a product that reaches product market fit.", body: "Finding product market fit = focusing on the market first. The problem, i.e. the market, is the real opportunity.", sourceName: "Y Combinator's Michael Seibel", sourceURL: "https://www.michaelseibel.com/blog/the-real-product-market-fit", sponsorLogo: "", sponsorURL: "")
+
+let startupProductMarket3 = Tip(header: "Product Market Fit", title: "YC encourages founders to build MVPs (minimum viable products).", body: "In a good market, an MVP is all you need to get your initial customers in the door, interacting with you, and offering the feedback that will inform your v2, v3, and v4. \n\nTo find product market fit, choose a market where users have a real, meaningful problem, launch quickly, and listen to your users. \n\nOnce you’ve actually reached product/market fit—congratulations—you can begin optimizing your core product, hiring specialists to increase your efficiency, and make strategic investments. Also, you’ve made it further than most startups ever dream.", sourceName: "Y Combinator's Michael Seibel", sourceURL: "https://www.michaelseibel.com/blog/the-real-product-market-fit", sponsorLogo: "", sponsorURL: "")
+
+let startupProductMarket4 = Tip(header: "Marc Andreessen", title: "Product/market fit means being in a good market with a product that can satisfy that market.", body: "Most startups fail before product/market fit ever happens. \n\nBefore product/market: The customers aren't quite getting value out of the product, word of mouth isn't spreading, usage isn't growing that fast, the sales cycle takes too long, and lots of deals never close. \n\nAfter product/market: The customers are buying the product just as fast as you can make it -- or usage is growing just as fast as you can add more servers. Money from customers is piling up in your company checking account. Investment bankers are staking out your house.", sourceName: "THE PMARCA GUIDE TO STARTUPS", sourceURL: "https://pmarchive.com/guide_to_startups_part4.html", sponsorLogo: "", sponsorURL: "")
+
+let startupProductMarket5 = Tip(header: "Marc Andreessen", title: "The life of any startup can be divided into two parts: before product/market fit (call this \"BPMF\") and after product/market fit (\"APMF\").", body: "When you are BPMF, focus obsessively on getting to product/market fit. \n\nDo whatever is required to get to product/market fit. Including changing out people, rewriting your product, moving into a different market, telling customers no when you don't want to, telling customers yes when you don't want to, raising that fourth round of highly dilutive venture capital -- whatever is required. \n\nIn order to succeed, you must reach product/market fit.", sourceName: "THE PMARCA GUIDE TO STARTUPS", sourceURL: "https://pmarchive.com/guide_to_startups_part4.html", sponsorLogo: "", sponsorURL: "")
+
+let startupProductMarket6 = Tip(header: "YC's Michael Seibel", title: "It's more important for a startup to aggressively seek out a big market, and product/market fit within that market, once the startup is up and running, than it is to try to plan out what you are going to do in great detail ahead of time.", body: "A startup's initial business plan doesn't matter that much, because it is very hard to determine up front exactly what combination of product and market will result in success. \n\nYou will probably have to rapidly evolve your plan -- possibly every aspect of it -- as you go.", sourceName: "THE PMARCA GUIDE TO STARTUPS", sourceURL: "https://pmarchive.com/guide_to_startups_part7.html", sponsorLogo: "", sponsorURL: "")
+
+let startupProductMarketArrya0 = [startupProductMarket0, startupProductMarket1, startupProductMarket2, startupProductMarket3]
+let startupProductMarketArray1 = [startupProductMarket4, startupProductMarket5, startupProductMarket6, startupProductMarket3]
+
+
+let startupProductMarketTipArrays = [startupProductMarketArrya0, startupProductMarketArray1,]
+let startupProductMarketTitle = "Product/Market Fit"
+let startupProductMarketIcon = Constants.Icon.productMarket
+let startupProductMarketTopic = Topic(title: startupProductMarketTitle, icon: startupProductMarketIcon, tip: startupProductMarketTipArrays.random())
+let startupProductMarketTopics = Topics(title: startupProductMarketTitle, icon: startupProductMarketIcon, topics: [startupProductMarketTopic,])
+
+
+//
+
+let ideaStage0 = Tip(header: "Launch Continuously", title: "DO: Launch quickly and launch again and again. \nDON'T: Wait to launch and make it a one time event.", body: "If you're like most startups, you will launch something and no one will care. \n\nLaunch through different channels. \n• You'll learn how people will respond to an early version of the product. \n• It'll help you determine whether you're even talking to the right users because you might launch on one channel and get no response, you'll launch on another channel and you'll get a huge response.", sourceName: "Y Combinator", sourceURL: "https://www.ycombinator.com/library/6i-how-to-launch-again-and-again", sponsorLogo: "", sponsorURL: "")
+
+let ideaStage1 = Tip(header: "Landing Page", title: "Create a landing page. Make it short and succinct. It doesn't need to be fancy.", body: "All you need is: \n• Domain name \n• Company name \n• Short description \n• Contact info \n• Call to action (e.g. provide email address) \n\nYou want it to be clear what it is you're building and who it is you're building for.", sourceName: "Y Combinator", sourceURL: "https://www.ycombinator.com/library/6i-how-to-launch-again-and-again", sponsorLogo: "", sponsorURL: "")
+
+
+
+
+// before you even have a fully functioning product, you get a chance to practice your pitch and you can refine it. You can A/B test it and see how people actually respond to the idea. And then once you have an MVP or, you know, a very early version of your product, launching through different channels will give you an opportunity to see how people will respond to that early version of the product.
+
+let ideaStage2 = Tip(header: "Launch Steps", title: "1. Get an MVP ASAP. 2. Do a friends and family launch. Sit down next to them and watch them use it and ask for feedback. But don't stay in this phase for too long because they might not be the right users for your product. 3. Do a stranger launch.", body: "Launching with strangers gives you better feedback than your friends and family. Strangers will show you whether people are actually willing to download and pay for your product.", sourceName: "Y Combinator", sourceURL: "https://www.ycombinator.com/library/6i-how-to-launch-again-and-again", sponsorLogo: "", sponsorURL: "")
+
+let ideaStage3 = Tip(header: "Online Communities", title: "Plan to launch for every single community that you are part of. Many YC startups launch on Hacker News and Product Hunt.", body: "DO: Write like you talk. Talk like a human when you're addressing the community. \nDON'T: Talk like a marketing robot. Don't use marketing jargon. People hate that. \n\nWhen you introduce yourself in these posts: \n• Introduce yourself \n• Talk about what you're building \n• Talk about why you're doing it, or how you came across the problem.", sourceName: "Y Combinator", sourceURL: "https://www.ycombinator.com/library/6i-how-to-launch-again-and-again", sponsorLogo: "", sponsorURL: "")
+
+
+
+
+//MARK: SUCESSFUL FOUNDERS???
 let startupFounder0 = Tip(header: "Advice", title: "In the entrepreneur classes I teach, I constantly remind people to not focus on their product, service or widget, but to focus on developing management skills.", body: "The three most important managmenet skills necessary to start your own business are: \n\n1. Management of cash flow. \n2. Management of people. \n3. Managmenet of personal time. \n\n- Robert Kiyosaki \nAuthor of Rich Dad, Poor Dad", sourceName: "Rich Dad, Poor Dad", sourceURL: "https://www.amazon.com/Rich-Dad-Poor-Teach-Middle-ebook/dp/B0175P82RA", sponsorLogo: "", sponsorURL: "")
 let startupFounder1 = Tip(header: "Richard Branson:", title: "To succeed as an entrepreneur, you have to be a storyteller", body: "What moves people is someone who is credible and relatable. People can see straight through storytelling that is false, staged or cynical. It has to come from the heart, not just the head. \n\nRichard Branson said, \"I often find a subject I’m pondering becomes a lot clearer once it is down on paper – it’s one of the reasons I blog so much.\"" , sourceName: "Virgin (Richard Branson)", sourceURL: "https://www.virgin.com/richard-branson/why-entrepreneurs-are-storytellers", sponsorLogo: "", sponsorURL: "")
 let startupFounder2 = Tip(header: "Advice", title: "Successful entrepreneurship means having experienced the problems you're trying to solve", body: "In the lowest possible moments, where possibly you're even doubting yourself, you have to have a core belief that the problem you're trying to solve is real, or you're never going to make it through. \n\nWhen no one believes in your idea, you have to be the one who believes in it." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/entrepreneurship-advice-from-flash-boys-star-brad-katsuyama-2018-12", sponsorLogo: "", sponsorURL: "")
@@ -2616,13 +2707,44 @@ let startupFounderArray1 = [startupFounder4, startupFounder5, startupFounder6, s
 
 
 let startupFounderTipArrays = [startupFounderArray0, startupFounderArray1,]
-let startupFounderTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: startupFounderTipArrays.random())
-let startupFounderTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [startupFounderTopic,])
+let founderAdviceTitle = "Founder Advice"
+let founderAdviceIcon = Constants.Icon.founderAdvice
+let startupFounderTopic = Topic(title: founderAdviceTitle, icon: founderAdviceIcon, tip: startupFounderTipArrays.random())
+let startupFounderTopics = Topics(title: founderAdviceTitle, icon: founderAdviceIcon, topics: [startupFounderTopic,])
 
-//AVOIDING FAILURE
-let startup66 = Tip(header: "Y Combinator's Paul Graham", title: "In nearly every failed startup, the real problem was that customers didn't want the product.", body: "For most, the cause of death is listed as \"ran out of funding,\" but that's only the immediate cause. Why couldn't they get more funding? Probably because the product was a dog, or never seemed likely to be done, or both." , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
-let startup12 = Tip(header: "Quote", title: "Nothing else you do will matter if you’re not making something people want. You can be the best spokesperson, the best fundraiser, the best programmer, but if you aren’t building a product that satisfies a real need, you’ll never succeed.", body: "- Jessica Livingston \n\nCo-founder of Y Combinator", sourceName: "Y Combinator", sourceURL: "https://ycombinator.wpengine.com/how-not-to-fail/", sponsorLogo: "", sponsorURL: "")
-let startup13 = Tip(header: "Quote", title: "The most common thing that kills startups is that they build something that nobody wants", body: "Paul Buchheit, Gmail Creator and Y Combinator Partner: \n\nA good founder is someone who is comfortable disproving their own ideas. You need to prove that people will either want you product or not. \n\nThe best evidence is getting people to pay you money for your product. Telling an investor that you already have paying customers increases your chances of getting funded." , sourceName: "Stanford University", sourceURL: "https://www.youtube.com/watch?v=rmFyatXeMCY", sponsorLogo: "", sponsorURL: "")
+
+
+//MARK: AVOIDING FAILURE
+let avoidFailure0 = Tip(header: "Y Combinator's Paul Graham", title: "In nearly every failed startup, the real problem was that customers didn't want the product.", body: "For most, the cause of death is listed as \"ran out of funding,\" but that's only the immediate cause. Why couldn't they get more funding? Probably because the product was a dog, or never seemed likely to be done, or both." , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+let avoidFailure1 = Tip(header: "YC Quote", title: "Nothing else you do will matter if you’re not making something people want. You can be the best spokesperson, the best fundraiser, the best programmer, but if you aren’t building a product that satisfies a real need, you’ll never succeed.", body: "- Jessica Livingston \n\nCo-founder of Y Combinator", sourceName: "Y Combinator", sourceURL: "https://ycombinator.wpengine.com/how-not-to-fail/", sponsorLogo: "", sponsorURL: "")
+let avoidFailure2 = Tip(header: "Your First 10 Customers", title: "A common founder mistake is that make their first customers hard to get customers.", body: "DON'T: Target customers early who don't want to pay, who aren't interested in working with an early stage startup, and who don't actually have the problem; they just think they might have the problem or might have the problem in the future. \n\nDO: Target customers early who want to pay, who will work with an early stage startup, who intensely have the problem that you're trying to solve." , sourceName: "Y Combinator - How to get your first ten customers?", sourceURL: "https://www.youtube.com/watch?v=WAXLTG9n7Kw", sponsorLogo: "", sponsorURL: "")
+let avoidFailure3 = Tip(header: "Quote", title: "The most common thing that kills startups is that they build something that nobody wants", body: "Paul Buchheit, Gmail Creator and Y Combinator Partner: \n\nA good founder is someone who is comfortable disproving their own ideas. You need to prove that people will either want you product or not. \n\nThe best evidence is getting people to pay you money for your product. Telling an investor that you already have paying customers increases your chances of getting funded." , sourceName: "Stanford University", sourceURL: "https://www.youtube.com/watch?v=rmFyatXeMCY", sponsorLogo: "", sponsorURL: "")
+
+let avoidFailure4 = Tip(header: "Y Combinator", title: "Most companies fail fast because founders fall out. The relationships with your cofounders matter more than you think and open, honest communications between founders makes future debacles much less likely.", body: "One of the best things you can do to make your startup successful, in fact, to be successful in life, is to simply be nice. Mean people fail." , sourceName: "YC’s Essential Startup Advice", sourceURL: "https://www.ycombinator.com/library/4D-yc-s-essential-startup-advice", sponsorLogo: "", sponsorURL: "")
+let avoidFailure5 = Tip(header: "Launch Quickly (MVP)", title: "Goal of a pre-laucn startup: 1: Launch something bad, quickly 2. Get some initial customers to see if they find any value in your product.", body: "You'd be suprised at how many founder's journeys end before a single user has actually interacted with a product that they've created. It's very common. \n\nSo, get past this step. It's extremely important." , sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t=114s", sponsorLogo: "", sponsorURL: "")
+let avoidFailure6 = Tip(header: "Common Mistake", title: "Most founders have a grand idea of their product and they hold off showing customers their crappy initial product because they think this initial customer feedback will not be useful. The reality is that your grand idea is going to take 3 years, $10 million dollars, and a whole team to build. And it might turn out your grand idea is not what yur customers want.", body: "DO: Hold the problem you're trying to solve tightly. Hold the customer tightly. Hold the solution your building loosely. You want to launch quickly, talk to customers, get feedback, and iterate." , sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+let avoidFailure7 = Tip(header: "Iterate Your Product", title: "DO: Continue improving on your product until it solves a problem that a customer is willing to pay for.", body: "DON'T: Fall in love with your product if it hasn't solved a customer's problem yet." , sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t", sponsorLogo: "", sponsorURL: "")
+
+let avoidFailure8 = Tip(header: "Talk To Your Users", title: "DO: Spend a lot of time talking to your users, observing them, learning about what problems they have, and then build something that people actually want.", body: "DON'T: Build something that you think your users will want and then spend all your time re-writing your code to make it prettier and faster. This is a trap. Users don't care how good your code is, they only care if it solves their problem. \n\nStartups fail because the founders give up. The founders give up because they run out of money, energy, or both. They run out of money and energy because they don't have users or don't have enough users to convince investors to invest. They don't have enough users because they didn't talk to their users, learn from their users, and build something that people wanted." , sourceName: "Y Combinator - Why Do Startups Fail", sourceURL: "https://www.youtube.com/watch?v=gQ_rZc0YUNw", sponsorLogo: "", sponsorURL: "")
+
+let avoidFailure9 = Tip(header: "Marc Andreessen", title: "The #1 company-killer is lack of market.", body: "In a bad market, you can have the best product in the world and an absolutely killer team, and it doesn't matter -- you're going to fail. /n/nConversely, I can name you any number of weak teams whose startups were highly successful due to explosively large markets for what they were doing. \n\nIn a great market -- a market with lots of real potential customers -- the market will be fulfilled by the first viable product that comes along." , sourceName: "THE PMARCA GUIDE TO STARTUPS", sourceURL: "https://pmarchive.com/guide_to_startups_part4.html", sponsorLogo: "", sponsorURL: "")
+
+
+
+//The reason they have no users is because they did not build something that people want. The most common reason how this happens is because founders didn't talk to their users. I
+
+let avoidFailureArray0 = [avoidFailure0, avoidFailure1, avoidFailure2, avoidFailure3]
+let avoidFailureArray1 = [avoidFailure4, avoidFailure5, avoidFailure6, avoidFailure7]
+let avoidFailureArray2 = [avoidFailure8, avoidFailure9, avoidFailure2, avoidFailure7]
+
+let avoidFailureTipArrays = [avoidFailureArray0,avoidFailureArray1, avoidFailureArray2]
+let avoidFailureTitle = "Avoid Failure"
+let avoidFailureIcon = Constants.Icon.avoidFailure
+let avoidFailureTopic = Topic(title: avoidFailureTitle, icon: avoidFailureIcon, tip: avoidFailureTipArrays.random())
+let avoidFailureTopics = Topics(title: avoidFailureTitle, icon: avoidFailureIcon, topics: [avoidFailureTopic,])
+
+
+
 
 //EARLY STAGE ADVICE
 let earlyStage0 = Tip(header: "Early Stage", title: "In a startup, your initial plans are almost certain to be wrong in some way, and your first priority should be to figure out where. The only way to do that is to try implementing them.", body: "- Paul Graham \n\nCofounder of Y Combinator" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
@@ -2634,25 +2756,28 @@ let earlyStage4 = Tip(header: "Y Combinator's Paul Graham", title: "Start by wri
 let earlyStage5 = Tip(header: "Say “No“", title: "Successful businesses say no to the many unimportant things and remain focused on saying yes to the few things that matter", body: "Steve Jobs said, \n\n\"People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the 100 other good ideas that there are.\" \n\n\"You have to pick carefully. I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.\"" , sourceName: "Inc.", sourceURL: "https://www.inc.com/marcel-schwantes/warren-buffett-says-this-is-1-simple-habit-that-separates-successful-people-from-everyone-else.html", sponsorLogo: "", sponsorURL: "")
 let earlyStage6 = Tip(header: "Advice", title: "“Positivity breeds positivity,” according to self-made billionaire Richard Branson", body: "When Virgin was launching its airline companies, the Virgin team never focused on the negative aspects of other airlines or asked customers questions like, “Are you sick of the competition?” \n\nInstead of focusing on everything that other airlines were doing wrong or doing poorly, Virgin took a more positive approach. They asked potential customers: \n\n• What they look forward to when flying \n• What they want from an airline \n• And also highlighted Virgin's unique offerings" , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2018/01/16/richard-branson-uses-this-simple-trick-to-live-a-positive-life.html", sponsorLogo: "", sponsorURL: "")
 let earlyStage7 = Tip(header: "Early Stage Advice", title: "In the beginning, Y Combinator sometimes advises startups, especially B2B startups, to pick a single user and make your product perfect for that single user.", body: "If you keep tweaking the product until one early user is extremely happy with it, you'll probably create a product many of their peers also love. \n\nAs long as you can find just one user who really needs something and can act on that need, you've got a toehold in making something people want, and that's as much as any startup needs initially. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
-
+//
 let earlyStage8 = Tip(header: "Advice", title: "Before you drop out of school or quit your job, you want to be thinking about your startup in the following order", body: "1st: Can I Make Money From It? \n2nd: Can I Get People to Know About It? \n3rd: Can I Build It? \n\nWhile most people try to build it first, this order helps you identify if it's going to be a business or a hobby.", sourceName: "Harvard i-lab | Discovering the Right Product for Your Startup", sourceURL: "https://www.youtube.com/watch?v=MiEdsK2zv8U", sponsorLogo: "", sponsorURL: "")
 let earlyStage9 = Tip(header: "Y Combinator:", title: "Talk to your users, build what they want, and iterate quickly. Growth is a natural result of doing these 3 things successfully", body: "While growth is always a focus for startups, it's not the right choice. If you have not yet made something your customers want – in other words, have found product-market fit, it makes little sense to grow. \n\nPoor retention is always the result. Also, if you have an unprofitable product, growth merely drains cash from the company.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
 let earlyStage10 = Tip(header: "Y Combinator:", title: "The most important tasks for an early-stage company are to write code and talk to users", body: "In order to make something people want: you must launch something, talk to your users to see if it serves their needs, and then take their feedback and iterate. \n\nThese tasks should occupy almost all of your time/focus. For great companies this cycle never ends.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
 let earlyStage11 = Tip(header: "Y Combinator:", title: "The first thing we tell founders is to launch their product right away; for the simple reason that this is the only way to fully understand customers’ problems and whether the product meets their needs", body: "Launching a mediocre product as soon as possible, and then talking to customers and iterating, is much better than waiting to build the “perfect” product. \n\nThis is true as long as the product contains a “quantum of utility” which means that there is at least some set of users who would be excited to hear about it, because they can now do something they couldn't do before.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
+//
 let earlyStage12 = Tip(header: "Founder Advice", title: "Choose a problem you've personally experienced. Otherwise, you'll lose interest down the road", body: "Solving a problem you (or a loved one) has faced ensures that you'll have the passion required to stick with it over a long period of hard work. \n\nNext, go out and talk to people and really understand the market." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/business-entrepreneurship-advice-kara-goldin-hint-ceo-2019-2", sponsorLogo: "", sponsorURL: "")
-let earlyStage13 = Tip(header: "Y Combinator Advice", title: "Solve a problem that you yourself have. When you’re part of the target market, you’ll have insights about it that you wouldn’t otherwise", body: "But you should graduate from making something just for yourself to making something for other people as fast as you can. \n\nAnd to know what they want, you have to understand them. Do they like what you’ve made so far? If not, why not? \n\nTalk to your users as much as you can, even if that means doing things that don’t scale early on. I don’t know of a single case of a startup that felt they spent too much time talking to users.", sourceName: "Y Combinator", sourceURL: "https://ycombinator.wpengine.com/how-not-to-fail/", sponsorLogo: "", sponsorURL: "")
+let earlyStage13 = Tip(header: "Y Combinator Advice", title: "Solve a problem that you yourself have. When you’re part of the target market, you’ll have insights about it that you wouldn’t otherwise", body: "You should graduate from making something for yourself to making something for other people as fast as you can. \n\nAnd to know what they want, you have to understand them. Do they like what you’ve made so far? If not, why not? \n\nTalk to your users as much as you can, even if that means doing things that don’t scale early on. I don’t know of a single case of a startup that felt they spent too much time talking to users.", sourceName: "Y Combinator", sourceURL: "https://ycombinator.wpengine.com/how-not-to-fail/", sponsorLogo: "", sponsorURL: "")
 
 let earlyStage14 = Tip(header: "Y Combinator Advice", title: "The way you stay on the right path in the early stages of a startup is to build stuff and talk to users. And nothing else.", body: "- Jessica Livingston \n\nCo-founder of Y Combinator", sourceName: "Y Combinator", sourceURL: "https://ycombinator.wpengine.com/how-not-to-fail/", sponsorLogo: "", sponsorURL: "")
 let earlyStage15 = Tip(header: "Y Combinator Advice", title: "In the beginning, it's not the product that should be insanely great, but the experience of being your user", body: "You should take extraordinary measures not just to acquire users, but also to make them happy. \n\nYour first users should feel that signing up with you was one of the best choices they ever made. \n\nFor as long as they could (which turned out to be surprisingly long), Wufoo sent each new user a hand-written thank you note. \n\nTim Cook doesn't send you a hand-written note after you buy a laptop. He can't. But you can. \n\nThat's one advantage of being small: you can provide a level of service no big company can. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
-let earlyStage16 = Tip(header: "Y Combinator Advice", title: "Do what Stripe did to get your first users: Go out and manually recruit your early users and manually get them set up with your product on their behalf", body: "When speaking to potential users, most founders ask \"Will you try our beta?\" and if the answer is yes, they say \"Great, we'll send you a link.\" \n\nBut the founders of Stripe weren't going to wait. When anyone agreed to try Stripe they'd say \"Right then, give me your laptop\" and set them up on the spot. \n\nStripe would later become one of the most successful startups Y Combinator has funded.", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
-let earlyStage17 = Tip(header: "Y Combinator Advice", title: "In the beginning, focus on a deliberately narrow market. That's what Facebook did.", body: "At first it was just for Harvard students. In that form it only had a potential market of a few thousand people, but because they felt it was really for them, a critical mass of them signed up. \n\nAfter Facebook stopped being for Harvard students, it remained for students at specific colleges for quite a while. \n\nWhen I interviewed Mark Zuckerberg at Startup School, he said that while it was a lot of work creating course lists for each school, doing that made students feel the site was their natural home. \n\nIt's always worth asking if there's a subset of the market in which you can get a critical mass of users quickly. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
+
+let earlyStage16 = Tip(header: "Pre-Product Market Fit", title: "Y Combinator advises to 'do things that don't scale'", body: "Many startup advisors persuade startups to scale way too early. This strategy often leads to: \n• Failure \n• Even startup death \n\nBecause it requires the building of technology and processes to support that scaling, which, if premature, will be a waste of time and effort. \n\n𑁋 𑁋 𑁋 \n\nY Combinator: Get your first customers by any means necessary, even by manual work that couldn’t be managed for more than 10, much less 100 or 1000 customers. \n\nIn the beginning, founders are still trying to figure out what needs to be built and the best way to do that is talk directly to customers. \n\nRemember, growth is the result of a great product not the precursor. \n\n𑁋 𑁋 𑁋 \n\nExample: Airbnb \n\nThe founders originally went and took “professional” photographs of the homes of their earliest customers in order to make their listings more attractive to renters. \n\nThis was entirely unscalable, yet proved essential in learning how to build a vibrant marketplace. \n\nThey had amazing conversations with their customers, the listings on their site improved, and conversions improved.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
+let earlyStage17 = Tip(header: "Partnerships", title: "In the beginning, Partnerships usually don't work, especially as a way to get growth started", body: "It's a common mistake among inexperienced founders to believe that a partnership with a big company will be their big break. \n\nSix months later they're all saying the same thing: that was way more work than we expected, and we ended up getting practically nothing out of it. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
+
 let earlyStage18 = Tip(header: "Naming Your Startup", title: "Give Your company a simple name. Those with fluent names fare better.", body: "In a study on the performance of stocks in the first week after their initial public offerings, researchers found that a stock will attract more investors when it has a fluent name. \n\nThe effect washes away over time since eventually, the company’s fundamentals emerge. \n\nBut in the beginning, people are not that sure about that company and there are a lot of question marks, and that’s when they’re more likely to be swayed by these kinds of cues.”", sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/laurashin/2013/07/16/7-hidden-influences-that-help-people-and-businesses-get-ahead/#758aebc97ef6", sponsorLogo: "", sponsorURL: "")
 let earlyStage19 = Tip(header: "Y Combinator:", title: "Only solve one problem well at a time", body: "When your product isn’t working it’s tempting to build new features in order to solve every problem the customer seems to have. \n\nInstead, talk to your customers and focus only on the most acute problem they have. \n\nThe best startup strategy is almost always to do less, really well.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
 let earlyStage20 = Tip(header: "Founder Advice", title: "Naming your startup", body: "Either choose a name that associated with your product (ie Airbnb) or a vague name that you can brand it into (ie Google). \n\n- Ben Hall, Founder of Katacoda", sourceName: "NDC Conferences - Events for Software Developers", sourceURL: "https://vimeo.com/68383318", sponsorLogo: "", sponsorURL: "")
 let earlyStage21 = Tip(header: "Early Stage Advice", title: "When you start your company, focus on getting 10 users to love you, that’s more important than 1,000 users who think you are just okay", body: "Don’t try to get everyone to like your startup/product. \n\nFind your 10 most passionate users and ask them what they are currently doing to solve the existing problem. \n\nBefore you build the product, do it manually with individual customers. If you can’t get customers to pay for a highly customized experience, how will you get them to use an unknown/new product? \n\nYou'll better understand the problems when working directly with a customer in order to help you understand what you should create.", sourceName: "Harvard i-lab | Discovering the Right Product for Your Startup", sourceURL: "https://www.youtube.com/watch?v=MiEdsK2zv8U", sponsorLogo: "", sponsorURL: "")
 let earlyStage22 = Tip(header: "Y Combinator:", title: "Over-engaging with early users is not just an acceptable technique for getting growth rolling. For most successful startups it's a necessary part of the feedback loop that makes the product good.", body: "It's often better not to aim for perfection initially. In software, especially, it usually works best to get something in front of users as soon as it has a quantum of utility, and then see what they do with it. \n\nThe feedback you get from engaging directly with your earliest users will be the best you ever get. When you're so big you have to resort to focus groups, you'll wish you could go over to your users' homes and offices and watch them use your stuff like you did when there were only a handful of them. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
 let earlyStage23 = Tip(header: "Be Flexible", title: "Be open to adjusting your idea, because most good ideas evolve.", body: "The most famous example of that sort of evolution in the YC community is probably Airbnb. They started with airbeds on floors for conferences, then airbeds on floors but without conferences, then actual bedrooms, then whole places. \n\nThat final step only happened after they listened to an early customer's request who wanted to rent out their apartment while they were away. \n\nThe founders really had to think about it. They were still AirBedandBreakfast back then, not Airbnb, so guests had to get breakfast! \n\nBut in the end they said yes, and this type of stay is now most of Airbnb’s business.", sourceName: "Y Combinator", sourceURL: "https://ycombinator.wpengine.com/how-not-to-fail/", sponsorLogo: "", sponsorURL: "")
-let earlyStage24 = Tip(header: "Pre-Product Market Fit", title: "Y Combinator advises to 'do things that don't scale'", body: "Many startup advisors persuade startups to scale way too early. This strategy often leads to: \n• Failure \n• Even startup death \n\nBecause it requires the building of technology and processes to support that scaling, which, if premature, will be a waste of time and effort. \n\n𑁋 𑁋 𑁋 \n\nY Combinator: Get your first customers by any means necessary, even by manual work that couldn’t be managed for more than 10, much less 100 or 1000 customers. \n\nIn the beginning, founders are still trying to figure out what needs to be built and the best way to do that is talk directly to customers. \n\nRemember, growth is the result of a great product not the precursor. \n\n𑁋 𑁋 𑁋 \n\nExample: Airbnb \n\nThe founders originally went and took “professional” photographs of the homes of their earliest customers in order to make their listings more attractive to renters. \n\nThis was entirely unscalable, yet proved essential in learning how to build a vibrant marketplace. \n\nThey had amazing conversations with their customers, the listings on their site improved, and conversions improved.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
+
 
 let earlyStageArray0 = [earlyStage0, earlyStage1, earlyStage2, earlyStage3]
 let earlyStageArray1 = [earlyStage4, earlyStage5, earlyStage6, earlyStage7]
@@ -2660,18 +2785,20 @@ let earlyStageArray2 = [earlyStage8, earlyStage9, earlyStage10, earlyStage11]
 let earlyStageArray3 = [earlyStage12, earlyStage13, earlyStage14, earlyStage15]
 let earlyStageArray4 = [earlyStage16, earlyStage17, earlyStage18, earlyStage19]
 let earlyStageArray5 = [earlyStage20, earlyStage21, earlyStage22, earlyStage23]
-let earlyStageArray6 = [earlyStage24, earlyStage21, earlyStage22, earlyStage23]
-
-let earlyStageTipArrays = [earlyStageArray0, earlyStageArray1, earlyStageArray2, earlyStageArray3, earlyStageArray4, earlyStageArray5, earlyStageArray6]
-let earlyStageTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: earlyStageTipArrays.random())
-let earlyStageTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [earlyStageTopic,])
-
-
-//PRODUCT MARKET FIT/REVENUE?
 
 
 
-//COFOUNDERS
+let earlyStageTipArrays = [earlyStageArray0, earlyStageArray1, earlyStageArray2, earlyStageArray3, earlyStageArray4, earlyStageArray5]
+let earlyStageTitle = "Starting"
+let earlyStageIcon = Constants.Icon.earlyStage
+let earlyStageTopic = Topic(title: earlyStageTitle, icon: earlyStageIcon, tip: earlyStageTipArrays.random())
+let earlyStageTopics = Topics(title: earlyStageTitle, icon: earlyStageIcon, topics: [earlyStageTopic,])
+
+
+
+
+
+//MARK: COFOUNDERS
 let cofounders0 = Tip(header: "Picking Co-Founders", title: "Don't partner with cynics and pessimists. Their beliefs are self-fulfilling.", body: "- Naval Ravikant \n\nCEO and a co-founder of AngelList." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/naval-ravikant-quotes", sponsorLogo: "", sponsorURL: "")
 let cofounders1 = Tip(header: "Quote", title: "Pick business partners with high intelligence, energy, and, above all, integrity.", body: "- Naval Ravikant \n\nCEO and a co-founder of AngelList." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/naval-ravikant-quotes", sponsorLogo: "", sponsorURL: "")
 let cofounders2 = Tip(header: "Quote", title: "Pick business partners with high intelligence, energy, and, above all, integrity.", body: "- Naval Ravikant \n\nCEO and a co-founder of AngelList." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/naval-ravikant-quotes", sponsorLogo: "", sponsorURL: "")
@@ -2683,11 +2810,14 @@ let cofoundersArray0 = [cofounders0, cofounders1, cofounders2, cofounders3]
 let cofoundersArray1 = [cofounders4, cofounders5, cofounders3, cofounders2]
 
 let cofoundersTipArrays = [cofoundersArray0, cofoundersArray1,]
-let cofoundersTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: cofoundersTipArrays.random())
-let cofoundersTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [cofoundersTopic,])
+let cofoundersTitle = "Cofounders"
+let cofoundersIcon = Constants.Icon.cofounders
+let cofoundersTopic = Topic(title: cofoundersTitle, icon: cofoundersIcon, tip: cofoundersTipArrays.random())
+let cofoundersTopics = Topics(title: cofoundersTitle, icon: cofoundersIcon, topics: [cofoundersTopic,])
 
 
-//INVESTORS
+
+//MARK: INVESTORS
 let ventureCapital0 = Tip(header: "VC Investors", title: "Talk to as many VCs as you can, even if you don't want their money, because a) they may be on the board of someone who will buy you, and b) if you seem impressive, they'll be discouraged from investing in your competitors.", body: "The most efficient way to reach VCs, especially if you only want them to know about you and don't want their money, is at the conferences that are occasionally organized for startups to present to them. \n\n- Paul Graham \n\nCofounder of Y Combinator" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
 let ventureCapital1 = Tip(header: "Pitching to a VC", title: "Have 15-20 slides in your slide deck", body: "Tom Fountain, former Principal at Mayfield Fund: \n\nYour presentation should cover (1-2 slides per topic): \n\n1. Vision Statement \n2. Executive Summary \n3. Problem description \n4. Product solution \n5. Go-to Market plan \n6. Competitive landscape \n7. Operating plan \n8. Financing details \n\nIn a 60-minute pitch meeting, half of it will be spent on your slides and the other half will be spent answering the VCs questions. \n\nThe key to your first meeting is not to get a term sheet but to get a second meeting.", sourceName: "Stanford Graduate School of Business", sourceURL: "https://www.youtube.com/watch?v=PyG5k0QtKOQ", sponsorLogo: "", sponsorURL: "")
 let ventureCapital2 = Tip(header: "Y Combinator Advice", title: "After you raise money: Be very conservative about how you spend it. Keep expenses low by hiring for the pessimistic case.", body: "Salaries are the main expense in most startups. And the problem with overhiring is that it gives you less margin for error. \n\nThe faster you’re burning through the money you have in the bank, the less time you have to make it to profitability. \n\nIf you start to run out of money before you have things working right, you have to raise more during a phase when the company is an “ugly duckling.” Even if you’re on the right track, you look bad right now. \n\nY Combinator constantly sees startups that die even though they’re on the right track, simply because they hired too fast.", sourceName: "Y Combinator", sourceURL: "https://ycombinator.wpengine.com/how-not-to-fail/", sponsorLogo: "", sponsorURL: "")
@@ -2704,29 +2834,100 @@ let ventureCapitalArray1 = [ventureCapital4, ventureCapital5, ventureCapital6, v
 let ventureCapitalArray2 = [ventureCapital8, ventureCapital9, ventureCapital7, ventureCapital6]
 
 let ventureCapitalTipArrays = [ventureCapitalArray0, ventureCapitalArray1, ventureCapitalArray2]
-let ventureCapitalTopic = Topic(title: screenwritingTitle, icon: screenwritingIcon, tip: ventureCapitalTipArrays.random())
-let ventureCapitalTopics = Topics(title: screenwritingTitle, icon: screenwritingIcon, topics: [ventureCapitalTopic,])
+let ventureCapitalTitle = "Investors"
+let ventureCapitalIcon = Constants.Icon.ventureCapital
+let ventureCapitalTopic = Topic(title: ventureCapitalTitle, icon: ventureCapitalIcon, tip: ventureCapitalTipArrays.random())
+let ventureCapitalTopics = Topics(title: ventureCapitalTitle, icon: ventureCapitalIcon, topics: [ventureCapitalTopic,])
 
 //COMPETITION
-let startup35 = Tip(header: "Competition:", title: "It's difficult as a new startup founder not to obsess about competition, actual and potential. But spending any time worrying about your competitors is nearly always a very bad idea", body: "Y Combinator likes to say that startup companies always die of suicide, not murder. \n\nThere will come a time when competitive dynamics are intensely important to the success or failure of your company, but it is highly unlikely to be true in the first year or two.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
+let startupCompetition0 = Tip(header: "Competition:", title: "It's difficult as a new startup founder not to obsess about competition, actual and potential. But spending any time worrying about your competitors is nearly always a very bad idea", body: "Y Combinator likes to say that startup companies always die of suicide, not murder. \n\nThere will come a time when competitive dynamics are intensely important to the success or failure of your company, but it is highly unlikely to be true in the first year or two.", sourceName: "Y Combinator", sourceURL: "https://blog.ycombinator.com/ycs-essential-startup-advice/", sponsorLogo: "", sponsorURL: "")
 
-//PARTNERSHIPS
-let startup38 = Tip(header: "Partnerships", title: "In the beginning, Partnerships usually don't work, especially as a way to get growth started", body: "It's a common mistake among inexperienced founders to believe that a partnership with a big company will be their big break. \n\nSix months later they're all saying the same thing: that was way more work than we expected, and we ended up getting practically nothing out of it. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
+let startupCompetitionArray0 = [startupCompetition0,]
 
-
-
-//REVENUE
-let startup58 = Tip(header: "Make Money 💰", title: "The way a startup makes money is to offer people better technology than they have now. Look at something people are trying to do, and figure out how to do it in a way that doesn't suck.", body: "- Paul Graham \n\nCofounder of Y Combinator" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
-
-
-//OPERATING
-let startup81 = Tip(header: "Y Combinator's Paul Graham", title: "For most startups the model should be grad student, not law firm. Aim for cool and cheap, not expensive and impressive.", body: "We had office chairs so cheap that the arms all fell off. This was slightly embarrassing at the time, but in retrospect the grad-studenty atmosphere of our office was another of those things we did right without knowing it." , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
-let startup82 = Tip(header: "Y Combinator's Paul Graham", title: "An apartment is also the right kind of place for developing software.", body: "Cube farms suck for that, as you've probably discovered if you've tried it. Ever notice how much easier it is to hack at home than at work? So why not make work more like home?" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+let startupCompetitionTipArrays = [startupCompetitionArray0]
+let startupCompetitionTitle = "Competition"
+let startupCompetitionIcon = Constants.Icon.competition
+let startupCompetitionTopic = Topic(title: startupCompetitionTitle, icon: startupCompetitionIcon, tip:  startupCompetitionTipArrays.random())
+let startupCompetitionTopics = Topics(title: startupCompetitionTitle, icon: startupCompetitionIcon, topics: [ startupCompetitionTopic,])
 
 
-//HIRING
-let startup59 = Tip(header: "Hiring", title: "Rule for deciding who to hire: Could you describe the person as an animal? ", body: "It might be hard to translate that into another language, but I think everyone in the US knows what it means. It means someone who takes their work a little too seriously; someone who does what they do so well that they pass right through professional and cross over into obsessive. \n\n- Paul Graham \nCofounder of Y Combinator" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
-let startup60 = Tip(header: "Hiring", title: "Y Combinator's Paul Graham on hiring", body: "A salesperson who just won't take no for an answer; a hacker who will stay up till 4:00 AM rather than go to bed leaving code with a bug in it; a PR person who will cold-call New York Times reporters on their cell phones; a graphic designer who feels physical pain when something is two millimeters out of place." , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+
+
+//MARK: REVENUE
+let startupRevenue0 = Tip(header: "Make Money 💰", title: "The way a startup makes money is to offer people better technology than they have now. Look at something people are trying to do, and figure out how to do it in a way that doesn't suck.", body: "- Paul Graham \n\nCofounder of Y Combinator" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+
+let startupRevenueArray0 = [startupRevenue0,]
+
+let startupRevenueTipArrays = [startupRevenueArray0]
+let startupRevenueTitle = "Revenue"
+let startupRevenueIcon = Constants.Icon.revenue
+let startupRevenueTopic = Topic(title: startupRevenueTitle, icon: startupRevenueIcon, tip: startupRevenueTipArrays.random())
+let startupRevenueTopics = Topics(title: startupRevenueTitle, icon: startupRevenueIcon, topics: [startupRevenueTopic,])
+
+//MARK: CUSTOMERS
+let startupCustomers0 = Tip(header: "Your First 10 Customers", title: "1st: Hopefully you're solving a problem that either you have or someone that you know has. So your first couple of customers should be people you know.", body: "2nd: Always find 10 people who LOVE your product and get them in a way that doesn't scale. \n\nDO: Recruit them by hand. \nDON'T: Get them from some advertising scheme or viral growth mechanism. \n\nFind 10 customers who instensely have the problem that you're trying to solve, willing to work with an early stage startup, and willing to PAY." , sourceName: "Y Combinator - How to get your first ten customers?", sourceURL: "https://www.youtube.com/watch?v=WAXLTG9n7Kw", sponsorLogo: "", sponsorURL: "")
+let startupCustomers1 = Tip(header: "Your First 10 Customers", title: "You should charge your customers: Use this as a signal for how intensely of a problem that they have.", body: "If your customers are pushing back and saying \"I would use this but only if it's free.\" They're telling you that they don't actually have the problem that you're trying to solve. \n\nDON'T: Try to close the first 10 customers who walk in their door. DO: Have 4-5 qualifying questions, so you can identify customers who will pay versus customers who are just browsing but who won't actually pay. \n\nOnly the customers who are qualified, who answer those questions correctly should you aggressively be trying to get to sign-up. The other customers, it's totally okay if you let go for now and you focus on them later." , sourceName: "Y Combinator - How to get your first ten customers?", sourceURL: "https://www.youtube.com/watch?v=WAXLTG9n7Kw", sponsorLogo: "", sponsorURL: "")
+
+let startupCustomers2 = Tip(header: "Your First Customers", title: "Finding your first customers should be EASY because they should be you or someone that you know.", body: "DO: You should be solving a problem that you or someone that you know has. These should be your first customers. \n\nDON'T: If you're building a product for a mysterous set of users that you don't who they are, then that's a problem and increases your odds of startup failure." , sourceName: "Y Combinator - How to Plan an MVP", sourceURL: "https://www.youtube.com/watch?v=1hHMwLxN6EM&t=114s", sponsorLogo: "", sponsorURL: "")
+let startupCustomers3 = Tip(header: "Y Combinator:", title: "Do what Stripe did to get your first users: Go out and manually recruit your early users and manually get them set up with your product on their behalf", body: "When speaking to potential users, most founders ask \"Will you try our beta?\" and if the answer is yes, they say \"Great, we'll send you a link.\" \n\nBut the founders of Stripe weren't going to wait. When anyone agreed to try Stripe they'd say \"Right then, give me your laptop\" and set them up on the spot. \n\nStripe would later become one of the most successful startups Y Combinator has funded.", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
+let startupCustomers4 = Tip(header: "Y Combinator", title: "In the beginning, focus on a deliberately narrow market. That's what Facebook did.", body: "At first it was just for Harvard students. In that form it only had a potential market of a few thousand people, but because they felt it was really for them, a critical mass of them signed up. \n\nAfter Facebook stopped being for Harvard students, it remained for students at specific colleges for quite a while. \n\nWhen I interviewed Mark Zuckerberg at Startup School, he said that while it was a lot of work creating course lists for each school, doing that made students feel the site was their natural home. \n\nIt's always worth asking if there's a subset of the market in which you can get a critical mass of users quickly. \n\n- Paul Graham, co-founder of Y Combinator", sourceName: "Inc.", sourceURL: "https://www.inc.com/business-insider/paul-grahams-counter-intuitive-startup-advice-do-things-that-dont-scale.html", sponsorLogo: "", sponsorURL: "")
+let startupCustomers5 = Tip(header: "Increase User Retention", title: "Send your users emails, app notifications, and reminders", body: "A lot of startups build something and struggle to get sign-ups, engagement, or retention. \n\nDon't hope that your users will somehow remember on their own to user your product when they have a problem. \n\nFigure out ways to get users to come back into the app or figure out ways to be back in front of the user at the right time." , sourceName: "Y Combinator - How to Evaluate Startup Ideas", sourceURL: "https://www.ycombinator.com/library/6e-how-to-evaluate-startup-ideas", sponsorLogo: "", sponsorURL: "")
+
+
+let startupCustomersArray0 = [startupCustomers0, startupCustomers1, startupCustomers2, startupCustomers3]
+let startupCustomersArray1 = [startupCustomers4, startupCustomers5, startupCustomers2, startupCustomers3]
+
+let startupCustomersTipArrays = [startupCustomersArray0, startupCustomersArray1]
+let startupCustomersTitle = "Customers"
+let startupCustomersIcon = Constants.Icon.customers
+let startupCustomersTopic = Topic(title: startupCustomersTitle, icon: startupCustomersIcon, tip: startupCustomersTipArrays.random())
+let startupCustomersTopics = Topics(title: startupCustomersTitle, icon: startupCustomersIcon, topics: [startupCustomersTopic,])
+
+//
+//
+//DO:
+
+
+
+
+
+
+//MARK: OPERATING
+let startupOperating0 = Tip(header: "Y Combinator's Paul Graham", title: "For most startups the model should be grad student, not law firm. Aim for cool and cheap, not expensive and impressive.", body: "We had office chairs so cheap that the arms all fell off. This was slightly embarrassing at the time, but in retrospect the grad-studenty atmosphere of our office was another of those things we did right without knowing it." , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+let startupOperating1 = Tip(header: "Y Combinator's Paul Graham", title: "An apartment is also the right kind of place for developing software.", body: "Cube farms suck for that, as you've probably discovered if you've tried it. Ever notice how much easier it is to hack at home than at work? So why not make work more like home?" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+
+let startupOperatingArray0 = [startupOperating0,startupOperating1]
+
+let startupOperatingTipArrays = [startupOperatingArray0]
+let startupOperatingTitle = "Operations"
+let startupOperatingIcon = Constants.Icon.operations
+let startupOperatingTopic = Topic(title: startupOperatingTitle, icon: startupOperatingIcon, tip: startupOperatingTipArrays.random())
+let startupOperatingTopics = Topics(title: startupOperatingTitle, icon: startupOperatingIcon, topics: [startupOperatingTopic,])
+
+
+//MARK: HIRING
+let startupHiring0 = Tip(header: "Hiring", title: "Rule for deciding who to hire: Could you describe the person as an animal? ", body: "It might be hard to translate that into another language, but I think everyone in the US knows what it means. It means someone who takes their work a little too seriously; someone who does what they do so well that they pass right through professional and cross over into obsessive. \n\n- Paul Graham \nCofounder of Y Combinator" , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+let startupHiring1 = Tip(header: "Hiring", title: "Y Combinator's Paul Graham on hiring", body: "A salesperson who just won't take no for an answer; a hacker who will stay up till 4:00 AM rather than go to bed leaving code with a bug in it; a PR person who will cold-call New York Times reporters on their cell phones; a graphic designer who feels physical pain when something is two millimeters out of place." , sourceName: "Papermine: Paul Graham's Best Essays", sourceURL: "https://papermine.com/pub/1204761/#cover", sponsorLogo: "", sponsorURL: "")
+
+
+
+
+let startupHiringArray0 = [startupHiring0,startupHiring1]
+
+let startupHiringTipArrays = [startupOperatingArray0]
+let startupHiringTitle = "Hiring"
+let startupHiringIcon = Constants.Icon.hiring
+let startupHiringTopic = Topic(title: startupHiringTitle, icon: startupHiringIcon, tip: startupHiringTipArrays.random())
+let startupHiringTopics = Topics(title: startupHiringTitle, icon: startupHiringIcon, topics: [startupHiringTopic,])
+
+
+//https://www.ycombinator.com/library/6e-how-to-evaluate-startup-ideas
+
+//A startup idea is a hypothesis about why a company could grow quickly. And your job is to figure out how to construct your hypothesis and pitch it to an investor so they understand how it can grow quickly.
+
+
+
+
 
 
 
@@ -2734,52 +2935,6 @@ let startup60 = Tip(header: "Hiring", title: "Y Combinator's Paul Graham on hiri
 
 
 //https://www.ycombinator.com/library/4D-yc-s-essential-startup-advice
-
-
-
-
-
-//what I discovered was that business was no great mystery. It's not something like physics or medicine that requires extensive study. You just try to get people to pay you for stuff.
-
-
-
-//What Customers Want
-//I think most businesses that fail do it because they don't give customers what they want.
-
-//if you're developing technology for money, you're probably not going to be developing it for people like you. Indeed, you can use this as a way to generate ideas for startups: what do people who are not like you want from technology?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Investors
-
-
-
-
-
-
-
-//Not Spending It
-
-
-
-
-
-
-
-
-
 /*
 When you're looking for space for a startup, don't feel that it has to look professional. Professional means doing good work, not elevators and glass walls. I'd advise most startups to avoid corporate space at first and just rent an apartment. You want to live at the office in a startup, so why not have a place designed to be lived in as your office?
 
@@ -2836,59 +2991,59 @@ If you find something broken that you can fix for a lot of people, you've found 
 let sideHustleTitle = "Startup"
 let sideHustleIcon = Constants.Icon.sideHustle
 //WEEK 1
-//0
-let sideHustleTipArray0 = [startup0, startup1, startup2, startup3]
-let sideHustleTopic0 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray0)
-//1
-let sideHustleTipArray1 = [startup4, startup5, startup6, startup7]
-let sideHustleTopic1 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray1)
-//2
-let sideHustleTipArray2 = [startup8, startup9, startup10, startup11]
-let sideHustleTopic2 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray2)
-//3
-let sideHustleTipArray3 = [startup12, startup13, startup14, startup15]
-let sideHustleTopic3 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray3)
-//4
-let sideHustleTipArray4 = [startup16, startup17, startup18, startup19]
-let sideHustleTopic4 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray4)
-//5
-let sideHustleTipArray5 = [startup20, startup21, startup22, startup23]
-let sideHustleTopic5 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray5)
-//6
-let sideHustleTipArray6 = [startup24, startup25, startup26, startup27]
-let sideHustleTopic6 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray6)
+////0
+//let sideHustleTipArray0 = [startup0, startup1, startup2, startup3]
+//let sideHustleTopic0 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray0)
+////1
+//let sideHustleTipArray1 = [startup4, startup5, startup6, startup7]
+//let sideHustleTopic1 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray1)
+////2
+//let sideHustleTipArray2 = [startup8, startup9, startup10, startup11]
+//let sideHustleTopic2 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray2)
+////3
+//let sideHustleTipArray3 = [startup12, startup13, startup14, startup15]
+//let sideHustleTopic3 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray3)
+////4
+//let sideHustleTipArray4 = [startup16, startup17, startup18, startup19]
+//let sideHustleTopic4 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray4)
+////5
+//let sideHustleTipArray5 = [startup20, startup21, startup22, startup23]
+//let sideHustleTopic5 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray5)
+////6
+//let sideHustleTipArray6 = [startup24, startup25, startup26, startup27]
+//let sideHustleTopic6 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray6)
+//
+////WEEK 2
+////7
+//let sideHustleTipArray7 = [startup28, startup29, startup30, startup31]
+//let sideHustleTopic7 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray7)
+////8
+//let sideHustleTipArray8 = [startup32, startup33, startup34, startup35]
+//let sideHustleTopic8 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray8)
+////9
+//let sideHustleTipArray9 = [startup36, startup37, startup38, startup39]
+//let sideHustleTopic9 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray9)
+////10
+//let sideHustleTipArray10 = [startup40, startup41, startup42, startup43]
+//let sideHustleTopic10 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray10)
+////11
+//let sideHustleTipArray11 = [startup44, startup45, startup46, startup47]
+//let sideHustleTopic11 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray11)
+////12
+//let sideHustleTipArray12 = [startup48, startup49, startup50, startup51]
+//let sideHustleTopic12 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray12)
+////13 (WIP 1)
+//let sideHustleTipArray13 = [startup52, startup53, startup54, startup55]
+//let sideHustleTipArray14 = [startup56, startup57, startup58, startup59]
+//let sideHustleTipArray15 = [startup60, startup61, startup62, startup63]
+//let sideHustleTipArray16 = [startup64, startup65, startup66, startup67]
+//let sideHustleTipArray17 = [startup68, startup69, startup70, startup71]
+//let sideHustleTipArray18 = [startup72, startup73, startup74, startup75]
 
-//WEEK 2
-//7
-let sideHustleTipArray7 = [startup28, startup29, startup30, startup31]
-let sideHustleTopic7 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray7)
-//8
-let sideHustleTipArray8 = [startup32, startup33, startup34, startup35]
-let sideHustleTopic8 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray8)
-//9
-let sideHustleTipArray9 = [startup36, startup37, startup38, startup39]
-let sideHustleTopic9 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray9)
-//10
-let sideHustleTipArray10 = [startup40, startup41, startup42, startup43]
-let sideHustleTopic10 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray10)
-//11
-let sideHustleTipArray11 = [startup44, startup45, startup46, startup47]
-let sideHustleTopic11 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray11)
-//12
-let sideHustleTipArray12 = [startup48, startup49, startup50, startup51]
-let sideHustleTopic12 = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArray12)
-//13 (WIP 1)
-let sideHustleTipArray13 = [startup52, startup53, startup54, startup55]
-let sideHustleTipArray14 = [startup56, startup57, startup58, startup59]
-let sideHustleTipArray15 = [startup60, startup61, startup62, startup63]
-let sideHustleTipArray16 = [startup64, startup65, startup66, startup67]
-let sideHustleTipArray17 = [startup68, startup69, startup70, startup71]
-let sideHustleTipArray18 = [startup72, startup73, startup74, startup75]
 
-
-let sideHustleTipArrays = [sideHustleTipArray0, sideHustleTipArray1, sideHustleTipArray2, sideHustleTipArray3, sideHustleTipArray4, sideHustleTipArray5, sideHustleTipArray6, sideHustleTipArray7, sideHustleTipArray8, sideHustleTipArray9, sideHustleTipArray10, sideHustleTipArray11, sideHustleTipArray12, sideHustleTipArray13]
-let sideHustleTopic = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArrays.random())
-let sideHustleTopics = Topics(title: sideHustleTitle, icon: sideHustleIcon, topics: [sideHustleTopic,])
+//let sideHustleTipArrays = [sideHustleTipArray0, sideHustleTipArray1, sideHustleTipArray2, sideHustleTipArray3, sideHustleTipArray4, sideHustleTipArray5, sideHustleTipArray6, sideHustleTipArray7, sideHustleTipArray8, sideHustleTipArray9, sideHustleTipArray10, sideHustleTipArray11, sideHustleTipArray12, sideHustleTipArray13]
+//let sideHustleTopic = Topic(title: sideHustleTitle, icon: sideHustleIcon, tip: sideHustleTipArrays.random())
+//let sideHustleTopics = Topics(title: sideHustleTitle, icon: sideHustleIcon, topics: [sideHustleTopic,])
 
 // MARK: - YouTube or Podcast
 
@@ -3488,10 +3643,10 @@ let parentingAMTopic6 = Topic(title: parentingTitle, icon: parentingIcon, tip: p
 
 
 //Mid Day
-let parentingDayTip0 = Tip(header: "Increase IQ", title: "Study of 4th-6th graders ages 10-12 revealed that children who napped 3+ times per week benefit from a 7.6% increase in academic performance in Grade 6", body: "Midday napping correlated with greater happiness, self-control, and grit; fewer behavioral problems; and higher IQ. \n\nThe more students sleep during the day, the greater the benefit of naps on many of these measures." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/05/190531135828.htm", sponsorLogo: "", sponsorURL: "")
-let parentingDayTip1 = Tip(header: "Get Your Kids Playing Outside", title: "Moderate to vigorous exercise and time outdoors correlates to better academic performance", body: "Study: Moderate to vigorous activity, especially in boys, directly correlated to better reading and arithmetic skills. \n\nChildren who had more sedentary lives had poorer skills in both reading and math." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "TBD", sponsorURL: "")
-let parentingDayTip2 = Tip(header: "Quote", title: "\"Each day I find some quiet time to listen to at least one current piece of music.\"", body: "\"I find that it has a meditative effect on me, and as I try to understand the lyrics and decode the music, my mind clears and I am recharged.\" \n\n\"Exploring new music also gives me an opportunity to connect better with my 18-, 20-, and 22-year-old sons. I will never be cool to them, but sometimes a simple song can trigger a really meaningful and unpredictable conversation.\" \n\n-Rob Price, president and CEO of School of Rock" , sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", sponsorLogo: "TBD", sponsorURL: "")
-let parentingDayTip3 = Tip(header: "Pregnant?", title: "Try to avoid stress during pregnancy", body: "Study: Children exposed to high cortisol levels in the womb, caused by maternal stress, suffer an average verbal IQ loss of 3.83 points. \n\nCommon stressful events include moving, serious illness, financial stress, and death of a loved one." , sourceName: "The Institute for Ethics and Emerging Technologies", sourceURL: "https://ieet.org/index.php/IEET2/more/pellissier20120109", sponsorLogo: "TBD", sponsorURL: "")
+let parentingDayTip0 = Tip(header: "Increase IQ 🤓", title: "Study of 4th-6th graders revealed that kids who napped 😴 3+ times per week benefit from a 7.6% increase in academic performance in Grade 6", body: "Midday napping  correlated with greater happiness, self-control, and grit; fewer behavioral problems; and higher IQ. \n\nThe more students sleep during the day, the greater the benefit of naps on many of these measures." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/05/190531135828.htm", sponsorLogo: "", sponsorURL: "")
+let parentingDayTip1 = Tip(header: "Get Your Kids Outside 🌲", title: "Moderate to vigorous exercise and time outdoors correlates to better academic performance", body: "Study: Moderate to vigorous activity, especially in boys, directly correlated to better reading and arithmetic skills. \n\nChildren who had more sedentary lives had poorer skills in both reading and math." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/entry/5-benefits-of-being-outdoors_us_5938266ce4b014ae8c69dce0", sponsorLogo: "TBD", sponsorURL: "")
+let parentingDayTip2 = Tip(header: "Quote 🎶", title: "\"Each day I find some quiet time to listen to at least one current piece of music.\"", body: "\"I find that it has a meditative effect on me, and as I try to understand the lyrics and decode the music, my mind clears and I am recharged.\" \n\n\"Exploring new music also gives me an opportunity to connect better with my 18-, 20-, and 22-year-old sons. I will never be cool to them, but sometimes a simple song can trigger a really meaningful and unpredictable conversation.\" \n\n-Rob Price, president and CEO of School of Rock" , sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", sponsorLogo: "TBD", sponsorURL: "")
+let parentingDayTip3 = Tip(header: "Pregnant? 🤰", title: "Try to avoid stress during pregnancy", body: "Study: Children exposed to high cortisol levels in the womb, caused by maternal stress, suffer an average verbal IQ loss of 3.83 points. \n\nCommon stressful events include moving, serious illness, financial stress, and death of a loved one." , sourceName: "The Institute for Ethics and Emerging Technologies", sourceURL: "https://ieet.org/index.php/IEET2/more/pellissier20120109", sponsorLogo: "TBD", sponsorURL: "")
 
 //2
 let parentingDayTip4 = Tip(header: "Increase IQ", title: "Breastfeeding is good for your child's IQ", body: "Studies report a 2-7 point IQ gap in children who don’t receive breast milk." , sourceName: "The Institute for Ethics and Emerging Technologies", sourceURL: "https://ieet.org/index.php/IEET2/more/pellissier20120109", sponsorLogo: "TBD", sponsorURL: "")

@@ -371,7 +371,7 @@ class ProfileViewController: UIViewController {
 //                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
 //                             motivateAMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustlePM(), jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
                              friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
                              topicsNow: motivateAMTopics)
 
@@ -382,7 +382,7 @@ class ProfileViewController: UIViewController {
 //                             studyTopic, stressedAMTopic, depressedAMTopic, madAMTopic,
 //                             motivateAMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleAM(), jobSearchTopics, studyTopics, relationshipAM(), parentingAMTopics,
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyTopics, relationshipAM(), parentingAMTopics,
                              friendTopics, anxiousAMTopics, depressedAMTopics, madAMTopics,
                              topicsNow: motivateAMTopics) //Anxious
 
@@ -391,7 +391,7 @@ class ProfileViewController: UIViewController {
 //                             studyDayTopic, stressedDayTopic, depressedDayTopic, madDayTopic,
 //                             motivateDayTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleDay(), jobSearchTopics, studyDayTopics, relationshipDay(), parentingDayTopics,
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyDayTopics, relationshipDay(), parentingDayTopics,
                              friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
 
         case 15...19:
@@ -400,7 +400,7 @@ class ProfileViewController: UIViewController {
 //            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipPMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingPMTopic,
 //                             studyTopic, stressedDayTopic, depressedDayTopic, madDayTopic, motivateAfterTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustleDay(), jobSearchTopics, studyTopics, relationshipPM(), parentingPMTopics,
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyTopics, relationshipPM(), parentingPMTopics,
                              friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateAfterTopics)
 
         case 20..<24:
@@ -410,7 +410,7 @@ class ProfileViewController: UIViewController {
 //                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
 //                             motivatePMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, sideHustlePM(), jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
+            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
                              friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
                              topicsNow: motivatePMTopics)
 

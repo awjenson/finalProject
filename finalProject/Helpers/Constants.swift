@@ -22,6 +22,31 @@ struct Constants {
     
 
     struct Icon {
+        static let customers = "icons8-card_payment"
+        static let betaVersion = "icons8-iphone" //"icons8-beta"
+        static let founderAdvice = "icons8-leader"
+        static let avoidFailure = "icons8-facepalm"
+        static let earlyStage = "icons8-sprout"
+        static let cofounders = "icons8-collaboration"
+        static let ventureCapital = "icons8-coin_in_hand"
+        static let competition = "icons8-wrestling"
+        static let partnerships = "icons8-handshake"
+        static let revenue = "icons8-us_dollar"
+        static let operations = "icons8-organization"
+        static let hiring = "icons8-user_groups"
+        static let productMarket = "icons8-firework_explosion"
+
+        static let setLocation = "icons8-full_image"
+        static let setDesign = "icons8-paint_palette"
+        static let casting = "icons8-people"
+        static let pitching = "icons8-voice_recognition"
+        static let hiringCrew = "icons8-user_group"
+        static let directing = "icons8-leader" //"icons8-megaphone"
+        static let directingActors = "icons8-collaboration" //"icons8-leader"
+        static let lighting = "icons8-stage_light"
+        static let firstDraft = "icons8-inscription"
+        static let editing = "icons8-video_editing"
+
         static let cancel = "icons8-ok" //"icons8-cancel"
         static let undo = "icons8-undo"
 

@@ -2094,7 +2094,7 @@
             </objects>
             <point key="canvasLocation" x="-1643" y="21"/>
         </scene>
-        <!--Passion-->
+        <!--PASSION-->
         <scene sceneID="p7B-ia-rmG">
             <objects>
                 <viewController id="ZqO-9z-FHx" customClass="HobbyViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -2105,6 +2105,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ez1-OV-3kh">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.95686274509803915" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="WBw-9r-a5c" userLabel="HeaderView">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2897,6 +2898,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="uyt-T6-cAD" firstAttribute="top" secondItem="hB7-JD-Ewu" secondAttribute="top" constant="10" id="7VC-Wf-k5s"/>
                                                 <constraint firstAttribute="trailing" secondItem="uyt-T6-cAD" secondAttribute="trailing" constant="10" id="giu-92-Px5"/>
@@ -2904,7 +2906,7 @@
                                                 <constraint firstItem="uyt-T6-cAD" firstAttribute="leading" secondItem="hB7-JD-Ewu" secondAttribute="leading" constant="10" id="ydl-Md-NOl"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="buyButton" destination="tYv-31-cdW" id="XA1-F9-jt6"/>
                                             <outlet property="headerLabel" destination="ZEj-dS-Uni" id="bWx-gT-rbr"/>
@@ -2917,7 +2919,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JcN-Br-6Kn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ez1-OV-3kh" firstAttribute="leading" secondItem="JcN-Br-6Kn" secondAttribute="leading" id="WQt-4a-mYp"/>
                             <constraint firstItem="Ez1-OV-3kh" firstAttribute="trailing" secondItem="JcN-Br-6Kn" secondAttribute="trailing" id="Xk2-2r-RTa"/>
@@ -2925,7 +2927,7 @@
                             <constraint firstItem="JcN-Br-6Kn" firstAttribute="bottom" secondItem="Ez1-OV-3kh" secondAttribute="bottom" id="oxc-pl-wOk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Passion" image="lightbulb.fill" catalog="system" id="Jdy-PY-Qcf"/>
+                    <tabBarItem key="tabBarItem" title="PASSION" image="flame.fill" catalog="system" id="Jdy-PY-Qcf"/>
                     <connections>
                         <outlet property="hobbyHeaderView" destination="WBw-9r-a5c" id="5P3-Mz-Ojh"/>
                         <outlet property="hobbyTableView" destination="Ez1-OV-3kh" id="bbr-jG-qtP"/>
@@ -2993,10 +2995,10 @@
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="icons8-forward_arrow" width="100" height="100"/>
         <image name="icons8-reply_arrow" width="100" height="100"/>
         <image name="icons8-up" width="100" height="100"/>
-        <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
         <image name="line.horizontal.3.decrease.circle" catalog="system" width="128" height="121"/>
         <image name="line.horizontal.3.decrease.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.crop.square" catalog="system" width="128" height="114"/>
