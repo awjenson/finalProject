@@ -178,12 +178,20 @@ class UserInfoViewController: UIViewController {
     }
 
     @IBAction func atHomeButtonTapped(_ sender: Any) {
+        tapped()
         buttonTapped = "atHome"
     }
 
 
     @IBAction func notHomeButtonTapped(_ sender: Any) {
+        tapped()
         buttonTapped = "notHome"
+    }
+
+    //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
+    @objc func tapped() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
 
 
@@ -320,9 +328,6 @@ class UserInfoViewController: UIViewController {
 
     func beginAnimation() {
         print("beginAnimation")
-
-
-
 
         UIView.animate(withDuration: 4.9, delay: 0, options: [.repeat, .autoreverse, .beginFromCurrentState], animations: {
 

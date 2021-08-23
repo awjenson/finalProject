@@ -36,19 +36,19 @@ class BounceButton: UIButton {
 
 
         self.setTitle(selectedEmoji, for: .normal)
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 34)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 35)
 
         self.transform = CGAffineTransform(scaleX: 10, y: 10)
         self.transform = CGAffineTransform(translationX: 0, y: -15)
 
-        UIView.animate(withDuration: 0.075, delay: 0, usingSpringWithDamping: 10, initialSpringVelocity: 10, options: .allowUserInteraction, animations: {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 10, initialSpringVelocity: 10, options: .allowUserInteraction, animations: {
 
             self.transform = CGAffineTransform.identity //reset to default size
 
             }, completion: {_ in
 
             //reset to original button style
-                self.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+            self.titleLabel?.font = UIFont.systemFont(ofSize: 24)
             self.setTitle("☑︎", for: .normal)
             }
         )
