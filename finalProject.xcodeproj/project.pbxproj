@@ -93,7 +93,6 @@
 		DAD4C65F246A65C1003B215C /* MyCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C65E246A65C1003B215C /* MyCustomHeader.swift */; };
 		DADE4C7A20E9A5D300E19393 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE4C7920E9A5D300E19393 /* QuoteData.swift */; };
 		DADFEBA226D16D0700A29229 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DADFEBA126D16D0700A29229 /* Lottie */; };
-		DADFEBA626D16E3400A29229 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFEBA526D16E3400A29229 /* LottieView.swift */; };
 		DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1EC6520AA801E00EA9B3E /* EditButton.swift */; };
 		DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2977920BB76EC00868BF2 /* InternetConnection.swift */; };
 		DAE70F2B240C3AE100A6238D /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE70F2A240C3AE100A6238D /* Array+Extension.swift */; };
@@ -194,7 +193,6 @@
 		DAD4C65C246A5918003B215C /* ExpandableTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTips.swift; sourceTree = "<group>"; };
 		DAD4C65E246A65C1003B215C /* MyCustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomHeader.swift; sourceTree = "<group>"; };
 		DADE4C7920E9A5D300E19393 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
-		DADFEBA526D16E3400A29229 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		DAE1EC6520AA801E00EA9B3E /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		DAE2977920BB76EC00868BF2 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		DAE70F2A240C3AE100A6238D /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
@@ -396,7 +394,6 @@
 				DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */,
 				DAD4C65E246A65C1003B215C /* MyCustomHeader.swift */,
 				DABD221C26924EE300A3AE66 /* RoundButtonWithImageAndText.swift */,
-				DADFEBA526D16E3400A29229 /* LottieView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -770,7 +767,6 @@
 				DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */,
 				DA8DC6FB21F66F1B00663DB4 /* BottomCornersRoundedView.swift in Sources */,
 				DA197B3F2467652800EE324B /* MainTopicViewController.swift in Sources */,
-				DADFEBA626D16E3400A29229 /* LottieView.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
 				DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */,
 				DA687C3622605EAC0037DD48 /* RoundProfileIconButton.swift in Sources */,
