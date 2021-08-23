@@ -15,14 +15,10 @@ import SafariServices // to display webview
 // Row 2 - 4: Studying, Startup, Filmmaking, Screenwriting
 // Row 3 - 3: Job Search (Career Growth), Confidence (Mental Toughness), Bad Mood (Anxiety, Depression, Loneliness)
 
-//filmmakingHabitTopics,firstDraftTopics,pitchingTopics,castingTopics,setsLocationTopics,setDesignTopics,hiringCrewTopics,filmingTopics,directingTopics,lightingTopics,directingActorsTopics,filmPostTopics,filmAdviceTopics
-
-//startupHabitTopics,earlyStageTopics,betaVersionTopics,avoidFailureTopics,ventureCapitalTopics,cofoundersTopics,startupFounderTopics,startupRevenueTopics,startupOperatingTopics,startupHiringTopics,startupPartnershipsTopics,startupCompetitionTopics,startupQuoteTopics
 
 // Currently Excluded: Investing, Journal, Meditation
 
 class HobbyViewController: UIViewController {
-
 
     // MARK: - IBOutlets
 
@@ -122,11 +118,6 @@ class HobbyViewController: UIViewController {
      var topicArray1: [Topic]!
      var topicArray2: [Topic]!
      var topicArray3: [Topic]!
-     //Row 2
-     var topicArray4: [Topic]!
-     var topicArray5: [Topic]!
-     var topicArray6: [Topic]!
-     var topicArray7: [Topic]!
 
      var topicsArrays: [Topics] = [] // Array of [array of topics]
 
@@ -214,15 +205,13 @@ class HobbyViewController: UIViewController {
 
     func setupUI() {
 
-        // place 12 buttons in desired order (excludes Now tips)
-        hobbyTopicButtons = [hobbyTopic0Button, hobbyTopic1Button, hobbyTopic2Button, hobbyTopic3Button,
-                             hobbyTopic4Button, hobbyTopic5Button, hobbyTopic6Button, hobbyTopic7Button, hobbyTopic8Button, hobbyTopic9Button, hobbyTopic10Button, hobbyTopic11Button]
+        // place 4 buttons in desired order (excludes Now tips)
+        hobbyTopicButtons = [hobbyTopic0Button, hobbyTopic1Button, hobbyTopic2Button, hobbyTopic3Button,]
 
-        hobbyTopicLabels = [hobbyTopic0Label, hobbyTopic1Label, hobbyTopic2Label, hobbyTopic3Label,
-                            hobbyTopic4Label, hobbyTopic5Label, hobbyTopic6Label, hobbyTopic7Label, hobbyTopic8Label, hobbyTopic9Label, hobbyTopic10Label, hobbyTopic11Label,]
+        hobbyTopicLabels = [hobbyTopic0Label, hobbyTopic1Label, hobbyTopic2Label, hobbyTopic3Label,]
 
         // set footer
-        hobbyTableViewFooter.frame.size.height = 250
+        hobbyTableViewFooter.frame.size.height = 200
 
         //setupQuote() moved into dayOfWeekAndHour()
 
@@ -363,13 +352,9 @@ class HobbyViewController: UIViewController {
             print("Weekend, Very Early Morning")
             print("hour: \(hour)")
 
-            // call function to display 9 time-based topics
-            appendNineTopics(startupHabitTopics,earlyStageTopics,betaVersionTopics,startupCustomersTopics,avoidFailureTopics, startupProductMarketTopics,ventureCapitalTopics,cofoundersTopics,startupFounderTopics,startupRevenueTopics,startupOperatingTopics,startupHiringTopics,
-                             topicsNow: startupQuoteTopics)
+            // call function to display 4 time-based topics
 
-//            appendNineTopics(filmmakingHabitTopics,firstDraftTopics,pitchingTopics,castingTopics,setsLocationTopics,setDesignTopics,hiringCrewTopics,filmingTopics,directingTopics,lightingTopics,directingActorsTopics,filmPostTopics,
-//                             topicsNow: filmAdviceTopics)
-
+            appendFiveTopics(podcastTopics, comedianTopics, startupTopics(), filmTopics(), topicsNow: adviceTopics)
 
 
         default:
@@ -396,21 +381,22 @@ class HobbyViewController: UIViewController {
 
         performUIUpdatesOnMain {
 
-            //row1
+//            //row1
             self.hobbyTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
             self.hobbyTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
             self.hobbyTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
             self.hobbyTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
+
             //row2
-            self.hobbyTopic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
-            self.hobbyTopic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
-            self.hobbyTopic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
-            self.hobbyTopic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
-            //row3
-            self.hobbyTopic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
-            self.hobbyTopic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
-            self.hobbyTopic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
-            self.hobbyTopic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
+//            self.hobbyTopic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
+//            self.hobbyTopic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
+//            self.hobbyTopic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
+//            self.hobbyTopic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
+//            //row3
+//            self.hobbyTopic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
+//            self.hobbyTopic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
+//            self.hobbyTopic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
+//            self.hobbyTopic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
 
 
 //            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
@@ -443,64 +429,23 @@ class HobbyViewController: UIViewController {
         self.hobbyTopic2Button.setImage(UIImage(named: topics[2].icon) , for: UIControl.State.normal)
         self.hobbyTopic3Button.setImage(UIImage(named: topics[3].icon) , for: UIControl.State.normal)
         //row2
-        self.hobbyTopic4Button.setImage(UIImage(named: topics[4].icon) , for: UIControl.State.normal)
-        self.hobbyTopic5Button.setImage(UIImage(named: topics[5].icon) , for: UIControl.State.normal)
-        self.hobbyTopic6Button.setImage(UIImage(named: topics[6].icon) , for: UIControl.State.normal)
-        self.hobbyTopic7Button.setImage(UIImage(named: topics[7].icon) , for: UIControl.State.normal)
-
-        //row3
-        self.hobbyTopic8Button.setImage(UIImage(named: topics[8].icon) , for: UIControl.State.normal)
-        self.hobbyTopic9Button.setImage(UIImage(named: topics[9].icon) , for: UIControl.State.normal)
-        self.hobbyTopic10Button.setImage(UIImage(named: topics[10].icon) , for: UIControl.State.normal)
-        self.hobbyTopic11Button.setImage(UIImage(named: topics[11].icon) , for: UIControl.State.normal)
+//        self.hobbyTopic4Button.setImage(UIImage(named: topics[4].icon) , for: UIControl.State.normal)
+//        self.hobbyTopic5Button.setImage(UIImage(named: topics[5].icon) , for: UIControl.State.normal)
+//        self.hobbyTopic6Button.setImage(UIImage(named: topics[6].icon) , for: UIControl.State.normal)
+//        self.hobbyTopic7Button.setImage(UIImage(named: topics[7].icon) , for: UIControl.State.normal)
+//
+//        //row3
+//        self.hobbyTopic8Button.setImage(UIImage(named: topics[8].icon) , for: UIControl.State.normal)
+//        self.hobbyTopic9Button.setImage(UIImage(named: topics[9].icon) , for: UIControl.State.normal)
+//        self.hobbyTopic10Button.setImage(UIImage(named: topics[10].icon) , for: UIControl.State.normal)
+//        self.hobbyTopic11Button.setImage(UIImage(named: topics[11].icon) , for: UIControl.State.normal)
     }
 
 
 
-//    func append13Topics(_ topic0: Topic, _ topic1: Topic, _ topic2: Topic, _ topic3: Topic, _ topic4: Topic, _ topic5: Topic, _ topic6: Topic, _ topic7: Topic, _ topic8: Topic, _ topic9: Topic, _ topic10: Topic, _ topic11: Topic, _ topic12Now: Topic) {
-//
-//        topics = [topic0, topic1, topic2, topic3,
-//                  topic4, topic5, topic6, topic7,
-//                  topic8, topic9, topic10, topic11,
-//                  topic12Now]
-//
-//        setupButtonIcons(topics)
-//        //row1
-//        self.adviceTopic0Label.text = topic0.title
-//        self.adviceTopic1Label.text = topic1.title
-//        self.adviceTopic2Label.text = topic2.title
-//        self.adviceTopic3Label.text = topic3.title
-//        //row2
-//        self.adviceTopic4Label.text = topic4.title
-//        self.adviceTopic5Label.text = topic5.title
-//        self.adviceTopic6Label.text = topic6.title
-//        self.adviceTopic7Label.text = topic7.title
-//        //row3
-//        self.adviceTopic8Label.text = topic8.title
-//        self.adviceTopic9Label.text = topic9.title
-//        self.adviceTopic10Label.text = topic10.title
-//        self.adviceTopic11Label.text = topic11.title
-//
-//        // set 4 'Now' tips to be displayed in initial table view
-//        appendAdviceTips()
-//    }
-
-//    func appendAdviceTips() {
-//        // for display in table view at launch
-//        //12th item in array (topic12Now)
-//        tips = [topics[12].tip[0],
-//                topics[12].tip[1],
-//                topics[12].tip[2],
-//                topics[12].tip[3]]
-//
-//        print("tips array count: \(tips.count)")
-//    }
-
-    func appendNineTopics(_ topics0: Topics, _ topics1: Topics, _ topics2: Topics, _ topics3: Topics, _ topics4: Topics, _ topics5: Topics, _ topics6: Topics, _ topics7: Topics, _ topics8: Topics, _ topics9: Topics, _ topics10: Topics, _ topics11: Topics, topicsNow: Topics) {
+    func appendFiveTopics(_ topics0: Topics, _ topics1: Topics, _ topics2: Topics, _ topics3: Topics, topicsNow: Topics) {
 
         topicsArrays = [topics0, topics1, topics2, topics3,
-                        topics4, topics5, topics6, topics7,
-                        topics8, topics9, topics10, topics11,
                         topicsNow]
 
         setupButtonIcons(topicsArrays)
@@ -511,15 +456,15 @@ class HobbyViewController: UIViewController {
             self.hobbyTopic2Label.text = topics2.title
             self.hobbyTopic3Label.text = topics3.title
             //row2
-            self.hobbyTopic4Label.text = topics4.title
-            self.hobbyTopic5Label.text = topics5.title
-            self.hobbyTopic6Label.text = topics6.title
-            self.hobbyTopic7Label.text = topics7.title
-            //row3
-            self.hobbyTopic8Label.text = topics8.title
-            self.hobbyTopic9Label.text = topics9.title
-            self.hobbyTopic10Label.text = topics10.title
-            self.hobbyTopic11Label.text = topics11.title
+//            self.hobbyTopic4Label.text = topics4.title
+//            self.hobbyTopic5Label.text = topics5.title
+//            self.hobbyTopic6Label.text = topics6.title
+//            self.hobbyTopic7Label.text = topics7.title
+//            //row3
+//            self.hobbyTopic8Label.text = topics8.title
+//            self.hobbyTopic9Label.text = topics9.title
+//            self.hobbyTopic10Label.text = topics10.title
+//            self.hobbyTopic11Label.text = topics11.title
 
        //set array that displays in initial tableview
         twoDimensionalArray = topicsNow.topics
@@ -599,15 +544,15 @@ class HobbyViewController: UIViewController {
         resetTopicButtonOriginalStyle(button: hobbyTopic2Button)
         resetTopicButtonOriginalStyle(button: hobbyTopic3Button)
         //row2
-        resetTopicButtonOriginalStyle(button: hobbyTopic4Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic5Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic6Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic7Button)
-        //row3
-        resetTopicButtonOriginalStyle(button: hobbyTopic8Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic9Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic10Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic11Button)
+//        resetTopicButtonOriginalStyle(button: hobbyTopic4Button)
+//        resetTopicButtonOriginalStyle(button: hobbyTopic5Button)
+//        resetTopicButtonOriginalStyle(button: hobbyTopic6Button)
+//        resetTopicButtonOriginalStyle(button: hobbyTopic7Button)
+//        //row3
+//        resetTopicButtonOriginalStyle(button: hobbyTopic8Button)
+//        resetTopicButtonOriginalStyle(button: hobbyTopic9Button)
+//        resetTopicButtonOriginalStyle(button: hobbyTopic10Button)
+//        resetTopicButtonOriginalStyle(button: hobbyTopic11Button)
 
         // Identify what button was tapped
 
@@ -619,8 +564,8 @@ class HobbyViewController: UIViewController {
             // Check if this button has been tapped just prior
             twoDimensionalArray = []
 
-            //NOW Topics are located in the 12th position of topicsArrays
-            twoDimensionalArray = topicsArrays[12].topics
+            //NOW Topics are located in the 4th position of topicsArrays
+            twoDimensionalArray = topicsArrays[4].topics
 
             // Unselected
             performUIUpdatesOnMain {
@@ -707,13 +652,13 @@ extension HobbyViewController: UITableViewDataSource, UITableViewDelegate {
     func titleColor(number: Int) -> UIColor {
         switch number {
         case 0:
-            return UIColor.flatMint()
+            return UIColor.flatPurple()
         case 1:
-            return UIColor.flatGreen()
+            return UIColor.flatMagenta()
         case 2:
-            return UIColor.flatForestGreen()
+            return UIColor.purple
         default:
-            return UIColor.flatMint()
+            return UIColor.flatPurple()
         }
     }
 
@@ -778,7 +723,6 @@ extension HobbyViewController: UITableViewDataSource, UITableViewDelegate {
         //Tell UITableViewCell who it's delegate is
         //Give the boss the intern
         cell.delegate = self  //self is the ProfileVC
-
 
         return cell
     }

@@ -32,6 +32,9 @@ class HobbyTableViewCell: UITableViewCell {
     @IBOutlet weak var hobbyTitleLabel: UILabel!
     @IBOutlet weak var hobbyBodyLabel: UILabel!
     @IBOutlet weak var hobbySourceButton: UIButton!
+
+
+    @IBOutlet weak var doneButton: BounceButton!
     @IBOutlet weak var buyButton: UIButton!
 
     // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
@@ -82,7 +85,7 @@ class HobbyTableViewCell: UITableViewCell {
         hobbyBodyLabel.attributedText = attributedStringBody
 
         //Buy Button
-        if verifyUrl(urlString: tip.sponsorURL) == true {
+        if verifyUrl(urlString: tip.buyURL) == true {
             //Sponsor URL exists, display buy button
             buyButton.isHidden = false
 
@@ -121,8 +124,14 @@ class HobbyTableViewCell: UITableViewCell {
     }
 
 
+    @IBAction func doneButtonTapped(_ sender: Any) {
+       
+    }
+
+
+
     @IBAction func buyButtonTapped(_ sender: Any) {
-        delegate?.goToSourceURL(url: tipItem.sponsorURL!)
+        delegate?.goToSourceURL(url: tipItem.buyURL!)
     }
 
     @IBAction func shareButtonTapped(_ sender: Any) {

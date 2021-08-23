@@ -18,9 +18,9 @@ protocol NowTableViewCellDelegate {
     // Implement these functions in the NowViewController
     func goToSourceURL(url: String)
     //add a delegate variable below, assign it to the VC
-
     func goToActivityView(header: String, title: String, body: String)
 }
+
 
 class NowTableViewCell: UITableViewCell {
 
@@ -36,8 +36,16 @@ class NowTableViewCell: UITableViewCell {
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var sourceButton: UIButton!
 
+    @IBOutlet weak var doneButton: BounceButton!
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var buyButton: UIButton!
+
+    
+
+
+
+
+
 
 
     // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
@@ -47,18 +55,27 @@ class NowTableViewCell: UITableViewCell {
 
     func configureCell(tip: Tip) {
 
+
+
         tipItem = tip
 
 //        tipIconView.layer.cornerRadius = tipIconView.frame.size.width/2
 //        tipIconView.clipsToBounds = true
 //        tipIconView.layer.borderWidth = 1
 
+      
 
         headerLabel.text? = tip.header
 
         titleLabel.text = tip.title
         bodyLabel.text = tip.body
         sourceButton.setTitle(tip.sourceName, for: .normal)
+
+        doneButton.isSelected = false
+
+
+
+
         
         //Underline effect for UIButton Title and left aligment
         let attributedString = NSMutableAttributedString(string: tip.sourceName)
@@ -69,7 +86,7 @@ class NowTableViewCell: UITableViewCell {
         sourceButton.titleLabel?.attributedText = attributedString
 
         //Buy Button
-        if verifyUrl(urlString: tip.sponsorURL) == true {
+        if verifyUrl(urlString: tip.buyURL) == true {
             //Sponsor URL exists, display buy button
             buyButton.isHidden = false
 
@@ -123,16 +140,20 @@ class NowTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
 
     //MARK: - IBActions
 
     @IBAction func sourceButtonTapped(_ sender: Any) {
         delegate?.goToSourceURL(url: tipItem.sourceURL!)
+    }
+
+
+    @IBAction func doneButtonTapped(_ sender: Any) {
     }
 
 
@@ -144,7 +165,7 @@ class NowTableViewCell: UITableViewCell {
 
 
     @IBAction func buyButtonTapped(_ sender: Any) {
-        delegate?.goToSourceURL(url: tipItem.sponsorURL!)
+        delegate?.goToSourceURL(url: tipItem.buyURL!)
     }
 
 

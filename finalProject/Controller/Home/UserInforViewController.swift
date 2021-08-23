@@ -9,6 +9,9 @@
 import UIKit
 import SwiftUI
 
+import MapKit
+import CoreLocation
+
 //import Firebase
 
 /*
@@ -32,10 +35,17 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var greetingLabel: ShadowLabel!
 
     @IBOutlet weak var arrowButton: UIButton!
-    @IBOutlet weak var quoteLabel: ShadowLabel!
     @IBOutlet weak var authorLabel: ShadowLabel!
+    @IBOutlet weak var quoteLabel: ShadowLabel!
+
 
     @IBOutlet weak var quoteView: UIView!
+
+
+
+    @IBOutlet weak var atHomeButton: CircleButton!
+
+    @IBOutlet weak var notHomeButton: CircleButton!
 
     // MARK: - Parameters
 
@@ -47,13 +57,15 @@ class UserInfoViewController: UIViewController {
     var day = 0
     var week = 0
     var weekOfMonth = 0
+    var month = 0
 
     let arrowIcon = "icons8-collapse_arrow-1"
     let authorText = "Relax"
     let quoteText = "Inhale deeply, exhale slowly"
 
-
     var selectedImage: String?
+
+    var buttonTapped = ""
 
     //Hide status bar (time, wifi, etc.)
     override var prefersStatusBarHidden: Bool {
@@ -153,10 +165,60 @@ class UserInfoViewController: UIViewController {
 
     }
 
+    
+
+
+   
+
+
+    //MARK: - IB Actions
 
     @IBAction func tapAction(_ sender: Any) {
         segueToNextVC()
     }
+
+    @IBAction func atHomeButtonTapped(_ sender: Any) {
+        buttonTapped = "atHome"
+    }
+
+
+    @IBAction func notHomeButtonTapped(_ sender: Any) {
+        buttonTapped = "notHome"
+    }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        //pass data from UITabBarController to ViewControllers
+
+        let barViewControllers = segue.destination as! UITabBarController
+
+            let destinationViewController = barViewControllers.viewControllers?[0] as! NowViewController
+            destinationViewController.homeButtonSeleted = buttonTapped
+
+            // access the second tab bar
+            let secondDes = barViewControllers.viewControllers?[1] as! ProfileViewController
+            secondDes.homeButtonSeleted = buttonTapped
+
+
+        if (segue.identifier == "atHomeSegue") {
+            buttonTapped = "atHome"
+            let destinationVC : MainTabBarViewController = segue.destination as! MainTabBarViewController;
+            destinationVC.homeButtonSeleted = buttonTapped
+        }
+        if (segue.identifier == "notHomeSegue") {
+            buttonTapped = "notHome"
+            let destinationVC : MainTabBarViewController = segue.destination as! MainTabBarViewController;
+            destinationVC.homeButtonSeleted = buttonTapped
+        }
+    }
+
+
+
+
+
+
+
 
     func segueToNextVC() {
         performSegue(withIdentifier: "swipe", sender: self)
@@ -184,7 +246,7 @@ class UserInfoViewController: UIViewController {
     func setupUI() {
         print("UserVC SetupUI")
         dayOfWeekAndHour()
-        arrowButton.setImage(UIImage(named: arrowIcon), for: .normal)
+        
         authorLabel.text = authorText
         quoteLabel.text = quoteText
         quoteLabel.transform = quoteLabel.transform.scaledBy(x: 0.9, y: 0.9)
@@ -269,6 +331,7 @@ class UserInfoViewController: UIViewController {
         }, completion: nil)
 
     }
+
 
 
 

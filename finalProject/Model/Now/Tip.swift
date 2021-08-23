@@ -17,20 +17,20 @@ class Tip {
     let body: String
     let sourceName: String
     let sourceURL: String?  // ?, in case URL doesn't work
-    let sponsorLogo: String
-    let sponsorURL: String? // ?, in case URL doesn't work
+    let doneType: String
+    let buyURL: String? // ?, in case URL doesn't work
 
     // MARK: Initializer
 
-    init(header: String, title: String, body: String, sourceName: String, sourceURL: String?, sponsorLogo: String, sponsorURL: String?) {
+    init(header: String, title: String, body: String, sourceName: String, sourceURL: String?, doneType: String, buyURL: String?) {
 
         self.header = header
         self.title = title
         self.body = body
         self.sourceName = sourceName
         self.sourceURL = sourceURL
-        self.sponsorLogo = sponsorLogo
-        self.sponsorURL = sponsorURL
+        self.doneType = doneType
+        self.buyURL = buyURL
     }
 }
 

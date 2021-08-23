@@ -19,9 +19,21 @@ struct Constants {
         static let rizeFormURL = "https://forms.gle/BLoHBW61ZLnxoQiW8"
     }
 
-    
-
     struct Icon {
+
+        static let bored = "icons8-puzzled"
+        static let lonely = "icons8-man"
+        static let confident = "icons8-arms_up"
+        static let comedian = "icons8-micro"
+        static let podcasting = "icons8-browse_podcasts"
+        static let playButton = "icons8-youtube_play_button"
+        static let kitchen = "icons8-fridge"
+        static let cleaning = "icons8-housekeeping"
+        static let homeActivities = "icons8-reading"
+        static let tvWatching = "icons8-retro_tv"
+        static let homeOffice = "icons8-home_office"
+        static let bedroom = "icons8-empty_bed"
+
         static let customers = "icons8-card_payment"
         static let betaVersion = "icons8-iphone" //"icons8-beta"
         static let founderAdvice = "icons8-leader"

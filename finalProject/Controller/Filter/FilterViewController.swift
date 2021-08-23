@@ -10,39 +10,68 @@ import UIKit
 
 class FilterViewController: UIViewController {
 
+    @IBOutlet weak var genderControl: UISegmentedControl!
     @IBOutlet weak var relationshipControl: UISegmentedControl!
-    @IBOutlet weak var exerciseControl: UISegmentedControl!
-    @IBOutlet weak var jobControl: UISegmentedControl!
     @IBOutlet weak var parentControl: UISegmentedControl!
-    @IBOutlet weak var sideHustleControl: UISegmentedControl!
+    @IBOutlet weak var jobControl: UISegmentedControl!
+    @IBOutlet weak var exerciseControl: UISegmentedControl!
+    @IBOutlet weak var debtControl: UISegmentedControl!
+
+    @IBOutlet weak var startupControl: UISegmentedControl!
+    @IBOutlet weak var filmControl: UISegmentedControl!
+
+
+
 
     @IBOutlet weak var ageControl: UISegmentedControl!
 
     let defaultIndex = 0
 
+
     //User Defaults
     let defaults = UserDefaults.standard
+
+    let font = UIFont.systemFont(ofSize: 8)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        genderControl.selectedSegmentIndex = defaultIndex
         relationshipControl.selectedSegmentIndex = defaultIndex
 //        parentControl.selectedSegmentIndex = defaultIndex
         jobControl.selectedSegmentIndex = defaultIndex
         exerciseControl.selectedSegmentIndex = defaultIndex
-        sideHustleControl.selectedSegmentIndex = defaultIndex
+        debtControl.selectedSegmentIndex = defaultIndex
+
+
+        startupControl.selectedSegmentIndex = defaultIndex
+        filmControl.selectedSegmentIndex = defaultIndex
+
 //        ageControl.selectedSegmentIndex = defaultIndex
 
         //Check for user data
+
+
+//        genderControl.selectedSegmentIndex = defaults.integer(forKey: genderKey)
+
+
         relationshipControl.selectedSegmentIndex = defaults.integer(forKey: relationshipKey)
 
-//        parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
+        parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
 
         jobControl.selectedSegmentIndex = defaults.integer(forKey: jobKey)
 
         exerciseControl.selectedSegmentIndex = defaults.integer(forKey: exerciseKey)
 
-        sideHustleControl.selectedSegmentIndex = defaults.integer(forKey: sideHustleKey)
+        debtControl.selectedSegmentIndex = defaults.integer(forKey: debtKey)
+
+        startupControl.selectedSegmentIndex = defaults.integer(forKey: startupKey)
+
+        filmControl.selectedSegmentIndex = defaults.integer(forKey: filmKey)
+
+        filmControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+
 
 //        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
 
@@ -77,12 +106,41 @@ class FilterViewController: UIViewController {
         performSegue(withIdentifier: "Back", sender: self)
     }
 
+    //MARK: - IB ACTIONS
+
+    //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
+    @objc func tapped() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
+
+    let genderKey = "Gender"
     let relationshipKey = "Relationship"
     let jobKey = "Job"
     let parentKey = "Parent"
     let exerciseKey = "Exercise"
-    let sideHustleKey = "SideHustle"
+    let debtKey = "Debt"
+    let startupKey = "Startup"
+    let filmKey = "Film"
     let ageKey = "Age"
+
+    @IBAction func genderControlTapped(_ sender: Any) {
+        switch genderControl.selectedSegmentIndex
+        {
+        case 0:
+            //Female
+            defaults.set(0, forKey: genderKey)
+
+        case 1:
+            //Male
+            defaults.set(1, forKey: genderKey)
+
+        default:
+            //Female
+            defaults.set(0, forKey: genderKey)
+        }
+    }
+
 
     @IBAction func relationshipControlTapped(_ sender: Any) {
 
@@ -100,15 +158,6 @@ class FilterViewController: UIViewController {
             //single
             defaults.set(0, forKey: relationshipKey)
         }
-
-    }
-
-    //MARK: - IB ACTIONS
-
-    //https://www.hackingwithswift.com/example-code/uikit/how-to-generate-haptic-feedback-with-uifeedbackgenerator
-    @objc func tapped() {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
     }
 
 
@@ -118,17 +167,13 @@ class FilterViewController: UIViewController {
         switch exerciseControl.selectedSegmentIndex
         {
         case 0:
-            //workout
-            defaults.set(0, forKey: exerciseKey)
-            print(defaults.integer(forKey: exerciseKey))
-        case 1:
             //running
-            defaults.set(1, forKey: exerciseKey)
-            print(defaults.integer(forKey: exerciseKey))
-        case 2:
+            defaults.set(0, forKey: exerciseKey)
+
+        case 1:
             //yoga
-            defaults.set(2, forKey: exerciseKey)
-            print(defaults.integer(forKey: exerciseKey))
+            defaults.set(1, forKey: exerciseKey)
+
         default:
             //running
             defaults.set(0, forKey: exerciseKey)
@@ -173,25 +218,78 @@ class FilterViewController: UIViewController {
     }
 
 
-    @IBAction func sideHustleControlTapped(_ sender: Any) {
+    @IBAction func debtControlTapped(_ sender: Any) {
 
         tapped()
-        switch sideHustleControl.selectedSegmentIndex
+        switch debtControl.selectedSegmentIndex
         {
         case 0:
-            //Startup
-            defaults.set(0, forKey: sideHustleKey)
+            //no debt
+            defaults.set(0, forKey: debtKey)
         case 1:
-            //Film
-            defaults.set(1, forKey: sideHustleKey)
-        case 2:
-            //Writer
-            defaults.set(2, forKey: sideHustleKey)
+            //have debt
+            defaults.set(1, forKey: debtKey)
         default:
-            //Startup
-            defaults.set(0, forKey: sideHustleKey)
+            //no debt
+            defaults.set(0, forKey: debtKey)
         }
     }
+
+
+    @IBAction func startupControlTapped(_ sender: Any) {
+
+        tapped()
+        switch startupControl.selectedSegmentIndex
+        {
+        case 0:
+            //Idea
+            defaults.set(0, forKey: startupKey)
+        case 1:
+            //MVP
+            defaults.set(1, forKey: startupKey)
+        case 2:
+            //Beta
+            defaults.set(2, forKey: startupKey)
+        case 3:
+            //10+ Users
+            defaults.set(3, forKey: startupKey)
+
+        default:
+            //Idea
+            defaults.set(0, forKey: startupKey)
+        }
+    }
+
+
+    @IBAction func filmControlTapped(_ sender: Any) {
+
+        tapped()
+        switch filmControl.selectedSegmentIndex
+        {
+        case 0:
+            //Idea
+            defaults.set(0, forKey: filmKey)
+        case 1:
+            //Script
+            defaults.set(1, forKey: filmKey)
+        case 2:
+            //Pre-Prod
+            defaults.set(2, forKey: filmKey)
+        case 3:
+            //Filming
+            defaults.set(3, forKey: filmKey)
+        case 4:
+            //Editing
+            defaults.set(4, forKey: filmKey)
+
+        default:
+            //Idea
+            defaults.set(0, forKey: filmKey)
+        }
+
+    }
+
+
 
     @IBAction func ageControlTapped(_ sender: Any) {
 

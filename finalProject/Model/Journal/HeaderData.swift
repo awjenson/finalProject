@@ -90,7 +90,7 @@ let depressedHintArray1 = [depressedHint1, depressedHint2]
 let depressedHeader1 = Header(title: depressedTitle, icon: Constants.Icon.good, quote: depressedQuote1, hints: depressedHintArray1)
 
 // MARK: - BORED
-let boredTitle = "Bored"
+
 
 let boredQuote1 = Quote(quote: "\"Bored with life? Throw yourself into some work you believe in with all your heart, live for it, die for it, and you will find happiness that you had thought could never be yours.\"", source: "Dale Carnegie", bio: "American writer and lecturer")
 
@@ -192,7 +192,7 @@ let anxiousHeader1 = Header(title: anxiousTitle, icon: Constants.Icon.good, quot
 
 // MARK: - LONELY
 
-let lonelyTitle = "Lonely"
+
 
 let lonelyQuote1 = Quote(quote: "\"The best remedy for those who are afraid, lonely or unhappy is to go outside, somewhere where they can be quiet, alone with the heavens, nature and God. Because only then dose one feel that all is as it should be.", source: "Anne Frank", bio: "Diarist")
 
@@ -230,7 +230,7 @@ let jealousQuote6 = Quote(quote: "\"Do not indulge in dreams of having what you 
 
 // MARK: - LOW CONFIDENCE
 
-let confidentTitle = "Low Self-Confidence"
+
 
 let confidenceQuote1 = Quote(quote: "\"You gain strength, courage, and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself. 'I lived through this horror. I can take the next thing that comes along.'\"", source: "Eleanor Roosevelt", bio: "Diplomat and activist")
 

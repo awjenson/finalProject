@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -74,6 +74,7 @@
 		DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1021E2053448200A25EFC /* RoundImage.swift */; };
 		DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */; };
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
+		DAA3728526D17CFA00918C45 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3728426D17CFA00918C45 /* BounceButton.swift */; };
 		DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */; };
 		DAAC061A2349959700E8C625 /* AdviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC06192349959700E8C625 /* AdviceTableViewCell.swift */; };
 		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
@@ -81,6 +82,7 @@
 		DAB931052204129800808018 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB931042204129800808018 /* UIImageView+Extension.swift */; };
 		DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */; };
 		DABCD8F820CC49210091AD0B /* NowConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD8F720CC49210091AD0B /* NowConstants.swift */; };
+		DABD221D26924EE300A3AE66 /* RoundButtonWithImageAndText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD221C26924EE300A3AE66 /* RoundButtonWithImageAndText.swift */; };
 		DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF5206ED93B005D627B /* TopicData.swift */; };
 		DAC8DFF8206EFB13005D627B /* NowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF7206EFB13005D627B /* NowData.swift */; };
 		DAC8DFFA206F55A5005D627B /* SmallRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */; };
@@ -90,6 +92,8 @@
 		DAD4C65D246A5918003B215C /* ExpandableTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C65C246A5918003B215C /* ExpandableTips.swift */; };
 		DAD4C65F246A65C1003B215C /* MyCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4C65E246A65C1003B215C /* MyCustomHeader.swift */; };
 		DADE4C7A20E9A5D300E19393 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADE4C7920E9A5D300E19393 /* QuoteData.swift */; };
+		DADFEBA226D16D0700A29229 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DADFEBA126D16D0700A29229 /* Lottie */; };
+		DADFEBA626D16E3400A29229 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFEBA526D16E3400A29229 /* LottieView.swift */; };
 		DAE1EC6620AA801E00EA9B3E /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE1EC6520AA801E00EA9B3E /* EditButton.swift */; };
 		DAE2977A20BB76EC00868BF2 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2977920BB76EC00868BF2 /* InternetConnection.swift */; };
 		DAE70F2B240C3AE100A6238D /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE70F2A240C3AE100A6238D /* Array+Extension.swift */; };
@@ -172,6 +176,7 @@
 		DAA1021E2053448200A25EFC /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
+		DAA3728426D17CFA00918C45 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		DAAC06192349959700E8C625 /* AdviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewCell.swift; sourceTree = "<group>"; };
 		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
@@ -179,6 +184,7 @@
 		DAB931042204129800808018 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		DABCD8F520CC47360091AD0B /* UIColor+Conveinence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Conveinence.swift"; sourceTree = "<group>"; };
 		DABCD8F720CC49210091AD0B /* NowConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowConstants.swift; sourceTree = "<group>"; };
+		DABD221C26924EE300A3AE66 /* RoundButtonWithImageAndText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonWithImageAndText.swift; sourceTree = "<group>"; };
 		DAC8DFF5206ED93B005D627B /* TopicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicData.swift; sourceTree = "<group>"; };
 		DAC8DFF7206EFB13005D627B /* NowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowData.swift; sourceTree = "<group>"; };
 		DAC8DFF9206F55A5005D627B /* SmallRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRoundButton.swift; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 		DAD4C65C246A5918003B215C /* ExpandableTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTips.swift; sourceTree = "<group>"; };
 		DAD4C65E246A65C1003B215C /* MyCustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomHeader.swift; sourceTree = "<group>"; };
 		DADE4C7920E9A5D300E19393 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteData.swift; sourceTree = "<group>"; };
+		DADFEBA526D16E3400A29229 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		DAE1EC6520AA801E00EA9B3E /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		DAE2977920BB76EC00868BF2 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		DAE70F2A240C3AE100A6238D /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
@@ -202,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15151C67608ACAB70542809 /* Pods_finalProject.framework in Frameworks */,
+				DADFEBA226D16D0700A29229 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +346,7 @@
 				DA359C792043722A000190AD /* Controller */,
 				DA359C772043721F000190AD /* Model */,
 				DA359C7820437225000190AD /* View */,
-				DA388FA720F2E1C200AC5EDC /* Fonts */,
+				DA388FA720F2E1C200AC5EDC /* Custom Controls */,
 				DA015BF52073E3D500A0342F /* Helpers */,
 				DAA102292053801D00A25EFC /* Extensions */,
 				DA5AEDA02076831D0094AA57 /* Supporting Files */,
@@ -387,6 +395,8 @@
 				DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */,
 				DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */,
 				DAD4C65E246A65C1003B215C /* MyCustomHeader.swift */,
+				DABD221C26924EE300A3AE66 /* RoundButtonWithImageAndText.swift */,
+				DADFEBA526D16E3400A29229 /* LottieView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,11 +427,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		DA388FA720F2E1C200AC5EDC /* Fonts */ = {
+		DA388FA720F2E1C200AC5EDC /* Custom Controls */ = {
 			isa = PBXGroup;
 			children = (
+				DAA3728426D17CFA00918C45 /* BounceButton.swift */,
 			);
-			name = Fonts;
+			name = "Custom Controls";
 			path = "New Group";
 			sourceTree = "<group>";
 		};
@@ -575,6 +586,9 @@
 			dependencies = (
 			);
 			name = finalProject;
+			packageProductDependencies = (
+				DADFEBA126D16D0700A29229 /* Lottie */,
+			);
 			productName = finalProject;
 			productReference = DA359C602043324F000190AD /* finalProject.app */;
 			productType = "com.apple.product-type.application";
@@ -605,6 +619,9 @@
 				Base,
 			);
 			mainGroup = DA359C572043324F000190AD;
+			packageReferences = (
+				DADFEBA026D16D0700A29229 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = DA359C612043324F000190AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -701,11 +718,13 @@
 				DA78986E204F5F69005046D8 /* ViewModelItemType.swift in Sources */,
 				DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */,
 				DA97663323D3B7D4000FC1B0 /* RoundShadowView.swift in Sources */,
+				DABD221D26924EE300A3AE66 /* RoundButtonWithImageAndText.swift in Sources */,
 				DAD4C65F246A65C1003B215C /* MyCustomHeader.swift in Sources */,
 				DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */,
 				DA20FEDD21F03643000F0C53 /* UIImage+Extension.swift in Sources */,
 				DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */,
 				DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */,
+				DAA3728526D17CFA00918C45 /* BounceButton.swift in Sources */,
 				DA05F7842336E19000FEB154 /* RoundCorneredImageView.swift in Sources */,
 				DAE95B3321E30B6300F01848 /* Thread+Extension.swift in Sources */,
 				DA49DF3E25BCC00B0099F229 /* HobbyViewController.swift in Sources */,
@@ -751,6 +770,7 @@
 				DA05B7D720FEC84700729AF4 /* ShadowLabel.swift in Sources */,
 				DA8DC6FB21F66F1B00663DB4 /* BottomCornersRoundedView.swift in Sources */,
 				DA197B3F2467652800EE324B /* MainTopicViewController.swift in Sources */,
+				DADFEBA626D16E3400A29229 /* LottieView.swift in Sources */,
 				DAA1021F2053448200A25EFC /* RoundImage.swift in Sources */,
 				DABCD8F620CC47360091AD0B /* UIColor+Conveinence.swift in Sources */,
 				DA687C3622605EAC0037DD48 /* RoundProfileIconButton.swift in Sources */,
@@ -817,6 +837,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -876,6 +897,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -966,6 +988,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DADFEBA026D16D0700A29229 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DADFEBA126D16D0700A29229 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DADFEBA026D16D0700A29229 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA359C582043324F000190AD /* Project object */;
 }

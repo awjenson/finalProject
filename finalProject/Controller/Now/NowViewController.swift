@@ -103,14 +103,16 @@ class NowViewController: UIViewController {
     // Return button
     @IBOutlet weak var returnToTopButton: RoundCorneredButton!
     @IBOutlet weak var footerView: UIView!
-
     @IBOutlet weak var feedbackNowButton: UIButton!
     
+    //Tracking user data
+
 
 
     // MARK: - Properties
 
-
+    var homeButtonSeleted = ""
+    let atHome = "atHome"
 
     let formatter = DateFormatter()
     let date = Date()
@@ -186,7 +188,6 @@ class NowViewController: UIViewController {
     var topic10ButtonArray: [Topic]!
     var topic11ButtonArray: [Topic]!
 
-
     var topicNowButtonArray: [Topic]!
 
 //    var cellHeaderColor: [UIColor] = []
@@ -199,9 +200,11 @@ class NowViewController: UIViewController {
     let parentKey = "Parent"
 
 
+    let popupLabel = UILabel()
+
+
+
     // MARK: - Lifecycle Methods
-
-
 
 
 
@@ -212,11 +215,17 @@ class NowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("NowViewController homeButtonSeleted: \(homeButtonSeleted)")
+
         //Used to refresh app when re-entering from background
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.nowVC = self
 
         setupUI()
+
+
+        //default counts
+
 
         let notificationCenter = NotificationCenter.default
 
@@ -225,6 +234,8 @@ class NowViewController: UIViewController {
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.NSExtensionHostWillEnterForeground, object: nil)
 
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.NSExtensionHostDidEnterBackground, object: nil)
+
+
 
     }
 
@@ -285,7 +296,7 @@ class NowViewController: UIViewController {
         
 
         // set footer
-        footerView.frame.size.height = 250
+        footerView.frame.size.height = 200
         //setupQuote() moved into dayOfWeekAndHour()
 
         dayOfWeekAndHour()
@@ -366,10 +377,12 @@ class NowViewController: UIViewController {
 
     func dayOfWeekAndHour() {
 
+
         let dayOfWeek = calendar.component(.weekday, from: date)
         hour = calendar.component(.hour, from: date)
         let week = calendar.component(.weekOfYear, from: date)
         let weekOfMonth = calendar.component(.weekOfMonth, from: date)
+        let month = calendar.component(.month, from: date)
 
         //greeting
 //        switch hour {
@@ -406,6 +419,8 @@ class NowViewController: UIViewController {
 //        }
 
 
+
+        //TODO: Quarter Tips, Gender Tips
 
 
 
@@ -451,6 +466,31 @@ class NowViewController: UIViewController {
 
     }
 
+    //cleaningTopics
+    //kitchenTopics - Day, Evening
+    //homeActivitesTopics
+    //tvWatchingTopics
+    //familyHomeTopics
+    //bedroomTopics - Night
+
+    func quarterTopics() -> Topics {
+          var selectedTopic: Topics!
+          switch defaults.integer(forKey: exerciseKey)
+          {
+            case 0:
+                //running
+                selectedTopic = Topics(title: runningTitle, icon: Constants.Icon.running, topics: [runningTopic, postGymTopic])
+            case 1:
+                //yoga
+                selectedTopic = Topics(title: yogaTitle, icon: Constants.Icon.yoga, topics: [yogaTopic, postGymTopic])
+
+            default:
+                //running
+                selectedTopic = Topics(title: runningTitle, icon: Constants.Icon.running, topics: [runningTopic, postGymTopic])
+          }
+          return selectedTopic
+      }
+
 
     //MARK: - WEEK 1
 
@@ -462,154 +502,227 @@ class NowViewController: UIViewController {
 
         case 0...4:
             print("Weekend, Very Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, barTopic, networkingTopic, safetyTopic,
-//                             restaurantTopic, lateNightSnackTopic, groceryStoreAMTopic, homeAMTopic,
-//                             bathroomPMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-//                             sunday0to4Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: sunday0to4Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics,
+                    cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: sunday0to4Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, barTopics, lateNightSnackTopics, networkingTopics, dateTopics, safetyTopics, commutePMTopics,
+                    groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: sunday0to4Topics)
+            }
 
         case 5...8:
             print("Weekend, Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, homeAMTopic, bathroomTopic, cafeTopic, networkingTopic, groceryStoreAMTopic, travelTopic,
-//                             sundayNow5to8Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics,
-            cafeTopics, restaurantTopics, networkingTopics, bathroomAMTopics,
-            homeAMTopics,  groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
-            topicsNow: sundayNow5to8Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
+                    topicsNow: sundayNow5to8Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteWeekendAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: sundayNow5to8Topics)
+            }
 
         case 9:
             print("Weekend, Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, homeAMTopic, bathroomTopic, getReadyAMTopic, breakfastTopic, cafeTopic, networkingTopic, groceryStoreAMTopic, travelTopic,
-//                             sundayNow9to10Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
-            topicsNow: sundayNow9to10Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
+                    topicsNow: sundayNow9to10Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteWeekendAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: sundayNow9to10Topics)
+            }
 
         case 10:
             print("Weekend, Late Morning")
-            // call function to display 9 time-based topics // ****
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic,
-//                             homeAMTopic, getReadyAMTopic, brunchTopic, cafeTopic,
-//                networkingTopic, groceryStoreAMTopic, shoppingClothesTopic, travelTopic,
-//                sundayNow9to10Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
-            topicsNow: sundayNow9to10Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, morningSnackTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
+                    topicsNow: sundayNow9to10Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics, morningSnackTopics, commuteWeekendAMTopics, bathroomAMTopics, breakTopics, networkingTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: sundayNow9to10Topics)
+            }
 
         case 11:
-                    print("Weekend, Midday")
-        //            append12Topics(homeAMTopic, gymTopic, runningTopic, cafePMTopic,
-        //                             brunchTopic, lunchTopic, restaurantTopic, barTopic1,
-        //                             networkingTopic, groceryStoreWENDTopic, shoppingClothesTopic, travelTopic,
-        //                             sundayNow11to13Topic)
+            print("Weekend, Midday")
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
-            topicsNow: sundayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics, coffeeTopics,
+                    morningSnackTopics, cleaningTopics, homeActivitesTopics, kitchenTopics,
+                bathroomAMTopics, homeActivitesTopics, breakTopics,
+                topicsNow: sundayNow11to13Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics,
+                    morningSnackTopics, commuteWeekendAMTopics, bathroomAMTopics, breakTopics,
+                    networkingTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                topicsNow: sundayNow11to13Topics)
+            }
 
         case 12...13:
             print("Weekend, Midday")
-//            append12Topics(homeAMTopic, gymTopic, runningTopic, cafePMTopic,
-//                             brunchTopic, lunchTopic, restaurantTopic, barTopic1,
-//                             networkingTopic, groceryStoreWENDTopic, shoppingClothesTopic, travelTopic,
-//                             sundayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
-            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
-            topicsNow: sundayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics, afternoonSnackTopics,
+                    cleaningTopics, homeActivitesTopics, kitchenTopics,
+                    tvWatchingTopics, bathroomAMTopics, breakPMTopics, goingOutTopics,
+                topicsNow: sundayNow11to13Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, dateTopics,
+                    bathroomPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                topicsNow: sundayNow11to13Topics)
+
+            }
 
         case 14...15:
             print("Weekend, Afternoon")
-            // call function to display 9 time-based topics
-//            append12Topics(homePMTopic, gymTopic, runningTopic, yogaTopic, afternoonSnackTopic, cafePMTopic, barTopic, networkingTopic, dateTopic, shoppingClothesTopic, groceryStoreWENDTopic, travelTopic, sundayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
-            topicsNow: sundayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics,
+                    homeActivitesTopics, kitchenTopics, cleaningTopics,
+                tvWatchingTopics, bathroomPMTopics, breakPMTopics, goingOutTopics,
+                topicsNow: sundayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, dateTopics,
+                bathroomPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                topicsNow: sundayNow14to16Topics)
+            }
 
         case 16:
-//           append12Topics(homePMTopic, gymTopic, runningTopic, yogaTopic, afternoonSnackTopic, cafePMTopic, barTopic, networkingTopic, dateTopic, shoppingClothesTopic, groceryStoreWENDTopic, travelTopic, sundayNow14to16Topic)
 
-           appendNineTopics(
-           exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-           happyHourTopics, networkingTopics,  bathroomPMTopics, commuteWeekendPMTopics,
-           groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
-           topicsNow: sundayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, goingOutTopics,  homeActivitesTopics, kitchenTopics, cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: sundayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, dateTopics,
+                bathroomPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: sundayNow14to16Topics)
+            }
 
         case 17...18:
             print("Weekend, Early Evening")
-            // call function to display 9 time-based topics
-//            append12Topics(homePMTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, networkingTopic, groceryStoreWENDTopic, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, travelTopic,
-//                             sundayNow17to18Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
-            restaurantTopics, happyHourTopics, networkingTopics, commuteWeekendPMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
-            topicsNow: sundayNow17to18Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    afternoonSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: sundayNow17to18Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics,
+                    happyHourTopics, networkingTopics, dateTopics, commuteWeekendPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: sundayNow17to18Topics)
+            }
 
         case 19...20:
             print("Weekend, Mid Evening")
-            // call function to display 9 time-based topics
-//            append12Topics(homePMTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, safetyTopic, groceryStoreWENDTopic, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, travelTopic,
-//                             sundayNow19to20Topic)
 
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: sundayNow19to20Topics)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics,
-            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
-            topicsNow: sundayNow19to20Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics,
+                    happyHourTopics, networkingTopics, dateTopics, commuteWeekendPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: sundayNow19to20Topics)
+            }
 
         case 21:
-                    print("Weekend, Late evening")
-                    // call function to display 9 time-based topics
-        //            append12Topics(dinnerAfter9PMTopic, lateNightSnackTopic, barTopic, dateTopic,
-        //                             safetyTopic, networkingTopic, gymTopic, homePMTopic,
-        //                             bathroomPMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-        //                             sunday21to24Topic)
+            print("Weekend, Late evening")
 
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics,
+                    goingOutTopics, cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: sunday21to24Topics)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: sunday21to24Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, barTopics, networkingTopics, dateTopics,
+                    commuteWeekendPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: sunday21to24Topics)
+            }
 
         case 22..<24:
             print("Weekend, Late evening")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, lateNightSnackTopic, barTopic, dateTopic,
-//                             safetyTopic, networkingTopic, gymTopic, homePMTopic,
-//                             bathroomPMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-//                             sunday21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-            barTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: sunday21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics,
+                    goingOutTopics, cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: sunday21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, barTopics, networkingTopics, dateTopics,
+                    commuteWeekendPMTopics,
+                    groceryStoreTopics, safetyTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: sunday21to24Topics)
+            }
 
         default:
             print("Weekend,INVALID HOUR!")
@@ -618,193 +731,235 @@ class NowViewController: UIViewController {
 
     // Monday (2)
 
-
     func monday1(_ hour: Int) {
         switch hour {
 
         case 0...4:
             print("weekdayMTW, Very Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, barTopic, networkingTopic, safetyTopic,
-//                              restaurantTopic, lateNightSnackTopic, groceryStoreTopic, bathroomPMTopic,
-//                             homePMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-//                             mondayNow0to4Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: mondayNow0to4Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics,
+                    cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: mondayNow0to4Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, barTopics, lateNightSnackTopics, networkingTopics, dateTopics, safetyTopics, commutePMTopics,
+                    groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: mondayNow0to4Topics)
+            }
 
         case 5...8:
             print("weekdayMTW, Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
-//                             mondayNow5to8Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-            topicsNow: mondayNow5to8Topics)
-            //
-            //NOW
-            //getReady
-            //AM bathroom
-            //AM routine
-            //commute/noCommute
-            //Work School
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
+                    topicsNow: mondayNow5to8Topics)
 
-            //socializing button?
-
-            // meditate, journal,
-            // work, networking
-
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: mondayNow5to8Topics)
+            }
 
         case 9:
             print("weekdayMTW, mid Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic,
-//                             getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, schoolAMTopic, mondayNow9to11Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-            topicsNow: mondayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
+                    workSchoolAMTopics(),
+                    topicsNow: mondayNow9to11Topics)
 
-            //NOW
-            //AMRoutine?
-            //gettingReady
-            //AMcommute
-            //Work/School
-            //Bathroom
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: mondayNow9to11Topics)
+            }
 
         case 10:
             print("weekdayMTW, Late Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic, mondayNow9to11Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: mondayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: mondayNow9to11Topics)
 
-            //NOW
-            //AMRoutine?
-            //GettingReady?
-            //Commute?
-            //Work/School
-            //Break
-            //Bathroom?
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, morningSnackTopics,
+                    cafeTopics, commuteAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: mondayNow9to11Topics)
+            }
 
         case 11:
             print("weekdayMTW, Late Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(morningSnackTopic, lunchTopic, restaurantTopic, cafeTopic, gymTopic, runningTopic, yogaTopic, workAMTopic, bathroomTopic, networkingTopic, breakTopic, schoolAMTopic,
-//                             mondayNow11to13Topic)
 
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
+                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: mondayNow11to13Topics)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: mondayNow11to13Topics)
-
-            //snackTopics, cafeTopics
-
-            //NOW
-            //Work/School
-            //Break
-            //Bathroom
-
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics,
+                    commuteWeekendAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: mondayNow11to13Topics)
+            }
 
         case 12...13:
             print("weekdayMTW, Midday")
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, runningTopic, yogaTopic, workPMTopic, bathroomTopic, networkingTopic, breakTopic, schoolPMTopic,
-//                             mondayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
-            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
-            topicsNow: mondayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: mondayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: mondayNow11to13Topics)
+            }
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            // call function to display 9 time-based topics
-//            append12Topics(afternoonSnackTopic, cafePMTopic, workPMTopic, networkingTopic, breakPMTopic, commutePMTopic, groceryStoreWDAYTopic, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             mondayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: mondayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: mondayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakPMTopics,
+                    workSchoolPMTopics(),
+                    topicsNow: mondayNow14to16Topics)
+            }
 
         case 16:
             print("weekdayMTW, Afternoon")
-            // call function to display 9 time-based topics
-//            append12Topics(workPMTopic, afternoonSnackTopic, breakPMTopic, commutePMTopic, groceryStoreWDAYTopic, shoppingClothesTopic, happyHourTopic, networkingTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             mondayNow14to16Topic)
 
-           appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-           topicsNow: mondayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                   topicsNow: mondayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics, commutePMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolPMTopics(),
+                   topicsNow: mondayNow14to16Topics)
+            }
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
 
-//            append12Topics(workLateTopic, commutePMTopic, gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, happyHourTopic, networkingTopic, homePMTopic,
-//                             mondayNow17to18Topic)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, breakPMTopics,
+                    workSchoolLateTopics(),
+                    topicsNow: mondayNow17to18Topics)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
-            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
-            topicsNow: mondayNow17to18Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics, commutePMTopics,
+                    happyHourTopics, networkingTopics, dateTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics,  workSchoolLateTopics(),
+                    topicsNow: mondayNow17to18Topics)
+            }
 
         case 19...20:
             print("Weekday, Evening")
-            // call function to display 9 time-based topics
-//            append12Topics(gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, networkingTopic, safetyTopic, homePMTopic,
-//                             mondayNow19to20Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics,
-            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
-            topicsNow: mondayNow19to20Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: mondayNow19to20Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: mondayNow19to20Topics)
+            }
 
         case 21:
-                    print("Weekday, Late evening")
-                    // call function to display 9 time-based topics
-        //            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-        //                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-        //                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-        //                             mondayNow21to24Topic)
+            print("Weekday, Late evening")
 
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(),
+                    dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: mondayNow21to24Topics)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: mondayNow21to24Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: mondayNow21to24Topics)
+            }
 
         case 22..<24:
             print("Weekday, Late evening")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-//                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-//                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-//                             mondayNow21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-            barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: mondayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: mondayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: mondayNow21to24Topics)
+            }
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -817,150 +972,237 @@ class NowViewController: UIViewController {
         switch hour {
         case 0...4:
             print("weekdayMTW, Very Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, barTopic, networkingTopic, safetyTopic,
-//                             restaurantTopic, lateNightSnackTopic, groceryStoreTopic, bathroomPMTopic, homePMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-//                             tuesdayNow0to4Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: tuesdayNow0to4Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics,
+                    cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: tuesdayNow0to4Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, barTopics, lateNightSnackTopics, networkingTopics, dateTopics, safetyTopics, commutePMTopics,
+                    groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: tuesdayNow0to4Topics)
+            }
 
         case 5...8:
             print("weekdayMTW, Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteTuesdayAMTopic0, workAMTopic, schoolAMTopic,
-//                             tuesdayNow5to8Topic) //TUESDAY COMMUTE
+            //commuteTuesdayAMTopics
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteTuesdayAMTopics, workSchoolAMTopics(),
-            topicsNow: tuesdayNow5to8Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
+                    topicsNow: tuesdayNow5to8Topics)
 
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteTuesdayAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: tuesdayNow5to8Topics)
+            }
 
         case 9:
             print("weekdayMTW, Mid Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteTuesdayAMTopic0, workAMTopic, networkingTopic, schoolAMTopic,
-//                             tuesdayNow9to11Topic) //*
+            //commuteTuesdayAMTopics
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteTuesdayAMTopics, workSchoolAMTopics(),
-            topicsNow: tuesdayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
+                    workSchoolAMTopics(),
+                    topicsNow: tuesdayNow9to11Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteTuesdayAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: tuesdayNow9to11Topics)
+            }
 
         case 10:
             print("weekdayMTW, Late Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteTuesdayAMTopic0, workAMTopic, networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic,
-//                             tuesdayNow9to11Topic)
+            //commuteTuesdayAMTopics
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: tuesdayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: tuesdayNow9to11Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, morningSnackTopics,
+                    cafeTopics, commuteTuesdayAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: tuesdayNow9to11Topics)
+            }
 
         case 11:
             print("weekdayMTW, Late Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, yogaTopic, runningTopic, workAMTopic, bathroomTopic, breakTopic, networkingTopic, schoolPMTopic,
-//                             tuesdayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: tuesdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
+                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: tuesdayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics,
+                    commuteTuesdayAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: tuesdayNow11to13Topics)
+            }
 
         case 12...13:
             print("weekdayMTW, Midday")
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, runningTopic, yogaTopic, workPMTopic, bathroomTopic, networkingTopic, breakTopic, schoolPMTopic,
-//                             tuesdayNow11to13Topic) // Tues specific tips
 
-            appendNineTopics(
-            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
-            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
-            topicsNow: tuesdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: tuesdayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: tuesdayNow11to13Topics)
+            }
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-            // call function to display 9 time-based topics
-//            append12Topics(afternoonSnackTopic, cafePMTopic, workPMTopic, networkingTopic, breakPMTopic, commutePMTopic, groceryStoreWDAYTopic0, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             tuesdayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: tuesdayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: tuesdayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakPMTopics,
+                    workSchoolPMTopics(),
+                    topicsNow: tuesdayNow14to16Topics)
+            }
 
         case 16:
             print("weekdayMTW, Afternoon")
-            // call function to display 9 time-based topics
-//            append12Topics(workPMTopic, afternoonSnackTopic, breakPMTopic, commutePMTopic, groceryStoreWDAYTopic0, shoppingClothesTopic, happyHourTopic, networkingTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             tuesdayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-                       topicsNow: tuesdayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    topicsNow: tuesdayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    commutePMTopics, groceryStoreTopics, shoppingClothesTopics, workSchoolPMTopics(),
+                    topicsNow: tuesdayNow14to16Topics)
+            }
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-//            append12Topics(workLateTopic, commutePMTopic, gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, happyHourTopic, networkingTopic, homePMTopic,
-//                             tuesdayNow17to18Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
-            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
-            topicsNow: tuesdayNow17to18Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, breakPMTopics,
+                    workSchoolLateTopics(),
+                    topicsNow: tuesdayNow17to18Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics, commutePMTopics,
+                    happyHourTopics, networkingTopics, dateTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics,  workSchoolLateTopics(),
+                    topicsNow: tuesdayNow17to18Topics)
+            }
 
 
         case 19...20:
             print("Weekday, Evening")
-            // call function to display 9 time-based topics
-//            append12Topics(gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, networkingTopic, safetyTopic, homePMTopic,
-//                             tuesdayNow19to20Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics,
-            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
-            topicsNow: tuesdayNow19to20Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: tuesdayNow19to20Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: tuesdayNow19to20Topics)
+            }
 
         case 21:
-                    print("Weekday, Late evening")
-                    // call function to display 9 time-based topics
-        //            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-        //                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-        //                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-        //                             tuesdayNow21to24Topic)
+            print("Weekday, Late evening")
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: tuesdayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+
+                appendNineTopics(
+                    gymTopics, runYogaTopics(),
+                    dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: tuesdayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: tuesdayNow21to24Topics)
+            }
 
         case 22..<24:
             print("Weekday, Late evening")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-//                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-//                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-//                             tuesdayNow21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-            barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: tuesdayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: tuesdayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: tuesdayNow21to24Topics)
+            }
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -973,143 +1215,234 @@ class NowViewController: UIViewController {
         switch hour {
         case 0...4:
             print("weekdayMTW, Very Early Morning")
-//            append12Topics(dinnerAfter9PMTopic, barTopic, networkingTopic, safetyTopic,
-//                             restaurantTopic, lateNightSnackTopic, groceryStoreTopic, bathroomPMTopic, homePMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-//                             wednesdayNow0to4Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: wednesdayNow0to4Topics)
+            switch homeButtonSeleted {
+            case atHome:
+
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics,
+                    cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: wednesdayNow0to4Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, barTopics, lateNightSnackTopics, networkingTopics, dateTopics, safetyTopics, commutePMTopics,
+                    groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: wednesdayNow0to4Topics)
+            }
 
         case 5...8:
             print("weekdayMTW, Early Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
-//                             wednesdayNow5to8Topic) //*
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-            topicsNow: wednesdayNow5to8Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
+                    topicsNow: wednesdayNow5to8Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: wednesdayNow5to8Topics)
+            }
 
 
         case 9:
             print("weekdayMTW, Mid Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, schoolAMTopic,
-//                             wednesdayNow9to11Topic)
 
+            switch homeButtonSeleted {
+            case atHome:
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-            topicsNow: wednesdayNow9to11Topics)
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
+                    workSchoolAMTopics(),
+                    topicsNow: wednesdayNow9to11Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: wednesdayNow9to11Topics)
+            }
 
         case 10:
             print("weekdayMTW, Late Morning")
-//            append12Topics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic,
-//                             wednesdayNow9to11Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: wednesdayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: wednesdayNow9to11Topics)
 
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, morningSnackTopics,
+                    cafeTopics, commuteAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: wednesdayNow9to11Topics)
+            }
 
         case 11:
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, yogaTopic, runningTopic, workAMTopic, bathroomTopic, breakTopic, networkingTopic, schoolPMTopic,
-//                             wednesdayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: wednesdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
+                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: wednesdayNow11to13Topics)
 
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics,
+                    commuteWeekendAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: wednesdayNow11to13Topics)
+            }
 
         case 12...13:
             print("weekdayMTW, Midday")
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, runningTopic, yogaTopic, workPMTopic, bathroomTopic, networkingTopic, breakTopic, schoolPMTopic,
-//                             wednesdayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
-            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
-            topicsNow: wednesdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: wednesdayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: wednesdayNow11to13Topics)
+            }
 
 
         case 14...15:
             print("weekdayMTW, Afternoon")
-//            append12Topics(afternoonSnackTopic, cafePMTopic, workPMTopic, networkingTopic, breakPMTopic, commutePMTopic, groceryStoreTopic, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             wednesdayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: wednesdayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: wednesdayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakPMTopics,
+                    workSchoolPMTopics(),
+                    topicsNow: wednesdayNow14to16Topics)
+            }
 
         case 16:
             print("weekdayMTW, Afternoon")
-//            append12Topics(workPMTopic, afternoonSnackTopic, breakPMTopic, commutePMTopic, groceryStoreTopic, shoppingClothesTopic, happyHourTopic, networkingTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             wednesdayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: wednesdayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    topicsNow: wednesdayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics, commutePMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolPMTopics(),
+                    topicsNow: wednesdayNow14to16Topics)
+            }
 
 
         case 17...18:
             print("weekdayMTW, Early-Evening")
-//            append12Topics(workLateTopic, commutePMTopic, gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, happyHourTopic, networkingTopic, homePMTopic,
-//                             wednesdayNow17to18Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
-            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
-            topicsNow: wednesdayNow17to18Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, breakPMTopics,
+                    workSchoolLateTopics(),
+                    topicsNow: wednesdayNow17to18Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics, commutePMTopics,
+                    happyHourTopics, networkingTopics, dateTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics,  workSchoolLateTopics(),
+                    topicsNow: wednesdayNow17to18Topics)
+            }
 
         case 19...20:
             print("Weekday, Evening")
-//            append12Topics(gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, networkingTopic, safetyTopic, homePMTopic,
-//                             wednesdayNow19to20Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics,
-            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
-            topicsNow: wednesdayNow19to20Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: wednesdayNow19to20Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: wednesdayNow19to20Topics)
+            }
 
         case 21:
                     print("Weekday, Late evening")
-        //            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-        //                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-        //                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-        //                             wednesdayNow21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: wednesdayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(),
+                    dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: wednesdayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: wednesdayNow21to24Topics)
+            }
 
         case 22..<24:
             print("Weekday, Late evening")
-//            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-//                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-//                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-//                             wednesdayNow21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-            barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: wednesdayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: wednesdayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: wednesdayNow21to24Topics)
+            }
 
         default:
             print("Weekday,INVALID HOUR!")
@@ -1122,147 +1455,237 @@ class NowViewController: UIViewController {
         switch hour {
         case 0...4:
             print("weekdayTF, Very Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, barTopic, networkingTopic, safetyTopic,
-//                             restaurantTopic, lateNightSnackTopic, groceryStoreTopic, bathroomPMTopic, homePMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-//                             thursdayNow0to4Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: thursdayNow0to4Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics,
+                    cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: thursdayNow0to4Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, barTopics, lateNightSnackTopics, networkingTopics, dateTopics, safetyTopics, commutePMTopics,
+                    groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: thursdayNow0to4Topics)
+            }
 
         case 5...8:
             print("weekdayTF, Early Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, yogaTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic, cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
-//                             thursdayNow5to8Topic)
 
-        appendNineTopics(
-         exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-         restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-         groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-        topicsNow: thursdayNow5to8Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
+                   topicsNow: thursdayNow5to8Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                   topicsNow: thursdayNow5to8Topics)
+            }
 
 
         case 9:
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, schoolAMTopic,
-//                             thursdayNow9to11Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-            topicsNow: thursdayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
+                    workSchoolAMTopics(),
+                    topicsNow: thursdayNow9to11Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: thursdayNow9to11Topics)
+            }
 
         case 10:
             print("weekdayTF, Late Morning")
-//            append12Topics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic, bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic,
-//                             thursdayNow9to11Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: thursdayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: thursdayNow9to11Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, morningSnackTopics,
+                    cafeTopics, commuteAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: thursdayNow9to11Topics)
+            }
 
 
         case 11:
             print("weekdayTF, Late Morning")
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, yogaTopic, runningTopic, workAMTopic, bathroomTopic, breakTopic, networkingTopic, schoolPMTopic,
-//                             thursdayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: thursdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
+                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: thursdayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics,
+                    commuteWeekendAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: thursdayNow11to13Topics)
+            }
 
         case 12...13:
             print("weekdayTF, Midday")
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic, gymTopic, runningTopic, yogaTopic, workPMTopic, bathroomTopic, networkingTopic, breakTopic, schoolPMTopic,
-//                             thursdayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
-            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
-            topicsNow: thursdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: thursdayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: thursdayNow11to13Topics)
+            }
 
 
         case 14...15: // 2PM-3PM
             print("weekdayTF, Afternoon")
 
-//            append12Topics(afternoonSnackTopic, cafePMTopic, workPMTopic, networkingTopic, breakPMTopic, commutePMTopic, groceryStoreWDAYTopic, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             thursdayNow14to16Topic)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: thursdayNow14to16Topics)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: thursdayNow14to16Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakPMTopics,
+                    workSchoolPMTopics(),
+                    topicsNow: thursdayNow14to16Topics)
+            }
 
 
         case 16:
             print("weekdayTF, Afternoon")
-//            append12Topics(workPMTopic, afternoonSnackTopic, breakPMTopic, commutePMTopic, groceryStoreTopic, shoppingClothesTopic, happyHourTopic, networkingTopic, gymTopic, runningTopic, yogaTopic, schoolPMTopic,
-//                             thursdayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics,  bathroomPMTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: thursdayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    topicsNow: thursdayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics, commutePMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolPMTopics(),
+                    topicsNow: thursdayNow14to16Topics)
+            }
 
 
         case 17...18:
             print("weekdayTF, Evening 5PM")
-//            append12Topics(workLateTopic, commutePMTopic, gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, happyHourTopic, networkingTopic, homePMTopic,
-//                             thursdayNow17to18Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
-            restaurantTopics, happyHourTopics, networkingTopics, commutePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolLateTopics(),
-            topicsNow: thursdayNow17to18Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, breakPMTopics,
+                    workSchoolLateTopics(),
+                    topicsNow: thursdayNow17to18Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics, commutePMTopics,
+                    happyHourTopics, networkingTopics, dateTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics,  workSchoolLateTopics(),
+                    topicsNow: thursdayNow17to18Topics)
+            }
 
 
         case 19...20:
             print("weekdayTF, Evening")
-//            append12Topics(gymTopic, runningTopic, yogaTopic, groceryStoreTopic, shoppingClothesTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, networkingTopic, safetyTopic, homePMTopic,
-//                             thursdayNow19to20Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics,
-            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
-            topicsNow: thursdayNow19to20Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: thursdayNow19to20Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: thursdayNow19to20Topics)
+            }
 
         case 21:
                     print("weekdayTF, Late evening")
-                    // call function to display 9 time-based topics
-        //            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-        //                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-        //                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-        //                             thursdayNow21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: thursdayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(),
+                    dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: thursdayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: thursdayNow21to24Topics)
+            }
 
         case 22..<24:
             print("weekdayTF, Late evening")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-//                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-//                             lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-//                             thursdayNow21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-            barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: thursdayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: thursdayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, lateNightSnackTopics, commutePMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: thursdayNow21to24Topics)
+            }
 
         default:
             print("weekdayTF,INVALID HOUR!")
@@ -1275,164 +1698,241 @@ class NowViewController: UIViewController {
         switch hour {
         case 0...4:
             print("weekday Fri, Very Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, barTopic, networkingTopic, safetyTopic,
-//                             restaurantTopic, lateNightSnackTopic, groceryStoreTopic, bathroomPMTopic, homePMTopic, bedtimeTopic, cantSleepTopic, travelTopic,
-//                             fridayNow0to4Topic)
 
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics,
+                    cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: fridayNow0to4Topics)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: fridayNow0to4Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, barTopics, lateNightSnackTopics, networkingTopics, dateTopics, safetyTopics, commutePMTopics,
+                    groceryStoreTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: fridayNow0to4Topics)
+            }
 
         case 5...8:
             print("weekday Fri, Early Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, yogaTopic, runningTopic,
-//                             getReadyAMTopic, breakfastTopic, bathroomTopic, homeAMTopic,
-//                             cafeTopic, commuteAMTopic, workAMTopic, schoolAMTopic,
-//                             fridayNow5to8Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-            topicsNow: fridayNow5to8Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
+                    topicsNow: fridayNow5to8Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: fridayNow5to8Topics)
+            }
 
         case 9:
             print("weekday Fri, Late Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic,
-//                             getReadyAMTopic, breakfastTopic, bathroomTopic5, cafeTopic, commuteAMTopic, workAMTopic, networkingTopic, schoolAMTopic,
-//                             fridayNow9to11Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteAMTopics, workSchoolAMTopics(),
-            topicsNow: fridayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
+                    workSchoolAMTopics(),
+                    topicsNow: fridayNow9to11Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: fridayNow9to11Topics)
+            }
 
 
         case 10:
             print("weekday Fri, Late Morning")
-//            append12Topics(gymTopic, runningTopic, getReadyAMTopic, breakfastTopic,
-//                             bathroomTopic, cafeTopic, commuteAMTopic, workAMTopic,
-//                             networkingTopic, morningSnackTopic, breakTopic, schoolAMTopic,
-//                             fridayNow9to11Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: fridayNow9to11Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: fridayNow9to11Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, morningSnackTopics,
+                    cafeTopics, commuteAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: fridayNow9to11Topics)
+            }
 
 
         case 11:
             print("weekday Fri, Midday")
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic,
-//                             gymTopic, runningTopic, workAMTopic, bathroomTopic,
-//                             breakTopic, networkingTopic, travelTopic, schoolAMTopic,
-//                             fridayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(),
-            topicsNow: fridayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
+                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
+                    topicsNow: fridayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics,
+                    commuteWeekendAMTopics, networkingTopics, bathroomAMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolAMTopics(), travelTopics,
+                    topicsNow: fridayNow11to13Topics)
+            }
 
         case 12...13:
             print("weekday Fri, Midday")
-//            append12Topics(lunchTopic, restaurantTopic, cafePMTopic, afternoonSnackTopic,
-//                             gymTopic, runningTopic, workPMTopic, bathroomTopic,
-//                             networkingTopic, breakTopic, travelTopic, schoolPMTopic,
-//                             fridayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
-            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
-            topicsNow: fridayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: fridayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: fridayNow11to13Topics)
+            }
 
         case 14...15:
-            ////FRIDAY ONLY COMMUTE
             print("weekday Fri, Afternoon")
-//            append12Topics(afternoonSnackTopic, cafePMTopic, workPMTopic, networkingTopic,
-//                             breakPMTopic, commuteFridayPMTopic, groceryStoreTopic, shoppingClothesTopic,
-//                             gymTopic, runningTopic, travelTopic, schoolPMTopic,
-//                             fridayNow14to16Topic)
+            ////FRIDAY ONLY COMMUTE
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, commuteFridayPMTopics, travelTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: fridayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
+                    cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
+                    topicsNow: fridayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, breakPMTopics,
+                    workSchoolPMTopics(),
+                    topicsNow: fridayNow14to16Topics)
+            }
 
 
         case 16:
-
-            ////FRIDAY ONLY COMMUTE **
-
             print("weekday Fri, Afternoon")
-//            append12Topics(afternoonSnackTopic, cafePMTopic, workPMTopic, breakPMTopic, commuteFridayPMTopic, gymTopic, runningTopic, happyHourTopic, networkingTopic, groceryStoreTopic, shoppingClothesTopic, travelTopic,
-//                             fridayNow14to16Topic)
+            //commuteFridayPMTopics
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, commuteFridayPMTopics, travelTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, workSchoolPMTopics(),
-            topicsNow: fridayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    topicsNow: fridayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, bathroomPMTopics, commuteFridayPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, workSchoolPMTopics(),
+                    topicsNow: fridayNow14to16Topics)
+            }
 
 
         case 17...18:
             print("weekday Fri, Evening 5-6PM")
+            //commuteFridayPMTopics
 
-            ////FRIDAY ONLY COMMUTE
-//            append12Topics(commuteFridayPMTopic, gymTopic, runningTopic, homePMTopic, goingOutTopic, happyHourTopic, networkingTopic, dinnerTopic, restaurantTopic, groceryStoreTopic, shoppingClothesTopic, travelTopic,
-//                             fridayNow17to18Topic)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, breakPMTopics,
+                    workSchoolLateTopics(),
+                    topicsNow: fridayNow17to18Topics)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
-            restaurantTopics, happyHourTopics, networkingTopics, commuteFridayPMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
-            topicsNow: fridayNow17to18Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics,  commuteFridayPMTopics,
+                    happyHourTopics, networkingTopics, dateTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics,  workSchoolLateTopics(),
+                    topicsNow: fridayNow17to18Topics)
+            }
 
         case 19...20:
             print("weekday Fri, Evening 7-8PM")
-            // call function to display 9 time-based topics
-//            append12Topics(gymTopic, runningTopic, homePMTopic, goingOutTopic, dinnerTopic, restaurantTopic, barTopic, networkingTopic, dateTopic, safetyTopic, groceryStoreTopic, travelTopic,
-//                             fridayNow19to20Topic)
+            //commuteFridayPMTopics
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics,
-            safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
-            topicsNow: fridayNow19to20Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: fridayNow19to20Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, lateNightSnackTopics,  commuteFridayPMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: fridayNow19to20Topics)
+            }
 
         case 21:
-                    print("weekdayTF, Late evening 9-12PM")
-                    // call function to display 9 time-based topics
-        //            append12Topics(homePMTopic, goingOutTopic, dinnerAfter9PMTopic, restaurantTopic,
-        //                             barTopic, networkingTopic, dateTopic, safetyTopic,
-        //                             gymTopic, lateNightSnackTopic, bedtimeFridayTopic, cantSleepTopic,
-        //                fridayNow21to24Topic)
+            print("weekdayTF, Late evening 9-12PM")
+            //commuteFridayPMTopics
 
-           appendNineTopics(
-           exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics, barTopics, networkingTopics, dateTopics, safetyTopics,
-           groceryStoreTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: fridayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(),
+                    dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                     topicsNow: fridayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics,
+                    commuteFridayPMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                     topicsNow: fridayNow21to24Topics)
+            }
 
         case 22..<24:
             print("weekdayTF, Late evening 9-12PM")
-            // call function to display 9 time-based topics
-//            append12Topics(homePMTopic, goingOutTopic, dinnerAfter9PMTopic, restaurantTopic,
-//                             barTopic, networkingTopic, dateTopic, safetyTopic,
-//                             gymTopic, lateNightSnackTopic, bedtimeFridayTopic, cantSleepTopic,
-//                fridayNow21to24Topic)
+            //commuteFridayPMTopics
 
-           appendNineTopics(
-           exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-           barTopics, networkingTopics, dateTopics, safetyTopics,
-           groceryStoreTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: fridayNow21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics, cleaningTopics,
+                    homeActivitesTopics, tvWatchingTopics, bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                     topicsNow: fridayNow21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, lateNightSnackTopics, commuteFridayPMTopics,
+                    barTopics, networkingTopics, dateTopics,
+                    safetyTopics, groceryStoreTopics, bathroomPMTopics, travelTopics,
+                     topicsNow: fridayNow21to24Topics)
+            }
 
         default:
             print("weekdayTF,INVALID HOUR!")
@@ -1445,149 +1945,234 @@ class NowViewController: UIViewController {
         switch hour {
         case 0...4:
             print("Weekend, Very Early Morning")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, barTopic, networkingTopic, safetyTopic,
-//                             restaurantTopic, lateNightSnackTopic, groceryStoreTopic, bathroomPMTopic, homePMTopic, bedtimeFridayTopic, cantSleepTopic, travelTopic,
-//                             saturday0to4Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, restaurantTopics, barTopics, lateNightSnackTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: saturday0to4Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, kitchenTopics,
+                    cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                topicsNow: saturday0to4Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics, barTopics, lateNightSnackTopics, networkingTopics, dateTopics, safetyTopics, commutePMTopics,
+                    groceryStoreTopics, bathroomPMTopics, travelTopics,
+                topicsNow: saturday0to4Topics)
+            }
+
+            
 
         case 5...8:
             print("Weekend, Early Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, homeAMTopic, bathroomTopic, getReadyAMTopic, breakfastTopic, cafeTopic, networkingTopic, groceryStoreTopic, travelTopic,
-//                             saturdayNow5to8Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics,
-            cafeTopics, restaurantTopics, networkingTopics, bathroomAMTopics,
-            homeAMTopics,  groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
-            topicsNow: saturdayNow5to8Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
+                    topicsNow: saturdayNow5to8Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteWeekendAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: saturdayNow5to8Topics)
+            }
 
         case 9:
             print("Weekend, Early Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, homeAMTopic, bathroomTopic, getReadyAMTopic, breakfastTopic, cafeTopic, networkingTopic, groceryStoreTopic, travelTopic,
-//                             saturdayNow9to10Topic)
 
-            appendNineTopics(
-            exerciseTopics(), AMRoutineTopics, getReadyAMTopics, breakfastTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, commuteWeekendAMTopics, travelTopics,
-            topicsNow: saturdayNow9to10Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
+                    topicsNow: saturdayNow9to10Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBreakfastTopics, cafeTopics,
+                    commuteWeekendAMTopics, bathroomAMTopics, breakTopics, networkingTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: saturdayNow9to10Topics)
+            }
 
         case 10:
             print("Weekend, Late Morning")
-//            append12Topics(AMRoutineTopic, gymTopic, runningTopic, yogaTopic, homeAMTopic, getReadyAMTopic, brunchTopic, cafeTopic,
-//                networkingTopic, groceryStoreTopic, shoppingClothesTopic, travelTopic,
-//                saturdayNow9to10Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
-            topicsNow: saturdayNow9to10Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
+                    breakfastTopics, coffeeTopics, morningSnackTopics, homeActivitesTopics,
+                    bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
+                    topicsNow: saturdayNow9to10Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics, morningSnackTopics, commuteWeekendAMTopics, bathroomAMTopics, breakTopics, networkingTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: saturdayNow9to10Topics)
+            }
 
         case 11:
             print("Weekend, Midday")
-//            append12Topics(homePMTopic, gymTopic, runningTopic, cafePMTopic,
-//                             brunchTopic, lunchTopic, restaurantTopic, barTopic, networkingTopic, groceryStoreTopic, shoppingClothesTopic, travelTopic,
-//                             saturdayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), brunchTopics, morningSnackTopics, cafeTopics,
-            restaurantTopics, networkingTopics, bathroomAMTopics, homeAMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
-            topicsNow: saturdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics, coffeeTopics,
+                    morningSnackTopics, cleaningTopics, homeActivitesTopics, kitchenTopics,
+                bathroomAMTopics, homeActivitesTopics, breakTopics,
+                    topicsNow: saturdayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantBrunchTopics, cafeTopics,
+                    morningSnackTopics, commuteWeekendAMTopics, bathroomAMTopics, breakTopics,
+                    networkingTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: saturdayNow11to13Topics)
+            }
 
         case 12...13:
             print("Weekend, Midday")
-//            append12Topics(homePMTopic, gymTopic, runningTopic, cafePMTopic,
-//                             brunchTopic, lunchTopic, restaurantTopic, barTopic, networkingTopic, groceryStoreTopic, shoppingClothesTopic, travelTopic,
-//                             saturdayNow11to13Topic)
 
-            appendNineTopics(
-            exerciseTopics(), lunchTopics, afternoonSnackTopics, cafePMTopics,
-            restaurantTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakTopics, travelTopics,
-            topicsNow: saturdayNow11to13Topics)
+            switch homeButtonSeleted {
+            case atHome:
+
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics, afternoonSnackTopics,
+                    cleaningTopics, homeActivitesTopics, kitchenTopics,
+                    tvWatchingTopics, bathroomAMTopics, breakPMTopics, goingOutTopics,
+                    topicsNow: saturdayNow11to13Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, dateTopics,
+                    bathroomPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: saturdayNow11to13Topics)
+            }
 
         case 14...15:
             print("Weekend, Afternoon")
-            // call function to display 9 time-based topics
-//            append12Topics(homePMTopic, gymTopic, runningTopic, yogaTopic, afternoonSnackTopic, cafePMTopic, barTopic, networkingTopic, dateTopic, shoppingClothesTopic, groceryStoreTopic, travelTopic,                            saturdayNow14to16Topic)
 
-            appendNineTopics(
-            exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-            happyHourTopics, networkingTopics, bathroomPMTopics, homePMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
-            topicsNow: saturdayNow14to16Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics,
+                    homeActivitesTopics, kitchenTopics, cleaningTopics,
+                tvWatchingTopics, bathroomPMTopics, breakPMTopics, goingOutTopics,
+                    topicsNow: saturdayNow14to16Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, dateTopics,
+                bathroomPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: saturdayNow14to16Topics)
+            }
 
 
         case 16:
                    print("Weekend, Afternoon")
-                   // call function to display 9 time-based topics
-//                   append12Topics(homePMTopic, gymTopic, runningTopic, yogaTopic, afternoonSnackTopic, cafePMTopic, barTopic, networkingTopic, dateTopic, shoppingClothesTopic, groceryStoreTopic, travelTopic,                            saturdayNow14to16Topic)
 
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    afternoonSnackTopics, goingOutTopics,  homeActivitesTopics, kitchenTopics, cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: saturdayNow14to16Topics)
 
-           appendNineTopics(
-           exerciseTopics(), afternoonSnackTopics, cafePMTopics, restaurantTopics,
-           happyHourTopics, networkingTopics,  bathroomPMTopics, commuteWeekendPMTopics,
-           groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
-           topicsNow: saturdayNow14to16Topics)
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantLunchTopics, afternoonSnackTopics,
+                    cafePMTopics, happyHourTopics, networkingTopics, dateTopics,
+                bathroomPMTopics, groceryStoreTopics, shoppingClothesTopics, travelTopics,
+                    topicsNow: saturdayNow14to16Topics)
+            }
 
         case 17...18:
             print("Weekend, Early Evening")
-            // call function to display 9 time-based topics
-//            append12Topics(homePMTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, networkingTopic, groceryStoreTopic, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, travelTopic,
-//                             saturdayNow17to18Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, afternoonSnackTopics, goingOutTopics,
-            restaurantTopics, happyHourTopics, networkingTopics, commuteWeekendPMTopics,
-            groceryStoreTopics, shoppingClothesTopics, breakPMTopics, travelTopics,
-            topicsNow: saturdayNow17to18Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    afternoonSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: saturdayNow17to18Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics,
+                    happyHourTopics, networkingTopics, dateTopics, commuteWeekendPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: saturdayNow17to18Topics)
+            }
 
         case 19...20:
             print("Weekend, Early Evening")
-            // call function to display 9 time-based topics
-//            append12Topics(homePMTopic, dinnerTopic, restaurantTopic, barTopic, dateTopic, safetyTopic, groceryStoreTopic, shoppingClothesTopic, gymTopic, runningTopic, yogaTopic, travelTopic,
-//                             saturdayNow19to20Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerTopics, lateNightSnackTopics, goingOutTopics,
-            restaurantTopics, barTopics, networkingTopics, dateTopics,
-            safetyTopics, homePMTopics, groceryStoreTopics, shoppingClothesTopics,
-            topicsNow: saturdayNow19to20Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
+                    cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
+                    topicsNow: saturdayNow19to20Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerTopics, afternoonSnackTopics,
+                    happyHourTopics, networkingTopics, dateTopics, commuteWeekendPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: saturdayNow19to20Topics)
+            }
 
         case 21:
-                    print("Weekend, Late evening")
-                    // call function to display 9 time-based topics
-        //            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-        //                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-        //                            lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-        //                             saturday21to24Topic)
+            print("Weekend, Late evening")
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-            barTopics, networkingTopics, dateTopics, safetyTopics,
-            groceryStoreTopics, homePMTopics, bathroomPMTopics, bedtimeTopics,
-            topicsNow: saturday21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics,
+                    goingOutTopics, cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: saturday21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, barTopics, networkingTopics, dateTopics,
+                    commuteWeekendPMTopics,
+                    groceryStoreTopics, shoppingClothesTopics, safetyTopics, travelTopics,
+                    topicsNow: saturday21to24Topics)
+            }
 
         case 22..<24:
             print("Weekend, Late evening")
-            // call function to display 9 time-based topics
-//            append12Topics(dinnerAfter9PMTopic, restaurantTopic, barTopic, networkingTopic,
-//                             dateTopic, safetyTopic, gymTopic, homePMTopic,
-//                            lateNightSnackTopic, bathroomPMTopic, bedtimeTopic, cantSleepTopic,
-//                             saturday21to24Topic)
 
-            appendNineTopics(
-            exerciseTopics(), dinnerAfter9PMTopics, lateNightSnackTopics, restaurantTopics,
-            barTopics, networkingTopics, safetyTopics, groceryStoreTopics,
-            homePMTopics, bathroomPMTopics, bedtimeTopics, travelTopics,
-            topicsNow: saturday21to24Topics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), dinnerAfter9PMTopics, lateNightSnackTopics,
+                    goingOutTopics, cleaningTopics, homeActivitesTopics, tvWatchingTopics,
+                    bathroomPMTopics, bedroomTopics, bedtimeTopics, cantSleepTopics,
+                    topicsNow: saturday21to24Topics)
+
+            default: //notHome
+                appendNineTopics(
+                    gymTopics, runYogaTopics(), restaurantDinnerAfter9PMTopics,
+                    lateNightSnackTopics, barTopics, networkingTopics, dateTopics,
+                    commuteWeekendPMTopics,
+                    groceryStoreTopics, safetyTopics, bathroomPMTopics, travelTopics,
+                    topicsNow: saturday21to24Topics)
+            }
 
         default:
             print("Weekend,INVALID HOUR!")
@@ -2008,22 +2593,29 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
 
         cell.headerLabel.textColor = titleColor(number: indexPath.section)
 
+
         //Tell UITableViewCell who it's delegate is
         //Give the boss the intern
         cell.delegate = self //self is the NowVC
 
         return cell
     }
+
+
+
+
+
 }
 
 // MARK: - Table View Cell Methods
 
 extension NowViewController: NowTableViewCellDelegate {
 
-    func goToBuyURL(sponsorURL: String) {
 
-        let sourceURL = URL(string: sponsorURL)!
-        let safariVC = SFSafariViewController(url: sourceURL)
+    func goToBuyURL(buyURL: String) {
+
+        let buyURL = URL(string: buyURL)!
+        let safariVC = SFSafariViewController(url: buyURL)
         safariVC.dismissButtonStyle = .close
         safariVC.preferredBarTintColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
         safariVC.preferredControlTintColor = UIColor.init(hexString: "2283F6", withAlpha: 1)

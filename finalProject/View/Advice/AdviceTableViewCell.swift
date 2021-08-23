@@ -35,6 +35,8 @@ class AdviceTableViewCell: UITableViewCell {
     @IBOutlet weak var adviceBodyLabel: UILabel!
     @IBOutlet weak var adviceSourceButton: UIButton!
 
+
+    @IBOutlet weak var doneButton: BounceButton!
     @IBOutlet weak var buyButton: UIButton!
 
     // For protocol, create a delegate variable here (the Boss) so we can set NowViewController as our delegate (the intern)
@@ -85,7 +87,7 @@ class AdviceTableViewCell: UITableViewCell {
         adviceBodyLabel.attributedText = attributedStringBody
 
         //Buy Button
-        if verifyUrl(urlString: tip.sponsorURL) == true {
+        if verifyUrl(urlString: tip.buyURL) == true {
             //Sponsor URL exists, display buy button
             buyButton.isHidden = false
 
@@ -124,8 +126,12 @@ class AdviceTableViewCell: UITableViewCell {
     }
 
 
+    @IBAction func doneButtonTapped(_ sender: Any) {
+    }
+
+
     @IBAction func buyButtonTapped(_ sender: Any) {
-        delegate?.goToSourceURL(url: tipItem.sponsorURL!)
+        delegate?.goToSourceURL(url: tipItem.buyURL!)
     }
 
     @IBAction func shareButtonTapped(_ sender: Any) {

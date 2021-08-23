@@ -23,6 +23,9 @@ extension UITabBar {
 
 class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate{
 
+
+    var homeButtonSeleted = ""
+
     let layerGradient = CAGradientLayer()
 
 
@@ -30,12 +33,15 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("MainTabController homeButtonSeleted: \(homeButtonSeleted)")
+
         //for tab bar delegate
         self.delegate = self
 
         let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         UITabBarItem.appearance().setTitleTextAttributes(fontAttributes, for: .normal)
 
+        
 
        
 

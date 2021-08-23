@@ -12,11 +12,15 @@ import UIKit
 //import Firebase
 import SafariServices // to display webview
 
+
 //Quotes (combine with Life Goals?)
 // Row 1 - 3: Single, Relationship, Parenting
 // Row 2 - 4: Studying, Startup, Filmmaking, Screenwriting
 // Row 3 - 3: Job Search (Career Growth), Confidence (Mental Toughness), Bad Mood (Anxiety, Depression, Loneliness)
 
+// Ideas:
+// Tired, lonely, bored,
+// Family, confidence
 // Currently Excluded: Investing, Journal, Meditation
 
 class ProfileViewController: UIViewController {
@@ -63,6 +67,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var adviceTopic5Button: CircleButton!
     @IBOutlet weak var adviceTopic6Button: CircleButton!
     @IBOutlet weak var adviceTopic7Button: CircleButton!
+
     //row 3
     @IBOutlet weak var adviceTopic8Button: CircleButton!
     @IBOutlet weak var adviceTopic9Button: CircleButton!
@@ -87,10 +92,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var adviceTopic10Label: UILabel!
     @IBOutlet weak var adviceTopic11Label: UILabel!
 
+
     @IBOutlet weak var feedbackYouButton: UIButton!
     
 
     // MARK: - Properties
+
+    var homeButtonSeleted = ""
+    let atHome = "atHome"
 
     let formatter = DateFormatter()
     let date = Date()
@@ -113,10 +122,7 @@ class ProfileViewController: UIViewController {
     var topic5: Topic!
     var topic6: Topic!
     var topic7: Topic!
-    var topic8: Topic!
-    var topic9: Topic!
-    var topic10: Topic!
-    var topic11: Topic!
+
 
     var topics: [Topic] = [] // array of topics
     var tips: [Tip] = []
@@ -164,6 +170,8 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print("ProfileViewController homeButtonSeleted: \(homeButtonSeleted)")
 
         //Used to refresh app when re-entering from background
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -220,13 +228,19 @@ class ProfileViewController: UIViewController {
 
         // place 12 buttons in desired order (excludes Now tips)
         adviceTopicButtons = [adviceTopic0Button, adviceTopic1Button, adviceTopic2Button, adviceTopic3Button,
-                              adviceTopic4Button, adviceTopic5Button, adviceTopic6Button, adviceTopic7Button, adviceTopic8Button, adviceTopic9Button, adviceTopic10Button, adviceTopic11Button]
+
+                              adviceTopic4Button, adviceTopic5Button, adviceTopic6Button, adviceTopic7Button,
+
+                              adviceTopic8Button, adviceTopic9Button, adviceTopic10Button, adviceTopic11Button]
 
         adviceTopicLabels = [adviceTopic0Label, adviceTopic1Label, adviceTopic2Label, adviceTopic3Label,
-                       adviceTopic4Label, adviceTopic5Label, adviceTopic6Label, adviceTopic7Label, adviceTopic8Label, adviceTopic9Label, adviceTopic10Label, adviceTopic11Label,]
+
+                             adviceTopic4Label, adviceTopic5Label, adviceTopic6Label, adviceTopic7Label,
+
+                             adviceTopic8Label, adviceTopic9Label, adviceTopic10Label, adviceTopic11Label,]
 
         // set footer
-        profileTableViewFooter.frame.size.height = 250
+        profileTableViewFooter.frame.size.height = 200
 
         //setupQuote() moved into dayOfWeekAndHour()
 
@@ -358,6 +372,10 @@ class ProfileViewController: UIViewController {
 //        }
     }
 
+
+
+
+
     //MARK: - DAY
 
     func day(_ hour: Int) {
@@ -371,9 +389,23 @@ class ProfileViewController: UIViewController {
 //                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
 //                             motivateAMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
-                             friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(relationshipNight(),friendsParentNight(),  studyCareerNight(), wealthDebtTopics(),
+
+                                 personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                    anxiousAMTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
+                                 topicsNow: motivateAMTopics)
+
+            default: //notHome
+            appendNineTopics(relationshipNight(),friendsParentNight(),  studyCareerNight(), wealthDebtTopics(),
+
+                             personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                anxiousAMTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
                              topicsNow: motivateAMTopics)
+            }
 
         case 5...9:
             print("Weekend, Early Morning")
@@ -382,17 +414,42 @@ class ProfileViewController: UIViewController {
 //                             studyTopic, stressedAMTopic, depressedAMTopic, madAMTopic,
 //                             motivateAMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyTopics, relationshipAM(), parentingAMTopics,
-                             friendTopics, anxiousAMTopics, depressedAMTopics, madAMTopics,
-                             topicsNow: motivateAMTopics) //Anxious
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(relationshipAM(), friendsParentAM(), studyCareerAM(), wealthDebtTopics(),
+
+                                 personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                    anxiousAMTopics, anxiousAMTopics, depressedAMTopics, madAMTopics,
+                                 topicsNow: motivateAMTopics) //Anxious
+            default: //notHome
+                appendNineTopics(adviceTopics, personalTopics, studyCareerAM(), wealthDebtTopics(),
+
+                                 personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                    anxiousAMTopics, anxiousAMTopics, depressedAMTopics, madAMTopics,
+                                 topicsNow: motivateAMTopics) //Anxious
+            }
 
         case 10...14:
 //            append13Topics(personalTopic, adviceTopic, singleDayTopic, relationshipDayTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingDayTopic,
 //                             studyDayTopic, stressedDayTopic, depressedDayTopic, madDayTopic,
 //                             motivateDayTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyDayTopics, relationshipDay(), parentingDayTopics,
-                             friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
+            switch homeButtonSeleted {
+            case atHome:
+            appendNineTopics(relationshipDay(), friendsParentDay(), studyCareerDay(), wealthDebtTopics(),
+
+                             personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                anxiousAMTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
+            default: //notHome
+            appendNineTopics(relationshipDay(), friendsParentDay(), studyCareerDay(), wealthDebtTopics(),
+
+                             personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                anxiousAMTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateDayTopics)
+            }
 
         case 15...19:
             print("Weekend, Early Evening")
@@ -400,8 +457,20 @@ class ProfileViewController: UIViewController {
 //            append13Topics(personalTopic, adviceTopic, singlePMTopic, relationshipPMTopic, jobSearchTopic, wealthTopic, friendsTopic, parentingPMTopic,
 //                             studyTopic, stressedDayTopic, depressedDayTopic, madDayTopic, motivateAfterTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyTopics, relationshipPM(), parentingPMTopics,
-                             friendTopics, stressedDayTopics, depressedDayTopics, madDayTopics, topicsNow: motivateAfterTopics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(relationshipPM(), friendsParentPM(), studyCareerPM(), wealthDebtTopics(),
+
+                                 personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                    anxiousAMTopics, stressedPMTopics, depressedPMTopics, madPMTopics, topicsNow: motivateAfterTopics)
+            default: //notHome
+                appendNineTopics(relationshipPM(), friendsParentPM(), studyCareerPM(), wealthDebtTopics(),
+
+                                 personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                     anxiousAMTopics, stressedPMTopics, depressedPMTopics, madPMTopics, topicsNow: motivateAfterTopics)
+            }
 
         case 20..<24:
             print("Weekend, Late evening")
@@ -410,9 +479,22 @@ class ProfileViewController: UIViewController {
 //                             studyPMTopic, stressedPMTopic, depressedPMTopic, madPMTopic,
 //                             motivatePMTopic)
 
-            appendNineTopics(adviceTopics, personalTopics, wealthTopics, wealthTopics, jobSearchTopics, studyPMTopics, relationshipNight(), parentingBedtimeTopics,
-                             friendTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
-                             topicsNow: motivatePMTopics)
+            switch homeButtonSeleted {
+            case atHome:
+                appendNineTopics(relationshipNight(), friendsParentNight(), studyCareerNight(), wealthDebtTopics(),
+
+                                 personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                    anxiousAMTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
+                                 topicsNow: motivatePMTopics)
+            default: //notHome
+                appendNineTopics(relationshipNight(), friendsParentNight(), studyCareerNight(), wealthDebtTopics(),
+
+                                 personalTopics,confidentTopics,lonelyTopics,boredTopics,
+
+                                 anxiousAMTopics, stressedPMTopics, depressedPMTopics, madPMTopics,
+                                 topicsNow: motivatePMTopics)
+            }
 
         default:
             print("Weekend,INVALID HOUR!")
@@ -538,7 +620,7 @@ class ProfileViewController: UIViewController {
 //        print("tips array count: \(tips.count)")
 //    }
 
-    func appendNineTopics(_ topics0: Topics, _ topics1: Topics, _ topics2: Topics, _ topics3: Topics, _ topics4: Topics, _ topics5: Topics, _ topics6: Topics, _ topics7: Topics, _ topics8: Topics, _ topics9: Topics, _ topics10: Topics, _ topics11: Topics, topicsNow: Topics) {
+    func appendNineTopics(_ topics0: Topics, _ topics1: Topics, _ topics2: Topics, _ topics3: Topics, _ topics4: Topics, _ topics5: Topics, _ topics6: Topics, _ topics7: Topics, _ topics8: Topics, _ topics9: Topics, _ topics10: Topics, _ topics11: Topics,topicsNow: Topics) {
 
         topicsArrays = [topics0, topics1, topics2, topics3,
                         topics4, topics5, topics6, topics7,
@@ -650,6 +732,7 @@ class ProfileViewController: UIViewController {
         resetTopicButtonOriginalStyle(button: adviceTopic10Button)
         resetTopicButtonOriginalStyle(button: adviceTopic11Button)
 
+
         // Identify what button was tapped
 
         if currentIndex == indexNumber {
@@ -661,7 +744,15 @@ class ProfileViewController: UIViewController {
             twoDimensionalArray = []
 
             //NOW Topics are located in the 12th position of topicsArrays
+            /*
+                 0,1,2,3,
+                 4,5,6,7,
+                 8,9,10,11,
+                 12
+             */
             twoDimensionalArray = topicsArrays[12].topics
+
+
 
             // Unselected
             performUIUpdatesOnMain {
@@ -830,7 +921,6 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - Table View Cell Methods
 
 extension ProfileViewController: AdviceTableViewCellDelegate {
-
 
 
 
