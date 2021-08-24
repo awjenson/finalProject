@@ -34,6 +34,7 @@ class FilterViewController: UIViewController {
     let font = UIFont.systemFont(ofSize: 8)
 
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -70,12 +71,10 @@ class FilterViewController: UIViewController {
 
         filmControl.selectedSegmentIndex = defaults.integer(forKey: filmKey)
 
-        filmControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+
 
 
 //        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
-
-        
 
 
         // Do any additional setup after loading the view.

@@ -986,7 +986,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cS9-6c-taP" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="721" width="414" height="25"/>
+                                <rect key="frame" x="0.0" y="711" width="414" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Yk1-rY-3o1"/>
                                 </constraints>
@@ -995,7 +995,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTh-pa-Bii" customClass="ShadowLabel" customModule="finalProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="746" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="736" width="414" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zm1-Rv-88z"/>
                                 </constraints>
@@ -1118,7 +1118,7 @@
                             <constraint firstAttribute="bottom" secondItem="IjJ-4m-gJ8" secondAttribute="bottom" id="Wa8-0u-ZMJ"/>
                             <constraint firstItem="IjJ-4m-gJ8" firstAttribute="leading" secondItem="W2q-uj-tcc" secondAttribute="leading" id="Znk-43-c6B"/>
                             <constraint firstItem="cS9-6c-taP" firstAttribute="leading" secondItem="W2q-uj-tcc" secondAttribute="leading" id="jgX-cq-EDa"/>
-                            <constraint firstItem="5LA-tK-Zyz" firstAttribute="top" secondItem="pTh-pa-Bii" secondAttribute="bottom" id="m5l-UR-MZd"/>
+                            <constraint firstItem="5LA-tK-Zyz" firstAttribute="top" secondItem="pTh-pa-Bii" secondAttribute="bottom" constant="10" id="m5l-UR-MZd"/>
                             <constraint firstItem="IjJ-4m-gJ8" firstAttribute="top" secondItem="cab-Jz-bQf" secondAttribute="top" id="wgd-8R-DCV"/>
                             <constraint firstItem="IjJ-4m-gJ8" firstAttribute="trailing" secondItem="W2q-uj-tcc" secondAttribute="trailing" id="zgW-lb-cGq"/>
                         </constraints>
@@ -1240,7 +1240,7 @@
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-EX-Jmq">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-EX-Jmq">
                                                 <rect key="frame" x="0.0" y="25.333333333333314" width="374" height="32"/>
                                                 <segments>
                                                     <segment title="Idea"/>
@@ -1258,10 +1258,10 @@
                                                 <rect key="frame" x="0.0" y="62.333333333333321" width="374" height="19.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="juq-dw-Gw8">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="juq-dw-Gw8">
                                                 <rect key="frame" x="0.0" y="87.666666666666686" width="374" height="32"/>
                                                 <segments>
                                                     <segment title="Idea"/>
