@@ -44,8 +44,6 @@ class FilterViewController: UIViewController {
         jobControl.selectedSegmentIndex = defaultIndex
         exerciseControl.selectedSegmentIndex = defaultIndex
         debtControl.selectedSegmentIndex = defaultIndex
-
-
         startupControl.selectedSegmentIndex = defaultIndex
         filmControl.selectedSegmentIndex = defaultIndex
 
@@ -71,10 +69,12 @@ class FilterViewController: UIViewController {
 
         filmControl.selectedSegmentIndex = defaults.integer(forKey: filmKey)
 
-
-
-
 //        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
+
+        //Font color of segment controls
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .normal)
 
 
         // Do any additional setup after loading the view.
