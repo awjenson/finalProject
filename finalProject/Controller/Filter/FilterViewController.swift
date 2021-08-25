@@ -54,7 +54,6 @@ class FilterViewController: UIViewController {
 
 //        genderControl.selectedSegmentIndex = defaults.integer(forKey: genderKey)
 
-
         relationshipControl.selectedSegmentIndex = defaults.integer(forKey: relationshipKey)
 
         parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
