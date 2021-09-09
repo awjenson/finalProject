@@ -96,6 +96,7 @@ class UserInfoViewController: UIViewController {
         //Calling setupUI in appReturnedFromBackground
         notificationCenter.addObserver(self, selector: #selector(appReturnedFromBackground), name: UIApplication.didBecomeActiveNotification, object: nil)
 
+        /*
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         leftSwipe.direction = .left
         self.view.addGestureRecognizer(leftSwipe)
@@ -111,7 +112,7 @@ class UserInfoViewController: UIViewController {
         let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         downSwipe.direction = .down
         self.view.addGestureRecognizer(downSwipe)
-
+        */
 
     }
 
@@ -151,6 +152,10 @@ class UserInfoViewController: UIViewController {
         setupUI()
     }
 
+//    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
+//        segueToNextVC()
+//    }
+
 
     func reloadViewFromNib() {
 
@@ -159,13 +164,6 @@ class UserInfoViewController: UIViewController {
 
     let appTabBar = MainTabBarViewController()
 
-
-    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
-        segueToNextVC()
-
-    }
-
-    
 
 
    
