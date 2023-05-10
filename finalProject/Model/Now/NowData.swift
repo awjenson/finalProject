@@ -705,7 +705,8 @@ let weekendNow5to8Tip23 = Tip(header: "Daily Habit 🗓", title: "Do 1+ hour a d
 
 //WEEK 4
 //SUN
-let weekendNow5to8Tip24 = Tip(header: "Lose Belly Fat 🚶‍♀️", title: "Take a brisk walk before breakfast", body: "Study: Exposure to sunlight in between the hours of 8 a.m. and noon reduces your risk of weight gain. \n\nAnd burning calories before you eat means you're exercising in a fasted state—the energy you burn comes right from your fat stores, instead of the food you ate.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", doneType: "", buyURL: "")
+let weekendNow5to8Tip24 = Tip(header: "Good Habit", title: "After my feet touch the floor in the morning, I will say, “It’s going to be an awesome day.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 let weekendNow5to8Tip25 = Tip(header: "Healthy Habit 🏃‍♀️", title: "Studies suggest that we're more likely to stick to our workout routine when we do it in the morning", body: "So if you find yourself struggling to stick with an exercise plan, morning exercise, especially if you enlist a regular partner, can help you form a habit.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", doneType: "", buyURL: "")
 
 let weekendNow5to8Tip26 = Tip(header: "Reduce Your Risk ☕️", title: "Drink coffee after breakfast, not before", body: "Study: Strong black coffee consumed before breakfast increased the blood glucose response to breakfast by around 50%. \n\nThis could limit your body's ability to tolerate the sugar in your breakfast, increasing your risk for developing diabetes and heart disease." , sourceName: "University of Bath", sourceURL: "https://www.bath.ac.uk/announcements/drink-coffee-after-breakfast-not-before-for-better-metabolic-control/", doneType: "", buyURL: "")
@@ -714,7 +715,11 @@ let weekendNow5to8Tip27 = Tip(header: "Daily Habit 🗓", title: "Journal each m
 
 //WEEK 5
 let weekendNow5to8Tip28 = Tip(header: "Reduce Your Risk 🏃‍♀️", title: "Study: Exercising in the morning linked to lower cancer risk", body: "Participants who regularly exercised between 8:00 a.m. and 10:00 a.m. enjoyed the highest risk decreases for prostate cancer and breast cancer. \n\nExercising early in the day appears to disrupt the overproduction of hormones associated with various forms of cancer." , sourceName: "Ladders", sourceURL: "https://www.theladders.com/career-advice/exercising-at-this-specific-time-of-day-linked-to-lower-cancer-risk", doneType: "", buyURL: "")
-let weekendNow5to8Tip29 = Tip(header: "Health Skin 🏋️‍♀️", title: "Exercise. Not exercising leads to unhealthy skin and an increase in age spots", body: "Exercise helps increase blood flow and gives your face a healthy glow. \n\nIn addition, it also cleans the body of toxins, which are expelled during perspiration, and cleanses dead skins cells allowing new ones to grow." , sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=24", doneType: "", buyURL: "")
+let weekendNow5to8Tip29 = Tip(header: "Good Habit 👟☀️", title: "After I put on my shoes in the morning, I will go outside to soak in the natural light.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+let weekendNow5to8Tip30 = Tip(header: "Health Skin 🏋️‍♀️", title: "Exercise. Not exercising leads to unhealthy skin and an increase in age spots", body: "Exercise helps increase blood flow and gives your face a healthy glow. \n\nIn addition, it also cleans the body of toxins, which are expelled during perspiration, and cleanses dead skins cells allowing new ones to grow." , sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=24", doneType: "", buyURL: "")
+
+let weekendNow5to8Tip31 = Tip(header: "Lose Belly Fat 🚶‍♀️", title: "Take a brisk walk before breakfast", body: "Study: Exposure to sunlight in between the hours of 8 a.m. and noon reduces your risk of weight gain. \n\nAnd burning calories before you eat means you're exercising in a fasted state—the energy you burn comes right from your fat stores, instead of the food you ate.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", doneType: "", buyURL: "")
 
 
 // WEEK 1
@@ -747,7 +752,7 @@ let sundayNow5to8TipArray6 = [weekendNow5to8Tip24, weekendNow5to8Tip25, weekendN
 
 
 //SAT
-let saturdayNow5to8TipArray7 = [weekendNow5to8Tip28, weekendNow5to8Tip29, weekendNow5to8Tip22, weekendNow5to8Tip23]//SAT
+let saturdayNow5to8TipArray7 = [weekendNow5to8Tip28, weekendNow5to8Tip29, weekendNow5to8Tip30, weekendNow5to8Tip31]//SAT
 
 
 //////////
@@ -830,9 +835,11 @@ let saturdayNow9to11Tip15 = Tip(header: "Increase Happiness 😄", title: "Resea
 let sundayNow9to11Tip16 = Tip(header: "Rich Habit 💰", title: "The richest 1% spend time reading every day 📚", body: "Warren Buffett recommends reading 500 pages every day. \n\nLeave television and social networks aside in favour of reading." , sourceName: "Medium", sourceURL: "https://medium.com/swlh/10-mindset-differences-between-the-richest-1-and-the-other-99-6490c227fe82", doneType: "", buyURL: "")
 let sundayNow9to11Tip17 = Tip(header: "Live Longer ☕️", title: "Study: People who drink 3 to 5 cups of coffee every day have a 15% lower risk of early death compared to those who do not", body: "But, consuming more than 400 mg of caffeine can make you feel uneasy and keep you awake at night. Luckily, researchers also found similar benefits in decaf coffee. \n\nAvoid anything that starts with \"frap.\" That's not coffee. It's dessert." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", doneType: "", buyURL: "")
 let sundayNow9to11Tip18 = Tip(header: "Benefits of Exercise 🏋️‍♀️", title: "Study: Non-exercisers who exercised once a week increased their willpower", body: "In addition, without any instruction by the researchers, the participants also: \n\n• Procrastinated less \n• Felt more in control of their emotions \n• Reduced smoking, alcohol and caffeine intake \n• Saved more money \n• Ate less junk food \n• Began eating a healthier diet \n• Watched less TV \n• Were more likely to be on time to appointments" , sourceName: "National Center for Biotechnology Information", sourceURL: "https://pubmed.ncbi.nlm.nih.gov/17032494/", doneType: "", buyURL: "")
+let sundayNow9to11Tip19 = Tip(header: "Good Habit", title: "After I leave church, I will call my parents on the ride home.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //SAT
 let saturdayNow9to11Tip16 =  Tip(header: "Live Longer 🏃‍♀️", title: "Study: Running 6 miles a week — or 52 minutes — may add up to 6 years to your life.", body: "This means you don't have to run a marathon to benefit from exercise. \n\nEven simple activities such as taking a few 5-minute walk breaks at work, or walking while talking on the phone, are effective ways to build activity into your life." , sourceName: "Mayo Clinic", sourceURL: "https://newsnetwork.mayoclinic.org/discussion/running-is-good-moving-is-great/", doneType: "", buyURL: "")
+let saturdayNow9to11Tip17 = Tip(header: "Good Habit", title: "After I step outside, I will pause and say, “Every day is a gift.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //WEEK 1
 //SUN
@@ -870,9 +877,9 @@ let saturdayNow9to10Topic3 = Topic(title: weekendNow9to11Title, icon: weekendNow
 
 //WEEK5 - WIP
 //SUN
-let sundayNow9to10Array4 = [sundayNow9to11Tip16, sundayNow9to11Tip17, sundayNow9to11Tip18, sundayNow9to11Tip15]
+let sundayNow9to10Array4 = [sundayNow9to11Tip16, sundayNow9to11Tip17, sundayNow9to11Tip18, sundayNow9to11Tip19]
 //SAT
-let saturdayNow9to10Array4 = [saturdayNow9to11Tip16, saturdayNow9to11Tip13, saturdayNow9to11Tip14, saturdayNow9to11Tip15]
+let saturdayNow9to10Array4 = [saturdayNow9to11Tip16, saturdayNow9to11Tip17, saturdayNow9to11Tip14, saturdayNow9to11Tip15]//WIP
 
 
 
@@ -947,14 +954,23 @@ let weekendNow11to13Tip31 = Tip(header: "Increase Happiness 😄", title: "Socia
 
 //WEEK 5
 //SUN
-let weekendNow11to13Tip32 = Tip(header: "Live Longer 🐶", title: "Get a dog. Dog owners have lower blood pressure, tend to be more physically active, and walk significantly more than those who do not own dogs.", body: "Studies have shown that dog owners walk more—because dogs need walking every day—which improved cardiovascular health. \n\nStudies have also linked pet ownership to lower risk of anxiety and depression." , sourceName: "Eat This, Not That!", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", doneType: "", buyURL: "")
+let weekendNow11to13Tip32 = Tip(header: "Live Longer 🐶", title: "Get a dog. Dog owners have lower blood pressure and walk significantly more than those who do not own dogs.", body: "Dog owners walk more—because dogs need walking every day—which improved cardiovascular health. \n\nPet ownership is linked to lower risk of anxiety and depression." , sourceName: "Eat This, Not That!", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", doneType: "", buyURL: "")
 let weekendNow11to13Tip33 = Tip(header: "Be More Interesting 😎", title: "Stop doing uninteresting things", body: "DON'T: \n• 📺 Watch TV every day \n• 🍔 Eat at the same restaurants over and over again \n• 🏖 Go to the same vacation spot every year \n• 📖 Only read the books that were assigned in high school \n• 📱 Spend hours checking social media feeds \n• 🌤 Talk about the weather \n• 🗣 Expect other people to do all the talking \n\nDO: \n• 🍱 Try a new restaurant you have driven by a million times but never tried \n• 📝 Create a bucket list and pledge to do one activity every month \n• 🍿 Go to the movie theater and watch a movie that you would never normally choose \n• 🏋️‍♀️ Sign up for a workout class that you have never done before \n• 📖 Pick up a magazine you would never normally read and explore it cover to cover \n• 👩‍🎨 Learn a new skill", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/interesting/", doneType: "", buyURL: "")
+let weekendNow11to13Tip34 = Tip(header: "Good Habit 👋", title: "After I see a neighbor, I will wave and ask them, “What’s new and what’s good?”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+//let weekendNow11to13Tip35 =
 
 //SAT
 let weekendNow11to13Tip36 = Tip(header: "Daily Habit 🏋️‍♀️", title: "Scientists consider exercise to be the ‘single thing that comes close to a magic bullet, in terms of its strong and universal benefits’", body: "Exercise is Richard Branson’s #1 piece of advice to entrepreneurs. \n\nHave goals with your exercise so that no matter what happens that day — at work, at home, in the economy — you can have something that went well today. \n\n• 🏃‍♀️ Run a little faster \n• 🏊‍♀️ Swim 3 more laps than usual \n• 🏋️‍♀️ Squat a new weight" , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", doneType: "", buyURL: "")
 let weekendNow11to13Tip37 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• 👀 Avoid touching your eyes, nose, and mouth. \n\n• 🤧 Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• 🧼 Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe. \n\n• 🙌 Wash your hands often with soap and water for 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose or coughing. \n\n• 🧴 If soap and water are not readily available, use hand sanitizer with at least 60% alcohol. \n\n• 🤒 Avoid close contact with people who are sick." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", doneType: "", buyURL: "")
 let weekendNow11to13Tip38 = Tip(header: "Live Longer 🏀", title: "Research: People who play on team sports have a longer life expectancy compared to those who exercise solo", body: "Leisure-time sports that encourage friendships and social interactions were associated with the best longevity. \n\nYou don't have to be on the same team. Playing social sports like golf, tennis, or soccer could add years to your life." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", doneType: "", buyURL: "")
 let weekendNow11to13Tip39 = Tip(header: "Prevent Acne & Pimples 📱", title: "For Phone Calls: Use headphones 🎧 or a speakerphone 🔊", body: "Hours spent talking on your cell phone can lead to breakouts and rashes along your jawline and cheek. \n\nUse antibacterial wipes on your phone to keep your phone and skin clean." , sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=9", doneType: "", buyURL: "")
+
+//WEEK 5
+//SUN
+
+
+//SAT
+
 
 //WEEK 1
 //SUN
@@ -990,7 +1006,7 @@ let saturdayNow11to13TipArray7 = [weekendNow11to13Tip28, weekendNow11to13Tip29, 
 
 //WEEK 5
 //SUN (2 WIP)
-let sundayNow11to13TipArray8 = [weekendNow11to13Tip32, weekendNow11to13Tip33, weekendNow11to13Tip25, weekendNow11to13Tip20]
+let sundayNow11to13TipArray8 = [weekendNow11to13Tip32, weekendNow11to13Tip33, weekendNow11to13Tip34, weekendNow11to13Tip20]//WIP
 
 //SAT
 let saturdayNow11to13TipArray9 = [weekendNow11to13Tip36, weekendNow11to13Tip37, weekendNow11to13Tip38, weekendNow11to13Tip39]
@@ -1054,11 +1070,10 @@ let weekendNow14to16Tip23 = Tip(header: "Daily Habit 🗓", title: "Every single
 let weekendNow14to16Tip24 = Tip(header: "Daily Habit 🗓", title: "Go For a Walk. Nietzsche said, “It is only ideas gained from walking that have any worth.”", body: "You should go for a walk every single day not only for exercise but for the philosophical and psychological benefits. \n\nExperience nature. Experience the quiet of the world around you. \n\nIf you’re too busy, multitask: Take a walking meeting. Do your phone call on the move." , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", doneType: "", buyURL: "")
 let weekendNow14to16Tip25 = Tip(header: "Right Time ⌚️", title: "Afternoon/early evening workouts help you sprint faster 🏃‍♀️ and lift more weight 🏋️‍♀️", body: "Lung function is highest this time of the day, so your circulation system can distribute more oxygen and nutrients. This is also the time of day when strength peaks, reaction time quickens, hand-eye coordination sharpens, and heart rate and blood pressure drop. These factors make it a great time to put on your best athletic performance. \n\nIn fact, a disproportionate number of Olympic records, especially in running and swimming, are set in the late afternoon and early evening.", sourceName: "When: The Scientific Secrets of Perfect Timing", sourceURL: "https://www.amazon.com/gp/product/B072Q985YX/", doneType: "", buyURL: "")
 let weekendNow14to16Tip26 = Tip(header: "Lose Weight", title: "Reduce your time watching TV 📺", body: "Study: Overweight people who reduced their TV time by just 50% burned an additional 119 calories a day on average. That's 12 pounds per year.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/simple-weight-loss-habits/", doneType: "", buyURL: "")
-//let weekendNow14to16Tip27
+let weekendNow14to16Tip27 = Tip(header: "Good Habit 📱🚶‍♀️", title: "After my phone rings, I will answer it and walk around outside while I talk.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //SAT
-
-
+let weekendNow14to16Tip28 = Tip(header: "Good Habit 📱", title: "After I hang up the phone, I will do a quick set of push-ups or squats.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
 
@@ -1086,17 +1101,17 @@ let weekendNow14to16TipArray5 = [weekendNow14to16Tip20, weekendNow14to16Tip21, w
 
 //WEEK 4
 //SUN
-let weekendNow14to16TipArray6 = [weekendNow14to16Tip24, weekendNow14to16Tip17, weekendNow14to16Tip18, weekendNow14to16Tip19]//WIP (3)
+let weekendNow14to16TipArray6 = [weekendNow14to16Tip24, weekendNow14to16Tip25, weekendNow14to16Tip26, weekendNow14to16Tip27]
 
 //SAT
-//let weekendNow14to16TipArray7
+let weekendNow14to16TipArray7 = [weekendNow14to16Tip28, weekendNow14to16Tip25, weekendNow14to16Tip26, weekendNow14to16Tip27]//WIP
 
 
 //RANDOM
-let sundayNow14to16TipArrays = [weekendNow14to16TipArray0, weekendNow14to16TipArray2, weekendNow14to16TipArray4,]
+let sundayNow14to16TipArrays = [weekendNow14to16TipArray0, weekendNow14to16TipArray2, weekendNow14to16TipArray4,weekendNow14to16TipArray6]
 let sundayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: sundayNow14to16TipArrays.random())
 //RANDOM
-let saturdayNow14to16TipArrays = [weekendNow14to16TipArray1, weekendNow14to16TipArray3, weekendNow14to16TipArray5,]
+let saturdayNow14to16TipArrays = [weekendNow14to16TipArray1, weekendNow14to16TipArray3, weekendNow14to16TipArray5,weekendNow14to16TipArray7]
 let saturdayNow14to16Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: saturdayNow14to16TipArrays.random())
 
 
@@ -1671,7 +1686,8 @@ let weekdayNow5to8Tip58 = Tip(header: "Start Your Morning Right 🌅", title: "R
 let weekdayNow5to8Tip59 = Tip(header: "Live Better", title: "Upon waking, get 5-10 minutes of sunlight ☀️ and light exercise 🏃‍♀️ to start your day with positive momentum", body: "Getting sunlight synchronizes your circadian rhythm which is good for your health. \n\nLight exercise boosts circulation, improves cognitive performance, and releases endorphins that will make you more alert. \n\nLight exercises: \n• Air squats \n• Pushups \n• Walking \n• Jogging \n• Yoga", sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", doneType: "", buyURL: "")
 
 //WEEK 4
-
+let weekdayNow5to8Tip60 = Tip(header: "Good Habit ⏰", title: "After I hear my alarm, I will turn it off immediately (no snooze).", body: "Stanford research: Changing your enironment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let weekdayNow5to8Tip61 = Tip(header: "Good Habit 🚰", title: "After I walk into the kitchen, I will drink a big glass of water.", body: "Stanford research: Changing your enironment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //WEEK 5
 
@@ -1740,6 +1756,8 @@ let weekdayNow5to8TipArray14 = [weekdayNow5to8Tip56, weekdayNow5to8Tip57, weekda
 let fridayNow5to8Topic3 = Topic(title: weekdayNow5to8Title, icon: weekdayNow5to8Icon, tip: weekdayNow5to8TipArray14)
 
 /////////////////
+//RANDOM IS NOW USED IN THE CODE
+
 //RANDOM - MON
 let mondayNow5to8TipArrays = [weekdayNow5to8TipArray0, weekdayNow5to8TipArray5, weekdayNow5to8TipArray10]
 let mondayNow5to8Topic = Topic(title: weekendNow0to4Title, icon: weekendNow0to4Icon, tip: mondayNow5to8TipArrays.random())
@@ -2164,6 +2182,7 @@ let weekdayNow14to16Tip31 = Tip(header: "Live Longer 🚶‍♀️", title: "Res
 //THURSDAY
  let weekdayNow14to16Tip32 = Tip(header: "Increase Confidence 💪", title: "Improve your posture", body: "1. Stand up as TALL as you can - like you’re a puppet and somebody just pulled the string that’s attached to the top of your head. \n\n2. Pull your shoulder blades down and back as far as possible – This will feel really weird if you spend a lot of time hunched over a desk. \n\n3. Pick your chin up and look straight ahead – stop looking down while walking around.", sourceName: "Nerd Fitness", sourceURL: "https://www.nerdfitness.com/blog/5-ways-to-immediately-appear-more-confident/", doneType: "", buyURL: "")
 let weekdayNow14to16Tip33 = Tip(header: "Increase Willpower 🤓", title: "Take an afternoon nap 😴", body: "Sneaking a mid-day “power nap” into your schedule can reverse the usual willpower drain from morning to night. \n\nResearch shows that a nap can reduce stress, improve mood, and restore focus—even if you haven’t had a perfect 8 hours the night before.", sourceName: "Psychology Today", sourceURL: "https://www.psychologytoday.com/us/blog/the-science-willpower/201204/five-temptations-actually-boost-your-willpower", doneType: "", buyURL: "")
+let weekdayNow14to16Tip34 = Tip(header: "Good Habit 🕒🚰", title: "After I see it’s past 3 p.m., I will drink water instead of coffee.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //FRIDAY
 
@@ -2205,8 +2224,8 @@ let weekdayNow14to16TipArray6 = [weekdayNow14to16Tip24, weekdayNow14to16Tip25, w
 let weekdayNow14to16TipArray7 = [weekdayNow14to16Tip28, weekdayNow14to16Tip29, weekdayNow14to16Tip30, weekdayNow14to16Tip31]
 
 
-//THU (WIP 2)
-let weekdayNow14to16TipArray8 = [weekdayNow14to16Tip32, weekdayNow14to16Tip33, weekdayNow14to16Tip13, weekdayNow14to16Tip12]
+//THU (WIP 1)
+let weekdayNow14to16TipArray8 = [weekdayNow14to16Tip32, weekdayNow14to16Tip33, weekdayNow14to16Tip34, weekdayNow14to16Tip12]
 
 
 //FRI (WIP 3)
@@ -2574,7 +2593,7 @@ let weekday19to20Tip15 = Tip(header: "Millionaire Habit 💰", title: "Read a bo
 let weekday19to20Tip16 = Tip(header: "Millionaire Habit 💰", title: "Start with your current income, increase it, and then start adding multiple flows of income", body: "You won't get rich without multiple flows of income. \n\n• Get a side job \n• Start a side business \n• Generate passive income", sourceName: "Yahoo! Finance", sourceURL: "https://uk.finance.yahoo.com/news/11-habits-start-20s-want-150800135.html", doneType: "", buyURL: "")
 
 //FRI
-let weekday19to20Tip17 = Tip(header: "Prevent Weight Gain ⌚️", title: "Avoid these after 8PM: \n• alcohol \n• chocolate \n• peanut butter \n• spicy foods \n• junk foods", body: "Consuming these 5 foods at night can lead to weight gain and a poor night of sleep.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/five-foods-avoid-after-8-pm/", doneType: "", buyURL: "")
+let weekday19to20Tip17 = Tip(header: "Prevent Weight Gain ⌚️", title: "Avoid these after 8PM: \n• alcohol \n• chocolate \n• peanut butter \n• spicy foods \n• junk foods", body: "Eating these foods at night can lead to weight gain and a poor night of sleep.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/five-foods-avoid-after-8-pm/", doneType: "", buyURL: "")
 
 let weekday19to20Tip18 = Tip(header: "Live Longer 👨‍👩‍👧‍👦", title: "Spend tonight with friends or family", body: "Having just 3 social ties may decrease your risk of early death by more than 200%. \n\nA strong social circle might also help you react less negatively to stress, perhaps further explaining the positive effect on lifespan." , sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/13-habits-linked-to-a-long-life", doneType: "TBD", buyURL: "www.test.com")
 let weekday19to20Tip19 = Tip(header: "Millionaire Habit 💰", title: "DON'T spend your free time watching TV or surfing the Internet 🙅‍♀️", body: "People Struggling Financially: \n• 77% spend 60+ minutes a day watching TV. \n• 74% spend 60+ minutes a day using the Internet recreationally. \n\nMillionaires: \n• 66% spend less than an hour a day watching TV. \n• 63% spend less than an hour a day on the internet unless it's job-related. \n\nMillionaires use their free time engaged in: \n• personal development, \n• networking, \n• volunteering, \n• working side jobs or side businesses, or \n• pursuing some goal.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", doneType: "", buyURL: "")
@@ -2852,13 +2871,12 @@ let weekdayNow21to24Tip63 = Tip(header: "Have A Better Tomorrow 📝", title: "W
 let weekdayNow21to24Tip64 = Tip(header: "David Goggins 💪", title: "Too busy to workout? If yes, you must win the morning", body: "Before bed: \n• Set your alarm ⏰ \n• Lay out your workout clothes and shoes next to your bedroom door 🎽👟🚪 \n\nIn the morning, don't think or hit the snooze button. Get out of bed when your alarm goes off, put your workout clothes and shoes on, and walk out the door.", sourceName: "Can't Hurt Me: Master Your Mind and Defy the Odds, by David Goggins", sourceURL: "https://www.amazon.com/dp/B07H453KGH", doneType: "", buyURL: "https://www.amazon.com/dp/B07H453KGH")
 let weekdayNow21to24Tip65 = Tip(header: "Weight Loss 🛌💤", title: "Best bedtime for weight loss is 10:10pm", body: "Research: The gives you 20 minutes to nod off, and 90 minutes for the most restorative sleep state — non-REM — which is best accomplished before midnight. \n\nThis also reduces your sugar cravings tomorrow. 74% of people who slept for 7.5+ hours lost weight more easily. \n\nHowever, people that slept for less than 7 hours were more likely to snack between meals and cheat on their diets." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-your-sleeping-pattern-affects-your-ability-to-stick-to-a-diet-2017-12?amp", doneType: "", buyURL: "")
 let weekdayNow21to24Tip66 = Tip(header: "Daily Habit 🗓", title: "The best way to improve is to review and reflect on your day 🤔", body: "Each evening, you should examine your entire day and go back over what you’ve done and said, hiding nothing from yourself. \n\n• Did you follow your plans for the day? \n• Were you prepared enough? \n• What could you do better? \n• What did you learn that will help you tomorrow?" , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", doneType: "", buyURL: "")
-//let weekdayNow21to24Tip67
-
-
+let weekdayNow21to24Tip67 = Tip(header: "Good Habit ⌚️", title: "After I see it’s past 8 p.m., I will stop using electronics and staring at screens.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
 //WED
 let weekdayNow5to8Tip68 = Tip(header: "Weight Loss 😴", title: "Research: A good sleep routine leads to good eating habits and and weight loss", body: "Go to bed at 10:10pm every night \n• Get 7.5+ hours of sleep every night \n\nPeople sleeping for less than 7 hours a night have more chaotic eating patterns to mirror their erratic sleeping habits. \n\nPoor sleepers were more likely to snack between meals, drink more alcohol, and cheat on their diets than someone getting more sleep." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-your-sleeping-pattern-affects-your-ability-to-stick-to-a-diet-2017-12?amp", doneType: "", buyURL: "")
+
 
 
 //WEEK 1
@@ -2926,9 +2944,9 @@ let fridayNow21to24Topic3 = Topic(title: weekdayNow21to24Title, icon: weekdayNow
 
 //WEEK 4
 //MONDAY
-let weekdayNow21to24TipArray15 = [weekdayNow21to24Tip60, weekdayNow21to24Tip61, weekdayNow21to24Tip62, weekdayNow21to24Tip63]//WIP1
+let weekdayNow21to24TipArray15 = [weekdayNow21to24Tip60, weekdayNow21to24Tip61, weekdayNow21to24Tip62, weekdayNow21to24Tip63]
 //TUESDAY
-let weekdayNow21to24TipArray16 = [weekdayNow21to24Tip64, weekdayNow21to24Tip65, weekdayNow21to24Tip66, weekdayNow21to24Tip47]//WIP
+let weekdayNow21to24TipArray16 = [weekdayNow21to24Tip64, weekdayNow21to24Tip65, weekdayNow21to24Tip66, weekdayNow21to24Tip67]
 //WEDNESDAY
 let weekdayNow21to24TipArray17 = [weekdayNow5to8Tip68, weekdayNow21to24Tip49, weekdayNow21to24Tip50, weekdayNow21to24Tip51]//WIP
 

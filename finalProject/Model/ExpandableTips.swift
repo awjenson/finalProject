@@ -12,3 +12,4 @@ struct ExpandableTips {
     var isExpanded: Bool
     let tips: [Tip]
 }
+

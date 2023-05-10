@@ -75,6 +75,7 @@
 		DAA1022820537D6600A25EFC /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */; };
 		DAA1022B2053804900A25EFC /* UITextView+Expanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */; };
 		DAA3728526D17CFA00918C45 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3728426D17CFA00918C45 /* BounceButton.swift */; };
+		DAA4287529C79E5800F3BCBB /* TinyHabits.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA4287429C79E5800F3BCBB /* TinyHabits.swift */; };
 		DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */; };
 		DAAC061A2349959700E8C625 /* AdviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC06192349959700E8C625 /* AdviceTableViewCell.swift */; };
 		DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */; };
@@ -176,6 +177,7 @@
 		DAA1022720537D6600A25EFC /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		DAA1022A2053804900A25EFC /* UITextView+Expanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Expanding.swift"; sourceTree = "<group>"; };
 		DAA3728426D17CFA00918C45 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
+		DAA4287429C79E5800F3BCBB /* TinyHabits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyHabits.swift; sourceTree = "<group>"; };
 		DAABB5D32207CB2100066AF8 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		DAAC06192349959700E8C625 /* AdviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewCell.swift; sourceTree = "<group>"; };
 		DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserData.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				DA0EDE0D2104EF6D00B9363F /* Hint.swift */,
 				DA511DE2213F171B0056949B /* MoodData.swift */,
 				DA5EE4BF20918CBE00B54438 /* JournalAdvice.swift */,
+				DAA4287429C79E5800F3BCBB /* TinyHabits.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				DABD221D26924EE300A3AE66 /* RoundButtonWithImageAndText.swift in Sources */,
 				DAD4C65F246A65C1003B215C /* MyCustomHeader.swift in Sources */,
 				DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */,
+				DAA4287529C79E5800F3BCBB /* TinyHabits.swift in Sources */,
 				DA20FEDD21F03643000F0C53 /* UIImage+Extension.swift in Sources */,
 				DAC8DFF6206ED93B005D627B /* TopicData.swift in Sources */,
 				DA361D3520858297007ACE59 /* Storyboard+Utility.swift in Sources */,
@@ -923,7 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.16;
+				CURRENT_PROJECT_VERSION = 1.17;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -931,7 +935,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.6;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -947,7 +951,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.16;
+				CURRENT_PROJECT_VERSION = 1.17;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -955,7 +959,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.6;
+				MARKETING_VERSION = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;

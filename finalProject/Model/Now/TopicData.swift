@@ -79,11 +79,16 @@ let breakfastTip16 = Tip(header: "Improve Mood 😄🍎🍌🍊", title: "Breakf
 let breakfastTip17 = Tip(header: "Increase Happiness 😄🍎🍌🍊", title: "Eat 6 servings of fruit and vegetables a day", body: "Research: People who go from no fruit or produce in their diets to 8 servings a day experienced an increase in their well-being equivalent to getting a new job.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
 let breakfastTip18 = Tip(header: "Reduce Anxiety 👍", title: "Breakfast foods that reduce anxiety", body: "Oatmeal, oranges, blueberries, milk and almond butter.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/8-spinach-2/", doneType: "", buyURL: "")
 let breakfastTip19 = Tip(header: "Prevent Weight Gain 🍽", title: "Eat with smaller plates, bowls, cups, and silverware", body: "Reduce extra calories by eating with: \n• 9-to-10 inch plate: 22% less \n• Smaller bowl: 17% less \n• Smaller spoon: 14% less \n• Small or tall cup: 30% less \n\nLarger tableware equals larger waistline." , sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
-let breakfastTip20 = Tip(header: "Prevent Weight Gain 🙅‍♀️", title: "Don't keep cereal boxes visible", body: "Study: Women who had even one box of breakfast cereal that was visible - anywhere in their kitchen - weighed 21 pounds more than their neighbor who didn't. \n\nRemember: In sight, in stomach.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
+let breakfastTip20 = Tip(header: "Good Habit 🍳", title: "After I prepare my breakfast, I will set out my vitamins.", body: "Stanford research: Changing your enironment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 //6
 let breakfastTip21 = Tip(header: "Feel Full For Longer 🥛🥜🥑", title: "Eat healthy fats", body: "Let’s look at the supposed healthy breakfast of non-fat Greek yogurt, high-fiber cereal and berries. \n\nSwitch to 2%-fat yogurt or to add some nuts." , sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2013/03/23/healthy-breakfast-mistakes_n_2877800.html", doneType: "", buyURL: "")
 let breakfastTip22 = Tip(header: "Burn Belly Fat 🥬🍎", title: "Study: Eating an additional 14 grams of fiber per day were linked to a reduction of harmful belly fat and weight loss of 4.5 lbs over 4 months", body: "The best way to get more fiber is to eat a lot of plant foods like vegetables and fruit. Legumes are also a good source, as well as some cereals like whole oats." , sourceName: "Healthline", sourceURL: "", doneType: "", buyURL: "")
+let breakfastTip23 = Tip(header: "Prevent Weight Gain 🙅‍♀️", title: "Don't keep cereal boxes visible", body: "Study: Women who had even one box of breakfast cereal that was visible - anywhere in their kitchen - weighed 21 pounds more than their neighbor who didn't. \n\nRemember: In sight, in stomach.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
+let breakfastTip24 = Tip(header: "Good Habit 🚶‍♀️", title: "After I finish my breakfast, I will put on my walking shoes and go for a quick walk.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+//7
+let breakfastTip25 = Tip(header: "Good Habit 🧠🥑", title: "After I make my breakfast plate, I will add a few slices of avocado.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //WEEK 1
 let breakfastTipArray0 = [breakfastTip1, breakfastTip2, breakfastTip3, breakfastTip4]
@@ -100,26 +105,19 @@ let breakfastTopic3 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: bre
 
 let breakfastTipArray4 = [breakfastTip17, breakfastTip18, breakfastTip19, breakfastTip20]
 let breakfastTopic4 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArray4)
-//WIP
-let breakfastTipArray5 = [breakfastTip21, breakfastTip22, breakfastTip7, breakfastTip8]
-let breakfastTopic5 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArray5)
+
+let breakfastTipArray5 = [breakfastTip21, breakfastTip22, breakfastTip23, breakfastTip24]
+let breakfastTipArray6 = [breakfastTip25, breakfastTip12, breakfastTip13, breakfastTip4]//WIP
 
 //
-let breakfastTipArrays = [breakfastTipArray0, breakfastTipArray1, breakfastTipArray2, breakfastTipArray3, breakfastTipArray4, breakfastTipArray5]
+let breakfastTipArrays = [breakfastTipArray0, breakfastTipArray1, breakfastTipArray2, breakfastTipArray3, breakfastTipArray4, breakfastTipArray5, breakfastTipArray6]
 
 let breakfastTopic = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArrays.random())
 let breakfastTopics = Topics(title: breakfastTitle, icon: breakfastIcon, topics: [breakfastTopic,])
 
 
-
-
-
-
-
-
-
 //WIP
-let breakfastTipArray6 = [breakfastTip9, breakfastTip10, breakfastTip11, breakfastTip12]
+
 let breakfastTopic6 = Topic(title: breakfastTitle, icon: breakfastIcon, tip: breakfastTipArray6)
 
 
@@ -187,7 +185,8 @@ let lunchTip8 = Tip(header: "Prevent Weight Gain 🚶‍♂️", title: "Taking 
 let lunchTip9 = Tip(header: "Live longer 🥩", title: "Only eat meat 2 times a week", body: "A study of the longest living people in the world found that they consume limited quantities of meat. Only eat meat for special occasions, and each serving should not be larger than a deck of cards.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
 let lunchTip10 = Tip(header: "Healthy Choice 🍞", title: "Always include one serving of carbs with a high-fiber content such as wholegrain bread, bean soup, brown rice or wholewheat pasta", body: "These will help to keep your blood sugar levels up, preventing slumps that leave you needing a nap. \n\nBut don’t go too heavy on portion sizes – whilst helping to boost blood sugar, carbs also increase the production of a chemical in the brain called serotonin, which can make us sleepy." , sourceName: "Weight Loss Resources", sourceURL: "https://www.weightlossresources.co.uk/diet/healthy_eating/beat-afternoon-energy-slump.htm", doneType: "", buyURL: "")
 let lunchTip11 = Tip(header: "Build Muscle 🍗", title: "Eat lean protein at every meal to build muscle and satisfy hunger", body: "A good rule of thumb is to aim for 20 to 30 grams per meal of lean protein from sources that are low in saturated fats and processed carbohydrates. \n\nThere are many plant foods that contain protein, including grains, beans, legumes, nuts, and vegetables." , sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45405356/image/45407390/You-Dont-Eat-Enough-Protein", doneType: "", buyURL: "")
-let lunchTip12 = Tip(header: "Prevent Weight Gain 🥗", title: "Studies show that vegetarians (and even more so, vegans) routinely have lower body weights", body: "Plant-based foods are high in fiber, and research shows that people who followed a higher-fiber diet had a lower waist circumference. Try eating a more plant-based diet, focusing on veggies, whole grains, and plant proteins such as beans, nuts, seeds, and soy products." , sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45270438/image/45346172/Do-Eat-More-Plant-Based-Meals", doneType: "", buyURL: "")
+let lunchTip12 = Tip(header: "Good Habit 🚶‍♀️", title: "After lunch, I will walk around outside and recharge.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 //3
 let lunchTip13 = Tip(header: "Lose Weight 🚰", title: "Drink 16 ounces of water before every meal", body: "Study: Over the course of 12 weeks, dieters who drank 16 ounces of water before meals, 3 times per day, lost about 5 pounds more than dieters who did not increase their water intake. \n\nWater promotes weight loss because it fills up the stomach with a substance that has zero calories. People feel fuller as a result, and eat less calorie-containing food during the meal.", sourceName: "Virginia Polytechnic Institute and State University", sourceURL: "https://vtnews.vt.edu/articles/2010/08/082310-cals-davy.html", doneType: "", buyURL: "")
@@ -219,7 +218,9 @@ let lunchTip28 = Tip(header: "Healthy Choice 🚶‍♀️", title: "Study: Peop
 let lunchTip29 = Tip(header: "Healthy Choice 🍎🍌🍊", title: "Make fruit the first thing you put on your lunch tray. It seems to trigger a chain reaction of healthier choices", body: "When researchers gave people a free piece of fruit at the beginning of their lunch-line journey, they continued to make healthier lunch choices than those who received nothing. \n\nWorst of all, when they instead gave them cookies first, they didn't compensate by getting a salad. Instead, they headed for the pepperoni-and-sausage pizza.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
 let lunchTip30 = Tip(header: "Prevent Weight Gain 🍽", title: "Choose plate colors that contrast the color of your food helps you eat 18% less", body: "Study: If you're plate's the same color as your food, you'll put 18% more food on your plate. \n\n• Use darker plates for rice, potatoes, and pasta with Alfredo sause. \n\nUse lighter plates for meat and pasta with marinara sauce.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
 let lunchTip31 = Tip(header: "Live Longer 🥩", title: "Limit meat to only a few times a month", body: "Study of people who lived to 100 years old: Meat - mostly pork - is eaten on average only 5 times per month, and in a serving of 3 to 4 ounces, about the size of a deck of cards. \n\nBeans, including black, fava, soy, and lentils, are the cornerstone of most diets for people who live to 100.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
-let lunchTip32 = Tip(header: "Live Longer 🤓", title: "Eat until you are 80% full", body: "It takes 20 minutes for the stomach to tell the brain it is full. Undereating, as the theory goes, slows down the body's metabolism in a way such that it produces less damaging oxidants - agents that rust the body from within.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
+let lunchTip32 = Tip(header: "Good Habit ☀️", title: "After I finish eating lunch, I will get outside into the natural light of the sun.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
 
 //8
 let lunchTip33 = Tip(header: "Increase Happiness 😄", title: "Eat 6 servings of fruit and vegetables a day", body: "Research: People who go from no fruit or produce in their diets to 8 servings a day experienced an increase in their well-being equivalent to getting a new job.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
@@ -235,11 +236,17 @@ let lunchTip38 = Tip(header: "Burn Belly Fat 🥑", title: "Eat an avocado or gu
 
 let lunchTip39 = Tip(header: "Reduce Belly Fat 🍳", title: "Eat more protein foods: \n🍳 Eggs \n🐟 Fish \n🥜 Legumes \n🌰 Nuts \n🥩 Meat \n🥛 Dairy products", body: "Research: Protein has been shown to reduce cravings by 60% and help you eat up to 441 fewer calories per day.", sourceName: "Healthline", sourceURL: "https://www.healthline.com/nutrition/6-proven-ways-to-lose-belly-fat", doneType: "", buyURL: "")
 
-let lunchTip40 = Tip(header: "Live Longer 🍎🥗", title: "Eat more fruits and vegetables. The CDC recommends 2 cups of fruit and 3 cups of vegetables per day for adults", body: "According to an 8-year study, those who ate the most fruits and vegetables had a \"robust reduction\" in risk for cancer and cardiovascular disease.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", doneType: "", buyURL: "")
+let lunchTip40 = Tip(header: "Good Habit 🚶‍♀️", title: "After I eat lunch, I will walk around the building at least once.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
 
 //10
 let lunchTip41 = Tip(header: "Lose Weight 🚰", title: "Drink 2 cups of water before each meal", body: "Study: Dieters who drank 2 cups of water before each meal lost an average of 5 pounds more weight over a 12-week calorie controlled diet than their thirsty peers.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/simple-weight-loss-habits/", doneType: "", buyURL: "")
 
+let lunchTip42 = Tip(header: "Live Longer 🍎🥗", title: "Eat more fruits and vegetables. The CDC recommends 2 cups of fruit and 3 cups of vegetables per day for adults", body: "According to an 8-year study, those who ate the most fruits and vegetables had a \"robust reduction\" in risk for cancer and cardiovascular disease.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", doneType: "", buyURL: "")
+
+let lunchTip43 = Tip(header: "Live Longer 🤓", title: "Eat until you are 80% full", body: "It takes 20 minutes for the stomach to tell the brain it is full. Undereating, as the theory goes, slows down the body's metabolism in a way such that it produces less damaging oxidants - agents that rust the body from within.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
+let lunchTip44 = Tip(header: "Prevent Weight Gain 🥗", title: "Studies show that vegetarians (and even more so, vegans) routinely have lower body weights", body: "Plant-based foods are high in fiber, and research shows that people who followed a higher-fiber diet had a lower waist circumference. Try eating a more plant-based diet, focusing on veggies, whole grains, and plant proteins such as beans, nuts, seeds, and soy products." , sourceName: "POPSUGAR", sourceURL: "https://www.popsugar.com/fitness/photo-gallery/45270438/image/45346172/Do-Eat-More-Plant-Based-Meals", doneType: "", buyURL: "")
 
 //WEEK 1
 let lunchTipArray0 = [lunchTip1, lunchTip2, lunchTip3, lunchTip4]
@@ -252,8 +259,7 @@ let lunchTipArray6 = [lunchTip25, lunchTip26, lunchTip27, lunchTip28]
 let lunchTipArray7 = [lunchTip29, lunchTip30, lunchTip31, lunchTip32]
 let lunchTipArray8 = [lunchTip33, lunchTip34, lunchTip35, lunchTip36]
 let lunchTipArray9 = [lunchTip37, lunchTip38, lunchTip39, lunchTip40]
-
-let lunchTipArray10 = [lunchTip41, lunchTip38, lunchTip39, lunchTip40]
+let lunchTipArray10 = [lunchTip41, lunchTip42, lunchTip43, lunchTip44]
 
 //
 let lunchTipArrays = [lunchTipArray0, lunchTipArray1, lunchTipArray2, lunchTipArray3, lunchTipArray4, lunchTipArray5, lunchTipArray6, lunchTipArray7, lunchTipArray8, lunchTipArray9]
@@ -266,8 +272,6 @@ let lunchTopics = Topics(title: lunchTitle, icon: lunchIcon, topics: [lunchTopic
 
 
 
-
-//TODO: Todo: Add Week 2 Lunch Tips
 
 // MARK: - Dinner
 
@@ -366,6 +370,11 @@ let dinnerTip55 = Tip(header: "Live Longer 🥬", title: "Study: Eating one cup 
 
 let dinnerTip56 = Tip(header: "Prevent Weight Gain 🍰", title: "Eat dessert with a fork instead of a spoon.", body: "Study: When people ate a chocolate cake with a spoon, they ate more of it and underestimated the number of calories they were consuming; when they used a fork, they consumed less and were better able to guess how much they'd eaten.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/simple-weight-loss-habits/", doneType: "", buyURL: "")
 
+//14
+let dinnerTip57 = Tip(header: "Good Habit 🚰", title: "After I start cooking dinner, I will pour myself a nonalcoholic beverage.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let dinnerTip58 = Tip(header: "Good Habit", title: "After I finish dinner, I will immediately brush my teeth in order to stop my snacking in the evening.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
 
 //Week 1
 //0
@@ -410,9 +419,9 @@ let dinnerTipArray12 = [dinnerTip49, dinnerTip50, dinnerTip51, dinnerTip52]
 let dinnerTopic12 = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArray12)
 
 let dinnerTipArray13 = [dinnerTip53, dinnerTip54, dinnerTip55, dinnerTip56]
-
+let dinnerTipArray14 = [dinnerTip57, dinnerTip58, dinnerTip20, dinnerTip56]//WIP
 //
-let dinnerTipArrays = [dinnerTipArray0, dinnerTipArray1, dinnerTipArray2, dinnerTipArray3, dinnerTipArray4, dinnerTipArray5, dinnerTipArray6, dinnerTipArray7, dinnerTipArray8, dinnerTipArray9, dinnerTipArray10, dinnerTipArray11, dinnerTipArray12, dinnerTipArray13]
+let dinnerTipArrays = [dinnerTipArray0, dinnerTipArray1, dinnerTipArray2, dinnerTipArray3, dinnerTipArray4, dinnerTipArray5, dinnerTipArray6, dinnerTipArray7, dinnerTipArray8, dinnerTipArray9, dinnerTipArray10, dinnerTipArray11, dinnerTipArray12, dinnerTipArray13, dinnerTipArray14]
 let dinnerTopic = Topic(title: dinnerTitle, icon: dinnerIcon, tip: dinnerTipArrays.random())
 let dinnerTopics = Topics(title: dinnerTitle, icon: dinnerIcon, topics: [dinnerTopic])
 
@@ -455,8 +464,10 @@ let dinnerAfter9PM19 = Tip(header: "Reduce Heartburn Risk 🔥", title: "Foods T
 let dinnerAfter9PM20 = Tip(header: "Prevent Weight Gain 🐢", title: "Eat slowly. Study: Fast eaters are up to 115% more likely to be obese", body: "Another study: People who ate \"very fast\" tended to be heavier and had gained the most body weight since age 20. \n\nPut simply, overweight people chew less than normal-weight people, because when you chew more, you tend to eat less - 15% less, in one study." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", doneType: "", buyURL: "")
 
 //5
-let dinnerAfter9PM21 = Tip(header: "Prevent Weight Gain 🍽", title: "Choosing plate colors that contrast the color of your food helps you eat 18% less", body: "Study: If you're plate's the same color as your food, you'll put 18% more food on your plate. \n\n• Use darker plates for rice, potatoes, and pasta with Alfredo sause. \n\nUse lighter plates for meat and pasta with marinara sauce.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
-let dinnerAfter9PM22 = Tip(header: "Prevent Weight Gain 🤔", title: "Slim people chew each bite an average of 15 times - 3 chews more than heavy people", body: "Study: On average, the number of times people chewed for each bite: \n\n• Slim people: 15 chews \n• Heavy people: 12 chews", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
+let dinnerAfter9PM21 = Tip(header: "Good Habit 🚰", title: "After I start cooking dinner, I will pour myself a nonalcoholic beverage.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let dinnerAfter9PM22 = Tip(header: "Prevent Weight Gain 🍽", title: "Choosing plate colors that contrast the color of your food helps you eat 18% less", body: "Study: If you're plate's the same color as your food, you'll put 18% more food on your plate. \n\n• Use darker plates for rice, potatoes, and pasta with Alfredo sause. \n\nUse lighter plates for meat and pasta with marinara sauce.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
+let dinnerAfter9PM23 = Tip(header: "Prevent Weight Gain 🤔", title: "Slim people chew each bite an average of 15 times - 3 chews more than heavy people", body: "Study: On average, the number of times people chewed for each bite: \n\n• Slim people: 15 chews \n• Heavy people: 12 chews", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
+let dinnerAfter9PM24 = Tip(header: "Good Habit", title: "After I finish dinner, I will immediately brush my teeth in order to stop my snacking in the evening.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 let lateDinnerTitle = "Dinner"
 //0
@@ -475,8 +486,8 @@ let dinnerAfter9PMTopic3 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: 
 let dinnerAfter9PMTipArray4 = [dinnerAfter9PM17, dinnerAfter9PM18, dinnerAfter9PM19, dinnerAfter9PM20]
 let dinnerAfter9PMTopic4 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray4)
 
-//5 (WIP 2)
-let dinnerAfter9PMTipArray5 = [dinnerAfter9PM21, dinnerAfter9PM22, dinnerAfter9PM7, dinnerAfter9PM8]
+//5
+let dinnerAfter9PMTipArray5 = [dinnerAfter9PM21, dinnerAfter9PM22, dinnerAfter9PM23, dinnerAfter9PM24]
 let dinnerAfter9PMTopic5 = Topic(title: lateDinnerTitle, icon: dinnerIcon, tip: dinnerAfter9PMTipArray5)
 
 //
@@ -565,6 +576,11 @@ let afternoonSnackTip12 = Tip(header: "Prevent Weight Gain 🤔", title: "You on
 let afternoonSnackTip13 = Tip(header: "Healthy Habit 🍎", title: "You can only have an indulgent afternoon snack if you first eat a piece of fruit", body: "Since finding a piece of fruit (and perhaps cutting it) is a hassle, and since eating it might fill you up, you'll probably also snack less - and certainly less on the indulgent snacks.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
 let afternoonSnackTip14 = Tip(header: "Warning ☕️", title: "GOOD: Moderate coffee consumption \n\nBAD: Excessive coffee consumption increases your risk of developing: obesity, osteoarthritis, and arthropathy.", body: "Although the study's authors are confident that there are no adverse health effects caused by moderate coffee consumption, they believe people with a family history of osteoarthritis or arthritis should be mindful of their daily coffee intake." , sourceName: "Ladders", sourceURL: "https://www.theladders.com/career-advice/if-you-drink-this-many-cups-of-coffee-a-day-you-raise-your-risk-for-these-three-serious-disease", doneType: "", buyURL: "")
 let afternoonSnackTip15 = Tip(header: "Eat Dried Fruit 👍", title: "Study: People who ate dried fruit tended to have better diets, a lower BMI, and a smaller waist circumference compared with those who did not.", body: "The study does not prove that eating dried fruit improves health, only that there seems to be an association. People who eat dried fruit may have better health for other reasons, such as taking more exercise. \n\nOnly about 24% of females and 14% of males in the U.S. eat the recommended daily amount of fruit, according to the National Cancer Institute. \n\n• Eat the unsweetened versions without added sugar. " , sourceName: "Medical News Today", sourceURL: "https://www.medicalnewstoday.com/articles/eating-dried-fruit-linked-to-better-overall-diet-and-health#Active-lifestyle", doneType: "", buyURL: "")
+let afternoonSnackTip16 = Tip(header: "Good Habit 🍵", title: "After I prepare my afternoon snack, I will make a cup of green tea.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
+//4
+let afternoonSnackTip17 = Tip(header: "Good Habit", title: "After I feel hungry in the afternoon, I will eat a handful of blueberries.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //
 //
@@ -580,11 +596,14 @@ let afternoonSnackTipArray2 = [afternoonSnackTip9, afternoonSnackTip10, afternoo
 let afternoonSnackTopic2 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray2)
 
 //3
-let afternoonSnackTipArray3 = [afternoonSnackTip13, afternoonSnackTip14, afternoonSnackTip15, afternoonSnackTip4]
+let afternoonSnackTipArray3 = [afternoonSnackTip13, afternoonSnackTip14, afternoonSnackTip15, afternoonSnackTip16]
 let afternoonSnackTopic3 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray3)
 
+//4
+let afternoonSnackTipArray4 = [afternoonSnackTip17, afternoonSnackTip4, afternoonSnackTip15, afternoonSnackTip16]//WIP
+
 //RANDOM
-let afternoonSnackTipArrays = [afternoonSnackTipArray0, afternoonSnackTipArray1, afternoonSnackTipArray2, afternoonSnackTipArray3,]
+let afternoonSnackTipArrays = [afternoonSnackTipArray0, afternoonSnackTipArray1, afternoonSnackTipArray2, afternoonSnackTipArray3, afternoonSnackTipArray4]
 let afternoonSnackTopic = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArrays.random())
 
 let afternoonSnackTopics = Topics(title: afternoonSnackTitle, icon: afternoonSnackIcon, topics: [afternoonSnackTopic])
@@ -594,7 +613,6 @@ let afternoonSnackTopics = Topics(title: afternoonSnackTitle, icon: afternoonSna
 
 
 //4
-let afternoonSnackTipArray4 = [afternoonSnackTip5, afternoonSnackTip6, afternoonSnackTip7, afternoonSnackTip8]
 let afternoonSnackTopic4 = Topic(title: afternoonSnackTitle, icon: afternoonSnackIcon, tip: afternoonSnackTipArray4)
 //5
 let afternoonSnackTipArray5 = [afternoonSnackTip9, afternoonSnackTip10, afternoonSnackTip11, afternoonSnackTip12]
@@ -1153,14 +1171,22 @@ let AMRoutine27 = Tip(header: "Improve Performance 🧘‍♂️", title: "80%+ 
 
 
 //7
-let AMRoutine28 = Tip(header: "Start Strong 🌅", title: "Science Says: Willpower is highest in the morning, so start strong!", body: "We’re limited with our self-control. The longer the day goes on, the more fatigue your self-control experiences, the more important it is to make those early morning hours count. \n\n• Exercise \n• Eat a good breakfast \n• Do your toughest tasks first", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3033652/the-morning-routines-of-the-most-successful-people", doneType: "", buyURL: "")
+let AMRoutine28 = Tip(header: "Good Habit", title: "After I put my feet on the floor in the morning, I will say a brief prayer.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 let AMRoutine29 = Tip(header: "Increase IQ 🤓🧘‍♀️", title: "Study: People who meditated 20 minutes a day showed an average gain in IQ of 23%", body: "Researchers suggest you must meditate for a minimum of 12-15 minutes at a time to get the health benefits of it. \n\nTwo popular meditation apps are Calm and Headspace.", sourceName: "Inc.", sourceURL: "https://www.inc.com/melanie-curtin/want-to-raise-your-iq-by-23-percent-neuroscience-says-to-take-up-this-simple-hab.html", doneType: "", buyURL: "")
 let AMRoutine30 = Tip(header: "One Simple Question 🌅", title: "In a commencement address he gave at Stanford, Steve Jobs revealed the motivational tactic that he used to start each and every day.", body: "For the past 33 years, I have looked in the mirror every morning and asked myself: “If today were the last day of my life, would I want to do what I am about to do today?” \n\nAnd whenever the answer has been no for too many days in a row, I know I need to change something.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3033652/the-morning-routines-of-the-most-successful-people", doneType: "", buyURL: "")
 let AMRoutine31 = Tip(header: "Make A Difference 📝", title: "If you want to become the voice of your generation, write a journal entry every day and then gift it to your local library at the end of your life", body: "David McCullough, the Pulitzer Prize-winning author, said: \n\nA journal is one of the most precious gifts you can give to those you leave behind.", sourceName: "Greg McKeown, author of Essentialism: The Disciplined Pursuit of Less", sourceURL: "https://gregmckeown.com/blog/one-thing-productive-people-reaching-phones/", doneType: "", buyURL: "")
 
 
 //8
+let AMRoutine32 = Tip(header: "Good Habit 👣", title: "After I put my feet on the floor in the morning, I will say, “It’s going to be a great day!”", body: "Stanford research: Changing your enironment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let AMRoutine33 = Tip(header: "Start Strong 🌅", title: "Science Says: Willpower is highest in the morning, so start strong!", body: "We’re limited with our self-control. The longer the day goes on, the more fatigue your self-control experiences, the more important it is to make those early morning hours count. \n\n• Exercise \n• Eat a good breakfast \n• Do your toughest tasks first", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3033652/the-morning-routines-of-the-most-successful-people", doneType: "", buyURL: "")
+let AMRoutine34 = Tip(header: "Good Habit 🚶‍♀️", title: "After I set out on my morning walk, I will call a family member.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
+
+//9
+let AMRoutine36 = Tip(header: "Good Habit", title: "After I walk into the kitchen, I will drink fresh lemon juice with water.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let AMRoutine37 = Tip(header: "Good Habit", title: "After I drink fresh lemon juice with water, I will put on my running shoes.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //WEEK 1
 let AMRoutineTipArray0 = [AMRoutine0, AMRoutine1, AMRoutine2, AMRoutine3]
@@ -1172,21 +1198,21 @@ let AMRoutineTipArray5 = [AMRoutine20, AMRoutine21, AMRoutine22, AMRoutine23]
 let AMRoutineTipArray6 = [AMRoutine24, AMRoutine25, AMRoutine26, AMRoutine27]
 //WEEK 2
 let AMRoutineTipArray7 = [AMRoutine28, AMRoutine29, AMRoutine30, AMRoutine31]
+let AMRoutineTipArray8 = [AMRoutine32, AMRoutine33, AMRoutine34, AMRoutine29]//WIP
+let AMRoutineTipArray9 = [AMRoutine36, AMRoutine37, AMRoutine2, AMRoutine3]//WIP
 
 //RANDOM
-let AMRoutineTipArrays = [AMRoutineTipArray0, AMRoutineTipArray1, AMRoutineTipArray2, AMRoutineTipArray3, AMRoutineTipArray4, AMRoutineTipArray5, AMRoutineTipArray6, AMRoutineTipArray7,]
+let AMRoutineTipArrays = [AMRoutineTipArray0, AMRoutineTipArray1, AMRoutineTipArray2, AMRoutineTipArray3, AMRoutineTipArray4, AMRoutineTipArray5, AMRoutineTipArray6, AMRoutineTipArray7,AMRoutineTipArray8, AMRoutineTipArray9]
 let AMRoutineTopic = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArrays.random())
 let AMRoutineTopics = Topics(title: AMRoutineTitle, icon: AMRoutineIcon, topics: [AMRoutineTopic])
 
+//NO LONGER USED
 
-let AMRoutineTipArray8 = [AMRoutine0, AMRoutine1, AMRoutine2, AMRoutine3]
-let AMRoutineTipArray9 = [AMRoutine4, AMRoutine5, AMRoutine6, AMRoutine7]
 let AMRoutineTipArray10 = [AMRoutine8, AMRoutine9, AMRoutine10, AMRoutine11]
 let AMRoutineTipArray11 = [AMRoutine12, AMRoutine13, AMRoutine14, AMRoutine15]
 let AMRoutineTipArray12 = [AMRoutine16, AMRoutine17, AMRoutine18, AMRoutine19]
 let AMRoutineTipArray13 = [AMRoutine20, AMRoutine21, AMRoutine22, AMRoutine23]
-
-//WEEK 1
+//WEEK 1 //NO LONGER USED
 let AMRoutineTopic0 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray0)
 let AMRoutineTopic1 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray1)
 let AMRoutineTopic2 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray2)
@@ -1194,7 +1220,7 @@ let AMRoutineTopic3 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMR
 let AMRoutineTopic4 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray4)
 let AMRoutineTopic5 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray5)
 let AMRoutineTopic6 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray6)
-//WEEK 2
+//WEEK 2 //NO LONGER USED
 let AMRoutineTopic7 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray7)
 let AMRoutineTopic8 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray8)
 let AMRoutineTopic9 = Topic(title: AMRoutineTitle, icon: AMRoutineIcon, tip: AMRoutineTipArray9)
@@ -1238,6 +1264,11 @@ let getReadyAM15 = Tip(header: "Anti-Aging Tip 🧴", title: "Rain 🌧 or shine
 let getReadyAM16 = Tip(header: "Increase Confidence 💪", title: "Dress for success 👔", body: "One study divided men into three groups, one dressed in suits, another in sweatpants and the other in casual attire, and then asked them to roleplay a negotiation scene. \n\nIn the end, the men dressed in suits showed higher levels of dominance, job performance and confidence, resulting in better negotiation deals.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", doneType: "", buyURL: "")
 let getReadyAM17 = Tip(header: "Increase Confidence 💪", title: "Wear black. ⚫️ The color black makes people appear more attractive, intelligent and confident", body: "Study: Overall the color black was voted as the most attractive, compared to every other color. \n\n66% of women thought black was the most attractive color on a man, and 46% of men thought that about women.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", doneType: "", buyURL: "")
 let getReadyAM18 = Tip(header: "Healthy Skin 👔", title: "To avoid skin irritation, take the plastic off your dry cleaning as soon as you get home, allowing the clothes to breath.", body: "The longer the plastic stays on your clothes, the more skin-harming chemicals that are absorbed.", sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=25", doneType: "", buyURL: "")
+let getReadyAM19 = Tip(header: "Good Habit 🙆‍♀️", title: "After I put on my clothes, I will do a stretch and touch my toes.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+//5
+let getReadyAM20 = Tip(header: "Live Longer 🗓", title: "Minimize stress caused by traffic by planning to arrive 15 minutes early to every appointment", body: "This allows you to slow down and focus before meetings, as well as account for unexpected delays. \n\nStress caused by feeling rushed causes inflammation in the body. Over time, inflammation caused by stress increases your risk of Alzheimer's disease, diabetes, and cardiovascular disease.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
+let getReadyAM21 = Tip(header: "Good Habit 👔💪", title: "After I get dressed, I will say a positive affirmation about myself, like: “I am constantly growing and evolving into a better person.“", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
 //WOMEN
@@ -1249,16 +1280,16 @@ let getReadyAMTipArray0 = [getReadyAM0, getReadyAM1, getReadyAM2, getReadyAM3]
 let getReadyAMTipArray1 = [getReadyAM4, getReadyAM5, getReadyAM6, getReadyAM7]
 let getReadyAMTipArray2 = [getReadyAM8, getReadyAM9, getReadyAM10, getReadyAM11]
 let getReadyAMTipArray3 = [getReadyAM12, getReadyAM13, getReadyAM14, getReadyAM15]
-//WIP
-let getReadyAMTipArray4 = [getReadyAM16, getReadyAM17, getReadyAM18, getReadyAM3]
+let getReadyAMTipArray4 = [getReadyAM16, getReadyAM17, getReadyAM18, getReadyAM19]
+let getReadyAMTipArray5 = [getReadyAM20, getReadyAM21, getReadyAM10, getReadyAM11]//WIP
 //
-let getReadyAMTipArrays = [getReadyAMTipArray0, getReadyAMTipArray1, getReadyAMTipArray2, getReadyAMTipArray3, getReadyAMTipArray4,]
+let getReadyAMTipArrays = [getReadyAMTipArray0, getReadyAMTipArray1, getReadyAMTipArray2, getReadyAMTipArray3, getReadyAMTipArray4,getReadyAMTipArray5]
 let getReadyAMTopic = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArrays.random())
 let getReadyAMTopics = Topics(title: AMGetReadyTitle, icon: AMGetReadyIcon, topics: [getReadyAMTopic,])
 
 
 
-let getReadyAMTipArray5 = [getReadyAM8, getReadyAM9, getReadyAM10, getReadyAM11]
+//NO LONGER USED...
 let getReadyAMTipArray6 = [getReadyAM12, getReadyAM13, getReadyAM14, getReadyAM15]
 
 //WEEK 1
@@ -1269,6 +1300,24 @@ let getReadyAMTopic3 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: 
 let getReadyAMTopic4 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray4)
 let getReadyAMTopic5 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray5)
 let getReadyAMTopic6 = Topic(title: AMGetReadyTitle, icon: AMGetReadyIcon, tip: getReadyAMTipArray6)
+
+
+// MARK: - Arriving Home, PM
+
+
+let arrivingHomeTitle = "Arriving"
+let arrivingHomeIcon = Constants.Icon.home
+
+let arrivingHomeTip0 = Tip(header: "Good Habit 🚪🔑", title: "After I walk in the door at home, I will hang my keys on the hook.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+let arrivingHomeTip1 = Tip(header: "Good Habit 👔", title: "After I change out of my work clothes, I will hang or organize one item I was wearing.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
+let arrivingHomeTipArray0 = [arrivingHomeTip0, arrivingHomeTip1]
+//
+let arrivingHomeTipArrays = [goingOutTipArray0]
+let arrivingHomeTopic = Topic(title: arrivingHomeTitle, icon: arrivingHomeIcon, tip: arrivingHomeTipArrays.random())
+let arrivingHomeTopics = Topics(title: arrivingHomeTitle, icon: arrivingHomeIcon, topics: [arrivingHomeTopic,])
 
 
 // MARK: - Going Out, PM
@@ -1304,7 +1353,7 @@ let goingOutTip16 = Tip(header: "Increase Confidence 😍", title: "Wear perfume
 let goingOutTip17 = Tip(header: "Look More Attractive 😍", title: "Wear black. ⚫️ Study: The color black makes people appear more attractive, intelligent and confident", body: "Overall the color black was voted as the most attractive, compared to every other color. \n\n66% of women thought black was the most attractive color on a man, and 46% of men thought that about women.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", doneType: "", buyURL: "")
 let goingOutTip18 = Tip(header: "Increase Confidence 💪", title: "Listen to music with heavy bass while you're getting ready 🎶", body: "Study: After listening to music with heavy bass, participants said they felt more powerful, dominant and determined.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", doneType: "", buyURL: "")
 let goingOutTip19 = Tip(header: "Save Money 💰", title: "Survey: The average person exceeds their weekly entertainment budget goal by +29%", body: "On average, the weekly amount that people spend — not including bills like housing and utilities — is $340, or $143 more than the average $197 budgeted. \n\nThat extra spending equals roughly $7,400 each year of overspending. \n\nAlign your spending with your values and cut back in areas that don’t reflect them." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/12/26/consumers-overspend-by-7400-a-year-here-are-weekly-trouble-spots.html", doneType: "", buyURL: "")
-
+let goingOutTip20 = Tip(header: "Good Habit 🙆‍♀️", title: "After I put on my clothes, I will do a stretch and touch my toes.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
 //WEEK 1
@@ -1312,7 +1361,7 @@ let goingOutTipArray0 = [goingOutTip1, goingOutTip2, goingOutTip3, goingOutTip4]
 let goingOutTipArray1 = [goingOutTip5, goingOutTip6, goingOutTip7, goingOutTip8]
 let goingOutTipArray2 = [goingOutTip9, goingOutTip10, goingOutTip11, goingOutTip12]
 let goingOutTipArray3 = [goingOutTip13, goingOutTip14, goingOutTip15, goingOutTip16]
-let goingOutTipArray4 = [goingOutTip17, goingOutTip18, goingOutTip19, goingOutTip12]//WIP
+let goingOutTipArray4 = [goingOutTip17, goingOutTip18, goingOutTip19, goingOutTip20]
 //
 let goingOutTipArrays = [goingOutTipArray0, goingOutTipArray1, goingOutTipArray2, goingOutTipArray3, goingOutTipArray4,]
 let goingOutTopic = Topic(title: goingOutTitle, icon: goingOutIcon, tip: goingOutTipArrays.random())
@@ -1553,14 +1602,15 @@ let cafeTip15 = Tip(header: "Warning 🥛", title: "Unless you specify your milk
 let cafeTip16 = Tip(header: "Cancer Risk 🔥", title: "Wait until very hot beverages cool down before drinking. Drinking very hot beverages increases the risk of esophageal cancer", body: "Esophageal cancer is the eighth most common cancer and is often fatal. It is possible that the trauma from drinking very hot beverages leads to cell changes and hence to cancer." , sourceName: "CNN", sourceURL: "https://www.cnn.com/2019/03/20/health/hot-tea-linked-to-higher-cancer-risk-study-intl/index.html", doneType: "", buyURL: "")
 
 //4
-let cafeTip17 = Tip(header: "Increase Happiness 😄", title: "Study: People who made small talk with their barista felt happier than those who stayed silent", body: "Humans are designed to have social interaction. These small interactions are incredibly important for our overall well-being. \n\nSmile, make eye contact, and have brief but genuine conversation." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-make-sure-get-happier-as-you-get-older-2019-8", doneType: "", buyURL: "")
+let cafeTip17 = Tip(header: "Good Habit", title: "After I sit down with my coffee, I will open my journal.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 let cafeTip18 = Tip(header: "Healthy Choice ☕️", title: "Study suggests that dark roasted coffee — whether regular or decaf — has the strongest protective effect on the brain", body: "The darker the roast, the more brain-protecting compounds get released from the coffee bean. \n\nThese compounds are what gives the coffee its bitter flavor and slow down the buildup of toxic proteins in the brain to help reduce your risk of Alzheimer's and Parkinson's disease." , sourceName: "Medical News Today", sourceURL: "https://www.medicalnewstoday.com/articles/323594.php", doneType: "", buyURL: "")
 let cafeTip19 = Tip(header: "Prevent Weight Gain ☕️", title: "For the least amount of calories, order a cup of plain, black coffee", body: "Researchers found that one cup of certain kinds of specialty coffee drinks contain up to half your daily requirement of calories, plus all of your sugar and fat for the day. \n\nIf you like sweetness or a little milk, add it yourself so that you know exactly what's going in your cup of coffee." , sourceName: "Shape", sourceURL: "https://www.shape.com/healthy-eating/healthy-drinks/3-tips-lighten-your-coffee-order", doneType: "", buyURL: "")
 let cafeTip20 = Tip(header: "Save Money 💰", title: "Survey: The average person exceeds their weekly coffee budget goal by +32%", body: "On average, the weekly amount that people spend — not including bills like housing and utilities — is $340, or $143 more than the average $197 budgeted. \n\nThat extra spending equals roughly $7,400 each year of overspending. \n\nAlign your spending with your values and cut back in areas that don’t reflect them." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/12/26/consumers-overspend-by-7400-a-year-here-are-weekly-trouble-spots.html", doneType: "", buyURL: "")
 
 //5
-let cafeTip21 = Tip(header: "Lose Weight 🍵", title: "Green tea one of the best drinks for weight loss", body: "• Drink 1+ cups per day \n\nResearchers believe that green tea can increase fat oxidation, boost metabolism, decrease appetite, and may even block your cells from storing sugar as fat. Plus, the caffeine in green tea stimulates the breakdown of fat." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/best-drink-weight-loss/", doneType: "", buyURL: "")
-
+let cafeTip21 = Tip(header: "Good Habit", title: "After I start the coffee maker, I will tidy up one thing in my home.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let cafeTip22 = Tip(header: "Lose Weight 🍵", title: "Green tea one of the best drinks for weight loss", body: "• Drink 1+ cups per day \n\nResearchers believe that green tea can increase fat oxidation, boost metabolism, decrease appetite, and may even block your cells from storing sugar as fat. Plus, the caffeine in green tea stimulates the breakdown of fat." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/best-drink-weight-loss/", doneType: "", buyURL: "")
+let cafeTip23 = Tip(header: "Increase Happiness 😄", title: "Study: People who made small talk with their barista felt happier than those who stayed silent", body: "Humans are designed to have social interaction. These small interactions are incredibly important for our overall well-being. \n\nSmile, make eye contact, and have brief but genuine conversation." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-make-sure-get-happier-as-you-get-older-2019-8", doneType: "", buyURL: "")
 
 
 let cafeTipArray0 = [cafeTip1, cafeTip2, cafeTip3, cafeTip4]
@@ -1568,8 +1618,8 @@ let cafeTipArray1 = [cafeTip5, cafeTip6, cafeTip7, cafeTip8]
 let cafeTipArray2 = [cafeTip9, cafeTip10, cafeTip11, cafeTip12]
 let cafeTipArray3 = [cafeTip13, cafeTip14, cafeTip15, cafeTip16]
 let cafeTipArray4 = [cafeTip17, cafeTip18, cafeTip19, cafeTip20]
-//WIP (3)
-let cafeTipArray5 = [cafeTip21, cafeTip18, cafeTip19, cafeTip20]
+//WIP 1
+let cafeTipArray5 = [cafeTip21, cafeTip22, cafeTip23, cafeTip20]
 //
 let cafeTipArrays = [cafeTipArray0, cafeTipArray1, cafeTipArray2, cafeTipArray3, cafeTipArray4, cafeTipArray5]
 let cafeTopic = Topic(title: cafeTitle, icon: cafeIcon, tip: cafeTipArrays.random())
@@ -1693,17 +1743,20 @@ let breakPMTip8 = Tip(header: "Think Big 🤔", title: "What is your favorite pl
 
 //2
 let breakPMTip9 = Tip(header: "Live Longer 🚶‍♀️", title: "Research: People who have a quicker walking pace lived longer than those who walked more slowly", body: "Women who walked more quickly lived 15 years longer than women who walked slowly. \n\nMen who walked quickly lived 20 years longer men who walked more slowly. \n\nPeople who are fit enough to walk at a moderate pace should try to pick up the pace." , sourceName: "Healthline", sourceURL: "https://www.healthline.com/health-news/people-who-walk-faster-tend-to-live-longer", doneType: "", buyURL: "")
+let breakPMTip10 = Tip(header: "Good Habit ⏰", title: "After I decide to take a nap, I will set an alarm so I don’t sleep for more than 30 minutes.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let breakPMTip11 = Tip(header: "Good Habit 🧘‍♀️", title: "After I sit outside during break, I will meditate for three breaths or longer.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 // PM BREAK
 let breakPMTipArray0 = [breakPMTip1, breakPMTip2, breakPMTip3, breakPMTip4]
 let breakPMTipArray1 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
-let breakPMTipArray2 = [breakPMTip9, breakPMTip2, breakPMTip3, breakPMTip4]
+let breakPMTipArray2 = [breakPMTip9, breakPMTip10, breakPMTip11, breakPMTip4]//WIP
 
 //RANDOM
 let breakPMTipArrays = [breakPMTipArray0, breakPMTipArray1, breakPMTipArray2,]
 let breakPMTopic = Topic(title: breakTitle, icon: breakIcon, tip: breakPMTipArrays.random())
 let breakPMTopics = Topics(title: breakTitle, icon: breakIcon, topics: [breakPMTopic,])
 
+//NO LONGER USED...
 let breakPMTipArray3 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
 let breakPMTipArray4 = [breakPMTip1, breakPMTip2, breakPMTip3, breakPMTip4]
 let breakPMTipArray5 = [breakPMTip5, breakPMTip6, breakPMTip7, breakPMTip8]
@@ -1929,7 +1982,8 @@ let groceryStoreTip35 = Tip(header: "Live Longer 🥛", title: "Goat's milk has 
 let groceryStoreTip36 = Tip(header: "Standing In Line 🧍‍♀️", title: "Mindfulness practice to reduce stress, decrease anxiety, and feel kinder towards the people around you", body: "1. Take a few deep breaths to center yourself in the moment. \n\n2. Notice your thoughts and surroundings without reacting or judging. \n\n3. Acknowledge the presence of others and wish them well. \n\nStudies show that mindfulness helps you stay calm and improves your outlook on life." , sourceName: "DeStress Monday", sourceURL: "https://www.destressmonday.org/mindful-boost-waiting-line/", doneType: "", buyURL: "")
 
 //9
-let groceryStoreTip37 = Tip(header: "Live Longer 🥛", title: "Buy goat's milk", body: "Goat milk is a great source of calcium, potassium, and the stress-relieving hormone tryptophan. \n\nIt's unlikely to cause an allergic reaction and can usually be tolerated by people who are lactose intolerant. \n\nIt's also easily digestible for older people.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
+let groceryStoreTip37 = Tip(header: "Good Habit 🍅🥬", title: "After I enter the grocery store, I will walk to the produce aisle first.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 let groceryStoreTip38 = Tip(header: "Live Longer 🍯", title: "Buy darker honey", body: "Study: Darker honey was found to have more antioxidants and less water than lighter honey. \n\nHoney may help control blood sugar levels and slow the oxidation of \"bad\" cholesterol levels in the blood, which is a good thing.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
 let groceryStoreTip39 = Tip(header: "Prevent Weight Gain 👍", title: "Use the self-checkout kiosks", body: "Study: Impulse purchases dropped 32.1% for women—and 16.7% for men—when they were the ones to scan their items and swipe their credit card. \n\nAlthough not all impulse buys are bad for your belly, 80% of candy and 61% of salty snack purchases are unplanned.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/things-making-you-fatter/", doneType: "", buyURL: "")
 let groceryStoreTip40 = Tip(header: "Fight Climate Change 🌎", title: "Eat less meat and more vegetables", body: "Research: 58% of all food emissions come from animal products. Eating meat contributes to global warming through the methane gas the animals produce, but also via deforestation to expand pastures. \n\nRising temperatures, increased rain and more extreme weather events will all have a negative impact on crops and livestock.", sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/science-environment-49238749", doneType: "", buyURL: "")
@@ -1947,11 +2001,14 @@ let groceryStoreTip47 = Tip(header: "Save Money 💰", title: "Study: The averag
 let groceryStoreTip48 = Tip(header: "Depression Linked To Diet 🍎", title: "A diet high in fruit, vegetables, whole grain, fish, olive oil, low-fat dairy and low intakes of animal foods was associated with a decreased risk of depression. \n\nA diet high in red and/or processed meat, refined grains, sweets, high-fat dairy products, butter, potatoes and high-fat gravy, and low intakes of fruits and vegetables is associated with an increased risk of depression.", body: "Diet is such an important component of mental health. \n\n• BUY: Lots of plants, including fruits and veggies, whole grains (in unprocessed form, ideally), seeds and nuts, with some lean proteins like fish and yogurt. \n\n• DON'T BUY: Foods made with added sugars or flours (like breads, baked goods, cereals, and pastas), and minimize animal fats, processed meats (sorry, bacon), and butter.", sourceName: "Harvard University", sourceURL: "https://www.health.harvard.edu/blog/diet-and-depression-2018022213309", doneType: "", buyURL: "")
 
 //12
-let groceryStoreTip49 = Tip(header: "Burn Belly Fat 🍎", title: "Choose red fruit over green fruit", body: "That means Pink Lady over Granny Smith, watermelon over honeydew, red grapes over green ones. \n\nThe higher levels of nutrients called flavonoids—particularly anthocyanins, compounds that give red fruits their color—calm the action of fat-storage genes.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", doneType: "", buyURL: "")
+let groceryStoreTip49 = Tip(header: "Good Habit", title: "After I make a grocery list, I will add one new fruit or veggie.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 let groceryStoreTip50 = Tip(header: "Burn Belly Fat 🔥", title: "Buy wild salmon, not farmed salmon", body: "Salmon is a great way to fight fat and boost your metabolism. \n\nWild salmon has plenty of heart-healthy omega 3 fatty acids—1,253 mg of the good stuff, and only 114 mg of unhealthy omega-6s. \n\nBut the farmed salmon packs a whopping 1,900 mg of unhealthy omega-6s.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", doneType: "", buyURL: "")
 let groceryStoreTip51 = Tip(header: "Burn Belly Fat 🥜", title: "Buy real peanut butter which is made with two ingredients: peanuts, and maybe some salt.", body: "Peanuts are high in both genistein and resveratrol, two nutrients that help diminish the action of your fat-storage genes. \n\nBe careful of the brand you buy: if you see ingredients like sugar, palm oil, or anything you can't pronounce, put it back. They'll undermine any good the peanuts might do.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", doneType: "", buyURL: "")
 let groceryStoreTip52 = Tip(header: "Live Longer 🥗🥙🧆", title: "Buy Mediterranean diet foods: Fruits, vegetables, nuts, fish, and whole grains, low in red meat, and free of refined foods and added sugars.", body: "People live longer in Monaco than anywhere else on earth. \n\nWith a combo of their Mediterranean diet, fresh sea air, ample sunshine and wealth, it's no wonder.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", doneType: "", buyURL: "")
 
+let groceryStoreTip53 = Tip(header: "Burn Belly Fat 🍎", title: "Choose red fruit over green fruit", body: "That means Pink Lady over Granny Smith, watermelon over honeydew, red grapes over green ones. \n\nThe higher levels of nutrients called flavonoids—particularly anthocyanins, compounds that give red fruits their color—calm the action of fat-storage genes.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/14-ways-lose-your-belly-14-days/", doneType: "", buyURL: "")
+let groceryStoreTip54 = Tip(header: "Live Longer 🥛", title: "Buy goat's milk", body: "Goat milk is a great source of calcium, potassium, and the stress-relieving hormone tryptophan. \n\nIt's unlikely to cause an allergic reaction and can usually be tolerated by people who are lactose intolerant. \n\nIt's also easily digestible for older people.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
 
 
 // Morning
@@ -1979,6 +2036,9 @@ let groceryStoreTipArray9 = [groceryStoreTip37, groceryStoreTip38, groceryStoreT
 let groceryStoreTipArray10 = [groceryStoreTip41, groceryStoreTip42, groceryStoreTip43, groceryStoreTip44]
 let groceryStoreTipArray11 = [groceryStoreTip45, groceryStoreTip46, groceryStoreTip47, groceryStoreTip48]
 let groceryStoreTipArray12 = [groceryStoreTip49, groceryStoreTip50, groceryStoreTip51, groceryStoreTip52]
+//
+let groceryStoreTipArray13 = [groceryStoreTip53, groceryStoreTip54, groceryStoreTip3, groceryStoreTip4]//WIP
+
 //
 let groceryStoreTipArrays = [groceryStoreTipArray0, groceryStoreTipArray1, groceryStoreTipArray2, groceryStoreTipArray3, groceryStoreTipArray4, groceryStoreTipArray5, groceryStoreTipArray6, groceryStoreTipArray7, groceryStoreTipArray8, groceryStoreTipArray9, groceryStoreTipArray10, groceryStoreTipArray11, groceryStoreTipArray12]
 let groceryStoreTopic = Topic(title: groceryStoreTitle, icon: groceryStoreIcon, tip: groceryStoreTipArrays.random())
@@ -2154,7 +2214,7 @@ let commuteAMTip22 = Tip(header: "Lose Weight 🚶‍♀️", title: "Use the st
 let commuteAMTip23 = Tip(header: "Reduce Your Risk 🤒", title: "Study: Elevator buttons in public spaces like office buildings could be harboring more germs than toilet seats", body: "Clean it: Maybe you don’t want to stand around your office building and wipe down the elevator buttons. \n\nBut you’ll probably want to wash, or at least sanitize, your hands once you’ve reached your floor.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", doneType: "", buyURL: "")
 
 //TUE
-let commuteAMTip24 = Tip(header: "Save Money 💰", title: "Speeding, rapid acceleration and braking can lower your gas mileage by 33% at highway speeds and by 5% around town", body: "Anticipate traffic situations and maintain adequate spacing between vehicles to avoid unnecessary braking and acceleration. \n\nWhen you do accelerate, accelerate smoothly at a moderate rate. \n\nFuel Economy Benefit: 5–33% \nFuel Cost Savings: $0.18–$1.18/gallon", sourceName: "U.S. Department of Energy", sourceURL: "https://afdc.energy.gov/files/u/publication/10_G00888_savings_WEB.pdf", doneType: "", buyURL: "")
+let commuteAMTip24 = Tip(header: "Good Habit 🚴‍♀️", title: "After I get to my bike, I will put on my helmet (even if it messes up my hair).", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 let commuteAMTip25 = Tip(header: "Save Money 💰", title: "Avoid keeping unnecessary items in your vehicle, especially heavy ones. An extra 100 pounds in your vehicle could reduce your miles per gallon by up to 2%", body: "Extra weight affects smaller vehicles more than larger ones. \n\nFuel Economy Benefit: 1–2%/100 lbs \nFuel Cost Savings: $0.04–$0.07/gallon", sourceName: "U.S. Department of Energy", sourceURL: "https://afdc.energy.gov/files/u/publication/10_G00888_savings_WEB.pdf", doneType: "", buyURL: "")
 
 let commuteAMTip26 = Tip(header: "Save Money 💰", title: "Turn off your engine when your vehicle is parked. Idling can use a ¼ to a ½ gallon of fuel per hour, depending on engine size and air conditioner use.", body: "It only takes a few seconds worth of fuel to restart your vehicle. \n\nTurning your engine on and off excessively, however, may increase starter wear. \n\nFuel Cost Savings: $0.01–0.03/minute", sourceName: "U.S. Department of Energy", sourceURL: "https://afdc.energy.gov/files/u/publication/10_G00888_savings_WEB.pdf", doneType: "", buyURL: "")
@@ -2165,9 +2225,17 @@ let commuteAMTip27 = Tip(header: "Save Money 💰", title: "Observe the speed li
 let commuteAMTip28 = Tip(header: "Anti-Aging Tip 😎", title: "Wear sunglasses", body: "Sunglasses protect your eyes from the sun and also the delicate skin surrounding them. \n\nPlus, you won’t be creating more wrinkles by squinting all the time.", sourceName: "WebMD", sourceURL: "https://www.webmd.com/beauty/features/wrinkles-skin#1", doneType: "", buyURL: "")
 let commuteAMTip29 = Tip(header: "Increase Happiness 😄", title: "DON'T: Listen to the news or talk radio \n\nDO: Listen to an educational podcast or audiobook", body: "The 24/7 news cycle of endless rage and conflict is designed to provoke and distract you. \n\nInstead, listen to an educational podcast or audiobook. \n\nIt was Jim Rohn who said, \"Formal education will make you a living; self-education will make you a fortune.\"", sourceName: "Own Day Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", doneType: "", buyURL: "")
 let commuteAMTip30 = Tip(header: "Relax 🧘‍♀️", title: "Center yourself during your commute: Take 6 deep breaths. Expand your lungs as much as possible, and focus your breath into your belly", body: "Study: Taking 6 deep breaths over 30 seconds lowers your blood pressure.", sourceName: "Own Day Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", doneType: "", buyURL: "")
-let commuteAMTip31 = Tip(header: "Quote 👍", title: "\"In the mornings on my drive to work, I listen either to music that I enjoy or to uplifting, motivational podcasts.\"", body: "\"I strive to fuel my 'mental factory'--a.k.a., my brain--with nothing but positivity.\" \n\n\"I've found that maintaining positive vibes throughout the day when I'm not focused on work translates to keeping my spirits up when I am met with workplace challenges.\" \n\n- Shannon Hudson, world champion kickboxer and founder/CEO of 9Round" , sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", doneType: "", buyURL: "")
+let commuteAMTip31 = Tip(header: "Good Habit", title: "After I pull into the parking lot at work, I will park in the farthest parking space.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 //THUR
+let commuteAMTip32 = Tip(header: "Good Habit", title: "After I leave the house for work, I will drive a route to work that avoids fast food restaurants.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let commuteAMTip33 = Tip(header: "Good Habit 🚙", title: "After I buckle my seat belt, I will press play on my audiobook.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let commuteAMTip34 = Tip(header: "Quote 🎧", title: "\"In the mornings on my drive to work, I listen either to music that I enjoy or to uplifting, motivational podcasts.\"", body: "\"I strive to fuel my 'mental factory'--a.k.a., my brain--with nothing but positivity.\" \n\n\"I've found that maintaining positive vibes throughout the day when I'm not focused on work translates to keeping my spirits up when I am met with workplace challenges.\" \n\n- Shannon Hudson, world champion kickboxer and founder/CEO of 9Round" , sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", doneType: "", buyURL: "")
+let commuteAMTip35 = Tip(header: "Save Money 💰", title: "Speeding, rapid acceleration and braking can lower your gas mileage by 33% at highway speeds and by 5% around town", body: "Anticipate traffic situations and maintain adequate spacing between vehicles to avoid unnecessary braking and acceleration. \n\nWhen you do accelerate, accelerate smoothly at a moderate rate. \n\nFuel Economy Benefit: 5–33% \nFuel Cost Savings: $0.18–$1.18/gallon", sourceName: "U.S. Department of Energy", sourceURL: "https://afdc.energy.gov/files/u/publication/10_G00888_savings_WEB.pdf", doneType: "", buyURL: "")
+
+//FRI
+let commuteAMTip36 = Tip(header: "Good Habit 🚉", title: "After I sit down on the train, I will launch my meditation app.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
 //WEEK 1
@@ -2211,8 +2279,19 @@ let commuteAMTopic6 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: com
 let commuteAMTipArray7 = [commuteAMTip28, commuteAMTip29, commuteAMTip30, commuteAMTip31]
 let commuteAMTopic7 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray7)
 
+
+//THURS
+let commuteAMTipArray8 = [commuteAMTip32, commuteAMTip33, commuteAMTip34, commuteAMTip35]
+let commuteAMTopic8 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray8)
+
+//FRI
+let commuteAMTipArray9 = [commuteAMTip36, commuteAMTip17, commuteAMTip18, commuteAMTip19]
+let commuteAMTopic9 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray9)
+
+
 // no commuteAMTipArray1 because we have Tuesday specific tips
-let commuteAMTipArrays = [commuteAMTipArray0, commuteAMTipArray2, commuteAMTipArray3, commuteAMTipArray4, commuteAMTipArray5, commuteAMTipArray6, commuteAMTipArray7,]
+// RANDOM
+let commuteAMTipArrays = [commuteAMTipArray0, commuteAMTipArray2, commuteAMTipArray3, commuteAMTipArray4, commuteAMTipArray5, commuteAMTipArray6, commuteAMTipArray7, commuteAMTipArray8]
 let commuteAMTopic = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArrays.random())
 let commuteAMTopics = Topics(title: commuteAMTitle, icon: commuteAMIcon, topics: [commuteAMTopic,])
 
@@ -2221,16 +2300,6 @@ let commuteWeekendAMTitle = "Driving"
 let commuteWeekendAMTopics = Topics(title: commuteWeekendAMTitle, icon: commuteAMIcon, topics: [commuteAMTopic,])
 
 
-
-
-
-// THURS (4 WIP)
-let commuteAMTipArray8 = [commuteAMTip12, commuteAMTip13, commuteAMTip14, commuteAMTip15]
-let commuteAMTopic8 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray8)
-
-// FRI (4 WIP)
-let commuteAMTipArray9 = [commuteAMTip16, commuteAMTip17, commuteAMTip18, commuteAMTip19]
-let commuteAMTopic9 = Topic(title: commuteAMTitle, icon: commuteAMIcon, tip: commuteAMTipArray9)
 
 
 
@@ -2266,9 +2335,13 @@ let commutePMTip15 = Tip(header: "Warning 🍕", title: "A long commute after wo
 let commutePMTip16 = Tip(header: "Warning 😡", title: "The highest amount of road rage occurs from 4:00 p.m. to 7:00 p.m. each day", body: "Analysis of Instagram Posts Hashtagged #RoadRage: Drivers felt the most aggravated during the evening commute. \n\nAllow for extra time in case you run into delays, adjust your schedule to avoid driving through the worst traffic, and listen to music while you drive. \n\nIf you start to feel angry, it’s vital to relax, breathe deeply, and consider taking a break to stretch your legs or sip some water." , sourceName: "Auto Insurance Center", sourceURL: "https://www.autoinsurancecenter.com/roadrage-instagram-posts.htm", doneType: "", buyURL: "")
 
 //
-let commutePMTip17 = Tip(header: "Millionaire Habit  💰", title: "63% of millionaires listen to audiobooks during their commute", body: "By increasing your knowledge, you are able to see more opportunities and separate from the competition, which translates into more money. \n\nMillionaires read current events, educational career-related material, personal development, biographies of successful people, and history. Only 11% of them read purely for entertainment purposes.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", doneType: "", buyURL: "")
-let commutePMTip18 = Tip(header: "Lose Weight 🎶", title: "Singing in your car helps you burn calories", body: "Turning up the radio and singing along to your favorite tunes will help you burn calories during your commute. If you spend 40 minutes singing, you’ll burn about 100 calories." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/easy-ways-to-burn-calories/", doneType: "", buyURL: "")
-let commutePMTip19 = Tip(header: "Increase Happiness 😄", title: "Live closer to work or commute less often", body: "Researches found that every extra minute you spend commuting reduces job satisfaction and worsens your mental health. \n\nIn fact, adding 20 minutes to your commute per day has the same effect on your job satisfaction as receiving a 19% pay cut." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-make-sure-get-happier-as-you-get-older-2019-8", doneType: "", buyURL: "")
+let commutePMTip17 = Tip(header: "Good Habit 🏋️‍♀️", title: "After I drive out of the parking lot at work, I will turn toward the gym.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let commutePMTip18 = Tip(header: "Millionaire Habit  💰", title: "63% of millionaires listen to audiobooks during their commute", body: "By increasing your knowledge, you are able to see more opportunities and separate from the competition, which translates into more money. \n\nMillionaires read current events, educational career-related material, personal development, biographies of successful people, and history. Only 11% of them read purely for entertainment purposes.", sourceName: "SUCCESS Magazine", sourceURL: "https://www.success.com/16-rich-habits/", doneType: "", buyURL: "")
+let commutePMTip19 = Tip(header: "Lose Weight 🎶", title: "Singing in your car helps you burn calories", body: "Turning up the radio and singing along to your favorite tunes will help you burn calories during your commute. If you spend 40 minutes singing, you’ll burn about 100 calories." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/easy-ways-to-burn-calories/", doneType: "", buyURL: "")
+
+let commutePMTip20 = Tip(header: "Increase Happiness 😄", title: "Live closer to work or commute less often", body: "Researches found that every extra minute you spend commuting reduces job satisfaction and worsens your mental health. \n\nIn fact, adding 20 minutes to your commute per day has the same effect on your job satisfaction as receiving a 19% pay cut." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-make-sure-get-happier-as-you-get-older-2019-8", doneType: "", buyURL: "")
+
+
 
 
 //FRI
@@ -2284,7 +2357,7 @@ let commuteFridayPMTip3 = Tip(header: "Increase Success 👍", title: "Identify 
 
 
 //???
-let commuteTip999 = Tip(header: "Live Longer", title: "Minimize stress caused by traffic by planning to arrive 15 minutes early to every appointment", body: "This allows you to slow down and focus before meetings, as well as account for unexpected delays. \n\nStress caused by feeling rushed causes inflammation in the body. Over time, inflammation caused by stress increases your risk of Alzheimer's disease, diabetes, and cardiovascular disease.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
+
 
 //
 let commutePMTipArray0 = [commutePMTip1, commutePMTip2, commutePMTip3, commutePMTip4]
@@ -2299,8 +2372,10 @@ let commutePMTopic2 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: com
 let commutePMTipArray3 = [commutePMTip13, commutePMTip14, commutePMTip15, commutePMTip16]
 let commutePMTopic3 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commutePMTipArray3)
 
-let commutePMTipArray4 = [commutePMTip17, commutePMTip18, commutePMTip19, commutePMTip4]
+let commutePMTipArray4 = [commutePMTip17, commutePMTip18, commutePMTip19, commutePMTip20]
 let commutePMTopic4 = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commutePMTipArray4)
+
+
 
 //*** FRI PM ONLY TIPS
 let commuteFridayPMTipArray0 = [commuteFridayPMTip0, commuteFridayPMTip1, commuteFridayPMTip2, commuteFridayPMTip3]
@@ -2310,7 +2385,7 @@ let commuteFridayPMTopic = Topic(title: commutePMTitle, icon: commutePMIcon, tip
 let commuteFridayPMTopics = Topics(title: commutePMTitle, icon: commutePMIcon, topics: [commuteFridayPMTopic])
 
 //*** RANDOM: MON-THURS PM
-let commutePMTipArrays = [commutePMTipArray0, commutePMTipArray1, commutePMTipArray2, commutePMTipArray3, commutePMTipArray4,]
+let commutePMTipArrays = [commutePMTipArray0, commutePMTipArray1, commutePMTipArray2, commutePMTipArray3, commutePMTipArray4, ]
 let commutePMTopic = Topic(title: commutePMTitle, icon: commutePMIcon, tip: commutePMTipArrays.random())
 let commutePMTopics = Topics(title: commutePMTitle, icon: commutePMIcon, topics: [commutePMTopic,])
 
@@ -2332,14 +2407,16 @@ let workAMIcon = Constants.Icon.homeOffice
 
 // WEEK 1
 // MON
-let workAMTip1 = Tip(header: "Improve Performance 🤓", title: "Work for extended periods with full concentration on a single task free from distraction", body: "Stop constantly checking your email, phone, and multitasking. \n\nA percentage of your brain's attention remains stuck thinking about the previous task when beginning your next task. \n\nThis results in lower performance.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/wharton-adam-grant-uses-deep-work-for-maximum-productivity-2016-2", doneType: "", buyURL: "")
+let workAMTip1 = Tip(header: "Good Habit 🗓", title: "After I sit down for breakfast, I will open my calendar app and review the day’s agenda.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 let workAMTip2 = Tip(header: "Increase Success 🗓", title: "DON'T: Schedule your meetings in the morning \nDO: Schedule them for the afternoon, after lunch", body: "Our brains are more focused in the morning. \n\nSo spend this time doing difficult tasks, not sitting in a meeting. \n\nFor team meetings, schedule it at 3:30 or 4 p.m. and use it to plan for the next day." , sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3032498/why-you-should-rethink-that-morning-meeting", doneType: "", buyURL: "")
 let workAMTip3 = Tip(header: "Be More Productive 📵", title: "Place your cell phone out of sight or face-down", body: "Study: People were more likely to make errors and not pay attention to their main task if they were interrupted by notifications from their phone - such as a text or a call.", sourceName: "WIRED", sourceURL: "https://www.wired.co.uk/article/what-is-productivity-be-more-productive-how-to-work", doneType: "", buyURL: "")
 let workAMTip4 = Tip(header: "Be A Leader / Get Into A Top MBA Program", title: "Show respect for others at work 🤝", body: "Stanford's MBA application includes the rating of your leadership. \n\nHigh Performers: \"Uses understanding of others and self to resolve conflicts and foster mutual respect.\" \n\nLow Performers: \"Generally treats others with respect; usually shares praise and credit\" and \"Is sometimes self-absorbed or overly self-interested.\"" , sourceName: "Stanford Graduate School of Business", sourceURL: "https://www.gsb.stanford.edu/sites/gsb/files/gsb-mba_leadership_form_v4.pdf", doneType: "", buyURL: "")
 
 
 /////// TUES
-let workAMTip5 = Tip(header: "Improve Performance 🤔", title: "Try to avoid meetings because they are the biggest office time-sucks", body: "The average office worker spends over 31 hours each month in unproductive meetings. Before booking your next meeting, ask yourself whether you can accomplish the same goals or tasks via email, phone, or Web-based meeting.", sourceName: "Inc", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", doneType: "", buyURL: "")
+let workAMTip5 = Tip(header: "Good Habit", title: "After I walk into the office, I will smile and greet each person I see.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 let workAMTip6 = Tip(header: "Lose Weight ☀️", title: "Get at least 20 to 30 minutes of sunlight light before noon", body: "Not getting enough light before noon disturbs your internal body clock, which is known to alter metabolism and lead to weight gain (increased BMI). In one study, morning light exposure accounted for about 20% of a person’s BMI.", sourceName: "Northwestern University", sourceURL: "https://news.northwestern.edu/stories/2014/04/morning-rays-keep-off-the-pounds", doneType: "", buyURL: "")
 let workAMTip7 = Tip(header: "Perform Better 📵", title: "Having your smartphone in reach, even if it’s silenced or turned off lowers your ability to think", body: "Research: People who kept their phones in another room significantly outperformed the ones who kept them nearby in concentration tests. Having your phone within reach makes it harder to focus because a percentage of the brain has to actively work to not pick up or use the device.", sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/heres-why-you-need-to-put-your-phone-away-according-to-science.html", doneType: "", buyURL: "")
 let workAMTip8 = Tip(header: "Be A Leader / Get Into A Top MBA Program", title: "Change leadership at work", body: "Stanford's MBA application includes the rating of your leadership. \n\nHigh Performers: \" Builds a coalition of supporters and coordinates change across multiple individuals; may create champions who will mobilize others to change.\" \n\nLow Performers: \"Accepts status quo; does not see the need for change.\"" , sourceName: "Stanford Graduate School of Business", sourceURL: "https://www.gsb.stanford.edu/sites/gsb/files/gsb-mba_leadership_form_v4.pdf", doneType: "", buyURL: "")
@@ -2414,21 +2491,45 @@ let workAMTip48 = Tip(header: "Earn More Money 💰", title: "Study: Disagreeabl
 let workAMTip49 =  Tip(header: "Increase Success 👃", title: "Research on how smells affect the accuracy of typists: 54% made fewer errors when they could smell lemon, 33% fewer errors with jasmine, and 20% fewer with lavender", body: "Try a lemon-scented candle or an oil diffuser. \n\nRub lemongrass on your palms and smell, or put a fresh cut lemon at your desk (that you squeeze into your water).", sourceName: "Own the Day, Own Your Life", sourceURL: "https://www.amazon.com/Own-Day-Your-Life-Optimized-ebook/dp/B072HLS5QJ", doneType: "", buyURL: "")
 let workAMTip50 = Tip(header: "Increase Success 👩‍💻", title: "Send emails in the morning to the best response", body: "Study: Emails sent in the morning, between 6 a.m. and 7 a.m. had the highest response rate - about 45%. \n\nThe study also found all weekdays to be equal. So don't worry about the day; focus on the morning, instead.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3047586/the-best-time-of-day-to-do-everything-at-work", doneType: "", buyURL: "")
 let workAMTip51 = Tip(header: "Earn More Money 💰", title: "The best time of day to ask for a raise is in the morning", body: "Research: People are more likely to operate at a higher level of moral awareness and self-control in the morning. This could work in your favor when asking for a raise. \n\nAs the day goes on, he or she will get mentally tired and tend to be less fair.", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3047586/the-best-time-of-day-to-do-everything-at-work", doneType: "", buyURL: "")
-let workAMTip52 = Tip(header: "Reduce Stress 🤓", title: "Study: Learning new things is a more effective way to reduce stress than doing relaxing activities", body: "In the face of stress, employees experienced fewer negative emotions (e.g., anxiety, distress) and engaged in less unethical behavior (e.g., taking company property, being mean to coworkers) on days when they engaged in more learning activities at work (e.g., doing things to broaden their horizons, seeking out intellectual challenges, or learning something new) compared to other days. \n\nIn contrast, relaxing activities (e.g., taking some time to kick back, take a walk, or surf the web) did not lower the detrimental consequences of stress — employees experienced the same levels of negative emotions and engaged in just as much unethical behavior on days when they took on more relaxing activities at work, compared to other days. \n\nRelaxation thus did not appear to be as useful a stress reducer as learning was.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/to-cope-with-stress-try-learning-something-new", doneType: "", buyURL: "")
+let workAMTip52 = Tip(header: "Good Habit", title: "After I return to my desk from using the bathroom, I will clear one item from my desk.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
+
 
 //THUR
 let workAMTip53 = Tip(header: "Productivity Hack 🤔", title: "If something comes across your desk that will take less than 60 seconds to complete, do it immediately", body: "The buildup of multiple one-minute assignments throughout the day can create a constant state of catching up.", sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", doneType: "", buyURL: "")
 let workAMTip54 = Tip(header: "Prevent Weight Gain 🙅‍♀️🍬", title: "Remove snacks or candy from on the desk to in your desk", body: "Study: When candy dishes were removed from on the desk to in the desk, the average person ate 74 fewer calories every day than he or she would otherwise have - that's the equivalent of not gaining 5-6 pounds per year. \n\nWhen food's out of sight, it's out of mind.", sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", doneType: "", buyURL: "")
 let workAMTip55 = Tip(header: "Be A Leader / Get Into A Top MBA Program", title: "Be an influencer and collaborator at work", body: "Stanford's MBA application includes the rating of your leadership. \n\nHigh Performers: \"Builds enduring partnerships within and outside of organization to improve effectiveness, even at short-term personal cost.\" \n\nLow Performers: \"Accepts input from others; engages other in problem solving.\"" , sourceName: "Stanford Graduate School of Business", sourceURL: "https://www.gsb.stanford.edu/sites/gsb/files/gsb-mba_leadership_form_v4.pdf", doneType: "", buyURL: "")
-let workAMTip56 = Tip(header: "Increase Success 👍", title: "Feeling shame about work you have not completed is likely to make you less productive", body: "If you're behind on your work, forgiving yourself reduces the negative effects of shame. \n\nFocusing on your accomplishments instead of the work you have not completed gives you a sense of pride in what you have done.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/07/youre-never-going-to-be-caught-up-at-work-stop-feeling-guilty-about-it", doneType: "", buyURL: "")
+let workAMTip56 = Tip(header: "Good Habit", title: "After I get back to my desk after my morning meeting, I will list my top priority for the day.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 //FRI
-let workAMTip57 = Tip(header: "AM Work Routine ☀️", title: "Ron Friedman, founder and Harvard Business Review author writes:", body: "Ask yourself this question the moment you sit at your desk: The day is over and I am leaving the office with a tremendous sense of accomplishment. What have I achieved?", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3033652/the-morning-routines-of-the-most-successful-people", doneType: "", buyURL: "")
+let workAMTip57 = Tip(header: "Good Habit", title: "After I review my e-mail inbox, I will walk around and quickly greet my teammates.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 let workAMTip58 = Tip(header: "Reduce Stress 🌺🌿", title: "Surround yourself with plants or water", body: "Research: Simply staring at an image of natural scenery for 40 seconds was enough to trigger the brain into a more relaxed state. \n\nPeople looking at plants also made fewer mistakes and were less distracted all around." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/why-natural-scenery-improves-your-mood-makes-you-more-productive-ncna860806", doneType: "", buyURL: "")
 let workAMTip59 = Tip(header: "Prevent Weight Gain 🍎", title: "• Put healthy snacks and bottled water at eye level. \n• Put soda drinks down in the bottom row. \n• Put fruit bowls in plain sight. \n• Put candy in non-clear bins and out of plain sight.", body: "Results from one study found: \n• Water intake increased by 47% \n• Soda calories decreased by 7% \n• Candy eating decreased by 9%", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
 let workAMTip60 = Tip(header: "Prevent Weight Gain 🙅‍♀️🍬", title: "Don't have candy in or on your desk", body: "Study: People who had candy in or on their desk reported weighing 15.4 pounds more than those who didn't. \n\nMoving a candy dish 6 feet away from a desk led workers to eat 125 fewer calories per day - half of what they would have otherwise eaten.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
 
+// WEEK 4
+//MONDAY
+let workAMTip61 = Tip(header: "Good Habit 📱", title: "After I sit down at my desk, I will put my phone on airplane mode to focus.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workAMTip62 = Tip(header: "AM Work Routine ☀️", title: "Ron Friedman, founder and Harvard Business Review author writes:", body: "Ask yourself this question the moment you sit at your desk: The day is over and I am leaving the office with a tremendous sense of accomplishment. What have I achieved?", sourceName: "Fast Company", sourceURL: "https://www.fastcompany.com/3033652/the-morning-routines-of-the-most-successful-people", doneType: "", buyURL: "")
+let workAMTip63 = Tip(header: "Increase Success 👍", title: "Feeling shame about work you have not completed is likely to make you less productive", body: "If you're behind on your work, forgiving yourself reduces the negative effects of shame. \n\nFocusing on your accomplishments instead of the work you have not completed gives you a sense of pride in what you have done.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/07/youre-never-going-to-be-caught-up-at-work-stop-feeling-guilty-about-it", doneType: "", buyURL: "")
+let workAMTip64 = Tip(header: "Improve Performance 🤓", title: "Work for extended periods with full concentration on a single task free from distraction", body: "Stop constantly checking your email, phone, and multitasking. \n\nA percentage of your brain's attention remains stuck thinking about the previous task when beginning your next task. \n\nThis results in lower performance.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/wharton-adam-grant-uses-deep-work-for-maximum-productivity-2016-2", doneType: "", buyURL: "")
+
+//TUES
+let workAMTip65 = Tip(header: "Improve Performance 🤔", title: "Try to avoid meetings because they are the biggest office time-sucks", body: "The average office worker spends over 31 hours each month in unproductive meetings. Before booking your next meeting, ask yourself whether you can accomplish the same goals or tasks via email, phone, or Web-based meeting.", sourceName: "Inc", sourceURL: "https://www.inc.com/john-rampton/15-ways-to-increase-productivity-at-work.html", doneType: "", buyURL: "")
+let workAMTip66 = Tip(header: "Good Habit 📧", title: "After I draft an e-mail with sensitive information, I will double-check that it’s being sent to only necessary recipients.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workAMTip67 = Tip(header: "Good Habit 🗣", title: "After I hear negative feedback from a customer, I will say this exact script: “Thank you for the valuable feedback. I will share that with my team.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workAMTip68 = Tip(header: "Reduce Stress 🤓", title: "Study: Learning new things is a more effective way to reduce stress than doing relaxing activities", body: "In the face of stress, employees experienced fewer negative emotions (e.g., anxiety, distress) and engaged in less unethical behavior (e.g., taking company property, being mean to coworkers) on days when they engaged in more learning activities at work (e.g., doing things to broaden their horizons, seeking out intellectual challenges, or learning something new) compared to other days. \n\nIn contrast, relaxing activities (e.g., taking some time to kick back, take a walk, or surf the web) did not lower the detrimental consequences of stress — employees experienced the same levels of negative emotions and engaged in just as much unethical behavior on days when they took on more relaxing activities at work, compared to other days. \n\nRelaxation thus did not appear to be as useful a stress reducer as learning was.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2018/09/to-cope-with-stress-try-learning-something-new", doneType: "", buyURL: "")
+//
+let workAMTip69 = Tip(header: "Good Habit 📝", title: "After I sit down at a meeting, I will write (or type) the title, the date, and the attendees at the top of my notes.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workAMTip70 = Tip(header: "Good Habit 📧", title: "After I read an important e-mail, I will file it in a folder for the designated project.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workAMTip71 = Tip(header: "Good Habit 📧", title: "After I read an e-mail I can’t deal with immediately, I will mark it as unread.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workAMTip72 = Tip(header: "Good Habit 📧", title: "After I read an e-mail that’s time sensitive, I will reply with this script: “Got it. I will review in detail and get back in touch soon.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+//
+let workAMTip73 = Tip(header: "Good Habit", title: "After I pick my important task, I will clear my desk of all distractions.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 // WEEK 1
 let workAMTipArray0 = [workAMTip1, workAMTip2, workAMTip3, workAMTip4]
@@ -2476,10 +2577,17 @@ let workAMTipArray13 = [workAMTip53, workAMTip54, workAMTip55, workAMTip56]
 let workAMTopic13 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray13)
 
 let workAMTipArray14 = [workAMTip57, workAMTip58, workAMTip59, workAMTip60]
-let workAMTopic14 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray14)//WIP
+let workAMTopic14 = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArray14)
+
+// WEEK 4
+let workAMTipArray15 = [workAMTip61, workAMTip62, workAMTip63, workAMTip64]
+let workAMTipArray16 = [workAMTip65, workAMTip66, workAMTip67, workAMTip68]
+let workAMTipArray17 = [workAMTip69, workAMTip70, workAMTip71, workAMTip72]
+
+let workAMTipArray18 = [workAMTip73, workAMTip44, workAMTip48, workAMTip72]//WIP
 
 //
-let workAMTipArrays = [workAMTipArray0, workAMTipArray1, workAMTipArray2, workAMTipArray3, workAMTipArray4, workAMTipArray5, workAMTipArray6, workAMTipArray7, workAMTipArray8, workAMTipArray9, workAMTipArray10, workAMTipArray11, workAMTipArray12, workAMTipArray13, workAMTipArray14]
+let workAMTipArrays = [workAMTipArray0, workAMTipArray1, workAMTipArray2, workAMTipArray3, workAMTipArray4, workAMTipArray5, workAMTipArray6, workAMTipArray7, workAMTipArray8, workAMTipArray9, workAMTipArray10, workAMTipArray11, workAMTipArray12, workAMTipArray13, workAMTipArray14, workAMTipArray15, workAMTipArray16, workAMTipArray17, workAMTipArray18]
 let workAMTopic = Topic(title: workAMTitle, icon: workAMIcon, tip: workAMTipArrays.random())
 
 
@@ -2592,15 +2700,25 @@ let workPMTip56 = Tip(header: "Career Advice 🤔", title: "When to look for a n
 let workPMTip57 = Tip(header: "Quote 💰", title: "You're not going to get rich renting out your time. You must own equity - a piece of a business - to gain your financial freedom.", body: "- Naval Ravikant \n\nCEO and a co-founder of AngelList." , sourceName: "Wonderful Quote", sourceURL: "https://www.wonderfulquote.com/a/naval-ravikant-quotes", doneType: "", buyURL: "")
 let workPMTip58 = Tip(header: "Sign It's Time To Quit Your Job 🤔", title: "You've started doing bad work because you're angry or frustrated", body: "You always want to leave your job on a high note. You never know when you'll need to tap an old boss or coworker for a reference or some career advice." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/top-sign-its-time-to-quit-your-job-2017-7", doneType: "", buyURL: "")
 let workPMTip59 = Tip(header: "Reduce Your Risk 🤒", title: "Researchers swabbed 33 keyboards in an office and found that they harbored up to 5 times the germs of a toilet seat", body: "Why? The survey found that most users cleaned their keyboards infrequently (if at all). \n\nClean it: Use a soft, damp microfiber cloth to wipe the screen and keyboard at least once every other week." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/home/cleaning-organizing/germs-toilet-seat/", doneType: "", buyURL: "")
-let workPMTip60 = Tip(header: "Increase Happiness 😄", title: "Use all your vacation time and negotiate for more until you're getting about 6 weeks off", body: "After 6 weeks of vacation, you'll actually feel more satisfied to get back to work. \n\nDon't be lured by the notion that you'll take your dream vacation later in life." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
+let workPMTip60 = Tip(header: "Good Habit 📂", title: "After I receive a complimentary written remark, I will move the e-mail or document into my Performance Review folder.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 //WEEK 4
 //MON
 let workPMTip61 = Tip(header: "Increase Happiness 😄", title: "Having a best friend at work is one of the most powerful contributors to work satisfaction and productivity", body: "Research: Friends work better together than acquaintances, both in collaborative decision-making and unskilled labor. \n\nIf you have someone at work with whom you sometimes collaborate, for example, escalate the friendship by going out together after work, by inviting that person to your home, and by sharing more of your personal life. \n\nIf you don't have someone like this already, see if you can recruit a friend to your workplace - or join a friend by being recruited to theirs." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
 
-let workPMTip62 = Tip(header: "Live Longer 🪑", title: "Study: Sitting 11+ hours a day increases your risk of death over the next 3 years", body: "Look into getting a stand-up desk. Or stand up from your desk and walk around every 30 minutes." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", doneType: "", buyURL: "")
+let workPMTip62 = Tip(header: "Live Longer 🪑", title: "DON'T: Sit all day. \nDO: Get a stand-up desk. Or stand up from your desk and walk around every 30 minutes.", body: "Study: Sitting 11+ hours a day increases your risk of death over the next 3 years." , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/doctors-secrets-longer-life/", doneType: "", buyURL: "")
 
-let workPMTip63 = Tip(header: "David Goggins 💪", title: "Our cluture has become hooked on the quick-fix, the life hack, efficiency. Everyone is on the hunt for that simple action algorithm that nets maximum profit with the least amount of effort. There's no denying that this attitude may get you some of the trappings of success, if you're lucky, but it will not lead to a caloused mind or self-mastery. \n\nIf you want to master the mind and remove any mental limits, you'll have to become addicted to hard work. Because passion and obsession, even talent, are only useful tools if you have the work ethic to back them up.", body: "My work ethic is the single most important factor in all of my accomplishments. Everything else is secondary, and when it comes to hard work, whether in the gym or on the job, The 40% Rule applies. \n\nTo me, a 40-hour work week is a 40% effort. It may be satisfactory, but that's another word for mediocrity. Don't settle for a 40-hour work week. There are 168 hours in a week! That means you have the hours to put in that extra time at work without skimping on your exercise. It means streamlining your family. It means scheduling your life like you're on a 24-hour mission every single day.", sourceName: "Can't Hurt Me: Master Your Mind and Defy the Odds, by David Goggins", sourceURL: "https://www.amazon.com/dp/B07H453KGH", doneType: "", buyURL: "https://www.amazon.com/dp/B07H453KGH")
+let workPMTip63 = Tip(header: "David Goggins 💪", title: "To master the mind and remove any mental limits, you have to become addicted to hard work. Passion and talent are only useful tools if you have the work ethic to back them up.", body: "When it comes to hard work, whether in the gym or on the job, The 40% Rule applies. For example, a 40-hour work week is a 40% effort. It may be satisfactory, but that's another word for mediocrity. Don't settle for a 40-hour work week if you want to be the best in your career.", sourceName: "Can't Hurt Me: Master Your Mind and Defy the Odds, by David Goggins", sourceURL: "https://www.amazon.com/dp/B07H453KGH", doneType: "", buyURL: "https://www.amazon.com/dp/B07H453KGH")
+
+let workPMTip64 = Tip(header: "Advice 💻", title: "Don't save any personal information on your company's work computer and all of your emails and Slack messages can be viewed by your employer.", body: "Your company owns all of the information. With modern technology, everything you save on your work computer, say over your work phone, or type in your work emails or Slack messages are saved for all eternity by your company." , sourceName: "This Week in Startups", sourceURL: "https://www.youtube.com/watch?v=WBgrfWW8xxA&t=500s", doneType: "", buyURL: "")
+
+//TUES
+let workPMTip65 = Tip(header: "Good Habit 💻", title: "After I put my computer to sleep at the end of the day, I will tidy my work desk quickly.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workPMTip66 = Tip(header: "Increase Happiness 😄", title: "Use all your vacation time and negotiate for more until you're getting about 6 weeks off", body: "After 6 weeks of vacation, you'll actually feel more satisfied to get back to work. \n\nDon't be lured by the notion that you'll take your dream vacation later in life." , sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
+let workPMTip67 = Tip(header: "Good Habit 🙌", title: "After I notice a colleague getting frustrated, I will point out a strength of theirs.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let workPMTip68 = Tip(header: "Good Habit 🗑", title: "After I pack my work bag, I will tidy my workspace for 5 minutes.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 // Male CEOs with lower-pitched voices tended to manage large companies, make $187,000 a year more than their higher-pitched peers, and last in political office on average five months longer.
 
@@ -2672,18 +2790,20 @@ let workPMTopic14 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipAr
 
 //WEEK 4
 // MON (WIP 1)
-let workPMTipArray15 = [workPMTip61, workPMTip62, workPMTip63, workPMTip24]
+let workPMTipArray15 = [workPMTip61, workPMTip62, workPMTip63, workPMTip64]
 let workPMTopic15 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray15)
 
+let workPMTipArray16 = [workPMTip65, workPMTip66, workPMTip27, workPMTip28]
+
 //
-let workPMTipArrays = [workPMTipArray0, workPMTipArray1, workPMTipArray2, workPMTipArray3, workPMTipArray4, workPMTipArray5, workPMTipArray6, workPMTipArray7, workPMTipArray8, workPMTipArray9, workPMTipArray10, workPMTipArray11, workPMTipArray12, workPMTipArray13, workPMTipArray14, workPMTipArray15,]
+let workPMTipArrays = [workPMTipArray0, workPMTipArray1, workPMTipArray2, workPMTipArray3, workPMTipArray4, workPMTipArray5, workPMTipArray6, workPMTipArray7, workPMTipArray8, workPMTipArray9, workPMTipArray10, workPMTipArray11, workPMTipArray12, workPMTipArray13, workPMTipArray14, workPMTipArray15, workPMTipArray16]
 let workPMTopic = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArrays.random())
 
 
 
-
+//NO LONGER USED...
 //TUE
-let workPMTipArray16 = [workPMTip25, workPMTip26, workPMTip27, workPMTip28]
+
 let workPMTopic16 = Topic(title: workPMTitle, icon: workPMIcon, tip: workPMTipArray16)
 
 //WED
@@ -2816,6 +2936,7 @@ let workLateTip9 = Tip(header: "Don't Work Too Late 🤔", title: "\"I wish I ha
 
 let workLateTip10 = Tip(header: "Warning 🚨", title: "Burnout is a medical condition caused by recurring workplace stress that has not been properly managed", body: "Signs of burnout include: \n• Feelings of energy depletion or exhaustion. \n• Reduced professional efficacy. \n• Increased mental distance from one's job, or feelings of negativism or cynicism related to one's job. \n\nDoctors and people working in other high-stress professions are burning out twice as fast as the average American worker." , sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/burnout-is-now-a-clinical-syndrome-2019-5", doneType: "", buyURL: "")
 let workLateTip11 = Tip(header: "Increase Happiness 😄", title: "If you’re given the choice between overtime and free time, unless you absolutely need the money, you’ll be happier choosing the free time", body: "Research: Once people had enough money to cover the basic necessities of life then an increase in salary provided little to no additional happiness. \n\nBut having more time to do a hobby or be with loved ones made people much happier." , sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/health/wellness/how-to-be-happy/", doneType: "", buyURL: "")
+let workLateTip12 = Tip(header: "Good Habit", title: "After I leave work, I will think about one accomplishment I achieved that day.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
 /*
@@ -2836,7 +2957,7 @@ let workLateTopic0 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLa
 let workLateTipArray1 = [workLateTip5, workLateTip6, workLateTip7, workLateTip8]
 let workLateTopic1 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLateTipArray1)
 //WED
-let workLateTipArray2 = [workLateTip9, workLateTip10, workLateTip11, workLateTip8]
+let workLateTipArray2 = [workLateTip9, workLateTip10, workLateTip11, workLateTip12]
 let workLateTopic2 = Topic(title: workLateTitle, icon: workLateIcon, tip: workLateTipArray1)
 
 //
@@ -2971,16 +3092,25 @@ let kitchenTip10 = Tip(header: "Prevent Weight Gain", title: "Rearrange your cup
 let kitchenTip11 = Tip(header: "Prevent Weight Gain", title: "Rearrange your refrigerator by moving all your fruits and vegetables from the crisper bin to the top shelf of your refrigerator and move your less healthy foods down into teh crisper bin", body: "Study: After one week, the people who followed this recommended switch reported eating nearly 3-times as many fruits and vegetables as the week before.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
 let kitchenTip12 = Tip(header: "Save Money 🍌", title: "Keep bananas from ripening too fast: Wrap each banana stem separately with a small piece of plastic. If needed, tie a rubber band on the outside of the plastic wrap", body: "Bananas release a gas called ethylene through their stems when ripening. \n\nOnce your bananas reach the perfect level of ripeness, put them into the fridge. The bananas will keep at the same level of ripeness while in the refrigerator, giving you more time to enjoy your bananas without wasting them. \n\nWarning: If you put the bananas in the refrigerator when they are green, they will never ripen. And if you take them out after being in the fridge, they will turn black.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/keep-bananas-fresh/", doneType: "", buyURL: "")
 let kitchenTip13 = Tip(header: "Healthy Choice", title: "Put fruit in a fruit bowl and place it within a 2-foot reach of where everyone walks when they go to the kitchen", body: "Study: The average time fruit lasted in a fruit bowl was 8 days. \n\nThe average time it lasted in the refrigerator was 17 days.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
-let kitchenTip14 = Tip(header: "Live Longer 🍪🙅‍♀️", title: "Put tempting foods in hard to reach places", body: "Put candy bowls, cookie jars, and other temptations out of sight. Hide them in the cupboard or pantry. \n\nOtherwise, throw tempting foods in the garbage.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
+let kitchenTip14 = Tip(header: "Good Habit 💡", title: "After I turn on the dishwasher in the evening, I will dim the lights around the house.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let kitchenTip15 = Tip(header: "Live Longer 🍪🙅‍♀️", title: "Put tempting foods in hard to reach places", body: "Put candy bowls, cookie jars, and other temptations out of sight. Hide them in the cupboard or pantry. \n\nOtherwise, throw tempting foods in the garbage.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
+let kitchenTip16 = Tip(header: "Good Habit 🚰", title: "After I walk into the kitchen, I will drink a big glass of water.", body: "Stanford research: Changing your enironment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let kitchenTip17 = Tip(header: "Healthy Choice 🍎", title: "Put fruit in a fruit bowl and place it within a 2-foot reach of where everyone walks when they go to the kitchen", body: "Study: The average time fruit lasted in a fruit bowl was 8 days. \n\nThe average time it lasted in the refrigerator was 17 days.", sourceName: "Slim By Design", sourceURL: "https://www.slimbydesign.com/", doneType: "", buyURL: "")
+let kitchenTip18 = Tip(header: "Good Habit 🧹", title: "After I start the dishwasher, I will tidy up at least one thing on the counter.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let kitchenTip19 = Tip(header: "Good Habit 🎼", title: "After I turn on the oven, I will play a classical music album.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
 
 let kitchenTipArray0 = [kitchenTip1, kitchenTip2, kitchenTip3, kitchenTip4,]
 let kitchenTipArray1 = [kitchenTip5, kitchenTip6, kitchenTip7, kitchenTip8,]
 let kitchenTipArray2 = [kitchenTip9, kitchenTip10, kitchenTip11, kitchenTip12,]
-let kitchenTipArray3 = [kitchenTip13, kitchenTip14, kitchenTip11, kitchenTip12,]
+let kitchenTipArray3 = [kitchenTip13, kitchenTip14, kitchenTip15, kitchenTip16,]
+let kitchenTipArray4 = [kitchenTip17, kitchenTip18, kitchenTip19, kitchenTip8]
+
 //
 let kitchenTitle = "Kitchen"
 let kitchenIcon = Constants.Icon.kitchen
-let kitchenTipArrays = [kitchenTipArray0, kitchenTipArray1, kitchenTipArray2, kitchenTipArray3]
+let kitchenTipArrays = [kitchenTipArray0, kitchenTipArray1, kitchenTipArray2, kitchenTipArray3, kitchenTipArray4]
 let kitchenTopic = Topic(title: kitchenTitle, icon: kitchenIcon, tip: kitchenTipArrays.random())
 let kitchenTopics = Topics(title: kitchenTitle, icon: kitchenIcon, topics: [kitchenTopic])
 
@@ -2996,13 +3126,16 @@ let cleaningTip7 = Tip(header: "Warning", title: "Each square inch of carpet has
 let cleaningTip8 = Tip(header: "Reduce Your Risk 🤒", title: "Wipe down doorknobs once a week (in some rooms)", body: "Doorknobs in the bathroom and the kitchen are bound to catch a lot more bacteria, so disinfecting them at least once a week might be a good idea, especially if there’s an illness in the house." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/pop-culture/how-often-you-should-wash-everything-your-home-according-science-ncna826271#anchor-Disinfectthesinks", doneType: "", buyURL: "")
 let cleaningTip9 = Tip(header: "Save The Environment", title: "Limit your washing machine usage. Every time we wash our clothes an average of 9 million [plastic] microfibres are released into the environment", body: "If your clothes have a stain, try spot-cleaning them with water rather than washing the whole garment. \n\nWhen you do wash: \n\n• Set the machine to a lower temperature \n\n• Use liquid detergent: Powder detergent creates more friction between the clothes [during washing], so more fibers are released, whereas liquid is smoother. The less friction there is, the fewer fibers are released. \n\n• Avoid overloading washing machines - fewer clothes in the drum means there's less friction." , sourceName: "BBC News", sourceURL: "https://www.bbc.com/news/world-48908413", doneType: "", buyURL: "")
 let cleaningTip10 = Tip(header: "Declutter Your Home", title: "Clutter increases stress and lowers your mood and self-esteem", body: "Marie Kondo, author of The Life-Changing Magic of Tidying Up, recommends that you organize your home by categories rather than room - surveying all books, for example, so they don't just get stockpiled in a different space. \n\nAs you tidy up, hold each object in your hands and ask if it sparks joy. \n\nIf it doesn't, get rid of it.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
+let cleaningTip11 = Tip(header: "Good Habit 🧹", title: "After I start the dishwasher, I will tidy up at least one thing on the counter.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let cleaningTip12 = Tip(header: "Good Habit 💡", title: "After I turn on the dishwasher in the evening, I will dim the lights around the house.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 let cleaningTitle = "Cleaning"
 let cleaningIcon = Constants.Icon.cleaning
 
 let cleaningTipArray0 = [cleaningTip1, cleaningTip2, cleaningTip3, cleaningTip4,]
 let cleaningTipArray1 = [cleaningTip5, cleaningTip6, cleaningTip7, cleaningTip8,]
-let cleaningTipArray2 = [cleaningTip9, cleaningTip10, cleaningTip7, cleaningTip8,]
+let cleaningTipArray2 = [cleaningTip9, cleaningTip10, cleaningTip11, cleaningTip12,]
+
 //
 let cleaningTipArrays = [cleaningTipArray0, cleaningTipArray1, cleaningTipArray2]
 let cleaningTopic = Topic(title: cleaningTitle, icon: cleaningIcon, tip: cleaningTipArrays.random())
@@ -3020,26 +3153,39 @@ let homeActivitesTip6 = Tip(header: "Millionaire Habit", title: "65% of self-mad
 let homeActivitesTip7 = Tip(header: "Increase IQ", title: "Learning to play a musical instrument can raise your IQ by 7+ points", body: "Participants who practiced an instrument for as little as a few hours a week showed significant increases in brain functioning and memory capacity after just 4 months." , sourceName: "Inc.", sourceURL: "https://www.inc.com/melanie-curtin/want-to-raise-your-iq-neuroscience-says-to-take-up-this-easy-habit.html", doneType: "", buyURL: "")
 let homeActivitesTip8 = Tip(header: "Billionaire Habit", title: "Self-made billionaires read. Warren Buffett reads 500 pages a day and says reading is the most valuable source of knowledge", body: "Many prefer the likes of The Economist, Financial Times, Fortune, or The Wall Street Journal. \n\nOthers go for biographies of iconic business leaders or books about finance, business, self-help, science, history, or technology." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2019/06/21/self-made-billionaires-the-6-habits-of-massive-wealth-and-success.html", doneType: "", buyURL: "")
 //3
-let homeActivitesTip9 = Tip(header: "Increase Happiness", title: "Going for a walk outside reduces blood pressure, while increasing brain activity responsible for relaxation", body: "Research: Going for a deliberate stroll helped reduce the effects of depression. \n\nKnown as \"forest bathing,\" is the Japanese practice of simply being in nature. \n\nPro tip: Leave your earbuds at home and just take in the sounds of your neighborhood." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", doneType: "", buyURL: "")
-let homeActivitesTip10 = Tip(header: "Millionaire Habit", title: "Research: 85% of self-made millionaires read two or more books per month", body: "Millionaires read books that encourage self-improvement. This includes topics like: \n• career \n• health \n• how-tos \n• biographies \n• self-help \n• leadership \n•  current events \n\nReading every day puts you in the top 5% of the crowd." , sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/article/304219", doneType: "", buyURL: "")
-let homeActivitesTip11 = Tip(header: "Millionaire Habit", title: "Read a book. Survey: Those who read 7+ books per year are 122% more likely to be millionaires as opposed to those who never read or only read 1-3 books per year", body: "Reading dramatically correlates with income and higher education, as well as overall happiness. \n\nFor example, Bill Gates reads 50 books a year and Warren Buffett spends as much as 80% of his day reading." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/04/07/7-rich-habits-of-highly-successful-people.html", doneType: "", buyURL: "")
+let homeActivitesTip9 = Tip(header: "Good Habit 📱", title: "After I arrive home from work, I will charge my phone in the kitchen, not in the bedroom.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let homeActivitesTip10 = Tip(header: "Increase Happiness🚶‍♀️", title: "Going for a walk outside reduces blood pressure, while increasing brain activity responsible for relaxation", body: "Research: Going for a deliberate stroll helped reduce the effects of depression. \n\nKnown as \"forest bathing,\" is the Japanese practice of simply being in nature. \n\nPro tip: Leave your earbuds at home and just take in the sounds of your neighborhood." , sourceName: "The Thirty", sourceURL: "https://thethirty.byrdie.com/mindfulness-tips-ideas", doneType: "", buyURL: "")
+let homeActivitesTip11 = Tip(header: "Millionaire Habit 💰", title: "Research: 85% of self-made millionaires read two or more books per month", body: "Millionaires read books that encourage self-improvement. This includes topics like: \n• career \n• health \n• how-tos \n• biographies \n• self-help \n• leadership \n•  current events \n\nReading every day puts you in the top 5% of the crowd." , sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/article/304219", doneType: "", buyURL: "")
+let homeActivitesTip12 = Tip(header: "Millionaire Habit 📖", title: "Read a book. Survey: Those who read 7+ books per year are 122% more likely to be millionaires as opposed to those who never read or only read 1-3 books per year", body: "Reading dramatically correlates with income and higher education, as well as overall happiness. \n\nFor example, Bill Gates reads 50 books a year and Warren Buffett spends as much as 80% of his day reading." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2017/04/07/7-rich-habits-of-highly-successful-people.html", doneType: "", buyURL: "")
+//4
+let homeActivitesTip13 = Tip(header: "Good Habit 📱", title: "After I find myself mindlessly browsing social media, I will log out.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let homeActivitesTip14 = Tip(header: "Good Habit", title: "After I see the first TV commercial in the evening, I will get out my foam roller.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
 
 let homeActivitesTipArray0 = [homeActivitesTip1, homeActivitesTip2, homeActivitesTip3, homeActivitesTip4,]
 let homeActivitesTipArray1 = [homeActivitesTip5, homeActivitesTip6, homeActivitesTip7, homeActivitesTip8,]
-let homeActivitesTipArray2 = [homeActivitesTip9, homeActivitesTip10, homeActivitesTip11, homeActivitesTip8,]
+let homeActivitesTipArray2 = [homeActivitesTip9, homeActivitesTip10, homeActivitesTip11, homeActivitesTip12]
+let homeActivitesTipArray3 = [homeActivitesTip4, homeActivitesTip10, homeActivitesTip11, homeActivitesTip12,]
+let homeActivitesTipArray4 = [homeActivitesTip13, homeActivitesTip14, homeActivitesTip4, homeActivitesTip12,]
+
 //
 let homeActivitiesIcon = Constants.Icon.homeActivities
 let homeActivitiesTitle = "Activities"
-let homeActivitesTipArrays = [homeActivitesTipArray0, homeActivitesTipArray1, homeActivitesTipArray2]
+let homeActivitesTipArrays = [homeActivitesTipArray0, homeActivitesTipArray1, homeActivitesTipArray2, homeActivitesTipArray3]
 let homeActivitesTopic = Topic(title: homeActivitiesTitle, icon: homeActivitiesIcon, tip: homeActivitesTipArrays.random())
 let homeActivitesTopics = Topics(title: homeActivitiesTitle, icon: homeActivitiesIcon, topics: [homeActivitesTopic])
 
 
 // Family
+//1
 let familyHomeTip1 = Tip(header: "Live Longer", title: "Put family first. Establish one room where family members gather daily", body: "Larger homes make it easier for family members to isolate themselves from the group. Smaller homes make it easier for families to bond and spend time together. \n\nSuccessful families make a point of eating at least one meal a day together, spending family time, and taking annual vacations.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
 let familyHomeTip2 = Tip(header: "Live Longer", title: "Make family a priority. Create a family shrine", body: "People in Okinawa, Japan, live longer than almost anyone on earth. In Okinawan homes, the ancestor shrine is always displayed in the best room of the house. \n\nIt serves as a constant reminder that we're not islands in time but connected to something bigger. \n\n• Pick a wall to display pictures of your parents and children.", sourceName: "The Blue Zones: 9 Lessons For Living Longer", sourceURL: "https://www.amazon.com/Blue-Zones-Lessons-Living-Longest/dp/1426207557", doneType: "", buyURL: "")
 let familyHomeTip3 = Tip(header: "Increase Happiness", title: "Create one electronics-free room in your house where your family can sit together, pursue hobbies, play games, read, play an instrument, or study", body: "Create one cozy room: •\n\nRemove TVs, electronic games, and clocks. •\n\nLine the room with books or shelves holding pictures and objects that inspire you to pursue your passions. •\n\nPut a table in the middle that will accommodate your entire family.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
 let familyHomeTip4 = Tip(header: "Increase Happiness", title: "Create a \"pride shrine\" to celebrate family history and accomplishments", body: "A place where pictures, objects, and other items remind everyone of good times with loved ones and things they share and can be proud of.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
+
+//2
+
 
 let familyHomeTipArray0 = [familyHomeTip1, familyHomeTip2, ]
 let familyHomeTipArray1 = [familyHomeTip3, familyHomeTip4, ]
@@ -3142,13 +3288,23 @@ let bathroomTip14 = Tip(header: "Bowel Inspection", title: "If you see pieces of
 let bathroomTip15 = Tip(header: "", title: "Ginger has the ability to speed up the time it takes your stomach to pass food to your digestive tract by up to 50%", body: "Add ginger to your meal or tea whenever you need to speed up digestion." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", doneType: "", buyURL: "")
 let bathroomTip16 = Tip(header: "Prevent Illness 🤒", title: "Reduce the spread of respiratory diseases:", body: "• Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom; before eating; and after blowing your nose, coughing, or sneezing. \n\n• If soap and water are not readily available, use an alcohol-based hand sanitizer with at least 60% alcohol. \n\n• Avoid touching your eyes, nose, and mouth. \n\n• Cover your cough or sneeze with a tissue, then throw the tissue in the trash. \n\n• Clean and disinfect frequently touched objects and surfaces using a regular household cleaning spray or wipe." , sourceName: "CDC: Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/coronavirus/2019-ncov/about/prevention-treatment.html", doneType: "", buyURL: "")
 
-let bathroomTip17 = Tip(header: "Lose Weight", title: "Step on the scale at the same time every day", body: "Study: Dieters who stepped on a scale daily helped those people lose 5 times as much weight as those who weighed themselves less frequently. \n\nLooking at your bodyweight frequently reinforces weight-loss goals and makes it more difficult to cheat on your diet. " , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/simple-weight-loss-habits/", doneType: "", buyURL: "")
-let bathroomTip18 = Tip(header: "Healthly Skin", title: "Avoid long, hot showers", body: "Long, hot showers actually strip away the outermost layer of the epidermis, which can cause scaly and dry skin. \n\nWhen your skin starts to turn red and itch in the shower, you know its time to step out." , sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=6", doneType: "", buyURL: "")
+let bathroomTip17 =  Tip(header: "Good Habit 🚿🙆‍♀️", title: "After I turn on the shower, I will do a full body stretch.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+let bathroomTip18 = Tip(header: "Healthly Skin 🚿", title: "Avoid long, hot showers", body: "Long, hot showers actually strip away the outermost layer of the epidermis, which can cause scaly and dry skin. \n\nWhen your skin starts to turn red and itch in the shower, you know its time to step out." , sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=6", doneType: "", buyURL: "")
 let bathroomTip19 = Tip(header: "Keep Your Bathroom Clean 🚽", title: "20% of survey respondents admit to ending a relationship because of their ex’s bathroom habits", body: "For men, researchers say the biggest issue was how much hair their partner left in the shower drain without cleaning it. \n\nFor women, they were turned off by the mess and smells a boyfriend left behind in the toilet. \n\nOther bathroom argument starters were not cleaning the toilet seat, leaving the toilet paper roll empty, leaving the toilet seat up, and hanging toilet paper the “wrong way”." , sourceName: "Study Finds", sourceURL: "https://www.studyfinds.org/couples-ended-relationship-over-bathroom-habits-survey/", doneType: "", buyURL: "")
 let bathroomTip20 = Tip(header: "Good Hygiene 😁", title: "Brush your teeth for a full 2 minutes twice-per-day", body: "According to one study, the majority people brush for an average of only 45 seconds. \n\nNot brushing your teeth for the minimum recommended time puts you at a risk of not only plaque buildup and cavities, but it will also put you at greater risk of gum disease and even oral cancers.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/dirty-hygiene-habits-you-didnt-know-you-had-say-experts/", doneType: "", buyURL: "")
 
 //
-let bathroomTip21 = Tip(header: "Good Hygiene 😁", title: "Consumer Reports recommends switching to a fresh towel every 3 to 4 days (even more often if you're sweating heavily every day).", body: "A shower towel can house bacteria, mold, and yeast after just a few days of use. \n\nDon't forget to replace your hand towels every one to two days as well. According to some reports, waiting any longer may defeat the entire purpose of hand washing. ", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/dirty-hygiene-habits-you-didnt-know-you-had-say-experts/", doneType: "", buyURL: "")
+let bathroomTip21 = Tip(header: "Good Habit 🚿🏋️‍♀️", title: "After I turn on the shower, I will do three squats (and maybe more).", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bathroomTip22 = Tip(header: "Good Habit 🚿", title: "After I turn on the shower, I will think one positive thought about my body.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bathroomTip23 = Tip(header: "Good Hygiene 😁", title: "Consumer Reports recommends switching to a fresh towel every 3 to 4 days (even more often if you're sweating heavily every day).", body: "A shower towel can house bacteria, mold, and yeast after just a few days of use. \n\nDon't forget to replace your hand towels every one to two days as well. According to some reports, waiting any longer may defeat the entire purpose of hand washing. ", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/dirty-hygiene-habits-you-didnt-know-you-had-say-experts/", doneType: "", buyURL: "")
+let bathroomTip24 = Tip(header: "Good Habit 🚿🧴", title: "After I hang up my towel, I will apply my skin cream to a patch of dry skin.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+//
+let bathroomTip25 = Tip(header: "Good Habit", title: "After I get in the shower, I will say, “It’s going to be a great day.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bathroomTip26 = Tip(header: "Lose Weight 👣", title: "Step on the scale at the same time every day", body: "Study: Dieters who stepped on a scale daily helped those people lose 5 times as much weight as those who weighed themselves less frequently. \n\nLooking at your bodyweight frequently reinforces weight-loss goals and makes it more difficult to cheat on your diet. " , sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/simple-weight-loss-habits/", doneType: "", buyURL: "")
+let bathroomTip27 = Tip(header: "Good Habit 😁", title: "After I floss, I will smile at myself, and say, “It’s going to be a great day.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 let bathroomTipArray0 = [bathroomTip1, bathroomTip2, bathroomTip3, bathroomTip4]
 let bathroomTopic0 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray0)
@@ -3163,10 +3319,11 @@ let bathroomTipArray3 = [bathroomTip13, bathroomTip14, bathroomTip15, bathroomTi
 let bathroomTopic3 = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArray3)
 
 let bathroomTipArray4 = [bathroomTip17, bathroomTip18, bathroomTip19, bathroomTip20]
-let bathroomTipArray5 = [bathroomTip21, bathroomTip18, bathroomTip19, bathroomTip20]
+let bathroomTipArray5 = [bathroomTip21, bathroomTip22, bathroomTip23, bathroomTip24]
+let bathroomTipArray6 = [bathroomTip25, bathroomTip26, bathroomTip27, bathroomTip24]//WIP
 
 // RANDOM
-let bathroomTipArrays = [bathroomTipArray0, bathroomTipArray1, bathroomTipArray2, bathroomTipArray3, bathroomTipArray4, bathroomTipArray5]
+let bathroomTipArrays = [bathroomTipArray0, bathroomTipArray1, bathroomTipArray2, bathroomTipArray3, bathroomTipArray4, bathroomTipArray5, bathroomTipArray6]
 let bathroomTopic = Topic(title: bathroomTitle, icon: bathroomIcon, tip: bathroomTipArrays.random())
 let bathroomAMTopics = Topics(title: bathroomPMTitle, icon: bathroomPMIcon, topics: [bathroomTopic])
 
@@ -3214,10 +3371,15 @@ let bathroomPMTip15 = Tip(header: "Reduce Infection 🙅‍♀️", title: "Trim
 
 let bathroomPMTip16 = Tip(header: "Reduce Infection 🙅‍♀️", title: "Store your toothbrush away from the toilet and in an upright position ", body: "If your toothbrush spends most of its time dangerously close to your toilet, you may be putting yourself at risk of some cross-contamination. \n\nWhenever a toilet is flushed, an invisible cloud of microscopic particles make their way into the surrounding environment, and that includes traces of both urine and feces.", sourceName: "Eat This, Not That!", sourceURL: "https://www.eatthis.com/dirty-hygiene-habits-you-didnt-know-you-had-say-experts/", doneType: "", buyURL: "")
 
+//4
+let bathroomPMTip17 = Tip(header: "Good Habit 🚿", title: "After I turn on the shower, I will think of one thing that went well that day.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bathroomPMTip18 = Tip(header: "Good Habit 😁", title: "After I floss, I will smile at myself, and say, “It’s going to be a great day.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 let bathroomPMTipArray0 = [bathroomPMTip1, bathroomPMTip2, bathroomPMTip3, bathroomPMTip4]
 let bathroomPMTipArray1 = [bathroomPMTip5, bathroomPMTip6, bathroomPMTip7, bathroomPMTip8]
 let bathroomPMTipArray2 = [bathroomPMTip9, bathroomPMTip10, bathroomPMTip11, bathroomPMTip12]
 let bathroomPMTipArray3 = [bathroomPMTip13, bathroomPMTip14, bathroomPMTip15, bathroomPMTip16]
+let bathroomPMTipArray4 = [bathroomPMTip17, bathroomPMTip18, bathroomPMTip15, bathroomPMTip16]//WIP
 
 //RANDOM
 let bathroomPMTipArrays = [bathroomPMTipArray0, bathroomPMTipArray1, bathroomPMTipArray2]
@@ -3238,13 +3400,14 @@ let bedtimeIcon = Constants.Icon.bedtime
 let bedtimeTip1 = Tip(header: "Live Smarter 😁", title: "Brush your teeth before bed because it's easier to get a cavity while you sleep 🦷", body: "While you sleep, your mouth salivates less, which can lead to cavities. \n\nThis is why it is important to brush your teeth before bed. \n\nThe American Dental Association recommends you brush twice a day for two minutes." , sourceName: "Greatist", sourceURL: "https://greatist.com/live/brushing-teeth-before-bed", doneType: "", buyURL: "")
 let bedtimeTip2 = Tip(header: "Increase Success", title: "Wake up early tomorrow and exercise. Don't think. Just execute the plan.", body: "One of the most common ways to sabotage your morning is to get a slow start by gradually waking up and doing tasks that require thinking. \n\nInstead, wake up early, jump out of bed, and puts on the workout clothes you prepared the night before. \n\nBy the time you've finished your workout, most people are just waking up." , sourceName: "Jocko Willink, retired Navy SEAL commander", sourceURL: "https://www.businessinsider.com/jocko-willink-how-to-wake-up-earlier-2017-11", doneType: "", buyURL: "")
 let bedtimeTip3 = Tip(header: "Sleep Better", title: "Nighttime rituals help you to reduce stress and fall asleep faster", body: "Prime the brain to sleep well: \n\n• Take a hot bath \n• Read a book \n• Journal \n• Go for a walk \n• Listen to calming music" , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/how-effectively-manage-stress-so-it-doesn-t-hurt-your-ncna815626", doneType: "", buyURL: "")
-let bedtimeTip4 = Tip(header: "Increase Success 📝", title: "Reduce decision fatigue tomorrow by making a plan tonight", body: "• List the major tasks you want to accomplish tomorrow. \n\n• List how you want to spend the first few hours of the day. \n\n• Lay out the clothes you’ll wear. \n\n• Have ingredients ready to make a healthy breakfast. \n\nMaking fewer decisions tomorrow morning helps you have more willpower later in the day." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", doneType: "", buyURL: "")
+let bedtimeTip4 = Tip(header: "Good Habit 🌡", title: "After I lock the doors at night, I will turn down the thermostat to 70 degrees.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //MON
 let bedtimeTip5 = Tip(header: "Sleep Better", title: "Set your room temperature between 60 and 70 degrees Fahrenheit (16 to 21 degrees Celsius)", body: "Your core body temperature drops during the night to help you fall asleep and maintain sleep. \n\nA lower room temperature allows for people to cover up with blankets without getting too hot.", sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#alter-your-routine", doneType: "", buyURL: "")
 let bedtimeTip6 = Tip(header: "Sleep Better 🥛", title: "Drink a glass of warm milk before bed to reduce insomnia and fidgetiness", body: "Milk is high in antioxidants, vitamin B2 and B12, as well as protein and calcium. \n\nThe protein lactium has a calming effect by lowering blood pressure, which the potassium in milk can help relieve muscle spasms triggered by feeling tense.", sourceName: "Men's Journal", sourceURL: "https://www.mensjournal.com/food-drink/eat-to-beat-stress-10-foods-that-reduce-anxiety/4-milk/", doneType: "", buyURL: "")
 let bedtimeTip7 = Tip(header: "Sleep Better", title: "Having a bedtime routine sends a signal to your brain that it's time for bed—especially if you do them in the same order, at the same time every night", body: "Without a consistent bedtime routine, your brain doesn't go into sleep mode until you crawl into bed and turn out the light. \n\nTry brushing your teeth, washing your face, and laying out your clothes for the morning in the same order each night.", sourceName: "Health", sourceURL: "https://www.health.com/mind-body/20-things-you-shouldn-t-do-before-bed#alter-your-routine", doneType: "", buyURL: "")
-let bedtimeTip8 = Tip(header: "Increase Confidence", title: "Before you even get out of bed tomorrow, stretch your body as wide as possible in an 'X' or 'Y' position", body: "Sleeping in the fetal position sends a subtle signal to your brain that your body is under attack. \n\nBut if you do a power pose when you wake up, you’ll see an improvement in your daily confidence levels and happiness.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", doneType: "sponsor", buyURL: "sponsorURL")
+let bedtimeTip8 = Tip(header: "Good Habit 📖", title: "After I set my alarm at night, I will read one verse of Scripture.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 // TUE
 let bedtimeTip9 = Tip(header: "Healthy Choice", title: "Use mouthwash before bed to give your mouth an extra layer of protection from cavity-causing acids", body: "Saliva prevents cavity-causing acids from building up. But we produce less saliva when we sleep. That can dry out your mouth, leaving teeth and gums vulnerable to things like tooth decay and gingivitis.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", doneType: "sponsor", buyURL: "sponsorURL")
@@ -3263,7 +3426,6 @@ let bedtimeTip17 = Tip(header: "Fall Asleep Faster 📵", title: "Don't use elec
 let bedtimeTip18 = Tip(header: "Increase Success 👟", title: "Prepare your gym clothes tonight so that you can throw it on as soon as you slide out of bed", body: "Former Navy SEAL Jocko Willink says, \"Don't think in the morning. That's a big mistake that people make. \n\nThey wake up in the morning and they start thinking. Don't think. Just execute the plan. \n\nThe plan is the alarm clock goes off, you get up, you go work out." , sourceName: "Thrive Global", sourceURL: "https://medium.com/thrive-global/this-10-minute-night-routine-guarantees-success-your-next-morning-af47fa7a00d5", doneType: "", buyURL: "")
 let bedtimeTip19 = Tip(header: "Increase Success 📝", title: "Tonight, decide what you’re going to do the next morning because design is stronger than willpower", body: "Write down when you’re going to wake up and set the alarm for that time (but put your phone or alarm clock in a different room so you physically have to get out of bed to turn it off). \n\nWrite down the top 1–3 things you intend to accomplish with your morning." , sourceName: "Thrive Global", sourceURL: "https://medium.com/thrive-global/this-10-minute-night-routine-guarantees-success-your-next-morning-af47fa7a00d5", doneType: "", buyURL: "")
 let bedtimeTip20 = Tip(header: "Prevent Wrinkles", title: "Sleep on your back", body: "Sleeping with your face pressed against the pillow can cause sleep lines, which can turn into wrinkles. \n\nSatin pillowcases can also help in the anti-wrinkle fight.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.ca/2013/04/04/get-rid-of-wrinkles-_n_3014430.html", doneType: "", buyURL: "")
-
 
 
 //SAT
@@ -3301,16 +3463,14 @@ let bedtimeTip44 = Tip(header: "Fall Asleep Faster", title: "Use this Army tacti
 let bedtimeTip45 = Tip(header: "Look Your Best", title: "No matter how tired you are, don't forget to wash your face", body: "You want to remove all of the dirt, oil, and makeup from your skin so that you don't end up with clogged pores and bumpy skin.", sourceName: "Allure", sourceURL: "https://www.allure.com/story/sleep-and-skin-what-happens", doneType: "", buyURL: "")
 let bedtimeTip46 = Tip(header: "Warning", title: "If you snore loudly and you suffer from fatigue or sleepiness during the day, those symptoms together could mean you have sleep apnea, a disorder in which an individual can actually stop breathing while asleep", body: "Individuals with other health conditions including being overweight or obese, having high blood pressure, or being a smoker increase the risk of sleep apnea.", sourceName: "The Ladders", sourceURL: "https://www.theladders.com/career-advice/top-8-sleep-myths-that-can-harm-your-health", doneType: "", buyURL: "")
 let bedtimeTip47 = Tip(header: "Increase Happiness", title: "The last hour before bed is time to wind down with yourself or with someone you love", body: "It's time for reading, journaling, or watching your favorite TV show. \n\nGive your body some love with the personal care it needs, and get ready for sleep.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", doneType: "", buyURL: "")
-let bedtimeTip48 = Tip(header: "Healthy Choice", title: "Sleeping on your side is generally the best position for breathing", body: "Sleeping on your back is more likely to lead to snoring and sleep apnea, and sleeping on your stomach is going to cause shallower breathing, not to mention low back issues. \n\nThere are exceptions, of course, particularly for those who have structural alignment issues.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", doneType: "", buyURL: "")
-
-
+let bedtimeTip48 = Tip(header: "Prevent Acne & Pimples 🛌", title: "Change your pillowcase at least once every 2 weeks", body: "Dead cells can build up over time on your pillowcase, leaving behind bacteria and toxins." , sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=19", doneType: "", buyURL: "")
 
 
 //SAT
 let bedtimeTip53 = Tip(header: "Sleep Better", title: "Things that help your body to release tension and help your body to relax before bed:", body: "• Stretching \n• Foam rolling \n• Yoga \n• Massage \n• Hot bath or shower", sourceName: "Thrive Global", sourceURL: "https://thriveglobal.com/stories/the-real-power-of-morning-and-evening-rituals/", doneType: "", buyURL: "")
 let bedtimeTip54 = Tip(header: "Increase Success", title: "Each night before bed, Benjamin Franklin asked himself the same self-improvement question: \"What good have I done today?\"", body: "Regardless of how badly the day went, successful people typically manage to avoid that pessimistic spiral of negative self-talk because they know it will only create more stress. \n\nTaking a few moments to think about what went right over the course of the day can put you in a positive, grateful mood.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/what-successful-people-do-right-before-bed-2016-1", doneType: "", buyURL: "")
 let bedtimeTip55 =  Tip(header: "Quote", title: "\"To wind down at night after a long day, I read acclaimed self-help books written by successful business leaders and life coaches.\"", body: "\"When I'm not working, I strive to fuel my 'mental factory'--a.k.a., my brain--with nothing but positivity.\" \n\n\"I've found that maintaining positive vibes throughout the day when I'm not focused on work translates to keeping my spirits up when I am met with workplace challenges.\" \n\n- Shannon Hudson, world champion kickboxer and founder/CEO of 9Round" , sourceName: "Inc.", sourceURL: "https://www.inc.com/christina-desmarais/31-simple-daily-habits-that-separate-high-achievers-from-everyone-else.html", doneType: "", buyURL: "")
-let bedtimeTip56 = Tip(header: "Increase Success", title: "Aubrey Marcus, CEO of Onnit, journals every night", body: "I start by writing down my mission and writing 3 main objectives for the following day. \n\nYour mission could be as simple as \"Own the day\" or \"Make everyone around me happier.\" \n\nWriting it down gets it out of your mind and makes it real. \n\nKnowing that you won't forget anything, because it's written down right there for you, relaxes you as you transition to sleep." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", doneType: "", buyURL: "")
+let bedtimeTip56 = Tip(header: "Good Habit", title: "After my head hits the pillow, I will think about one thing I’m grateful for from the day.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
 //WEEK 3
@@ -3318,11 +3478,23 @@ let bedtimeTip56 = Tip(header: "Increase Success", title: "Aubrey Marcus, CEO of
 let bedtimeTip57 = Tip(header: "Warning", title: "If you often charge your phone overnight or keep it plugged in for hours after it's reached 100%, you're accelerating the aging process of lithium-ion smartphone batteries", body: "While all smartphone batteries have a limited life, for best performance, unplug your phone once it's at 100% power.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/best-way-to-charge-your-phone-for-longer-lasting-battery-2019-4", doneType: "", buyURL: "")
 let bedtimeTip58 = Tip(header: "Sleep Better", title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed: \n\n• Write down what you're thankful for. \n\nPeople in a 2-week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", doneType: "", buyURL: "")
 let bedtimeTip59 = Tip(header: "Daily Habit", title: "Say Thanks — To The Good and Bad — The Stoics saw gratitude as a kind of medicine, that saying “Thank you” for every experience was the key to mental health.", body: "“Convince yourself that everything is the gift of the gods,” was how Marcus Aurelius put it, “that things are good and always will be.” \n\nSay thanks to a rude person. Say thanks to a failed project. Say thanks to a delayed package. \n\nWhy? Because for starters it may have just saved you from something far worse, but mostly because you have no choice in the matter. \n\nEpictetus has said that every situation has two handles: Which are you going to decide to hold onto? The anger or the appreciation? The one of resentment or of thanks?" , sourceName: "Ryan Holiday", sourceURL: "https://ryanholiday.net/13-life-changing-habits-to-try-and-do-every-single-day/", doneType: "", buyURL: "")
-let bedtimeTip60 = Tip(header: "Prevent Acne & Pimples 🛌", title: "Change your pillowcase at least once every 2 weeks", body: "Dead cells can build up over time on your pillowcase, leaving behind bacteria and toxins." , sourceName: "Redbook Magazine", sourceURL: "https://www.redbookmag.com/beauty/makeup-skincare/g4004/surprising-things-ruin-skin/?slide=19", doneType: "", buyURL: "")
+let bedtimeTip60 = Tip(header: "Good Habit", title: "After I get in bed, I will close my eyes and chant, “Om.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 
+//TUES
+let bedtimeTip61 = Tip(header: "Good Habit 📖", title: "After I get in bed, I will open the scriptures and read at least one verse.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bedtimeTip62 = Tip(header: "Good Habit ⏰", title: "After I hear my alarm, I will turn it off immediately (no snooze).", body: "Stanford research: Changing your enironment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bedtimeTip63 = Tip(header: "Increase Success 📝", title: "Reduce decision fatigue tomorrow by making a plan tonight", body: "• List the major tasks you want to accomplish tomorrow. \n\n• List how you want to spend the first few hours of the day. \n\n• Lay out the clothes you’ll wear. \n\n• Have ingredients ready to make a healthy breakfast. \n\nMaking fewer decisions tomorrow morning helps you have more willpower later in the day." , sourceName: "NBC News", sourceURL: "https://www.nbcnews.com/better/health/9-things-do-morning-make-your-whole-day-more-productive-ncna772446", doneType: "", buyURL: "")
+let bedtimeTip64 = Tip(header: "Good Habit 🦷", title: "After I floss my teeth at night, I will turn on my white-noise machine.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+//
+let bedtimeTip65 = Tip(header: "Increase Success", title: "Aubrey Marcus, CEO of Onnit, journals every night", body: "I start by writing down my mission and writing 3 main objectives for the following day. \n\nYour mission could be as simple as \"Own the day\" or \"Make everyone around me happier.\" \n\nWriting it down gets it out of your mind and makes it real. \n\nKnowing that you won't forget anything, because it's written down right there for you, relaxes you as you transition to sleep." , sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", doneType: "", buyURL: "")
+let bedtimeTip66 = Tip(header: "Good Habit ", title: "After I turn on my white-noise machine, I will close my curtains so the room is entirely dark.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bedtimeTip67 = Tip(header: "Good Habit", title: "After I close the curtains, I will spray a little lavender scent in my bedroom.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let bedtimeTip68 = Tip(header: "Healthy Choice", title: "Sleeping on your side is generally the best position for breathing", body: "Sleeping on your back is more likely to lead to snoring and sleep apnea, and sleeping on your stomach is going to cause shallower breathing, not to mention low back issues. \n\nThere are exceptions, of course, particularly for those who have structural alignment issues.", sourceName: "Own The Day, Own Your Life", sourceURL: "https://www.amazon.com/dp/B072HLS5QJ/", doneType: "", buyURL: "")
 
-
+//
+let bedtimeTip69 = Tip(header: "Increase Confidence", title: "Before you even get out of bed tomorrow, stretch your body as wide as possible in an 'X' or 'Y' position", body: "Sleeping in the fetal position sends a subtle signal to your brain that your body is under attack. \n\nBut if you do a power pose when you wake up, you’ll see an improvement in your daily confidence levels and happiness.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/amy-cuddy-advice-waking-up-right-2016-1", doneType: "sponsor", buyURL: "sponsorURL")
+let bedtimeTip70 = Tip(header: "Good Habit 📱", title: "After I get ready for bed, I will plug my phone in a different room to charge overnight in order to stop scrolling social media in bed.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //WEEK 1
 //SUN
@@ -3374,9 +3546,15 @@ let bedtimeTopic11 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeT
 let bedtimeTipArray12 = [bedtimeTip57, bedtimeTip58, bedtimeTip59, bedtimeTip60]
 let bedtimeTopic12 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray12)
 
+//TUES
+let bedtimeTipArray13 = [bedtimeTip61, bedtimeTip62, bedtimeTip63, bedtimeTip64]
+let bedtimeTopic13 = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArray13)
+//
+let bedtimeTipArray14 = [bedtimeTip65, bedtimeTip66, bedtimeTip67, bedtimeTip68]
+let bedtimeTipArray15 = [bedtimeTip69, bedtimeTip70, bedtimeTip7, bedtimeTip68]//WIP
 
 //Every day but Friday
-let bedtimeTipArrays = [bedtimeTipArray0, bedtimeTipArray1, bedtimeTipArray2, bedtimeTipArray3, bedtimeTipArray4, bedtimeTipArray6, bedtimeTipArray7, bedtimeTipArray8, bedtimeTipArray9, bedtimeTipArray10, bedtimeTipArray11, bedtimeTipArray12,]
+let bedtimeTipArrays = [bedtimeTipArray0, bedtimeTipArray1, bedtimeTipArray2, bedtimeTipArray3, bedtimeTipArray4, bedtimeTipArray6, bedtimeTipArray7, bedtimeTipArray8, bedtimeTipArray9, bedtimeTipArray10, bedtimeTipArray11, bedtimeTipArray12, bedtimeTipArray13, bedtimeTipArray14, bedtimeTipArray15]
 let bedtimeTopic = Topic(title: bedtimeTitle, icon: bedtimeIcon, tip: bedtimeTipArrays.random())
 
 let bedtimeTopics = Topics(title: bedtimeTitle, icon: bedtimeIcon, topics: [bedtimeTopic])
@@ -3395,6 +3573,7 @@ let bedtimeFridayTip6 = Tip(header: "Fall Asleep Faster", title: "Take a bath or
 let bedtimeFridayTip7 = Tip(header: "Increase Happiness", title: "Research: A good night's sleep improves mental well-being, while a consistent lack of sleep has been linked to obesity, memory impairment, and depression", body: "After you turn of the lights, take a look around your bedroom. Do you see glowing clocks, blinking lights, cable box displays? \n\n• Make your bedroom a no-electronic zone (no TV, computer, or cell phone). \n\n• Put up light-blocking window shades or drapes to make the room dark for sleeping. \n\n• Turn down the thermostat to about 65℉ to make it cool.", sourceName: "The Blue Zones of Happiness: Lessons from the World’s Happiest People", sourceURL: "https://www.bluezones.com/blue-zones-of-happiness/", doneType: "", buyURL: "")
 
 let bedtimeFridayTip8 = Tip(header: "Millionaire Habit", title: "Each night before bed, Arianna Huffington puts her phone in another room so she’s not distracted by it before bed", body: "The bright lights produced by our cell phone screens disrupt our bodies natural sleep rhythm causing us to have a much harder time falling asleep. \n\nAs she details in her book, \"Thrive,\" she also has banned all electronics from the bedroom, including: \n• iPads \n• Kindles \n• laptops", sourceName: "Lifehack", sourceURL: "https://www.lifehack.org/articles/productivity/6-habits-highly-successful-people-before-bedtime.html", doneType: "", buyURL: "")
+
 
 
 //FRI PM (see AM below)
@@ -3470,19 +3649,33 @@ let cantSleepIcon = Constants.Icon.cantSleep
 let cantSleepTip1 = Tip(header: "Sleep Better", title: "Don't look at your clock because it can cause anxiety about sleeplessness", body: "People who wake up in the middle of the night often tend to watch the clock and obsess about the fact that they cannot fall back asleep. \n\nIf possible, it is best to remove the clock from your room. \n\nIf you need an alarm in the room, you can turn your clock and avoid watching it when you wake up in the middle of the night." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", doneType: "", buyURL: "")
 let cantSleepTip2 = Tip(header: "Sleep Better", title: "Set your thermostat to a cool temperature between 60–75°F (15–23°C)", body: "Every day, your body temperature decreases as you fall asleep. If your room is too warm, you might have a hard time falling asleep." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", doneType: "", buyURL: "")
 let cantSleepTip3 = Tip(header: "Fall Asleep 🚿", title: "Taking a warm bath or shower could help", body: "Your body temperature decreases as you fall asleep. Taking a warm bath or shower could also help speed up the body's temperature changes. \n\nAs your body cools down afterwards, this can help send a signal to your brain to go to sleep." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", doneType: "", buyURL: "")
-let cantSleepTip4 = Tip(header: "Relax 🌬", title: "The \"4-7-8\" breathing method relaxes you to help you fall asleep", body: "Here are the steps: \n\n1. Place the tip of your tongue behind your upper front teeth. \n\n2. Exhale completely through your mouth and make a whoosh sound. \n\n3. Close your mouth and inhale through your nose while mentally counting to 4. \n\n4. Hold your breath and mentally count to 7. \n\n5. Open your mouth and exhale completely, making a whoosh sound and mentally counting to 8. \n\n6. Repeat this cycle at least 3 more times." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", doneType: "", buyURL: "")
+let cantSleepTip4 = Tip(header: "Good Habit", title: "After I start to worry about a problem at night, I will say, “That can wait until tomorrow.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+
+
+
 
 //1
 let cantSleepTip5 = Tip(header: "Sleep Better 🎶", title: "Listen to relaxing music", body: "Study: participants who were exposed to soothing music for 45 minutes at bedtime had a more restful and deeper sleep than those who did not listen to music." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section9", doneType: "", buyURL: "")
 let cantSleepTip6 = Tip(header: "Sleep Better 📓", title: "Journaling and focusing on positive thoughts can calm the mind and help you sleep better", body: "A study of college students found that journaling resulted in reduced bedtime worry and stress, increased sleep time and improved sleep quality. \n\nWriting down the positive events that happened during the day can create a state of gratitude and happiness, downgrade stressful events and promote more relaxation at bedtime." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section13", doneType: "", buyURL: "")
 let cantSleepTip7 = Tip(header: "Sleep Better", title: "Practice yoga, meditation and mindfulness", body: "When people are stressed, they tend to have difficulty falling asleep. Yoga, meditation and mindfulness are tools to calm the mind and relax the body. Moreover, they have been shown to improve sleep. \n\nYoga encourages the practice of breathing patterns and body movements that release stress and tension accumulated in your body. \n\nMeditation can enhance melatonin levels and assist the brain in achieving a specific state where sleep is easily achieved. \n\nMindfulness may help you maintain focus on the present and worry less while falling asleep." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", doneType: "", buyURL: "")
-let cantSleepTip8 = Tip(header: "Warning", title: "If you’ve had trouble sleeping for 3+ nights a week, for 3+ months, you officially suffer from insomnia", body: "At this point, your insomnia may be a behavioral pattern (for example, your nighttime routines do not cue your body for sleep, or your sleep schedule is out of sync with your biological clock), or it could be linked to another medical or psychiatric issue that needs to be addressed. \n\nTalk to your doctor about treatment." , sourceName: "National Sleep Foundation", sourceURL: "https://www.sleepfoundation.org/insomnia/sleep-disorders-problems/insomnia/symptoms", doneType: "", buyURL: "")
+let cantSleepTip8 = Tip(header: "Good Habit", title: "After I want to get up in the middle of the night, I will lie back down for about 15 seconds.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //2
 let cantSleepTip9 = Tip(header: "Sleep Better 🎵", title: "DO: Listen to relaxing classical music. DON'T: Listen to an audiobook or nothing at all", body: "Researchers found that listening to classical music statistically significantly improved sleep quality. \n\nSleep quality did not improve statistically significantly for participants listening to an audiobook or no music at all." , sourceName: "National Center for Biotechnology Information, U.S. National Library of Medicine", sourceURL: "https://www.ncbi.nlm.nih.gov/pubmed/18426457", doneType: "", buyURL: "")
 let cantSleepTip10 = Tip(header: "Sleep Better 📝", title: "Write down your thoughts. Keep a pen and paper next to your bed", body: "Thinking about something you have to do the next day can keep you from falling asleep. \n\nWriting it all down helps to physically \"dump out\" your thoughts onto paper so you don’t have to keep thinking about them over and over." , sourceName: "Medium", sourceURL: "https://betterhumans.coach.me/how-to-fall-asleep-quickly-and-wake-up-ready-to-be-productive-cd7eadad010d", doneType: "", buyURL: "")
 let cantSleepTip11 = Tip(header: "Sleep Tip", title: "Go into another room and do something relaxing until you feel tired", body: "It is best to take work materials, computers and televisions out of the sleeping environment. Use your bed only for sleep and romance to strengthen the association between bed and sleep." , sourceName: "National Sleep Foundation", sourceURL: "https://www.sleepfoundation.org/articles/healthy-sleep-tips", doneType: "", buyURL: "")
-let cantSleepTip12 = Tip(header: "💤", title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for. \n\nParticipants of a 2-week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", doneType: "", buyURL: "")
+let cantSleepTip12 = Tip(header: "Good Habit", title: "After I keep looking at my clock at night, I will turn the clock around so I can’t see it.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+//3
+let cantSleepTip13 = Tip(header: "Good Habit 📖", title: "After I get into bed and I’m not sleepy, I will open a relaxing book to read in a dimly lit room.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
+let cantSleepTip14 = Tip(header: "Relax 🌬", title: "The \"4-7-8\" breathing method relaxes you to help you fall asleep", body: "Here are the steps: \n\n1. Place the tip of your tongue behind your upper front teeth. \n\n2. Exhale completely through your mouth and make a whoosh sound. \n\n3. Close your mouth and inhale through your nose while mentally counting to 4. \n\n4. Hold your breath and mentally count to 7. \n\n5. Open your mouth and exhale completely, making a whoosh sound and mentally counting to 8. \n\n6. Repeat this cycle at least 3 more times." , sourceName: "HealthLine", sourceURL: "https://www.healthline.com/nutrition/ways-to-fall-asleep#section1", doneType: "", buyURL: "")
+
+let cantSleepTip15 = Tip(header: "Warning 🚨", title: "If you’ve had trouble sleeping for 3+ nights a week, for 3+ months, you officially suffer from insomnia", body: "At this point, your insomnia may be a behavioral pattern (for example, your nighttime routines do not cue your body for sleep, or your sleep schedule is out of sync with your biological clock), or it could be linked to another medical or psychiatric issue that needs to be addressed. \n\nTalk to your doctor about treatment." , sourceName: "National Sleep Foundation", sourceURL: "https://www.sleepfoundation.org/insomnia/sleep-disorders-problems/insomnia/symptoms", doneType: "", buyURL: "")
+
+let cantSleepTip16 = Tip(header: "Good Habit 📝", title: "Study: Gratitude journaling can improve your sleep", body: "If you’re having trouble sleeping or just waking up feeling fatigued, try a quick gratitude journaling exercise before bed by writing down what you're thankful for. \n\nParticipants of a 2-week study who kept a gratitude journal had increased sleep quality and reduced blood pressure." , sourceName: "Positive Psychology Program", sourceURL: "https://positivepsychologyprogram.com/benefits-gratitude-research-questions/", doneType: "", buyURL: "")
+
 
 
 
@@ -3495,9 +3688,10 @@ let cantSleepTopic1 = Topic(title: cantSleepTitle, icon: cantSleepIcon, tip: can
 let cantSleepTipArray2 = [ cantSleepTip9,  cantSleepTip10,  cantSleepTip11,  cantSleepTip12]
 let cantSleepTopic2 = Topic(title: cantSleepTitle, icon: cantSleepIcon, tip: cantSleepTipArray2)
 
+let cantSleepTipArray3 = [ cantSleepTip12,  cantSleepTip13,  cantSleepTip14,  cantSleepTip15]
 
 //
-let cantSleepTipArrays = [cantSleepTipArray0, cantSleepTipArray1, cantSleepTipArray2,]
+let cantSleepTipArrays = [cantSleepTipArray0, cantSleepTipArray1, cantSleepTipArray2, cantSleepTipArray3]
 let cantSleepTopic = Topic(title: cantSleepTitle, icon: cantSleepIcon, tip: cantSleepTipArrays.random())
 let cantSleepTopics = Topics(title: cantSleepTitle, icon: cantSleepIcon, topics: [cantSleepTopic,])
 
@@ -3560,19 +3754,22 @@ let schoolPMTip8 = Tip(header: "Reduce Your Risk 😴", title: "Get 8 hours of s
 let schoolPMTip9 = Tip(header: "Increase Your GPA 🏋️‍♀️", title: "Go to a gym / exercise after classes", body: "A study of college students found that students who belonged to the gym had higher GPAs than those who didn’t. \n\nThe gym-going students' cumulative GPAs were 0.13 points higher.", sourceName: "Huffington Post", sourceURL: "https://www.huffingtonpost.com/2014/07/11/gym-higher-gpa-msu-study_n_5575054.html", doneType: "", buyURL: "")
 let schoolPMTip10 = Tip(header: "Increase Your GPA 😴", title: "Get enough sleep each day", body: "A study of 55,000 college students found that for every extra day a student experienced sleep problems, their GPA dropped by 0.02. \n\nGetting a good night's sleep is an essential part of encoding memories and learning. \n\nAdolescents need 9 hours of sleep per night.", sourceName: "Big Think", sourceURL: "https://bigthink.com/matt-davis/study-to-boost-your-gpa-get-some-sleep", doneType: "", buyURL: "")
 let schoolPMTip11 = Tip(header: "Increase Success 🏀", title: "Study: Students who spend 2+ years in extracurriculars are more likely to have higher self-esteem, graduate from college, have a job (as opposed to being unemployed as a young adult), and earn more money. \n\nBut this is only true for students who participant in activities for 2+ years rather than 1 year.", body: "That longer-term commitment gives students the chance to learn their strengths, and where they need to improve. \n\nAnd it gives them time to see the significant progress they can make as a direct result of their consistent hard work and effort.", sourceName: "Inc.", sourceURL: "https://www.inc.com/sonia-thompson/research-shows-kids-who-do-this-earn-better-grades.html", doneType: "", buyURL: "")
-let schoolPMTip12 = Tip(header: "Increase Your GPA 😴", title: "Study of 4th-6th graders ages 10-12 revealed that children who napped 3+ times per week benefit from a 7.6% increase in academic performance in Grade 6", body: "Midday napping correlated with greater happiness, self-control, and grit; fewer behavioral problems; and higher IQ. \n\nThe more students sleep during the day, the greater the benefit of naps on many of these measures." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/05/190531135828.htm", doneType: "", buyURL: "")
+
+let schoolPMTip12 = Tip(header: "Good Habit", title: "After I get a good grade on a paper or exam, I will send a photo of my result to my mom and grandma.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+
 
 //3
-
-
+let schoolPMTip13 = Tip(header: "Good Habit", title: "After I walk into the library, I will sit at a table in the far corner away from other people.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let schoolPMTip14 = Tip(header: "Good Habit", title: "After I leave school on Monday, Wednesday, and Friday, I will phone my mom or grandma.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let schoolPMTip15 = Tip(header: "Increase Your GPA 😴", title: "Study of 4th-6th graders ages 10-12 revealed that children who napped 3+ times per week benefit from a 7.6% increase in academic performance in Grade 6", body: "Midday napping correlated with greater happiness, self-control, and grit; fewer behavioral problems; and higher IQ. \n\nThe more students sleep during the day, the greater the benefit of naps on many of these measures." , sourceName: "Science Daily", sourceURL: "https://www.sciencedaily.com/releases/2019/05/190531135828.htm", doneType: "", buyURL: "")
 
 let schoolPMTipArray0 = [schoolPMTip1, schoolPMTip2, schoolPMTip3, schoolPMTip4]
 let schoolPMTipArray1 = [schoolPMTip5, schoolPMTip6, schoolPMTip7, schoolPMTip8]
 let schoolPMTipArray2 = [schoolPMTip9, schoolPMTip10, schoolPMTip11, schoolPMTip12]
-
+let schoolPMTipArray3 = [schoolPMTip13, schoolPMTip14, schoolPMTip15, schoolPMTip12]
 
 //
-let schoolPMTipArrays = [schoolPMTipArray0, schoolPMTipArray1, schoolPMTipArray2,]
+let schoolPMTipArrays = [schoolPMTipArray0, schoolPMTipArray1, schoolPMTipArray2, schoolPMTipArray3]
 let schoolPMTopic = Topic(title: schoolTitle, icon: schoolIcon, tip: schoolPMTipArrays.random())
 
 
@@ -3609,10 +3806,10 @@ let travelTitle = "Travel"
 let travelIcon = Constants.Icon.travel
 
 //0
-let travelTip0 = Tip(header: "Reduce Jet Lag", title: "Change your bedtime to better match the local time of your destination", body: "Jet lag occurs when we cross three or more time zone changes, because it throws off our circadian rhythm -- the biological clock that helps control when we wake and fall asleep. Try to sleep on the plane if it’s nighttime where you’re going or stay awake if it’s daytime -- but don’t force it.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/travel/want-to-minimize-jet-lag-heres-what-the-doctors-order/2018/08/29/23c14836-a7d8-11e8-97ce-cc9042272f07_story.html", doneType: "", buyURL: "")
-let travelTip1 = Tip(header: "Reduce Risk Of Getting Sick", title: "Airplanes: Before you step on the plane, take a couple of vitamin C tablets to give your body the ability to fight off airborne germs", body: "Should the passenger sitting next to you start sneezing or coughing, you can easily take a few more vitamins.", sourceName: "U.S. News & World Report", sourceURL: "https://travel.usnews.com/features/simple-ways-to-avoid-getting-sick-while-traveling", doneType: "", buyURL: "")
-let travelTip2 = Tip(header: "Reduce Risk Of Getting Sick", title: "Airplanes: Avoid areas touched by the greatest number of people and the bathroom ranks among the highest on that list", body: "Should using the bathroom be an absolute necessity, wash your hands before exiting and consider also using hand sanitizer when you get back to your seat.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-avoid-getting-sick-traveling-plane-flying-coronavirus-2020-2", doneType: "", buyURL: "")
-let travelTip3 = Tip(header: "Increase Happiness", title: "Study: Vacations further away from home leads to greater levels of happiness", body: "• An average vacation (or \"staycation\") was found to create no positive effect on happiness. \n\n• 84% of the best trips recorded by participants were to locations outside of country.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/02/when-a-vacation-reduces-stress-and-when-it-doesnt", doneType: "", buyURL: "")
+let travelTip0 = Tip(header: "Reduce Jet Lag ✈️", title: "Change your bedtime to better match the local time of your destination", body: "Jet lag occurs when we cross three or more time zone changes, because it throws off our circadian rhythm -- the biological clock that helps control when we wake and fall asleep. Try to sleep on the plane if it’s nighttime where you’re going or stay awake if it’s daytime -- but don’t force it.", sourceName: "The Washington Post", sourceURL: "https://www.washingtonpost.com/lifestyle/travel/want-to-minimize-jet-lag-heres-what-the-doctors-order/2018/08/29/23c14836-a7d8-11e8-97ce-cc9042272f07_story.html", doneType: "", buyURL: "")
+let travelTip1 = Tip(header: "Reduce Risk Of Getting Sick ✈️", title: "Airplanes: Before you step on the plane, take a couple of vitamin C tablets to give your body the ability to fight off airborne germs", body: "Should the passenger sitting next to you start sneezing or coughing, you can easily take a few more vitamins.", sourceName: "U.S. News & World Report", sourceURL: "https://travel.usnews.com/features/simple-ways-to-avoid-getting-sick-while-traveling", doneType: "", buyURL: "")
+let travelTip2 = Tip(header: "Reduce Risk Of Getting Sick ✈️", title: "Airplanes: Avoid areas touched by the greatest number of people and the bathroom ranks among the highest on that list", body: "Should using the bathroom be an absolute necessity, wash your hands before exiting and consider also using hand sanitizer when you get back to your seat.", sourceName: "Business Insider", sourceURL: "https://www.businessinsider.com/how-to-avoid-getting-sick-traveling-plane-flying-coronavirus-2020-2", doneType: "", buyURL: "")
+let travelTip3 = Tip(header: "Increase Happiness 🌴", title: "Study: Vacations further away from home leads to greater levels of happiness", body: "• An average vacation (or \"staycation\") was found to create no positive effect on happiness. \n\n• 84% of the best trips recorded by participants were to locations outside of country.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/02/when-a-vacation-reduces-stress-and-when-it-doesnt", doneType: "", buyURL: "")
 
 //1
 let travelTip4 = Tip(header: "Warning", title: "Vacations with medium to high levels of stress showed no increase in happiness after a vacation", body: "• Plan ahead. 74% find the most stressful part of travel to be figuring out the details: transportation, wasting time figure things out on the trip, and being unfamiliar with the location. \n\n• Meet with someone knowledgeable at the location. On the best trips, 77% met with a local host or had a knowledgeable friend.", sourceName: "Harvard Business Review", sourceURL: "https://hbr.org/2014/02/when-a-vacation-reduces-stress-and-when-it-doesnt", doneType: "", buyURL: "")
@@ -3635,9 +3832,16 @@ let travelTip15 =  Tip(header: "Increase Happiness", title: "Make sure to end th
 //4
 let travelTip16 = Tip(header: "Reduce Risk Of Getting Sick", title: "• Relax to keep stress low \n• Keep a good sleep schedule and try and get 8 hours of sleep", body: "Research: People are more likely to get sick while traveling. \n\nThe most common causes being changes to diet, sleep patterns and exposure to new viruses and bacteria. \n\nNot getting good sleep weakens your immune system and increases your risk of getting sick.", sourceName: "GQ", sourceURL: "https://www.gq.com/story/how-to-not-get-sick-while-traveling", doneType: "", buyURL: "")
 let travelTip17 =  Tip(header: "Reduce Risk Of Getting Sick", title: "Airports: Have a hand sanitizer with you at all times", body: "Washing hands with soap and water is always the best choice, but hand sanitizer with an alcohol content of at least 60% is effective against reducing the number of microbes. \n\nDon’t just focus on your palms, but scrub those filthy fingers, too.", sourceName: "GQ", sourceURL: "https://www.gq.com/story/how-to-not-get-sick-while-traveling", doneType: "", buyURL: "")
-let travelTip18 =  Tip(header: "Reduce Risk Of Getting Sick", title: "Airplanes: Bring a disinfectant wipe on board to wipe your seating area around", body: "If you don’t have those handy, avoid touching your face or eating without washing your hands or using a hand sanitizer first. \n\nThe tray tables in front of you and the control knobs for the overhead vents have been shown to have the highest number of bacteria.", sourceName: "GQ", sourceURL: "https://www.gq.com/story/how-to-not-get-sick-while-traveling", doneType: "", buyURL: "")
-let travelTip19 = Tip(header: "Reduce Risk Of Getting Sick", title: "Airplanes: Be as stress free as you can. Traveling puts stress on your immune system", body: "Studies show you’re 20% to 113% more likely to catch a cold while traveling. \n\nThe reasons why we get sick include the added stressors of travel like jet-lag, dehydration, heavy lifting, and increased physical activity. \n\nGetting to the airport is stressful. Waiting to check your bag is stressful. Going through security is stressful. \n\nThese stresses are bad for your body, so you need to stay calm and relax.", sourceName: "GQ", sourceURL: "https://www.gq.com/story/how-to-not-get-sick-while-traveling", doneType: "", buyURL: "")
+let travelTip18 =  Tip(header: "Reduce Risk Of Getting Sick ✈️", title: "Airplanes: Bring a disinfectant wipe on board to wipe your seating area around", body: "If you don’t have those handy, avoid touching your face or eating without washing your hands or using a hand sanitizer first. \n\nThe tray tables in front of you and the control knobs for the overhead vents have been shown to have the highest number of bacteria.", sourceName: "GQ", sourceURL: "https://www.gq.com/story/how-to-not-get-sick-while-traveling", doneType: "", buyURL: "")
+let travelTip19 = Tip(header: "Reduce Risk Of Getting Sick ✈️", title: "Airplanes: Be as stress free as you can. Traveling puts stress on your immune system", body: "Studies show you’re 20% to 113% more likely to catch a cold while traveling. \n\nThe reasons why we get sick include the added stressors of travel like jet-lag, dehydration, heavy lifting, and increased physical activity. \n\nGetting to the airport is stressful. Waiting to check your bag is stressful. Going through security is stressful. \n\nThese stresses are bad for your body, so you need to stay calm and relax.", sourceName: "GQ", sourceURL: "https://www.gq.com/story/how-to-not-get-sick-while-traveling", doneType: "", buyURL: "")
+//5
+let travelTip20 = Tip(header: "Good Habit", title: "After I pack for a weekend away, I will pack a special surprise for the people I’m visiting.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let travelTip21 = Tip(header: "Good Habit 🧳", title: "After I pack my suitcase, I will list what I need to do in the morning before leaving home.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let travelTip22 = Tip(header: "Good Habit ✈️", title: "After I get to my departure gate, I will stretch my legs and shoulders.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
+let travelTip23 = Tip(header: "Good Habit ✈️", title: "After the attendant offers me an unhealthy snack, I will say, “No, thank you.”", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
+//6
+let travelTip24 = Tip(header: "Good Habit 🏨", title: "After I unpack in my hotel room, I will find the fitness facility so I know where it is.", body: "Stanford research: Changing your environment and taking baby steps are best ways to build a habit." , sourceName: "Tiny Habits by BJ Fogg, PhD", sourceURL: "https://tinyhabits.com/", doneType: "", buyURL: "https://www.amazon.com/Tiny-Habits-Changes-Change-Everything/dp/0358362776")
 
 //WEEK 1
 let travelTipArray0 = [travelTip0, travelTip1, travelTip2, travelTip3]
@@ -3645,8 +3849,10 @@ let travelTipArray1 = [travelTip4, travelTip5, travelTip6, travelTip7]
 let travelTipArray2 = [travelTip8, travelTip9, travelTip10, travelTip11]
 let travelTipArray3 = [travelTip12, travelTip13, travelTip14, travelTip15]
 let travelTipArray4 = [travelTip16, travelTip17, travelTip18, travelTip19]
+let travelTipArray5 = [travelTip20, travelTip21, travelTip22, travelTip23]
+let travelTipArray6 = [travelTip24, travelTip3, travelTip7, travelTip23]//WIP
 //
-let travelTipArrays = [travelTipArray0, travelTipArray1, travelTipArray2, travelTipArray3, travelTipArray4,]
+let travelTipArrays = [travelTipArray0, travelTipArray1, travelTipArray2, travelTipArray3, travelTipArray4, travelTipArray6]
 let travelTopic = Topic(title: travelTitle, icon: travelIcon, tip: travelTipArrays.random())
 let travelTopics = Topics(title: travelTitle, icon: travelIcon, topics: [travelTopic,])
 
