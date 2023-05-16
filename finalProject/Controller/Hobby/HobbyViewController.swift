@@ -382,10 +382,18 @@ class HobbyViewController: UIViewController {
         performUIUpdatesOnMain {
 
 //            //row1
-            self.hobbyTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
-            self.hobbyTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
-            self.hobbyTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
-            self.hobbyTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
+//            self.hobbyTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
+//            self.hobbyTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
+//            self.hobbyTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
+//            self.hobbyTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
+
+            //UIButton.setImage
+            //row1
+            self.hobbyTopic0Button.setImage(UIImage(named: self.topicsArrays[0].icon), for: .normal)
+            self.hobbyTopic1Button.setImage(UIImage(named: self.topicsArrays[1].icon), for: .normal)
+            self.hobbyTopic2Button.setImage(UIImage(named: self.topicsArrays[2].icon), for: .normal)
+            self.hobbyTopic3Button.setImage(UIImage(named: self.topicsArrays[3].icon), for: .normal)
+
 
             //row2
 //            self.hobbyTopic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
@@ -428,17 +436,7 @@ class HobbyViewController: UIViewController {
         self.hobbyTopic1Button.setImage(UIImage(named: topics[1].icon) , for: UIControl.State.normal)
         self.hobbyTopic2Button.setImage(UIImage(named: topics[2].icon) , for: UIControl.State.normal)
         self.hobbyTopic3Button.setImage(UIImage(named: topics[3].icon) , for: UIControl.State.normal)
-        //row2
-//        self.hobbyTopic4Button.setImage(UIImage(named: topics[4].icon) , for: UIControl.State.normal)
-//        self.hobbyTopic5Button.setImage(UIImage(named: topics[5].icon) , for: UIControl.State.normal)
-//        self.hobbyTopic6Button.setImage(UIImage(named: topics[6].icon) , for: UIControl.State.normal)
-//        self.hobbyTopic7Button.setImage(UIImage(named: topics[7].icon) , for: UIControl.State.normal)
-//
-//        //row3
-//        self.hobbyTopic8Button.setImage(UIImage(named: topics[8].icon) , for: UIControl.State.normal)
-//        self.hobbyTopic9Button.setImage(UIImage(named: topics[9].icon) , for: UIControl.State.normal)
-//        self.hobbyTopic10Button.setImage(UIImage(named: topics[10].icon) , for: UIControl.State.normal)
-//        self.hobbyTopic11Button.setImage(UIImage(named: topics[11].icon) , for: UIControl.State.normal)
+
     }
 
 
@@ -450,6 +448,7 @@ class HobbyViewController: UIViewController {
 
         setupButtonIcons(topicsArrays)
 
+        //setup Labels text
             //row1
             self.hobbyTopic0Label.text = topics0.title
             self.hobbyTopic1Label.text = topics1.title

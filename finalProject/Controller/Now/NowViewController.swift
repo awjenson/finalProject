@@ -91,13 +91,11 @@ class NowViewController: UIViewController {
     @IBOutlet weak var topic6Label: UILabel!
     @IBOutlet weak var topic7Label: UILabel!
 
-
     //REMOVE
     @IBOutlet weak var topic8Label: UILabel!
     @IBOutlet weak var topic9Label: UILabel!
     @IBOutlet weak var topic10Label: UILabel!
     @IBOutlet weak var topic11Label: UILabel!
-
 
 
     // Return button
@@ -203,9 +201,7 @@ class NowViewController: UIViewController {
     let popupLabel = UILabel()
 
 
-
     // MARK: - Lifecycle Methods
-
 
 
     override func viewWillAppear(_ animated: Bool) {
@@ -242,7 +238,6 @@ class NowViewController: UIViewController {
     @objc func appBecomeActive() {
         //reload your Tableview here
 
-
     }
 
     @objc func appMovedToBackground() {
@@ -252,9 +247,7 @@ class NowViewController: UIViewController {
     @objc func appMovedToForeground() {
         print("App moved to ForeGround!")
 
-
     }
-
 
 
 
@@ -274,8 +267,6 @@ class NowViewController: UIViewController {
         }
     }
 
-    
-
 
 
     var selectedTopicTitle = ""
@@ -285,13 +276,35 @@ class NowViewController: UIViewController {
     func setupUI() {
 
         // place 8 buttons in desired order (excludes Now tips)
-        topicButtons = [topic0Button, topic1Button, topic2Button, topic3Button, topic4Button, topic5Button, topic6Button, topic7Button,
-            topic8Button, topic9Button, topic10Button, topic11Button,
+        topicButtons = [
+            topic0Button,
+            topic1Button,
+            topic2Button,
+            topic3Button,
+            topic4Button,
+            topic5Button,
+            topic6Button,
+            topic7Button,
+            topic8Button,
+            topic9Button,
+            topic10Button,
+            topic11Button,
         ]
 
-        topicLabels = [topic0Label, topic1Label, topic2Label, topic3Label,
-                       topic4Label, topic5Label, topic6Label, topic7Label,
-                        topic8Label, topic9Label, topic10Label, topic11Label]
+        topicLabels = [
+            topic0Label,
+            topic1Label,
+            topic2Label,
+            topic3Label,
+            topic4Label,
+            topic5Label,
+            topic6Label,
+            topic7Label,
+            topic8Label,
+            topic9Label,
+            topic10Label,
+            topic11Label
+        ]
 
         
 
@@ -472,6 +485,8 @@ class NowViewController: UIViewController {
     //tvWatchingTopics
     //familyHomeTopics
     //bedroomTopics - Night
+
+    //QUESTION: Why is func called quarterTopics?
 
     func quarterTopics() -> Topics {
           var selectedTopic: Topics!
@@ -2229,21 +2244,42 @@ class NowViewController: UIViewController {
 //            self.topic10Button.imageEdgeInsets = unTappedButtonEdgeInsets
 //            self.topic11Button.imageEdgeInsets = unTappedButtonEdgeInsets
 
+//            //UIButton.imageView.image
+//            //row1
+//            self.topic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
+//            self.topic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
+//            self.topic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
+//            self.topic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
+//            //row2
+//            self.topic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
+//            self.topic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
+//            self.topic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
+//            self.topic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
+//            //row3
+//            self.topic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
+//            self.topic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
+//            self.topic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
+//            self.topic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
+
+
+
+            //UIButton.setImage()
             //row1
-            self.topic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
-            self.topic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
-            self.topic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
-            self.topic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
+            self.topic0Button.setImage(UIImage(named: self.topicsArrays[0].icon), for: .normal)
+            self.topic1Button.setImage(UIImage(named: self.topicsArrays[1].icon), for: .normal)
+            self.topic2Button.setImage(UIImage(named: self.topicsArrays[2].icon), for: .normal)
+            self.topic3Button.setImage(UIImage(named: self.topicsArrays[3].icon), for: .normal)
             //row2
-            self.topic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
-            self.topic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
-            self.topic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
-            self.topic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
+            self.topic4Button.setImage(UIImage(named: self.topicsArrays[4].icon), for: .normal)
+            self.topic5Button.setImage(UIImage(named: self.topicsArrays[5].icon), for: .normal)
+            self.topic6Button.setImage(UIImage(named: self.topicsArrays[6].icon), for: .normal)
+            self.topic7Button.setImage(UIImage(named: self.topicsArrays[7].icon), for: .normal)
             //row3
-            self.topic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
-            self.topic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
-            self.topic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
-            self.topic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
+            self.topic8Button.setImage(UIImage(named: self.topicsArrays[8].icon), for: .normal)
+            self.topic9Button.setImage(UIImage(named: self.topicsArrays[9].icon), for: .normal)
+            self.topic10Button.setImage(UIImage(named: self.topicsArrays[10].icon), for: .normal)
+            self.topic11Button.setImage(UIImage(named: self.topicsArrays[11].icon), for: .normal)
+
 
         }
     }
@@ -2353,7 +2389,6 @@ class NowViewController: UIViewController {
     //MARK: - IB ACTIONS
 
 
-
     @IBAction func topicButtonTapped(_ sender: CircleButton) {
 
         tapped()
@@ -2377,6 +2412,7 @@ class NowViewController: UIViewController {
         }
     }
 
+
     func resetUIofAllButtonsToOriginalIcons() {
 
         //row1
@@ -2398,6 +2434,7 @@ class NowViewController: UIViewController {
     }
 
     func flipButton(at indexNumber: Int, on button: CircleButton) {
+        print("NOW VC - func flipButton tapped at \(indexNumber)")
 
         resetUIofAllButtonsToOriginalIcons()
 
@@ -2405,7 +2442,7 @@ class NowViewController: UIViewController {
 
         if currentIndex == indexNumber {
 
-            print("A - Previously Tapped, Return to NOW Tips")
+            print("A - Previously Tapped Button, Return to NOW Tips")
 
             // Selected button previously tapped, return to Now Tips
             // Check if this button has been tapped just prior
@@ -2428,11 +2465,11 @@ class NowViewController: UIViewController {
             currentIndex = -1
         } else {
 
-            print("B - Newly Tapped")
+            print("B - Newly Tapped Button")
 
             // select button NOT previously tapped
-            // gray out selected button
-            // display selected topic tips
+            // in button, replace topic icon with "check icon"
+            // in tableView, replace NOW tips with topic tips
             twoDimensionalArray = []
 
             twoDimensionalArray = topicsArrays[indexNumber].topics
@@ -2442,7 +2479,8 @@ class NowViewController: UIViewController {
             // Selected
             performUIUpdatesOnMain {
 
-                button.imageView?.image = UIImage(named: Constants.Icon.cancel)
+
+
 //                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
 
 
@@ -2457,6 +2495,16 @@ class NowViewController: UIViewController {
 //                let replacedText = originalTitleText.replacingOccurrences(of: "\n", with: "").uppercased()
 
 //                self.topicLabel.text = "\(replacedText) TIPS"
+
+                //selected button
+//                button.imageView?.image = UIImage(named: Constants.Icon.cancel)
+
+                button.setImage(UIImage(named: Constants.Icon.cancel), for: .normal)
+
+                print("B - Newly Tapped Button: \(String(describing: button.imageView?.image))")
+
+
+
             }
 
             currentIndex = indexNumber

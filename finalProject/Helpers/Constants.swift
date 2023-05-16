@@ -27,7 +27,7 @@ struct Constants {
         static let comedian = "icons8-micro"
         static let podcasting = "icons8-browse_podcasts"
         static let playButton = "icons8-youtube_play_button"
-        static let kitchen = "icons8-fridge"
+        static let kitchen = "icons8-kitchen()"
         static let cleaning = "icons8-housekeeping"
         static let homeActivities = "icons8-reading"
         static let tvWatching = "icons8-retro_tv"

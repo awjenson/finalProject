@@ -520,22 +520,41 @@ class ProfileViewController: UIViewController {
 
         performUIUpdatesOnMain {
 
-            //row1
-            self.adviceTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
-            self.adviceTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
-            self.adviceTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
-            self.adviceTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
-            //row2
-            self.adviceTopic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
-            self.adviceTopic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
-            self.adviceTopic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
-            self.adviceTopic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
-            //row3
-            self.adviceTopic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
-            self.adviceTopic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
-            self.adviceTopic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
-            self.adviceTopic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
 
+//            //UIButton.imageView.image
+//            //row1
+//            self.adviceTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
+//            self.adviceTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
+//            self.adviceTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
+//            self.adviceTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
+//            //row2
+//            self.adviceTopic4Button.imageView?.image = UIImage(named: self.topicsArrays[4].icon)
+//            self.adviceTopic5Button.imageView?.image = UIImage(named: self.topicsArrays[5].icon)
+//            self.adviceTopic6Button.imageView?.image = UIImage(named: self.topicsArrays[6].icon)
+//            self.adviceTopic7Button.imageView?.image = UIImage(named: self.topicsArrays[7].icon)
+//            //row3
+//            self.adviceTopic8Button.imageView?.image = UIImage(named: self.topicsArrays[8].icon)
+//            self.adviceTopic9Button.imageView?.image = UIImage(named: self.topicsArrays[9].icon)
+//            self.adviceTopic10Button.imageView?.image = UIImage(named: self.topicsArrays[10].icon)
+//            self.adviceTopic11Button.imageView?.image = UIImage(named: self.topicsArrays[11].icon)
+
+
+            //UIButton.setImage()
+            //row1
+            self.adviceTopic0Button.setImage(UIImage(named: self.topicsArrays[0].icon), for: .normal)
+            self.adviceTopic1Button.setImage(UIImage(named: self.topicsArrays[1].icon), for: .normal)
+            self.adviceTopic2Button.setImage(UIImage(named: self.topicsArrays[2].icon), for: .normal)
+            self.adviceTopic3Button.setImage(UIImage(named: self.topicsArrays[3].icon), for: .normal)
+            //row2
+            self.adviceTopic4Button.setImage(UIImage(named: self.topicsArrays[4].icon), for: .normal)
+            self.adviceTopic5Button.setImage(UIImage(named: self.topicsArrays[5].icon), for: .normal)
+            self.adviceTopic6Button.setImage(UIImage(named: self.topicsArrays[6].icon), for: .normal)
+            self.adviceTopic7Button.setImage(UIImage(named: self.topicsArrays[7].icon), for: .normal)
+            //row3
+            self.adviceTopic8Button.setImage(UIImage(named: self.topicsArrays[8].icon), for: .normal)
+            self.adviceTopic9Button.setImage(UIImage(named: self.topicsArrays[9].icon), for: .normal)
+            self.adviceTopic10Button.setImage(UIImage(named: self.topicsArrays[10].icon), for: .normal)
+            self.adviceTopic11Button.setImage(UIImage(named: self.topicsArrays[11].icon), for: .normal)
 
 //            let unTappedButtonEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
 //            //row1
@@ -782,7 +801,11 @@ class ProfileViewController: UIViewController {
             // Selected
             performUIUpdatesOnMain {
 
-                button.imageView?.image = UIImage(named: Constants.Icon.cancel)
+//                //UIButton.imageView.image
+//                button.imageView?.image = UIImage(named: Constants.Icon.cancel)
+
+                //UIButton.setImage()
+                button.setImage(UIImage(named: Constants.Icon.cancel), for: .normal)
 
 //                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
 
