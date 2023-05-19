@@ -539,7 +539,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
                     topicsNow: sundayNow5to8Topics)
 
@@ -558,7 +558,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
                     topicsNow: sundayNow9to10Topics)
 
@@ -577,7 +577,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, morningSnackTopics, homeActivitesTopics,
+                    breakfastTopics, coffeeAtHomeTopics, morningSnackTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
                     topicsNow: sundayNow9to10Topics)
 
@@ -593,7 +593,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics, coffeeTopics,
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics, coffeeAtHomeTopics,
                     morningSnackTopics, cleaningTopics, homeActivitesTopics, kitchenTopics,
                 bathroomAMTopics, homeActivitesTopics, breakTopics,
                 topicsNow: sundayNow11to13Topics)
@@ -611,7 +611,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics, afternoonSnackTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics, afternoonSnackTopics,
                     cleaningTopics, homeActivitesTopics, kitchenTopics,
                     tvWatchingTopics, bathroomAMTopics, breakPMTopics, goingOutTopics,
                 topicsNow: sundayNow11to13Topics)
@@ -630,7 +630,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics,
                     homeActivitesTopics, kitchenTopics, cleaningTopics,
                 tvWatchingTopics, bathroomPMTopics, breakPMTopics, goingOutTopics,
@@ -649,7 +649,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, goingOutTopics,  homeActivitesTopics, kitchenTopics, cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: sundayNow14to16Topics)
 
@@ -667,7 +667,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: sundayNow17to18Topics)
@@ -686,7 +686,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: sundayNow19to20Topics)
@@ -774,7 +774,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
                     topicsNow: mondayNow5to8Topics)
 
@@ -793,7 +793,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
                     workSchoolAMTopics(),
                     topicsNow: mondayNow9to11Topics)
@@ -813,7 +813,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, morningSnackTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: mondayNow9to11Topics)
 
@@ -832,7 +832,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
-                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    coffeeAtHomeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: mondayNow11to13Topics)
 
@@ -850,7 +850,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: mondayNow11to13Topics)
@@ -869,7 +869,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: mondayNow14to16Topics)
@@ -889,7 +889,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeeAtHomePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
                    topicsNow: mondayNow14to16Topics)
 
             default: //notHome
@@ -906,7 +906,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeeAtHomePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
                     homeActivitesTopics, tvWatchingTopics, breakPMTopics,
                     workSchoolLateTopics(),
                     topicsNow: mondayNow17to18Topics)
@@ -925,7 +925,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: mondayNow19to20Topics)
@@ -1011,7 +1011,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
                     topicsNow: tuesdayNow5to8Topics)
 
@@ -1031,7 +1031,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
                     workSchoolAMTopics(),
                     topicsNow: tuesdayNow9to11Topics)
@@ -1053,7 +1053,7 @@ class NowViewController: UIViewController {
 
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, morningSnackTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: tuesdayNow9to11Topics)
 
@@ -1072,7 +1072,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
-                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    coffeeAtHomeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: tuesdayNow11to13Topics)
 
@@ -1091,7 +1091,7 @@ class NowViewController: UIViewController {
             case atHome:
 
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: tuesdayNow11to13Topics)
@@ -1110,7 +1110,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: tuesdayNow14to16Topics)
@@ -1130,7 +1130,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeeAtHomePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
                     topicsNow: tuesdayNow14to16Topics)
 
             default: //notHome
@@ -1147,7 +1147,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeeAtHomePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
                     homeActivitesTopics, tvWatchingTopics, breakPMTopics,
                     workSchoolLateTopics(),
                     topicsNow: tuesdayNow17to18Topics)
@@ -1167,7 +1167,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: tuesdayNow19to20Topics)
@@ -1254,7 +1254,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
                     topicsNow: wednesdayNow5to8Topics)
 
@@ -1275,7 +1275,7 @@ class NowViewController: UIViewController {
 
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
                     workSchoolAMTopics(),
                     topicsNow: wednesdayNow9to11Topics)
@@ -1295,7 +1295,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, morningSnackTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: wednesdayNow9to11Topics)
 
@@ -1313,7 +1313,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
-                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    coffeeAtHomeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: wednesdayNow11to13Topics)
 
@@ -1331,7 +1331,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: wednesdayNow11to13Topics)
@@ -1351,7 +1351,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: wednesdayNow14to16Topics)
@@ -1371,7 +1371,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeeAtHomePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
                     topicsNow: wednesdayNow14to16Topics)
 
             default: //notHome
@@ -1389,7 +1389,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeeAtHomePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
                     homeActivitesTopics, tvWatchingTopics, breakPMTopics,
                     workSchoolLateTopics(),
                     topicsNow: wednesdayNow17to18Topics)
@@ -1408,7 +1408,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: wednesdayNow19to20Topics)
@@ -1493,7 +1493,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
                    topicsNow: thursdayNow5to8Topics)
 
@@ -1513,7 +1513,7 @@ class NowViewController: UIViewController {
 
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
                     workSchoolAMTopics(),
                     topicsNow: thursdayNow9to11Topics)
@@ -1533,7 +1533,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, morningSnackTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: thursdayNow9to11Topics)
 
@@ -1553,7 +1553,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
-                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    coffeeAtHomeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: thursdayNow11to13Topics)
 
@@ -1571,7 +1571,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: thursdayNow11to13Topics)
@@ -1591,7 +1591,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: thursdayNow14to16Topics)
@@ -1612,7 +1612,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeeAtHomePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
                     topicsNow: thursdayNow14to16Topics)
 
             default: //notHome
@@ -1630,7 +1630,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeeAtHomePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
                     homeActivitesTopics, tvWatchingTopics, breakPMTopics,
                     workSchoolLateTopics(),
                     topicsNow: thursdayNow17to18Topics)
@@ -1650,7 +1650,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: thursdayNow19to20Topics)
@@ -1736,7 +1736,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, workSchoolAMTopics(),
                     topicsNow: fridayNow5to8Topics)
 
@@ -1755,7 +1755,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
                     workSchoolAMTopics(),
                     topicsNow: fridayNow9to11Topics)
@@ -1776,7 +1776,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, morningSnackTopics, coffeeTopics, homeActivitesTopics,
+                    breakfastTopics, morningSnackTopics, coffeeAtHomeTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: fridayNow9to11Topics)
 
@@ -1796,7 +1796,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics,
-                    coffeeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
+                    coffeeAtHomeTopics, morningSnackTopics, bathroomAMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, breakTopics, workSchoolAMTopics(),
                     topicsNow: fridayNow11to13Topics)
 
@@ -1814,7 +1814,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: fridayNow11to13Topics)
@@ -1834,7 +1834,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, bathroomPMTopics, homeActivitesTopics,
                     cleaningTopics, kitchenTopics, goingOutTopics, breakTopics, workSchoolPMTopics(),
                     topicsNow: fridayNow14to16Topics)
@@ -1856,7 +1856,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
+                    gymTopics, runYogaTopics(), lunchTopics, afternoonSnackTopics, coffeeAtHomePMTopics, bathroomPMTopics, cleaningTopics, kitchenTopics, homeActivitesTopics, goingOutTopics, breakPMTopics, workSchoolPMTopics(),
                     topicsNow: fridayNow14to16Topics)
 
             default: //notHome
@@ -1875,7 +1875,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, afternoonSnackTopics, coffeeAtHomePMTopics, goingOutTopics, kitchenTopics, cleaningTopics,
                     homeActivitesTopics, tvWatchingTopics, breakPMTopics,
                     workSchoolLateTopics(),
                     topicsNow: fridayNow17to18Topics)
@@ -1895,7 +1895,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: fridayNow19to20Topics)
@@ -1985,7 +1985,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
                     topicsNow: saturdayNow5to8Topics)
 
@@ -2004,7 +2004,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, homeActivitesTopics, bedroomTopics,
+                    breakfastTopics, coffeeAtHomeTopics, homeActivitesTopics, bedroomTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, commuteWeekendAMTopics,
                     topicsNow: saturdayNow9to10Topics)
 
@@ -2023,7 +2023,7 @@ class NowViewController: UIViewController {
             case atHome:
                 appendNineTopics(
                     gymTopics, runYogaTopics(), AMRoutineTopics, getReadyAMTopics,
-                    breakfastTopics, coffeeTopics, morningSnackTopics, homeActivitesTopics,
+                    breakfastTopics, coffeeAtHomeTopics, morningSnackTopics, homeActivitesTopics,
                     bathroomAMTopics, kitchenTopics, cleaningTopics, breakTopics,
                     topicsNow: saturdayNow9to10Topics)
 
@@ -2039,7 +2039,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics, coffeeTopics,
+                    gymTopics, runYogaTopics(), AMRoutineTopics, breakfastTopics, coffeeAtHomeTopics,
                     morningSnackTopics, cleaningTopics, homeActivitesTopics, kitchenTopics,
                 bathroomAMTopics, homeActivitesTopics, breakTopics,
                     topicsNow: saturdayNow11to13Topics)
@@ -2059,7 +2059,7 @@ class NowViewController: UIViewController {
             case atHome:
 
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics, afternoonSnackTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics, afternoonSnackTopics,
                     cleaningTopics, homeActivitesTopics, kitchenTopics,
                     tvWatchingTopics, bathroomAMTopics, breakPMTopics, goingOutTopics,
                     topicsNow: saturdayNow11to13Topics)
@@ -2078,7 +2078,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics,
                     homeActivitesTopics, kitchenTopics, cleaningTopics,
                 tvWatchingTopics, bathroomPMTopics, breakPMTopics, goingOutTopics,
@@ -2099,7 +2099,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), lunchTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), lunchTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, goingOutTopics,  homeActivitesTopics, kitchenTopics, cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: saturdayNow14to16Topics)
 
@@ -2117,7 +2117,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     afternoonSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: saturdayNow17to18Topics)
@@ -2136,7 +2136,7 @@ class NowViewController: UIViewController {
             switch homeButtonSeleted {
             case atHome:
                 appendNineTopics(
-                    gymTopics, runYogaTopics(), dinnerTopics, coffeePMTopics,
+                    gymTopics, runYogaTopics(), dinnerTopics, coffeeAtHomePMTopics,
                     lateNightSnackTopics, goingOutTopics, homeActivitesTopics, kitchenTopics,
                     cleaningTopics, tvWatchingTopics, bathroomPMTopics, breakPMTopics,
                     topicsNow: saturdayNow19to20Topics)
@@ -2480,7 +2480,6 @@ class NowViewController: UIViewController {
             performUIUpdatesOnMain {
 
 
-
 //                button.imageEdgeInsets = UIEdgeInsets(top: 0.5, left: 0.5 , bottom: 0.5, right: 0.5)
 
 
@@ -2536,7 +2535,7 @@ class NowViewController: UIViewController {
 
     @IBAction func feedbackNowButtonTapped(_ sender: Any) {
         tapped()
-        goToSourceURL(url: Constants.Webiste.rizeFormURL)
+        goToSourceURL(url: Constants.Website.rizeFormURL)
 
     }
 
@@ -2558,13 +2557,13 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
     func titleColor(number: Int) -> UIColor {
         switch number {
         case 0:
-            return UIColor.systemBlue
+            return UIColor.blue
         case 1:
-            return UIColor.flatBlue()
+            return UIColor.blue
         case 2:
             return UIColor.blue
         default:
-            return UIColor.systemBlue
+            return UIColor.blue
         }
     }
 
@@ -2575,8 +2574,7 @@ extension NowViewController: UITableViewDataSource, UITableViewDelegate {
         //http://swiftquickstart.blogspot.com/2016/10/custom-tableview-section-headers.html
 
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 20))
-        headerView.backgroundColor = UIColor.init(hexString: "FFF4E9")
-
+        headerView.backgroundColor = Constants.RizeBackgroundColor.rizeAppUIColor
 
         let label = UILabel()
         //Display section title text
@@ -2665,8 +2663,8 @@ extension NowViewController: NowTableViewCellDelegate {
         let buyURL = URL(string: buyURL)!
         let safariVC = SFSafariViewController(url: buyURL)
         safariVC.dismissButtonStyle = .close
-        safariVC.preferredBarTintColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
-        safariVC.preferredControlTintColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
+        safariVC.preferredBarTintColor = Constants.RizeBackgroundColor.rizeAppUIColor
+        safariVC.preferredControlTintColor = UIColor.blue
         present(safariVC, animated: true, completion: nil)
     }
 
@@ -2675,15 +2673,15 @@ extension NowViewController: NowTableViewCellDelegate {
         let sourceURL = URL(string: url)!
         let safariVC = SFSafariViewController(url: sourceURL)
         safariVC.dismissButtonStyle = .close
-        safariVC.preferredBarTintColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
-        safariVC.preferredControlTintColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
+        safariVC.preferredBarTintColor = Constants.RizeBackgroundColor.rizeAppUIColor
+        safariVC.preferredControlTintColor = UIColor.blue
         present(safariVC, animated: true, completion: nil)
     }
 
     func goToActivityView(header: String, title: String, body: String) {
         let rizeLogo = UIImage(named: "AppIcon")
 
-        let activityVC = UIActivityViewController(activityItems: ["Tip: \(header)\n\n","\(title)\n\n", "\(body)\n\n","For more tips, download the Rize App on Apple's App Store", rizeLogo], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["Tip: \(header)\n\n","\(title)\n\n", "\(body)\n\n","For more tips, download the 'Rize: Smarter Decisions Now' on Apple's App Store", rizeLogo as Any], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
 
         self.present(activityVC, animated: true, completion: nil)

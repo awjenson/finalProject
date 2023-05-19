@@ -6,7 +6,7 @@ target 'finalProject' do
   use_frameworks!
 
   # Pods for finalProject
-  pod 'SVProgressHUD'
+
 
   
 

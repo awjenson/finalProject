@@ -32,7 +32,7 @@ class RoundCorneredButton: UIButton {
         layer.cornerRadius = 12
         layer.borderWidth = 1.4
 //        layer.borderColor = UIColor.init(hexString: UIColor.lightGray.hexValue(), withAlpha: 0.8)?.cgColor
-        layer.borderColor = UIColor.init(hexString: "2283F6", withAlpha: 0.8)?.cgColor
+        layer.borderColor = UIColor.blue.cgColor
 
         layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
 
@@ -42,8 +42,7 @@ class RoundCorneredButton: UIButton {
 
         layer.masksToBounds = false
 
-
-        backgroundColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
+        backgroundColor = Constants.RizeBackgroundColor.rizeAppUIColor
 
 
     }

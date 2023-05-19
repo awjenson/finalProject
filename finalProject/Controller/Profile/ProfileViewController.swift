@@ -700,7 +700,7 @@ class ProfileViewController: UIViewController {
 
     @IBAction func feedbackYouButtonTapped(_ sender: Any) {
         tapped()
-        goToSourceURL(url: Constants.Webiste.rizeFormURL)
+        goToSourceURL(url: Constants.Website.rizeFormURL)
     }
 
 
@@ -783,7 +783,6 @@ class ProfileViewController: UIViewController {
 
                 self.displayHourInTopicLabel()
 
-
             }
 
             currentIndex = -1
@@ -862,13 +861,13 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func titleColor(number: Int) -> UIColor {
         switch number {
         case 0:
-            return UIColor.flatMint()
+            return UIColor.systemGreen
         case 1:
-            return UIColor.flatGreen()
+            return UIColor.systemGreen
         case 2:
-            return UIColor.flatForestGreen()
+            return UIColor.systemGreen
         default:
-            return UIColor.flatMint()
+            return UIColor.systemGreen
         }
     }
 
@@ -877,7 +876,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 20))
-        headerView.backgroundColor = UIColor.init(hexString: "FFF4E9")
+        headerView.backgroundColor = Constants.RizeBackgroundColor.rizeAppUIColor
 
         let label = UILabel()
         //Display section title text
@@ -952,15 +951,15 @@ extension ProfileViewController: AdviceTableViewCellDelegate {
         let sourceURL = URL(string: url)!
         let safariVC = SFSafariViewController(url: sourceURL)
         safariVC.dismissButtonStyle = .close
-        safariVC.preferredBarTintColor = UIColor.init(hexString: "FFF1E5", withAlpha: 1)
-        safariVC.preferredControlTintColor = UIColor.init(hexString: "2283F6", withAlpha: 1)
+        safariVC.preferredBarTintColor = Constants.RizeBackgroundColor.rizeAppUIColor
+        safariVC.preferredControlTintColor = UIColor.blue
         present(safariVC, animated: true, completion: nil)
     }
 
     func goToActivityView(header: String, title: String, body: String) {
         let rizeLogo = UIImage(named: "AppIcon")
 
-        let activityVC = UIActivityViewController(activityItems: ["Tip: \(header)\n\n","\(title)\n\n", "\(body)\n\n","For more tips, download the Rize App on Apple's App Store", rizeLogo], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["Tip: \(header)\n\n","\(title)\n\n", "\(body)\n\n","For more tips, download 'Rize: Smarter Decisions Now' on Apple's App Store", rizeLogo], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
 
         self.present(activityVC, animated: true, completion: nil)

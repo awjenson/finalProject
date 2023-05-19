@@ -7,14 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
+
+    struct RizeBackgroundColor {
+        static let rizeAppUIColor = UIColor(red: 255, green: 244, blue: 233)
+
+    }
+
 
     struct Text {
         static let rizeEmail = "   RizeTheApp@gmail.com   "
     }
 
-    struct Webiste {
+    struct Website {
 
         static let rizeFormURL = "https://forms.gle/BLoHBW61ZLnxoQiW8"
     }

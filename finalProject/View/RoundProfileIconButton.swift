@@ -16,7 +16,7 @@ class RoundProfileIconButton: UIButton {
 
             imageView?.alpha = 0.25
 
-            layer.borderColor = UIColor.init(complementaryFlatColorOf: UIColor.lightGray, withAlpha: 0.5)?.cgColor
+            layer.borderColor = UIColor.gray.cgColor
             layer.borderWidth = 2
 
             layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor

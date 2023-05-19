@@ -46,10 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         print("applicationDidBecomeActive")
         
-        userInfoVC?.reloadViewFromNib()
-        nowVC?.segueToIntroVC()
-        adviceVC?.segueToIntroVC()
-        hobbyVC?.segueToIntroVC()
+        userInfoVC?.reloadViewFromNib() //Home screen
+
+        nowVC?.segueToIntroVC() //Activity tab
+        adviceVC?.segueToIntroVC() //Personal tab
+        hobbyVC?.segueToIntroVC() //Passion tab/
 
     }
 

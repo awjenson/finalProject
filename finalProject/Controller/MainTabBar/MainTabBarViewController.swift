@@ -41,12 +41,6 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate{
         let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .semibold)]
         UITabBarItem.appearance().setTitleTextAttributes(fontAttributes, for: .normal)
 
-        
-
-       
-
-
-
 
 //        UITabBar.setTransparentTabbar()
 //        layerGradient.colors = [UIColor(complementaryFlatColorOf: .black, withAlpha: 0.6), UIColor(complementaryFlatColorOf: .black, withAlpha: 0.8)]

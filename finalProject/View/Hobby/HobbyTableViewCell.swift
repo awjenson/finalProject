@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ChameleonFramework
+
 
 // The NowTableViewCell is the boss
 protocol HobbyTableViewCellDelegate {
