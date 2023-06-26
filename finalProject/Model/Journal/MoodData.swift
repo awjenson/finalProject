@@ -8,10 +8,8 @@
 
 import Foundation
 
-
+//I don't think this is used anymore...
 struct MoodData {
-
-
 
     // MARK: - BASED ON MOOD
 
@@ -125,7 +123,7 @@ struct MoodData {
 
     static let stressedTip9 = Hint(title: "People felt less stressed when they checked their email less often, study finds", body: "Check your email in chunks several times a day, rather than constantly responding to messages as they come in.", sourceName: "The University of British Columbia", sourceURL: "https://news.ubc.ca/2014/12/03/check-less-to-reduce-email-stress/")
 
-static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve your mental health and future income, 13-year study finds", body: "Men who reported having had stress and mental problems, and consulting a psychotherapist, experienced a 13% income increase in the subsequent year. Women experienced an 8% income increase. The study found gender discrimination to partially explain the difference in income increase. However, consulting a psychotherapist helps women nearly twice as much as men in terms of mental health." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/psychotherapy-can-make-you-richer-especially-if-you-are-a-man-107628", doneType: "", buyURL: "")
+    static let stressedTip10 = Tip(header: "", title: "Psychotherapy helps improve your mental health and future income, 13-year study finds", body: "Men who reported having had stress and mental problems, and consulting a psychotherapist, experienced a 13% income increase in the subsequent year. Women experienced an 8% income increase. The study found gender discrimination to partially explain the difference in income increase. However, consulting a psychotherapist helps women nearly twice as much as men in terms of mental health." , sourceName: "The Conversation", sourceURL: "https://theconversation.com/psychotherapy-can-make-you-richer-especially-if-you-are-a-man-107628", doneBool: false, doneKey: "", buyURL: "")
 
 
 

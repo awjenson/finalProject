@@ -8,6 +8,4 @@
 
 import Foundation
 
-let lawSuccess0 = Tip(header: "", title: "", body: "", sourceName: "", sourceURL: "", doneType: "", buyURL: "")
 
-let lawSuccess1 = Tip(header: "", title: "", body: "", sourceName: "", sourceURL: "", doneType: "", buyURL: "")

@@ -469,6 +469,7 @@ class NowViewController: UIViewController {
         }
 
 
+        //Is this used below?
         switch weekOfMonth {
         case 1:
             week1()
@@ -477,7 +478,7 @@ class NowViewController: UIViewController {
             week1()
         }
 
-    }
+    } //dayOfWeekAndHour
 
     //cleaningTopics
     //kitchenTopics - Day, Evening

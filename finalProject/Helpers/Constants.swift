@@ -16,6 +16,14 @@ struct Constants {
 
     }
 
+    //buttonTapped() doesn't occur when: checked
+    //buttonTapped() does occur when: unchecked
+
+    struct DoneTypeIcon {
+        static let checked = "✅"
+        static let unchecked = "☑︎"
+    }
+
 
     struct Text {
         static let rizeEmail = "   RizeTheApp@gmail.com   "
@@ -27,7 +35,7 @@ struct Constants {
     }
 
     struct Icon {
-
+        static let health = "icons8-heart_health"
         static let bored = "icons8-puzzled"
         static let lonely = "icons8-man"
         static let confident = "icons8-arms_up"

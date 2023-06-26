@@ -60,7 +60,7 @@ class UserInfoViewController: UIViewController {
     var month = 0
 
     let arrowIcon = "icons8-collapse_arrow-1"
-    let authorText = "Relax"
+    let authorText = "Pause and Relax"
     let quoteText = "Inhale deeply, exhale slowly"
 
     var selectedImage: String?

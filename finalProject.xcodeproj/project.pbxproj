@@ -28,6 +28,7 @@
 		DA272D0D20BCE72B00137039 /* CounterAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA272D0C20BCE72B00137039 /* CounterAdvice.swift */; };
 		DA2B860120B9EB52005B7DD6 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */; };
 		DA2BBE9B20A532EE00356777 /* ProfileSelectedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */; };
+		DA30FF7E2A337C7700A71E36 /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA30FF7D2A337C7700A71E36 /* FilterData.swift */; };
 		DA344865240B0CBB007FC75B /* RoundBoarderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */; };
 		DA359C642043324F000190AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA359C632043324F000190AD /* AppDelegate.swift */; };
 		DA359C692043324F000190AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA359C672043324F000190AD /* Main.storyboard */; };
@@ -39,11 +40,14 @@
 		DA361D3920896E5D007ACE59 /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA361D3820896E5D007ACE59 /* Date+convertToString.swift */; };
 		DA388FA620F2957000AC5EDC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA388FA520F2957000AC5EDC /* CardView.swift */; };
 		DA3F77C52055BE4800F7361A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F77C42055BE4800F7361A /* Tip.swift */; };
+		DA40245A2A2C0E1300B67733 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4024592A2C0E1300B67733 /* ChecklistView.swift */; };
+		DA40245D2A2C606900B67733 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40245C2A2C606900B67733 /* FilterTableViewCell.swift */; };
 		DA40D4A2246767F3005E2CC4 /* MainTopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40D4A1246767F3005E2CC4 /* MainTopicTableViewCell.swift */; };
 		DA49DF3E25BCC00B0099F229 /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49DF3D25BCC00B0099F229 /* HobbyViewController.swift */; };
 		DA49DF4325BCC3CE0099F229 /* HobbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA49DF4225BCC3CE0099F229 /* HobbyTableViewCell.swift */; };
 		DA4B8923226EDCB1007671B0 /* BlueZones.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B8922226EDCB1007671B0 /* BlueZones.swift */; };
 		DA511DE3213F171B0056949B /* MoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA511DE2213F171B0056949B /* MoodData.swift */; };
+		DA52AEF82A2D245000DD392E /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA52AEF72A2D245000DD392E /* TodoData.swift */; };
 		DA531D3920C19F4E00EA9A83 /* RoundCorneredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */; };
 		DA59A24A209E4845008018D1 /* NewUserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59A249209E4845008018D1 /* NewUserList.swift */; };
 		DA5AED9F207683120094AA57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA5AED9E207683120094AA57 /* GoogleService-Info.plist */; };
@@ -126,6 +130,7 @@
 		DA272D0C20BCE72B00137039 /* CounterAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAdvice.swift; sourceTree = "<group>"; };
 		DA2B860020B9EB52005B7DD6 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		DA2BBE9A20A532EE00356777 /* ProfileSelectedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectedPerson.swift; sourceTree = "<group>"; };
+		DA30FF7D2A337C7700A71E36 /* FilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
 		DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBoarderButton.swift; sourceTree = "<group>"; };
 		DA359C602043324F000190AD /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA359C632043324F000190AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,11 +144,14 @@
 		DA361D3820896E5D007ACE59 /* Date+convertToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
 		DA388FA520F2957000AC5EDC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DA3F77C42055BE4800F7361A /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		DA4024592A2C0E1300B67733 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
+		DA40245C2A2C606900B67733 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
 		DA40D4A1246767F3005E2CC4 /* MainTopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopicTableViewCell.swift; sourceTree = "<group>"; };
 		DA49DF3D25BCC00B0099F229 /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
 		DA49DF4225BCC3CE0099F229 /* HobbyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyTableViewCell.swift; sourceTree = "<group>"; };
 		DA4B8922226EDCB1007671B0 /* BlueZones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueZones.swift; sourceTree = "<group>"; };
 		DA511DE2213F171B0056949B /* MoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodData.swift; sourceTree = "<group>"; };
+		DA52AEF72A2D245000DD392E /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		DA531D3820C19F4E00EA9A83 /* RoundCorneredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCorneredButton.swift; sourceTree = "<group>"; };
 		DA59A249209E4845008018D1 /* NewUserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserList.swift; sourceTree = "<group>"; };
 		DA5AED9E207683120094AA57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -292,6 +300,7 @@
 				DA5AEDB320794CF90094AA57 /* ProfileStatement.swift */,
 				DAB0506D209AAF1E0066D705 /* ProfileUserData.swift */,
 				DA6EBB3221C9C149006F7259 /* PersonAdvice.swift */,
+				DA30FF7D2A337C7700A71E36 /* FilterData.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -363,6 +372,7 @@
 				DACA911A20FBD06500475CE5 /* Habits */,
 				DA272D0620BCB70000137039 /* Profile */,
 				DAD4C65C246A5918003B215C /* ExpandableTips.swift */,
+				DA52AEF72A2D245000DD392E /* TodoData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,6 +380,7 @@
 		DA359C7820437225000190AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA40245B2A2C604400B67733 /* Filter */,
 				DA49DF4125BCC3A70099F229 /* Hobby */,
 				DA40D4A0246767CA005E2CC4 /* MainTopic */,
 				DAA1022620537D5200A25EFC /* Journal */,
@@ -395,6 +406,7 @@
 				DA344864240B0CBB007FC75B /* RoundBoarderButton.swift */,
 				DAD4C65E246A65C1003B215C /* MyCustomHeader.swift */,
 				DABD221C26924EE300A3AE66 /* RoundButtonWithImageAndText.swift */,
+				DA4024592A2C0E1300B67733 /* ChecklistView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -432,6 +444,14 @@
 			);
 			name = "Custom Controls";
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		DA40245B2A2C604400B67733 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				DA40245C2A2C606900B67733 /* FilterTableViewCell.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		DA40D4A0246767CA005E2CC4 /* MainTopic */ = {
@@ -690,6 +710,7 @@
 				DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */,
 				DA97663323D3B7D4000FC1B0 /* RoundShadowView.swift in Sources */,
 				DABD221D26924EE300A3AE66 /* RoundButtonWithImageAndText.swift in Sources */,
+				DA40245A2A2C0E1300B67733 /* ChecklistView.swift in Sources */,
 				DAD4C65F246A65C1003B215C /* MyCustomHeader.swift in Sources */,
 				DAABB5D42207CB2100066AF8 /* CALayer+Extension.swift in Sources */,
 				DAA4287529C79E5800F3BCBB /* TinyHabits.swift in Sources */,
@@ -711,6 +732,7 @@
 				DA687E6E229E1171000E1465 /* LaunchScreenViewController.swift in Sources */,
 				DADE4C7A20E9A5D300E19393 /* QuoteData.swift in Sources */,
 				DA1AC1A5247B90EA00FF8B70 /* UIScrollView+Extension.swift in Sources */,
+				DA52AEF82A2D245000DD392E /* TodoData.swift in Sources */,
 				DA197B3A246760D900EE324B /* MainTopic.swift in Sources */,
 				DAAC061A2349959700E8C625 /* AdviceTableViewCell.swift in Sources */,
 				DA40D4A2246767F3005E2CC4 /* MainTopicTableViewCell.swift in Sources */,
@@ -723,10 +745,12 @@
 				DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */,
 				DA7898872051E5E0005046D8 /* ProfileDataModel.swift in Sources */,
 				DAB0506E209AAF1E0066D705 /* ProfileUserData.swift in Sources */,
+				DA30FF7E2A337C7700A71E36 /* FilterData.swift in Sources */,
 				DA361D2F2084273E007ACE59 /* User.swift in Sources */,
 				DA2223A220E8672800103829 /* ResponseTableViewCell.swift in Sources */,
 				DA361D2320818BDF007ACE59 /* Constants.swift in Sources */,
 				DA70BCE42470EE97000CA133 /* Topics.swift in Sources */,
+				DA40245D2A2C606900B67733 /* FilterTableViewCell.swift in Sources */,
 				DAF1B32F207AFDFD0090EBF0 /* MainTabBarViewController.swift in Sources */,
 				DA09E2FA22126E5A0050C1E8 /* GradientView.swift in Sources */,
 				DA5AEDB420794CF90094AA57 /* ProfileStatement.swift in Sources */,

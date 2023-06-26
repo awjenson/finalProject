@@ -22,3 +22,4 @@ struct Topic {
 
 // I want to pull the Now tips and 4 other Topic tips. 
 
+

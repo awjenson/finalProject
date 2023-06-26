@@ -651,13 +651,13 @@ extension HobbyViewController: UITableViewDataSource, UITableViewDelegate {
     func titleColor(number: Int) -> UIColor {
         switch number {
         case 0:
-            return UIColor.purple
+            return UIColor.red
         case 1:
-            return UIColor.purple
+            return UIColor.red
         case 2:
-            return UIColor.purple
+            return UIColor.red
         default:
-            return UIColor.purple
+            return UIColor.red
         }
     }
 
@@ -680,6 +680,8 @@ extension HobbyViewController: UITableViewDataSource, UITableViewDelegate {
 
         return headerView
     }
+
+
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60

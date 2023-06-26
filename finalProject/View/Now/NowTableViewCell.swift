@@ -74,9 +74,6 @@ class NowTableViewCell: UITableViewCell {
         doneButton.isSelected = false
 
 
-
-
-        
         //Underline effect for UIButton Title and left aligment
         let attributedString = NSMutableAttributedString(string: tip.sourceName)
         attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
