@@ -66,7 +66,7 @@ class FilterTableViewCell: UITableViewCell {
 
         //DONE BUTTON
         //Check if tip's doneType is true/false
-        doneButton.setTitle(tip.doneType ? Constants.DoneTypeIcon.checked : Constants.DoneTypeIcon.unchecked, for: .normal)
+        doneButton.setTitle(tip.doneBool ? Constants.DoneTypeIcon.checked : Constants.DoneTypeIcon.unchecked, for: .normal)
 
 
         //TEST
@@ -152,15 +152,12 @@ class FilterTableViewCell: UITableViewCell {
 
         print("doneButtonTapped")
 
-        print("DoneType before change: \(tipItem.doneType)")
+        print("DoneType before change: \(tipItem.doneBool)")
 
-        setUserDefaultsBoolValue(updateDoneType(tipItem.doneType), forKey: tipItem.doneKey)
+        setUserDefaultsBoolValue(updateDoneType(tipItem.doneBool), forKey: tipItem.doneKey)
 
-        print("DoneType after change: \(tipItem.doneType)")
+        print("DoneType after change: \(tipItem.doneBool)")
         print("DoneType after change key, value: \(defaults.bool(forKey: tipItem.doneKey))")
-
-
-
 
 
         //Check if button is checked
@@ -178,7 +175,7 @@ class FilterTableViewCell: UITableViewCell {
         //Reload tableView Header
 
         //TEST
-        //delegate?.buttonTappedInSection(section)
+        delegate?.buttonTappedInSection(section)
 
     }
 

@@ -92,6 +92,8 @@ let health_todo_Tip4 = Tip(header: "", title: "🥤 Not a drinker of sodas, frui
 let health_todo_Tip5 = Tip(header: "", title: "🚰 Drinking water everyday", body: "Getting enough water every day is important for your health." , sourceName: "Centers for Disease Control and Prevention", sourceURL: "https://www.cdc.gov/healthyweight/healthy_eating/water-and-healthier-drinks.html", doneBool: getUserDefaultsBoolValue(forKey: health_todo_Tip5_Key), doneKey: health_todo_Tip5_Key, buyURL: "")
 //1
 
+
+
 let health_todo_TipArray0 = [health_todo_Tip0, health_todo_Tip1, health_todo_Tip2, health_todo_Tip3, health_todo_Tip4, health_todo_Tip5,]
 
 let health_todo_Topic = Topic(title: health_todo_Title, icon: health_todo_Icon, tip: health_todo_TipArray0)

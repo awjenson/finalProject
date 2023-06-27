@@ -1151,28 +1151,28 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.95686274510000002" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="DbN-cb-LW6" userLabel="HeaderView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="339"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="377"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4VD-PP-FoU">
-                                            <rect key="frame" x="20" y="10" width="374" height="329"/>
+                                            <rect key="frame" x="20" y="10" width="374" height="367"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Personalize Your Tips:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGg-Cx-CZK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="2.3333333333333335"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalize Your Tips:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGg-Cx-CZK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="21.666666666666668"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="General:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epk-EG-KmT">
-                                                    <rect key="frame" x="0.0" y="10.333333333333332" width="374" height="14.333333333333332"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epk-EG-KmT">
+                                                    <rect key="frame" x="0.0" y="29.666666666666661" width="374" height="14.333333333333332"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="91g-eP-eXC">
-                                                    <rect key="frame" x="0.0" y="32.666666666666657" width="374" height="105"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="91g-eP-eXC">
+                                                    <rect key="frame" x="0.0" y="52" width="374" height="105"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AX1-QM-1CX">
                                                             <rect key="frame" x="0.0" y="0.0" width="207.66666666666666" height="105"/>
@@ -1187,7 +1187,7 @@
                                                                     <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                                                 </segmentedControl>
                                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IMz-HD-7rM">
-                                                                    <rect key="frame" x="0.0" y="37.000000000000007" width="207.66666666666666" height="31.999999999999993"/>
+                                                                    <rect key="frame" x="0.0" y="37" width="207.66666666666666" height="32"/>
                                                                     <segments>
                                                                         <segment title="Single"/>
                                                                         <segment title="In Relationship"/>
@@ -1231,7 +1231,7 @@
                                                                     </connections>
                                                                 </segmentedControl>
                                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="38V-yU-EXP">
-                                                                    <rect key="frame" x="0.0" y="37.000000000000007" width="156.33333333333334" height="31.999999999999993"/>
+                                                                    <rect key="frame" x="0.0" y="37" width="156.33333333333334" height="32"/>
                                                                     <segments>
                                                                         <segment title="Running"/>
                                                                         <segment title="Yoga"/>
@@ -1262,10 +1262,10 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Xhp-rl-J3P">
-                                                    <rect key="frame" x="0.0" y="145.66666666666669" width="374" height="145.66666666666669"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Xhp-rl-J3P">
+                                                    <rect key="frame" x="0.0" y="165" width="374" height="145.66666666666663"/>
                                                     <subviews>
-                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Idw-u1-Fjl">
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Idw-u1-Fjl">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="32"/>
                                                             <segments>
                                                                 <segment title="Teen"/>
@@ -1277,14 +1277,14 @@
                                                             </segments>
                                                             <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                                         </segmentedControl>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Startup:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-rt-7pD">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Startup:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-rt-7pD">
                                                             <rect key="frame" x="0.0" y="37" width="374" height="14.333333333333336"/>
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-EX-Jmq">
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-EX-Jmq">
                                                             <rect key="frame" x="0.0" y="57.333333333333343" width="374" height="32"/>
                                                             <segments>
                                                                 <segment title="Idea"/>
@@ -1299,15 +1299,15 @@
                                                                 <action selector="startupControlTapped:" destination="soj-Yc-jSH" eventType="valueChanged" id="gSs-1R-qSX"/>
                                                             </connections>
                                                         </segmentedControl>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Film:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP9-gS-mUa">
-                                                            <rect key="frame" x="0.0" y="94.333333333333343" width="374" height="14.333333333333329"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP9-gS-mUa">
+                                                            <rect key="frame" x="0.0" y="94.333333333333314" width="374" height="14.333333333333329"/>
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="juq-dw-Gw8">
-                                                            <rect key="frame" x="0.0" y="114.66666666666666" width="374" height="32"/>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="juq-dw-Gw8">
+                                                            <rect key="frame" x="0.0" y="114.66666666666669" width="374" height="32"/>
                                                             <segments>
                                                                 <segment title="Idea"/>
                                                                 <segment title="Script"/>
@@ -1324,12 +1324,12 @@
                                                         </segmentedControl>
                                                     </subviews>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-2B-f7j">
-                                                    <rect key="frame" x="0.0" y="299.33333333333331" width="374" height="0.0"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-2B-f7j">
+                                                    <rect key="frame" x="0.0" y="318.66666666666669" width="374" height="18.666666666666686"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Track Your Goals (Tap ☑︎):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3I-Xx-8D6">
-                                                    <rect key="frame" x="0.0" y="307.33333333333331" width="374" height="21.666666666666686"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Your Goals (Tap ☑︎):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3I-Xx-8D6">
+                                                    <rect key="frame" x="0.0" y="345.33333333333331" width="374" height="21.666666666666686"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1346,7 +1346,7 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="8lw-JK-s8c" userLabel="FooterView">
-                                    <rect key="frame" x="0.0" y="693" width="414" height="258"/>
+                                    <rect key="frame" x="0.0" y="731" width="414" height="258"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nio-xI-ehw">
@@ -1527,7 +1527,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="276" id="KRg-td-VRj" customClass="FilterTableViewCell" customModule="finalProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="389" width="414" height="276"/>
+                                        <rect key="frame" x="0.0" y="427" width="414" height="276"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KRg-td-VRj" id="8jR-LV-y4Q">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="276"/>

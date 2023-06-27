@@ -382,17 +382,17 @@ class HobbyViewController: UIViewController {
         performUIUpdatesOnMain {
 
 //            //row1
-//            self.hobbyTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
-//            self.hobbyTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
-//            self.hobbyTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
-//            self.hobbyTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
+            self.hobbyTopic0Button.imageView?.image = UIImage(named: self.topicsArrays[0].icon)
+            self.hobbyTopic1Button.imageView?.image = UIImage(named: self.topicsArrays[1].icon)
+            self.hobbyTopic2Button.imageView?.image = UIImage(named: self.topicsArrays[2].icon)
+            self.hobbyTopic3Button.imageView?.image = UIImage(named: self.topicsArrays[3].icon)
 
-            //UIButton.setImage
+            //UIButton.setImage()
             //row1
-            self.hobbyTopic0Button.setImage(UIImage(named: self.topicsArrays[0].icon), for: .normal)
-            self.hobbyTopic1Button.setImage(UIImage(named: self.topicsArrays[1].icon), for: .normal)
-            self.hobbyTopic2Button.setImage(UIImage(named: self.topicsArrays[2].icon), for: .normal)
-            self.hobbyTopic3Button.setImage(UIImage(named: self.topicsArrays[3].icon), for: .normal)
+//            self.hobbyTopic0Button.setImage(UIImage(named: self.topicsArrays[0].icon), for: UIControl.State.normal)
+//            self.hobbyTopic1Button.setImage(UIImage(named: self.topicsArrays[1].icon), for: UIControl.State.normal)
+//            self.hobbyTopic2Button.setImage(UIImage(named: self.topicsArrays[2].icon), for: UIControl.State.normal)
+//            self.hobbyTopic3Button.setImage(UIImage(named: self.topicsArrays[3].icon), for: UIControl.State.normal)
 
 
             //row2
@@ -532,16 +532,22 @@ class HobbyViewController: UIViewController {
         }
     }
 
+    func resetUIofAllButtonsToOriginalIcons() {
+
+        resetTopicButtonOriginalStyle(button: hobbyTopic0Button)
+        resetTopicButtonOriginalStyle(button: hobbyTopic1Button)
+        resetTopicButtonOriginalStyle(button: hobbyTopic2Button)
+        resetTopicButtonOriginalStyle(button: hobbyTopic3Button)
+
+    }
+
 
 
     func flipButton(at indexNumber: Int, on button: CircleButton) {
 
         // reset buttons to original UI display
         //row1
-        resetTopicButtonOriginalStyle(button: hobbyTopic0Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic1Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic2Button)
-        resetTopicButtonOriginalStyle(button: hobbyTopic3Button)
+
         //row2
 //        resetTopicButtonOriginalStyle(button: hobbyTopic4Button)
 //        resetTopicButtonOriginalStyle(button: hobbyTopic5Button)
@@ -555,9 +561,17 @@ class HobbyViewController: UIViewController {
 
         // Identify what button was tapped
 
+        print("PASSION VC - func flipButton tapped at \(indexNumber)")
+
+        resetUIofAllButtonsToOriginalIcons()
+
+        // Identify what button was tapped
+
+
+
         if currentIndex == indexNumber {
 
-            print("A - Previously Tapped")
+            print("A - Previously Tapped, Return to Passion Tips")
 
             // Selected button previously tapped, return to Now Tips
             // Check if this button has been tapped just prior

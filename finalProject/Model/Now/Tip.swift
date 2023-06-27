@@ -19,7 +19,7 @@ class Tip {
     let body: String
     let sourceName: String
     let sourceURL: String?  // ?, in case URL doesn't work
-    let doneType: Bool
+    let doneBool: Bool
     let doneKey: String
     let buyURL: String? // ?, in case URL doesn't work
 
@@ -32,7 +32,7 @@ class Tip {
         self.body = body
         self.sourceName = sourceName
         self.sourceURL = sourceURL
-        self.doneType = doneBool
+        self.doneBool = doneBool
         self.doneKey = doneKey
         self.buyURL = buyURL
     }

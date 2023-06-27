@@ -41,7 +41,7 @@ class FilterViewController: UIViewController {
     //MARK: - TEST FOR HEADER UPDATE
     var sectionHeaderViews: [UIView] = []
     var sectionHeaderLabels: [UILabel] = []
-    var completedTipCounts: [Int] = [] // Array to store completed tip counts for each section
+    var totalCompletedTipCounts: [Int] = [] // Array to store completed tip counts for each section
     var totalTipCounts: [Int] = [] // Array to store completed tip counts for each section
 
     //MARK: - Parameters
@@ -61,13 +61,43 @@ class FilterViewController: UIViewController {
 
        //set array that displays in initial tableview
         twoDimensionalArray = topicsNow.topics
+
     }
 
-    func getTotalTipCountsAndCompletedTipCounts(_ twoDiemsionalArray: [Topic]) {
-        for e in twoDiemsionalArray {
-            
+
+
+    func updateTwoDimensionalArrayOfTopics(todos: Topics) {
+        // Set array that displays in initial table view
+        twoDimensionalArray = todos.topics
+
+        // Clear any existing data in the arrays
+        totalCompletedTipCounts.removeAll()
+        totalTipCounts.removeAll()
+
+        // Iterate over each section in the two-dimensional array
+        for section in twoDimensionalArray {
+            var completedCount = 0
+
+            // Calculate the completed tip count for the current section
+            for tip in section.tip {
+                if tip.doneBool {
+                    completedCount += 1
+                }
+            }
+
+            // Calculate the total tip count for the current section
+            let totalCount = section.tip.count
+
+            // Append the completed tip count and total tip count to the respective arrays
+            totalCompletedTipCounts.append(completedCount)
+            totalTipCounts.append(totalCount)
         }
+
+        // Print the arrays for debugging
+        print("Total Completed Tip Counts: \(totalCompletedTipCounts)")
+        print("Total Tip Counts: \(totalTipCounts)")
     }
+
 
     func flipButton(at indexNumber: Int, on button: UISegmentedControl) {
 
@@ -188,6 +218,8 @@ class FilterViewController: UIViewController {
 
 //        genderControl.selectedSegmentIndex = defaults.integer(forKey: genderKey)
 
+//        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
+
         relationshipControl.selectedSegmentIndex = defaults.integer(forKey: relationshipKey)
 
         parentControl.selectedSegmentIndex = defaults.integer(forKey: parentKey)
@@ -202,7 +234,7 @@ class FilterViewController: UIViewController {
 
         filmControl.selectedSegmentIndex = defaults.integer(forKey: filmKey)
 
-//        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
+
 
         //Font color of segment controls
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)]
@@ -212,11 +244,7 @@ class FilterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
-        let dictionary = defaults.dictionaryRepresentation()
-        print("User Defaults Dictionary:")
-        for (key, value) in dictionary {
-            print("\(key): \(value)")
-        }
+
 
 
         //TEST
@@ -236,6 +264,7 @@ class FilterViewController: UIViewController {
     }
 
 
+
     
     // MARK: - Methods
 
@@ -246,8 +275,11 @@ class FilterViewController: UIViewController {
 
         selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [health_todo_Topic, wealth_todo_Topic, startupTodoTopic()])
 
+
         return selectedTopic
     }
+
+
 
     func setupUI() {
 
@@ -255,8 +287,9 @@ class FilterViewController: UIViewController {
         
         //used for Checklist
         //First 4 Topics are NOT used
-        appendFiveTopics(wealthTodoTopics(), wealthTodoTopics(), startupTopics(), filmTopics(), topicsNow: setupTodoLists())
+//        appendFiveTopics(wealthTodoTopics(), wealthTodoTopics(), startupTopics(), filmTopics(), topicsNow: setupTodoLists())
 
+        updateTwoDimensionalArrayOfTopics(todos: setupTodoLists())
 
         // set header of UITableView
         filterTableViewHeader.frame.size.height = 360
@@ -623,9 +656,6 @@ extension FilterViewController: UITableViewDataSource, UITableViewDelegate {
 
         //twoDimensionalArray[section].tip[section].doneType
 
-
-
-
         //Display section title text
         let label = UILabel()
         label.frame = CGRect.init(x: 26, y: 15, width: headerView.frame.width-10, height: headerView.frame.height)
@@ -634,12 +664,16 @@ extension FilterViewController: UITableViewDataSource, UITableViewDelegate {
         label.textColor = titleColor(number: section).darker()
         label.text = displayHeaderLabelText(for: section)
         headerView.addSubview(label)
+        sectionHeaderLabels.append(label)
+        print("sectionHeaderLabels: \(sectionHeaderLabels)")
 
         //TEST
         //sectionHeaderViews.append(headerView)
         //updateHeaderText(for: section)
 
-        sectionHeaderLabels.append(label)
+
+
+
 
 
         return headerView
@@ -731,14 +765,7 @@ extension FilterViewController: FilterTableViewCellDelegate {
 
 
     //TEST
-    //TEST
-    func getCompletedTipCount(for section: Int) -> Int {
 
-        let completedTips = twoDimensionalArray[section].tip.filter { $0.doneType }
-        print("getCompletedTipCount for section", section, ": ", completedTips.count)
-
-        return completedTips.count
-    }
 
 
 
@@ -746,25 +773,24 @@ extension FilterViewController: FilterTableViewCellDelegate {
     func buttonTappedInSection(_ section: Int) {
         print("buttonTappedInSection(): \(section)")
 
-        // Update the completed tip count for the section
-        //completedTipCounts[section] = getCompletedTipCount(for: section)
-
-        //update twoDimensionArray
-        appendFiveTopics(wealthTodoTopics(), wealthTodoTopics(), startupTopics(), filmTopics(), topicsNow: setupTodoLists())
-
-
-        // Update the header label text
-        sectionHeaderLabels[section].text = displayHeaderLabelText(for: section) + "*"
-
     }
 
+    //TEST
+    func getCompletedTipCount(for section: Int) -> Int {
+
+        let completedTips = twoDimensionalArray[section].tip.filter { $0.doneBool }
+        print("getCompletedTipCount for section", section, ": ", completedTips.count)
+
+        return completedTips.count
+    }
 
 
     func displayHeaderLabelText(for section: Int) -> String {
 
         let completedCount = getCompletedTipCount(for: section)
         let totalCount = twoDimensionalArray[section].tip.count
-        let completedAndTotalCount = "\(completedCount) / \(totalCount)"
+
+        let completedAndTotalCount = ":  \(completedCount) / \(totalCount)"
 
         return twoDimensionalArray[section].title.uppercased()
     }
