@@ -1185,6 +1185,9 @@
                                                                     </segments>
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                                                    <connections>
+                                                                        <action selector="sexControlTapped:" destination="soj-Yc-jSH" eventType="valueChanged" id="xDA-cT-rry"/>
+                                                                    </connections>
                                                                 </segmentedControl>
                                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IMz-HD-7rM">
                                                                     <rect key="frame" x="0.0" y="37" width="207.66666666666666" height="32"/>
@@ -1276,6 +1279,9 @@
                                                                 <segment title="60+"/>
                                                             </segments>
                                                             <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                                            <connections>
+                                                                <action selector="ageControlTapped:" destination="soj-Yc-jSH" eventType="valueChanged" id="7cV-e8-EMt"/>
+                                                            </connections>
                                                         </segmentedControl>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Startup:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-rt-7pD">
                                                             <rect key="frame" x="0.0" y="37" width="374" height="14.333333333333336"/>
@@ -1692,6 +1698,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="ME" image="person" catalog="system" selectedImage="person.fill" id="e2S-h1-Rfk"/>
                     <connections>
+                        <outlet property="ageControl" destination="Idw-u1-Fjl" id="Wr7-m1-Xtz"/>
                         <outlet property="debtControl" destination="86A-Ny-APb" id="UrY-kS-jBv"/>
                         <outlet property="exerciseControl" destination="38V-yU-EXP" id="DyZ-uI-ISs"/>
                         <outlet property="filmControl" destination="juq-dw-Gw8" id="Vmg-I9-Gte"/>
@@ -1701,6 +1708,7 @@
                         <outlet property="jobControl" destination="cJb-Vj-elP" id="WW3-KJ-K6S"/>
                         <outlet property="parentControl" destination="OTl-rd-U54" id="gxL-TH-zHZ"/>
                         <outlet property="relationshipControl" destination="IMz-HD-7rM" id="JsU-kl-Eck"/>
+                        <outlet property="sexControl" destination="zl0-Cs-6xr" id="vOB-hr-YoU"/>
                         <outlet property="startupControl" destination="IWG-EX-Jmq" id="Zld-dR-gF0"/>
                         <outletCollection property="filterTopicButtons" destination="cJb-Vj-elP" collectionClass="NSMutableArray" id="S5n-UQ-udK"/>
                         <outletCollection property="filterTopicButtons" destination="IMz-HD-7rM" collectionClass="NSMutableArray" id="ei9-6N-ZX6"/>

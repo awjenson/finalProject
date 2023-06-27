@@ -167,17 +167,18 @@ class FilterViewController: UIViewController {
     //Buttons/UISegmentControls
     @IBOutlet var filterTopicButtons: [UISegmentedControl]!
 
-    @IBOutlet weak var genderControl: UISegmentedControl!
+    @IBOutlet weak var sexControl: UISegmentedControl!
     @IBOutlet weak var relationshipControl: UISegmentedControl!
     @IBOutlet weak var parentControl: UISegmentedControl!
     @IBOutlet weak var jobControl: UISegmentedControl!
     @IBOutlet weak var exerciseControl: UISegmentedControl!
     @IBOutlet weak var debtControl: UISegmentedControl!
+    @IBOutlet weak var ageControl: UISegmentedControl!
 
     @IBOutlet weak var startupControl: UISegmentedControl!
     @IBOutlet weak var filmControl: UISegmentedControl!
     //Not used
-    @IBOutlet weak var ageControl: UISegmentedControl!
+
 
     //Tableview
     @IBOutlet weak var filterTableView: UITableView!
@@ -202,7 +203,9 @@ class FilterViewController: UIViewController {
         //setup tableview
         setupUI()
 
-//        genderControl.selectedSegmentIndex = defaultIndex
+        sexControl.selectedSegmentIndex = defaultIndex
+        ageControl.selectedSegmentIndex = defaultIndex
+
         relationshipControl.selectedSegmentIndex = defaultIndex
 //        parentControl.selectedSegmentIndex = defaultIndex
         jobControl.selectedSegmentIndex = defaultIndex
@@ -211,14 +214,12 @@ class FilterViewController: UIViewController {
         startupControl.selectedSegmentIndex = defaultIndex
         filmControl.selectedSegmentIndex = defaultIndex
 
-//        ageControl.selectedSegmentIndex = defaultIndex
+
 
         //Check for user data
+        sexControl.selectedSegmentIndex = defaults.integer(forKey: sexKey)
 
-
-//        genderControl.selectedSegmentIndex = defaults.integer(forKey: genderKey)
-
-//        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
+        ageControl.selectedSegmentIndex = defaults.integer(forKey: ageKey)
 
         relationshipControl.selectedSegmentIndex = defaults.integer(forKey: relationshipKey)
 
@@ -359,7 +360,6 @@ class FilterViewController: UIViewController {
         scrollToTopTableView()
     }
 
-
     @IBAction func feedbackYouButtonTapped(_ sender: Any) {
         tapped()
         goToSourceURL(url: Constants.Website.rizeFormURL)
@@ -383,7 +383,7 @@ class FilterViewController: UIViewController {
 
     //MARK: USER INPUTS
 
-    let genderKey = "Gender"
+    let sexKey = "Sex"
     let relationshipKey = "Relationship"
     let jobKey = "Job"
     let parentKey = "Parent"
@@ -393,20 +393,20 @@ class FilterViewController: UIViewController {
     let filmKey = "Film"
     let ageKey = "Age"
 
-    @IBAction func genderControlTapped(_ sender: Any) {
-        switch genderControl.selectedSegmentIndex
+    @IBAction func sexControlTapped(_ sender: Any) {
+        switch sexControl.selectedSegmentIndex
         {
         case 0:
-            //Female
-            defaults.set(0, forKey: genderKey)
+            //Male
+            defaults.set(0, forKey: sexKey)
 
         case 1:
-            //Male
-            defaults.set(1, forKey: genderKey)
+            //Female
+            defaults.set(1, forKey: sexKey)
 
         default:
-            //Female
-            defaults.set(0, forKey: genderKey)
+            //Male
+            defaults.set(0, forKey: sexKey)
         }
     }
 
@@ -576,15 +576,15 @@ class FilterViewController: UIViewController {
             defaults.set(2, forKey: ageKey)
         case 3:
             //40s
-            defaults.set(2, forKey: ageKey)
+            defaults.set(3, forKey: ageKey)
         case 4:
             //50s
-            defaults.set(2, forKey: ageKey)
+            defaults.set(4, forKey: ageKey)
         case 5:
             //60s+
-            defaults.set(2, forKey: ageKey)
+            defaults.set(5, forKey: ageKey)
         default:
-            //Startup
+            //Teens
             defaults.set(0, forKey: ageKey)
         }
     }
@@ -592,19 +592,8 @@ class FilterViewController: UIViewController {
     //Link IBAction hobbyTopicButtonTapped to all topic buttons
     @IBAction func filterTopicButtonTapped(_ sender: UISegmentedControl) {
 
-        tapped()
+        //tapped()
 
-        //IBAction linked to all RoundCircle Buttons
-        if let topicNumber = filterTopicButtons.firstIndex(of: sender) {
-
-            flipButton(at: topicNumber, on: sender)
-
-        } else {
-            print("ARE WE IN ELSE?")
-            performUIUpdatesOnMain {
-                self.createAlert(title: "ERROR", message: "Could not load selected tips.")
-            }
-        }
     }
 
 

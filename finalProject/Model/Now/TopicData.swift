@@ -1920,64 +1920,7 @@ let dateTopic = Topic(title: dateTitle, icon: dateIcon, tip: dateTipArrays.rando
 let dateTopics = Topics(title: dateTitle, icon: dateIcon, topics: [dateTopic,])
 
 
-//MALE DATING TIPS
-let male_dateTip0 = Tip(header: "Increase Attraction 😍", title: "Wear blue on a date 🔵", body: "Blue is the most stable color. Women love seeing stable men. \n\nIt is also calming and can help relax both you and your date’s nerves.", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/color-psychology/", doneBool: false, doneKey: "", buyURL: "")
-let male_dateTip1 = Tip(header: "Increase Attraction 😍", title: "Speak in a lower-pitched voice", body: "Study: A lower-pitched voice in men is more attractive to women than a higher-pitched voice. Past research suggests this is based on evolutionary reasons.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/relationships/how-to-be-more-attractive/", doneBool: false, doneKey: "", buyURL: "")
 
-let male_dateTip2 = Tip(header: "Increase Attraction 😍", title: "Study: On dates, both genders reported feeling a spark 💥 when the conversations were mainly about the women, and when men demonstrated alignment with the women", body: "Women are typically more selective about who they are willing to go out with. So talking about the woman is a good strategy toward building a connection. \n\nWomen reported a sense of connection to men who used appreciative language (\"That's awesome\" or \"Good for you\") and sympathy (\"That must be tough on you\").", sourceName: "Stanford University", sourceURL: "https://news.stanford.edu/news/2013/may/jurafsky-mcfarland-dating-050613.html", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip3 = Tip(header: "First Date Location ☕️", title: "Instead of a movie or expensive restaurant, suggest trying a local bar or a hip new coffee shop instead.", body: "The location sets the tone for your date. Unless you already know what types of activities your date likes, it's best to pick a neutral, low-pressure placw where you can focus on getting to know each other and figuring out how well you connect. \n\nIf it feels uncomfortable, you can leave after the first drink.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/first-date-tips/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip4 = Tip(header: "When To Approach 🧍‍♀️", title: "Do approach a girl if she is sitting/standing and looks relaxed", body: "Women who are in a positive mood and show open body language tend to be more willing to have conversations.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/how-to-approach-girls/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip5 = Tip(header: "When To Approach 🧍‍♀️", title: "Don't approach a girl if she looks upset", body: "Chances are if she is having a bad day, she's not going to respond positively to getting hit on by a stranger.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/how-to-approach-girls/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip6 = Tip(header: "When To Approach 🧍‍♀️", title: "Do approach a girl if you've noticed her sending several glances and/or smiles your way", body: "If this happens, she likely is interested in you and wants you to start a conversation.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/how-to-approach-girls/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip7 = Tip(header: "When To Approach 🧍‍♀️", title: "Don't approach a girl if she is deeply preoccupied with something.", body: "Interrupting her won't make a good first impression.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/how-to-approach-girls/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip8 = Tip(header: "Approaching Woman 🧍‍♀️", title: "As soon as you approach a girl, the first thing you want to do is make eye contact. It shows confidence and creates a sense of closeness.", body: "When you make eye contact with someone, it triggers the production of oxytocin, aka “the love hormone.” And, it establishes a sense of trust, making the girl more willing to have a conversation.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/how-to-approach-girls/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip9 = Tip(header: "Increase Attraction 😍", title: "Wear perfume or cologne", body: "Study: Men who used cologne showed an increase in self-confidence and were rated as more attractive by a female panel.", sourceName: "Entrepreneur", sourceURL: "https://www.entrepreneur.com/slideshow/317242", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip10 = Tip(header: "Approaching Woman 🧍‍♀️", title: "Have friendly body language: \n🧍‍♂️ Open body language; open torso with nothing blocking you. \n🙂 Direct eye contact upon approach. \n🙌 Visible hands to reassure them you are not going to hurt them.", body: "Women’s brains are programmed to read men’s body language and to be wary of guys they don't know. \n\nFrom the moment you approach them, their subconscious is analyzing the way you hold your body and your every move, to decide how they feel about you.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/how-to-approach-girls/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip11 = Tip(header: "Approaching Woman 🧍‍♀️", title: "DO: Approach from the side \nDON'T: Approach from the back or front", body: "Approaching a woman from behind or the front can be intimidating because she fears being attacked. Instead, slowly approach girls from a side angle and move into her line of signt so they can see you coming and prepare for your presence, rather than be startled by it.", sourceName: "Science Of People", sourceURL: "https://www.scienceofpeople.com/how-to-approach-girls/", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip12 = Tip(header: "Approaching Woman 🧍‍♀️", title: "Look for open body language. Go over if she's smiling, making eye contact, and playing with her hair.", body: "These are signs she might be interested in you. \n\nBut, she might not be in the mood to talk right now if she’s got her arms folded across her chest or seems to be avoiding your eyes.", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Approach-Women-Anywhere", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip13 = Tip(header: "Approaching Woman 🧍‍♀️", title: "Make yourself seen so you don't accidentally sneak up on her. Move into her eye line, even if you’re just in her periphery.", body: "Give her time to notice you there before you go over to talk to her.", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Approach-Women-Anywhere", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip14 = Tip(header: "Approaching Woman 🧍‍♀️", title: "Relax your body so you look confident. Open body language makes you appear attractive to others.", body: "Take a deep breath and release all the tension from your body. Additionally, keep your arms at your side and smile so you seem welcoming. \n\nIn addition to smiling, pick out an outfit that fits into the place where you’re going. Colors like earth tones, blue, and yellow make people feel comfortable talking to you, so they’re great options.", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Approach-Women-Anywhere", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip15 = Tip(header: "Approaching Woman 🧍‍♀️", title: "DO: Approach her from the side \n\nDON'T: Approah her from behind", body: "Coming up beside her feels more casual and friendly. She’ll probably feel more relaxed, which will make it easier for you to talk to her. Walk a little away from her and come back if necessary to get into a good position. Then, slowly walk over. \n\nNever approach a woman from behind because it’ll make her uncomfortable. She may even be startled.", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Approach-Women-Anywhere", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip16 = Tip(header: "Approaching Woman 🧍‍♀️", title: "Introduce yourself. Smile, tell her your name, and ask how she’s doing.", body: "Say, “How’s your day going?” or “Having a good time?” \n\nReally listen to her response so she knows you’re interested. She’s probably going to ask how you are in response, so say something positive like “I’m doing great.”", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Approach-Women-Anywhere", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip17 = Tip(header: "Approaching Woman 🧍‍♀️", title: "Talk about what’s going on around you. Start a conversation by mentioning something from your environment.", body: "Things like the menu, music that’s playing, or why you’re there make excellent topics. You could also comment on the weather or the people around you. \n\n“I love this song. What about you?” \n“Your drink looks tasty. What did you order?” \n“What would you recommend off the menu?” \n“Can you believe this rain we’ve been having?”", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Approach-Women-Anywhere", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTip18 = Tip(header: "Approaching Woman 🧍‍♀️", title: "Tell her a joke. Make her laugh to break the ice.", body: "Laughter actually relieves stress, so it can put you both at ease.", sourceName: "wikiHow", sourceURL: "https://www.wikihow.com/Approach-Women-Anywhere", doneBool: false, doneKey: "", buyURL: "")
-
-let male_dateTipArray0 = [male_dateTip0, male_dateTip1, ]
-let male_dateTipArray1 = [male_dateTip2, male_dateTip3, ]
-let male_dateTipArray2 = [male_dateTip4, male_dateTip5, ]
-let male_dateTipArray3 = [male_dateTip6, male_dateTip7, ]
-
-//
-let male_dateTipArrays = [male_dateTipArray0, male_dateTipArray1, male_dateTipArray2, male_dateTipArray3]
-let male_dateTopic = Topic(title: dateTitle, icon: dateIcon, tip: male_dateTipArrays.random())
-let male_dateTopics = Topics(title: dateTitle, icon: dateIcon, topics: [male_dateTopic,])
-
-//FEMALE DATING TIPS
-let female_dateTip0 = Tip(header: "Increase Attraction 😍", title: "Speak in a lower-pitched voice", body: "Study: A lower-pitched voice in men is more attractive to women than a higher-pitched voice. Past research suggests this is based on evolutionary reasons.", sourceName: "Reader's Digest", sourceURL: "https://www.rd.com/advice/relationships/how-to-be-more-attractive/", doneBool: false, doneKey: "", buyURL: "")
-let female_dateTip1 = Tip(header: "Increase Attraction 😍", title: "Wear red on a date 🔴", body: "Red is the color of passion and gets blood pumping. \n\nWomen can wear this to get their date’s heart racing.", sourceName: "Science of People", sourceURL: "https://www.scienceofpeople.com/color-psychology/", doneBool: false, doneKey: "", buyURL: "")
-
-let female_dateTipArray0 = [female_dateTip0, female_dateTip1, ]
-
-//
-let female_dateTipArrays = [female_dateTipArray0]
-let female_dateTopic = Topic(title: dateTitle, icon: dateIcon, tip: female_dateTipArrays.random())
-let female_dateTopics = Topics(title: dateTitle, icon: dateIcon, topics: [female_dateTopic,])
 
 
 

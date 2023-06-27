@@ -342,20 +342,20 @@ func studyCareerNight() -> Topics {
 
 //MARK: Male Or Female
 
-func dateMaleOrFemaleTopics() -> Topics {
-      var selectedTopic: Topics!
+func dateMaleOrFemaleTopic() -> Topic {
+      var selectedTopic: Topic!
       switch defaults.integer(forKey: sexKey)
       {
         case 0:
             //NO Male
-            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic,])
+            selectedTopic = male_dateTopic
         case 1:
             //HAVE Female
-            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic, debtTopic])
+            selectedTopic = female_dateTopic
 
         default:
             //NO Male
-            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic])
+            selectedTopic = male_dateTopic
       }
       return selectedTopic
   }
@@ -369,12 +369,12 @@ func relationshipAM() -> Topics {
    {
    case 0:
        //single
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleAMTopic,])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleAMTopic, dateMaleOrFemaleTopic()])
    case 1:
        //relationship
        selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipAMTopic,])
    default:
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleAMTopic,])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleAMTopic, dateMaleOrFemaleTopic()])
    }
    return selectedTopic
 }
@@ -385,12 +385,12 @@ func relationshipDay() -> Topics {
    {
    case 0:
        //single
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic, dateMaleOrFemaleTopic()])
    case 1:
        //relationship
        selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipDayTopic,])
    default:
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singleDayTopic, dateMaleOrFemaleTopic()])
    }
    return selectedTopic
 }
@@ -401,12 +401,12 @@ func relationshipPM() -> Topics {
    {
    case 0:
        //single
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateMaleOrFemaleTopic()])
    case 1:
        //relationship
        selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipPMTopic,])
    default:
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateMaleOrFemaleTopic()])
    }
    return selectedTopic
 }
@@ -417,12 +417,12 @@ func relationshipNight() -> Topics {
    {
    case 0:
        //single
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateMaleOrFemaleTopic()])
    case 1:
        //relationship
        selectedTopic = Topics(title: "Relationship", icon: Constants.Icon.relationship, topics: [relationshipBedTopic,])
    default:
-       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic])
+       selectedTopic = Topics(title: "Dating", icon: Constants.Icon.relationship, topics: [singlePMTopic, dateMaleOrFemaleTopic()])
    }
    return selectedTopic
 }
