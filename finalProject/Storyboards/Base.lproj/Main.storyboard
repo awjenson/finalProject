@@ -1276,7 +1276,8 @@
                                                                 <segment title="30s"/>
                                                                 <segment title="40s"/>
                                                                 <segment title="50s"/>
-                                                                <segment title="60+"/>
+                                                                <segment title="60s"/>
+                                                                <segment title="70+"/>
                                                             </segments>
                                                             <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                                             <connections>
@@ -1330,9 +1331,16 @@
                                                         </segmentedControl>
                                                     </subviews>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-2B-f7j">
-                                                    <rect key="frame" x="0.0" y="318.66666666666669" width="374" height="18.666666666666686"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-Tx-kGl" userLabel="ClearView">
+                                                    <rect key="frame" x="0.0" y="318.66666666666669" width="374" height="9.6666666666666856"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-2B-f7j" userLabel="BorderView">
+                                                    <rect key="frame" x="0.0" y="336.33333333333331" width="374" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="wUk-0h-b53"/>
+                                                    </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Your Goals (Tap ☑︎):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3I-Xx-8D6">
                                                     <rect key="frame" x="0.0" y="345.33333333333331" width="374" height="21.666666666666686"/>
@@ -1722,7 +1730,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ca-Hj-4Fs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-449.27536231884062" y="-654.24107142857144"/>
+            <point key="canvasLocation" x="184" y="-649"/>
         </scene>
         <!--PERSONAL-->
         <scene sceneID="lnA-dT-kXd">

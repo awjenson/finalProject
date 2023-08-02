@@ -15,8 +15,10 @@ let financialBankAccountKey = "FinancialBankAccount"
 let wealth_todo_Tip0_Key = "HaveBankAccount"
 let wealth_todo_Tip1_Key = "HaveInBank1st"
 let wealth_todo_Tip2_Key = "HaveInBank2nd"
-let wealth_todo_Tip3_Key = "HaveS&P500ETFOrIndexFund"
-let wealth_todo_Tip4_Key = "EnrolledIn401K"
+let wealth_todo_Tip3_Key = "HaveVanguardAccount"
+let wealth_todo_Tip4_Key = "HaveS&P500ETFOrIndexFund"
+let wealth_todo_Tip5_Key = "EnrolledIn401K"
+let wealth_todo_Tip6_Key = "LiveOnFourPercent"
 
 let health_todo_Tip0_Key = "NotSmoking"
 let health_todo_Tip1_Key = "ModerateAlcohol"
@@ -114,14 +116,19 @@ let wealth_todo_Tip0 = Tip(header: "", title: "🏦 Have a bank account", body: 
 
 let wealth_todo_Tip1 = Tip(header: "", title: "💵 Have $100+ saved in bank", body: "Someone who maintains a savings balance of $100+ is much more likely to say that they’re financially satisfied." , sourceName: "SaverLife", sourceURL: "https://about.saverlife.org/research-posts/finra", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip1_Key), doneKey: wealth_todo_Tip1_Key, buyURL: "https://www.wealthfront.com/cash")
 let wealth_todo_Tip2 = Tip(header: "", title: "💵 Have $250+ saved in bank", body: "A savings balance over $250 is correlated with higher housing security." , sourceName: "SaverLife", sourceURL: "https://about.saverlife.org/research-posts/finra", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip2_Key), doneKey: wealth_todo_Tip2_Key, buyURL: "")
-let wealth_todo_Tip3 = Tip(header: "", title: "📈 Have $100+ in low-cost S&P 500 ETF or index fund", body: "Helps you acquire wealth through owning assets (e.g. the stock market)" , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2022/10/03/billionaire-warren-buffett-swears-by-this-inexpensive-investing-strategy-that-anyone-can-try.html", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip3_Key), doneKey: wealth_todo_Tip3_Key, buyURL: "https://investor.vanguard.com/investment-products/etfs/profile/voo")
-let wealth_todo_Tip4 = Tip(header: "", title: "👩‍💻 Enrolled in your employer's 401(k) plan", body: "Enrolling in an employer’s 401(k) plan can be one of the easiest ways for a worker to save for retirement." , sourceName: "Kiplinger", sourceURL: "https://www.kiplinger.com/retirement/retirement-plans/401ks/602957/401k-basics-7-things-you-should-know-when-you-enroll", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip4_Key), doneKey: wealth_todo_Tip4_Key, buyURL: "https://www.wealthfront.com/cash")
+let wealth_todo_Tip3 = Tip(header: "", title: "👩‍💻 Have a Vanguard personal investor account", body: "Warren Buffett suggests Vanguard." , sourceName: "Forbes", sourceURL: "https://www.forbes.com/sites/robertberger/2020/11/24/how-to-invest-money-based-on-advice-from-warren-buffett/", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip3_Key), doneKey: wealth_todo_Tip3_Key, buyURL: "https://investor.vanguard.com/home")
+let wealth_todo_Tip4 = Tip(header: "", title: "💵 Invested $100+ in Vanguard's low-cost S&P 500 index fund (VTSAX) or ETF (VTI)", body: "Helps you acquire wealth through owning assets (e.g. the stock market)." , sourceName: "CNBC", sourceURL: "https://www.cnbc.com/2022/10/03/billionaire-warren-buffett-swears-by-this-inexpensive-investing-strategy-that-anyone-can-try.html", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip4_Key), doneKey: wealth_todo_Tip4_Key, buyURL: "https://investor.vanguard.com/investment-products/mutual-funds/profile/vtsax")
+let wealth_todo_Tip5 = Tip(header: "", title: "👩‍💻 Enrolled in your employer's 401(k) plan", body: "Enrolling in an employer’s 401(k) plan can be one of the easiest ways for a worker to save for retirement." , sourceName: "Kiplinger", sourceURL: "https://www.kiplinger.com/retirement/retirement-plans/401ks/602957/401k-basics-7-things-you-should-know-when-you-enroll", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip5_Key), doneKey: wealth_todo_Tip5_Key, buyURL: "https://www.wealthfront.com/cash")
+
+let wealth_todo_Tip6 = Tip(header: "", title: "🙌 Have financial freedom = Living on 4% of your investments per year", body: "When you can live on 4% of your investments per year, you are financially independent." , sourceName: "The Simple Path to Wealth | JL Collins", sourceURL: "https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926", doneBool: getUserDefaultsBoolValue(forKey: wealth_todo_Tip6_Key), doneKey: wealth_todo_Tip6_Key, buyURL: "")
+
+
+
 
 
 //1
 
-
-let wealth_todo_TipArray0 = [wealth_todo_Tip0, wealth_todo_Tip1, wealth_todo_Tip2, wealth_todo_Tip3, wealth_todo_Tip4]
+let wealth_todo_TipArray0 = [wealth_todo_Tip0, wealth_todo_Tip1, wealth_todo_Tip2, wealth_todo_Tip3, wealth_todo_Tip4, wealth_todo_Tip5, wealth_todo_Tip6]
 
 let wealth_todo_Topic = Topic(title: wealth_todo_Title, icon: wealth_todo_Icon, tip: wealth_todo_TipArray0)
 
@@ -158,7 +165,7 @@ let startup_idea_todo_Topics = Topics(title: startup_todo_Title, icon: startup_t
 
 //MVP
 //1
-let startup_todo_1_Tip0 = Tip(header: "", title: "❤️ Promised to NOT fall in love with MVP", body: "So many failed startup founder fall in love with the vision in their head. Understand that your initial idea to change after talking to customers." , sourceName: "Y Combinator", sourceURL: "https://www.ycombinator.com/library/6f-how-to-plan-an-mvp", doneBool: getUserDefaultsBoolValue(forKey: startup_todo_1_Tip0_Key), doneKey: startup_todo_1_Tip0_Key, buyURL: "")
+let startup_todo_1_Tip0 = Tip(header: "", title: "❤️ Promised to NOT fall in love with MVP", body: "So many failed startup founders fall in love with the vision in their head. Understand that your initial idea will change after talking to customers." , sourceName: "Y Combinator", sourceURL: "https://www.ycombinator.com/library/6f-how-to-plan-an-mvp", doneBool: getUserDefaultsBoolValue(forKey: startup_todo_1_Tip0_Key), doneKey: startup_todo_1_Tip0_Key, buyURL: "")
 let startup_todo_1_Tip1 = Tip(header: "", title: "📝 Wrote down the spec of your MVP", body: "Your spec is the list of stuff you need to build before you launch. A written spec helps you avoid delaying your MVP's launch." , sourceName: "Y Combinator", sourceURL: "https://www.ycombinator.com/library/6f-how-to-plan-an-mvp", doneBool: getUserDefaultsBoolValue(forKey: startup_todo_1_Tip1_Key), doneKey: startup_todo_1_Tip1_Key, buyURL: "")
 
 let startup_todo_1_Tip2 = Tip(header: "", title: "📝 Wrote down what your MVP is trying to test/measure", body: "Each time you build an MVP you also define what you are trying to test/measure." , sourceName: "Steve Blank", sourceURL: "https://steveblank.com/2015/05/06/build-measure-learn-throw-things-against-the-wall-and-see-if-they-work/", doneBool: getUserDefaultsBoolValue(forKey: startup_todo_1_Tip2_Key), doneKey: startup_todo_1_Tip2_Key, buyURL: "")

@@ -178,6 +178,12 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var startupControl: UISegmentedControl!
     @IBOutlet weak var filmControl: UISegmentedControl!
     //Not used
+    //NEW Segments:
+    //School, Working, New Job, Unemployed, Retired
+    //Renting, Buying, Home Owner
+    //Eat Meat, No Meat
+
+
 
 
     //Tableview
@@ -196,8 +202,11 @@ class FilterViewController: UIViewController {
 
 
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
 
 
         //setup tableview

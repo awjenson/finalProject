@@ -69,7 +69,7 @@
 		DA7898892051E8EC005046D8 /* ProfileDataResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7898882051E8EC005046D8 /* ProfileDataResults.swift */; };
 		DA78988D2052EFA1005046D8 /* NowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988C2052EFA1005046D8 /* NowViewController.swift */; };
 		DA78988F2053102E005046D8 /* NowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78988E2053102E005046D8 /* NowTableViewCell.swift */; };
-		DA87B7952439478500A8EFF0 /* LawOfSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87B7942439478500A8EFF0 /* LawOfSuccess.swift */; };
+		DA87B7952439478500A8EFF0 /* WIP_Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87B7942439478500A8EFF0 /* WIP_Tips.swift */; };
 		DA8DC6F921F6500300663DB4 /* TopCornersRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */; };
 		DA8DC6FB21F66F1B00663DB4 /* BottomCornersRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */; };
 		DA97663323D3B7D4000FC1B0 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */; };
@@ -173,7 +173,7 @@
 		DA7898882051E8EC005046D8 /* ProfileDataResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataResults.swift; sourceTree = "<group>"; };
 		DA78988C2052EFA1005046D8 /* NowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowViewController.swift; sourceTree = "<group>"; };
 		DA78988E2053102E005046D8 /* NowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowTableViewCell.swift; sourceTree = "<group>"; };
-		DA87B7942439478500A8EFF0 /* LawOfSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawOfSuccess.swift; sourceTree = "<group>"; };
+		DA87B7942439478500A8EFF0 /* WIP_Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WIP_Tips.swift; sourceTree = "<group>"; };
 		DA8DC6F821F6500300663DB4 /* TopCornersRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCornersRoundedView.swift; sourceTree = "<group>"; };
 		DA8DC6FA21F66F1B00663DB4 /* BottomCornersRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCornersRoundedView.swift; sourceTree = "<group>"; };
 		DA97663223D3B7D4000FC1B0 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
@@ -365,6 +365,7 @@
 		DA359C772043721F000190AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA87B7942439478500A8EFF0 /* WIP_Tips.swift */,
 				DA197B38246760BF00EE324B /* MainTopic */,
 				DA272D0820BCB71900137039 /* User */,
 				DA272D0520BCB6E700137039 /* Now */,
@@ -581,7 +582,6 @@
 				DA272D0C20BCE72B00137039 /* CounterAdvice.swift */,
 				DACA911B20FBD09200475CE5 /* HabitFact.swift */,
 				DACA911D20FBD0B700475CE5 /* HabitQuote.swift */,
-				DA87B7942439478500A8EFF0 /* LawOfSuccess.swift */,
 			);
 			path = Habits;
 			sourceTree = "<group>";
@@ -690,7 +690,7 @@
 				DA015BF42073E36300A0342F /* UIViewControllerExtension.swift in Sources */,
 				DAC8DFFC206F5A67005D627B /* UserInforViewController.swift in Sources */,
 				DAA1021D2053444000A25EFC /* RoundButton.swift in Sources */,
-				DA87B7952439478500A8EFF0 /* LawOfSuccess.swift in Sources */,
+				DA87B7952439478500A8EFF0 /* WIP_Tips.swift in Sources */,
 				DA0EDE0E2104EF6D00B9363F /* Hint.swift in Sources */,
 				DAD4C65D246A5918003B215C /* ExpandableTips.swift in Sources */,
 				DA9CC27920FD5413001A89B7 /* UIView+Extension.swift in Sources */,
@@ -922,7 +922,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.20;
+				CURRENT_PROJECT_VERSION = 1.21;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Rize;
@@ -932,7 +932,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -948,7 +948,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.20;
+				CURRENT_PROJECT_VERSION = 1.21;
 				DEVELOPMENT_TEAM = 4N25H97F3B;
 				INFOPLIST_FILE = "$(SRCROOT)/finalProject/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Rize;
@@ -958,7 +958,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = AndrewJenson.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;

@@ -13,6 +13,7 @@ import Foundation
 let defaults = UserDefaults.standard
 let relationshipKey = "Relationship"
 let sexKey = "Sex"
+let ageKey = "Age"
 let jobKey = "Job"
 let parentKey = "Parent"
 let exerciseKey = "Exercise"
@@ -186,6 +187,79 @@ func runYogaTopics() -> Topics {
       return selectedTopic
   }
 
+
+//MARK: Wealth/Investing by Age
+
+//Wealth accumulation stage / working and can save and invest.
+let wealthAccumulation0 = Tip(header: "Financial Freedom 💰", title: "During your working years: \n• Your savings rate should be high (50%). \n• Open a Vanguard account and continuously put all of your savings into a portfolio of 100% stocks, ideally Vanguard Total Stock Market Index Fund (ticker: VTSAX) until you're financially free.", body: "A portfolio of 100% stocks—which is what VTSAX gives you—in study after study provides the greatest return over time. As you invest money each month into VTSAX it serves to smooth out the stock market’s wild ride during your lifetime. \n\nOptional: For the more risk-averse, you can hold 10-25% in bonds, ideally Vanguard Total Bond Market Index Fund (ticker: VBTLX), and 75-90% in stocks (VTSAX). Then, once a year, rebalance your funds to maintain your chosen allocation. \n\nNote: If you can't afford VTSAX's investment minimum, then start with Vanguard Total Stock Market ETF (ticker: VTI).", sourceName: "The Simple Path to Wealth | JL Collins", sourceURL: "https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926", doneBool: false, doneKey: "", buyURL: "https://investor.vanguard.com/investment-products/mutual-funds/profile/vtsax")//DONE
+let wealthAccumulation1 = Tip(header: "Financial Freedom 💰", title: "During your working years, here's a hierarchy for deploying investment money: \n\n• 1st: Fund 401(k)-type plans to the full employer match, if any.", body: "• 2nd: Fully fund a Roth IRA if your income is low enough that you are paying little or no income tax. \n• 3rd: Once your income tax rate rises, fully fund a deductible IRA rather than a Roth IRA. \n• 4th: Keep the Roth IRA you started and just let it grow. \n• 5th: Finish funding the 401(k)-type plan to the max. \n• 6th: Consider funding a non-deductible IRA if your income is such that you cannot contribute to a deductible IRA or Roth IRA. \n• 7th: Fund your taxable account, ideally a Vanguard account, with any money left.", sourceName: "The Simple Path to Wealth | JL Collins", sourceURL: "https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926", doneBool: false, doneKey: "", buyURL: "https://investor.vanguard.com/")//DONE
+
+let wealthAccumulationTipArray0 = [wealthAccumulation0]
+let wealthAccumulationTipArray1 = [wealthAccumulation1]
+
+// RANDOM
+let wealthAccumulationArrays = [wealthAccumulationTipArray0, wealthAccumulationTipArray1]
+let wealthAccumulationTopic = Topic(title: "Investing By Age", icon: wealthIcon, tip: wealthAccumulationArrays.random())
+//By Age:
+
+
+
+let wealthAccumulationTopics = Topics(title: "Investing By Age", icon: wealthIcon, topics: [wealthAccumulationTopic,])
+
+
+//Wealth preservation stage / retired / not working / Sabbaticals / going back to school / laid-off / living on income from your investments.
+let wealthPreservation0 = Tip(header: "Financial Freedom 💰", title: "5-10 years before retirement, add bonds to the portfolio, especially if you have a fixed date firmly in mind", body: "Recommended portfolio at retirement age: \n• 75% Stocks: VTSAX (Vanguard Total Stock Market Index Fund). \n• 20% Bonds: VBTLX (Vanguard Total Bond Market Index Fund). \n• 5% Cash: Hold cash in your local bank. \n\nOnce a year, reivew your allocations and make any adjustments. Bonds provide some income, tend to smooth out the rough ride of stocks and are a deflation hedge.", sourceName: "The Simple Path to Wealth | JL Collins", sourceURL: "https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926", doneBool: false, doneKey: "", buyURL: "https://investor.vanguard.com/investment-products/mutual-funds/profile/vtsax")//DONE
+let wealthPreservation1 = Tip(header: "Financial Freedom 💰", title: "Recommended portfolio at retirement age: \n• 75% Stocks: VTSAX (Vanguard Total Stock Market Index Fund). \n• 20% Bonds: VBTLX (Vanguard Total Bond Market Index Fund). \n• 5% Cash: Hold cash in your local bank.", body: "Once a year, reivew your allocations and make any adjustments. Bonds provide some income, tend to smooth out the rough ride of stocks, and are a deflation hedge. \n\nWant a smoother ride? Willing to accept a potentially lower long-term return and slower wealth accumulation? Just increase the percentage in VBTLX. \n\nComfortable with volatility? Want more growth? Add more to VTSAX.", sourceName: "The Simple Path to Wealth | JL Collins", sourceURL: "https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926", doneBool: false, doneKey: "", buyURL: "https://investor.vanguard.com/investment-products/mutual-funds/profile/vtsax")//DONE
+
+let wealthPreservationTipArray0 = [wealthPreservation0]
+let wealthPreservationTipArray1 = [wealthPreservation1]
+
+// RANDOM
+let wealthPreservationArrays = [wealthPreservationTipArray0, wealthPreservationTipArray1]
+let wealthPreservationTopic = Topic(title: "Investing By Age", icon: wealthIcon, tip: wealthPreservationArrays.random())
+let wealthPreservationTopics = Topics(title: "Investing By Age", icon: wealthIcon, topics: [wealthPreservationTopic,])
+
+
+func ageWealthTopic() -> Topic {
+    var selectedTopic: Topic!
+    switch defaults.integer(forKey: ageKey)
+    {
+    case 0:
+        //Teens
+        selectedTopic = Topic(title: "Investing: Your Teens", icon: wealthIcon, tip: wealthAccumulationArrays.random())
+    case 1:
+        //20s
+        selectedTopic = Topic(title: "Investing: Your 20s", icon: wealthIcon, tip: wealthAccumulationArrays.random())
+
+    case 2:
+        //30s
+        selectedTopic = Topic(title: "Investing: Your 30s", icon: wealthIcon, tip: wealthAccumulationArrays.random())
+
+    case 3:
+        //40s
+        selectedTopic = Topic(title: "Investing: Your 40s", icon: wealthIcon, tip: wealthAccumulationArrays.random())
+
+    case 4:
+        //50s
+        selectedTopic = Topic(title: "Investing: Your 50s", icon: wealthIcon, tip: wealthPreservationArrays.random())
+
+    case 5:
+        //60s
+        selectedTopic = Topic(title: "Investing: Your 60s", icon: wealthIcon, tip: wealthPreservationArrays.random())
+
+    case 6:
+        //70+
+        selectedTopic = Topic(title: "Investing: 70+", icon: wealthIcon, tip: wealthPreservationArrays.random())
+
+    default:
+        //Teens
+        selectedTopic = Topic(title: "Investing: Your Teens", icon: wealthIcon, tip: wealthAccumulationArrays.random())
+    }
+    return selectedTopic
+}
+
+
+//MARK: WEALTH
 //MARK: No-Debt Or Have-Debt
 
 func wealthDebtTopics() -> Topics {
@@ -194,14 +268,14 @@ func wealthDebtTopics() -> Topics {
       {
         case 0:
             //NO Debt
-            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic,])
+            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic, noDebtTopic, ageWealthTopic()])
         case 1:
             //HAVE Debt
-            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic, debtTopic])
+            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic, debtTopic, ageWealthTopic()])
 
         default:
             //NO Debt
-            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic])
+            selectedTopic = Topics(title: wealthTitle, icon: Constants.Icon.wealth, topics: [wealthTopic, noDebtTopic, ageWealthTopic()])
       }
       return selectedTopic
   }
